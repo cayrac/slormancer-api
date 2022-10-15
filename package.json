@@ -14,14 +14,15 @@
         "url": "git+https://github.com/cayrac/slormancer-api.git"
     },
     "scripts": {
-        "ng": "ng",
-        "build": "npm run build:esm && npm run build:cjs",
-        "build:esm": "tsc -p ./tsconfig.esm.json && move lib/esm/index.js lib/esm/index.mjs",
+        "clean": "if exist lib del /s /q lib",
+        "build": "npm run clean && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc -p ./tsconfig.esm.json && move lib\\esm\\index.js lib\\esm\\index.mjs",
         "build:cjs": "tsc -p ./tsconfig.cjs.json",
         "prepack": "npm run build"
     },
     "dependencies": {
-        "node": "18.10.0"
+        "@angular/compiler": "14.2.4",
+        "@angular/core": "14.2.4"
     },
     "devDependencies": {
         "@angular/compiler-cli": "14.2.4",

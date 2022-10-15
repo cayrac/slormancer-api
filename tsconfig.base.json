@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@slormancer/*": [ "./src/slormancer/*" ],
+    },
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

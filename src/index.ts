@@ -1,0 +1,1 @@
+export { SlormancerModule } from './slormancer/slormancer.module';
