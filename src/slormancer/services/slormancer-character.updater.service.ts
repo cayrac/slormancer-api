@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { MessageService } from '@shared/services/message.service';
 import { MAX_REAPER_AFFINITY_BONUS } from '@slormancer/constants/common';
 import { Rune } from '@slormancer/model/content/rune';
 
@@ -50,8 +49,7 @@ export class SlormancerCharacterUpdaterService {
                 private slormancerClassMechanicService: SlormancerClassMechanicService,
                 private slormancerRuneService: SlormancerRuneService,
                 private slormancerValueUpdater: SlormancerValueUpdater,
-                private slormancerSynergyResolverService: SlormancerSynergyResolverService,
-                private messageService: MessageService,
+                private slormancerSynergyResolverService: SlormancerSynergyResolverService
         ) { }
 
     private resetAttributes(character: Character) {
@@ -191,11 +189,12 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
-    private displaySynergyLoopError(statsResult: CharacterStatsBuildResult) {
+    private updateIssues(character: Character, statsResult: CharacterStatsBuildResult) {
+        character.issues = [];
         if (statsResult.unresolvedSynergies.length > 1) {
             const names = statsResult.unresolvedSynergies
                 .map(unresolvedSynergy => {
-                    let result = null;
+                    let result: string | null = null;
 
                     if ('activable' in unresolvedSynergy.objectSource) {
                         result = unresolvedSynergy.objectSource.activable.name;
@@ -221,7 +220,7 @@ export class SlormancerCharacterUpdaterService {
 
                     return result;
                 }).filter(isNotNullOrUndefined);
-            this.messageService.error('Your build contain a synergy loop between : ' + names.join(', '));
+            character.issues.push('Your build contain a synergy loop between : ' + names.join(', '));
         }
     }
 
@@ -354,7 +353,7 @@ export class SlormancerCharacterUpdaterService {
             }
         }
 
-        const lockedSkills = [];
+        const lockedSkills: Array<number> = [];
         if (statsResult.extractedStats['primary_slot_locked'] !== undefined && character.primarySkill !== null) {
             lockedSkills.push(character.primarySkill.id);
         }
@@ -390,7 +389,7 @@ export class SlormancerCharacterUpdaterService {
         statsResult.changed.reapers.push(...activableChanged.reapers);
         statsResult.changed.runes.push(...activableChanged.runes);
 
-        this.displaySynergyLoopError(statsResult)
+        this.updateIssues(character, statsResult)
 
         if (updateViews) {
             this.updateChangedEntities(statsResult);

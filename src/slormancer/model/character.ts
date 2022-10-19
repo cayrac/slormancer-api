@@ -69,6 +69,7 @@ export interface Character {
     version: string;
     originalVersion: string;
     importVersion: string | null;
+    issues: Array<string>;
 
     name: string;
     fullName: string;

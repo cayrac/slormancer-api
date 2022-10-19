@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { environment } from '../../../../../environments/environment';
+import { API_VERSION } from '../../constants/common';
 import { Character } from '../../model/character';
 import { Bits } from '../../model/export/bits';
 import { binaryToNumber, numberToBinary, takeBitsChunk } from '../../util/bits.util';
@@ -32,7 +32,7 @@ export class SlormancerShortDataService {
     }
 
     public characterToShortData(character: Character): string {
-        const bits = [ ...this.versionToBinary(environment.version), ...this.slormancerBinaryService.characterToBinary(character) ];
+        const bits = [ ...this.versionToBinary(API_VERSION), ...this.slormancerBinaryService.characterToBinary(character) ];
         return this.slormancerCompressorService.compressBinary(bits);
     }
     

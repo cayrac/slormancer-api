@@ -10,18 +10,18 @@ import { GameDataSkill } from '../../../model/content/game/data/game-data-skill'
 import { GameDataStat } from '../../../model/content/game/data/game-data-stat';
 import { GameDataTranslation } from '../../../model/content/game/data/game-data-translation';
 import { GameHeroesData } from '../../../model/parser/game/game-save';
-import * as ACTIVABLE from '../game/data/dat_act.json';
-import * as ATTRIBUTES from '../game/data/dat_att.json';
-import * as BUFF from '../game/data/dat_buf.json';
-import * as WARRIOR_SKILL from '../game/data/dat_cla_0.json';
-import * as HUNTRESS_SKILL from '../game/data/dat_cla_1.json';
-import * as MAGE_SKILL from '../game/data/dat_cla_2.json';
-import * as ANCESTRAL_LEGACY from '../game/data/dat_ele.json';
-import * as LEGENDARY from '../game/data/dat_leg.json';
-import * as REAPER from '../game/data/dat_rea.json';
-import * as RUNE from '../game/data/dat_run.json';
-import * as STAT from '../game/data/dat_sta.json';
-import * as TRANSLATION from '../game/data/dat_str.json';
+import * as ACTIVABLE from './data/dat_act.json';
+import * as ATTRIBUTES from './data/dat_att.json';
+import * as BUFF from './data/dat_buf.json';
+import * as WARRIOR_SKILL from './data/dat_cla_0.json';
+import * as HUNTRESS_SKILL from './data/dat_cla_1.json';
+import * as MAGE_SKILL from './data/dat_cla_2.json';
+import * as ANCESTRAL_LEGACY from './data/dat_ele.json';
+import * as LEGENDARY from './data/dat_leg.json';
+import * as REAPER from './data/dat_rea.json';
+import * as RUNE from './data/dat_run.json';
+import * as STAT from './data/dat_sta.json';
+import * as TRANSLATION from './data/dat_str.json';
 
 export const GAME_DATA = {
     REAPER: <Array<GameDataReaper>> Array.from(REAPER),

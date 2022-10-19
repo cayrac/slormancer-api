@@ -448,6 +448,7 @@ export class SlormancerCharacterBuilderService {
             level,
             name: '',
             fullName: '',
+            issues: [],
         
             reaper,
 

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { APP_TO_GAME_VERSION_MAPPER } from '@shared/constants';
 
-import { GAME_VERSION } from '../../constants/common';
+import { API_TO_GAME_VERSION_MAPPER, GAME_VERSION } from '../../constants/common';
 import { Character, CharacterAncestralLegacies, CharacterGear, CharacterSkillAndUpgrades } from '../../model/character';
 import { ALL_ATTRIBUTES, Attribute } from '../../model/content/enum/attribute';
 import { ALL_GEAR_SLOT_VALUES, GearSlot, gearSlotToBase } from '../../model/content/enum/gear-slot';
@@ -212,7 +211,7 @@ export class SlormancerBinaryCharacterService {
     }
 
     public binaryToCharacter(binary: Bits, version: string): Character | null {
-        const originalGameVersion = APP_TO_GAME_VERSION_MAPPER[version];
+        const originalGameVersion = API_TO_GAME_VERSION_MAPPER[version];
         const importVersion = originalGameVersion ? originalGameVersion : GAME_VERSION;
         const heroClass: HeroClass = binaryToNumber(takeBitsChunk(binary, 2));
         const level = binaryToNumber(takeBitsChunk(binary, 6));

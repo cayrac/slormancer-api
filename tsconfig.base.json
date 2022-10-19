@@ -8,10 +8,12 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "checkJs": true,
+    "resolveJsonModule": true,
     "allowJs": true,
     "declaration": true,
     "declarationMap": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true, 
   },
   "files": ["./src/index.ts"]
 }
