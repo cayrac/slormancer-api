@@ -1,11 +1,16 @@
 {
     "name": "slormancer-api",
     "type": "module",
-    "version": "1.0.0",
+    "version": "0.2.3",
     "description": "A Slormancer api to parse saves",
     "keywords": ["slormancer"],
     "author": "cayrac",
     "license": "ISC",
+    "main": "lib/index.js",
+    "files": [
+        "lib/**/*"
+    ],
+    "types": "./lib/index.d.ts",
     "homepage": "https://github.com/cayrac/slormancer-api#readme",
     "bugs": {
         "url": "https://github.com/cayrac/slormancer-api/issues"
@@ -15,38 +20,16 @@
         "url": "git+https://github.com/cayrac/slormancer-api.git"
     },
     "scripts": {
-        "clean": "if exist lib del /s /q lib",
-        "build": "npm run clean && npm run build:esm && npm run build:cjs",
-        "build:esm": "tsc -p ./tsconfig.esm.json && move lib\\esm\\index.js lib\\esm\\index.mjs",
-        "build:cjs": "tsc -p ./tsconfig.cjs.json",
-        "prepack": "npm run build"
+        "clean": "if exist lib del /s /q lib && if exist slormancer-api-*.tgz del slormancer-api-*.tgz",
+        "build": "npm run clean && tsc"
     },
     "dependencies": {
-        "@angular/compiler": "14.2.4",
         "@angular/core": "14.2.4"
     },
     "devDependencies": {
-        "@angular/compiler-cli": "14.2.4",
         "@angular-eslint/schematics": "14.1.2",
         "@types/node": "18.8.2",
         "eslint": "8.24.0",
         "typescript": "4.8.4"
-    },
-    "files": [
-        "lib/**/*"
-    ],
-    "types": "./lib/cjs/types/index.d.ts",
-    "main": "./lib/cjs/index.js",
-    "exports": {
-        ".": {
-            "import": {
-                "types": "./lib/esm/types/index.d.ts",
-                "default": "./lib/esm/index.mjs"
-            },
-            "require": {
-                "types": "./lib/cjs/types/index.d.ts",
-                "default": "./lib/cjs/index.js"
-            }
-        }
     }
 }
