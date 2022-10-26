@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { GameDataRune } from '@slormancer/model/content/game/data/game-data-rune';
 
 import { Affix } from '../../model/content/affix';
 import { CraftableEffect } from '../../model/content/craftable-effect';
@@ -9,6 +8,7 @@ import { GameDataActivable } from '../../model/content/game/data/game-data-activ
 import { GameDataAncestralLegacy } from '../../model/content/game/data/game-data-ancestral-legacy';
 import { GameDataAttribute } from '../../model/content/game/data/game-data-attribute';
 import { GameDataLegendary } from '../../model/content/game/data/game-data-legendary';
+import { GameDataRune } from '../../model/content/game/data/game-data-rune';
 import { GameDataSkill } from '../../model/content/game/data/game-data-skill';
 import { MinMax } from '../../model/minmax';
 import { bankerRound, round } from '../../util/math.util';

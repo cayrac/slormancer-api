@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { MAX_REAPER_AFFINITY_BONUS } from '@slormancer/constants/common';
-import { Rune } from '@slormancer/model/content/rune';
 
+import { MAX_REAPER_AFFINITY_BONUS } from '../constants/common';
 import { DATA_HERO_BASE_STATS } from '../constants/content/data/data-hero-base-stats';
 import { Character } from '../model/character';
 import { CharacterConfig } from '../model/character-config';
@@ -13,6 +12,7 @@ import { ReaperSmith } from '../model/content/enum/reaper-smith';
 import { SkillGenre } from '../model/content/enum/skill-genre';
 import { EquipableItem } from '../model/content/equipable-item';
 import { Reaper } from '../model/content/reaper';
+import { Rune } from '../model/content/rune';
 import { SkillElement } from '../model/content/skill-element';
 import { isEffectValueSynergy, isFirst, isNotNullOrUndefined, valueOrDefault } from '../util/utils';
 import { SlormancerActivableService } from './content/slormancer-activable.service';

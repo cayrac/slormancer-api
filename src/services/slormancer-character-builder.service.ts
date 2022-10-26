@@ -1,8 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ReaperSmith } from '@slormancer/model/content/enum/reaper-smith';
-import { ActivationRune, EffectRune, EnhancementRune } from '@slormancer/model/content/rune';
-import { RuneType } from '@slormancer/model/content/rune-type';
-import { RunesCombination } from '@slormancer/model/runes-combination';
 
 import { HeroClass } from '..//model/content/enum/hero-class';
 import { GAME_VERSION, INVENTORY_SIZE, MAX_HERO_LEVEL, STASH_SIZE } from '../constants/common';
@@ -10,12 +6,16 @@ import { Character, CharacterSkillAndUpgrades } from '../model/character';
 import { Activable } from '../model/content/activable';
 import { AncestralLegacy } from '../model/content/ancestral-legacy';
 import { Attribute } from '../model/content/enum/attribute';
+import { ReaperSmith } from '../model/content/enum/reaper-smith';
 import { EquipableItem } from '../model/content/equipable-item';
 import { Reaper } from '../model/content/reaper';
+import { ActivationRune, EffectRune, EnhancementRune } from '../model/content/rune';
+import { RuneType } from '../model/content/rune-type';
 import { Skill } from '../model/content/skill';
 import { Ultimatum } from '../model/content/ultimatum';
 import { GameItem } from '../model/parser/game/game-item';
 import { GameSave, GameSharedInventory, GameUltimatum } from '../model/parser/game/game-save';
+import { RunesCombination } from '../model/runes-combination';
 import { list } from '../util/math.util';
 import { isNotNullOrUndefined, valueOrDefault, valueOrNull } from '../util/utils';
 import { SlormancerAncestralLegacyService } from './content/slormancer-ancestral-legacy.service';

@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { DATA_RUNE } from '@slormancer/constants/content/data/data-rune';
-import { DataRune } from '@slormancer/model/content/data/data-rune';
-import { GameDataRune } from '@slormancer/model/content/game/data/game-data-rune';
 
 import { DATA_ACTIVABLE } from '../../constants/content/data/data-activable';
 import { DATA_ANCESTRAL_LEGACY } from '../../constants/content/data/data-ancestral-legacy';
@@ -14,6 +11,7 @@ import { DATA_KEYWORD_NAME } from '../../constants/content/data/data-keyword-nam
 import { DATA_LEGENDARY } from '../../constants/content/data/data-legendary';
 import { DATA_LEGENDARY_BASE } from '../../constants/content/data/data-legendary-base';
 import { DATA_REAPER } from '../../constants/content/data/data-reaper';
+import { DATA_RUNE } from '../../constants/content/data/data-rune';
 import { DATA_SKILL } from '../../constants/content/data/data-skill';
 import { DATA_SKILL_BUFF } from '../../constants/content/data/data-skill-buff';
 import { DATA_SKILL_CLASS_MECHANIC_ID } from '../../constants/content/data/data-skill-class-mechanic-id';
@@ -25,6 +23,7 @@ import { DataAncestralLegacy } from '../../model/content/data/data-ancestral-leg
 import { DataEquipableItemType } from '../../model/content/data/data-equipable-item-type';
 import { DataLegendary } from '../../model/content/data/data-legendary';
 import { DataReaper } from '../../model/content/data/data-reaper';
+import { DataRune } from '../../model/content/data/data-rune';
 import { DataSkill } from '../../model/content/data/data-skill';
 import { Attribute } from '../../model/content/enum/attribute';
 import { EquipableItemBase } from '../../model/content/enum/equipable-item-base';
@@ -37,6 +36,7 @@ import { GameDataAttribute } from '../../model/content/game/data/game-data-attri
 import { GameDataBuff } from '../../model/content/game/data/game-data-buff';
 import { GameDataLegendary } from '../../model/content/game/data/game-data-legendary';
 import { GameDataReaper } from '../../model/content/game/data/game-data-reaper';
+import { GameDataRune } from '../../model/content/game/data/game-data-rune';
 import { GameDataSkill } from '../../model/content/game/data/game-data-skill';
 import { GameDataStat } from '../../model/content/game/data/game-data-stat';
 import { GameDataTranslation } from '../../model/content/game/data/game-data-translation';

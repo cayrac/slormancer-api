@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@slormancer/*": [ "./src/*" ],
-    },
     "target": "es5",
     "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": true,
     "outDir": "./lib",
-    "strict": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true, 
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "strict": true,
   },
   "include": ["src"],
   "exclude": ["node_modules"]

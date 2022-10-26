@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Activable } from '@slormancer/model/content/activable';
-import { AbstractEffectValue, EffectValueVariable } from '@slormancer/model/content/effect-value';
-import { EffectValueUpgradeType } from '@slormancer/model/content/enum/effect-value-upgrade-type';
-import { EffectValueValueType } from '@slormancer/model/content/enum/effect-value-value-type';
-import { HeroClass } from '@slormancer/model/content/enum/hero-class';
-import { GameDataRune } from '@slormancer/model/content/game/data/game-data-rune';
-import { Rune } from '@slormancer/model/content/rune';
-import { RuneType } from '@slormancer/model/content/rune-type';
-import { RunesCombination } from '@slormancer/model/runes-combination';
-import { effectValueSynergy, effectValueVariable } from '@slormancer/util/effect-value.util';
-import { list } from '@slormancer/util/math.util';
+
+import { Activable } from '../../model/content/activable';
+import { AbstractEffectValue, EffectValueVariable } from '../../model/content/effect-value';
+import { EffectValueUpgradeType } from '../../model/content/enum/effect-value-upgrade-type';
+import { EffectValueValueType } from '../../model/content/enum/effect-value-value-type';
+import { HeroClass } from '../../model/content/enum/hero-class';
+import { GameDataRune } from '../../model/content/game/data/game-data-rune';
+import { Rune } from '../../model/content/rune';
+import { RuneType } from '../../model/content/rune-type';
+import { RunesCombination } from '../../model/runes-combination';
+import { effectValueSynergy, effectValueVariable } from '../../util/effect-value.util';
+import { list } from '../../util/math.util';
 import {
     emptyStringToNull,
     isEffectValueSynergy,
@@ -18,8 +19,7 @@ import {
     splitFloatData,
     valueOrDefault,
     valueOrNull,
-} from '@slormancer/util/utils';
-
+} from '../../util/utils';
 import { SlormancerActivableService } from '.././content/slormancer-activable.service';
 import { SlormancerEffectValueService } from '.././content/slormancer-effect-value.service';
 import { SlormancerDataService } from './slormancer-data.service';

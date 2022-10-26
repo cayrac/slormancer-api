@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { RunesCombination } from '@slormancer/model/runes-combination';
-import { compareVersions } from '@slormancer/util/utils';
 
 import { HeroClass } from '../../model/content/enum/hero-class';
 import { Bits } from '../../model/export/bits';
+import { RunesCombination } from '../../model/runes-combination';
 import { binaryToBoolean, binaryToNumber, booleanToBinary, numberToBinary, takeBitsChunk } from '../../util/bits.util';
+import { compareVersions } from '../../util/utils';
 import { SlormancerRuneService } from '../content/slormancer-rune.service';
 
 @Injectable()

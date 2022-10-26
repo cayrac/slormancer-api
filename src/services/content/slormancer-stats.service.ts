@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Rune } from '@slormancer/model/content/rune';
 
 import {
     GLOBAL_MERGED_STATS_MAPPING,
@@ -19,6 +18,7 @@ import { SkillGenre } from '../../model/content/enum/skill-genre';
 import { EquipableItem } from '../../model/content/equipable-item';
 import { Mechanic } from '../../model/content/mechanic';
 import { Reaper } from '../../model/content/reaper';
+import { Rune } from '../../model/content/rune';
 import { Skill } from '../../model/content/skill';
 import { SkillUpgrade } from '../../model/content/skill-upgrade';
 import { MinMax } from '../../model/minmax';

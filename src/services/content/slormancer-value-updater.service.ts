@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { EffectRune, Rune } from '@slormancer/model/content/rune';
-import { RuneType } from '@slormancer/model/content/rune-type';
 
 import {
     COOLDOWN_MAPPING,
@@ -21,6 +19,8 @@ import { ALL_SKILL_COST_TYPES, SkillCostType } from '../../model/content/enum/sk
 import { SkillGenre } from '../../model/content/enum/skill-genre';
 import { Mechanic } from '../../model/content/mechanic';
 import { Reaper } from '../../model/content/reaper';
+import { EffectRune, Rune } from '../../model/content/rune';
+import { RuneType } from '../../model/content/rune-type';
 import { SkillElement } from '../../model/content/skill-element';
 import { SkillUpgrade } from '../../model/content/skill-upgrade';
 import { Entity } from '../../model/entity';

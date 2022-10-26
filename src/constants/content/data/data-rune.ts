@@ -1,10 +1,10 @@
-import { DataRune } from '@slormancer/model/content/data/data-rune';
-import { EffectValueType } from '@slormancer/model/content/enum/effect-value-type';
-import { EffectValueUpgradeType } from '@slormancer/model/content/enum/effect-value-upgrade-type';
-import { EffectValueValueType } from '@slormancer/model/content/enum/effect-value-value-type';
-import { Rune } from '@slormancer/model/content/rune';
-import { effectValueConstant, effectValueSynergy, effectValueVariable } from '@slormancer/util/effect-value.util';
-import { isEffectValueSynergy, isEffectValueVariable } from '@slormancer/util/utils';
+import { DataRune } from '../../../model/content/data/data-rune';
+import { EffectValueType } from '../../../model/content/enum/effect-value-type';
+import { EffectValueUpgradeType } from '../../../model/content/enum/effect-value-upgrade-type';
+import { EffectValueValueType } from '../../../model/content/enum/effect-value-value-type';
+import { Rune } from '../../../model/content/rune';
+import { effectValueConstant, effectValueSynergy, effectValueVariable } from '../../../util/effect-value.util';
+import { isEffectValueSynergy, isEffectValueVariable } from '../../../util/utils';
 
 
 function setStat(rune: Rune, index: number, stat: string) {

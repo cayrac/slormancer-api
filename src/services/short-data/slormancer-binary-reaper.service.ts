@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { MAX_REAPER_AFFINITY_BASE } from '@slormancer/constants/common';
-import { compareVersions } from '@slormancer/util/utils';
 
+import { MAX_REAPER_AFFINITY_BASE } from '../../constants/common';
 import { HeroClass } from '../../model/content/enum/hero-class';
 import { Reaper } from '../../model/content/reaper';
 import { Bits } from '../../model/export/bits';
 import { binaryToBoolean, binaryToNumber, booleanToBinary, numberToBinary, takeBitsChunk } from '../../util/bits.util';
+import { compareVersions } from '../../util/utils';
 import { SlormancerReaperService } from '../content/slormancer-reaper.service';
 
 @Injectable()

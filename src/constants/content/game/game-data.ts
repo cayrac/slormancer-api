@@ -1,11 +1,10 @@
-import { GameDataRune } from '@slormancer/model/content/game/data/game-data-rune';
-
 import { GameDataActivable } from '../../../model/content/game/data/game-data-activable';
 import { GameDataAncestralLegacy } from '../../../model/content/game/data/game-data-ancestral-legacy';
 import { GameDataAttribute } from '../../../model/content/game/data/game-data-attribute';
 import { GameDataBuff } from '../../../model/content/game/data/game-data-buff';
 import { GameDataLegendary } from '../../../model/content/game/data/game-data-legendary';
 import { GameDataReaper } from '../../../model/content/game/data/game-data-reaper';
+import { GameDataRune } from '../../../model/content/game/data/game-data-rune';
 import { GameDataSkill } from '../../../model/content/game/data/game-data-skill';
 import { GameDataStat } from '../../../model/content/game/data/game-data-stat';
 import { GameDataTranslation } from '../../../model/content/game/data/game-data-translation';

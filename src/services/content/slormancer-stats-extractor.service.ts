@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Rune } from '@slormancer/model/content/rune';
-import { RuneType } from '@slormancer/model/content/rune-type';
 
 import {
     ARCANE_BOND_DAMAGE_FROM_MANA_SPENT as ARCANE_BOND_DAMAGE_FROM_MANA_LOST,
@@ -30,6 +28,8 @@ import { SkillGenre } from '../../model/content/enum/skill-genre';
 import { TraitLevel } from '../../model/content/enum/trait-level';
 import { EquipableItem } from '../../model/content/equipable-item';
 import { Mechanic } from '../../model/content/mechanic';
+import { Rune } from '../../model/content/rune';
+import { RuneType } from '../../model/content/rune-type';
 import { SkillType } from '../../model/content/skill-type';
 import { Entity } from '../../model/entity';
 import { EntityValue } from '../../model/entity-value';

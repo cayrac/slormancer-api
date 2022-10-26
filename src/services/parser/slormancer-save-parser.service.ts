@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ReaperSmith } from '@slormancer/model/content/enum/reaper-smith';
 
 import { GAME_VERSION } from '../../constants/common';
 import {
@@ -47,6 +46,7 @@ import {
     XP,
 } from '../../constants/parser/save-attributes';
 import { HeroClass } from '../../model/content/enum/hero-class';
+import { ReaperSmith } from '../../model/content/enum/reaper-smith';
 import { Bytes } from '../../model/parser/game/bytes';
 import { GameItem } from '../../model/parser/game/game-item';
 import {

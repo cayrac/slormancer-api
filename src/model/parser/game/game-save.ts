@@ -1,5 +1,4 @@
-import { ReaperSmith } from '@slormancer/model/content/enum/reaper-smith';
-
+import { ReaperSmith } from '../../../model/content/enum/reaper-smith';
 import { GameItem } from './game-item';
 
 export interface GameSave {
