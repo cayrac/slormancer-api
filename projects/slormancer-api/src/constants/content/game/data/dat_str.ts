@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_TRANSLATION = [{
         "REF": "INTERFACE/BUTTONS/SETTINGS",
         "EN": "",
         "FR": "",

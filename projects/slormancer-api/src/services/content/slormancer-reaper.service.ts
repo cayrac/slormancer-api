@@ -137,7 +137,9 @@ export class SlormancerReaperService {
     }
 
     private getReaperMinimumLevel(reaperId: number): number {
-        const parentsMinLevel = this.slormancerDataService.getParentsGameDataReaper(reaperId).map(parent => parent.MAX_LVL);
+        const parentsMinLevel = this.slormancerDataService.getParentsGameDataReaper(reaperId)
+            .map(parent => parent.MAX_LVL)
+            .filter(isNotNullOrUndefined);
         return Math.max(...parentsMinLevel, 1);
     }
 
@@ -372,7 +374,9 @@ export class SlormancerReaperService {
     }
 
     public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, level: number, levelPrimordial: number, kills: number, killsPrimordial: number, baseAffinity: number = 0, bonusAffinity: number = 0): Reaper {
-       
+        
+        const maxLevel = gameData.MAX_LVL ?? 0
+
         let result: Reaper = {
             id: gameData.REF,
             weaponClass,
@@ -391,25 +395,25 @@ export class SlormancerReaperService {
             activables: [],
             lore: this.slormancerTemplateService.getReaperLoreTemplate(gameData.EN_LORE),
             templates: this.getReaperTemplates(gameData, weaponClass),
-            smith: { id: gameData.BLACKSMITH, name: '' },
+            smith: { id: gameData.BLACKSMITH ?? ReaperSmith.Adrianne, name: '' },
             damageType: 'weapon_damage',
             minLevel: this.getReaperMinimumLevel(gameData.REF),
-            maxLevel: gameData.MAX_LVL,
+            maxLevel: maxLevel,
             damages: { min: 0, max: 0 },
             damagesLabel: '',
             maxDamages: { min: 0, max: 0 },
             maxDamagesLabel: '',
             baseInfo: {
                 kills: kills,
-                level: Math.min(level, gameData.MAX_LVL)
+                level: Math.min(level, maxLevel)
             },
             primordialInfo: {
                 kills: killsPrimordial,
-                level: Math.min(levelPrimordial, gameData.MAX_LVL)
+                level: Math.min(levelPrimordial, maxLevel)
             },
-            damagesBase: { min: gameData.BASE_DMG_MIN, max: gameData.BASE_DMG_MAX },
-            damagesLevel: { min: gameData.MIN_DMG_LVL, max: gameData.MAX_DMG_LVL },
-            damagesMultiplier: gameData.DMG_MULTIPLIER,
+            damagesBase: { min: gameData.BASE_DMG_MIN ?? 0, max: gameData.BASE_DMG_MAX ?? 0 },
+            damagesLevel: { min: gameData.MIN_DMG_LVL ?? 0, max: gameData.MAX_DMG_LVL ?? 0 },
+            damagesMultiplier: gameData.DMG_MULTIPLIER ?? 1,
             benedictionTitleLabel: '',
             maledictionTitleLabel: '',
             activablesTitleLabel: '',

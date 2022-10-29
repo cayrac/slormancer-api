@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_ENNEMIES = [{
         "REF": 0,
         "EN_REF": "Soldier",
         "EN_NAME": "The Skeleton Soldier",

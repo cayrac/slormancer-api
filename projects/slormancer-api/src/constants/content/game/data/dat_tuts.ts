@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_TUTO =[{
         "REF": 0,
         "EN_NAME": "How to Move",
         "EN_INGAME": "Press [{kb_up}][{kb_left}][{kb_down}][{kb_right}] to move and use the mouse to aim.#You can also opt for \"Click to Move\" controls from the Settings menu ([{kb_settings}]).|Use [{pad_l}] to move and [{pad_r}] to aim.#Easy.",

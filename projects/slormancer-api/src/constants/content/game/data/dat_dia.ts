@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_DIALOGUES = [{
         "REF": "Story Track - Intro",
         "TYPE": "super_cinematic",
         "OVERHEAD_PERCENT": null,

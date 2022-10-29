@@ -1,4 +1,5 @@
-[{
+
+export const GAME_DATA_WARRIOR_SKILL = [{
         "REF": 0,
         "EN_NAME": "Banners of War",
         "EN_DESCRIPTION": "You plant down a random <Banner of War> at target location that lasts ¤ seconds and acts within a ~ yard radius.#- Banner of Provocation taunts nearby enemies and has @ £. Max Life is equal to _ of your $ (µ% + µ% per mastery level).#- Banner of Regeneration grants you +@ £ (µ + µ per mastery level).#- Banner of Haste grants you +@ £ (µ + µ per mastery level).#- Banner of Sluggishness <Slows> enemies by @ (µ + µ per mastery level).",

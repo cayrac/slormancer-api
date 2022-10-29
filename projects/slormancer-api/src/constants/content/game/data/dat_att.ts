@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_ATTRIBUTES = [{
         "REF": 0,
         "TRAIT": 0,
         "ADDITIVE": 1,

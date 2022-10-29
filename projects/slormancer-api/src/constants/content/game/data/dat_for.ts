@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_FORGE = [{
         "REF": 0,
         "EN_NAME": "Well-Deserved Rest",
         "EN_DESCRIPTION": "The Siege Leader has been defeated.#Rest for now, and enjoy a fancy reward.",

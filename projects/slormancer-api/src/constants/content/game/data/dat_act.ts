@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_ACTIVABLES = [{
         "REF": 0,
         "EN_NAME": "Gold Armor",
         "EN_DESCRIPTION": "You have +@ £ and +@ £ for the next @ seconds.",

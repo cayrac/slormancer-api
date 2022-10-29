@@ -64,6 +64,7 @@ export class SlormancerDataService {
     }
 
     public getGameDataAvailableReaper(): Array<GameDataReaper> {
+        console.log(GAME_DATA);
         return GAME_DATA.REAPER.filter(stat => stat.EN_NAME !== '');
     }
 

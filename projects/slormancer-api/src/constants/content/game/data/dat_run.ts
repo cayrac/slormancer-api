@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_RUNE = [{
         "REF": 0,
         "SPRITE": 0,
         "EN_NAME": "Activation Rune of Astorias",

@@ -1,4 +1,6 @@
-[{
+import { GameDataReaper } from '../../../../model/content/game/data/game-data-reaper';
+
+export const GAME_DATA_REAPER: Array<GameDataReaper> = [{
     "REF": 0,
     "EN_NAME": "Adam Nostrus' $",
     "EN_DESC": "*+@ £*+@ £|/\n*+@ £|/\n|*Bryan is constantly taunting you.",

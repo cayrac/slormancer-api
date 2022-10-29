@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_CREDITS = [{
         "NAME": "Jeremy Sammarcelli",
         "FIRM": "slormite",
         "EN_ROLE": "Developer, Programmer",

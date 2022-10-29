@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_CITATIONS = [{
         "REF": 0,
         "EN_NAME": "The King",
         "EN_DESCRIPTION": "King of Adreart",

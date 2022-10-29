@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_MAGE_SKILL = [{
         "REF": 0,
         "EN_NAME": "Wall of Omen",
         "EN_DESCRIPTION": "You create a Wall of Omen at target location that lasts @ £.#Enemies passing through Wall of Omen are <Slowed> by §% for ¤ seconds.#Enemy Projectiles passing through Wall of Omen have §% Reduced Projectile Speed.",

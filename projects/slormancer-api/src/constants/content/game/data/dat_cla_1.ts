@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_HUNTRESS_SKILL = [{
         "REF": 0,
         "EN_NAME": "Turret Syndrome",
         "EN_DESCRIPTION": "You lay down a Portable <Ballista> at target location that lasts ¤ seconds. The Ballista fires <Light Arrows> toward enemies, dealing @ £.",

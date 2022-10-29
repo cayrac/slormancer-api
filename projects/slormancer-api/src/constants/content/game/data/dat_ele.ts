@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "REF": 0,
         "EN_NAME": "Burning Trail",
         "EN_DESCRIPTION": "While this Aura is toggled on, you leave a Trail of Fire behind you, dealing @ £ per second to enemies walking on it.",

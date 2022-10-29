@@ -3,38 +3,37 @@ import { GameDataAncestralLegacy } from '../../../model/content/game/data/game-d
 import { GameDataAttribute } from '../../../model/content/game/data/game-data-attribute';
 import { GameDataBuff } from '../../../model/content/game/data/game-data-buff';
 import { GameDataLegendary } from '../../../model/content/game/data/game-data-legendary';
-import { GameDataReaper } from '../../../model/content/game/data/game-data-reaper';
 import { GameDataRune } from '../../../model/content/game/data/game-data-rune';
 import { GameDataSkill } from '../../../model/content/game/data/game-data-skill';
 import { GameDataStat } from '../../../model/content/game/data/game-data-stat';
 import { GameDataTranslation } from '../../../model/content/game/data/game-data-translation';
 import { GameHeroesData } from '../../../model/parser/game/game-save';
-import * as ACTIVABLE from './data/dat_act.json';
-import * as ATTRIBUTES from './data/dat_att.json';
-import * as BUFF from './data/dat_buf.json';
-import * as WARRIOR_SKILL from './data/dat_cla_0.json';
-import * as HUNTRESS_SKILL from './data/dat_cla_1.json';
-import * as MAGE_SKILL from './data/dat_cla_2.json';
-import * as ANCESTRAL_LEGACY from './data/dat_ele.json';
-import * as LEGENDARY from './data/dat_leg.json';
-import * as REAPER from './data/dat_rea.json';
-import * as RUNE from './data/dat_run.json';
-import * as STAT from './data/dat_sta.json';
-import * as TRANSLATION from './data/dat_str.json';
+import { GAME_DATA_ACTIVABLES } from './data/dat_act';
+import { GAME_DATA_ATTRIBUTES } from './data/dat_att';
+import { GAME_DATA_BUFF } from './data/dat_buf';
+import { GAME_DATA_WARRIOR_SKILL } from './data/dat_cla_0';
+import { GAME_DATA_HUNTRESS_SKILL } from './data/dat_cla_1';
+import { GAME_DATA_MAGE_SKILL } from './data/dat_cla_2';
+import { GAME_DATA_ANCESTRAL_LEGACY } from './data/dat_ele';
+import { GAME_DATA_LEGENDARY } from './data/dat_leg';
+import { GAME_DATA_REAPER } from './data/dat_rea';
+import { GAME_DATA_RUNE } from './data/dat_run';
+import { GAME_DATA_STAT } from './data/dat_sta';
+import { GAME_DATA_TRANSLATION } from './data/dat_str';
 
 export const GAME_DATA = {
-    REAPER: <Array<GameDataReaper>> Array.from(REAPER),
-    STAT: <Array<GameDataStat>> Array.from(STAT),
-    LEGENDARY: <Array<GameDataLegendary>> Array.from(LEGENDARY),
-    RUNE: <Array<GameDataRune>> Array.from(RUNE),
-    ACTIVABLE: <Array<GameDataActivable>> Array.from(ACTIVABLE),
+    REAPER: GAME_DATA_REAPER,
+    STAT: <Array<GameDataStat>> GAME_DATA_STAT,
+    LEGENDARY: <Array<GameDataLegendary>> GAME_DATA_LEGENDARY,
+    RUNE: <Array<GameDataRune>> GAME_DATA_RUNE,
+    ACTIVABLE: <Array<GameDataActivable>> GAME_DATA_ACTIVABLES,
     SKILL: <GameHeroesData<Array<GameDataSkill>>> {
-        0: <Array<GameDataSkill>>Array.from(WARRIOR_SKILL),
-        1: <Array<GameDataSkill>>Array.from(HUNTRESS_SKILL),
-        2: <Array<GameDataSkill>>Array.from(MAGE_SKILL)
+        0: <Array<GameDataSkill>>GAME_DATA_WARRIOR_SKILL,
+        1: <Array<GameDataSkill>>GAME_DATA_HUNTRESS_SKILL,
+        2: <Array<GameDataSkill>>GAME_DATA_MAGE_SKILL
     },
-    TRANSLATION: <Array<GameDataTranslation>>Array.from(TRANSLATION),
-    BUFF: <Array<GameDataBuff>>Array.from(BUFF),
-    ANCESTRAL_LEGACY: <Array<GameDataAncestralLegacy>>Array.from(ANCESTRAL_LEGACY),
-    ATTRIBUTES: <Array<GameDataAttribute>>Array.from(ATTRIBUTES)
+    TRANSLATION: <Array<GameDataTranslation>>GAME_DATA_TRANSLATION,
+    BUFF: <Array<GameDataBuff>>GAME_DATA_BUFF,
+    ANCESTRAL_LEGACY: <Array<GameDataAncestralLegacy>>GAME_DATA_ANCESTRAL_LEGACY,
+    ATTRIBUTES: <Array<GameDataAttribute>>GAME_DATA_ATTRIBUTES
 };

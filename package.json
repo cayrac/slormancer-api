@@ -8,6 +8,7 @@
     "ng": "ng",
     "clean": "if exist dist del /s /q dist && if exist slormancer-api-*.tgz del slormancer-api-*.tgz",
     "build": "npm run clean && ng build slormancer-api",
+    "pack": "npm run build && npm pack ./dist/slormancer-api",
     "test": "ng test slormancer-api",
     "lint": "ng lint slormancer-api"
   },

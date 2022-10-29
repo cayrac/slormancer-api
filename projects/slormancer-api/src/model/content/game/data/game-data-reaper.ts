@@ -31,19 +31,23 @@ export interface GameDataReaper {
     PT_DESC: string;
     PT_LORE: string;
     ORDER: number;
-    BLACKSMITH: number;
+    BLACKSMITH: number | null;
     CONSTANT_CHECK: string;
     VALUE_BASE: string;
     VALUE_TYPE: string;
     VALUE_LEVEL: string;
     VALUE_STAT: string;
     VALUE_REAL: string;
-    LOOTABLE: null,
-    BASE_DMG_MIN: number;
-    BASE_DMG_MAX: number;
-    MIN_DMG_LVL: number;
-    MAX_DMG_LVL: number;
-    DMG_MULTIPLIER: number;
-    MAX_LVL: number;
-    EVOLVE_IN: number;
+    LOOTABLE: number | null,
+    BASE_DMG_MIN: number | null;
+    BASE_DMG_MAX: number | null;
+    MIN_DMG_LVL: number | null;
+    MAX_DMG_LVL: number | null;
+    DMG_MULTIPLIER: number | null;
+    MAX_LVL: number | null;
+    EVOLVE_IN: number | null;
+    '100': string;
+    'AURE V2 %': string;
+    'NEW 100 WANTED': string;
+    'OLD 100': string;
 };

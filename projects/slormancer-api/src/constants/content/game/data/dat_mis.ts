@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_MISSIONS = [{
         "REF": 0,
         "NUMBER": 1,
         "EN_NAME": "Adreart's Graveyard",

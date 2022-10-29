@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_ACHIEVEMENTS = [{
         "REF": 0,
         "EN_NAME": "Monster Slayer",
         "EN_DESCRIPTION": "Kill $ Enemies",

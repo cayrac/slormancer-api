@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_CATACLISMS = [{
         "REF": 0,
         "EN_NAME": "Gravity",
         "EN_DESCRIPTION": "Your Projectiles have @ Projectile Range and Speed.",

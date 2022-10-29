@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_BUFF = [{
         "REF": "breach_reward",
         "EN_NAME": "Breach Bonus Reward",
         "EN_DESCRIPTION": "You have +@% Slorm Reward and +@% Goldus Reward for closing Breaches.##This bonus can be increased by closing Multi-Waves Breaches.",

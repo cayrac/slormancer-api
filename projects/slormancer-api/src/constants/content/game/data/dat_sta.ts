@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_STAT = [{
         "REF_NB": 0,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "atk_phy",

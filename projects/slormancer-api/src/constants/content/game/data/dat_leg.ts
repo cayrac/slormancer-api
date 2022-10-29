@@ -1,4 +1,4 @@
-[{
+export const GAME_DATA_LEGENDARY = [{
         "FIELD1": "",
         "FIELD2": null,
         "REF": 0,
