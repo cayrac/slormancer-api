@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+import { Attribute } from '../../model';
 import { CharacterConfig } from '../../model/character-config';
 import {
     ExternalSynergyResolveData,
@@ -67,8 +68,40 @@ export class SlormancerSynergyResolverService {
         });
     }
 
+    private takeSynergyFromLoop(remainingSynergies: Array<SynergyResolveData | ExternalSynergyResolveData>): number {
+        let result: number = -1;
+
+        const indomitableMountain = remainingSynergies.findIndex(remainingSynergy => "item" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.item.legendaryEffect !== null
+            && remainingSynergy.objectSource.item.legendaryEffect.id === 23);
+        const armorOfIllusion = remainingSynergies.findIndex(remainingSynergy => "upgrade" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.upgrade.id === 203);
+        const evaseMagic = remainingSynergies.findIndex(remainingSynergy => "upgrade" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.upgrade.id === 134);
+        const elementalLock = remainingSynergies.findIndex(remainingSynergy => "ancestralLegacy" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.ancestralLegacy.id === 104);
+        const untouchableOne = remainingSynergies.findIndex(remainingSynergy => "reaper" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.reaper.id === 24);
+        const toughness15 = remainingSynergies.findIndex(remainingSynergy => "attribute" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.attribute.attribute === Attribute.Toughness
+            && remainingSynergy.type === ResolveDataType.Synergy
+            && remainingSynergy.effect.source === 'armor' );
+        const elementalSorcerer = remainingSynergies.findIndex(remainingSynergy => "ancestralLegacy" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.ancestralLegacy.id === 112);
+
+        if (indomitableMountain !== -1 && armorOfIllusion !== -1) {
+            result = armorOfIllusion;
+        } else if (evaseMagic !== -1 && elementalLock !== -1 && untouchableOne !== -1) {
+            result = evaseMagic;
+        } else if (toughness15 !== -1 && elementalSorcerer !== -1 && untouchableOne !== -1 && indomitableMountain !== -1) {
+            result = toughness15;
+        }
+        
+        return result;
+    }
+
     private takeNextSynergy(resolveDatas: Array<SynergyResolveData | ExternalSynergyResolveData>): SynergyResolveData | ExternalSynergyResolveData | null {
-        const indexFound = resolveDatas.findIndex(resolveData => resolveDatas
+        let indexFound = resolveDatas.findIndex(resolveData => resolveDatas
             .find(s => s.statsItWillUpdate.find(statItWillUpdate => {
                 let found = false; 
                 if (resolveData.type === ResolveDataType.Synergy) {
@@ -78,6 +111,10 @@ export class SlormancerSynergyResolverService {
                 }
                 return found;
             }) !== undefined) === undefined);
+
+        if (indexFound === -1 && resolveDatas.length > 0) {
+            indexFound = this.takeSynergyFromLoop(resolveDatas);
+        }
 
         let result: SynergyResolveData | ExternalSynergyResolveData | null = null;
         if (indexFound !== -1) {

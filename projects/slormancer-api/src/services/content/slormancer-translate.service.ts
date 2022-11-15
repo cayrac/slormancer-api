@@ -15,7 +15,6 @@ export class SlormancerTranslateService {
     };
 
     private readonly TRANSLATION_KEY_MAPPING: { [key: string]: string } = {
-        armor_of_illusion: 'armor',
         training_lance_additional_damage_add: 'physical_damage',
         damage_taken_to_mana: 'damage',
         atk_arcanic: 'school_0',

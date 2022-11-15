@@ -31,7 +31,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 10,
         "PRECAST_TIME": 8,
         "CAST_TIME": 12,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 7,
@@ -66,7 +67,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 10,
         "PRECAST_TIME": 20,
         "CAST_TIME": 15,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 1,
@@ -101,7 +103,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 5,
         "PRECAST_TIME": 60,
         "CAST_TIME": 15,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 5,
@@ -136,7 +139,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 15,
         "PRECAST_TIME": 45,
         "CAST_TIME": 25,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 4,
@@ -171,7 +175,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 20,
         "PRECAST_TIME": 30,
         "CAST_TIME": 30,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 3,
@@ -206,7 +211,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 45,
         "PRECAST_TIME": 35,
         "CAST_TIME": 45,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 10,
@@ -241,7 +247,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 60,
         "CAST_TIME": 30,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 17,
@@ -276,7 +283,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 25,
         "PRECAST_TIME": 10,
         "CAST_TIME": 0,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 15,
@@ -311,7 +319,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 15,
         "PRECAST_TIME": 40,
         "CAST_TIME": 15,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "F"
     },
     {
         "REF": 16,
@@ -346,7 +355,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 100,
         "PRECAST_TIME": 8,
         "CAST_TIME": 0,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 14,
@@ -381,7 +391,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 30,
         "PRECAST_TIME": 10,
         "CAST_TIME": 15,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 18,
@@ -416,7 +427,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 40,
         "PRECAST_TIME": 10,
         "CAST_TIME": 20,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 23,
@@ -451,7 +463,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 40,
         "CAST_TIME": 60,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 9,
@@ -486,7 +499,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 5,
         "PRECAST_TIME": 30,
         "CAST_TIME": 10,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 24,
@@ -521,7 +535,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 10,
         "PRECAST_TIME": 15,
         "CAST_TIME": 40,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "F"
     },
     {
         "REF": 25,
@@ -556,7 +571,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 20,
         "PRECAST_TIME": 45,
         "CAST_TIME": 30,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 26,
@@ -591,7 +607,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 5,
         "PRECAST_TIME": 30,
         "CAST_TIME": 0,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 8,
@@ -607,7 +624,7 @@ export const GAME_DATA_ENNEMIES = [{
         "RU_NAME": "",
         "PT_NAME": "",
         "INFLUENCE_ENVIRONMENT": 3,
-        "INFLUENCE_REQUIRED": 2,
+        "INFLUENCE_REQUIRED": 1,
         "LOOT_PROFILE": "low",
         "ATTACK_RANGE": 40,
         "ATTACK_GENRE": "melee",
@@ -626,7 +643,116 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 18,
         "CAST_TIME": 15,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
+    },
+    {
+        "REF": 33,
+        "EN_REF": "Pudding Hermit",
+        "EN_NAME": "The Pudding Hermit",
+        "FR_NAME": "L'Ermite Pudding",
+        "CH_NAME": "",
+        "TW_NAME": "",
+        "JP_NAME": "",
+        "DE_NAME": "",
+        "ES_NAME": "",
+        "IT_NAME": "",
+        "RU_NAME": "",
+        "PT_NAME": "",
+        "INFLUENCE_ENVIRONMENT": 3,
+        "INFLUENCE_REQUIRED": 1,
+        "LOOT_PROFILE": "trash",
+        "ATTACK_RANGE": 60,
+        "ATTACK_GENRE": "melee",
+        "PRECAST_LOCK": false,
+        "DODGE": 0,
+        "PRECISION": 100,
+        "COOLDOWN": 15,
+        "BASIC_DAMAGE": 9,
+        "ELEMENTAL_DAMAGE": 9,
+        "HEALTH": 62,
+        "SPEED": 0.7,
+        "CRIT_CHANCE": 0,
+        "RES_PHY": 8,
+        "RES_MAG": 8,
+        "KNOCKBACK_FORCE": 3,
+        "KNOCKBACK_WEIGHT": 10,
+        "PRECAST_TIME": 35,
+        "CAST_TIME": 15,
+        "FRIENDLY": false,
+        "GENRE": "M"
+    },
+    {
+        "REF": 31,
+        "EN_REF": "Unstable Imp",
+        "EN_NAME": "The Unstable Imp",
+        "FR_NAME": "Le Diablotin Instable",
+        "CH_NAME": "",
+        "TW_NAME": "",
+        "JP_NAME": "",
+        "DE_NAME": "",
+        "ES_NAME": "",
+        "IT_NAME": "",
+        "RU_NAME": "",
+        "PT_NAME": "",
+        "INFLUENCE_ENVIRONMENT": 3,
+        "INFLUENCE_REQUIRED": 1,
+        "LOOT_PROFILE": "good",
+        "ATTACK_RANGE": 60,
+        "ATTACK_GENRE": "aoe",
+        "PRECAST_LOCK": true,
+        "DODGE": 0,
+        "PRECISION": 100,
+        "COOLDOWN": 90,
+        "BASIC_DAMAGE": 24,
+        "ELEMENTAL_DAMAGE": 48,
+        "HEALTH": 97,
+        "SPEED": 2,
+        "CRIT_CHANCE": 0,
+        "RES_PHY": 0,
+        "RES_MAG": 0,
+        "KNOCKBACK_FORCE": 12,
+        "KNOCKBACK_WEIGHT": 5,
+        "PRECAST_TIME": 75,
+        "CAST_TIME": 0,
+        "FRIENDLY": false,
+        "GENRE": "M"
+    },
+    {
+        "REF": 32,
+        "EN_REF": "Shepherd",
+        "EN_NAME": "The Shepherd",
+        "FR_NAME": "Le Berger",
+        "CH_NAME": "",
+        "TW_NAME": "",
+        "JP_NAME": "",
+        "DE_NAME": "",
+        "ES_NAME": "",
+        "IT_NAME": "",
+        "RU_NAME": "",
+        "PT_NAME": "",
+        "INFLUENCE_ENVIRONMENT": 3,
+        "INFLUENCE_REQUIRED": 2,
+        "LOOT_PROFILE": "good",
+        "ATTACK_RANGE": 205,
+        "ATTACK_GENRE": "projectile",
+        "PRECAST_LOCK": true,
+        "DODGE": 0,
+        "PRECISION": 100,
+        "COOLDOWN": 45,
+        "BASIC_DAMAGE": 0,
+        "ELEMENTAL_DAMAGE": 56,
+        "HEALTH": 137,
+        "SPEED": 0.5,
+        "CRIT_CHANCE": 0,
+        "RES_PHY": 14,
+        "RES_MAG": 18,
+        "KNOCKBACK_FORCE": 3,
+        "KNOCKBACK_WEIGHT": 75,
+        "PRECAST_TIME": 45,
+        "CAST_TIME": 60,
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 11,
@@ -644,7 +770,7 @@ export const GAME_DATA_ENNEMIES = [{
         "INFLUENCE_ENVIRONMENT": 3,
         "INFLUENCE_REQUIRED": 2,
         "LOOT_PROFILE": "high",
-        "ATTACK_RANGE": 50,
+        "ATTACK_RANGE": 64,
         "ATTACK_GENRE": "aoe",
         "PRECAST_LOCK": true,
         "DODGE": 0,
@@ -659,9 +785,10 @@ export const GAME_DATA_ENNEMIES = [{
         "RES_MAG": 15,
         "KNOCKBACK_FORCE": 0,
         "KNOCKBACK_WEIGHT": 20,
-        "PRECAST_TIME": 40,
+        "PRECAST_TIME": 30,
         "CAST_TIME": 45,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 2,
@@ -696,7 +823,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 50,
         "PRECAST_TIME": 70,
         "CAST_TIME": 35,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 6,
@@ -731,7 +859,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 20,
         "PRECAST_TIME": 15,
         "CAST_TIME": 0,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 30,
@@ -766,7 +895,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 100,
         "PRECAST_TIME": 0,
         "CAST_TIME": 0,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 19,
@@ -801,7 +931,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 100,
         "PRECAST_TIME": 45,
         "CAST_TIME": 5,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 27,
@@ -836,7 +967,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 75,
         "PRECAST_TIME": 45,
         "CAST_TIME": 10,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 28,
@@ -871,7 +1003,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 30,
         "CAST_TIME": 10,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 29,
@@ -906,7 +1039,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 100,
         "PRECAST_TIME": 60,
         "CAST_TIME": 30,
-        "FRIENDLY": false
+        "FRIENDLY": false,
+        "GENRE": "M"
     },
     {
         "REF": 12,
@@ -941,7 +1075,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 30,
         "CAST_TIME": 15,
-        "FRIENDLY": true
+        "FRIENDLY": true,
+        "GENRE": "M"
     },
     {
         "REF": 13,
@@ -976,7 +1111,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 12,
         "CAST_TIME": 5,
-        "FRIENDLY": true
+        "FRIENDLY": true,
+        "GENRE": "M"
     },
     {
         "REF": 20,
@@ -1011,7 +1147,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 0,
         "CAST_TIME": 0,
-        "FRIENDLY": true
+        "FRIENDLY": true,
+        "GENRE": "M"
     },
     {
         "REF": 21,
@@ -1046,7 +1183,8 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 6,
         "CAST_TIME": 12,
-        "FRIENDLY": true
+        "FRIENDLY": true,
+        "GENRE": "M"
     },
     {
         "REF": 22,
@@ -1081,6 +1219,7 @@ export const GAME_DATA_ENNEMIES = [{
         "KNOCKBACK_WEIGHT": 0,
         "PRECAST_TIME": 30,
         "CAST_TIME": 5,
-        "FRIENDLY": true
+        "FRIENDLY": true,
+        "GENRE": "M"
     }
 ]

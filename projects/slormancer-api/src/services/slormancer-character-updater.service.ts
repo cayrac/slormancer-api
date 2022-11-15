@@ -220,7 +220,7 @@ export class SlormancerCharacterUpdaterService {
 
                     return result;
                 }).filter(isNotNullOrUndefined);
-            character.issues.push('Your build contain a synergy loop between : ' + names.join(', '));
+            character.issues.push('Your build contain an unresolved synergy loop between : ' + names.join(', '));
         }
     }
 

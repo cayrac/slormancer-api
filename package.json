@@ -1,6 +1,6 @@
 {
   "name": "slormancer-api",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A Slormancer api to parse saves",
   "keywords": ["slormancer"],
   "author": "cayrac",
@@ -12,7 +12,7 @@
     "test": "ng test slormancer-api",
     "lint": "ng lint slormancer-api"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^14.2.0",
     "@angular/common": "^14.2.0",

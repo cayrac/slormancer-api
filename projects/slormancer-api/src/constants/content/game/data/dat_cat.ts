@@ -28,7 +28,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 8,
@@ -60,7 +61,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 1,
@@ -92,7 +94,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%|%"
+        "TYPE": "%|%",
+        "ELITE_AFFIX_TIMER": 0.1
     },
     {
         "REF": 6,
@@ -124,7 +127,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": 7
     },
     {
         "REF": 7,
@@ -156,7 +160,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 21,
@@ -188,7 +193,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": 2.5
     },
     {
         "REF": 22,
@@ -215,12 +221,13 @@ export const GAME_DATA_CATACLISMS = [{
         "DEFAULT_RARITY": "N",
         "NORMAL": "50",
         "MAGIC": "",
-        "RARE": "100",
+        "RARE": "75",
         "EPIC": "",
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": 2
     },
     {
         "REF": 23,
@@ -252,7 +259,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": ""
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 5
     },
     {
         "REF": 24,
@@ -284,7 +292,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": 5
     },
     {
         "REF": 3,
@@ -316,7 +325,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%|"
+        "TYPE": "%|",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 4,
@@ -348,7 +358,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%|%|"
+        "TYPE": "%|%|",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 16,
@@ -380,18 +391,19 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%|%"
+        "TYPE": "%|%",
+        "ELITE_AFFIX_TIMER": 0.1
     },
     {
         "REF": 5,
         "EN_NAME": "Jetlag",
-        "EN_DESCRIPTION": "Enemies are invulnerable for @ seconds after coming out of a Breach.",
+        "EN_DESCRIPTION": "Every second, enemies have @ Chance to become Invulnerable for @ to @ seconds",
         "FR_NAME": "Délai",
-        "FR_DESCRIPTION": "Les ennemis sont invulnérables durant @ secondes lorsqu'ils sortent d'une Brèche.",
+        "FR_DESCRIPTION": "Toutes les secondes, les ennemis ont @ de Chance de devenir Invulnérables durant @ à @ secondes.",
         "CH_NAME": "时差效应",
-        "CH_DESCRIPTION": "刚从裂隙出现的敌人在@秒内无敌。",
+        "CH_DESCRIPTION": "刚从裂隙出现的敌人在@秒内无敌。@ - @",
         "TW_NAME": "時差效應",
-        "TW_DESCRIPTION": "剛從裂隙出現的敵人在@秒內無敵。",
+        "TW_DESCRIPTION": "剛從裂隙出現的敵人在@秒內無敵。@ - @",
         "JP_NAME": "",
         "JP_DESCRIPTION": "",
         "DE_NAME": "",
@@ -405,14 +417,15 @@ export const GAME_DATA_CATACLISMS = [{
         "PT_NAME": "",
         "PT_DESCRIPTION": "",
         "DEFAULT_RARITY": "N",
-        "NORMAL": "2",
+        "NORMAL": "15|0.5|2",
         "MAGIC": "",
-        "RARE": "5",
-        "EPIC": "7",
+        "RARE": "30|0.5|2",
+        "EPIC": "",
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": ""
+        "TYPE": "%||",
+        "ELITE_AFFIX_TIMER": 4
     },
     {
         "REF": 9,
@@ -444,7 +457,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%|%"
+        "TYPE": "%|%",
+        "ELITE_AFFIX_TIMER": 0.1
     },
     {
         "REF": 18,
@@ -476,14 +490,15 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": ""
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 17,
         "EN_NAME": "Assimilation",
-        "EN_DESCRIPTION": "Enemies receive @ Decreased Damage for each yard between them and the damage's source.",
+        "EN_DESCRIPTION": "Enemies receive @ Decreased Damage for each yard between you and them.",
         "FR_NAME": "Assimilation",
-        "FR_DESCRIPTION": "Les ennemis reçoivent @ de Dégâts Réduits pour chaque mètre entre eux la source des Dégâts.",
+        "FR_DESCRIPTION": "Les ennemis reçoivent @ de Dégâts Réduits pour chaque mètre entre eux et vous.",
         "CH_NAME": "",
         "CH_DESCRIPTION": "",
         "TW_NAME": "",
@@ -508,7 +523,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 15,
@@ -540,14 +556,15 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 10,
         "EN_NAME": "Explosive",
-        "EN_DESCRIPTION": "Enemies explode upon dying, dealing @ of their Max Life as Skill Damage after @ second within a @ yard radius.",
+        "EN_DESCRIPTION": "Enemies explode upon dying, dealing @ of their Base Max Life as Skill Damage after @ second within a @ yard radius.",
         "FR_NAME": "Explosifs",
-        "FR_DESCRIPTION": "Les ennemis explosent lorsqu'il meurent, infligeant @ de leur Vie Max en tant que Dégâts Physiques après @ secondes dans un rayon de @ mètres.",
+        "FR_DESCRIPTION": "Les ennemis explosent lorsqu'il meurent, infligeant @ de leur Vie Max de Base en tant que Dégâts Physiques après @ secondes dans un rayon de @ mètres.",
         "CH_NAME": "爆炸",
         "CH_DESCRIPTION": "敌人在死亡时爆炸，在@秒后对周围@码半径内造成相当于自身最大生命@的技能伤害。",
         "TW_NAME": "爆炸",
@@ -565,21 +582,22 @@ export const GAME_DATA_CATACLISMS = [{
         "PT_NAME": "",
         "PT_DESCRIPTION": "",
         "DEFAULT_RARITY": "N",
-        "NORMAL": "10|1.5|1.5",
-        "MAGIC": "20|1.5|2",
+        "NORMAL": "10|3|1.5",
+        "MAGIC": "20|3|2",
         "RARE": "",
-        "EPIC": "100|1.5|3",
+        "EPIC": "30|3|3",
         "LEGENDARY": "",
         "DMG_TYPE": "phy",
         "KNOCKBACK": 3,
-        "TYPE": "%||"
+        "TYPE": "%||",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 14,
         "EN_NAME": "Replicant",
-        "EN_DESCRIPTION": "Enemies summon a copy of themselves when they reach @ Life.",
+        "EN_DESCRIPTION": "Enemies have @ Chance to summon a copy of themselves when they reach @ Life.",
         "FR_NAME": "Réplicant",
-        "FR_DESCRIPTION": "Les ennemis invoquent une copie d'eux-mêmes lorsqu'ils atteignent @ de Vie.",
+        "FR_DESCRIPTION": "Les ennemis ont @ de Chance d'invoquer une copie d'eux-mêmes lorsqu'ils atteignent @ de Vie.",
         "CH_NAME": "",
         "CH_DESCRIPTION": "",
         "TW_NAME": "",
@@ -597,14 +615,15 @@ export const GAME_DATA_CATACLISMS = [{
         "PT_NAME": "",
         "PT_DESCRIPTION": "",
         "DEFAULT_RARITY": "M",
-        "NORMAL": "20",
-        "MAGIC": "50",
+        "NORMAL": "30|20",
+        "MAGIC": "30|50",
         "RARE": "",
-        "EPIC": "90",
+        "EPIC": "30|90",
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%|%",
+        "ELITE_AFFIX_TIMER": 4
     },
     {
         "REF": 2,
@@ -628,15 +647,16 @@ export const GAME_DATA_CATACLISMS = [{
         "RU_DESCRIPTION": "",
         "PT_NAME": "",
         "PT_DESCRIPTION": "",
-        "DEFAULT_RARITY": "E",
+        "DEFAULT_RARITY": "N",
         "NORMAL": "25",
         "MAGIC": "",
-        "RARE": "",
-        "EPIC": "100",
+        "RARE": "50",
+        "EPIC": "75",
         "LEGENDARY": "",
         "DMG_TYPE": "",
         "KNOCKBACK": null,
-        "TYPE": "%"
+        "TYPE": "%",
+        "ELITE_AFFIX_TIMER": null
     },
     {
         "REF": 11,
@@ -668,7 +688,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "fire",
         "KNOCKBACK": 0,
-        "TYPE": "|"
+        "TYPE": "|",
+        "ELITE_AFFIX_TIMER": 0.5
     },
     {
         "REF": 12,
@@ -700,7 +721,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "ice",
         "KNOCKBACK": 0,
-        "TYPE": "||||"
+        "TYPE": "||||",
+        "ELITE_AFFIX_TIMER": 4.5
     },
     {
         "REF": 13,
@@ -732,7 +754,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "light",
         "KNOCKBACK": 0,
-        "TYPE": ""
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 4
     },
     {
         "REF": 19,
@@ -764,7 +787,8 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "lightning",
         "KNOCKBACK": 0,
-        "TYPE": ""
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 3
     },
     {
         "REF": 20,
@@ -796,6 +820,172 @@ export const GAME_DATA_CATACLISMS = [{
         "LEGENDARY": "",
         "DMG_TYPE": "shadow",
         "KNOCKBACK": 0,
-        "TYPE": "|"
+        "TYPE": "|",
+        "ELITE_AFFIX_TIMER": 5
+    },
+    {
+        "REF": 25,
+        "EN_NAME": "Fire Strike",
+        "EN_DESCRIPTION": "Enemies deal @ Fire Damage and have £ Chance to apply Burn for the next £ seconds.",
+        "FR_NAME": "Frappe de Feu",
+        "FR_DESCRIPTION": "Les ennemis infligent @ de Dégâts de feu et ont £ de Chance d'appliquer Brûlure pour les £ prochaines secondes.",
+        "CH_NAME": "",
+        "CH_DESCRIPTION": "",
+        "TW_NAME": "",
+        "TW_DESCRIPTION": "",
+        "JP_NAME": "",
+        "JP_DESCRIPTION": "",
+        "DE_NAME": "",
+        "DE_DESCRIPTION": "",
+        "ES_NAME": "",
+        "ES_DESCRIPTION": "",
+        "IT_NAME": "",
+        "IT_DESCRIPTION": "",
+        "RU_NAME": "",
+        "RU_DESCRIPTION": "",
+        "PT_NAME": "",
+        "PT_DESCRIPTION": "",
+        "DEFAULT_RARITY": "N",
+        "NORMAL": "11",
+        "MAGIC": "",
+        "RARE": "",
+        "EPIC": "",
+        "LEGENDARY": "",
+        "DMG_TYPE": "fire",
+        "KNOCKBACK": 0,
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 2
+    },
+    {
+        "REF": 26,
+        "EN_NAME": "Ice Strike",
+        "EN_DESCRIPTION": "Enemies deal @ Ice Damage and have £ Chance to apply Chill for the next £ seconds.",
+        "FR_NAME": "Frappe de Glaçe",
+        "FR_DESCRIPTION": "Les ennemis infligent @ de Dégâts de Glace et ont £ de Chance de vous Glacer pour les £ prochaines secondes.",
+        "CH_NAME": "",
+        "CH_DESCRIPTION": "",
+        "TW_NAME": "",
+        "TW_DESCRIPTION": "",
+        "JP_NAME": "",
+        "JP_DESCRIPTION": "",
+        "DE_NAME": "",
+        "DE_DESCRIPTION": "",
+        "ES_NAME": "",
+        "ES_DESCRIPTION": "",
+        "IT_NAME": "",
+        "IT_DESCRIPTION": "",
+        "RU_NAME": "",
+        "RU_DESCRIPTION": "",
+        "PT_NAME": "",
+        "PT_DESCRIPTION": "",
+        "DEFAULT_RARITY": "N",
+        "NORMAL": "13",
+        "MAGIC": "",
+        "RARE": "",
+        "EPIC": "",
+        "LEGENDARY": "",
+        "DMG_TYPE": "ice",
+        "KNOCKBACK": 0,
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 0.1
+    },
+    {
+        "REF": 27,
+        "EN_NAME": "Lightning Strike",
+        "EN_DESCRIPTION": "Enemies deal @ Lightning Damage and have £ Chance to apply Shock for the next £ seconds.",
+        "FR_NAME": "Frappe de Foudre",
+        "FR_DESCRIPTION": "Les ennemis infligent @ de Dégâts de Foudre et ont £ d'appliquer Choc pour les £ prochaines secondes.",
+        "CH_NAME": "",
+        "CH_DESCRIPTION": "",
+        "TW_NAME": "",
+        "TW_DESCRIPTION": "",
+        "JP_NAME": "",
+        "JP_DESCRIPTION": "",
+        "DE_NAME": "",
+        "DE_DESCRIPTION": "",
+        "ES_NAME": "",
+        "ES_DESCRIPTION": "",
+        "IT_NAME": "",
+        "IT_DESCRIPTION": "",
+        "RU_NAME": "",
+        "RU_DESCRIPTION": "",
+        "PT_NAME": "",
+        "PT_DESCRIPTION": "",
+        "DEFAULT_RARITY": "N",
+        "NORMAL": "10",
+        "MAGIC": "",
+        "RARE": "",
+        "EPIC": "",
+        "LEGENDARY": "",
+        "DMG_TYPE": "lightning",
+        "KNOCKBACK": 0,
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 5.5
+    },
+    {
+        "REF": 28,
+        "EN_NAME": "Light Strike",
+        "EN_DESCRIPTION": "Enemies deal @ Light Damage and have £ Chance to apply Daze, Slow, Armor Broken or Elemental Resistance Broken for the next £ seconds.",
+        "FR_NAME": "Frappe de Lumière",
+        "FR_DESCRIPTION": "Les ennemis infligent @ de Dégâts de Lumière et ont £ de Chance d'appliquer Hébétement, Ralentissement, Armure Brisée ou Résistance Élémentaire Brisée pour les £ prochaines secondes.",
+        "CH_NAME": "",
+        "CH_DESCRIPTION": "",
+        "TW_NAME": "",
+        "TW_DESCRIPTION": "",
+        "JP_NAME": "",
+        "JP_DESCRIPTION": "",
+        "DE_NAME": "",
+        "DE_DESCRIPTION": "",
+        "ES_NAME": "",
+        "ES_DESCRIPTION": "",
+        "IT_NAME": "",
+        "IT_DESCRIPTION": "",
+        "RU_NAME": "",
+        "RU_DESCRIPTION": "",
+        "PT_NAME": "",
+        "PT_DESCRIPTION": "",
+        "DEFAULT_RARITY": "N",
+        "NORMAL": "14",
+        "MAGIC": "",
+        "RARE": "",
+        "EPIC": "",
+        "LEGENDARY": "",
+        "DMG_TYPE": "light",
+        "KNOCKBACK": 0,
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 3.2
+    },
+    {
+        "REF": 29,
+        "EN_NAME": "Shadow Strike",
+        "EN_DESCRIPTION": "Enemies deal @ Shadow Damage and have £ Chance to apply Shadow Confusion for the next £ seconds.",
+        "FR_NAME": "Frappe d'Ombre",
+        "FR_DESCRIPTION": "Les ennemis infligent @ de Dégâts d'Ombre et ont £ de Chance d'appliquer Confusion de l'Ombre pour les £ prochaines secondes.",
+        "CH_NAME": "",
+        "CH_DESCRIPTION": "",
+        "TW_NAME": "",
+        "TW_DESCRIPTION": "",
+        "JP_NAME": "",
+        "JP_DESCRIPTION": "",
+        "DE_NAME": "",
+        "DE_DESCRIPTION": "",
+        "ES_NAME": "",
+        "ES_DESCRIPTION": "",
+        "IT_NAME": "",
+        "IT_DESCRIPTION": "",
+        "RU_NAME": "",
+        "RU_DESCRIPTION": "",
+        "PT_NAME": "",
+        "PT_DESCRIPTION": "",
+        "DEFAULT_RARITY": "N",
+        "NORMAL": "5",
+        "MAGIC": "",
+        "RARE": "",
+        "EPIC": "",
+        "LEGENDARY": "",
+        "DMG_TYPE": "shadow",
+        "KNOCKBACK": 0,
+        "TYPE": "",
+        "ELITE_AFFIX_TIMER": 0.1
     }
 ]

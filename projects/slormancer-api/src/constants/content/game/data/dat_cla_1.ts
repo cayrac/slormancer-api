@@ -8320,7 +8320,7 @@ export const GAME_DATA_HUNTRESS_SKILL = [{
     {
         "REF": 177,
         "EN_NAME": "Diagon Alley",
-        "EN_DESCRIPTION": "Arrow Shot, Void Arrow and Immortal Arrow repeal Non-Elemental projectiles they hit.",
+        "EN_DESCRIPTION": "Arrow Shot, Void Arrow and Immortal Arrow repel Non-Elemental projectiles they hit.",
         "FR_NAME": "Chemin de Traverse",
         "FR_DESCRIPTION": "Tir de Flèche, Flèche du Vide et Flèche Immortelle repoussent tous les Projectiles Non-Élémentaires qu'ils touchent.",
         "CH_NAME": "对角巷",
@@ -9576,7 +9576,7 @@ export const GAME_DATA_HUNTRESS_SKILL = [{
         "DESC_VALUE_BASE": "10",
         "DESC_VALUE_PER_LVL": "5",
         "DESC_VALUE_TYPE": "",
-        "DESC_VALUE_REAL": "synergy:armor_of_illusion",
+        "DESC_VALUE_REAL": "synergy:armor",
         "SLORM_TIER": "",
         "POSE_TYPE": "",
         "PRECAST_TIME": null,

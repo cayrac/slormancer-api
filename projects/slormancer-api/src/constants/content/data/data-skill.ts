@@ -3392,7 +3392,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     203: {
         masteryRequired: 7,
         override: values => {
-            setSource(values, 0, 'armor');
         },
         additionalClassMechanics: []
     },
