@@ -1,7 +1,7 @@
 ## Release 0.2.3 (2022-10-15)
 Initial release
 
-## Release 0.2.4 (2022-15-15)
+## Release 0.2.5 (2022-15-19)
 ### Changed
 - Updated game files
 - Added an order to some synergy loops

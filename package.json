@@ -1,6 +1,6 @@
 {
   "name": "slormancer-api",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A Slormancer api to parse saves",
   "keywords": ["slormancer"],
   "author": "cayrac",
@@ -9,6 +9,8 @@
     "clean": "if exist dist del /s /q dist && if exist slormancer-api-*.tgz del slormancer-api-*.tgz",
     "build": "npm run clean && ng build slormancer-api",
     "pack": "npm run build && npm pack ./dist/slormancer-api",
+    "publish": "npm run build && npm publish ./dist/slormancer-api",
+    "unpublish": "npm unpublish slormancer-api@{version}",
     "test": "ng test slormancer-api",
     "lint": "ng lint slormancer-api"
   },
