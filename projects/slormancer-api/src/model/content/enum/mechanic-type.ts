@@ -10,4 +10,5 @@ export enum MechanicType {
     LightningRod = 'rod',
     SoulBound = 'soul_bound',
     Burn = 'burn',
+    Blorm = 'blorm',
 }

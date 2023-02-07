@@ -1,4 +1,4 @@
-export const MAX_HERO_LEVEL = 60;
+export const MAX_HERO_LEVEL = 70;
 export const MAX_ITEM_LEVEL = MAX_HERO_LEVEL;
 
 export const MAX_MAGIC_STATS = 1;
@@ -11,7 +11,7 @@ export const STASH_SIZE = 35;
 export const SKILL_MAX_MASTERY = 15;
 export const ULTIMATUM_MAX_LEVEL = 15;
 
-export const UNLOCKED_ANCESTRAL_LEGACY_POINTS = 4;
+export const UNLOCKED_ANCESTRAL_LEGACY_POINTS = 5;
 
 export const MAXIMUM_ANCESTRAL_LEGACY_POINTS = 7;
 
@@ -38,8 +38,8 @@ export const POISON_DURATION = 7;
 export const ARCANE_BOND_DURATION = 7;
 export const TIME_LOCK_DURATION = 3;
 
-export const GAME_VERSION = '0.4.91b';
-export const API_VERSION = '0.2.5';
+export const GAME_VERSION = '0.5.01e';
+export const API_VERSION = '0.3.0';
 
 export const API_TO_GAME_VERSION_MAPPER: { [key: string]: string } = {
     '0.0.9': '0.3.015',
@@ -57,4 +57,5 @@ export const API_TO_GAME_VERSION_MAPPER: { [key: string]: string } = {
     '0.2.2': '0.4.6a',
     '0.2.3': '0.4.6fa',
     '0.2.5': '0.4.91b',
+    '0.3.0': '0.5.01e',
 }

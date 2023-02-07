@@ -79,4 +79,12 @@ export const DATA_MECHANIC: { [key: string]:  DataMechanic} = {
         ],
         genres: [SkillGenre.DamageOverTime],
     },
+    [MechanicType.Blorm]: {
+        values: [
+            effectValueConstant(10, false, 'garbage_stat', EffectValueValueType.Stat),
+            effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'basic_damage', 'basic_damage', EffectValueValueType.Stat, undefined, 3),
+            effectValueConstant(100, false, 'garbage_stat', EffectValueValueType.Stat),
+        ],
+        genres: [SkillGenre.Minion],
+    },
 }

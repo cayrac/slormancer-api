@@ -348,7 +348,7 @@ export class SlormancerCharacterUpdaterService {
             }
 
             for (const mechanic of ancestralLegacy.relatedMechanics) {
-                this.slormancerValueUpdater.updateMechanic(mechanic, character, statsResult);
+                this.slormancerValueUpdater.updateMechanic(mechanic, character, statsResult, config);
                 statsResult.changed.mechanics.push(mechanic);
             }
         }

@@ -94,7 +94,7 @@ export class SlormancerAncestralLegacyService {
     }
 
     private extractBuffs(template: string): Array<Buff> {
-        return valueOrDefault(template.match(/<(.*?)>/g), [])
+        return valueOrDefault<string[]>(template.match(/<(.*?)>/g), [])
             .map(m => this.slormancerDataService.getDataSkillBuff(m))
             .filter(isNotNullOrUndefined)
             .filter(isFirst)
@@ -103,7 +103,7 @@ export class SlormancerAncestralLegacyService {
     }
 
     private extractMechanics(template: string, values: Array<AbstractEffectValue>, additional: Array<MechanicType>): Array<Mechanic> {
-        const templateMechanics = valueOrDefault(template.match(/<(.*?)>/g), [])
+        const templateMechanics = valueOrDefault<string[]>(template.match(/<(.*?)>/g), [])
             .map(m => this.slormancerDataService.getDataTemplateMechanic(m))
         const attributeMechanics = values.map(value => value.stat)
             .filter(isNotNullOrUndefined)

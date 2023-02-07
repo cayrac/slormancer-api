@@ -45,6 +45,7 @@ export interface CharacterConfig {
     target_is_skewered: boolean;
     target_is_time_locked: boolean;
     target_is_in_breach_range: boolean;
+    target_is_burning: boolean;
     target_has_broken_armor: boolean;
     target_has_negative_effect: boolean;
     target_has_remnant_vulnerability: boolean;
@@ -122,6 +123,9 @@ export interface CharacterConfig {
     enemy_inner_weakness_stacks: number;
     apex_predator_stacks: number;
     effective_rune_stacks: number;
+    aurelon_bargain_stacks: number;
+    cleansing_surge_stacks: number;
+    overcharged_stacks: number;
     has_elemental_temper_buff: boolean;
     has_splash_splash_buff: boolean;
     has_soul_bound_buff: boolean;
@@ -143,6 +147,11 @@ export interface CharacterConfig {
     has_shadow_repercussion_buff: boolean;
     has_booster_max_buff: boolean;
     has_electrify_buff: boolean;
+    has_living_inferno_buff: boolean;
+    has_shadow_shield_buff: boolean;
+    has_shadow_bargain_buff: boolean;
+    has_flawless_defense_buff: boolean;
+    has_frostfire_buff: boolean;
     concentration_buff: boolean;
     ultima_momentum_buff: boolean;
     exposed_armor_buff: boolean;

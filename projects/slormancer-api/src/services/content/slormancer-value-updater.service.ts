@@ -15,6 +15,7 @@ import { ClassMechanic } from '../../model/content/class-mechanic';
 import { AbstractEffectValue, EffectValueSynergy, EffectValueVariable } from '../../model/content/effect-value';
 import { EffectValueValueType } from '../../model/content/enum/effect-value-value-type';
 import { HeroClass } from '../../model/content/enum/hero-class';
+import { MechanicType } from '../../model/content/enum/mechanic-type';
 import { ALL_SKILL_COST_TYPES, SkillCostType } from '../../model/content/enum/skill-cost-type';
 import { SkillGenre } from '../../model/content/enum/skill-genre';
 import { Mechanic } from '../../model/content/mechanic';
@@ -269,7 +270,7 @@ export class SlormancerValueUpdaterService {
         }
     }
 
-    public updateMechanic(mechanic: Mechanic, character: Character, statsResult: SkillStatsBuildResult) {
+    public updateMechanic(mechanic: Mechanic, character: Character, statsResult: SkillStatsBuildResult, config: CharacterConfig) {
 
         const skillStats = this.getSkillStats(statsResult, character);
 
@@ -300,7 +301,28 @@ export class SlormancerValueUpdaterService {
                 value.displayValue = round(value.value, 3);
             }
             if (isEffectValueSynergy(value) && isDamageType(value.stat)) {
-                this.updateDamage(value, mechanic.genres, skillStats, statsResult, mechanic.element, false);
+                
+                const additionalDamageMultipliers: number[] = [];
+
+                if (mechanic.type === MechanicType.Burn && config.has_living_inferno_buff) {
+
+                    const burnIncreasedDamageStat = statsResult.extractedStats['living_inferno_burn_increased_damage'];
+
+                    if (burnIncreasedDamageStat) {
+                        additionalDamageMultipliers.push((<EntityValue<number>>burnIncreasedDamageStat[0]).value);
+                    }
+                }
+
+                if (mechanic.type === MechanicType.Blorm) {
+
+                    const blormIncreasedDamage = statsResult.extractedStats['enduring_blorms_blorm_increased_damage'];
+
+                    if (blormIncreasedDamage) {
+                        additionalDamageMultipliers.push((<EntityValue<number>>blormIncreasedDamage[0]).value);
+                    }
+                }
+
+                this.updateDamage(value, mechanic.genres, skillStats, statsResult, mechanic.element, false, additionalDamageMultipliers);
             }
         }
     }
@@ -525,22 +547,29 @@ export class SlormancerValueUpdaterService {
             ancestralLegacy.cost = this.getActivableCost(statsResult.extractedStats, config, ancestralLegacy);
         }
         if (ancestralLegacy.baseCooldown !== null) {
-
-            let minCooldown = 0;
-            const minCooldownStat = statsResult.extractedStats['min_cooldown_time'];
-            if (minCooldownStat !== undefined && minCooldownStat.length > 0) {
-                minCooldown = Math.min(...minCooldownStat.map(v => v.value));
-            }
-
-            ancestralLegacy.cooldown = Math.max(0, round(Math.max(minCooldown, ancestralLegacy.baseCooldown) * (100 - skillStats.attackSpeed.total) / 100, 2));
+            ancestralLegacy.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, ancestralLegacy, skillStats.attackSpeed.total);
         }
 
         const isIcyVeins = ancestralLegacy.id === 29;
+        const isWildSlap = ancestralLegacy.id === 92;
 
         for (const value of ancestralLegacy.values) {
             if (isEffectValueSynergy(value)) {
+
+                let addedFlatDamage = 0
+
+                // spark machine and high voltage interaction
+                if (ancestralLegacy.id === 30) {
+                    const highVoltageMaxStacks = statsResult.extractedStats['high_voltage_max_stacks'];
+                    const highVoltageStackIncreasedDamage = statsResult.extractedStats['high_voltage_stack_spark_machine_increased_damage'];
+
+                    if (highVoltageMaxStacks && highVoltageMaxStacks[0] && highVoltageStackIncreasedDamage && highVoltageStackIncreasedDamage[0]) {
+                        addedFlatDamage += highVoltageStackIncreasedDamage[0].value * Math.min(config.high_voltage_stacks, highVoltageMaxStacks[0].value);
+                    }
+                }
+
                 if (isDamageType(value.stat)) {
-                    this.updateDamage(value, ancestralLegacy.genres, skillStats, statsResult, ancestralLegacy.element);
+                    this.updateDamage(value, ancestralLegacy.genres, skillStats, statsResult, ancestralLegacy.element, false, [], addedFlatDamage);
                 }
             } else if (value.valueType === EffectValueValueType.AreaOfEffect) {
                 value.value = value.baseValue * (100 + skillStats.aoeIncreasedSize.total) / 100;
@@ -549,11 +578,13 @@ export class SlormancerValueUpdaterService {
                 const statMultipliers = this.getValidStatMultipliers(ancestralLegacy.genres, skillStats);
                 value.value = isEffectValueVariable(value) ? value.upgradedValue : value.baseValue;
                 if (value.percent) {
-                    let sumMultiplier = 100;
-                    for (const multiplier of statMultipliers) {
-                        sumMultiplier += multiplier;
+                    if (!isWildSlap) {
+                        let sumMultiplier = 100;
+                        for (const multiplier of statMultipliers) {
+                            sumMultiplier += multiplier;
+                        }
+                        value.value = value.value * sumMultiplier / 100;
                     }
-                    value.value = value.value * sumMultiplier / 100;
                 } else {
                     for (const multiplier of statMultipliers) {
                         value.value = value.value * (100 + multiplier) / 100;
@@ -729,8 +760,17 @@ export class SlormancerValueUpdaterService {
         }
     }
 
-    private updateDamage(damage: EffectValueSynergy, genres: Array<SkillGenre>, skillStats: SkillStats, statsResult: SkillStatsBuildResult, element: SkillElement, isSkill: boolean = false, additionalMultipliers: Array<number> = []) {
+    private updateDamage(damage: EffectValueSynergy, genres: Array<SkillGenre>, skillStats: SkillStats, statsResult: SkillStatsBuildResult, element: SkillElement, isSkill: boolean = false, additionalMultipliers: Array<number> = [], addedFlatDamage = 0) {
         const multipliers = this.getValidDamageMultipliers(genres, skillStats, statsResult, damage.stat, isSkill, element);
+
+        if (addedFlatDamage > 0) {
+            for (const multiplier of multipliers) {
+                addedFlatDamage = addedFlatDamage * (100 + multiplier) / 100;
+            }            
+            for (const multiplier of additionalMultipliers) {
+                addedFlatDamage = addedFlatDamage * (100 + multiplier) / 100;
+            }
+        }
 
         if (typeof damage.synergy === 'number') {
             for (const multiplier of multipliers) {
@@ -759,8 +799,8 @@ export class SlormancerValueUpdaterService {
                 damage.synergy.min = 1;
             }
             damage.displaySynergy = {
-                min: bankerRound(damage.synergy.min, valueOrDefault(damage.precision, 0)),
-                max: bankerRound(damage.synergy.max, valueOrDefault(damage.precision, 0)),
+                min: bankerRound(damage.synergy.min + addedFlatDamage, valueOrDefault(damage.precision, 0)),
+                max: bankerRound(damage.synergy.max + addedFlatDamage, valueOrDefault(damage.precision, 0)),
             };
         }
     }

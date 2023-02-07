@@ -584,7 +584,7 @@ export const GAME_DATA_CITATIONS = [{
         "SPRITE": "jeanpierre",
         "XX": 2268,
         "YY": 1000,
-        "UNLOCK": 99
+        "UNLOCK": 39
     },
     {
         "REF": 21,

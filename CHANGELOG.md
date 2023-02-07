@@ -6,5 +6,12 @@ Initial release
 - Updated game files
 - Added an order to some synergy loops
 
+## Release 0.3.0 (2023-07-02)
+### Added
+- Raised max level to 70
+- Ancestral legacies map now show the new ancestral legacies
+## Fixes
+- Cooldown reduction is now correctly applied to ancestral legacy activables
+
 ## Known issues
 - Toughness 15 elemental resistance value is not rounded when applied 

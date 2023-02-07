@@ -434,6 +434,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'health_leech_percent' },
                 { stat: 'health_leech_percent_on_low_life', condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'health_leech_percent_on_low_life_treshold', 0)) },
                 { stat: 'health_leech_percent_if_perfect', condition: config => config.next_cast_is_perfect },
+                { stat: 'shadow_shield_health_leech_percent', condition: config => config.has_shadow_shield_buff },
             ],
             max: [],
             percent: [],
@@ -572,6 +573,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'movement_speed_after_trap_triggered', condition: config => config.trap_triggered_recently },
                 { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },
+                { stat: 'cleansing_surge_stack_movement_speed_percent', condition: config => config.cleansing_surge_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'cleansing_surge_max_stacks'), config.cleansing_surge_stacks) },
+
             ],
             maxPercent: [],
             multiplier: [
@@ -630,6 +633,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'arcane_flux_stack_cooldown_reduction_global_mult', condition: config => config.arcane_flux_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_flux_stacks, getFirstStat(stats, 'arcane_flux_max_stacks')) },
                 { stat: 'cooldown_reduction_global_mult_per_enfeeble_in_radius', condition: config => config.enfeeble_stacks_in_radius > 0, multiplier: config => config.enfeeble_stacks_in_radius },
                 { stat: 'booster_max_cooldown_reduction_global_mult', condition: config => config.has_booster_max_buff },
+                { stat: 'shadow_bargain_cooldown_reduction_global_mult', condition: config => config.has_shadow_bargain_buff },
+                { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getFirstStat(stats, 'aurelon_bargain_max_stacks')) },
+                { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
             ],
             maxMultiplier: [],
         } 
@@ -699,6 +705,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'crit_chance_percent_per_same_emblems', multiplier: (config, stats) => hasStat(stats, 'skill_is_temporal') ? config.temporal_emblems : hasStat(stats, 'skill_is_arcanic') ? config.arcanic_emblems : config.obliteration_emblems },
                 { stat: 'crit_chance_percent_if_remnant_and_target_in_breach', condition: config => config.is_remnant && config.target_is_in_breach_range },
                 { stat: 'crit_chance_percent_per_arcanic_emblem', condition: config => config.arcanic_emblems > 0, multiplier: config => config.arcanic_emblems },
+                { stat: 'crit_chance_percent_against_burning', condition: config => config.target_is_burning && config.use_enemy_state },
             ],
             max: [],
             percent: [],
@@ -781,7 +788,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [
+                { stat: 'brut_damage_global_mult' }
+            ],
             maxMultiplier: [],
         } 
     },
@@ -868,6 +877,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'oak_bark_armor_stack_res_phy_percent', condition: config => config.oak_bark_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.oak_bark_armor_stacks, getFirstStat(stats, 'oak_bark_armor_max_stack')) },
                 { stat: 'res_phy_percent_if_channeling_ray_of_obliteration', condition: config => config.is_channeling_ray_of_obliteration },
                 { stat: 'chrono_armor_stack_res_phy_percent', condition: config => config.chrono_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_armor_stacks, getFirstStat(stats, 'chrono_armor_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
+                { stat: 'shadow_shield_armor_percent', condition: config => config.has_shadow_shield_buff },
+                { stat: 'frostfire_armor_res_phy_percent', condition: config => config.has_frostfire_buff },
             ],
             maxPercent: [],
             multiplier: [
@@ -891,7 +902,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [
                 { stat: 'res_mag_percent' },
                 { stat: 'res_mag_percent_if_channeling_ray_of_obliteration', condition: config => config.is_channeling_ray_of_obliteration },
-
+                { stat: 'shadow_shield_elemental_resist_percent', condition: config => config.has_shadow_shield_buff },
             ],
             maxPercent: [],
             multiplier: [
@@ -908,7 +919,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         allowMinMax: false,
         suffix: '%',
         source: {
-            flat: [{ stat: 'fire_resistance_percent' }],
+            flat: [
+                { stat: 'fire_resistance_percent' },
+                { stat: 'frostfire_armor_fire_resistance_percent', condition: config => config.has_frostfire_buff },
+            ],
             max: [],
             percent: [],
             maxPercent: [],
@@ -922,7 +936,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         allowMinMax: false,
         suffix: '%',
         source: {
-            flat: [{ stat: 'ice_resistance_percent' }],
+            flat: [
+                { stat: 'ice_resistance_percent' },
+                { stat: 'frostfire_armor_ice_resistance_percent', condition: config => config.has_frostfire_buff },
+            ],
             max: [],
             percent: [],
             maxPercent: [],
@@ -1143,6 +1160,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'reduced_damage_from_projectile_percent' },
                 { stat: 'projectile_defense_stack_reduction', condition: config => config.projectile_defense_stacks > 0, multiplier: config => config.projectile_defense_stacks },
+                { stat: 'flawless_defense_projectile_damage_reduction', condition: config => config.has_flawless_defense_buff },
             ],
             max: [],
             percent: [],

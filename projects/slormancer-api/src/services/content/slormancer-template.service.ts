@@ -367,7 +367,7 @@ export class SlormancerTemplateService {
     public formatMechanicTemplate(template: string, effectValues: Array<AbstractEffectValue>): string {
         for (let effectValue of effectValues) {
             if (isEffectValueConstant(effectValue)) {
-                const anchor = findFirst(template, [this.TYPE_ANCHOR, this.VALUE_ANCHOR, ...this.CONSTANT_ANCHORS]);
+                const anchor = findFirst(template, [this.TYPE_ANCHOR, this.VALUE_ANCHOR, ...this.CONSTANT_ANCHORS, this.SPECLAL_DAMAGE_ANCHOR]);
                 if (anchor !== null) {
                     const value = this.asSpan(this.formatValue(effectValue.displayValue, effectValue.percent), 'value');
                     template = this.replaceAnchor(template, value, anchor);

@@ -59,31 +59,67 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [107, 136, 137], realm: 57 },    // The Reaper
     { nodes: [109, 138, 139], realm: 58 },    // Elemental Reward
 
-    { nodes: [86, 112], realm: 40 },   // Optimal Path
-    { nodes: [90, 115], realm: 43 },   // Burning Rage
-    { nodes: [91, 118], realm: 44 },   // Elemental Sorcerer
-    { nodes: [95, 121], realm: 47 },   // Tower Defense
-    { nodes: [96, 124], realm: 48 },   // Relentless
-    { nodes: [100, 127], realm: 51 },  // Kah Rooj's Power Plant
-    { nodes: [101, 130], realm: 52 },  // Shield of the Champion of Light
-    { nodes: [105, 133], realm: 55 },  // Glittering Silence
-    { nodes: [106, 136], realm: 56 },  // Ancestral Backlash
-    { nodes: [85, 139], realm: 59 },   // Shadow Spawn
+    { nodes: [86, 111, 112, 162], realm: 40 },   // Optimal Path
+    { nodes: [90, 115, 116, 169], realm: 43 },   // Burning Rage
+    { nodes: [91, 117, 118, 173], realm: 44 },   // Elemental Sorcerer
+    { nodes: [95, 121, 122, 180], realm: 47 },   // Tower Defense
+    { nodes: [96, 123, 124, 184], realm: 48 },   // Relentless
+    { nodes: [100, 127, 128, 191], realm: 51 },  // Kah Rooj's Power Plant
+    { nodes: [101, 129, 130, 195], realm: 52 },  // Shield of the Champion of Light
+    { nodes: [105, 133, 134, 202], realm: 55 },  // Glittering Silence
+    { nodes: [106, 135, 136, 206], realm: 56 },  // Ancestral Backlash
+    { nodes: [85, 110, 139, 158], realm: 59 },   // Shadow Spawn
 
-    { nodes: [88], realm: 60 },    // Fire Resistance / Fiery Weapons
-    { nodes: [93], realm: 61 },    // Ice Resistance / Icy Weapons
-    { nodes: [98], realm: 62 },    // Lightning Resistance / Electric Overcharge
-    { nodes: [103], realm: 63 },   // Aegis of Light
-    { nodes: [108], realm: 64 },   // Dark Ritual
+    { nodes: [88, 140, 141, 142], realm: 60 },    // Fire Resistance / Fiery Weapons
+    { nodes: [93, 143, 144, 145], realm: 61 },    // Ice Resistance / Icy Weapons
+    { nodes: [98, 146, 147, 148], realm: 62 },    // Lightning Resistance / Electric Overcharge
+    { nodes: [103, 149, 150, 151], realm: 63 },   // Aegis of Light
+    { nodes: [108, 152, 153, 154], realm: 64 },   // Dark Ritual
 
-    { nodes: [113], realm: 66 },   // Elemental Aura
-    { nodes: [114], realm: 67 },   // Crawling Disaster
-    { nodes: [119], realm: 69 },   // Frost Spikes
-    { nodes: [120], realm: 70 },   // Icy Veins
-    { nodes: [125], realm: 72 },   // Elemental Boost
-    { nodes: [126], realm: 73 },   // Lightning Rod
-    { nodes: [131], realm: 75 },   // Aurelon's Teachings
-    { nodes: [132], realm: 76 },   // Elemental Synergy / Diamond Skin
-    { nodes: [137], realm: 78 },   // Glyph of Darkness
-    { nodes: [138], realm: 79 },   // Obscure Retribution / Elemental Warrior
+    { nodes: [113, 140, 163, 165], realm: 66 },   // Elemental Aura
+    { nodes: [114, 142, 168, 166], realm: 67 },   // Crawling Disaster
+    { nodes: [119, 143, 174, 176], realm: 69 },   // Frost Spikes
+    { nodes: [120, 145, 178, 177], realm: 70 },   // Icy Veins
+    { nodes: [125, 146, 185, 187], realm: 72 },   // Elemental Boost
+    { nodes: [126, 148, 190, 188], realm: 73 },   // Lightning Rod
+    { nodes: [131, 149, 196, 198], realm: 75 },   // Aurelon's Teachings
+    { nodes: [132, 151, 201, 199], realm: 76 },   // Elemental Synergy / Diamond Skin
+    { nodes: [137, 152, 207, 209], realm: 78 },   // Glyph of Darkness
+    { nodes: [138, 157, 154, 155], realm: 79 },   // Obscure Retribution / Elemental Warrior
+
+    { nodes: [110, 111], realm: 65 },   // Shadow Shield
+    { nodes: [116, 117], realm: 68 },   // Frostfire Armor
+    { nodes: [122, 123], realm: 71 },   // Totemic Infusion
+    { nodes: [128, 129], realm: 74 },   // Aurelon's Bargain
+    { nodes: [134, 135], realm: 77 },   // Inextinguishable Light
+
+    { nodes: [157, 158], realm: 80 },   // Enduring Blorms
+    { nodes: [162, 163], realm: 82 },   // Danger Zone!
+    { nodes: [168, 169], realm: 83 },   // Inner Sanctum
+    { nodes: [173, 174], realm: 85 },   // Lethal Force
+    { nodes: [178, 180], realm: 86 },   // Ice Field
+    { nodes: [183, 185], realm: 88 },   // Spark Machine
+    { nodes: [190, 191], realm: 89 },   // Cleansing Surge
+    { nodes: [195, 196], realm: 91 },   // Agile Adventurer
+    { nodes: [201, 202], realm: 92 },   // Wild Slap
+    { nodes: [206, 207], realm: 94 },   // Flawless Defense
+
+    { nodes: [141], realm: 96 },   // More Fire!
+    { nodes: [144], realm: 99 },   // Ice Prison
+    { nodes: [147], realm: 102 },  // Charging up!
+    { nodes: [150], realm: 105 },  // Aurelon's Punishment
+    { nodes: [153], realm: 108 },  // And Together Bind Them
+
+    { nodes: [165], realm: 95 },   // Living Inferno / Duelist
+    { nodes: [166], realm: 97 },   // Comfort Zone
+    { nodes: [176], realm: 98 },   // Slaughter
+    { nodes: [177], realm: 100 },  // Melting Ice / The Merchant
+    { nodes: [187], realm: 101 },  // Ancestral Aberration
+    { nodes: [188], realm: 101 },  // Elemental Wizard
+    { nodes: [198], realm: 104 },  // Wavering Glow
+    { nodes: [199], realm: 106 },  // Shadowlight Bulwark
+    { nodes: [209], realm: 107 },  // Shadow Bargain
+    { nodes: [155], realm: 109 },  // Armor of Kings / Sturdy Blorms
+
+
 ]

@@ -13,4 +13,6 @@ export const DATA_TEMPLATE_MECHANIC: { [key: string]: MechanicType } = {
     '<lightning rod>': MechanicType.LightningRod,
     '<soul bound>': MechanicType.SoulBound,
     '<burn>': MechanicType.Burn,
+    '<blorm>': MechanicType.Blorm,
+    '<blorms>': MechanicType.Blorm,
 };

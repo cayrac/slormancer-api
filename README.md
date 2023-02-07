@@ -1,5 +1,14 @@
-This package provide tools to load and manipulate Slormancer characters
+## Extract data from a save file 
+Using `SlormancerSaveParserService` class : 
+```
+const parsedSaveFile = this.slormancerSaveParserService.parseSaveFile(saveContent);
+```
+The parsed save file will be of type `GameSave` which contain the save raw data
 
-## Simple character loading from a save file
+## Create a character object from a parsed save file 
+Using `SlormancerCharacterBuilderService` class : 
 
-## game data
+```
+const character = this.slormancerCharacterBuilderService.getCharacterFromSave(parsedSaveFile, HeroClass.Mage);
+```
+The character result will be of type `Character` which is used by most build modifier classes

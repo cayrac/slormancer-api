@@ -20,7 +20,7 @@ export class SlormancerMechanicService {
         
         if (type === MechanicType.WalkingBomb || type === MechanicType.SoulBound || type === MechanicType.Burn) {
             key = 'tt_' + type;
-        } else if (type === MechanicType.ShieldGlobe || type === MechanicType.Fireball || type === MechanicType.Dart || type === MechanicType.Frostbolt || type === MechanicType.LightningRod) {
+        } else if (type === MechanicType.Blorm || type === MechanicType.ShieldGlobe || type === MechanicType.Fireball || type === MechanicType.Dart || type === MechanicType.Frostbolt || type === MechanicType.LightningRod) {
             key = 'tt_mechanic_' + type;
         } else {
             key = 'tt_' + type + '_name';
@@ -33,7 +33,7 @@ export class SlormancerMechanicService {
 
         if (type === MechanicType.WalkingBomb || type === MechanicType.SoulBound || type === MechanicType.Burn) {
             key = 'tt_' + type + '_effect';
-        } else if (type === MechanicType.ShieldGlobe || type === MechanicType.Fireball || type === MechanicType.Dart || type === MechanicType.Frostbolt || type === MechanicType.LightningRod) {
+        } else if (type === MechanicType.Blorm || type === MechanicType.ShieldGlobe || type === MechanicType.Fireball || type === MechanicType.Dart || type === MechanicType.Frostbolt || type === MechanicType.LightningRod) {
             key = 'tt_mechanic_' + type + '_effect';
         } else {
             key = 'tt_help_' + type + '_effect';
