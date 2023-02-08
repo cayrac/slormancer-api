@@ -13,5 +13,9 @@ Initial release
 ## Fixes
 - Cooldown reduction is now correctly applied to ancestral legacy activables
 
+## Release 0.3.1 (2023-08-02)
+## Fixes
+- Fixed Spark Machine and Elemental Wizard realms not being correctly mapped
+
 ## Known issues
 - Toughness 15 elemental resistance value is not rounded when applied 

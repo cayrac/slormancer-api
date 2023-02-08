@@ -98,7 +98,7 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [168, 169], realm: 83 },   // Inner Sanctum
     { nodes: [173, 174], realm: 85 },   // Lethal Force
     { nodes: [178, 180], realm: 86 },   // Ice Field
-    { nodes: [183, 185], realm: 88 },   // Spark Machine
+    { nodes: [184, 185], realm: 88 },   // Spark Machine
     { nodes: [190, 191], realm: 89 },   // Cleansing Surge
     { nodes: [195, 196], realm: 91 },   // Agile Adventurer
     { nodes: [201, 202], realm: 92 },   // Wild Slap
@@ -115,7 +115,7 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [176], realm: 98 },   // Slaughter
     { nodes: [177], realm: 100 },  // Melting Ice / The Merchant
     { nodes: [187], realm: 101 },  // Ancestral Aberration
-    { nodes: [188], realm: 101 },  // Elemental Wizard
+    { nodes: [188], realm: 103 },  // Elemental Wizard
     { nodes: [198], realm: 104 },  // Wavering Glow
     { nodes: [199], realm: 106 },  // Shadowlight Bulwark
     { nodes: [209], realm: 107 },  // Shadow Bargain
