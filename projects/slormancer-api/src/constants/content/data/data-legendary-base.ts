@@ -81,5 +81,7 @@ export const DATA_LEGENDARY_BASE: { [key: number]: string } = {
     79: 'mana',
     80: 'ret',
     81: 'doubtful_sock',
+    82: 'atk_phy',
+    83: 'minion',
 
 }

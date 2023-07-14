@@ -1,4 +1,4 @@
-export const MAX_HERO_LEVEL = 70;
+export const MAX_HERO_LEVEL = 80;
 export const MAX_ITEM_LEVEL = MAX_HERO_LEVEL;
 
 export const MAX_MAGIC_STATS = 1;
@@ -11,7 +11,7 @@ export const STASH_SIZE = 35;
 export const SKILL_MAX_MASTERY = 15;
 export const ULTIMATUM_MAX_LEVEL = 15;
 
-export const UNLOCKED_ANCESTRAL_LEGACY_POINTS = 5;
+export const UNLOCKED_ANCESTRAL_LEGACY_POINTS = 6;
 
 export const MAXIMUM_ANCESTRAL_LEGACY_POINTS = 7;
 

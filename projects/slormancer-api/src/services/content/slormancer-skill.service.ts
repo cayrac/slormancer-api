@@ -118,6 +118,10 @@ export class SlormancerSkillService {
                 skill.baseGenres.push(...overrideData.additionalGenres)
                 skill.genres.push(...overrideData.additionalGenres)
             }
+
+            if (overrideData.order !== undefined && 'order' in skill) {
+                skill.order = overrideData.order;
+            }
         }
     } 
 
@@ -281,7 +285,8 @@ export class SlormancerSkillService {
     }
 
     public getUpgradeClone(upgrade: SkillUpgrade): SkillUpgrade {
-        return { ...upgrade,
+        return {
+            ...upgrade,
             genres: [...upgrade.genres],
             damageTypes: [...upgrade.damageTypes],
 
@@ -307,6 +312,7 @@ export class SlormancerSkillService {
 
             upgrade = {
                 id: gameDataSkill.REF,
+                order: gameDataSkill.REF,
                 skillId: gameDataSkill.ACTIVE_BOX,
                 masteryRequired,
                 line,
@@ -354,7 +360,7 @@ export class SlormancerSkillService {
     }
 
     private extractBuffs(template: string): Array<Buff> {
-        return valueOrDefault(template.match(/<(.*?)>/g), [])
+        return valueOrDefault<string[]>(template.match(/<(.*?)>/g), [])
             .map(m => this.slormancerDataService.getDataSkillBuff(m))
             .filter(isNotNullOrUndefined)
             .filter(isFirst)
@@ -363,7 +369,7 @@ export class SlormancerSkillService {
     }
     
     private extractSkillMechanics(template: string, heroClass: HeroClass, additionalSkillMechanics: Array<number>): Array<ClassMechanic> {
-        const ids = valueOrDefault(template.match(/<(.*?)>/g), [])
+        const ids = valueOrDefault<string[]>(template.match(/<(.*?)>/g), [])
             .map(m => this.slormancerDataService.getDataSkillClassMechanicIdByName(heroClass, m));
         return [ ...ids, ...additionalSkillMechanics ]
             .filter(isNotNullOrUndefined)
@@ -373,7 +379,7 @@ export class SlormancerSkillService {
     }
 
     private extractMechanics(template: string, values: Array<AbstractEffectValue>, additional: Array<MechanicType>): Array<Mechanic> {
-        const templateMechanics = valueOrDefault(template.match(/<(.*?)>/g), [])
+        const templateMechanics = valueOrDefault<string[]>(template.match(/<(.*?)>/g), [])
             .map(m => this.slormancerDataService.getDataTemplateMechanic(m))
         const attributeMechanics = values.map(value => value.stat)
             .filter(isNotNullOrUndefined)

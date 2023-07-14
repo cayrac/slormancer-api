@@ -8,6 +8,7 @@ import { SkillType } from './skill-type';
 
 export interface SkillUpgrade {
     id: number;
+    order: number;
     skillId: number;
     masteryRequired: number;
     line: number;

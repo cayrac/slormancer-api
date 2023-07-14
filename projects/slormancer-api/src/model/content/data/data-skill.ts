@@ -11,5 +11,6 @@ export interface DataSkill {
     additionalGenres?: Array<SkillGenre>;
     costTypeOverride?: SkillCostType;
     specialization?: number;
+    order?: number;
 };
 

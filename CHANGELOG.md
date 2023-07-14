@@ -17,5 +17,14 @@ Initial release
 ## Fixes
 - Fixed Spark Machine and Elemental Wizard realms not being correctly mapped
 
+## Release 0.4.0 TBD
+### Added
+- Raised max level to 80
+- Added new legendaries data
+- Added reinforcment cap to legendaries
+## Fixes
+- Fixed Replenish description
+- Fixed Replenish upgrade order
+
 ## Known issues
 - Toughness 15 elemental resistance value is not rounded when applied 

@@ -157,7 +157,7 @@ export class SlormancerLegendaryEffectService {
         for (const craftedEffect of legendaryEffect.effects) {
             if (isEffectValueVariable(craftedEffect.effect) || isEffectValueSynergy(craftedEffect.effect)) {
                 craftedEffect.craftedValue = Math.min(craftedEffect.maxPossibleCraftedValue, Math.max(craftedEffect.minPossibleCraftedValue, legendaryEffect.value));
-                const upgrade = 100 * craftedEffect.effect.upgrade * legendaryEffect.reinforcment / 100;
+                const upgrade = 100 * craftedEffect.effect.upgrade * Math.min(15, legendaryEffect.reinforcment) / 100;
                 craftedEffect.possibleCraftedValues = this.slormancerItemValueService.computeEffectRange(
                     craftedEffect.score,
                     craftedEffect.minPossibleCraftedValue,

@@ -47,16 +47,6 @@ function setStat(values: Array<AbstractEffectValue>, index: number, stat: string
     }
 }
 
-function setPercent(values: Array<AbstractEffectValue>, index: number, percent: boolean) {
-    const value = <EffectValueVariable | EffectValueConstant>values[index];
-
-    if (value) {
-        value.percent = percent;
-    } else {
-        throw new Error('failed to update stat at index ' + index);
-    }
-}
-
 function setSynergyPrecision(values: Array<AbstractEffectValue>, index: number, precision: number) {
     const value = values[index];
 
@@ -4803,10 +4793,10 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     169: {
         masteryRequired: 2,
-        override: values => {
-            setPercent(values, 0, false);
+        override: () => {
         },
-        additionalClassMechanics: []
+        additionalClassMechanics: [],
+        order: 173
     },
     170: {
         masteryRequired: 6,
