@@ -1,4 +1,5 @@
-export const GAME_DATA_ANCESTRAL_LEGACY = [{
+export const GAME_DATA_ANCESTRAL_LEGACY = [
+    {
         "REF": 0,
         "EN_NAME": "Burning Trail",
         "EN_DESCRIPTION": "While this Aura is toggled on, you leave a Trail of Fire behind you, dealing @ £ per second to enemies walking on it.",
@@ -570,7 +571,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "DESC_VALUE_PER_LVL": "",
         "DESC_VALUE_TYPE": "",
         "DESC_VALUE_REAL": "",
-        "EXTRA_NBR": "2"
+        "EXTRA_NBR": "3"
     },
     {
         "REF": 14,
@@ -1190,9 +1191,9 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
     {
         "REF": 29,
         "EN_NAME": "Icy Veins",
-        "EN_DESCRIPTION": "The cost of every Skill you cast is reduced by @ for every <Chilled> or <Frozen> enemy within a ~ yard radius (µ + µ per rank).",
+        "EN_DESCRIPTION": "The cost of every Skill you cast is reduced by @ (µ + µ per rank) for every <Chilled> or <Frozen> enemy within a ~ yard radius.",
         "FR_NAME": "Veines Glacées",
-        "FR_DESCRIPTION": "Le coût de chaque Compétence que vous lancez est réduit de @ pour chaque ennemi <Glacé> ou <Congelé> dans un rayon de ~ mètres (µ + µ par rang).",
+        "FR_DESCRIPTION": "Le coût de chaque Compétence que vous lancez est réduit de @ (µ + µ par rang) pour chaque ennemi <Glacé> ou <Congelé> dans un rayon de ~ mètres.",
         "CH_NAME": "冰冷脉搏",
         "CH_DESCRIPTION": "附近每个<Chill>或<Frozen>的敌人使所有技能消耗减少@（µ + 每级µ）。~",
         "TW_NAME": "冰冷脈搏",
@@ -1960,8 +1961,8 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_LEVEL": 0,
         "COST_TYPE": "none",
         "DESC_VALUE": "seconds",
-        "DESC_VALUE_BASE": "2",
-        "DESC_VALUE_PER_LVL": "0.3",
+        "DESC_VALUE_BASE": "0.5",
+        "DESC_VALUE_PER_LVL": "0.1",
         "DESC_VALUE_TYPE": "",
         "DESC_VALUE_REAL": "",
         "EXTRA_NBR": ""
@@ -2871,7 +2872,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
     {
         "REF": 70,
         "EN_NAME": "Avatar of Shadow",
-        "EN_DESCRIPTION": "You become the <Avatar of Shadow> for the next ¥ seconds.#While in <Avatar of Shadow>, you have:#@ £#@ £#¥% Fork Chance#¥% Recast Chance.",
+        "EN_DESCRIPTION": "You become the <Avatar of Shadow> for the next ¥ seconds.#While being the <Avatar of Shadow>, you have:#@ £#@ £#¥% Fork Chance#¥% Recast Chance.",
         "FR_NAME": "Avatar de l'Ombre",
         "FR_DESCRIPTION": "Vous devenez l'<Avatar de l'Ombre> pour les ¥ prochaines secondes.#Sous la forme d'Avatar de l'Ombre, vous avez :#@ de £#@ de £#¥ de Chance de Fourche#¥% de Chance de Relancer.",
         "CH_NAME": "暗影化身",
@@ -2892,7 +2893,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "PT_DESCRIPTION": "",
         "TYPE": "active",
         "SEAL_MERGE": null,
-        "COOLDOWN": 25,
+        "COOLDOWN": 60,
         "AURA_BUFF_NAME": "",
         "GENRE": "",
         "DMG_TYPE": "",
@@ -3109,8 +3110,8 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_TYPE": "none",
         "DESC_VALUE": "cat_health",
         "DESC_VALUE_BASE": "0",
-        "DESC_VALUE_PER_LVL": "1",
-        "DESC_VALUE_TYPE": "",
+        "DESC_VALUE_PER_LVL": "0.1",
+        "DESC_VALUE_TYPE": "%",
         "DESC_VALUE_REAL": "",
         "EXTRA_NBR": ""
     },
@@ -3408,9 +3409,9 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "FR_NAME": "Défense sans Faille",
         "FR_DESCRIPTION": "Vous avez +@ de £ pour les @ prochaines £.",
         "CH_NAME": "完美防御",
-        "CH_DESCRIPTION": "获得¥% £远程伤害减免，持续@£。",
+        "CH_DESCRIPTION": "获得@% £远程伤害减免，持续@£。",
         "TW_NAME": "完美防禦",
-        "TW_DESCRIPTION": "獲得¥% £遠程傷害減免，持續@£。",
+        "TW_DESCRIPTION": "獲得@% £遠程傷害減免，持續@£。",
         "JP_NAME": "",
         "JP_DESCRIPTION": "",
         "DE_NAME": "",
@@ -3466,7 +3467,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "PT_DESCRIPTION": "",
         "TYPE": "active",
         "SEAL_MERGE": null,
-        "COOLDOWN": 6,
+        "COOLDOWN": 16,
         "AURA_BUFF_NAME": "",
         "GENRE": "",
         "DMG_TYPE": "",
@@ -3928,11 +3929,11 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_LEVEL": 0,
         "COST_TYPE": "life_lock",
         "DESC_VALUE": "health_leech_percent",
-        "DESC_VALUE_BASE": "5",
-        "DESC_VALUE_PER_LVL": "1",
+        "DESC_VALUE_BASE": "0",
+        "DESC_VALUE_PER_LVL": "0.5",
         "DESC_VALUE_TYPE": "%",
         "DESC_VALUE_REAL": "",
-        "EXTRA_NBR": "100"
+        "EXTRA_NBR": "200"
     },
     {
         "REF": 96,
@@ -4543,7 +4544,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_LEVEL": 0,
         "COST_TYPE": "none",
         "DESC_VALUE": "min_elemental_damage_add",
-        "DESC_VALUE_BASE": "5",
+        "DESC_VALUE_BASE": "0",
         "DESC_VALUE_PER_LVL": "1",
         "DESC_VALUE_TYPE": "",
         "DESC_VALUE_REAL": "synergy:armor",
@@ -4584,7 +4585,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_LEVEL": 0,
         "COST_TYPE": "none",
         "DESC_VALUE": "min_elemental_damage_add",
-        "DESC_VALUE_BASE": "5",
+        "DESC_VALUE_BASE": "0",
         "DESC_VALUE_PER_LVL": "1",
         "DESC_VALUE_TYPE": "",
         "DESC_VALUE_REAL": "synergy:dodge",
@@ -5118,7 +5119,7 @@ export const GAME_DATA_ANCESTRAL_LEGACY = [{
         "COST_TYPE": "none",
         "DESC_VALUE": "mana_regen_percent|mana_leech_percent|mana_on_hit_percent|mana_on_kill_percent",
         "DESC_VALUE_BASE": "0|0|0|0",
-        "DESC_VALUE_PER_LVL": "1|0.5|1|1",
+        "DESC_VALUE_PER_LVL": "1|0.2|1|1",
         "DESC_VALUE_TYPE": "%|%|%|%",
         "DESC_VALUE_REAL": "|||",
         "EXTRA_NBR": ""

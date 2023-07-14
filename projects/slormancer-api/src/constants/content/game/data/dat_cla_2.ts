@@ -1,4 +1,5 @@
-export const GAME_DATA_MAGE_SKILL = [{
+export const GAME_DATA_MAGE_SKILL = [
+    {
         "REF": 0,
         "EN_NAME": "Wall of Omen",
         "EN_DESCRIPTION": "You create a Wall of Omen at target location that lasts @ £.#Enemies passing through Wall of Omen are <Slowed> by §% for ¤ seconds.#Enemy Projectiles passing through Wall of Omen have §% Reduced Projectile Speed.",
@@ -7991,7 +7992,7 @@ export const GAME_DATA_MAGE_SKILL = [{
     {
         "REF": 169,
         "EN_NAME": "Replenish",
-        "EN_DESCRIPTION": "You have +@% £.#Mana Regeneration is equal to _ of your $ (µ% + µ% per rank).",
+        "EN_DESCRIPTION": "You have +@ £.#Mana Regeneration is equal to _ of your $ (µ% + µ% per rank).",
         "FR_NAME": "Reconstitution",
         "FR_DESCRIPTION": "Vous avez +@ de £.#Cette Régénération de Mana est équivalente à _ de votre $ (µ% + µ% par rang).",
         "CH_NAME": "补充",
@@ -9213,9 +9214,9 @@ export const GAME_DATA_MAGE_SKILL = [{
     {
         "REF": 195,
         "EN_NAME": "Shut Down",
-        "EN_DESCRIPTION": "Your Critical Strikes <Silence> enemies hit for the next ¥ second.",
+        "EN_DESCRIPTION": "Your Ancestral Strikes <Silence> enemies hit for the next ¥ second.",
         "FR_NAME": "Baillon",
-        "FR_DESCRIPTION": "Vos Coups Critiques appliquent Silence aux ennemis touchés pour les ¥ prochaines secondes.",
+        "FR_DESCRIPTION": "Vos Coups Ancestraux appliquent Silence aux ennemis touchés pour les ¥ prochaines secondes.",
         "CH_NAME": "失能",
         "CH_DESCRIPTION": "你的暴击可<Silence>敌人，持续¥秒。",
         "TW_NAME": "失能",

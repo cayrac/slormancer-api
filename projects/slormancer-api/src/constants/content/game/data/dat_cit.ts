@@ -1,4 +1,5 @@
-export const GAME_DATA_CITATIONS = [{
+export const GAME_DATA_CITATIONS = [
+    {
         "REF": 0,
         "EN_NAME": "The King",
         "EN_DESCRIPTION": "King of Adreart",
@@ -108,7 +109,7 @@ export const GAME_DATA_CITATIONS = [{
         "SPRITE": "alena",
         "XX": 1992,
         "YY": 490,
-        "UNLOCK": 99
+        "UNLOCK": 52
     },
     {
         "REF": 4,
@@ -360,7 +361,7 @@ export const GAME_DATA_CITATIONS = [{
         "SPRITE": "innkeeper",
         "XX": 1798,
         "YY": 1054,
-        "UNLOCK": 99
+        "UNLOCK": 46
     },
     {
         "REF": 13,

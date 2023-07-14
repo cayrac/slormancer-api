@@ -1,4 +1,5 @@
-export const GAME_DATA_CATACLISMS = [{
+export const GAME_DATA_CATACLISMS = [
+    {
         "REF": 0,
         "EN_NAME": "Gravity",
         "EN_DESCRIPTION": "Your Projectiles have @ Projectile Range and Speed.",
@@ -396,9 +397,9 @@ export const GAME_DATA_CATACLISMS = [{
     },
     {
         "REF": 5,
-        "EN_NAME": "Jetlag",
+        "EN_NAME": "Invulnerability",
         "EN_DESCRIPTION": "Every second, enemies have @ Chance to become Invulnerable for @ to @ seconds",
-        "FR_NAME": "Délai",
+        "FR_NAME": "Invulnérabilité",
         "FR_DESCRIPTION": "Toutes les secondes, les ennemis ont @ de Chance de devenir Invulnérables durant @ à @ secondes.",
         "CH_NAME": "时差效应",
         "CH_DESCRIPTION": "刚从裂隙出现的敌人在@秒内无敌。@ - @",
@@ -458,7 +459,7 @@ export const GAME_DATA_CATACLISMS = [{
         "DMG_TYPE": "",
         "KNOCKBACK": null,
         "TYPE": "%|%",
-        "ELITE_AFFIX_TIMER": 0.1
+        "ELITE_AFFIX_TIMER": 10
     },
     {
         "REF": 18,
