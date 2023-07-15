@@ -63,7 +63,7 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [90, 115, 116, 169], realm: 43 },   // Burning Rage
     { nodes: [91, 117, 118, 173], realm: 44 },   // Elemental Sorcerer
     { nodes: [95, 121, 122, 180], realm: 47 },   // Tower Defense
-    { nodes: [96, 123, 124, 184], realm: 48 },   // Relentless
+    { nodes: [96, 123, 124, 183], realm: 48 },   // Relentless
     { nodes: [100, 127, 128, 191], realm: 51 },  // Kah Rooj's Power Plant
     { nodes: [101, 129, 130, 195], realm: 52 },  // Shield of the Champion of Light
     { nodes: [105, 133, 134, 202], realm: 55 },  // Glittering Silence
@@ -87,39 +87,55 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [137, 152, 207, 209], realm: 78 },   // Glyph of Darkness
     { nodes: [138, 157, 154, 155], realm: 79 },   // Obscure Retribution / Elemental Warrior
 
-    { nodes: [110, 111], realm: 65 },   // Shadow Shield
-    { nodes: [116, 117], realm: 68 },   // Frostfire Armor
-    { nodes: [122, 123], realm: 71 },   // Totemic Infusion
-    { nodes: [128, 129], realm: 74 },   // Aurelon's Bargain
-    { nodes: [134, 135], realm: 77 },   // Inextinguishable Light
+    { nodes: [110, 111, 160], realm: 65 },   // Shadow Shield
+    { nodes: [116, 117, 171], realm: 68 },   // Frostfire Armor
+    { nodes: [122, 123, 182], realm: 71 },   // Totemic Infusion
+    { nodes: [128, 129, 193], realm: 74 },   // Aurelon's Bargain
+    { nodes: [134, 135, 204], realm: 77 },   // Inextinguishable Light
 
-    { nodes: [157, 158], realm: 80 },   // Enduring Blorms
-    { nodes: [162, 163], realm: 82 },   // Danger Zone!
-    { nodes: [168, 169], realm: 83 },   // Inner Sanctum
-    { nodes: [173, 174], realm: 85 },   // Lethal Force
-    { nodes: [178, 180], realm: 86 },   // Ice Field
-    { nodes: [184, 185], realm: 88 },   // Spark Machine
-    { nodes: [190, 191], realm: 89 },   // Cleansing Surge
-    { nodes: [195, 196], realm: 91 },   // Agile Adventurer
-    { nodes: [201, 202], realm: 92 },   // Wild Slap
-    { nodes: [206, 207], realm: 94 },   // Flawless Defense
+    { nodes: [156, 157, 158, 159], realm: 80 },   // Enduring Blorms
+    { nodes: [161, 162, 163, 164], realm: 82 },   // Danger Zone!
+    { nodes: [167, 168, 169, 170], realm: 83 },   // Inner Sanctum
+    { nodes: [172, 173, 174, 175], realm: 85 },   // Lethal Force
+    { nodes: [178, 179, 180, 181], realm: 86 },   // Ice Field
+    { nodes: [183, 184, 185, 186], realm: 88 },   // Spark Machine
+    { nodes: [189, 190, 191, 192], realm: 89 },   // Cleansing Surge
+    { nodes: [194, 195, 196, 197], realm: 91 },   // Agile Adventurer
+    { nodes: [200, 201, 202, 203], realm: 92 },   // Wild Slap
+    { nodes: [205, 206, 207, 208], realm: 94 },   // Flawless Defense
 
-    { nodes: [141], realm: 96 },   // More Fire!
-    { nodes: [144], realm: 99 },   // Ice Prison
-    { nodes: [147], realm: 102 },  // Charging up!
-    { nodes: [150], realm: 105 },  // Aurelon's Punishment
-    { nodes: [153], realm: 108 },  // And Together Bind Them
+    { nodes: [10, 141], realm: 96 },   // More Fire!
+    { nodes: [23, 144], realm: 99 },   // Ice Prison
+    { nodes: [40, 147], realm: 102 },  // Charging up!
+    { nodes: [51, 150], realm: 105 },  // Aurelon's Punishment
+    { nodes: [63, 153], realm: 108 },  // And Together Bind Them
 
-    { nodes: [165], realm: 95 },   // Living Inferno / Duelist
-    { nodes: [166], realm: 97 },   // Comfort Zone
-    { nodes: [176], realm: 98 },   // Slaughter
-    { nodes: [177], realm: 100 },  // Melting Ice / The Merchant
-    { nodes: [187], realm: 101 },  // Ancestral Aberration
-    { nodes: [188], realm: 103 },  // Elemental Wizard
-    { nodes: [198], realm: 104 },  // Wavering Glow
-    { nodes: [199], realm: 106 },  // Shadowlight Bulwark
-    { nodes: [209], realm: 107 },  // Shadow Bargain
-    { nodes: [155], realm: 109 },  // Armor of Kings / Sturdy Blorms
+    { nodes: [164, 165], realm: 95 },   // Living Inferno / Duelist
+    { nodes: [166, 167], realm: 97 },   // Comfort Zone
+    { nodes: [175, 176], realm: 98 },   // Slaughter
+    { nodes: [177, 179], realm: 100 },  // Melting Ice / The Merchant
+    { nodes: [186, 187], realm: 101 },  // Ancestral Aberration
+    { nodes: [188, 189], realm: 103 },  // Elemental Wizard
+    { nodes: [197, 198], realm: 104 },  // Wavering Glow
+    { nodes: [199, 200], realm: 106 },  // Shadowlight Bulwark
+    { nodes: [208, 209], realm: 107 },  // Shadow Bargain
+    { nodes: [155, 156], realm: 109 },  // Armor of Kings / Sturdy Blorms
 
+    { nodes: [159, 160, 161, 300], realm: 81 },  // Soul of the Wizard
+    { nodes: [170, 171, 172, 301], realm: 84 },  // Playful Weapons
+    { nodes: [181, 182, 184, 302], realm: 87 },  // Unstoppable Force
+    { nodes: [192, 193, 194, 303], realm: 90 },  // Greater Quiver
+    { nodes: [203, 204, 205, 304], realm: 93 },  // Elemental Champion
 
+    { nodes: [300], realm: 110 },   // Blood Rite
+    { nodes: [301], realm: 111 },   // Waste Not
+    { nodes: [302], realm: 112 },   // Elemental Inversion
+    { nodes: [303], realm: 113 },   // One last round
+    { nodes: [304], realm: 114 },   // Efficiency
+
+    { nodes: [40], realm: 127 },   // Permanent Overload
+    { nodes: [51], realm: 132 },   // Renewal of Justice
+    { nodes: [63], realm: 137 },   // Blorm Up!
+    { nodes: [10], realm: 117 },   // Heat Wave
+    { nodes: [23], realm: 122 },   // Shattering Ice
 ]
