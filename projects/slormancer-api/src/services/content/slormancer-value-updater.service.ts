@@ -551,6 +551,7 @@ export class SlormancerValueUpdaterService {
         }
 
         const isIcyVeins = ancestralLegacy.id === 29;
+        const isConsistencyIsKey = ancestralLegacy.id === 31;
         const isWildSlap = ancestralLegacy.id === 92;
 
         for (const value of ancestralLegacy.values) {
@@ -581,9 +582,13 @@ export class SlormancerValueUpdaterService {
                     if (!isWildSlap) {
                         let sumMultiplier = 100;
                         for (const multiplier of statMultipliers) {
-                            sumMultiplier += multiplier;
+                            if (isConsistencyIsKey) {
+                                sumMultiplier -= multiplier;
+                            } else {
+                                sumMultiplier += multiplier;
+                            }
                         }
-                        value.value = value.value * sumMultiplier / 100;
+                        value.value = value.value * Math.max(0, sumMultiplier) / 100;
                     }
                 } else {
                     for (const multiplier of statMultipliers) {
@@ -772,6 +777,13 @@ export class SlormancerValueUpdaterService {
             }
         }
 
+        if (element === SkillElement.Lightning && typeof damage.synergy === 'number') {
+            damage.synergy = {
+                min: damage.synergy,
+                max: damage.synergy
+            }
+        }
+
         if (typeof damage.synergy === 'number') {
             for (const multiplier of multipliers) {
                 damage.synergy = damage.synergy * (100 + multiplier) / 100;
@@ -795,11 +807,33 @@ export class SlormancerValueUpdaterService {
                 }
             }
 
+            let minimumDamage = 0;
+
             if (element === SkillElement.Lightning) {
-                damage.synergy.min = 1;
+                damage.synergy.min = 1
+                const value = statsResult.stats.find(v => v.stat === 'lightning_upper_damage_range');
+                if (value) {
+                    // Bug max reaper damage ignored for consistency is key
+                    const splitReaperToPhysicalAndElement = statsResult.extractedStats['reaper_split_to_physical_and_element'] !== undefined
+                    const addReaperToElements = statsResult.extractedStats['reaper_added_to_elements'] !== undefined
+
+                    let reaperDamageRatio = 0;
+
+                    if (splitReaperToPhysicalAndElement) {
+                        reaperDamageRatio += 0.5;
+                    }
+                    if (addReaperToElements) {
+                        reaperDamageRatio += 1;
+                    }
+
+                    const reaper = statsResult.stats.find(v => v.stat === 'weapon_damage');
+                    const reaperMaximumDamage = reaper ? (typeof reaper.total === 'number' ? reaper.total : reaper.total.max) * damage.value / 100 : 0;
+                    console.log('damage removed for consistency is key bug : ', reaperMaximumDamage, reaperDamageRatio);
+                    minimumDamage = ((damage.synergy.max - reaperMaximumDamage * reaperDamageRatio) * (100 - (value.total as number)) / 100) + addedFlatDamage;
+                }
             }
             damage.displaySynergy = {
-                min: bankerRound(damage.synergy.min + addedFlatDamage, valueOrDefault(damage.precision, 0)),
+                min: bankerRound(Math.max(minimumDamage, damage.synergy.min + addedFlatDamage), valueOrDefault(damage.precision, 0)),
                 max: bankerRound(damage.synergy.max + addedFlatDamage, valueOrDefault(damage.precision, 0)),
             };
         }

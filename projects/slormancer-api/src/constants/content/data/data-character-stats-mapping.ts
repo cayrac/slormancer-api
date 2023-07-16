@@ -1964,6 +1964,22 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxMultiplier: [],
         } 
     },
+    {
+        stat: 'lightning_upper_damage_range',
+        precision: 1,
+        allowMinMax: false,
+        suffix: '',
+        source: {
+            flat: [
+                { stat: 'upper_damage_range' }
+            ],
+            max: [],
+            percent: [],
+            maxPercent: [],
+            multiplier: [],
+            maxMultiplier: [],
+        } 
+    },
 ];
 
 export const HERO_MERGED_STATS_MAPPING: GameHeroesData<Array<MergedStatMapping>> = {

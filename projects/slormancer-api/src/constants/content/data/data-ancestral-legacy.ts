@@ -41,6 +41,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    3: {
+        override: values => {
+            addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     4: {
         override: values => {
             addConstant(values, 3, false, EffectValueValueType.Duration, 'duration');
@@ -56,9 +61,19 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'primary_secondary_skill_fire_imbued');
         }
     },
+    10: {
+        override: values => {
+            addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     11: {
         override: values => {
             setStat(values, 0, 'crit_chance_percent_against_burning');
+        }
+    },
+    13: {
+        override: values => {
+            addConstant(values, 3, false, EffectValueValueType.Static, 'garbage_stat');
         }
     },
     14: {
@@ -139,6 +154,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     41: {
         override: values => {
             addConstant(values, 5, false, EffectValueValueType.Stat, 'twitching_warp_distance');
+        }
+    },
+    43: {
+        override: values => {
+            addConstant(values, 3, false, EffectValueValueType.Static, 'garbage_stat');
         }
     },
     46: {
@@ -262,6 +282,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             addConstant(values, 6, false, EffectValueValueType.Duration, 'elemental_temper_buff_duration');
         }
     },
+    86: {
+        override: values => {
+            addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     89: {
         override: values => {
             setStat(values, 0, 'cost_per_second_reduction');
@@ -291,7 +316,7 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     },
     95: {
         override: values => {
-            addConstant(values, 7, false, EffectValueValueType.Duration, 'duration');
+            addConstant(values, 200, false, EffectValueValueType.Static, 'garbage_stat');
         }
     },
     101: {

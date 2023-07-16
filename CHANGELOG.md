@@ -25,6 +25,10 @@ Initial release
 ## Fixes
 - Fixed Replenish description
 - Fixed Replenish upgrade order
+- Lightning minimum damage is now correctly computed
+
+## TODO
+- tester nouvelles boucles
 
 ## Known issues
 - Toughness 15 elemental resistance value is not rounded when applied 
