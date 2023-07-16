@@ -104,28 +104,28 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [200, 201, 202, 203], realm: 92 },   // Wild Slap
     { nodes: [205, 206, 207, 208], realm: 94 },   // Flawless Defense
 
-    { nodes: [10, 141], realm: 96 },   // More Fire!
-    { nodes: [23, 144], realm: 99 },   // Ice Prison
-    { nodes: [40, 147], realm: 102 },  // Charging up!
-    { nodes: [51, 150], realm: 105 },  // Aurelon's Punishment
-    { nodes: [63, 153], realm: 108 },  // And Together Bind Them
+    { nodes: [141, 214, 215, 216], realm: 96 },   // More Fire!
+    { nodes: [144, 224, 225, 226], realm: 99 },   // Ice Prison
+    { nodes: [147, 234, 235, 236], realm: 102 },  // Charging up!
+    { nodes: [150, 244, 245, 246], realm: 105 },  // Aurelon's Punishment
+    { nodes: [153, 254, 255, 256], realm: 108 },  // And Together Bind Them
 
-    { nodes: [164, 165], realm: 95 },   // Living Inferno / Duelist
-    { nodes: [166, 167], realm: 97 },   // Comfort Zone
-    { nodes: [175, 176], realm: 98 },   // Slaughter
-    { nodes: [177, 179], realm: 100 },  // Melting Ice / The Merchant
-    { nodes: [186, 187], realm: 101 },  // Ancestral Aberration
-    { nodes: [188, 189], realm: 103 },  // Elemental Wizard
-    { nodes: [197, 198], realm: 104 },  // Wavering Glow
-    { nodes: [199, 200], realm: 106 },  // Shadowlight Bulwark
-    { nodes: [208, 209], realm: 107 },  // Shadow Bargain
-    { nodes: [155, 156], realm: 109 },  // Armor of Kings / Sturdy Blorms
+    { nodes: [164, 165, 212, 213], realm: 95 },   // Living Inferno / Duelist
+    { nodes: [166, 167, 217, 218], realm: 97 },   // Comfort Zone
+    { nodes: [175, 176, 222, 223], realm: 98 },   // Slaughter
+    { nodes: [177, 179, 227, 228], realm: 100 },  // Melting Ice / The Merchant
+    { nodes: [186, 187, 232, 233], realm: 101 },  // Ancestral Aberration
+    { nodes: [188, 189, 237, 238], realm: 103 },  // Elemental Wizard
+    { nodes: [197, 198, 242, 243], realm: 104 },  // Wavering Glow
+    { nodes: [199, 200, 247, 248], realm: 106 },  // Shadowlight Bulwark
+    { nodes: [208, 209, 252, 253], realm: 107 },  // Shadow Bargain
+    { nodes: [155, 156, 257, 258], realm: 109 },  // Armor of Kings / Sturdy Blorms
 
-    { nodes: [159, 160, 161, 300], realm: 81 },  // Soul of the Wizard
-    { nodes: [170, 171, 172, 301], realm: 84 },  // Playful Weapons
-    { nodes: [181, 182, 184, 302], realm: 87 },  // Unstoppable Force
-    { nodes: [192, 193, 194, 303], realm: 90 },  // Greater Quiver
-    { nodes: [203, 204, 205, 304], realm: 93 },  // Elemental Champion
+    { nodes: [159, 160, 161, 300, 309, 310], realm: 81 },  // Soul of the Wizard
+    { nodes: [170, 171, 172, 301, 305, 311], realm: 84 },  // Playful Weapons
+    { nodes: [181, 182, 184, 302, 306, 312], realm: 87 },  // Unstoppable Force
+    { nodes: [192, 193, 194, 303, 307, 313], realm: 90 },  // Greater Quiver
+    { nodes: [203, 204, 205, 304, 308, 314], realm: 93 },  // Elemental Champion
 
     { nodes: [300], realm: 110 },   // Blood Rite
     { nodes: [301], realm: 111 },   // Waste Not
@@ -133,9 +133,33 @@ export const ANCESTRAL_LEGACY_REALMS: Array<DataAncestralLegacyRealm> = [
     { nodes: [303], realm: 113 },   // One last round
     { nodes: [304], realm: 114 },   // Efficiency
 
-    { nodes: [40], realm: 127 },   // Permanent Overload
-    { nodes: [51], realm: 132 },   // Renewal of Justice
-    { nodes: [63], realm: 137 },   // Blorm Up!
-    { nodes: [10], realm: 117 },   // Heat Wave
-    { nodes: [23], realm: 122 },   // Shattering Ice
+    { nodes: [215], realm: 117 },   // Heat Wave
+    { nodes: [225], realm: 122 },   // Shattering Ice
+    { nodes: [235], realm: 127 },   // Permanent Overload
+    { nodes: [245], realm: 132 },   // Renewal of Justice
+    { nodes: [255], realm: 137 },   // Blorm Up!
+
+    { nodes: [216, 217], realm: 118 },   // Blazing Fireball
+    { nodes: [226, 227], realm: 123 },   // Winds of Winter
+    { nodes: [236, 237], realm: 128 },   // Consistency is Key
+    { nodes: [246, 247], realm: 133 },   // The Judge of Light
+    { nodes: [256, 257], realm: 138 },   // Avatar of Shadow
+
+    { nodes: [213, 214], realm: 116 },   // Lowey's Gratitude
+    { nodes: [223, 224], realm: 121 },   // Frozen Arrows
+    { nodes: [233, 234], realm: 126 },   // Static Shock
+    { nodes: [243, 244], realm: 131 },   // Light Diffusion
+    { nodes: [253, 254], realm: 136 },   // Elemental Pact
+
+    { nodes: [218, 305], realm: 119 },   // Warlock's Ascendancy
+    { nodes: [228, 306], realm: 124 },   // Elemental Rogue
+    { nodes: [238, 307], realm: 129 },   // Ancestral Instability
+    { nodes: [248, 308], realm: 134 },   // Wrath of Kings
+    { nodes: [258, 309], realm: 139 },   // Blorm Empire
+
+    { nodes: [212, 310], realm: 115 },   // Lowey's Creation
+    { nodes: [222, 311], realm: 120 },   // Frost Sentinel
+    { nodes: [232, 312], realm: 125 },   // Gift of Ancestral Speed
+    { nodes: [242, 313], realm: 130 },   // Last Stand
+    { nodes: [252, 314], realm: 135 },   // Black Pact
 ]
