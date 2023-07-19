@@ -23,12 +23,12 @@ Initial release
 - Added new legendaries data
 - Added reinforcment cap to legendaries
 ## Fixes
-- Fixed Replenish description
 - Fixed Replenish upgrade order 
 - Lightning minimum damage is now correctly computed
 - Fixed an issue causing ancestral legacy active effects to be applied twice
 - Fixed an issue causing exported build above level 64 to have an incorrect level
 
-
-## Known issues
-- Toughness 15 elemental resistance value is not rounded when applied 
+## TODO
+- mise à jour packages
+- parsing loadouts
+- formule resistance / armure
