@@ -47,7 +47,7 @@ export interface CharacterConfig {
     target_is_in_breach_range: boolean;
     target_is_burning: boolean;
     target_has_broken_armor: boolean;
-    target_has_negative_effect: boolean;
+    target_negative_effects: number;
     target_has_remnant_vulnerability: boolean;
     target_has_arcane_discordance: boolean;
     target_has_temporal_discordance: boolean;
@@ -152,11 +152,15 @@ export interface CharacterConfig {
     has_shadow_bargain_buff: boolean;
     has_flawless_defense_buff: boolean;
     has_frostfire_buff: boolean;
+    has_ancestral_instability_buff: boolean;
+    has_avatar_of_shadow_buff: boolean;
     concentration_buff: boolean;
     ultima_momentum_buff: boolean;
     exposed_armor_buff: boolean;
+    efficiency_buff: boolean;
     distance_with_target: number;
     all_other_characters_level: number;
+    ancestral_instability_buff_duration: number;
     victims_reaper_104: number;
     idle: boolean;
     overdrive_bounces_left: number;

@@ -222,7 +222,7 @@ export class SlormancerStatsExtractorService {
                     } else {                        
                         stats.isolatedSynergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { ancestralLegacy }));
                     }
-                } else if (active && !ancestralLegacy.genres.includes(SkillGenre.Aura)) {
+                    } else if (active && !ancestralLegacy.isActivable) {
                     this.addStat(stats.stats, effectValue.stat, effectValue.value, { ancestralLegacy });
                 }
             }

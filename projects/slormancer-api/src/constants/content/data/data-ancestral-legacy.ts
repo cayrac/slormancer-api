@@ -115,6 +115,12 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             setStat(values, 0, 'elemental_damage');
         }
     },
+    27: {
+        override: values => {
+            addConstant(values, 1, false, EffectValueValueType.Flat, 'garbage_stat');
+            addConstant(values, 3, false, EffectValueValueType.Flat, 'garbage_stat');
+        }
+    },
     29: {
         override: values => {
             setStat(values, 0, 'cost_reduction_mult_per_frozen_or_chilled_enemy_nearby');
@@ -188,6 +194,13 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             setStat(values, 0, 'shield_increased_value_mult');
         }
     },
+    54: {
+        override: values => {
+            setStat(values, 0, 'increased_damage_per_negative_effect');
+            addConstant(values, 100, false, EffectValueValueType.Stat, 'garbage_stat');
+            addConstant(values, 3, false, EffectValueValueType.Duration, 'garbage_stat');
+        }
+    },
     55: {
         override: values => {
             addConstant(values, 6, false, EffectValueValueType.Duration, 'agent_of_shield_duration');
@@ -218,9 +231,28 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             setStat(values, 0, 'enduring_blorms_blorm_increased_damage');
         }
     },
+    68: {
+        override: values => {
+            addConstant(values, 25, false, EffectValueValueType.Stat, 'damage_taken_to_mana_percent');
+        }
+    },
+    70: {
+        override: values => {
+            setStat(values, 0, 'avatar_of_shadow_basic_damage_percent');
+            setStat(values, 1, 'avatar_of_shadow_elemental_damage_percent');
+            addConstant(values, 10, false, EffectValueValueType.Duration, 'garbage_stat');
+            addConstant(values, 100, false, EffectValueValueType.Stat, 'fork_chance_percent');
+            addConstant(values, 100, false, EffectValueValueType.Stat, 'recast_chance_percent');
+        }
+    },
     72: {
         override: values => {
             setStat(values, 0, 'soul_bound_buff_soul_bound_on_hit_max');
+        }
+    },
+    73: {
+        override: values => {
+            addConstant(values, 5, false, EffectValueValueType.Duration, 'garbage_stat');
         }
     },
     74: {
@@ -276,6 +308,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             setStat(values, 0, 'flawless_defense_projectile_damage_reduction');
         }
     },
+    84: {
+        override: values => {
+            addConstant(values, -100, false, EffectValueValueType.Stat, 'efficiency_skill_reduction_skill_mult');
+        }
+    },
     85: {
         override: values => {
             setStat(values, 0, 'elemental_temper_buff_elemental_damage_percent');
@@ -287,6 +324,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    88: {
+        override: values => {
+            addConstant(values, 3, false, EffectValueValueType.Stat, 'increased_max_stacks');
+        }
+    },
     89: {
         override: values => {
             setStat(values, 0, 'cost_per_second_reduction');
@@ -295,6 +337,13 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     90: {
         override: values => {
             setStat(values, 0, 'cost_lock_reduction');
+        }
+    },
+    91: {
+        override: values => {
+            setStat(values, 0, 'ancestral_instability_crit_damage_percent');
+            setStat(values, 1, 'ancestral_instability_brut_damage_percent');
+            addConstant(values, 0.25, false, EffectValueValueType.Duration, 'duration');
         }
     },
     92: {

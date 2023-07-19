@@ -26,6 +26,7 @@ Initial release
 - Fixed Replenish description
 - Fixed Replenish upgrade order
 - Lightning minimum damage is now correctly computed
+- Fixed an issue causing ancestral legacy active effects to be applied twice
 
 ## TODO
 - tester nouvelles boucles

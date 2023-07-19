@@ -828,7 +828,6 @@ export class SlormancerValueUpdaterService {
 
                     const reaper = statsResult.stats.find(v => v.stat === 'weapon_damage');
                     const reaperMaximumDamage = reaper ? (typeof reaper.total === 'number' ? reaper.total : reaper.total.max) * damage.value / 100 : 0;
-                    console.log('damage removed for consistency is key bug : ', reaperMaximumDamage, reaperDamageRatio);
                     minimumDamage = ((damage.synergy.max - reaperMaximumDamage * reaperDamageRatio) * (100 - (value.total as number)) / 100) + addedFlatDamage;
                 }
             }
