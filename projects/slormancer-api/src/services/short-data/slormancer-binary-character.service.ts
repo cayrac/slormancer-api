@@ -13,6 +13,7 @@ import { SlormancerBinaryItemService } from './slormancer-binary-item.service';
 import { SlormancerBinaryReaperService } from './slormancer-binary-reaper.service';
 import { SlormancerBinaryRuneService } from './slormancer-binary-rune.service';
 import { SlormancerBinaryUltimatumService } from './slormancer-binary-ultimatum.service';
+import { compareVersions } from '../../util';
 
 @Injectable()
 export class SlormancerBinaryCharacterService {
@@ -169,7 +170,7 @@ export class SlormancerBinaryCharacterService {
         let result: Bits = [];
         
         result.push(...numberToBinary(character.heroClass, 2));
-        result.push(...numberToBinary(character.level, 6));
+        result.push(...numberToBinary(character.level, 7));
 
         result.push(...this.slormancerBinaryReaperService.reaperToBinary(character.reaper));
 
@@ -214,7 +215,13 @@ export class SlormancerBinaryCharacterService {
         const originalGameVersion = API_TO_GAME_VERSION_MAPPER[version];
         const importVersion = originalGameVersion ? originalGameVersion : GAME_VERSION;
         const heroClass: HeroClass = binaryToNumber(takeBitsChunk(binary, 2));
-        const level = binaryToNumber(takeBitsChunk(binary, 6));
+
+        const has6BitsLevel = compareVersions(version, '0.4.0') < 0;
+        let level = binaryToNumber(takeBitsChunk(binary, has6BitsLevel ? 6 : 7));
+
+        if (has6BitsLevel && level <= 6) {
+            level += 64;
+        }
 
         const reaper = this.slormancerBinaryReaperService.binaryToReaper(binary, heroClass, version);
 

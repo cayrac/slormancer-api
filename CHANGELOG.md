@@ -24,13 +24,11 @@ Initial release
 - Added reinforcment cap to legendaries
 ## Fixes
 - Fixed Replenish description
-- Fixed Replenish upgrade order
+- Fixed Replenish upgrade order 
 - Lightning minimum damage is now correctly computed
 - Fixed an issue causing ancestral legacy active effects to be applied twice
+- Fixed an issue causing exported build above level 64 to have an incorrect level
 
-## TODO
-- tester nouvelles boucles
 
 ## Known issues
 - Toughness 15 elemental resistance value is not rounded when applied 
-- bug level 6 (import => level 70 => export => still level 6) : https://cayrac.github.io/slorm-planner/view/build/aWqypUtjeFtFwEOdHOj3ZKSWyIgvc6q8up0eRvGa7alWbpUxDf$rHuyTgqjNcAqGg7aJWcVam7a65IzqNckncOiRubdWeVQniJAy3uondQifpwaypCbeYaeZjVIeIcqoijLuugcXqyAfaC5aaLKcmhUaIzaczK2jcPbW5crbmhcGYQkddWOdNqammGHG8WftjUWeZjPYbccqrijG3ugeHqyEfaC5aaPKgmhUaizaaPK3zaXbTscjbmfIGYqkddqOdNqaumHbG8WbdiagmM5ifioXqrijGSugiXqySfaC5abnKkmhUaIzadXK3bcPbijKeYQkdaWOmjcGoDabwYggd1avmM2itijayGMbbqzvfbGuubZOafMq3WEWcPK2rczbideeWikdkOOmcIGoDaagYigd1avmM$ifijfuGMbbqyrfbHiubZOahMriWEWkPK3bczbikKeWikdaOOmdcGoDabCYkgd1bvmM9ivioBqeijGuugerqyEfaC5acXKm9uceaaaaaaWkaG3Zjf3aa

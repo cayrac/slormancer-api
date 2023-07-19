@@ -24,6 +24,8 @@ export interface Reaper {
     primordial: boolean;
     icon: string;
     level: number;
+    baseLevel: number;
+    bonusLevel: number;
     baseAffinity: number;
     bonusAffinity: number;
     affinity: number;
@@ -52,6 +54,7 @@ export interface Reaper {
     smithLabel: string;
     victimsLabel: string;
     levelLabel: string;
+    bonusLevelLabel: string | null;
     damageTypeLabel: string;
     affinityLabel: string | null;
     benedictionTitleLabel: string;

@@ -160,6 +160,7 @@ export interface CharacterConfig {
     efficiency_buff: boolean;
     distance_with_target: number;
     all_other_characters_level: number;
+    highest_same_type_reaper_level: number;
     ancestral_instability_buff_duration: number;
     victims_reaper_104: number;
     idle: boolean;

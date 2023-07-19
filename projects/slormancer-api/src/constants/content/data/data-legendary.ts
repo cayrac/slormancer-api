@@ -319,4 +319,9 @@ export const DATA_LEGENDARY: { [key: number]: DataLegendary } = {
             effect.template = effect.template.substring(0, effect.template.indexOf('|'));
         }
     },
+    83: {
+        override: (effect) => {
+            setStat(effect, 0, 'min_reaper_level');
+        }
+    },
 }

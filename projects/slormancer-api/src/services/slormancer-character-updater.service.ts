@@ -304,7 +304,34 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
+    private applyReaperBonusLevel(character: Character, config: CharacterConfig): boolean {
+        let changed = false;
+        let minLevel = 0;
+
+        if (character.gear.amulet !== null && character.gear.amulet.legendaryEffect !== null && character.gear.amulet.legendaryEffect.id === 83) {
+            const legendaryAffix = character.gear.amulet.legendaryEffect.effects.find(effect => effect.effect.stat === 'min_reaper_level');
+
+            if (legendaryAffix) {
+                minLevel = Math.min(legendaryAffix.effect.value, config.highest_same_type_reaper_level);
+            }
+
+            const expectedBonusLevel = minLevel - character.reaper.baseLevel;
+            if (expectedBonusLevel >= 0) {
+                changed = character.reaper.bonusLevel !== expectedBonusLevel
+                character.reaper.bonusLevel = expectedBonusLevel;
+            }
+        }
+
+        if (changed) {
+            this.slormancerReaperService.updateReaperModel(character.reaper);
+        }
+
+        return changed;
+    }
+
     private updateCharacterStats(character: Character, updateViews: boolean, config: CharacterConfig, additionalItem: EquipableItem | null, additionalRunes: Array<Rune> = []) {
+
+        const reaperChanged = this.applyReaperBonusLevel(character, config);
 
         const statResultPreComputing = this.getCharacterStatsResult(character, config, additionalItem, additionalRunes);
 
@@ -319,6 +346,9 @@ export class SlormancerCharacterUpdaterService {
         const statsResult = this.getCharacterStatsResult(character, config, additionalItem, additionalRunes);
         character.stats = statsResult.stats;
 
+        if (reaperChanged) {
+            statsResult.changed.reapers.push(character.reaper);
+        }
 
         statsResult.changed.items.push(...preComputingChanged.items);
         statsResult.changed.items.push(...statResultPreComputing.changed.items);
