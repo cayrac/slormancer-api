@@ -17,7 +17,7 @@ Initial release
 ## Fixes
 - Fixed Spark Machine and Elemental Wizard realms not being correctly mapped
 
-## Release 0.4.0 TBD
+## Release 0.4.0  (2023-19-07)
 ### Added
 - Raised max level to 80
 - Added new legendaries data
