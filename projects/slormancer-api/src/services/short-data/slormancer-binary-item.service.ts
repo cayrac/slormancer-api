@@ -18,6 +18,8 @@ import { SlormancerAffixService } from '../content/slormancer-affix.service';
 import { SlormancerDataService } from '../content/slormancer-data.service';
 import { SlormancerItemService } from '../content/slormancer-item.service';
 import { SlormancerLegendaryEffectService } from '../content/slormancer-legendary-effect.service';
+import { compareVersions } from '../../util';
+import { BinaryParseReport } from '../../model/export/binary-parse-report';
 
 @Injectable()
 export class SlormancerBinaryItemService {
@@ -68,7 +70,7 @@ export class SlormancerBinaryItemService {
     public itemToBinary(item: EquipableItem): Bits {
         let result: Bits = [];
 
-        result.push(...numberToBinary(item.level, 6));
+        result.push(...numberToBinary(item.level, 7));
         result.push(...numberToBinary(item.reinforcment, 8));
 
         result.push(...numberToBinary(item.affixes.length, 4));
@@ -96,8 +98,16 @@ export class SlormancerBinaryItemService {
         return result;
     }
 
-    public binaryToItem(binary: Bits, base: EquipableItemBase, heroClass: HeroClass): EquipableItem {
-        const level = binaryToNumber(takeBitsChunk(binary, 6));
+    public binaryToItem(binary: Bits, base: EquipableItemBase, heroClass: HeroClass, version: string, report: BinaryParseReport): EquipableItem {
+        
+        const has6BitsLevel = compareVersions(version, '0.4.1') < 0;
+        let level = binaryToNumber(takeBitsChunk(binary, has6BitsLevel ? 6 : 7));
+
+        if (has6BitsLevel && level <= 16) {
+            level += 64;
+            report.fromCorrupted = true;
+        }
+
         const reinforcment = binaryToNumber(takeBitsChunk(binary, 8));
 
         const affixCount = binaryToNumber(takeBitsChunk(binary, 4));

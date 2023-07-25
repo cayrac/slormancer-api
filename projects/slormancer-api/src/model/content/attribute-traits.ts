@@ -5,6 +5,7 @@ import { Trait } from './trait';
 export interface AttributeTraits {
     attribute: Attribute;
     rank: number;
+    baseRank: number;
     bonusRank: number;
     traits: Array<Trait>;
     values: Array<AbstractEffectValue>;

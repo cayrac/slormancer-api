@@ -70,6 +70,7 @@ export interface Character {
     originalVersion: string;
     importVersion: string | null;
     issues: Array<string>;
+    fromCorrupted: boolean;
 
     name: string;
     fullName: string;

@@ -54,7 +54,7 @@ export class SlormancerCharacterUpdaterService {
 
     private resetAttributes(character: Character) {
         for (const attribute of ALL_ATTRIBUTES) {
-            character.attributes.allocated[attribute].rank = 0;
+            character.attributes.allocated[attribute].baseRank = 0;
             this.slormancerAttributeService.updateAttributeTraits(character.attributes.allocated[attribute]);
         }
     }
@@ -221,6 +221,10 @@ export class SlormancerCharacterUpdaterService {
                     return result;
                 }).filter(isNotNullOrUndefined);
             character.issues.push('Your build contain an unresolved synergy loop between : ' + names.join(', '));
+        }
+
+        if (character.fromCorrupted) {
+            character.issues.push('This build has been recovered from a corrupted version of the slorm planner, data may be incomplete');
         }
     }
 
@@ -462,7 +466,7 @@ export class SlormancerCharacterUpdaterService {
         character.fullName = fullName + ' ' + this.LEVEL_LABEL + ' ' + character.level;
 
         character.attributes.maxPoints = character.level;
-        let allocatedPoints = ALL_ATTRIBUTES.map(attribute => character.attributes.allocated[attribute].rank).reduce((p, c) => p + c, 0);
+        let allocatedPoints = ALL_ATTRIBUTES.map(attribute => character.attributes.allocated[attribute].baseRank).reduce((p, c) => p + c, 0);
 
         if (allocatedPoints > character.attributes.maxPoints) {
             this.resetAttributes(character);

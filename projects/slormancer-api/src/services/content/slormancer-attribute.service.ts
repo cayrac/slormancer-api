@@ -26,11 +26,10 @@ import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerEffectValueService } from './slormancer-effect-value.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
+import { MAX_ATTRIBUTE_RANK } from '../../constants';
 
 @Injectable()
 export class SlormancerAttributeService {
-
-    private readonly MAX_RANK = 75;
 
     private readonly TRAIT_LEVEL_LABEL = this.slormancerTranslateService.translate('trait_level');
     private readonly TRAIT_LOCKED_LABEL = this.slormancerTranslateService.translate('trait_locked');
@@ -167,7 +166,7 @@ export class SlormancerAttributeService {
         const cumulativeValues: Array<EffectValueVariable> = [];
         const traits: Array<Trait> = [];
 
-        for (const rank of list(1, this.MAX_RANK)) {
+        for (const rank of list(1, MAX_ATTRIBUTE_RANK)) {
             const data = valueOrNull(gameDatas.find(data => data.LEVEL === rank));
 
             if (data !== null && data.ADDITIVE === 1) {
@@ -191,6 +190,7 @@ export class SlormancerAttributeService {
         const clone = {
             attribute: traits.attribute,
             rank: traits.rank,
+            baseRank: traits.baseRank,
             bonusRank: traits.bonusRank,
             traits: traits.traits.map(trait => this.getTraitClone(trait)),
             recapLabel: traits.recapLabel,
@@ -208,12 +208,13 @@ export class SlormancerAttributeService {
         return clone;
     }
 
-    public getAttributeTraits(attribute: Attribute, rank: number, bonusRank: number = 0): AttributeTraits {
+    public getAttributeTraits(attribute: Attribute, baseRank: number, bonusRank: number = 0): AttributeTraits {
         const traits = this.slormancerDataService.getGameDataAttributes(attribute);
 
         const attributeTraits: AttributeTraits = {
             attribute,
-            rank,
+            rank: 0,
+            baseRank,
             bonusRank,
             traits: this.buildTraits(traits, attribute),
         
@@ -269,7 +270,9 @@ export class SlormancerAttributeService {
         const allDescriptions: Array<string> = [];
 
         for (const trait of attributeTraits.traits) {
-            trait.rank = attributeTraits.rank + attributeTraits.bonusRank;
+            attributeTraits.baseRank = Math.min(MAX_ATTRIBUTE_RANK, attributeTraits.baseRank);
+            attributeTraits.rank = Math.min(MAX_ATTRIBUTE_RANK, attributeTraits.baseRank + attributeTraits.bonusRank);
+            trait.rank = attributeTraits.rank;
             this.updateTrait(trait);
 
             if (trait.template !== null) {

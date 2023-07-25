@@ -14,6 +14,7 @@ import { SlormancerBinaryReaperService } from './slormancer-binary-reaper.servic
 import { SlormancerBinaryRuneService } from './slormancer-binary-rune.service';
 import { SlormancerBinaryUltimatumService } from './slormancer-binary-ultimatum.service';
 import { compareVersions } from '../../util';
+import { BinaryParseReport } from '../../model/export/binary-parse-report';
 
 @Injectable()
 export class SlormancerBinaryCharacterService {
@@ -118,7 +119,7 @@ export class SlormancerBinaryCharacterService {
         return result;
     }
 
-    private binaryToGear(binary: Bits, heroClass: HeroClass): CharacterGear {
+    private binaryToGear(binary: Bits, heroClass: HeroClass, version: string, report: BinaryParseReport): CharacterGear {
         const result: CharacterGear = {
             [GearSlot.Helm]: null,
             [GearSlot.Body]: null,
@@ -142,7 +143,7 @@ export class SlormancerBinaryCharacterService {
                 throw new Error('failed to parse gear slot from binary : ' + binary.join())
             }
 
-            result[gearSlot] = this.slormancerBinaryItemService.binaryToItem(binary, gearSlotToBase(gearSlot), heroClass);
+            result[gearSlot] = this.slormancerBinaryItemService.binaryToItem(binary, gearSlotToBase(gearSlot), heroClass, version, report);
         }
 
         return result;
@@ -188,7 +189,7 @@ export class SlormancerBinaryCharacterService {
         result.push(...this.slormancerBinaryUltimatumService.ultimatumToBinary(character.ultimatum));
 
         for (const attribute of ALL_ATTRIBUTES) {
-            result.push(...numberToBinary(character.attributes.allocated[attribute].rank, 6));
+            result.push(...numberToBinary(character.attributes.allocated[attribute].baseRank, 7));
         }
 
         result.push(...numberToBinary(character.supportSkill === null ? 0 : character.supportSkill.id + 1, 10));
@@ -211,16 +212,38 @@ export class SlormancerBinaryCharacterService {
         return result;
     }
 
+    private smartGuessMissingAttributes(attributes: { [key in Attribute]: number }, points: number, report: BinaryParseReport) {
+        let remainingPoints = points;
+
+        for (const attribute of ALL_ATTRIBUTES) {
+            remainingPoints -= attributes[attribute];
+        }
+
+        if (remainingPoints >= 64) {
+            let validAttribute = ALL_ATTRIBUTES.find(attribute => attributes[attribute] === 11);
+            if (validAttribute === undefined) {
+                validAttribute = ALL_ATTRIBUTES.find(attribute => attributes[attribute] > 0 && attributes[attribute] < 11);
+            }
+
+            if (validAttribute !== undefined) {
+                attributes[validAttribute] += 64;
+                report.fromCorrupted = true;
+            }
+        }
+    }
+
     public binaryToCharacter(binary: Bits, version: string): Character | null {
         const originalGameVersion = API_TO_GAME_VERSION_MAPPER[version];
         const importVersion = originalGameVersion ? originalGameVersion : GAME_VERSION;
         const heroClass: HeroClass = binaryToNumber(takeBitsChunk(binary, 2));
+        const report: BinaryParseReport = { fromCorrupted: false };
 
         const has6BitsLevel = compareVersions(version, '0.4.0') < 0;
         let level = binaryToNumber(takeBitsChunk(binary, has6BitsLevel ? 6 : 7));
 
         if (has6BitsLevel && level <= 6) {
             level += 64;
+            report.fromCorrupted = true;
         }
 
         const reaper = this.slormancerBinaryReaperService.binaryToReaper(binary, heroClass, version);
@@ -231,13 +254,28 @@ export class SlormancerBinaryCharacterService {
 
         const skillsData = this.binaryToSkills(binary);
 
-        const gearData = this.binaryToGear(binary, heroClass);
+        const gearData = this.binaryToGear(binary, heroClass, version, report);
 
         const ultimatum = this.slormancerBinaryUltimatumService.binaryToUltimatum(binary);
 
-        const attributes: { [key: number]: number } = {} 
+        const has6BitsRank = compareVersions(version, '0.4.1') < 0;
+        const attributes: { [key in Attribute]: number } = {
+            [Attribute.Toughness]: 0,
+            [Attribute.Savagery]: 0,
+            [Attribute.Fury]: 0,
+            [Attribute.Determination]: 0,
+            [Attribute.Zeal]: 0,
+            [Attribute.Willpower]: 0,
+            [Attribute.Dexterity]: 0,
+            [Attribute.Bravery]: 0,
+        } 
         for (const attribute of ALL_ATTRIBUTES) {
-            attributes[attribute] = binaryToNumber(takeBitsChunk(binary, 6));
+            let value = binaryToNumber(takeBitsChunk(binary, has6BitsRank ? 6 : 7));
+            attributes[attribute] = value;
+        }
+
+        if (has6BitsRank) {
+            this.smartGuessMissingAttributes(attributes, level, report);
         }
 
         const supportSkillValue = binaryToNumber(takeBitsChunk(binary, 10));
@@ -288,7 +326,8 @@ export class SlormancerBinaryCharacterService {
             activable1Value === 0 ? null : (activable1Value - 1),
             activable2Value === 0 ? null : (activable2Value - 1),
             activable3Value === 0 ? null : (activable3Value - 1),
-            activable4Value === 0 ? null : (activable4Value - 1)
+            activable4Value === 0 ? null : (activable4Value - 1),
+            report.fromCorrupted
         );
     }
 }

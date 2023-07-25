@@ -302,14 +302,14 @@ export class SlormancerCharacterBuilderService {
                 remainingPoints: 0,
                 maxPoints: 0,
                 allocated: {
-                    [Attribute.Toughness]: this.slormancerAttributeService.getAttributeTraits(Attribute.Toughness, character.attributes.allocated[Attribute.Toughness].rank),
-                    [Attribute.Savagery]: this.slormancerAttributeService.getAttributeTraits(Attribute.Savagery, character.attributes.allocated[Attribute.Savagery].rank),
-                    [Attribute.Fury]: this.slormancerAttributeService.getAttributeTraits(Attribute.Fury, character.attributes.allocated[Attribute.Fury].rank),
-                    [Attribute.Determination]: this.slormancerAttributeService.getAttributeTraits(Attribute.Determination, character.attributes.allocated[Attribute.Determination].rank),
-                    [Attribute.Zeal]: this.slormancerAttributeService.getAttributeTraits(Attribute.Zeal, character.attributes.allocated[Attribute.Zeal].rank),
-                    [Attribute.Willpower]: this.slormancerAttributeService.getAttributeTraits(Attribute.Willpower, character.attributes.allocated[Attribute.Willpower].rank),
-                    [Attribute.Dexterity]: this.slormancerAttributeService.getAttributeTraits(Attribute.Dexterity, character.attributes.allocated[Attribute.Dexterity].rank),
-                    [Attribute.Bravery]: this.slormancerAttributeService.getAttributeTraits(Attribute.Bravery, character.attributes.allocated[Attribute.Bravery].rank),
+                    [Attribute.Toughness]: this.slormancerAttributeService.getAttributeTraits(Attribute.Toughness, character.attributes.allocated[Attribute.Toughness].baseRank),
+                    [Attribute.Savagery]: this.slormancerAttributeService.getAttributeTraits(Attribute.Savagery, character.attributes.allocated[Attribute.Savagery].baseRank),
+                    [Attribute.Fury]: this.slormancerAttributeService.getAttributeTraits(Attribute.Fury, character.attributes.allocated[Attribute.Fury].baseRank),
+                    [Attribute.Determination]: this.slormancerAttributeService.getAttributeTraits(Attribute.Determination, character.attributes.allocated[Attribute.Determination].baseRank),
+                    [Attribute.Zeal]: this.slormancerAttributeService.getAttributeTraits(Attribute.Zeal, character.attributes.allocated[Attribute.Zeal].baseRank),
+                    [Attribute.Willpower]: this.slormancerAttributeService.getAttributeTraits(Attribute.Willpower, character.attributes.allocated[Attribute.Willpower].baseRank),
+                    [Attribute.Dexterity]: this.slormancerAttributeService.getAttributeTraits(Attribute.Dexterity, character.attributes.allocated[Attribute.Dexterity].baseRank),
+                    [Attribute.Bravery]: this.slormancerAttributeService.getAttributeTraits(Attribute.Bravery, character.attributes.allocated[Attribute.Bravery].baseRank),
                 }},
                 
         
@@ -385,7 +385,8 @@ export class SlormancerCharacterBuilderService {
             valueOrDefault(auras[0], -1),
             valueOrDefault(auras[1], -1),
             valueOrDefault(auras[2], -1),
-            valueOrDefault(auras[3], -1)
+            valueOrDefault(auras[3], -1),
+            false
             );
 
         const time = new Date().getTime() - start;
@@ -432,7 +433,8 @@ export class SlormancerCharacterBuilderService {
                         activable1: null | number = null,
                         activable2: null | number = null,
                         activable3: null | number = null,
-                        activable4: null | number = null
+                        activable4: null | number = null,
+                        fromCorrupted: boolean = false
                         ): Character {
         const skills = this.getSkills(heroClass, skillEquipped, skillRanks);
 
@@ -448,6 +450,7 @@ export class SlormancerCharacterBuilderService {
             level,
             name: '',
             fullName: '',
+            fromCorrupted,
             issues: [],
         
             reaper,
