@@ -12,6 +12,11 @@ function getFirstStat(stats: ExtractedStatMap, stat: string, defaultValue: numbe
     return found ? valueOrDefault(found[0]?.value, defaultValue) : defaultValue;
 }
 
+
+function getMaxStacks(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
+    return getFirstStat(stats, stat, defaultValue) + getFirstStat(stats, 'increased_max_stacks', 0);
+}
+
 function getMaxStat(stats: ExtractedStatMap, stat: string): number {
     return Math.max(0, ...valueOrDefault(stats[stat]?.map(v => v.value), []));
 }
@@ -222,7 +227,7 @@ export const AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
         flat: [
             { stat: 'aoe_increased_size_percent' },
             { stat: 'max_charged_aoe_increased_size_percent', condition: config => config.rift_nova_fully_charged },
-            { stat: 'arcane_breach_collision_stack_aoe_increased_size_percent', condition: config => config.arcane_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_breach_collision_stacks, getFirstStat(stats, 'breach_collision_max_stacks')) }
+            { stat: 'arcane_breach_collision_stack_aoe_increased_size_percent', condition: config => config.arcane_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) }
         ],
         max: [],
         percent: [],
@@ -241,7 +246,7 @@ export const MIN_BASIC_DAMAGE: MergedStatMapping = {
     source: {
         flat: [
             { stat: 'min_basic_damage_add' },
-            { stat: 'merchant_stack_min_basic_damage_add', condition: config => config.merchant_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'merchant_stack_max_stack', 0), config.merchant_stacks) }
+            { stat: 'merchant_stack_min_basic_damage_add', condition: config => config.merchant_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'merchant_stack_max_stack', 0), config.merchant_stacks) }
         ],
         max: [],
         percent: [
@@ -270,7 +275,7 @@ export const MAX_MANA_MAPPING: MergedStatMapping = {
         max: [],
         percent: [
             { stat: 'the_max_mana_percent' },
-            { stat: 'chrono_manamorphosis_stack_the_max_mana_percent', condition: config => config.chrono_manamorphosis_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_manamorphosis_stacks, getFirstStat(stats, 'chrono_manamorphosis_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
+            { stat: 'chrono_manamorphosis_stack_the_max_mana_percent', condition: config => config.chrono_manamorphosis_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_manamorphosis_stacks, getMaxStacks(stats, 'chrono_manamorphosis_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
             { stat: 'the_max_mana_percent_per_enemy_in_breach_range', condition: config => config.enemies_in_breach_range > 0, multiplier: config => config.enemies_in_breach_range },
         ],
         maxPercent: [],
@@ -290,7 +295,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'effect_rune_increased_effect' },
                 { 
                     stat: 'effect_rune_increased_effect_per_effective_rune_stack',
-                    multiplier: (config, stats) => Math.min(config.effective_rune_stacks, getFirstStat(stats, 'effect_rune_increased_effect_per_effective_rune_stack_max')),
+                    multiplier: (config, stats) => Math.min(config.effective_rune_stacks, getMaxStacks(stats, 'effect_rune_increased_effect_per_effective_rune_stack_max')),
                     condition: (config) => config.effective_rune_stacks > 0
                 }
             ],
@@ -407,7 +412,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     condition: (config, stats) => config.totems_under_control > 0 && stats['the_max_health_set'] === undefined,
                     multiplier: config => config.totems_under_control
                 },
-                { stat: 'vitality_stack_the_max_health_percent', condition: config => config.vitality_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'vitality_max_stack'), config.vitality_stacks) },
+                { stat: 'vitality_stack_the_max_health_percent', condition: config => config.vitality_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'vitality_max_stack'), config.vitality_stacks) },
             ],
             maxPercent: [],
             multiplier: [{ stat: 'the_max_health_global_mult', condition: (_, stats) => stats['the_max_health_set'] === undefined }],
@@ -575,9 +580,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'assassin_haste_buff_movement_speed', condition: config => config.has_assassin_haste_buff },
                 { stat: 'tormented_movement_speed', condition: config => config.serenity === 0 },
                 { stat: 'movement_speed_after_trap_triggered', condition: config => config.trap_triggered_recently },
-                { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
+                { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },
-                { stat: 'cleansing_surge_stack_movement_speed_percent', condition: config => config.cleansing_surge_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'cleansing_surge_max_stacks'), config.cleansing_surge_stacks) },
+                { stat: 'cleansing_surge_stack_movement_speed_percent', condition: config => config.cleansing_surge_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'cleansing_surge_max_stacks'), config.cleansing_surge_stacks) },
 
             ],
             maxPercent: [],
@@ -627,18 +632,18 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'cooldown_reduction_global_mult' },
                 { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
                 { stat: 'self_control_cooldown_reduction_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
-                { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, multiplier: (config, stats) => Math.min(config.delightful_rain_stacks, getFirstStat(stats, 'delightful_rain_max_stacks')) },
+                { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, multiplier: (config, stats) => Math.min(config.delightful_rain_stacks, getMaxStacks(stats, 'delightful_rain_max_stacks')) },
                 { stat: 'exhilerating_senses_stack_cooldown_reduction_global_mult', condition: config => config.exhilerating_senses_stacks > 0, multiplier: config => config.exhilerating_senses_stacks },
                 { stat: 'banner_haste_buff_cooldown_reduction_global_mult', condition: config => config.has_banner_haste_buff },
-                { stat: 'frenzy_stack_cooldown_reduction_global_mult', condition: config => config.frenzy_stacks > 0, multiplier: (config, stats) => Math.min(config.frenzy_stacks, getFirstStat(stats, 'frenzy_max_stacks')) },
+                { stat: 'frenzy_stack_cooldown_reduction_global_mult', condition: config => config.frenzy_stacks > 0, multiplier: (config, stats) => Math.min(config.frenzy_stacks, getMaxStacks(stats, 'frenzy_max_stacks')) },
                 { stat: 'arcane_clone_cooldown_reduction_global_mult', condition: (_, stats) => hasStat(stats, 'cast_by_clone' )},
                 { stat: 'arcane_clone_cooldown_reduction_global_mult_if_in_breach', condition: (config, stats) => hasStat(stats, 'cast_by_clone') && config.clone_is_in_breach_range },
-                { stat: 'chrono_speed_stack_cooldown_reduction_global_mult', condition: config => config.chrono_speed_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_speed_stacks, getFirstStat(stats, 'chrono_speed_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
-                { stat: 'arcane_flux_stack_cooldown_reduction_global_mult', condition: config => config.arcane_flux_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_flux_stacks, getFirstStat(stats, 'arcane_flux_max_stacks')) },
+                { stat: 'chrono_speed_stack_cooldown_reduction_global_mult', condition: config => config.chrono_speed_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_speed_stacks, getMaxStacks(stats, 'chrono_speed_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
+                { stat: 'arcane_flux_stack_cooldown_reduction_global_mult', condition: config => config.arcane_flux_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_flux_stacks, getMaxStacks(stats, 'arcane_flux_max_stacks')) },
                 { stat: 'cooldown_reduction_global_mult_per_enfeeble_in_radius', condition: config => config.enfeeble_stacks_in_radius > 0, multiplier: config => config.enfeeble_stacks_in_radius },
                 { stat: 'booster_max_cooldown_reduction_global_mult', condition: config => config.has_booster_max_buff },
                 { stat: 'shadow_bargain_cooldown_reduction_global_mult', condition: config => config.has_shadow_bargain_buff },
-                { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getFirstStat(stats, 'aurelon_bargain_max_stacks')) },
+                { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
                 { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
             ],
             maxMultiplier: [],
@@ -696,7 +701,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'ancestral_fervor_buff_crit_chance_percent', condition: config => config.has_ancestral_fervor_buff },
                 { stat: 'nimble_buff_crit_chance_percent',
                     condition: config => config.has_nimble_buff, 
-                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 { stat: 'last_cast_tormented_crit_chance_percent', condition: config => config.last_cast_tormented },
                 { stat: 'smoke_screen_buff_crit_chance_percent', condition: config => config.has_smoke_screen_buff },
@@ -733,7 +738,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'crit_damage_percent_for_each_ennemy', condition: config => config.ennemies_in_radius > 0, multiplier: config => config.ennemies_in_radius },
                 { stat: 'nimble_buff_crit_damage_percent',
                     condition: config => config.has_nimble_buff, 
-                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 { stat: 'ancestral_instability_crit_damage_percent',
                     condition: config => config.has_ancestral_instability_buff, 
@@ -765,7 +770,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 },
                 { stat: 'nimble_buff_brut_chance_percent',
                     condition: config => config.has_nimble_buff, 
-                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 {
                     stat: 'ancestral_stab_slash_buff_brut_chance_percent',
@@ -790,7 +795,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'brut_damage_percent' },
                 { stat: 'nimble_buff_brut_damage_percent',
                     condition: config => config.has_nimble_buff, 
-                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 { stat: 'ancestral_instability_brut_damage_percent',
                     condition: config => config.has_ancestral_instability_buff, 
@@ -864,7 +869,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { 
                     stat: 'apex_predator_stack_increased_damage_on_elite_percent',
                     condition: config => config.apex_predator_stacks > 0,
-                    multiplier: (config, stats) => Math.min(config.apex_predator_stacks, valueOrDefault(getFirstStat(stats, 'apex_predator_max_stacks'), 0))
+                    multiplier: (config, stats) => Math.min(config.apex_predator_stacks, valueOrDefault(getMaxStacks(stats, 'apex_predator_max_stacks'), 0))
                 }
                  
             ],
@@ -886,9 +891,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [
                 { stat: 'res_phy_percent' },
                 { stat: 'res_phy_percent_per_banner', condition: config => config.banners_nearby > 0, multiplier: config => config.banners_nearby },
-                { stat: 'oak_bark_armor_stack_res_phy_percent', condition: config => config.oak_bark_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.oak_bark_armor_stacks, getFirstStat(stats, 'oak_bark_armor_max_stack')) },
+                { stat: 'oak_bark_armor_stack_res_phy_percent', condition: config => config.oak_bark_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.oak_bark_armor_stacks, getMaxStacks(stats, 'oak_bark_armor_max_stack')) },
                 { stat: 'res_phy_percent_if_channeling_ray_of_obliteration', condition: config => config.is_channeling_ray_of_obliteration },
-                { stat: 'chrono_armor_stack_res_phy_percent', condition: config => config.chrono_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_armor_stacks, getFirstStat(stats, 'chrono_armor_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
+                { stat: 'chrono_armor_stack_res_phy_percent', condition: config => config.chrono_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_armor_stacks, getMaxStacks(stats, 'chrono_armor_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
                 { stat: 'shadow_shield_armor_percent', condition: config => config.has_shadow_shield_buff },
                 { stat: 'frostfire_armor_res_phy_percent', condition: config => config.has_frostfire_buff },
             ],
@@ -1121,7 +1126,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     multiplier: (config, stats) => Math.min(config.hits_taken_recently, getFirstStat(stats, 'reduced_damage_from_all_percent_after_hit_taken_max_stack', 0))
                 },
                 { stat: 'golden_buff_reduced_damage_from_all_percent', condition: config => config.has_gold_armor_buff },
-                { stat: 'stability_stack_reduced_on_all', condition: config => config.stability_stacks > 0, multiplier: (config, stats) => Math.min(config.stability_stacks, getFirstStat(stats, 'stability_max_stacks', 0)) }
+                { stat: 'stability_stack_reduced_on_all', condition: config => config.stability_stacks > 0, multiplier: (config, stats) => Math.min(config.stability_stacks, getMaxStacks(stats, 'stability_max_stacks', 0)) }
             ],
             max: [],
             percent: [],
@@ -1323,7 +1328,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'inner_fire_max_number_add' },
                 { stat: 'inner_fire_max_number_add_extra', extra: true },
-                { stat: 'conquest_stack_inner_fire_max_number_add', condition: config => config.conquest_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'conquest_max_stacks', 0), config.conquest_stacks) }
+                { stat: 'conquest_stack_inner_fire_max_number_add', condition: config => config.conquest_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'conquest_max_stacks', 0), config.conquest_stacks) }
             ],
             max: [],
             percent: [{ stat: 'inner_fire_max_number_percent' }],
@@ -1354,7 +1359,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'inner_fire_damage_add' },
-                { stat: 'overdrive_inner_fire_additional_damage' },
+                { stat: 'overdrive_inner_fire_additional_damage_when_triggered_by_book_smash', extra: true, condition: config => config.is_triggered_by_book_smash },
                 { stat: 'inner_fire_damage_add_extra', extra: true },
                 { stat: 'elder_inner_fire_damage_add_extra', extra: true, condition: config => config.show_elder_inner_fire_damage },
             ],
@@ -1367,7 +1372,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxPercent: [],
             multiplier: [
                 { stat: 'inner_fire_damage_mult_if_channeling_whirlwind', condition: (config, stats) => config.is_channeling_whirlwind && !hasStat(stats, 'no_longer_cost_per_second') },
-                { stat: 'inner_weakness_increased_damage', condition: config => config.use_enemy_state && config.enemy_inner_weakness_stacks > 0 , multiplier: (config, stats) => Math.min(config.enemy_inner_weakness_stacks, getFirstStat(stats, 'inner_weakness_max_stacks')) }
+                { stat: 'inner_weakness_increased_damage', condition: config => config.use_enemy_state && config.enemy_inner_weakness_stacks > 0 , multiplier: (config, stats) => Math.min(config.enemy_inner_weakness_stacks, getMaxStacks(stats, 'inner_weakness_max_stacks')) }
             ],
             maxMultiplier: [],
         } 
@@ -1434,7 +1439,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'overdrive_damage_add' },
-                { stat: 'overdrive_inner_fire_additional_damage' },
+                { stat: 'overdrive_inner_fire_additional_damage_when_triggered_by_book_smash', extra: true, condition: config => config.is_triggered_by_book_smash },
             ],
             max: [],
             percent: [{ stat: 'overdrive_damage_percent' }],
@@ -1495,7 +1500,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'tormented_additional_projectile_add', condition: config => config.serenity === 0 },
                 { stat: 'perfect_additional_projectile_add', condition: config => config.next_cast_is_perfect },
                 { stat: 'additional_projectile_add_if_next_cast_is_new_emblem', condition: (config, stats) => config.next_cast_is_new_emblem && hasStat(stats, 'skill_is_projectile') },
-                { stat: 'arcane_stack_additional_projectile_add', condition: config => config.arcane_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_stacks, getFirstStat(stats, 'arcane_max_stacks')) },
+                { stat: 'arcane_stack_additional_projectile_add', condition: config => config.arcane_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_stacks, getMaxStacks(stats, 'arcane_max_stacks')) },
             ],
             max: [],
             percent: [{ stat: 'additional_projectile_percent' }],
@@ -1607,7 +1612,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'totem_increased_effect_percent' },
-                { stat: 'totem_dexterity_totem_increased_effect_percent', condition: config => config.totem_dexterity_stacks > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'totem_dexterity_max_stack', 0), config.totem_dexterity_stacks) }
+                { stat: 'totem_dexterity_totem_increased_effect_percent', condition: config => config.totem_dexterity_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'totem_dexterity_max_stack', 0), config.totem_dexterity_stacks) }
             ],
             max: [],
             percent: [],
@@ -1687,8 +1692,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'elemental_temper_buff_elemental_damage_percent', condition: config => config.has_elemental_temper_buff },
                 { stat: 'aura_elemental_swap_elemental_damage_percent' },
                 { stat: 'elemental_damage_percent_for_each_negative_effect_on_ennemies', condition: config => config.negative_effects_on_ennemies_in_radius > 0, multiplier: config => config.negative_effects_on_ennemies_in_radius },
-                { stat: 'invigorate_stack_elemental_damage_percent', condition: config => config.invigorate_stacks > 0, multiplier: (config, stats) => Math.min(config.invigorate_stacks, getFirstStat(stats, 'invigorate_max_stacks'))},
-                { stat: 'elemental_spirit_stack_elemental_damage_percent', condition: config => config.elemental_spirit_stacks > 0, multiplier: (config, stats) => Math.min(config.elemental_spirit_stacks, getFirstStat(stats, 'elemental_spirit_max_stacks'))},
+                { stat: 'invigorate_stack_elemental_damage_percent', condition: config => config.invigorate_stacks > 0, multiplier: (config, stats) => Math.min(config.invigorate_stacks, getMaxStacks(stats, 'invigorate_max_stacks'))},
+                { stat: 'elemental_spirit_stack_elemental_damage_percent', condition: config => config.elemental_spirit_stacks > 0, multiplier: (config, stats) => Math.min(config.elemental_spirit_stacks, getMaxStacks(stats, 'elemental_spirit_max_stacks'))},
                 { stat: 'elemental_damage_percent_per_active_aura', condition: (config, stats) => getFirstStat(stats, 'active_aura_count') > 0, multiplier: (config, stats) => getFirstStat(stats, 'active_aura_count') },
                 { stat: 'booster_max_elemental_damage_percent', condition: config => config.has_booster_max_buff },
             ],
@@ -1827,7 +1832,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'nimble_buff_primary_skill_increased_damages',
                     condition: (config, stats) => config.has_nimble_buff && hasStat(stats, 'skill_is_equipped_primary'), 
-                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                    multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 { stat: 'increased_damage_for_each_yard_with_target', condition: config => config.use_enemy_state && config.distance_with_target > 0, multiplier:  config => config.distance_with_target },
                 { stat: 'exposed_armor_primary_secondary_skill_increased_damage_mult', condition: (config, stats) => config.exposed_armor_buff && (hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary')) },
@@ -1848,7 +1853,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'increased_damage_mult' },
                 { stat: 'decreased_damage', multiplier: () => -1 },
                 { stat: 'increased_damage_per_volley_before', condition: config => config.is_last_volley, multiplier: (_, stats) => getFirstStat(stats, 'additional_volleys') },
-                { stat: 'latent_storm_stack_increased_damage', condition: config => config.target_latent_storm_stacks > 0, multiplier: (config, stats) => Math.min(config.target_latent_storm_stacks, getFirstStat(stats, 'latent_storm_max_stacks')) },
+                { stat: 'latent_storm_stack_increased_damage', condition: config => config.target_latent_storm_stacks > 0, multiplier: (config, stats) => Math.min(config.target_latent_storm_stacks, getMaxStacks(stats, 'latent_storm_max_stacks')) },
                 { stat: 'increased_damage_mult_if_fully_charged', condition: (config, stats) => config.void_arrow_fully_charged && hasStat(stats, 'max_charge'), multiplier: (_, stats) => getMaxStat(stats, 'max_charge') },
                 { stat: 'increased_damage_mult_per_target_left_health_percent', condition: config => config.use_enemy_state && config.enemy_percent_missing_health < 100, multiplier: config => 100 - config.enemy_percent_missing_health },
                 { stat: 'increased_damage_mult_per_target_missing_health_percent', condition: config => config.use_enemy_state && config.enemy_percent_missing_health > 0, multiplier: config => config.enemy_percent_missing_health },
@@ -1857,7 +1862,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'chivalry_low_life_reduced_damage', condition: (config, stats) => config.use_enemy_state && getFirstStat(stats, 'chivalry_low_life_treshold') > (100 - config.enemy_percent_missing_health), multiplier: () => -1 },
                 { stat: 'chivalry_high_life_increased_damage', condition: (config, stats) => config.use_enemy_state && getFirstStat(stats, 'chivalry_high_life_treshold') < (100 - config.enemy_percent_missing_health) },
                 { stat: 'increased_damage_mult_if_no_legendaries', condition: (_, stats) => getFirstStat(stats, 'number_equipped_legendaries') === 0 },
-                { stat: 'increased_damage_mult_on_splintered_enemy', condition: config => config.enemy_splintered_stacks > 0, multiplier: (config, stats) => 1 + Math.max(0, Math.min(config.enemy_splintered_stacks, getFirstStat(stats, 'splintered_max_stacks', 1)) - 1) * getFirstStat(stats, 'splintered_stack_increased_effect') / 100 },
+                { stat: 'increased_damage_mult_on_splintered_enemy', condition: config => config.enemy_splintered_stacks > 0, multiplier: (config, stats) => 1 + Math.max(0, Math.min(config.enemy_splintered_stacks, getMaxStacks(stats, 'splintered_max_stacks', 1)) - 1) * getFirstStat(stats, 'splintered_stack_increased_effect') / 100 },
                 { stat: 'increased_damage_if_fortunate_or_perfect', condition: config => config.next_cast_is_fortunate || config.next_cast_is_perfect },
                 { stat: 'increased_damage_mult_if_target_is_time_locked', condition: config => config.target_is_time_locked },
                 { stat: 'remnant_damage_reduction_mult', condition: config => config.is_remnant },
@@ -1868,7 +1873,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { 
                     stat: 'enfeeble_stack_increased_damage',
                     condition: config => config.enemy_enfeeble_stacks > 0 && config.use_enemy_state,
-                    multiplier: (config, stats) => Math.min(config.enemy_enfeeble_stacks, valueOrDefault(getFirstStat(stats, 'enfeeble_max_stacks'), 0))
+                    multiplier: (config, stats) => Math.min(config.enemy_enfeeble_stacks, valueOrDefault(getMaxStacks(stats, 'enfeeble_max_stacks'), 0))
                 }
             ],
             maxMultiplier: [
@@ -1901,7 +1906,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'skill_melee_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_melee') },
                 { stat: 'skill_projectile_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_projectile') },
                 { stat: 'skill_aoe_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_aoe') },
-                { stat: 'skill_increased_damage_mult_per_grow', condition: config => config.ray_of_obliteration_grow_stacks > 0, multiplier: (config, stats) => Math.min(config.ray_of_obliteration_grow_stacks, getFirstStat(stats, 'max_grow')) },
+                { stat: 'skill_increased_damage_mult_per_grow', condition: config => config.ray_of_obliteration_grow_stacks > 0, multiplier: (config, stats) => Math.min(config.ray_of_obliteration_grow_stacks, getMaxStacks(stats, 'max_grow')) },
                 { stat: 'skill_increased_damage_mult_if_short', condition: config => config.ray_of_obliteration_is_short },
                 { stat: 'high_spirit_stacks_skill_increased_damage_mult', condition: config => config.high_spirit_stacks > 0, multiplier: config => config.high_spirit_stacks },
                 { stat: 'skill_increased_damage_mult_per_non_temporal_emblem', condition: config => (config.arcanic_emblems + config.obliteration_emblems) > 0, multiplier: config => config.arcanic_emblems + config.obliteration_emblems },
@@ -1912,10 +1917,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                                 (hasStat(stats, 'chrono_puncture_is_obliteration') && (hasStat(stats, 'skill_is_temporal') || hasStat(stats, 'skill_is_arcanic') ))
                                 || (!hasStat(stats, 'chrono_puncture_is_obliteration') && (hasStat(stats, 'skill_is_obliteration') || hasStat(stats, 'skill_is_arcanic') ))
                             ),
-                    multiplier: (config, stats) => Math.min(config.chrono_empower_stacks, getFirstStat(stats, 'chrono_empower_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks'))
+                    multiplier: (config, stats) => Math.min(config.chrono_empower_stacks, getMaxStacks(stats, 'chrono_empower_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks'))
                 },
-                { stat: 'traumatized_stack_double_damages', condition: config => config.enemy_traumatized_stacks > 0, multiplier: (config, stats) => Math.pow(2, Math.min(config.enemy_traumatized_stacks, getFirstStat(stats, 'traumatized_max_stacks'))) },
-                { stat: 'obliteration_breach_stack_skill_increased_damage_mult', condition: config => config.obliteration_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.obliteration_breach_collision_stacks, getFirstStat(stats, 'breach_collision_max_stacks')) },
+                { stat: 'traumatized_stack_double_damages', condition: config => config.enemy_traumatized_stacks > 0, multiplier: (config, stats) => Math.pow(2, Math.min(config.enemy_traumatized_stacks, getMaxStacks(stats, 'traumatized_max_stacks'))) },
+                { stat: 'obliteration_breach_stack_skill_increased_damage_mult', condition: config => config.obliteration_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.obliteration_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
                 { stat: 'skill_increased_damage_mult_per_obliteration_emblem', condition: config => config.obliteration_emblems > 0, multiplier: config => config.obliteration_emblems },
                 { stat: 'orb_arcane_master_skill_decreased_damage_mult', condition: (_, stats) => !hasStat(stats, 'disable_orb_arcane_master_maluses'), multiplier: () => -1 },
                 { stat: 'skill_decreased_damage_mult_if_only_obliteration', condition: config => config.temporal_emblems === 0 && config.arcanic_emblems === 0 },
@@ -1973,7 +1978,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'skill_duration_add' },
                 { stat: 'skill_duration_reduction', multiplier: () => -1 },
                 { stat: 'skill_duration_reduction_if_tormented', condition: config => config.serenity === 0, multiplier: () => -1 },
-                { stat: 'temporal_breach_collision_stack_duration_add', condition: config => config.temporal_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.temporal_breach_collision_stacks, getFirstStat(stats, 'breach_collision_max_stacks')) },
+                { stat: 'temporal_breach_collision_stack_duration_add', condition: config => config.temporal_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.temporal_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
             ],
             max: [],
             percent: [],
@@ -2008,7 +2013,10 @@ export const HERO_MERGED_STATS_MAPPING: GameHeroesData<Array<MergedStatMapping>>
             allowMinMax: false,
             suffix: '',
             source: {
-                flat: [{ stat: 'skewer_max_stack_add' }],
+                flat: [
+                    { stat: 'skewer_max_stack_add' },
+                    { stat: 'increased_max_stacks' }
+                ],
                 max: [],
                 percent: [],
                 maxPercent: [],
@@ -2310,7 +2318,7 @@ export const SKILL_MERGED_STATS_MAPPING: GameHeroesData<{ [key: number]: Array<M
                         { stat: 'brut_damage_percent' },
                         { stat: 'nimble_buff_brut_damage_percent',
                             condition: config => config.has_nimble_buff, 
-                            multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getFirstStat(stats, 'nimble_champion_max_stacks'), 0))
+                            multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                         },
                         { stat: 'elder_lance_ancestral_damage_per_cosmic_stack', condition: config => config.cosmic_stacks > 0, multiplier: config => config.cosmic_stacks },
                     ],

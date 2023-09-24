@@ -26,6 +26,7 @@ export interface CharacterSkillAndUpgrades {
 export interface CharacterAncestralLegacies {
     ancestralLegacies: Array<AncestralLegacy>;
     activeNodes: Array<number>;
+    activeFirstNode: number | null;
     activeAncestralLegacies: Array<number>;
 }
 

@@ -589,6 +589,10 @@ export class SlormancerValueUpdaterService {
                             }
                         }
                         value.value = value.value * Math.max(0, sumMultiplier) / 100;
+
+                        if (isConsistencyIsKey) {
+                            value.value = Math.max(1, value.value);
+                        }
                     }
                 } else {
                     for (const multiplier of statMultipliers) {
@@ -810,9 +814,9 @@ export class SlormancerValueUpdaterService {
             let minimumDamage = 0;
 
             if (element === SkillElement.Lightning) {
-                damage.synergy.min = 1
+                damage.synergy.min = 1;
                 const value = statsResult.stats.find(v => v.stat === 'lightning_upper_damage_range');
-                if (value) {
+                if (value && (value.total as number) > 0) {
                     // Bug max reaper damage ignored for consistency is key
                     const splitReaperToPhysicalAndElement = statsResult.extractedStats['reaper_split_to_physical_and_element'] !== undefined
                     const addReaperToElements = statsResult.extractedStats['reaper_added_to_elements'] !== undefined

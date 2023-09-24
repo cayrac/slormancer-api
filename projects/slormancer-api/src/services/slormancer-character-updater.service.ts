@@ -456,7 +456,7 @@ export class SlormancerCharacterUpdaterService {
     }
 
     public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
-        character.ancestralLegacies.activeAncestralLegacies = this.slormancerDataService.getAncestralSkillIdFromNodes(character.ancestralLegacies.activeNodes);
+        character.ancestralLegacies.activeAncestralLegacies = this.slormancerDataService.getAncestralSkillIdFromNodes(character.ancestralLegacies.activeNodes, character.ancestralLegacies.activeFirstNode);
 
         this.removeUnavailableActivables(character);
 

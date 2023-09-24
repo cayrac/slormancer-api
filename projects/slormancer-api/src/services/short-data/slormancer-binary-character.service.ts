@@ -30,6 +30,13 @@ export class SlormancerBinaryCharacterService {
     private ancestralLegaciesToBinary(characterAncestralLegacies: CharacterAncestralLegacies): Bits {
         let result: Bits = [];
 
+        result.push(...booleanToBinary((characterAncestralLegacies.activeFirstNode !== null)));
+        if (characterAncestralLegacies.activeFirstNode !== null) {
+            result.push(...numberToBinary(characterAncestralLegacies.activeFirstNode, 10));
+        }
+
+        console.log('Pushing : ', characterAncestralLegacies.activeFirstNode !== null, characterAncestralLegacies.activeFirstNode);
+
         result.push(...numberToBinary(characterAncestralLegacies.activeNodes.length, 4));
         for (const node of characterAncestralLegacies.activeNodes) {
             result.push(...numberToBinary(node, 10));
@@ -46,8 +53,16 @@ export class SlormancerBinaryCharacterService {
         return result;
     }
 
-    private binaryToAncestralLegacies(binary: Bits): { nodes: Array<number>, ancestralLegacyLevels: Array<number> } {
-        let result: { nodes: Array<number>, ancestralLegacyLevels: Array<number> } = { nodes: [], ancestralLegacyLevels: [] };
+    private binaryToAncestralLegacies(binary: Bits, version: string): { nodes: Array<number>, ancestralLegacyLevels: Array<number>, firstNode: number | null } {
+        const hasFirstStoneData = compareVersions(version, '0.5.0') >= 0;
+        let result: { nodes: Array<number>, ancestralLegacyLevels: Array<number>, firstNode: number | null } = { nodes: [], ancestralLegacyLevels: [], firstNode: null };
+
+        if (hasFirstStoneData) {
+            if (binaryToBoolean(takeBitsChunk(binary, 1))) {
+                result.firstNode = binaryToNumber(takeBitsChunk(binary, 10));
+            }
+            console.log('Got : ', result.firstNode !== null, result.firstNode);
+        }
 
         const nodesCount = binaryToNumber(takeBitsChunk(binary, 4));
         for (let i = 0 ; i < nodesCount ; i++) {
@@ -250,7 +265,7 @@ export class SlormancerBinaryCharacterService {
 
         const runes = this.slormancerBinaryRuneService.binaryToRunesCombination(binary, heroClass, version, reaper.id);
         
-        const ancestralData = this.binaryToAncestralLegacies(binary);
+        const ancestralData = this.binaryToAncestralLegacies(binary, version);
 
         const skillsData = this.binaryToSkills(binary);
 
@@ -296,6 +311,7 @@ export class SlormancerBinaryCharacterService {
             runes,
             ultimatum,
             ancestralData.nodes,
+            ancestralData.firstNode,
             ancestralData.ancestralLegacyLevels,
             skillsData.equiped,
             skillsData.ranks,

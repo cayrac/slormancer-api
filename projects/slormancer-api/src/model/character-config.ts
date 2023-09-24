@@ -60,6 +60,7 @@ export interface CharacterConfig {
     is_channeling_arcane_barrier: boolean;
     is_channeling_ray_of_obliteration: boolean;
     is_channeling_focus: boolean;
+    is_triggered_by_book_smash: boolean;
     ray_of_obliteration_is_short: boolean;
     void_arrow_fully_charged: boolean;
     rift_nova_fully_charged: boolean;

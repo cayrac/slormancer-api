@@ -34,6 +34,17 @@ Initial release
 - Fixed an issue causing exported build with an attribute rank above 64 to have an incorrect rank
 - it is no longer possible to allocate more than 75 points into an attribute
 
+## Release 0.5.0 (2023-24-09)
+### Added
+- Increased ancestral stone max and added the first stone
+- Added a "triggered by book smash" config option for Embittered author
+## Fixes
+- Fixed Judge of Light incorrect % value
+- Fixed Ancestral Instability incorrect % value
+- Consistency is key minimum damage can no longer be below 1% of maximum
+- Elemental reward max rank is now correctly affected by Ancestral champion's present
+- Lightning minimum damage are now correctly set to 1 without Consistency is key
+
 ## TODO
 - mise à jour packages
 - parsing loadouts

@@ -3823,8 +3823,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     47: {
         masteryRequired: 3,
         override: values => {
-            setStat(values, 0, 'overdrive_inner_fire_additional_damage');
-            setAsUpgrade(values, 0);
+            setStat(values, 0, 'overdrive_inner_fire_additional_damage_when_triggered_by_book_smash');
         },
         additionalClassMechanics: []
     },

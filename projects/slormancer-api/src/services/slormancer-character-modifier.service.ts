@@ -85,9 +85,11 @@ export class SlormancerCharacterModifierService {
         let changed = false;
 
         if (character.ancestralLegacies.activeNodes.indexOf(nodeId) === -1
-            && character.ancestralLegacies.activeNodes.length < UNLOCKED_ANCESTRAL_LEGACY_POINTS
-            && this.slormancerAncestralLegacyService.isNodeConnectedTo(nodeId, character.ancestralLegacies.activeNodes)) {
+            && character.ancestralLegacies.activeNodes.length < UNLOCKED_ANCESTRAL_LEGACY_POINTS) {
             character.ancestralLegacies.activeNodes.push(nodeId);
+            changed = true;
+        } else if (character.ancestralLegacies.activeFirstNode === null) {
+            character.ancestralLegacies.activeFirstNode = nodeId;
             changed = true;
         }
 
@@ -99,6 +101,9 @@ export class SlormancerCharacterModifierService {
 
         if (character.ancestralLegacies.activeNodes.indexOf(nodeId) !== -1) {
             character.ancestralLegacies.activeNodes = this.slormancerAncestralLegacyService.getValidNodes(character.ancestralLegacies.activeNodes.filter(id => id !== nodeId));
+            changed = true;
+        } else if (character.ancestralLegacies.activeFirstNode === nodeId) {
+            character.ancestralLegacies.activeFirstNode = null;
             changed = true;
         }
 

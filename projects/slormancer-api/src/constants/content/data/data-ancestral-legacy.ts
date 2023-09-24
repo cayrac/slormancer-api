@@ -15,6 +15,19 @@ function setStat(values: Array<AbstractEffectValue>, index: number, stat: string
     }
 }
 
+function setValueToUpgrade(values: Array<AbstractEffectValue>, index: number, upgrade: number) {
+    const value = values[index]
+
+    if (value && (isEffectValueVariable(value) || isEffectValueSynergy(value))) {
+        value.baseUpgrade = value.baseValue;
+        value.baseValue = 0;
+        value.upgrade = value.baseUpgrade;
+        value.value = value.baseValue;
+    } else {
+        throw new Error('failed to change upgrade for effect value at index ' + index);
+    }
+}
+
 function addConstant(values: Array<AbstractEffectValue>, value: number, percent: boolean, valueType: EffectValueValueType, stat: string | null = null) {
     values.push(effectValueConstant(value, percent, stat, valueType))
 }
@@ -197,7 +210,7 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     54: {
         override: values => {
             setStat(values, 0, 'increased_damage_per_negative_effect');
-            addConstant(values, 100, false, EffectValueValueType.Stat, 'garbage_stat');
+            addConstant(values, 100, false, EffectValueValueType.Static, 'garbage_stat');
             addConstant(values, 3, false, EffectValueValueType.Duration, 'garbage_stat');
         }
     },
@@ -343,7 +356,7 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
         override: values => {
             setStat(values, 0, 'ancestral_instability_crit_damage_percent');
             setStat(values, 1, 'ancestral_instability_brut_damage_percent');
-            addConstant(values, 0.25, false, EffectValueValueType.Duration, 'duration');
+            addConstant(values, 25, false, EffectValueValueType.Static, 'duration');
         }
     },
     92: {
@@ -395,6 +408,7 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     114: {
         override: values => {
             synergyMultiply100(values, 0);
+            setValueToUpgrade(values, 0, 100);
         }
     }
 }

@@ -64,7 +64,6 @@ export class SlormancerDataService {
     }
 
     public getGameDataAvailableReaper(): Array<GameDataReaper> {
-        console.log(GAME_DATA);
         return GAME_DATA.REAPER.filter(stat => stat.EN_NAME !== '');
     }
 
@@ -168,10 +167,23 @@ export class SlormancerDataService {
         return gameData === null ? 0 : gameData.REALM_COLOR;
     }
 
-    public getAncestralRealmsFromNodes(nodes: Array<number>): Array<number> {
-        return ANCESTRAL_LEGACY_REALMS
+    public getAncestralRealmsFromNodes(nodes: Array<number>, firstNode: number | null): Array<number> {
+        // à bouger dans ancestral legacy service ?
+        const realms = ANCESTRAL_LEGACY_REALMS
             .filter(realms => realms.nodes.find(node => nodes.indexOf(node) !== -1) !== undefined)
             .map(zone => zone.realm);
+        
+        if (firstNode !== null) {
+            const firstRealms = ANCESTRAL_LEGACY_REALMS
+                .filter(realms => realms.nodes.includes(firstNode));
+            const highestRealm = firstRealms.find(realm => firstRealms.some(frealm => frealm.realm < realm.realm))
+
+            if (highestRealm !== undefined) {
+                realms.push(highestRealm.realm);
+            }
+        }
+
+        return realms;
     }
 
     public getAncestralLegacyIdsFromRealm(realm: number): Array<number> {
@@ -180,8 +192,8 @@ export class SlormancerDataService {
             .map(ancestralLegacy => ancestralLegacy.REF);
     }
     
-    public getAncestralSkillIdFromNodes(nodes: Array<number>): Array<number> {
-        const realms = this.getAncestralRealmsFromNodes(nodes);
+    public getAncestralSkillIdFromNodes(nodes: Array<number>, firstNode: number | null): Array<number> {
+        const realms = this.getAncestralRealmsFromNodes(nodes, firstNode);
 
         return GAME_DATA.ANCESTRAL_LEGACY
             .filter(ancestralLegacy => realms.indexOf(ancestralLegacy.REALM) !== -1)

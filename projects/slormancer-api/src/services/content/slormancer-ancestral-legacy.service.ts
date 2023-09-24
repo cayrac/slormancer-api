@@ -196,10 +196,9 @@ export class SlormancerAncestralLegacyService {
     }
 
     public updateAncestralLegacyModel(ancestralLegacy: AncestralLegacy, baseRank: number, bonusRank: number = ancestralLegacy.bonusRank) {
-        const applyBonus = ancestralLegacy.baseMaxRank > 1 && ancestralLegacy.types.includes(AncestralLegacyType.Stat);
+        const applyBonus = ancestralLegacy.types.includes(AncestralLegacyType.Stat);
         ancestralLegacy.baseRank = Math.min(ancestralLegacy.baseMaxRank, Math.max(0, baseRank));
         ancestralLegacy.bonusRank = Math.max(0, bonusRank);
-        
         ancestralLegacy.rank = ancestralLegacy.baseRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
         ancestralLegacy.maxRank = ancestralLegacy.baseMaxRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
 
@@ -250,14 +249,6 @@ export class SlormancerAncestralLegacyService {
         
         const descriptionPrefix = this.isActivable(ancestralLegacy.types) ? this.slormancerTranslateService.translate(this.ACTIVE_PREFIX) + '<br/>' : '';
         ancestralLegacy.description = descriptionPrefix + this.slormancerTemplateService.formatAncestralLegacyDescription(ancestralLegacy.template, ancestralLegacy.values);
-    }
-
-    public isNodeConnectedTo(node: number, nodes: Array<number>): boolean {
-        const connectedNodes = nodes.map(node => ANCESTRAL_LEGACY_REALMS.filter(realm => realm.nodes.indexOf(node) !== -1))
-            .flat()
-            .map(realm => realm.nodes)
-            .flat();
-        return connectedNodes.indexOf(node) !== -1 || INITIAL_NODES.indexOf(node) !== -1;
     }
 
     public getValidNodes(nodes: Array<number>): Array<number> {
