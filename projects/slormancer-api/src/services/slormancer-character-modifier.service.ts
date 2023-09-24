@@ -88,7 +88,15 @@ export class SlormancerCharacterModifierService {
             && character.ancestralLegacies.activeNodes.length < UNLOCKED_ANCESTRAL_LEGACY_POINTS) {
             character.ancestralLegacies.activeNodes.push(nodeId);
             changed = true;
-        } else if (character.ancestralLegacies.activeFirstNode === null) {
+        }
+
+        return changed;
+    }
+
+    public activateFirstAncestralLegacyNode(character: Character, nodeId: number): boolean {
+        let changed = false;
+
+        if (character.ancestralLegacies.activeFirstNode === null) {
             character.ancestralLegacies.activeFirstNode = nodeId;
             changed = true;
         }

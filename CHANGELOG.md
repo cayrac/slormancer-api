@@ -45,6 +45,10 @@ Initial release
 - Elemental reward max rank is now correctly affected by Ancestral champion's present
 - Lightning minimum damage are now correctly set to 1 without Consistency is key
 
+## Release 0.5.1 (2023-24-09)
+## Fixes
+- Fixed an issue when adding the first stone while not all ancestral nodes are present
+
 ## TODO
 - mise à jour packages
 - parsing loadouts

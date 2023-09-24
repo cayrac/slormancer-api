@@ -40,7 +40,7 @@ export const ARCANE_BOND_DURATION = 7;
 export const TIME_LOCK_DURATION = 3;
 
 export const GAME_VERSION = '0.7.0g';
-export const API_VERSION = '0.5.0';
+export const API_VERSION = '0.5.1';
 
 export const API_TO_GAME_VERSION_MAPPER: { [key: string]: string } = {
     '0.0.9': '0.3.015',
@@ -63,4 +63,5 @@ export const API_TO_GAME_VERSION_MAPPER: { [key: string]: string } = {
     '0.4.0': '0.6.5l',
     '0.4.1': '0.6.5n',
     '0.5.0': '0.7.0g',
+    '0.5.1': '0.7.0g',
 }

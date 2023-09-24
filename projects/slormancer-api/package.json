@@ -1,6 +1,6 @@
 {
   "name": "slormancer-api",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A Slormancer api to parse saves",
   "keywords": ["slormancer"],
   "author": "cayrac",
