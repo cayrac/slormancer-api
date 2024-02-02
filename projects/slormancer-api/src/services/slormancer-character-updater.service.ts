@@ -142,7 +142,14 @@ export class SlormancerCharacterUpdaterService {
         }
 
         for (const skill of character.skills) {
-            const bonus = valueOrDefault(skillBonuses[skill.skill.id], 0);
+            let bonus = valueOrDefault(skillBonuses[skill.skill.id], 0);
+
+            if (character.primarySkill === skill.skill && [7, 8, 9].includes(character.reaper.id)) {
+                bonus += character.reaper.templates.base.map(effect => effect.values).flat()
+                    .filter(value => value.stat === 'primary_skill_level_bonus')
+                    .reduce((total, value) => total + value.value, 0);
+            }
+
             if (skill.skill.bonusLevel !== bonus) {
                 skill.skill.bonusLevel = bonus;
                 this.slormancerSkillService.updateSkillModel(skill.skill);

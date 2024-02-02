@@ -138,7 +138,21 @@ function setSynergyAllowMinMax(effect: ReaperEffect | null, index: number, allow
             throw new Error('failed to update allowMinMax at index ' + index);
         }
     } else {
-        throw new Error('failed to duplicate variable at index ' + index);
+        throw new Error('failed to update allowMinMax at index ' + index);
+    }
+}
+
+function setSynergyDetailOnSynergy(effect: ReaperEffect | null, index: number, detailOnSynergy: boolean) {
+    if (effect !== null) {
+        const value = effect.values[index];
+    
+        if (value && isEffectValueSynergy(value)) {
+            value.detailOnSynergy = detailOnSynergy;
+        } else {
+            throw new Error('failed to update detailOnSynergy at index ' + index);
+        }
+    } else {
+        throw new Error('failed to update detailOnSynergy at index ' + index);
     }
 }
 
@@ -209,6 +223,34 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             synergyMultiply100(be, 1);
             addConstant(ba, 1, false, EffectValueValueType.Stat, 'skill_damage_lucky');
             addConstant(ma, 1, false, EffectValueValueType.Stat, 'cannot_imbue_skills');
+        }
+    },
+    7: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'primary_skill_level_bonus');
+            addConstant(be, 1, false, EffectValueValueType.Stat, 'all_masteries_accross_characters');
+        }
+    },
+    8: {
+        override: (ba, be, ma) => {
+            if (ba !== null) {
+                overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, ba.values[0]?.stat ?? null);
+                overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, ba.values[1]?.stat ?? null);
+                setSynergyDetailOnSynergy(ba, 2, false);
+                setSynergyDetailOnSynergy(ba, 3, false);
+                overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+                overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            }
+        }
+    },
+    9: {
+        override: (ba, be, ma) => {
+            if (ba !== null) {   
+                overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+                overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+                overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'every_3_cast_primary_skill_increased_damage');
+                setSynergyDetailOnSynergy(ba, 2, false);
+            }
         }
     },
     22: {

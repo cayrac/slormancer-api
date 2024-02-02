@@ -2003,6 +2003,23 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxMultiplier: [],
         } 
     },
+    {
+        stat: 'all_masteries',
+        precision: 1,
+        allowMinMax: false,
+        suffix: '',
+        source: {
+            flat: [
+                { stat: 'all_character_masteries' },
+                { stat: 'all_masteries_accross_characters', multiplier: config => config.other_characters_mastery_total }
+            ],
+            max: [],
+            percent: [],
+            maxPercent: [],
+            multiplier: [],
+            maxMultiplier: [],
+        } 
+    },
 ];
 
 export const HERO_MERGED_STATS_MAPPING: GameHeroesData<Array<MergedStatMapping>> = {

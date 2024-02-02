@@ -185,6 +185,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     in_combat: false,
     is_rune_active: false,
     effect_rune_affinity: 100,
+    other_characters_mastery_total: 10 * 15,
 }
 
 export const COMBAT_CONFIG: CharacterConfig = {
@@ -370,4 +371,5 @@ export const COMBAT_CONFIG: CharacterConfig = {
     in_combat: true,
     is_rune_active: true,
     effect_rune_affinity: 100,
+    other_characters_mastery_total: 10 * 15,
 }

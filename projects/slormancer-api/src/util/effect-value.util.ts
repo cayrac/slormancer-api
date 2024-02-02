@@ -32,7 +32,7 @@ export function effectValueVariable(value: number, upgrade: number, upgradeType:
     } as EffectValueVariable;
 }
 
-export function effectValueSynergy(value: number, upgrade: number, upgradeType: EffectValueUpgradeType, percent: boolean, source: string, stat: string | null = null, valueType: EffectValueValueType = EffectValueValueType.Unknown, max?: number, precision: number | null = null, allowMinMax: boolean = true): EffectValueSynergy {
+export function effectValueSynergy(value: number, upgrade: number, upgradeType: EffectValueUpgradeType, percent: boolean, source: string, stat: string | null = null, valueType: EffectValueValueType = EffectValueValueType.Unknown, max?: number, precision: number | null = null, allowMinMax: boolean = true, detailOnSynergy: boolean = true): EffectValueSynergy {
     return {
         type: EffectValueType.Synergy,
         valueType,
@@ -51,5 +51,6 @@ export function effectValueSynergy(value: number, upgrade: number, upgradeType: 
         displaySynergy: 0,
         precision,
         allowMinMax,
+        detailOnSynergy,
     } as EffectValueSynergy
 }

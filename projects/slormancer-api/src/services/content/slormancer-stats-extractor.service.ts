@@ -183,6 +183,12 @@ export class SlormancerStatsExtractorService {
             const maxedUpgrades = character.skills.map(skill => skill.upgrades).flat().filter(upgrade => upgrade.rank === upgrade.maxRank).length;
             this.addStat(stats.stats, 'maxed_upgrades', maxedUpgrades, { synergy: 'Number of maxed upgrades' });
         }
+        
+        const skills = [ ...character.skills ];
+        skills.pop(); // BUG : all masteries currently refer to all skills mastery except the last one
+        const allCharacterMasteries = skills.reduce((total, skill) => total + skill.skill.level, 0);
+
+        this.addStat(stats.stats, 'all_character_masteries', allCharacterMasteries, { synergy: 'Character skill masteries' });
     }
     
     private addConfigValues(character: Character, config: CharacterConfig, stats: ExtractedStats) {

@@ -127,6 +127,7 @@ export interface CharacterConfig {
     aurelon_bargain_stacks: number;
     cleansing_surge_stacks: number;
     overcharged_stacks: number;
+    indirect_defense_stacks: number;
     has_elemental_temper_buff: boolean;
     has_splash_splash_buff: boolean;
     has_soul_bound_buff: boolean;
@@ -182,5 +183,6 @@ export interface CharacterConfig {
     in_combat: boolean;
     is_rune_active: boolean;
     effect_rune_affinity: number;
+    other_characters_mastery_total: number;
 }
 

@@ -347,9 +347,11 @@ export class SlormancerTemplateService {
                     template = this.replaceAnchor(template, value, anchor);
                 }
             } else if (isEffectValueSynergy(effectValue)) {
-                const details = this.getEffectValueDetails(effectValue, false, perLevelMultiplier);
-                const synergy = this.asSpan(this.formatValue(effectValue.displaySynergy, effectValue.percent), 'value');
-                template = this.replaceAnchor(template, synergy + details, this.SYNERGY_ANCHOR);
+                let synergy = this.asSpan(this.formatValue(effectValue.displaySynergy, effectValue.percent), 'value');
+                if (effectValue.detailOnSynergy) {
+                    synergy += this.getEffectValueDetails(effectValue, false, perLevelMultiplier)
+                }
+                template = this.replaceAnchor(template, synergy, this.SYNERGY_ANCHOR);
                 template = this.replaceAnchor(template, this.slormancerTranslateService.translate(effectValue.source), this.TYPE_ANCHOR);
             }
         }
@@ -487,9 +489,14 @@ export class SlormancerTemplateService {
             
         return <[string, string, string]>splitData(template, '/')
                 .map(t => this.normalizeTemplate(t))
-                .map(t => t.replace(/\.\*(.+)/g, '.<br/><br/>$1')
-                           .replace(/\*(.+?)/g, '<br/>$1')
-                           .replace(/\*/, ''));
+                .map(t => this.replaceAll(t, /\.\*(.+)/g, '.<br/><br/>$1'))
+                .map(t => this.replaceAll(t, /\*(.+?)/g, '<br/>$1'))
+                .map(t => this.replaceAll(t, /\*/, ''));
+    }
+
+    private replaceAll(test: string, pattern: RegExp, replace: string): string {
+        const result = test.replace(pattern, replace);
+        return result === test ? result : this.replaceAll(result, pattern, replace);
     }
 
     public getReaperLoreTemplate(template: string): string {
