@@ -179,6 +179,30 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideSynergySource(ba, 2, 'xp_find');
         }
     },
+    4: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
+    5: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'increased_indirect_damage');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'indirect_crit_chance_percent');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Damage, 'indirect_crit_additional_damage');
+            setSynergyAllowMinMax(ba, 3, false);
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'indirect_defense_max_stacks');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 5, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'primary_secondary_skill_decreased_damage_mult');
+            synergyMultiply100(be, 6);
+        }
+    },
     6: {
         override: (ba, be, ma) => {
             moveValue(ba, 3, be);

@@ -49,6 +49,11 @@ Initial release
 ## Fixes
 - Fixed an issue when adding the first stone while not all ancestral nodes are present
 
+## Release 0.6.0 (TBD)
+## Fixes
+- Personal Development Magazine damage multiplier is no longer applied twice
+- Reaper primordial data are no longer lost when parsed from a save file
+
 ## TODO
 - mise à jour packages
 - parsing loadouts

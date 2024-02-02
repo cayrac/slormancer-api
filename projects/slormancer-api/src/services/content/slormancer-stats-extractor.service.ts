@@ -129,6 +129,17 @@ export class SlormancerStatsExtractorService {
             mapping = mergedStatMapping.find(m => m.stat === 'trap_damage');
             extractedStats.synergies.push(synergyResolveData(effectValueSynergy(TRAP_DAMAGE_PERCENT, 0, EffectValueUpgradeType.None, false, 'physical_damage', 'trap_damage_add'), 0, { synergy: 'Skill damage' }, [ { stat: 'trap_damage', mapping } ]));
         }
+        
+        if (character.reaper.id === 5) {
+            let indirect_defense_max_stacks = 0;
+
+            if (extractedStats.stats['indirect_defense_max_stacks'] && extractedStats.stats['indirect_defense_max_stacks'][0]) {
+                indirect_defense_max_stacks = extractedStats.stats['indirect_defense_max_stacks'][0].value;
+            }
+            
+            const indirect_defense = 100 - Math.max(Math.min(indirect_defense_max_stacks, config.indirect_defense_stacks), 0);
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(indirect_defense, 0, EffectValueUpgradeType.None, false, 'max_health', 'indirect_defense'), 0, { synergy: 'Max health' }, [ { stat: 'indirect_defense', mapping } ]));
+        }
 
         if (addReaperToInnerFire) {
             mapping = mergedStatMapping.find(m => m.stat === 'inner_fire_damage');

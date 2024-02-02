@@ -339,7 +339,7 @@ export class SlormancerReaperService {
     public getReaperFromGameWeapon(data: GameWeapon, weaponClass: HeroClass, primordial: boolean, affinity: number = 0): Reaper | null {
         const level = this.getReaperLevel(data.basic.experience);
         const levelPrimordial = this.getReaperLevel(data.primordial.experience);
-        return this.getReaperById(data.id, weaponClass, primordial, level, levelPrimordial, data.basic.kills, data.primordial.kills, affinity);
+        return this.getReaperById(data.id, weaponClass, primordial, level, 0, levelPrimordial, data.basic.kills, data.primordial.kills, affinity);
     }
 
     private getReaperEffectClone(reaperEffect: ReaperEffect): ReaperEffect {
@@ -438,7 +438,7 @@ export class SlormancerReaperService {
         let result: Reaper | null = null;
 
         if (gameData !== null) {
-            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel , baseLevelPrimordial, kills, killsPrimordial, baseAffinity, bonusAffinity);
+            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel, baseLevelPrimordial, kills, killsPrimordial, baseAffinity, bonusAffinity);
         }
 
         return result;

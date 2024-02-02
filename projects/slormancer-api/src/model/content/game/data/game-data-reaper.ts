@@ -31,6 +31,7 @@ export interface GameDataReaper {
     PT_DESC: string;
     PT_LORE: string;
     ORDER: number;
+    SPRITE: number;
     BLACKSMITH: number | null;
     CONSTANT_CHECK: string;
     VALUE_BASE: string;
@@ -47,7 +48,4 @@ export interface GameDataReaper {
     MAX_LVL: number | null;
     EVOLVE_IN: number | null;
     '100': string;
-    'AURE V2 %': string;
-    'NEW 100 WANTED': string;
-    'OLD 100': string;
 };

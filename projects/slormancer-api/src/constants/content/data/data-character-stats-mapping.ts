@@ -853,7 +853,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'dot_increased_damage_global_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1869,7 +1869,6 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'remnant_increased_damage_mult', condition: config => config.is_remnant },
                 { stat: 'remnant_vulnerability_remnant_increased_damage_mult', condition: config => config.is_remnant && config.target_has_remnant_vulnerability },
                 { stat: 'increased_damage_mult_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
-                { stat: 'increased_damage_mult_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
                 { 
                     stat: 'enfeeble_stack_increased_damage',
                     condition: config => config.enemy_enfeeble_stacks > 0 && config.use_enemy_state,
@@ -1896,6 +1895,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'skill_increased_damage_mult' },
                 { stat: 'skill_and_enemy_under_control_increased_damage_mult' },
                 { stat: 'primary_secondary_skill_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary')},
+                { stat: 'primary_secondary_skill_decreased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary'), multiplier: () => -1},
                 { stat: 'skill_increased_damage_mult_against_broken_armor', condition: config => config.use_enemy_state && config.target_has_broken_armor },
                 { stat: 'skill_increased_damage_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
                 { stat: 'skill_increased_damage_mult_per_second_while_channeling_whirlwind',

@@ -249,5 +249,10 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
         override: values => {
             overrideValueStat(values, 0, 'garbage_stat');
         }
+    },
+    29: {
+        override: values => {29
+            addConstant(values, 5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
     }
 }
