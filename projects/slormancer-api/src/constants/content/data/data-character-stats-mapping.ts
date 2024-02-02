@@ -1600,7 +1600,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [
+                { stat: 'aoe_increased_effect_global_mult' }
+            ],
             maxMultiplier: [],
         } 
     },
@@ -1873,6 +1875,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     stat: 'enfeeble_stack_increased_damage',
                     condition: config => config.enemy_enfeeble_stacks > 0 && config.use_enemy_state,
                     multiplier: (config, stats) => Math.min(config.enemy_enfeeble_stacks, valueOrDefault(getMaxStacks(stats, 'enfeeble_max_stacks'), 0))
+                },
+                {
+                    stat: 'aoe_primary_secondary_support_damage_mult',
+                    condition: (config, stats) => hasStat(stats, 'skill_is_aoe') && (hasStat(stats, 'skill_is_equipped_support') || hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary'))
                 }
             ],
             maxMultiplier: [

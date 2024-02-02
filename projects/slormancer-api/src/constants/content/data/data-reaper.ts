@@ -253,6 +253,20 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             }
         }
     },
+    10: {
+        override: (ba, be, ma) => {
+            if (ba !== null) {   
+                overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+                overrideValueTypeAndStat(ba, 5, EffectValueValueType.Damage, 'garbage_stat');
+                overrideSynergySource(ba, 6, 'aoe_increased_effect');
+                overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'area_projectile_increased_damage');
+                synergyMultiply100(ba, 6);
+
+                changeValue(ma, 0, -100);
+                overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'aoe_primary_secondary_support_damage_mult');
+            }
+        }
+    },
     22: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'aoe_increased_size_multiplier_mana_harvest');
