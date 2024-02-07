@@ -1,3 +1,4 @@
+import { HeroClass } from '../../../model';
 import { CharacterConfig } from '../../../model/character-config';
 import { ALL_SKILL_COST_TYPES, SkillCostType } from '../../../model/content/enum/skill-cost-type';
 import { SkillElement } from '../../../model/content/skill-element';
@@ -220,7 +221,7 @@ export const COOLDOWN_MAPPING: MergedStatMapping = {
 
 export const AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
     stat: 'aoe_increased_size',
-    precision: 1,
+    precision: 2,
     allowMinMax: false,
     suffix: '%',
     source: {
@@ -232,7 +233,29 @@ export const AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
         max: [],
         percent: [],
         maxPercent: [],
-        multiplier: [],
+        multiplier: [ ],
+        maxMultiplier: [],
+    } 
+}
+
+export const SKILL_AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
+    stat: 'skill_aoe_increased_size',
+    precision: 3,
+    allowMinMax: false,
+    suffix: '',
+    source: {
+        flat: [],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [
+            { stat: 'aoe_increased_size_percent_mult' },
+            {
+                stat: 'suport_streak_increased_aoe',
+                condition: (config, stats) => hasStat(stats, 'skill_is_equipped_support'),
+                multiplier: (config, stats) => 1 + (getFirstStat(stats, 'support_streak_increased_effect_per_stack', 0) * Math.max(0, Math.min(config.support_streak_stacks, getMaxStacks(stats, 'support_streak_max_stacks'))) / 100)
+            }
+        ],
         maxMultiplier: [],
     } 
 }
@@ -280,6 +303,32 @@ export const MAX_MANA_MAPPING: MergedStatMapping = {
         ],
         maxPercent: [],
         multiplier: [{ stat: 'the_max_mana_global_mult' }],
+        maxMultiplier: [],
+    } 
+}
+
+export const SKILL_ADDITIONAL_DURATION: MergedStatMapping = {
+    stat: 'skill_additional_duration',
+    precision: 2,
+    allowMinMax: false,
+    suffix: '',
+    source: {
+        flat: [
+            { stat: 'skill_duration_add' },
+            { stat: 'skill_duration_reduction', multiplier: () => -1 },
+            { stat: 'skill_duration_reduction_if_tormented', condition: config => config.serenity === 0, multiplier: () => -1 },
+            { stat: 'temporal_breach_collision_stack_duration_add', condition: config => config.temporal_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.temporal_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
+        ],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [
+            {
+                stat: 'suport_streak_increased_duration',
+                condition: (config, stats) => hasStat(stats, 'skill_is_equipped_support'),
+                multiplier: (config, stats) => 1 + (getFirstStat(stats, 'support_streak_increased_effect_per_stack', 0) * Math.max(0, Math.min(config.support_streak_stacks, getMaxStacks(stats, 'support_streak_max_stacks'))) / 100)
+            }
+        ],
         maxMultiplier: [],
     } 
 }
@@ -1879,6 +1928,11 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 {
                     stat: 'aoe_primary_secondary_support_damage_mult',
                     condition: (config, stats) => hasStat(stats, 'skill_is_aoe') && (hasStat(stats, 'skill_is_equipped_support') || hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary'))
+                },
+                {
+                    stat: 'suport_streak_increased_damage',
+                    condition: (config, stats) => hasStat(stats, 'skill_is_equipped_support') && (getFirstStat(stats, 'hero_class', 0) !== HeroClass.Warrior || getFirstStat(stats, 'skill_id', 0) !== 2) ,
+                    multiplier: (config, stats) => 1 + (getFirstStat(stats, 'support_streak_increased_effect_per_stack', 0) * Math.max(0, Math.min(config.support_streak_stacks, getMaxStacks(stats, 'support_streak_max_stacks'))) / 100)
                 }
             ],
             maxMultiplier: [
@@ -1974,25 +2028,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxMultiplier: [],
         } 
     },
-    {
-        stat: 'skill_additional_duration',
-        precision: 1,
-        allowMinMax: false,
-        suffix: '',
-        source: {
-            flat: [
-                { stat: 'skill_duration_add' },
-                { stat: 'skill_duration_reduction', multiplier: () => -1 },
-                { stat: 'skill_duration_reduction_if_tormented', condition: config => config.serenity === 0, multiplier: () => -1 },
-                { stat: 'temporal_breach_collision_stack_duration_add', condition: config => config.temporal_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.temporal_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
-            ],
-            max: [],
-            percent: [],
-            maxPercent: [],
-            multiplier: [],
-            maxMultiplier: [],
-        } 
-    },
+    SKILL_ADDITIONAL_DURATION,
+    SKILL_AOE_INCREASED_SIZE_MAPPING,
     {
         stat: 'lightning_upper_damage_range',
         precision: 1,

@@ -50,8 +50,9 @@ export class SlormancerCharacterBuilderService {
                 skill,
                 upgrades,
                 selectedUpgrades: upgrades.map(passive => passive.id).filter(id => equipped[id] === 1),
+                activeUpgrades: [],
                 stats: [],
-            }
+            } as CharacterSkillAndUpgrades
         }).filter(isNotNullOrUndefined);
     }
 
@@ -59,6 +60,7 @@ export class SlormancerCharacterBuilderService {
         return {
             skill: this.slormancerSkillService.getHeroSkillClone(skillAndUpgrades.skill),
             selectedUpgrades: [...skillAndUpgrades.selectedUpgrades],
+            activeUpgrades: [...skillAndUpgrades.activeUpgrades],
             upgrades: skillAndUpgrades.upgrades.map(upgrade => this.slormancerSkillService.getUpgradeClone(upgrade)),
             stats: [...skillAndUpgrades.stats],
         };
@@ -379,14 +381,14 @@ export class SlormancerCharacterBuilderService {
             this.getItem(valueOrNull(inventory.cape), heroClass),
             inventory.bag.map(item => this.getItem(item, heroClass)),
             this.getSharedInventory(save.shared_inventory, heroClass),
-            valueOrDefault(traits[Attribute.Toughness], 0),
-            valueOrDefault(traits[Attribute.Savagery], 0),
-            valueOrDefault(traits[Attribute.Fury], 0),
-            valueOrDefault(traits[Attribute.Determination], 0),
-            valueOrDefault(traits[Attribute.Zeal], 0),
-            valueOrDefault(traits[Attribute.Willpower], 0),
-            valueOrDefault(traits[Attribute.Dexterity], 0),
-            valueOrDefault(traits[Attribute.Bravery], 0),
+            Math.max(0, valueOrDefault(traits[Attribute.Toughness], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Savagery], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Fury], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Determination], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Zeal], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Willpower], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Dexterity], 0)),
+            Math.max(0, valueOrDefault(traits[Attribute.Bravery], 0)),
             skill_equip.indexOf(2),
             skill_equip.indexOf(3),
             skill_equip.indexOf(4),

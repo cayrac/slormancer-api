@@ -30,6 +30,7 @@ import { CharacterStatsBuildResult, SlormancerStatsService } from './content/slo
 import { SlormancerSynergyResolverService } from './content/slormancer-synergy-resolver.service';
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
+import { SkillType } from '../model';
 
 @Injectable()
 export class SlormancerCharacterUpdaterService {
@@ -462,6 +463,46 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
+    private updateActiveSkillUpgrades(character: Character) {
+        const addOtherNonEquippedSpecPassives = character.reaper.templates.benediction
+            .map(be => be.values).flat()
+            .find(value => value.stat === 'add_other_non_equipped_spec_passives') !== undefined;
+        const removeEquippedSpecPassives = character.reaper.templates.malediction
+            .map(ma => ma.values).flat()
+            .find(value => value.stat === 'remove_equipped_spec_passives') !== undefined;
+        for(const skill of character.skills) {
+            const equipped = character.supportSkill === skill.skill
+                || character.primarySkill === skill.skill
+                || character.secondarySkill === skill.skill;
+            let defaultAction = true;
+
+            skill.activeUpgrades = [];
+
+            if (skill.skill.type === SkillType.Support) {
+                if (equipped && removeEquippedSpecPassives) {
+                    console.log('removeEquippedSpecPassives');
+                    defaultAction = false;
+                    skill.activeUpgrades = skill.upgrades
+                        .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type !== SkillType.Passive)
+                        .map(upgrade => upgrade.id);
+                }
+                if (!equipped && addOtherNonEquippedSpecPassives) {
+                    console.log('addOtherNonEquippedSpecPassives');
+                    defaultAction = false;
+                    skill.activeUpgrades = skill.upgrades
+                        .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type === SkillType.Passive)
+                        .map(upgrade => upgrade.id);
+                }
+            }
+
+            if (defaultAction && equipped) {
+                skill.activeUpgrades = [ ...skill.selectedUpgrades ];
+            }
+
+            console.log('updating skill ' + skill.skill.name + ' active upgrades : ', skill.activeUpgrades.length, skill);
+        }
+    }
+
     public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
         character.ancestralLegacies.activeAncestralLegacies = this.slormancerDataService.getAncestralSkillIdFromNodes(character.ancestralLegacies.activeNodes, character.ancestralLegacies.activeFirstNode);
 
@@ -480,6 +521,8 @@ export class SlormancerCharacterUpdaterService {
             allocatedPoints = 0;
         }
         character.attributes.remainingPoints = character.attributes.maxPoints - allocatedPoints;
+
+        this.updateActiveSkillUpgrades(character);
 
         this.updateBonuses(character, config);
 

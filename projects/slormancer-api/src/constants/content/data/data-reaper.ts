@@ -267,6 +267,34 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             }
         }
     },
+    12: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'suport_streak_increased_damage');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'suport_streak_increased_aoe');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'suport_streak_increased_duration');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'support_streak_max_stacks');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'support_streak_increased_effect_per_stack');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 8, EffectValueValueType.Damage, 'garbage_stat');
+            addConstant(ba, 5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+            addConstant(be, 1, false, EffectValueValueType.Stat, 'add_other_non_equipped_spec_passives');
+            addConstant(ma, 1, false, EffectValueValueType.Stat, 'remove_equipped_spec_passives');
+        }
+    },
+    13: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
+    14: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     22: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'aoe_increased_size_multiplier_mana_harvest');

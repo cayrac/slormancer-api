@@ -50,6 +50,7 @@ interface SkillStats {
     attackSpeed: MergedStat<number>;
     increasedDamage: MergedStat<number>;
     skillIncreasedDamage: MergedStat<number>;
+    skillIncreasedAoe: MergedStat<number>;
     dotIncreasedDamage: MergedStat<number>;
     totemIncreasedEffect: MergedStat<number>;
     auraIncreasedEffect: MergedStat<number>;
@@ -186,7 +187,7 @@ export class SlormancerValueUpdaterService {
         return multipliers.filter(v => v !== 0);
     }
 
-    private getValidurationMultipliers(genres: Array<SkillGenre>, stats: SkillStats): Array<number> {
+    private getValidDurationMultipliers(genres: Array<SkillGenre>, stats: SkillStats): Array<number> {
         const multipliers: Array<number> = [];
         
         if (genres.includes(SkillGenre.Totem)) {
@@ -211,6 +212,7 @@ export class SlormancerValueUpdaterService {
             cooldown: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'cooldown_time'),
             attackSpeed: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'attack_speed'),
             skillIncreasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_increased_damages'),
+            skillIncreasedAoe: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_aoe_increased_size'),
             dotIncreasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'dot_increased_damage'),
             increasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'increased_damages'),
             totemIncreasedEffect: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'totem_increased_effect'),
@@ -610,7 +612,7 @@ export class SlormancerValueUpdaterService {
         this.updateSkillValues(skillAndUpgrades, skillStats, stats, config);
 
         // hack to add multiply and conquer bug
-        if (skillAndUpgrades.skill.heroClass === HeroClass.Huntress && skillAndUpgrades.skill.id === 5 && skillAndUpgrades.selectedUpgrades.includes(45) && skillAndUpgrades.selectedUpgrades.includes(52)) {
+        if (skillAndUpgrades.skill.heroClass === HeroClass.Huntress && skillAndUpgrades.skill.id === 5 && skillAndUpgrades.activeUpgrades.includes(45) && skillAndUpgrades.activeUpgrades.includes(52)) {
             const critChanceToRemove = <number>skillAndUpgrades.upgrades.find(u => u.id === 45)?.values[0]?.value;
             const multiplyAndConquerSynergy = <EffectValueSynergy>skillAndUpgrades.upgrades.find(u => u.id === 52)?.values[0];
 
@@ -843,10 +845,10 @@ export class SlormancerValueUpdaterService {
     }
 
     private updateDuration(duration: AbstractEffectValue, genres: Array<SkillGenre>, skillStats: SkillStats) {
-        const durationMultipliers = this.getValidurationMultipliers(genres, skillStats);
+        const durationMultipliers = this.getValidDurationMultipliers(genres, skillStats);
         duration.value = duration.baseValue;
         if (duration.stat === 'skill_duration') {
-            duration.value += skillStats.additionalDuration.total;
+            duration.value = this.slormancerMergedStatUpdaterService.applyMergedStatToValue(duration.value, skillStats.additionalDuration) as number;
         }
         for (const multiplier of durationMultipliers) {
             duration.value = duration.value * (100 + multiplier) / 100;
@@ -910,7 +912,7 @@ export class SlormancerValueUpdaterService {
 
                 if (trainingLanceAdditionalDamage && trainingLanceDamage) { // 123
                     // equivalent a simplement changer la base value et upgrade
-                    if (statsResult.extractedStats['add_twice_elder_lance_to_training_lance'] !== undefined && elderLanceDamage && skillAndUpgrades.selectedUpgrades.includes(123)) {
+                    if (statsResult.extractedStats['add_twice_elder_lance_to_training_lance'] !== undefined && elderLanceDamage && skillAndUpgrades.activeUpgrades.includes(123)) {
                         trainingLanceAdditionalDamage.total = add(trainingLanceAdditionalDamage.total, add(elderLanceDamage.synergy, elderLanceDamage.synergy));
                     }
 
@@ -964,10 +966,12 @@ export class SlormancerValueUpdaterService {
         if (skillAndUpgrades.skill.genres.includes(SkillGenre.AreaOfEffect)) {
             const aoeValues = skillAndUpgrades.skill.values.filter(value => value.valueType === EffectValueValueType.AreaOfEffect);
             if (aoeValues.length > 0) {
-                const aoeMultipliers = valueOrDefault(statsResult.extractedStats['aoe_increased_size_percent_mult'], []);
                 for (const value of aoeValues) {
+                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value : ', value.value)
                     value.value = value.baseValue * (100 + skillStats.aoeIncreasedSize.total) / 100;
-                    value.value = aoeMultipliers.reduce((t, v) => t * (100 + v.value) / 100, value.value);
+                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value aoeIncreasedSize : ', value.value)
+                    value.value = this.slormancerMergedStatUpdaterService.applyMergedStatToValue(value.value, skillStats.skillIncreasedAoe) as number;
+                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value skillIncreasedAoe : ', value.value)
                     value.displayValue = round(value.value, 2);
                 }
             }

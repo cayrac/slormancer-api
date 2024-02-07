@@ -206,6 +206,8 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'completed_achievements', config.completed_achievements, { synergy: 'Completed achievements' });
         this.addStat(stats.stats, 'knight_other_level', config.knight_other_level, { synergy: 'Maximum level of Huntress or Mage' });
         this.addStat(stats.stats, 'highest_floor', config.highest_slorm_temple_floor, { synergy: 'Highest Slorm Temple floor' });
+        this.addStat(stats.stats, 'support_streak', config.support_streak_stacks, { synergy: 'Support streak stacks' });
+        this.addStat(stats.stats, 'hero_class', character.heroClass, { synergy: 'Class id' });
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {
@@ -450,16 +452,16 @@ export class SlormancerStatsExtractorService {
             }
 
             for (const upgrade of sau.upgrades) {
-                const equipped = skillEquiped && sau.selectedUpgrades.includes(upgrade.id);
+                const upgradeActive = sau.activeUpgrades.includes(upgrade.id);
                 for (const upgradeValue of upgrade.values) {
                     if (upgradeValue.valueType !== EffectValueValueType.Upgrade) {
                         if (isEffectValueSynergy(upgradeValue)) {
-                            if (equipped && !isDamageType(upgradeValue.stat)) {
+                            if (upgradeActive && !isDamageType(upgradeValue.stat)) {
                                 stats.synergies.push(synergyResolveData(upgradeValue, upgradeValue.displaySynergy, { upgrade }, this.getSynergyStatsItWillUpdate(upgradeValue.stat, mergedStatMapping)));
                             } else {
                                 stats.isolatedSynergies.push(synergyResolveData(upgradeValue, upgradeValue.displaySynergy, { upgrade }));
                             }
-                        } else if (equipped) {
+                        } else if (upgradeActive) {
                             this.addStat(stats.stats, upgradeValue.stat, upgradeValue.value, { upgrade });
                         }
                     }
@@ -649,7 +651,7 @@ export class SlormancerStatsExtractorService {
 
     private addUpgradeValues(skillAndUpgrades: CharacterSkillAndUpgrades, extractedStats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
         for (const upgrade of skillAndUpgrades.upgrades) {
-            const equipped = skillAndUpgrades.selectedUpgrades.includes(upgrade.id);
+            const equipped = skillAndUpgrades.activeUpgrades.includes(upgrade.id);
             for (const upgradeValue of upgrade.values) {
                 if (upgradeValue.valueType === EffectValueValueType.Upgrade) {
                     if (isEffectValueSynergy(upgradeValue)) {

@@ -87,7 +87,8 @@ export class SlormancerBinaryCharacterService {
             result.push(...numberToBinary(skillInfo.skill.id, 10));
             result.push(...numberToBinary(skillInfo.skill.baseLevel, 5));
 
-            const hasPassives = skillInfo.skill.id  === support
+            const hasPassives = skillInfo.selectedUpgrades.length > 0
+                || skillInfo.skill.id  === support
                 || skillInfo.skill.id  === primary
                 || skillInfo.skill.id  === secondary;
 

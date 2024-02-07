@@ -140,7 +140,7 @@ export class SlormancerMergedStatUpdaterService {
         return total;  
     }
 
-    public updateStatTotal(stat: MergedStat) {
+    public updateStatTotal(stat: MergedStat, round: boolean = true) {
         stat.total = this.getTotal(stat);
 
         if (typeof stat.total === 'number') {
@@ -152,15 +152,32 @@ export class SlormancerMergedStatUpdaterService {
 
         if (stat.displayPrecision !== undefined) {
             if (typeof stat.total === 'number') {
-                stat.totalDisplayed = bankerRound(stat.total, stat.displayPrecision);
+                stat.totalDisplayed = round ? bankerRound(stat.total, stat.displayPrecision) : stat.total;
             } else {
                 stat.totalDisplayed =  {
-                    min: bankerRound(stat.total.min, stat.displayPrecision),
-                    max: bankerRound(stat.total.max, stat.displayPrecision),
+                    min: round ? bankerRound(stat.total.min, stat.displayPrecision) : stat.total.min,
+                    max: round ? bankerRound(stat.total.max, stat.displayPrecision) : stat.total.max,
                 }
             }
         } else {
             stat.totalDisplayed = stat.total;
         }
+    }
+
+    public applyMergedStatToValue(value: number | MinMax, stat: MergedStat) {
+        const newStat = {
+            ...stat,
+            values: {
+                ...stat.values,
+                flat: [
+                    ...stat.values.flat,
+                    { value, extra: false, source: { synergy: 'custom' } }
+                ]
+            }
+        }
+
+        this.updateStatTotal(newStat, false);
+
+        return newStat.total;
     }
 }

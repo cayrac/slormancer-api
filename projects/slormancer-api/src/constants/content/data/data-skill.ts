@@ -122,8 +122,8 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     0: {
         masteryRequired: null,
         override: values => {
-            addConstant(values, 8, false, EffectValueValueType.Duration, 'banner_duration');
-            addConstant(values, 2.5, false, EffectValueValueType.AreaOfEffect, 'banner_aoe');
+            addConstant(values, 8, false, EffectValueValueType.Duration, 'skill_duration');
+            addConstant(values, 2.5, false, EffectValueValueType.AreaOfEffect, 'skill_aoe');
             setStat(values, 0, 'banner_provocation_banner_max_health');
             setAsUpgrade(values, 0);
             setStat(values, 1, 'banner_regeneration_buff_health_on_hit_add');

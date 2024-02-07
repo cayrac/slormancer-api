@@ -19,6 +19,7 @@ export interface CharacterSkillAndUpgrades {
     skill: Skill;
     upgrades: Array<SkillUpgrade>;
     selectedUpgrades: Array<number>;
+    activeUpgrades: Array<number>;
 
     stats: Array<MergedStat>;
 }

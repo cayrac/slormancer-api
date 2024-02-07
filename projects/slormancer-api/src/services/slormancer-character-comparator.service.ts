@@ -116,7 +116,7 @@ export class SlormancerCharacterComparatorService {
 
     private addPassiveDamages(differences: Array<CharacterStatDifference>, left: CharacterSkillAndUpgrades | null, right: CharacterSkillAndUpgrades | null) {
         if (left && right && left.skill.heroClass === right.skill.heroClass && left.skill.id === right.skill.id) {
-            const commonUpgrades = left.selectedUpgrades.filter(upgrade => right.selectedUpgrades.includes(upgrade));
+            const commonUpgrades = left.activeUpgrades.filter(upgrade => right.activeUpgrades.includes(upgrade));
 
             for (const commonUpgrade of commonUpgrades) {
                 const leftUpgrade = <SkillUpgrade>left.upgrades.find(upgrade => upgrade.id === commonUpgrade);
