@@ -480,14 +480,12 @@ export class SlormancerCharacterUpdaterService {
 
             if (skill.skill.type === SkillType.Support) {
                 if (equipped && removeEquippedSpecPassives) {
-                    console.log('removeEquippedSpecPassives');
                     defaultAction = false;
                     skill.activeUpgrades = skill.upgrades
                         .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type !== SkillType.Passive)
                         .map(upgrade => upgrade.id);
                 }
                 if (!equipped && addOtherNonEquippedSpecPassives) {
-                    console.log('addOtherNonEquippedSpecPassives');
                     defaultAction = false;
                     skill.activeUpgrades = skill.upgrades
                         .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type === SkillType.Passive)
@@ -498,8 +496,6 @@ export class SlormancerCharacterUpdaterService {
             if (defaultAction && equipped) {
                 skill.activeUpgrades = [ ...skill.selectedUpgrades ];
             }
-
-            console.log('updating skill ' + skill.skill.name + ' active upgrades : ', skill.activeUpgrades.length, skill);
         }
     }
 

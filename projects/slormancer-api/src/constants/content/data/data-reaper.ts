@@ -295,6 +295,20 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
+    15: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Damage, 'garbage_stat');
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    16: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     22: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'aoe_increased_size_multiplier_mana_harvest');
