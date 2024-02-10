@@ -369,6 +369,11 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'untouchable_end_duration');
         }
     },
+    25: {
+        override: (ba, be, ma) => {
+            addConstant(ba, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     27: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat);

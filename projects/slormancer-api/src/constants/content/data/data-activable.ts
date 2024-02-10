@@ -290,5 +290,15 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             overrideValueStat(values, 1, 'physical_damage');
             addConstant(values, 2.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
+    },
+    33: {
+        override: values => {
+            overrideValueStat(values, 0, 'physical_damage');
+            setSynergyShowValue(values, 0, false);
+            overrideValueStat(values, 1, 'elemental_damage');
+            setSynergyAnchor(values, 1, '_');
+            setSynergyShowValue(values, 1, false);
+            addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
     }
 }
