@@ -111,6 +111,7 @@ export interface CharacterConfig {
     enemy_bleed_stacks: number;
     enemy_traumatized_stacks: number;
     enemy_enfeeble_stacks: number;
+    enemy_horrified_stacks: number;
     arcane_flux_stacks: number;
     arcane_breach_collision_stacks: number;
     temporal_breach_collision_stacks: number;
@@ -185,5 +186,6 @@ export interface CharacterConfig {
     is_rune_active: boolean;
     effect_rune_affinity: number;
     other_characters_mastery_total: number;
+    victims_combo: number;
 }
 

@@ -44,6 +44,17 @@ function setSynergyAnchor(values: Array<AbstractEffectValue>, index: number, anc
     }
 }
 
+
+function setSynergyShowValue(values: Array<AbstractEffectValue>, index: number, showValue: boolean) {
+    const value = values[index]
+
+    if (value && isEffectValueSynergy(value)) {
+        value.showValue = showValue;
+    } else {
+        throw new Error('failed to change synergy showValue at index ' + index);
+    }
+}
+
 function halveSynergy(effects: Array<AbstractEffectValue>, index: number) {
     const effect = effects[index];
 
@@ -258,6 +269,26 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
     30: {
         override: values => {
             overrideValueStat(values, 0, 'garbage_stat');
+        }
+    },
+    31: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+            setValueType(values, 0, EffectValueValueType.Duration);
+            overrideValueStat(values, 1, 'garbage_stat');
+            synergyMultiply100(values, 1);
+            setSynergyShowValue(values, 1, false);
+            setValueType(values, 2, EffectValueValueType.Damage);
+            overrideValueStat(values, 2, 'physical_damage');
+            addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    32: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+            setValueType(values, 0, EffectValueValueType.Duration);
+            overrideValueStat(values, 1, 'physical_damage');
+            addConstant(values, 2.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     }
 }

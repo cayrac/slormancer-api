@@ -211,7 +211,9 @@ export class SlormancerTemplateService {
 
                 if (typeof effectValue.synergy === 'number') {
                     template = this.replaceAnchor(template, synergy, valueOrDefault(effectValue.anchor, this.VALUE_ANCHOR));
-                    template = this.replaceAnchor(template, value + details, this.SYNERGY_ANCHOR);
+                    if (effectValue.showValue) {
+                        template = this.replaceAnchor(template, value + details, this.SYNERGY_ANCHOR);
+                    }
                 } else {
                     template = this.replaceAnchor(template, synergy + details, this.SYNERGY_ANCHOR);
                 }

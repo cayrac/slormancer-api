@@ -129,6 +129,7 @@ export const MANA_COST_MAPPING: MergedStatMapping = {
         flat: [
             { stat: 'mana_cost_add' },
             { stat: 'cost_reduction_skill_per_bleed', condition: config => config.enemy_bleed_stacks > 0, multiplier: config => - config.enemy_bleed_stacks },
+            { stat: 'spectral_shape_mana_cost_percent', extra: true },
         ],
         max: [],
         percent: [],
@@ -150,6 +151,7 @@ export const MANA_COST_MAPPING: MergedStatMapping = {
             { stat: 'cost_reduction_mult_skill_per_arcanic_emblem_if_not_arcanic', condition: (config, stats) => config.arcanic_emblems > 0 && !hasStat(stats, 'skill_is_arcanic'), multiplier: config => - config.arcanic_emblems },
             { stat: 'cost_mult_skill_per_enemy_under_control', multiplier: config => -1 + config.enemy_under_command + config.elite_under_command * 10 },
             { stat: 'efficiency_skill_reduction_skill_mult', condition: config => config.efficiency_buff, multiplier: () => -1 },
+            { stat: 'spectral_shape_mana_cost_override' },
         ],
         maxMultiplier: [],
     } 
@@ -196,6 +198,7 @@ export const COOLDOWN_MAPPING: MergedStatMapping = {
         flat: [
             { stat: 'cooldown_time_add' },
             { stat: 'orb_arcane_master_cooldown_time_add', condition: (_, stats) => !hasStat(stats, 'disable_orb_arcane_master_maluses') },
+            { stat: 'spectral_shape_cooldown_time', extra: true },
         ],
         max: [],
         percent: [],
@@ -214,6 +217,7 @@ export const COOLDOWN_MAPPING: MergedStatMapping = {
             { stat: 'cooldown_time_reduction_multiplier_per_temporal_emblem_if_not_temporal', condition: (config, stats) => config.temporal_emblems > 0 && !hasStat(stats, 'skill_is_temporal'), multiplier: config => - config.temporal_emblems },
             { stat: 'cooldown_time_reduction_multiplier_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => - config.temporal_emblems },
             { stat: 'cooldown_time_muliplier_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
+            { stat: 'spectral_shape_cooldown_time_override' },
         ],
         maxMultiplier: [],
     } 
@@ -632,7 +636,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },
                 { stat: 'cleansing_surge_stack_movement_speed_percent', condition: config => config.cleansing_surge_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'cleansing_surge_max_stacks'), config.cleansing_surge_stacks) },
-
+                { stat: 'the_speed_percent_on_combo', condition: config => config.victims_combo > 0 },
             ],
             maxPercent: [],
             multiplier: [
@@ -694,6 +698,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'shadow_bargain_cooldown_reduction_global_mult', condition: config => config.has_shadow_bargain_buff },
                 { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
                 { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
+                { stat: 'cooldown_reduction_global_mult_on_combo', condition: config => config.victims_combo > 0 },
             ],
             maxMultiplier: [],
         } 

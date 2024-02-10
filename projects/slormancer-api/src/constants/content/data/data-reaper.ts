@@ -309,6 +309,30 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
+    17: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'cooldown_reduction_global_mult_on_combo');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'the_speed_percent_on_combo');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'massacre_increased_duration');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'disintegration_increased_damage');
+            addConstant(be, 7, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    19: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'spectral_shape_cooldown_time');
+            addConstant(ma, -100, false, EffectValueValueType.Stat, 'spectral_shape_cooldown_time_override');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'spectral_shape_mana_cost_percent');
+            addConstant(ma, -100, false, EffectValueValueType.Stat, 'spectral_shape_mana_cost_override');
+        }
+    },
+    20: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'horrified_max_stacks');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'horrified_stack_increased_damage');
+        }
+    },
     22: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'aoe_increased_size_multiplier_mana_harvest');

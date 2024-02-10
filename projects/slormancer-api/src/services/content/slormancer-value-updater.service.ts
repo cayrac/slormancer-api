@@ -370,6 +370,13 @@ export class SlormancerValueUpdaterService {
             }
             if (isEffectValueSynergy(effectValue) && isDamageType(effectValue.stat)) {
 
+                if (reaper.id === 17) {
+                    const disintegrationIncreasedDamage = <EffectValueSynergy>effectValues.find(effect => effect.stat === 'disintegration_increased_damage');
+                    if (disintegrationIncreasedDamage) {
+                        effectValue.synergy = mult(effectValue.synergy, disintegrationIncreasedDamage.displayValue);
+                        effectValue.displaySynergy = round(effectValue.synergy, 0);
+                    }
+                }
                 if (reaper.id === 27) {
                     const alphaOmegaIncreasedDamage = <EffectValueSynergy>effectValues.find(effect => isEffectValueSynergy(effect) && effect.stat === 'alpha_omega_orbs_increased_damage');
                     if (alphaOmegaIncreasedDamage && typeof alphaOmegaIncreasedDamage.synergy === 'number') {
@@ -395,7 +402,8 @@ export class SlormancerValueUpdaterService {
         }
     }
 
-    private getSpecifigStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}): T {
+    private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}): T {
+        // TODO factoriser avec la version faite sur stat mapping service
         const mergedStat = this.slormancerStatMappingService.buildMergedStat({ ...stats, ...specificstats }, mapping, config);
         this.slormancerMergedStatUpdaterService.updateStatTotal(mergedStat);
         return <T>mergedStat.total;
@@ -427,7 +435,7 @@ export class SlormancerValueUpdaterService {
             skillCostStats['ancestral_legacy_id'] = [{ value: entity.ancestralLegacy.id, source: entity }];
         }
         
-        return Math.max(0, this.getSpecifigStat(stats, MANA_COST_MAPPING, config, skillCostStats));
+        return Math.max(0, this.getSpecificStat(stats, MANA_COST_MAPPING, config, skillCostStats));
     }
 
     private getActivableCooldown(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy, attackSpeed: number): number {
@@ -454,7 +462,7 @@ export class SlormancerValueUpdaterService {
                 minCooldown = Math.min(...minCooldownStat.map(v => v.value));
             }
 
-            const cooldown = Math.max(minCooldown, this.getSpecifigStat<number>(stats, COOLDOWN_MAPPING, config, { cooldown_time_add: cooldownAdd }));
+            const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, { cooldown_time_add: cooldownAdd }));
             
             result = Math.max(0, round(cooldown * (100 - attackSpeed) / 100, 2));
         }
@@ -500,6 +508,24 @@ export class SlormancerValueUpdaterService {
                         }
                     }
 
+                    // mini keeper increase damage multiplier (+ bug precision)
+                    if (activable.id === 32 && config.use_enemy_state) {
+
+                        console.log('update damage activable : ', activable);
+                        const horrifiedMaxStacksStat = statsResult.extractedStats['horrified_max_stacks'];
+                        const enemyHorrifiedDamageStat = statsResult.extractedStats['horrified_stack_increased_damage'];
+                        
+                        console.log('update damage activable stats : ', horrifiedMaxStacksStat, enemyHorrifiedDamageStat);
+                        if (horrifiedMaxStacksStat !== undefined && enemyHorrifiedDamageStat !== undefined) {
+                            const horrifiedMaxStacksStatValue = horrifiedMaxStacksStat[0];
+                            const enemyHorrifiedDamageStatValue = enemyHorrifiedDamageStat[0];
+                            if (horrifiedMaxStacksStatValue !== undefined && enemyHorrifiedDamageStatValue !== undefined) {
+                                const horrifiedStacks = Math.max(0, Math.min(config.enemy_horrified_stacks, horrifiedMaxStacksStatValue.value));
+                                additionalMultipliers.push(enemyHorrifiedDamageStatValue.value * horrifiedStacks);
+                            }
+                        }
+                    }
+
                     if (isSynergy) {
                         this.updateDamage(value, activable.genres, skillStats, statsResult, SkillElement.Neutral, false, additionalMultipliers);
                     } else {
@@ -518,6 +544,17 @@ export class SlormancerValueUpdaterService {
                     const manaHarvestAoeIncreasedSize = valueOrNull(manaHarvestAoeIncreasedSizeValues !== undefined ? manaHarvestAoeIncreasedSizeValues[0] : null)
                     if (manaHarvestAoeIncreasedSize !== null) {
                         value.value = value.value * (100 + manaHarvestAoeIncreasedSize.value) / 100;
+                    }
+                }
+
+                value.displayValue = bankerRound(value.value, 2);
+            } else if (value.valueType === EffectValueValueType.Duration) {
+                // Massacre increased duration
+                if (activable.id === 31) {
+                    const massacreIncreasedDurationValues = statsResult.extractedStats['massacre_increased_duration'];
+                    const massacreIncreasedDuration = valueOrNull(massacreIncreasedDurationValues !== undefined ? massacreIncreasedDurationValues[0] : null)
+                    if (massacreIncreasedDuration !== null) {
+                        value.value = value.value * (100 + massacreIncreasedDuration.value) / 100;
                     }
                 }
 
@@ -868,7 +905,7 @@ export class SlormancerValueUpdaterService {
             mana_cost_add: manaCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(skillAndUpgrades.skill.manaCostType), source: entity }],
         };
-        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecifigStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats));
+        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats));
         
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });
 
@@ -877,7 +914,7 @@ export class SlormancerValueUpdaterService {
             life_cost_add: lifeCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(expectdLifeCostType), source: entity }],
         };
-        skillAndUpgrades.skill.lifeCost = Math.max(0, this.getSpecifigStat(statsResult.extractedStats, LIFE_COST_MAPPING, config, lifeExtraStats));
+        skillAndUpgrades.skill.lifeCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, LIFE_COST_MAPPING, config, lifeExtraStats));
         
         if (skillAndUpgrades.skill.lifeCost > 0) {
             skillAndUpgrades.skill.hasLifeCost = skillAndUpgrades.skill.lifeCost > 0;

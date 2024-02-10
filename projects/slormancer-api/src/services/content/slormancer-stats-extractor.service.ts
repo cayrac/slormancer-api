@@ -208,6 +208,9 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'highest_floor', config.highest_slorm_temple_floor, { synergy: 'Highest Slorm Temple floor' });
         this.addStat(stats.stats, 'support_streak', config.support_streak_stacks, { synergy: 'Support streak stacks' });
         this.addStat(stats.stats, 'hero_class', character.heroClass, { synergy: 'Class id' });
+        this.addStat(stats.stats, 'victims_combo', Math.max(0, config.victims_combo), { synergy: 'Combo counter' });
+        this.addStat(stats.stats, 'victims_combo_100', Math.max(0, config.victims_combo - 100), { synergy: 'Combo counter minus 100' });
+        this.addStat(stats.stats, 'current_dps', 0, { synergy: 'Current dps (not supported)' });
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {

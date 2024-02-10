@@ -100,6 +100,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     oak_bark_armor_stacks: 0,
     enemy_bleed_stacks: 0,
     enemy_enfeeble_stacks: 0,
+    enemy_horrified_stacks: 0,
     block_stacks: 0,
     melee_defense_stacks: 0,
     projectile_defense_stacks: 0,
@@ -187,6 +188,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     is_rune_active: false,
     effect_rune_affinity: 100,
     other_characters_mastery_total: 10 * 15,
+    victims_combo: 0,
 }
 
 export const COMBAT_CONFIG: CharacterConfig = {
@@ -286,6 +288,7 @@ export const COMBAT_CONFIG: CharacterConfig = {
     oak_bark_armor_stacks: 10,
     enemy_bleed_stacks: 0,
     enemy_enfeeble_stacks: 0,
+    enemy_horrified_stacks: 0,
     block_stacks: 0,
     melee_defense_stacks: 0,
     projectile_defense_stacks: 0,
@@ -374,4 +377,5 @@ export const COMBAT_CONFIG: CharacterConfig = {
     is_rune_active: true,
     effect_rune_affinity: 100,
     other_characters_mastery_total: 10 * 15,
+    victims_combo: 0,
 }
