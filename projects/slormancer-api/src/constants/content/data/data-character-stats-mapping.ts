@@ -482,7 +482,11 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [{ stat: 'health_regen_percent' }],
             maxPercent: [],
-            multiplier: [{ stat: 'health_recovery_mult' }],
+            multiplier: [
+                { stat: 'health_recovery_mult' },
+                { stat: 'high_life_health_recovery_mult', condition: (config, stats) => config.percent_missing_health < (100 - getFirstStat(stats, 'reverse_life_regeneration_life_treshold', 0)) },
+
+            ],
             maxMultiplier: [],
         } 
     },
@@ -955,6 +959,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'res_phy_global_mult' },
                 { stat: 'res_phy_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_global_mult_on_low_life_treshold', 0)) },
+                { stat: 'res_phy_mag_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_mag_global_mult_on_low_life_treshold', 0)) },
             ],
             maxMultiplier: [],
         } 
@@ -980,7 +985,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'res_mag_global_mult' },
                 { stat: 'res_mag_global_mult_after_elemental_damage_taken', condition: config => config.took_elemental_damage_recently },
                 { stat: 'res_mag_global_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
-            ],
+                { stat: 'res_phy_mag_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_mag_global_mult_on_low_life_treshold', 0)) },            ],
             maxMultiplier: [],
         } 
     },

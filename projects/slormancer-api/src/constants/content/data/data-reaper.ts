@@ -374,6 +374,24 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ba, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    26: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'res_phy_mag_global_mult_on_low_life_treshold');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'res_phy_mag_global_mult_on_low_life');
+
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'berzerker_additional_damage');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'berzerker_additional_damage_mult');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            addConstant(be, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'reverse_life_regeneration_life_treshold');
+            addConstant(be, -200, false, EffectValueValueType.Stat, 'high_life_health_recovery_mult');
+        }
+    },
     27: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat);
