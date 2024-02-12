@@ -15,7 +15,7 @@ function getFirstStat(stats: ExtractedStatMap, stat: string, defaultValue: numbe
 
 
 function getMaxStacks(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
-    return getFirstStat(stats, stat, defaultValue) + getFirstStat(stats, 'increased_max_stacks', 0);
+    return getFirstStat(stats, stat, defaultValue) + Math.ceil(getFirstStat(stats, 'increased_max_stacks', 0));
 }
 
 function getMaxStat(stats: ExtractedStatMap, stat: string): number {
@@ -703,6 +703,11 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
                 { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
                 { stat: 'cooldown_reduction_global_mult_on_combo', condition: config => config.victims_combo > 0 },
+                /*{ // Disabled due to the bloodthirst attack speed bug
+                    stat: 'cooldown_reduction_global_mult_per_bloodthirst_stack',
+                    condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
+                    multiplier: (config, stats) => Math.max(0, Math.min(config.bloodthirst_stacks, getMaxStacks(stats, 'bloodthirst_max_stacks')))
+                },*/
             ],
             maxMultiplier: [],
         } 
@@ -1791,7 +1796,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         allowMinMax: true,
         suffix: '',
         source: {
-            flat: [{ stat: 'min_weapon_damage_add' }],
+            flat: [
+                { stat: 'min_weapon_damage_add' },
+                { stat: 'blood_frenzy_min_weapon_damage_add', condition: config => config.has_blood_frenzy_buff }
+            ],
             max: [{ stat: 'max_weapon_damage_add' }],
             percent: [],
             maxPercent: [{ stat: 'max_weapon_damage_global_mult' }],
@@ -1930,6 +1938,11 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'remnant_increased_damage_mult', condition: config => config.is_remnant },
                 { stat: 'remnant_vulnerability_remnant_increased_damage_mult', condition: config => config.is_remnant && config.target_has_remnant_vulnerability },
                 { stat: 'increased_damage_mult_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
+                /*{ // blood frenzy damage bonus is currently not visible in stats
+                    stat: 'increased_damage_mult_per_bloodthirst_stack',
+                    condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
+                    multiplier: (config, stats) => Math.max(0, Math.min(config.bloodthirst_stacks, getMaxStacks(stats, 'bloodthirst_max_stacks')))
+                },*/
                 { 
                     stat: 'enfeeble_stack_increased_damage',
                     condition: config => config.enemy_enfeeble_stacks > 0 && config.use_enemy_state,

@@ -300,5 +300,12 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             setSynergyShowValue(values, 1, false);
             addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
+    },
+    39: {
+        override: values => {
+            overrideValueStat(values, 0, 'cooldown_reduction_global_mult_per_bloodthirst_stack');
+            overrideValueStat(values, 1, 'increased_damage_mult_per_bloodthirst_stack');
+            overrideValueStat(values, 2, 'garbage_stat');
+        }
     }
 }

@@ -130,6 +130,7 @@ export interface CharacterConfig {
     overcharged_stacks: number;
     indirect_defense_stacks: number;
     support_streak_stacks: number;
+    bloodthirst_stacks: number;
     has_elemental_temper_buff: boolean;
     has_splash_splash_buff: boolean;
     has_soul_bound_buff: boolean;
@@ -158,6 +159,7 @@ export interface CharacterConfig {
     has_frostfire_buff: boolean;
     has_ancestral_instability_buff: boolean;
     has_avatar_of_shadow_buff: boolean;
+    has_blood_frenzy_buff: boolean;
     concentration_buff: boolean;
     ultima_momentum_buff: boolean;
     exposed_armor_buff: boolean;

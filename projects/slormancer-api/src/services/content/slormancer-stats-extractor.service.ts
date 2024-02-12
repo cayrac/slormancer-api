@@ -39,6 +39,7 @@ import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefaul
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
+import { Activable } from '../../model';
 
 export declare type ExtractedStatMap = { [key: string]: Array<EntityValue<number>> }
 
@@ -587,6 +588,31 @@ export class SlormancerStatsExtractorService {
         stats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'max_health', 'max_health_shield', EffectValueValueType.Stat, undefined, 3), -1, { synergy: 'Max health and shield' }, [ { stat: 'max_health_shield' } ]));
         
         
+        const bloodthirstMaxStacksStat = stats.stats['bloodthirst_max_stacks'];
+        const increasedMaxStacks = stats.stats['increased_max_stacks'];
+        let bloodthirstStacks = 0;
+        if (bloodthirstMaxStacksStat) {
+            let increasedMax = 0;
+            if (increasedMaxStacks) {
+                increasedMax = increasedMaxStacks.map(entity => entity.value).reduce((value, total) => value + total, 0);
+            }
+            const bloodthirstMaxstacks = Math.ceil((bloodthirstMaxStacksStat[0] as EntityValue<number>).value) + increasedMax;
+            bloodthirstStacks = Math.max(0, Math.min(bloodthirstMaxstacks, config.bloodthirst_stacks));
+            this.addStat(stats.stats, 'bloodthirst_stacks', bloodthirstStacks, { synergy: 'Bloodthirst stacks' });
+        }
+
+        // Adding blood frenzy attack speed manually due to the computing issue
+        if (config.has_blood_frenzy_buff) {
+            const bloodfrenzy = [character.activable1, character.activable2, character.activable3, character.activable4]
+                .filter(isNotNullOrUndefined)
+                .find(activable => !('element' in activable) && activable.id === 39);
+                
+            if (bloodfrenzy) {
+                for(let i = 0 ; i < bloodthirstStacks ; i++) {
+                    this.addStat(stats.stats, 'cooldown_reduction_global_mult', 1, { activable: bloodfrenzy as Activable });
+                }
+            }
+        }
     }
 
     private addBaseValues(character: Character, stats: ExtractedStats) {

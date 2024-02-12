@@ -511,11 +511,9 @@ export class SlormancerValueUpdaterService {
                     // mini keeper increase damage multiplier (+ bug precision)
                     if (activable.id === 32 && config.use_enemy_state) {
 
-                        console.log('update damage activable : ', activable);
                         const horrifiedMaxStacksStat = statsResult.extractedStats['horrified_max_stacks'];
                         const enemyHorrifiedDamageStat = statsResult.extractedStats['horrified_stack_increased_damage'];
                         
-                        console.log('update damage activable stats : ', horrifiedMaxStacksStat, enemyHorrifiedDamageStat);
                         if (horrifiedMaxStacksStat !== undefined && enemyHorrifiedDamageStat !== undefined) {
                             const horrifiedMaxStacksStatValue = horrifiedMaxStacksStat[0];
                             const enemyHorrifiedDamageStatValue = enemyHorrifiedDamageStat[0];

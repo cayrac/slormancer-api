@@ -416,6 +416,19 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, 1, true, EffectValueValueType.Stat, 'secondary_slot_locked');
         }
     },
+    36: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'bloodthirst_max_stacks');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'health_on_kill_global_mult');
+            synergyMultiply100(ba, 5);
+
+            overrideSynergySource(be, 0, 'life_on_kill');
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'blood_frenzy_min_weapon_damage_add');
+        }
+    },
     40: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'thornbite_reaper_buff_idle_duration');
