@@ -439,6 +439,20 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat'); 
         }
     },
+    35: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'increased_damage_on_stun');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'increased_damage_on_back');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'crit_chance_percent_on_back');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'brut_chance_percent_on_back');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     36: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'bloodthirst_max_stacks');
