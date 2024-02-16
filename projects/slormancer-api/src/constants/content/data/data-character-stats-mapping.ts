@@ -232,12 +232,15 @@ export const AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
         flat: [
             { stat: 'aoe_increased_size_percent' },
             { stat: 'max_charged_aoe_increased_size_percent', condition: config => config.rift_nova_fully_charged },
-            { stat: 'arcane_breach_collision_stack_aoe_increased_size_percent', condition: config => config.arcane_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) }
+            { stat: 'arcane_breach_collision_stack_aoe_increased_size_percent', condition: config => config.arcane_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
+            { stat: 'aura_aoe_increased_size_percent', condition: (_, stats) => hasStat(stats, 'skill_is_aura') , extra: true }
         ],
         max: [],
         percent: [],
         maxPercent: [],
-        multiplier: [ ],
+        multiplier: [
+            { stat: 'aoe_increased_size_percent_mult' },
+        ],
         maxMultiplier: [],
     } 
 }
@@ -2078,6 +2081,22 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'all_character_masteries' },
                 { stat: 'all_masteries_accross_characters', multiplier: config => config.other_characters_mastery_total }
+            ],
+            max: [],
+            percent: [],
+            maxPercent: [],
+            multiplier: [],
+            maxMultiplier: [],
+        } 
+    },
+    {
+        stat: 'aura_aoe_increased_size_percent',
+        precision: 1,
+        allowMinMax: false,
+        suffix: '',
+        source: {
+            flat: [
+                { stat: 'aura_aoe_increased_size_percent' }
             ],
             max: [],
             percent: [],

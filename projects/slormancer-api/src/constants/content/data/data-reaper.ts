@@ -166,7 +166,7 @@ function setSynergyPrecision(effect: ReaperEffect | null, index: number, precisi
             throw new Error('failed to update precision at index ' + index);
         }
     } else {
-        throw new Error('failed to duplicate variable at index ' + index);
+        throw new Error('failed to update precision at index ' + index);
     }
 }
 
@@ -414,6 +414,29 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'alpha_omega_orbs_increased_damage');
 
             addConstant(ma, 1, true, EffectValueValueType.Stat, 'secondary_slot_locked');
+        }
+    },
+    28: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'aura_increased_effect_percent');
+            setSynergyDetailOnSynergy(ba, 1, false);
+            setSynergyPrecision(ba, 1, 0);
+
+            setSynergyPrecision(be, 0, 0);
+            synergyMultiply100(be, 0);
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'aura_aoe_increased_size_percent');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'aoe_increased_size_percent_mult');
+        }
+    },
+    29: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'elemental_damage');
+            addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+            addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat'); 
         }
     },
     36: {

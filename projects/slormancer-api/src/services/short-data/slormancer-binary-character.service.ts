@@ -35,8 +35,6 @@ export class SlormancerBinaryCharacterService {
             result.push(...numberToBinary(characterAncestralLegacies.activeFirstNode, 10));
         }
 
-        console.log('Pushing : ', characterAncestralLegacies.activeFirstNode !== null, characterAncestralLegacies.activeFirstNode);
-
         result.push(...numberToBinary(characterAncestralLegacies.activeNodes.length, 4));
         for (const node of characterAncestralLegacies.activeNodes) {
             result.push(...numberToBinary(node, 10));
@@ -61,7 +59,6 @@ export class SlormancerBinaryCharacterService {
             if (binaryToBoolean(takeBitsChunk(binary, 1))) {
                 result.firstNode = binaryToNumber(takeBitsChunk(binary, 10));
             }
-            console.log('Got : ', result.firstNode !== null, result.firstNode);
         }
 
         const nodesCount = binaryToNumber(takeBitsChunk(binary, 4));

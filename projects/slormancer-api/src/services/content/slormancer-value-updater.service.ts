@@ -545,6 +545,14 @@ export class SlormancerValueUpdaterService {
                     }
                 }
 
+                // aura increase aoe
+                if (activable.genres.includes(SkillGenre.Aura)) {
+                    const auraAoeIncreasedSizePercentStat = statsResult.stats.find(stat => stat.stat === 'aura_aoe_increased_size_percent');
+                    if (auraAoeIncreasedSizePercentStat !== undefined) {
+                        value.value = value.value * (100 + (auraAoeIncreasedSizePercentStat.total as number)) / 100;
+                    }
+                }
+
                 value.displayValue = bankerRound(value.value, 2);
             } else if (value.valueType === EffectValueValueType.Duration) {
                 // Massacre increased duration
@@ -610,7 +618,16 @@ export class SlormancerValueUpdaterService {
                     this.updateDamage(value, ancestralLegacy.genres, skillStats, statsResult, ancestralLegacy.element, false, [], addedFlatDamage);
                 }
             } else if (value.valueType === EffectValueValueType.AreaOfEffect) {
-                value.value = value.baseValue * (100 + skillStats.aoeIncreasedSize.total) / 100;
+                value.value = value.baseValue;
+                // aura increase aoe
+                if (ancestralLegacy.genres.includes(SkillGenre.Aura)) {
+                    const auraAoeIncreasedSizePercentStat = statsResult.stats.find(stat => stat.stat === 'aura_aoe_increased_size_percent');
+                    if (auraAoeIncreasedSizePercentStat !== undefined) {
+                        value.value = value.value * (100 + (auraAoeIncreasedSizePercentStat.total as number)) / 100;
+                    }
+                }
+
+                value.value = value.value * (100 + skillStats.aoeIncreasedSize.total) / 100;
                 value.displayValue = bankerRound(value.value, 2);
             } else if (value.valueType !== EffectValueValueType.Static && !isIcyVeins) {
                 const statMultipliers = this.getValidStatMultipliers(ancestralLegacy.genres, skillStats);
@@ -1002,11 +1019,8 @@ export class SlormancerValueUpdaterService {
             const aoeValues = skillAndUpgrades.skill.values.filter(value => value.valueType === EffectValueValueType.AreaOfEffect);
             if (aoeValues.length > 0) {
                 for (const value of aoeValues) {
-                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value : ', value.value)
                     value.value = value.baseValue * (100 + skillStats.aoeIncreasedSize.total) / 100;
-                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value aoeIncreasedSize : ', value.value)
-                    value.value = this.slormancerMergedStatUpdaterService.applyMergedStatToValue(value.value, skillStats.skillIncreasedAoe) as number;
-                    if (skillAndUpgrades.skill.id === 0) console.log('updating skill value skillIncreasedAoe : ', value.value)
+                    value.value = value.baseValue * (100 + skillStats.skillIncreasedAoe.total) / 100;
                     value.displayValue = round(value.value, 2);
                 }
             }

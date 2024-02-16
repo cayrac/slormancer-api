@@ -301,6 +301,12 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    34: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+            addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     39: {
         override: values => {
             overrideValueStat(values, 0, 'cooldown_reduction_global_mult_per_bloodthirst_stack');

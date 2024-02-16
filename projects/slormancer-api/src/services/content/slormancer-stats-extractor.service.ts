@@ -178,7 +178,9 @@ export class SlormancerStatsExtractorService {
         const auraSkills = [ character.activable1, character.activable2, character.activable3, character.activable4 ]
             .filter(isNotNullOrUndefined)
             .filter(skill => skill.genres.includes(SkillGenre.Aura));
-        this.addStat(stats.stats, 'active_aura_count', auraSkills.length, { character })
+        this.addStat(stats.stats, 'active_aura_count', auraSkills.length, { character });
+        // *100 to handle the /100 synergy
+        this.addStat(stats.stats, 'aura_equipped_per_aura_active', Math.pow(auraSkills.length, 2) * 100, { character })
 
         if (character.heroClass === HeroClass.Mage) {
             const maxedUpgrades = character.skills.map(skill => skill.upgrades).flat().filter(upgrade => upgrade.rank === upgrade.maxRank).length;
@@ -721,8 +723,6 @@ export class SlormancerStatsExtractorService {
         this.addSkillValues(skillAndUpgrades, result, mergedStatMapping);
         this.addUpgradeValues(skillAndUpgrades, result, mergedStatMapping);
 
-
-
         result.stats['skill_elements'] = skillAndUpgrades.skill.elements.map(element => ({ value: element, source: { skill: skillAndUpgrades.skill } }));
         
         return result;
@@ -761,6 +761,9 @@ export class SlormancerStatsExtractorService {
         }
         if (skillAndUpgrades.skill.genres.includes(SkillGenre.Obliteration)) {
             this.addStat(extractedStats.stats, 'skill_is_obliteration', 1, { skill: skillAndUpgrades.skill });
+        }
+        if (skillAndUpgrades.skill.genres.includes(SkillGenre.Aura)) {
+            this.addStat(extractedStats.stats, 'skill_is_aura', 1, { skill: skillAndUpgrades.skill });
         }
 
         this.addStat(extractedStats.stats, 'skill_id', skillAndUpgrades.skill.id, { skill: skillAndUpgrades.skill });
