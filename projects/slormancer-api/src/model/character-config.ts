@@ -131,6 +131,7 @@ export interface CharacterConfig {
     indirect_defense_stacks: number;
     support_streak_stacks: number;
     bloodthirst_stacks: number;
+    elemental_fury_stacks: number;
     has_elemental_temper_buff: boolean;
     has_splash_splash_buff: boolean;
     has_soul_bound_buff: boolean;

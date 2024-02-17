@@ -867,6 +867,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     condition: config => config.has_ancestral_instability_buff, 
                     multiplier: (config, stats) => 1 + 0.25 * config.ancestral_instability_buff_duration
                 },
+                { stat: 'brut_damage_percent_extra', extra: true },
             ],
             max: [],
             percent: [],
@@ -2013,6 +2014,20 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'lightning_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Lightning) },
                 { stat: 'light_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Light) },
                 { stat: 'shadow_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Shadow) },
+                {
+                    stat: 'imbued_skill_increased_damage',
+                    condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Shadow)
+                                          || statHasValue(stats, 'skill_elements', SkillElement.Fire)
+                                          || statHasValue(stats, 'skill_elements', SkillElement.Ice)
+                                          || statHasValue(stats, 'skill_elements', SkillElement.Light)
+                                          || statHasValue(stats, 'skill_elements', SkillElement.Lightning)
+                                          || statHasValue(stats, 'skill_elements', SkillElement.Shadow)
+                },
+                {
+                    stat: 'imbued_skill_increased_damage_per_elemental_fury_stack',
+                    condition: (config) => config.elemental_fury_stacks > 0,
+                    multiplier: (config, stats) => Math.max(0, Math.min(config.elemental_fury_stacks, getMaxStacks(stats, 'elemental_fury_max_stacks')))
+                },
                 { stat: 'primary_skill_increased_damage', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary')},
             ],
             maxMultiplier: [

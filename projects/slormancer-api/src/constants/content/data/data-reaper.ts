@@ -453,6 +453,21 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
+    32: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'imbued_skill_increased_damage');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'elemental_fury_max_stacks');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'imbued_skill_increased_damage_per_elemental_fury_stack');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+
+            addConstant(ba, -100, false, EffectValueValueType.Stat, 'brut_damage_global_mult');
+
+            if (ma) {
+                ma.values.push(effectValueSynergy(100, 0, EffectValueUpgradeType.None, true, 'critical_damage', 'brut_damage_percent_extra', EffectValueValueType.Stat))
+            }
+        }
+    },
     35: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'increased_damage_on_stun');
