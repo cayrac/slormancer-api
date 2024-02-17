@@ -75,7 +75,7 @@ const CHANCE_TO_PIERCE: MergedStatMapping = {
         max: [],
         percent: [],
         maxPercent: [],
-        multiplier: [],
+        multiplier: [{ stat: 'chance_to_pierce_global_mult' }],
         maxMultiplier: [],
     } 
 }
@@ -1576,6 +1576,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'idle_additional_projectile_global_mult', condition: config => config.idle },
                 { stat: 'not_idle_additional_projectile_global_mult', condition: config => !config.idle },
+                { stat: 'additional_projectile_global_mult' },
             ],
             maxMultiplier: [],
         } 
@@ -1595,7 +1596,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'fork_chance_global_mult' }],
             maxMultiplier: [],
         } 
     },
