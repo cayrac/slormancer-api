@@ -34,6 +34,17 @@ function setBaseValue(values: Array<AbstractEffectValue>, index: number, baseVal
     }
 }
 
+function setUpgradeValue(values: Array<AbstractEffectValue>, index: number, upgrade: number) {
+    const value = values[index]
+
+    if (value && isEffectValueVariable(value)) {
+        value.baseUpgrade = upgrade;
+        value.upgrade = upgrade;
+    } else {
+        throw new Error('failed to change base value for effect value at index ' + index);
+    }
+}
+
 function setSynergyAnchor(values: Array<AbstractEffectValue>, index: number, anchor: string) {
     const value = values[index]
 
@@ -305,6 +316,19 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
         override: values => {
             overrideValueStat(values, 0, 'garbage_stat');
             addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    35: {
+        override: values => {
+            setBaseValue(values, 0, 100);
+            addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    36: {
+        override: values => {
+            setBaseValue(values, 0, 150);
+            setUpgradeValue(values, 2, 1.75);
+            addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
     38: {

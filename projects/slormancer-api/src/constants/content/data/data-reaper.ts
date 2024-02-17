@@ -439,6 +439,20 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat'); 
         }
     },
+    30: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            moveValue(ba, 2, ma);
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Damage, 'physical_damage');
+            setSynergyAllowMinMax(ma, 0, false);
+        }
+    },
+    31: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     35: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'increased_damage_on_stun');

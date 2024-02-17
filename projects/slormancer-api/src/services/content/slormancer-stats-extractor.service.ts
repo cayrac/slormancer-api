@@ -296,30 +296,31 @@ export class SlormancerStatsExtractorService {
     }
 
     private addReaperValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
-        if (character.reaper !== null) {
-            const source = { reaper: character.reaper };
-            this.addStat(stats.stats, 'min_weapon_damage_add', character.reaper.damages.min, source);
-            this.addStat(stats.stats, 'max_weapon_damage_add', character.reaper.damages.max - character.reaper.damages.min, source);        
-            this.addStat(stats.stats, 'victims_current_reaper', character.reaper.kills, { synergy: 'Current reaper victims' });
-            this.addStat(stats.stats, 'reaper_affinity', character.reaper.affinity, { synergy: 'Current reaper affinity' });
+        const source = { reaper: character.reaper };
+        this.addStat(stats.stats, 'min_weapon_damage_add', character.reaper.damages.min, source);
+        this.addStat(stats.stats, 'max_weapon_damage_add', character.reaper.damages.max - character.reaper.damages.min, source);        
+        this.addStat(stats.stats, 'victims_current_reaper', character.reaper.kills, { synergy: 'Current reaper victims' });
+        this.addStat(stats.stats, 'reaper_affinity', character.reaper.affinity, { synergy: 'Current reaper affinity' });
 
+        if (character.reaper.id === 30 || character.reaper.id === 31) {
+            this.addStat(stats.stats, 'remain_damage', 800, { synergy: 'Remain damage' });
+        }
 
-            const effectValues: Array<AbstractEffectValue> = character.reaper.templates.base.map(effect => effect.values).flat();
-            if (character.reaper.primordial) {
-                effectValues.push(...character.reaper.templates.benediction.map(effect => effect.values).flat());
-                effectValues.push(...character.reaper.templates.malediction.map(effect => effect.values).flat());
-            }
+        const effectValues: Array<AbstractEffectValue> = character.reaper.templates.base.map(effect => effect.values).flat();
+        if (character.reaper.primordial) {
+            effectValues.push(...character.reaper.templates.benediction.map(effect => effect.values).flat());
+            effectValues.push(...character.reaper.templates.malediction.map(effect => effect.values).flat());
+        }
 
-            for (const effectValue of effectValues) {
-                if (isEffectValueSynergy(effectValue)) {
-                    if (isDamageType(effectValue.stat)) {
-                        stats.isolatedSynergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { reaper: character.reaper }));
-                    } else {
-                        stats.synergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { reaper: character.reaper }, this.getSynergyStatsItWillUpdate(effectValue.stat, mergedStatMapping)));
-                    }
+        for (const effectValue of effectValues) {
+            if (isEffectValueSynergy(effectValue)) {
+                if (isDamageType(effectValue.stat)) {
+                    stats.isolatedSynergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { reaper: character.reaper }));
                 } else {
-                    this.addStat(stats.stats, effectValue.stat, effectValue.value, source);
+                    stats.synergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { reaper: character.reaper }, this.getSynergyStatsItWillUpdate(effectValue.stat, mergedStatMapping)));
                 }
+            } else {
+                this.addStat(stats.stats, effectValue.stat, effectValue.value, source);
             }
         }
     }
