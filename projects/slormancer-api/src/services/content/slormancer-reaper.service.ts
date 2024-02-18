@@ -375,7 +375,7 @@ export class SlormancerReaperService {
 
     public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, baseLevelPrimordial: number, kills: number, killsPrimordial: number, baseAffinity: number = 0, bonusAffinity: number = 0): Reaper {
         
-        const maxLevel = gameData.MAX_LVL ?? 0
+        const maxLevel = gameData.MAX_LVL ?? 100
 
         let result: Reaper = {
             id: gameData.REF,

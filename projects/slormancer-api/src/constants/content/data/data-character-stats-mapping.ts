@@ -887,7 +887,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'armor_penetration_percent' },
                 { stat: 'idle_armor_penetration_percent', condition: config => config.idle },
-                
+                { stat: 'figther_bane_armor_penetration_percent', condition: config => config.fighter_bane_stacks > 0, multiplier: (config, stats) => Math.max(0, Math.min(config.fighter_bane_stacks, getMaxStacks(stats, 'figther_bane_max_stacks'))) },
             ],
             max: [],
             percent: [],
@@ -902,7 +902,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         allowMinMax: false,
         suffix: '%',
         source: {
-            flat: [{ stat: 'elemental_penetration_percent' }],
+            flat: [
+                { stat: 'elemental_penetration_percent' },
+                { stat: 'mage_bane_elemental_penetration_percent', condition: config => config.mage_bane_stacks > 0, multiplier: (config, stats) => Math.max(0, Math.min(config.mage_bane_stacks, getMaxStacks(stats, 'mage_bane_max_stacks'))) },
+            ],
             max: [],
             percent: [],
             maxPercent: [],
@@ -963,6 +966,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'chrono_armor_stack_res_phy_percent', condition: config => config.chrono_armor_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_armor_stacks, getMaxStacks(stats, 'chrono_armor_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
                 { stat: 'shadow_shield_armor_percent', condition: config => config.has_shadow_shield_buff },
                 { stat: 'frostfire_armor_res_phy_percent', condition: config => config.has_frostfire_buff },
+                { stat: 'figther_bane_res_phy_percent', condition: config => config.fighter_bane_stacks > 0, multiplier: (config, stats) => Math.max(0, Math.min(config.fighter_bane_stacks, getMaxStacks(stats, 'figther_bane_max_stacks'))) },
             ],
             maxPercent: [],
             multiplier: [
@@ -988,6 +992,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'res_mag_percent' },
                 { stat: 'res_mag_percent_if_channeling_ray_of_obliteration', condition: config => config.is_channeling_ray_of_obliteration },
                 { stat: 'shadow_shield_elemental_resist_percent', condition: config => config.has_shadow_shield_buff },
+                { stat: 'mage_bane_res_mag_percent', condition: config => config.mage_bane_stacks > 0, multiplier: (config, stats) => Math.max(0, Math.min(config.mage_bane_stacks, getMaxStacks(stats, 'mage_bane_max_stacks'))) },
             ],
             maxPercent: [],
             multiplier: [

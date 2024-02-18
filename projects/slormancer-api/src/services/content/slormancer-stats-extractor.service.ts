@@ -52,6 +52,13 @@ export interface ExtractedStats {
 @Injectable()
 export class SlormancerStatsExtractorService {
 
+    private readonly PHYSICAL_ELEMENTAL_STATS = [
+        'min_elemental_damage_add',
+        //'elemental_damage_percent',
+        'min_basic_damage_add',
+        //'basic_damage_percent',
+    ];
+
     constructor(private slormancerStatMappingService: SlormancerStatMappingService,
         private slormancerMergedStatUpdaterService: SlormancerMergedStatUpdaterService,
         ) { }
@@ -214,6 +221,7 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'victims_combo', Math.max(0, config.victims_combo), { synergy: 'Combo counter' });
         this.addStat(stats.stats, 'victims_combo_100', Math.max(0, config.victims_combo - 100), { synergy: 'Combo counter minus 100' });
         this.addStat(stats.stats, 'current_dps', 0, { synergy: 'Current dps (not supported)' });
+        this.addStat(stats.stats, 'absorbed_damage_wrath', 0, { synergy: 'Absorbed damage wrath' });
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {
@@ -363,6 +371,7 @@ export class SlormancerStatsExtractorService {
 
     private addGearValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
         const addChestTwice = stats.stats['add_chest_stats_twice'] !== undefined;
+        const ignorePhysicalElementalStats = stats.stats['ignore_physical_elemental_stats'] !== undefined;
         const items = ALL_GEAR_SLOT_VALUES
             .map(slot => character.gear[slot])
             .filter(isNotNullOrUndefined);
@@ -397,7 +406,9 @@ export class SlormancerStatsExtractorService {
                         stats.synergies.push(synergyResolveData(effectValue, effectValue.displaySynergy, { item }, this.getSynergyStatsItWillUpdate(effectValue.stat, mergedStatMapping)));
                     }
                 } else {
-                    this.addStat(stats.stats, effectValue.stat, effectValue.value, { item });
+                    if (!ignorePhysicalElementalStats || !this.PHYSICAL_ELEMENTAL_STATS.includes(effectValue.stat)) {
+                        this.addStat(stats.stats, effectValue.stat, effectValue.value, { item });
+                    }
                 }
             }
 

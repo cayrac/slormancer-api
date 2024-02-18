@@ -2,7 +2,7 @@ import { DataReaper } from '../../../model/content/data/data-reaper';
 import { EffectValueUpgradeType } from '../../../model/content/enum/effect-value-upgrade-type';
 import { EffectValueValueType } from '../../../model/content/enum/effect-value-value-type';
 import { ReaperEffect } from '../../../model/content/reaper-effect';
-import { effectValueConstant, effectValueSynergy } from '../../../util/effect-value.util';
+import { effectValueConstant, effectValueSynergy, effectValueVariable } from '../../../util/effect-value.util';
 import { isEffectValueConstant, isEffectValueSynergy, isEffectValueVariable, valueOrNull } from '../../../util/utils';
 
 function overrideValueTypeAndStat(effect: ReaperEffect | null, index: number, valueType: EffectValueValueType, stat: string | null = null) {
@@ -572,6 +572,26 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
         override: (ba, be, ma) => { 
             synergyMultiply100(ba, 0);
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'unstable_bones_increased_damages');
+        }
+    },
+    45: {
+        override: (ba, be, ma) => { 
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'figther_bane_max_stacks');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'figther_bane_res_phy_percent');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'figther_bane_armor_penetration_percent');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'mage_bane_max_stacks');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'mage_bane_res_mag_percent');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'mage_bane_elemental_penetration_percent');
+            overrideValueTypeAndStat(ba, 8, EffectValueValueType.Stat, 'res_phy_add');
+            overrideValueTypeAndStat(ba, 9, EffectValueValueType.Stat, 'res_mag_add');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'primary_secondary_skill_increased_damage_mult');
+
+            if (ma) {
+                ma.values.push(effectValueVariable(0, 0, EffectValueUpgradeType.None, false, 'garbage_stat'));
+            }
         }
     },
     46: {
