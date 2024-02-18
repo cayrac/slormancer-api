@@ -336,6 +336,23 @@ export class SlormancerValueUpdaterService {
             ...reaper.templates.malediction.map(effect => effect.values).flat()
         ];
 
+        if (reaper.id === 96) {
+            const righteousSunlightAdditionalDamage = <EffectValueSynergy>effectValues.find(effect => effect.stat === 'righteous_sunlight_additional_damage');
+            if (righteousSunlightAdditionalDamage) {
+                console.log('update damage reaper 96 damage found');
+                const base = reaper.templates.base[0];
+                if (base) {
+                    console.log('update damage reaper 96 base found');
+                    const righteous_damage = base.values[8];
+                    if (righteous_damage && isEffectValueSynergy(righteous_damage)) {
+                        console.log('update damage reaper 96 synergy found', righteous_damage, righteousSunlightAdditionalDamage);
+                        righteous_damage.synergy = add(righteous_damage.synergy, righteousSunlightAdditionalDamage.synergy);
+                        righteous_damage.displaySynergy = round(righteous_damage.synergy, 0);
+                    }
+                }
+            }
+        }
+        
         for (const effectValue of effectValues) {
             if (effectValue.valueType === EffectValueValueType.AreaOfEffect) {
 

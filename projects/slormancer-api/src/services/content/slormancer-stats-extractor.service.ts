@@ -631,7 +631,6 @@ export class SlormancerStatsExtractorService {
         }
 
         if (character.reaper.id === 96) {
-            console.log('adding reaper 96 synergies')
             stats.synergies.push(synergyResolveData(
                 effectValueSynergy(100 * config.moonlight_stacks, 0, EffectValueUpgradeType.None, false, 'health_regeneration', 'health_regeneration_per_moonlight_stack', EffectValueValueType.Stat, undefined, 3),
                 -1,
