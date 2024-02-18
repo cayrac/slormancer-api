@@ -893,6 +893,25 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'apex_predator_max_stacks');
         }
     },
+    96: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'sun_effect_health_regen_global_mult');
+            overrideValueTypeAndStat(ba, 8, EffectValueValueType.Damage, 'physical_damage');
+            addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 9, EffectValueValueType.Damage, 'righteous_sunlight_additional_damage');
+            overrideSynergySource(ba, 9, 'health_regeneration_per_moonlight_stack');
+            overrideValueTypeAndStat(ba, 10, EffectValueValueType.Stat, 'moon_effect_primary_secondary_skill_additional_damage');
+            overrideSynergySource(ba, 10, 'life_on_hit_per_sunlight_stack');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'moon_effect_health_on_hit_global_mult');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'moon_effect_health_regen_global_mult');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+
+        }
+    },
     98: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'overdrive_chance_percent_on_critical_strike');

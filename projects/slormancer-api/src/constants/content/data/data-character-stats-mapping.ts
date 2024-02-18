@@ -488,6 +488,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'health_recovery_mult' },
                 { stat: 'high_life_health_recovery_mult', condition: (config, stats) => config.percent_missing_health < (100 - getFirstStat(stats, 'reverse_life_regeneration_life_treshold', 0)) },
+                { stat: 'sun_effect_health_regen_global_mult', condition: (config) => !config.moonlight_side },
+                { stat: 'moon_effect_health_regen_global_mult', condition: (config) => config.moonlight_side },
 
             ],
             maxMultiplier: [],
@@ -528,7 +530,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxPercent: [],
             multiplier: [
                 { stat: 'health_on_hit_global_mult' },
-                { stat: 'health_recovery_mult' }
+                { stat: 'health_recovery_mult' },
+                { stat: 'moon_effect_health_on_hit_global_mult', condition: config => config.moonlight_side }
             ],
             maxMultiplier: [],
         } 
@@ -1440,7 +1443,6 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [
                 { stat: 'inner_fire_damage_percent' },
                 { stat: 'concentration_buff_inner_fire_damage_percent', condition: config => config.concentration_buff },
-                // { stat: 'concentration_buff_inner_fire_damage_percent_on_elite', condition: config => config.concentration_buff },
             ],
             maxPercent: [],
             multiplier: [
@@ -1889,6 +1891,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'additional_damage_add' },
                 { stat: 'primary_skill_additional_damages', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary') },
                 { stat: 'primary_secondary_skill_additional_damage', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary') },
+                { stat: 'moon_effect_primary_secondary_skill_additional_damage', condition: (config, stats) => config.moonlight_side && (hasStat(stats, 'skill_is_equipped_primary') || hasStat(stats, 'skill_is_equipped_secondary')) },
             ],
             max: [],
             percent: [],

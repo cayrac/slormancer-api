@@ -222,6 +222,8 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'victims_combo_100', Math.max(0, config.victims_combo - 100), { synergy: 'Combo counter minus 100' });
         this.addStat(stats.stats, 'current_dps', 0, { synergy: 'Current dps (not supported)' });
         this.addStat(stats.stats, 'absorbed_damage_wrath', 0, { synergy: 'Absorbed damage wrath' });
+        this.addStat(stats.stats, 'moonlight_stacks', config.moonlight_stacks, { synergy: 'Moonlight stacks' });
+        this.addStat(stats.stats, 'sunlight_stacks', config.sunlight_stacks, { synergy: 'Sunlight stacks' });
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {
@@ -626,6 +628,22 @@ export class SlormancerStatsExtractorService {
                     this.addStat(stats.stats, 'cooldown_reduction_global_mult', 1, { activable: bloodfrenzy as Activable });
                 }
             }
+        }
+
+        if (character.reaper.id === 96) {
+            console.log('adding reaper 96 synergies')
+            stats.synergies.push(synergyResolveData(
+                effectValueSynergy(100 * config.moonlight_stacks, 0, EffectValueUpgradeType.None, false, 'health_regeneration', 'health_regeneration_per_moonlight_stack', EffectValueValueType.Stat, undefined, 3),
+                -1,
+                { synergy: 'Health regeneration per moonlight stack' },
+                [{ stat: 'health_regeneration_per_moonlight_stack' }]
+            ));
+            stats.synergies.push(synergyResolveData(
+                effectValueSynergy(100 * config.sunlight_stacks, 0, EffectValueUpgradeType.None, false, 'life_on_hit', 'life_on_hit_per_sunlight_stack', EffectValueValueType.Stat, undefined, 3),
+                -1,
+                { synergy: 'Life on hit per sunlight stack' },
+                [{ stat: 'life_on_hit_per_sunlight_stack' }]
+            ));
         }
     }
 
