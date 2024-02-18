@@ -53,12 +53,12 @@ export class SlormancerCharacterUpdaterService {
                 private slormancerSynergyResolverService: SlormancerSynergyResolverService
         ) { }
 
-    private resetAttributes(character: Character) {
+    /*private resetAttributes(character: Character) {
         for (const attribute of ALL_ATTRIBUTES) {
             character.attributes.allocated[attribute].baseRank = 0;
             this.slormancerAttributeService.updateAttributeTraits(character.attributes.allocated[attribute]);
         }
-    }
+    }*/
 
     private applyReaperAffinities(character: Character, reaper: Reaper, config: CharacterConfig) {
         const items = ALL_GEAR_SLOT_VALUES.map(slot => character.gear[slot]).filter(isNotNullOrUndefined);
@@ -512,10 +512,11 @@ export class SlormancerCharacterUpdaterService {
         character.attributes.maxPoints = character.level;
         let allocatedPoints = ALL_ATTRIBUTES.map(attribute => character.attributes.allocated[attribute].baseRank).reduce((p, c) => p + c, 0);
 
-        if (allocatedPoints > character.attributes.maxPoints) {
+        /*if (allocatedPoints > character.attributes.maxPoints) {
             this.resetAttributes(character);
             allocatedPoints = 0;
-        }
+        }*/
+
         character.attributes.remainingPoints = character.attributes.maxPoints - allocatedPoints;
 
         this.updateActiveSkillUpgrades(character);
