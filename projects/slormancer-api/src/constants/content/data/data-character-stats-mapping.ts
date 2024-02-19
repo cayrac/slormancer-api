@@ -1969,7 +1969,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     stat: 'suport_streak_increased_damage',
                     condition: (config, stats) => hasStat(stats, 'skill_is_equipped_support') && (getFirstStat(stats, 'hero_class', 0) !== HeroClass.Warrior || getFirstStat(stats, 'skill_id', 0) !== 2) ,
                     multiplier: (config, stats) => 1 + (getFirstStat(stats, 'support_streak_increased_effect_per_stack', 0) * Math.max(0, Math.min(config.support_streak_stacks, getMaxStacks(stats, 'support_streak_max_stacks'))) / 100)
-                }
+                },
+                { stat: 'non_projectile_increased_damage_mult', condition: (_, stats) => !hasStat(stats, 'skill_is_projectile'), multiplier: () => -1 },
             ],
             maxMultiplier: [
             ],

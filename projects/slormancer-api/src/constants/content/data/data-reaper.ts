@@ -920,6 +920,30 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, -100, true, EffectValueValueType.Stat, 'melee_skill_increased_damage_mult');
         }
     },
+    100: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'non_projectile_increased_damage_mult');
+        }
+    },
+    101: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
+    102: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     104: {
         override: (ba, be, ma, reaperId) => {
             addConstant(ma, 1, true, EffectValueValueType.Stat, 'disable_greater_traits')
