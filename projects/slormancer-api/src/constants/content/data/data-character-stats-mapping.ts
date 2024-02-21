@@ -492,7 +492,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'high_life_health_recovery_mult', condition: (config, stats) => config.percent_missing_health < (100 - getFirstStat(stats, 'reverse_life_regeneration_life_treshold', 0)) },
                 { stat: 'sun_effect_health_regen_global_mult', condition: (config) => !config.moonlight_side },
                 { stat: 'moon_effect_health_regen_global_mult', condition: (config) => config.moonlight_side },
-
+                { stat: 'missing_life_orb_health_regen_global_mult', multiplier: (config, stats) => Math.max(0, getMaxStat(stats, 'max_life_orb') - Math.max(0, config.life_orbs_count)) },
             ],
             maxMultiplier: [],
         } 
@@ -653,6 +653,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxPercent: [],
             multiplier: [
                 { stat: 'the_speed_percent_in_combat', condition: config => config.in_combat },
+                { stat: 'life_orb_the_speed_global_mult', condition: config => config.life_orbs_count > 0, multiplier: (config, stats) => Math.min(config.life_orbs_count, getMaxStat(stats, 'max_life_orb')) },
             ],
             maxMultiplier: [],
         } 

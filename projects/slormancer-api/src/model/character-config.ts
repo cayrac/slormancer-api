@@ -137,6 +137,7 @@ export interface CharacterConfig {
     moonlight_stacks: number;
     sunlight_stacks: number;
     moonlight_side: boolean;
+    life_orbs_count: number;
     has_elemental_temper_buff: boolean;
     has_splash_splash_buff: boolean;
     has_soul_bound_buff: boolean;

@@ -75,6 +75,19 @@ function synergyMultiply100(effect: ReaperEffect | null, index: number) {
     }
 }
 
+function synergyMultiply100BaseAndUpgrade(effect: ReaperEffect | null, index: number) {
+
+    const value = effect !== null ? valueOrNull(effect.values[index]) : null;
+
+    if (value !== null && (isEffectValueVariable(value) || isEffectValueSynergy(value))) {
+        value.baseValue = value.baseValue * 100;
+        value.baseUpgrade = value.baseUpgrade * 100;
+        value.upgrade = value.upgrade * 100;
+    } else {
+        throw new Error('failed to change value for effect value at index ' + index);
+    }
+}
+
 function addConstant(effect: ReaperEffect | null, value: number, percent: boolean, valueType: EffectValueValueType, stat: string) {
     if (effect !== null) {
         effect.values.push(effectValueConstant(value, percent, stat, valueType))
@@ -961,6 +974,34 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
+    103: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'max_life_orb');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'life_orb_the_speed_global_mult');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'missing_life_orb_health_regen_global_mult');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 8, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 9, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 10, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 11, EffectValueValueType.Stat, 'garbage_stat');
+
+            synergyMultiply100BaseAndUpgrade(ba, 12);
+            overrideSynergySource(ba, 12, 'health_regeneration');
+            setSynergyDetailOnSynergy(ba, 12, false);
+            overrideValueTypeAndStat(ba, 12, EffectValueValueType.Damage, 'physical_damage');
+            synergyMultiply100BaseAndUpgrade(ba, 13);
+            overrideSynergySource(ba, 13, 'health_regeneration');
+            setSynergyDetailOnSynergy(ba, 13, false);
+            overrideValueTypeAndStat(ba, 13, EffectValueValueType.Damage, 'additional_damage');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'max_life_orb');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'missing_life_orb_life_projectile_increased_damage');
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
     104: {
