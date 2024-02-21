@@ -652,6 +652,28 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, -100, true, EffectValueValueType.Stat, 'elemental_damage_global_mult');
         }
     },
+    55: {
+        override: (ba, be, ma) => {
+            addConstant(ba, 0, true, EffectValueValueType.Stat, 'reaper_added_to_skill_and_elements');
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stats');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stats');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stats');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stats');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'meteor_increased_damage');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stats');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stats');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stats');
+            if (ba && ba.template) {
+                ba.template = ba.template.substring(0, ba.template.length - 10);
+            }
+        }
+    },
+    56: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stats');
+        }
+    },
     57: {
         override: (ba, be, ma) => {
             addConstant(ba, 1.499, false, EffectValueValueType.AreaOfEffect, 'inner_firework_radius');

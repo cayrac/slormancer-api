@@ -343,6 +343,25 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             overrideValueStat(values, 2, 'garbage_stat');
         }
     },
+    41: {
+        override: values => {
+            overrideValueStat(values, 0, 'physical_damage');
+            addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    42: {
+        override: values => {
+            overrideValueStat(values, 0, 'elemental_damage');
+            addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
+    43: {
+        override: values => {
+            overrideValueStat(values, 0, 'physical_damage');
+            overrideValueStat(values, 1, 'elemental_damage');
+            addConstant(values, 3, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        }
+    },
     54: {
         override: values => {
             overrideValueStat(values, 0, 'the_max_mana_add');

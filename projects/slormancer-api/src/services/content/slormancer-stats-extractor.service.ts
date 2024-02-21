@@ -86,6 +86,7 @@ export class SlormancerStatsExtractorService {
         const addReaperToInnerFire = extractedStats.stats['reaper_added_to_inner_fire'] !== undefined
         const splitReaperToPhysicalAndElement = extractedStats.stats['reaper_split_to_physical_and_element'] !== undefined
         const addReaperToElements = extractedStats.stats['reaper_added_to_elements'] !== undefined
+        const addReaperToSkillAndElements = extractedStats.stats['reaper_added_to_skill_and_elements'] !== undefined
         const overdriveDamageBasedOnSkillDamage = extractedStats.stats['overdrive_damage_based_on_skill_damage'] !== undefined
 
         let mapping = mergedStatMapping.find(m => m.stat === 'physical_damage');
@@ -149,7 +150,12 @@ export class SlormancerStatsExtractorService {
             extractedStats.synergies.push(synergyResolveData(effectValueSynergy(indirect_defense, 0, EffectValueUpgradeType.None, false, 'max_health', 'indirect_defense'), 0, { synergy: 'Max health' }, [ { stat: 'indirect_defense', mapping } ]));
         }
 
-        if (addReaperToInnerFire) {
+        if (addReaperToSkillAndElements) {
+            mapping = mergedStatMapping.find(m => m.stat === 'elemental_damage');
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'weapon_damage', 'weapon_to_elemental_damage'), -1, { synergy: 'Reaper damages' }, [ { stat: 'elemental_damage', mapping } ]));
+            mapping = mergedStatMapping.find(m => m.stat === 'physical_damage');
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'weapon_damage', 'weapon_to_physical_damage'), -1, { synergy: 'Reaper damages' }, [ { stat: 'physical_damage', mapping } ]));
+        } else if (addReaperToInnerFire) {
             mapping = mergedStatMapping.find(m => m.stat === 'inner_fire_damage');
             extractedStats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'weapon_damage', 'inner_fire_damage_add_extra'), -1, { synergy: 'Reaper damages' }, [ { stat: 'inner_fire_damage', mapping } ]));
         } else if (splitReaperToPhysicalAndElement) {
