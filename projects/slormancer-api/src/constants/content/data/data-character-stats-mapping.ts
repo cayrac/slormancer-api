@@ -1625,7 +1625,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [
+                { stat: 'rebound_chance_global_mult' }
+            ],
             maxMultiplier: [],
         } 
     },

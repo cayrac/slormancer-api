@@ -695,6 +695,30 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
+    59: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 8, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 9, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(ba, 10, EffectValueValueType.Stat, 'physical_damage');
+            overrideValueTypeAndStat(ba, 11, EffectValueValueType.Stat, 'physical_damage');
+
+            addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+
+            moveValue(ba, 12, be);
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 4, EffectValueValueType.Stat, 'physical_damage');
+
+        }
+    },
     60: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'projectile_weapon_damage_mult');
