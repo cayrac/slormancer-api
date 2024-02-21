@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { MAX_REAPER_AFFINITY_BONUS } from '../constants/common';
+import { MAX_HERO_LEVEL, MAX_REAPER_AFFINITY_BONUS } from '../constants/common';
 import { DATA_HERO_BASE_STATS } from '../constants/content/data/data-hero-base-stats';
 import { Character } from '../model/character';
 import { CharacterConfig } from '../model/character-config';
@@ -233,6 +233,24 @@ export class SlormancerCharacterUpdaterService {
 
         if (character.fromCorrupted) {
             character.issues.push('This build has been recovered from a corrupted version of the slorm planner, data may be incomplete');
+        }
+        
+        // déplacer dans le updateIssues avec stats au dessus du max ?
+        const noMaxManaLock = 'ungifted_mana_lock_no_max' in statsResult.extractedStats
+        const manaLockpercentStat = statsResult.extractedStats['mana_lock_percent'];
+        const percentLockedHealthStat = statsResult.extractedStats['percent_locked_health'];
+
+        const manaLockpercent = manaLockpercentStat && manaLockpercentStat[0] ? manaLockpercentStat[0] : null;
+        const lifeLockpercent = percentLockedHealthStat && percentLockedHealthStat[0] ? percentLockedHealthStat[0] : null;
+        if (manaLockpercent && manaLockpercent.value > 100 && !noMaxManaLock) {
+            character.issues.push('Mana locked is over your maximum mana');
+        }
+        if (lifeLockpercent && lifeLockpercent.value > 100) {
+            character.issues.push('Life locked is over your maximum life');
+        }
+
+        if (character.attributes.remainingPoints < 0) {
+            character.issues.push('More than ' + MAX_HERO_LEVEL + ' attribute points allocated');
         }
     }
 
@@ -500,6 +518,8 @@ export class SlormancerCharacterUpdaterService {
     }
 
     public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
+        character.issues = [];
+
         character.ancestralLegacies.activeAncestralLegacies = this.slormancerDataService.getAncestralSkillIdFromNodes(character.ancestralLegacies.activeNodes, character.ancestralLegacies.activeFirstNode);
 
         this.removeUnavailableActivables(character);

@@ -912,6 +912,25 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
 
         }
     },
+    97: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'primary_skill_increased_damage');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'mana_cost_free_treshold');
+
+            if (ba) {
+                ba.values.push(effectValueVariable(0, 0, EffectValueUpgradeType.None, false, 'garbage_stat'));
+            }
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'ungifted_mana_lock_no_max');
+
+            if (be && be.template) {
+                be.template = be.template.replace('\n|', '')
+            }
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'mana_is_overrated_mana_lock_percent');
+        }
+    },
     98: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'overdrive_chance_percent_on_critical_strike');

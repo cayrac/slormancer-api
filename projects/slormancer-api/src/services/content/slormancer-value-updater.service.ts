@@ -430,9 +430,18 @@ export class SlormancerValueUpdaterService {
         if (stats['mana_cost_add']) {
             manaCostAdd.push(...stats['mana_cost_add']);
         }
-        if (source.baseCost !== null) {
+
+        let baseCost = source.baseCost;
+        if (baseCost !== null) {
             if ('activable' in entity) {
-                manaCostAdd.push({ value: source.baseCost, source: entity });
+                if (source.id === 55) {
+                    const entityValue = stats['mana_is_overrated_mana_lock_percent'];
+                    if (entityValue) {
+                        baseCost = (entityValue[0] as EntityValue<number>).value;
+                    }
+                }
+                
+                manaCostAdd.push({ value: baseCost, source: entity });
             } else if (entity.ancestralLegacy.currentRankCost !== null) {
                 manaCostAdd.push({ value: entity.ancestralLegacy.currentRankCost, source: entity });
             }

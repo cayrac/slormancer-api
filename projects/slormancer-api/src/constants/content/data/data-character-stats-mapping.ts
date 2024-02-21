@@ -314,6 +314,31 @@ export const MAX_MANA_MAPPING: MergedStatMapping = {
     } 
 }
 
+export const MAX_LIFE_MAPPING: MergedStatMapping = {
+    stat: 'max_health',
+    precision: 0,
+    allowMinMax: false,
+    suffix: '',
+    source: {
+        flat: [
+            { stat: 'the_max_health_set' },
+            { stat: 'the_max_health_add', condition: (_, stats) => stats['the_max_health_set'] === undefined }
+        ],
+        max: [],
+        percent: [
+            { stat: 'the_max_health_percent', condition: (_, stats) => stats['the_max_health_set'] === undefined },
+            { stat: 'the_max_health_percent_per_totem',
+                condition: (config, stats) => config.totems_under_control > 0 && stats['the_max_health_set'] === undefined,
+                multiplier: config => config.totems_under_control
+            },
+            { stat: 'vitality_stack_the_max_health_percent', condition: (config, stats) => stats['the_max_health_set'] === undefined && config.vitality_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'vitality_max_stack'), config.vitality_stacks) },
+        ],
+        maxPercent: [],
+        multiplier: [{ stat: 'the_max_health_global_mult', condition: (_, stats) => stats['the_max_health_set'] === undefined }],
+        maxMultiplier: [],
+    } 
+}
+
 export const SKILL_ADDITIONAL_DURATION: MergedStatMapping = {
     stat: 'skill_additional_duration',
     precision: 2,
@@ -451,30 +476,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         } 
     },
     // max_health
-    {
-        stat: 'max_health',
-        precision: 0,
-        allowMinMax: false,
-        suffix: '',
-        source: {
-            flat: [
-                { stat: 'the_max_health_set' },
-                { stat: 'the_max_health_add', condition: (_, stats) => stats['the_max_health_set'] === undefined }
-            ],
-            max: [],
-            percent: [
-                { stat: 'the_max_health_percent', condition: (_, stats) => stats['the_max_health_set'] === undefined },
-                { stat: 'the_max_health_percent_per_totem',
-                    condition: (config, stats) => config.totems_under_control > 0 && stats['the_max_health_set'] === undefined,
-                    multiplier: config => config.totems_under_control
-                },
-                { stat: 'vitality_stack_the_max_health_percent', condition: config => config.vitality_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'vitality_max_stack'), config.vitality_stacks) },
-            ],
-            maxPercent: [],
-            multiplier: [{ stat: 'the_max_health_global_mult', condition: (_, stats) => stats['the_max_health_set'] === undefined }],
-            maxMultiplier: [],
-        } 
-    },
+    MAX_LIFE_MAPPING,
     {
         stat: 'health_regeneration',
         precision: 0,

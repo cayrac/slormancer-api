@@ -342,5 +342,17 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             overrideValueStat(values, 1, 'increased_damage_mult_per_bloodthirst_stack');
             overrideValueStat(values, 2, 'garbage_stat');
         }
+    },
+    54: {
+        override: values => {
+            overrideValueStat(values, 0, 'the_max_mana_add');
+        }
+    },
+    55: {
+        override: values => {
+            setUpgradeValue(values, 0, 0);
+            overrideValueStat(values, 0, 'garbage_stat');
+            overrideValueStat(values, 1, 'garbage_stat');
+        }
     }
 }
