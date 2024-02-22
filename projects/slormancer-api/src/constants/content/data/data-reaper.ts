@@ -747,6 +747,39 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             synergyMultiply100(ba, 1);
         }
     },
+    63: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            moveValue(ba, 4, ma);
+            moveValue(ba, 4, ma);
+            moveValue(ba, 4, ma);
+            moveValue(ba, 4, ma);
+            addConstant(ma, -100, true, EffectValueValueType.Stat, 'recast_chance_minus_100_add');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'melee_crit_chance_global_mult');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'melee_brut_chance_global_mult');
+
+            overrideSynergySource(ma, 0, 'critical_chance');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ma, 0);
+            overrideSynergySource(ma, 1, 'recast_chance');
+            overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ma, 1);
+            overrideSynergySource(ma, 2, 'ancestral_chance');
+            overrideValueTypeAndStat(ma, 2, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ma, 2);
+            overrideSynergySource(ma, 3, 'recast_chance');
+            overrideValueTypeAndStat(ma, 3, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ma, 3);
+
+            if (ma) {
+                ma.values.push(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'recast_chance_minus_100', 'crit_chance_global_mult', EffectValueValueType.Stat, undefined, 3))
+                ma.values.push(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'recast_chance_minus_100', 'brut_chance_global_mult', EffectValueValueType.Stat, undefined, 3))
+            }
+        }
+    },
     65: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Unknown, 'garbage_stat');

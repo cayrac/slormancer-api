@@ -365,6 +365,27 @@ export const SKILL_ADDITIONAL_DURATION: MergedStatMapping = {
     } 
 }
 
+export const RECAST_CHANCE_MAPPING: MergedStatMapping = 
+{
+    stat: 'recast_chance',
+    precision: 1,
+    allowMinMax: false,
+    suffix: '%',
+    source: {
+        flat: [
+            { stat: 'recast_chance_percent' },
+            { stat: 'recast_chance_percent_if_perfect', condition: config => config.next_cast_is_perfect },
+            { stat: 'recast_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
+            { stat: 'recast_chance_percent_per_non_obliteration_emblem', condition: config => (config.arcanic_emblems + config.temporal_emblems) > 0, multiplier: config => config.arcanic_emblems + config.temporal_emblems },
+        ],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [],
+        maxMultiplier: [],
+    } 
+};
+
 export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
     {
         stat: 'effect_rune_effect',
@@ -792,6 +813,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [],
             maxPercent: [],
             multiplier: [
+                { stat: 'crit_chance_global_mult' },
                 { stat: 'crit_chance_global_mult_after_hit_taken', condition: config => config.took_physical_damage_recently || config.took_elemental_damage_recently },
                 { stat: 'enemy_full_life_crit_chance_global_mult', condition: (config, stats) => config.use_enemy_state && (100 - config.enemy_percent_missing_health) >= getFirstStat(stats, 'enemy_full_life_crit_chance_global_mult_treshold', 0) },
                 { stat: 'crit_chance_global_mult_per_yard', condition: config => config.use_enemy_state && config.distance_with_target > 0, multiplier: config => config.distance_with_target },
@@ -853,7 +875,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [
+                { stat: 'brut_chance_global_mult' }
+            ],
             maxMultiplier: [],
         } 
     },
@@ -1531,24 +1555,23 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         } 
     },
     {
-        stat: 'recast_chance',
+        stat: 'recast_chance_minus_100',
         precision: 1,
         allowMinMax: false,
         suffix: '%',
         source: {
-            flat: [
-                { stat: 'recast_chance_percent' },
-                { stat: 'recast_chance_percent_if_perfect', condition: config => config.next_cast_is_perfect },
-                { stat: 'recast_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
-                { stat: 'recast_chance_percent_per_non_obliteration_emblem', condition: config => (config.arcanic_emblems + config.temporal_emblems) > 0, multiplier: config => config.arcanic_emblems + config.temporal_emblems },
+            flat: [ 
+                { stat: 'recast_chance_minus_100_add', extra: true },
+                ...RECAST_CHANCE_MAPPING.source.flat
             ],
-            max: [],
-            percent: [],
-            maxPercent: [],
-            multiplier: [],
-            maxMultiplier: [],
+            max: [ ...RECAST_CHANCE_MAPPING.source.max ],
+            percent: [ ...RECAST_CHANCE_MAPPING.source.percent ],
+            maxPercent: [ ...RECAST_CHANCE_MAPPING.source.maxPercent ],
+            multiplier: [ ...RECAST_CHANCE_MAPPING.source.multiplier ],
+            maxMultiplier: [ ...RECAST_CHANCE_MAPPING.source.maxMultiplier ],
         } 
     },
+    RECAST_CHANCE_MAPPING,
     {
         stat: 'knockback_melee',
         precision: 1,
