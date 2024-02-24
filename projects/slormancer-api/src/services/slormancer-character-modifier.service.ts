@@ -5,13 +5,12 @@ import { Character } from '../model/character';
 import { Skill } from '../model/content/skill';
 import { SkillUpgrade } from '../model/content/skill-upgrade';
 import { isNotNullOrUndefined } from '../util/utils';
-import { SlormancerAncestralLegacyService } from './content/slormancer-ancestral-legacy.service';
+import { SlormancerAncestralLegacyNodesService } from './content';
 
 @Injectable()
 export class SlormancerCharacterModifierService {
 
-    constructor(private slormancerAncestralLegacyService: SlormancerAncestralLegacyService,
-        ) { }
+    constructor(private slormancerAncestralLegacyNodesService: SlormancerAncestralLegacyNodesService) { }
 
     public setPrimarySkill(character: Character, skill: Skill): boolean {
         let result = false;
@@ -81,38 +80,28 @@ export class SlormancerCharacterModifierService {
         return changed;
     }
 
-    public activateAncestralLegacyNode(character: Character, nodeId: number): boolean {
+    public toggleAncestralLegacyNode(character: Character, nodeId: number): boolean {
+        const activeNodes = this.slormancerAncestralLegacyNodesService.getAllActiveNodes(character);
         let changed = false;
 
-        if (character.ancestralLegacies.activeNodes.indexOf(nodeId) === -1
-            && character.ancestralLegacies.activeNodes.length < UNLOCKED_ANCESTRAL_LEGACY_POINTS) {
+        if (activeNodes.includes(nodeId)) {
+            if (character.ancestralLegacies.activeNodes.includes(nodeId)) {
+                character.ancestralLegacies.activeNodes = character.ancestralLegacies.activeNodes.filter(node => node !== nodeId);
+                changed = true;
+            } else if (character.ancestralLegacies.activeFirstNode === nodeId) {
+                character.ancestralLegacies.activeFirstNode = null;
+                changed = true;
+            }
+        } else if (this.slormancerAncestralLegacyNodesService.isNodeConnectedToStart(nodeId, character) && character.ancestralLegacies.activeNodes.length < UNLOCKED_ANCESTRAL_LEGACY_POINTS) {
             character.ancestralLegacies.activeNodes.push(nodeId);
             changed = true;
-        }
-
-        return changed;
-    }
-
-    public activateFirstAncestralLegacyNode(character: Character, nodeId: number): boolean {
-        let changed = false;
-
-        if (character.ancestralLegacies.activeFirstNode === null) {
+        } else if (character.ancestralLegacies.activeFirstNode === null) {
             character.ancestralLegacies.activeFirstNode = nodeId;
             changed = true;
         }
 
-        return changed;
-    }
-    
-    public disableAncestralLegacyNode(character: Character, nodeId: number): boolean {
-        let changed = false;
-
-        if (character.ancestralLegacies.activeNodes.indexOf(nodeId) !== -1) {
-            character.ancestralLegacies.activeNodes = this.slormancerAncestralLegacyService.getValidNodes(character.ancestralLegacies.activeNodes.filter(id => id !== nodeId));
-            changed = true;
-        } else if (character.ancestralLegacies.activeFirstNode === nodeId) {
-            character.ancestralLegacies.activeFirstNode = null;
-            changed = true;
+        if (changed) {
+            this.slormancerAncestralLegacyNodesService.stabilize(character);
         }
 
         return changed;

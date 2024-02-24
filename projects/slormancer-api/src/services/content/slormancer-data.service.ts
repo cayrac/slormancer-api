@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { DATA_ACTIVABLE } from '../../constants/content/data/data-activable';
 import { DATA_ANCESTRAL_LEGACY } from '../../constants/content/data/data-ancestral-legacy';
-import { ANCESTRAL_LEGACY_REALMS } from '../../constants/content/data/data-ancestral-legacy-realms';
 import { DATA_ATTRIBUTE_MECHANIC } from '../../constants/content/data/data-attribute-mechanic';
 import { DATA_BASE_MAX_BASIC_STATS } from '../../constants/content/data/data-base-max-basic-stat';
 import { DATA_EQUIPABLE_ITEM } from '../../constants/content/data/data-equipable-item';
@@ -167,37 +166,8 @@ export class SlormancerDataService {
         return gameData === null ? 0 : gameData.REALM_COLOR;
     }
 
-    public getAncestralRealmsFromNodes(nodes: Array<number>, firstNode: number | null): Array<number> {
-        // à bouger dans ancestral legacy service ?
-        const realms = ANCESTRAL_LEGACY_REALMS
-            .filter(realms => realms.nodes.find(node => nodes.indexOf(node) !== -1) !== undefined)
-            .map(zone => zone.realm);
-        
-        if (firstNode !== null) {
-            const firstRealms = ANCESTRAL_LEGACY_REALMS
-                .filter(realms => realms.nodes.includes(firstNode));
-            const highestRealm = firstRealms.find(realm => firstRealms.some(frealm => frealm.realm < realm.realm))
-
-            if (highestRealm !== undefined) {
-                realms.push(highestRealm.realm);
-            }
-        }
-
-        return realms;
-    }
-
-    public getAncestralLegacyIdsFromRealm(realm: number): Array<number> {
-        return GAME_DATA.ANCESTRAL_LEGACY
-            .filter(ancestralLegacy => ancestralLegacy.REALM === realm)
-            .map(ancestralLegacy => ancestralLegacy.REF);
-    }
-    
-    public getAncestralSkillIdFromNodes(nodes: Array<number>, firstNode: number | null): Array<number> {
-        const realms = this.getAncestralRealmsFromNodes(nodes, firstNode);
-
-        return GAME_DATA.ANCESTRAL_LEGACY
-            .filter(ancestralLegacy => realms.indexOf(ancestralLegacy.REALM) !== -1)
-            .map(ancestralLegacy => ancestralLegacy.REF);
+    public getAncestralLegacies(): GameDataAncestralLegacy[] {
+        return GAME_DATA.ANCESTRAL_LEGACY;
     }
 
     public getGameDataAncestralLegacy(id: number): GameDataAncestralLegacy | null {

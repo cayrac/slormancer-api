@@ -26,6 +26,7 @@ import { SlormancerReaperService } from './content/slormancer-reaper.service';
 import { SlormancerRuneService } from './content/slormancer-rune.service';
 import { SlormancerSkillService } from './content/slormancer-skill.service';
 import { SlormancerUltimatumService } from './content/slormancer-ultimatum.service';
+import { SlormancerAncestralLegacyNodesService } from './content';
 
 @Injectable()
 export class SlormancerCharacterBuilderService {
@@ -37,7 +38,8 @@ export class SlormancerCharacterBuilderService {
                 private slormancerSkillService: SlormancerSkillService,
                 private slormancerAttributeService: SlormancerAttributeService,
                 private slormancerAncestralLegacyService: SlormancerAncestralLegacyService,
-                private slormancerUltimatumService: SlormancerUltimatumService
+                private slormancerUltimatumService: SlormancerUltimatumService,
+                private slormancerAncestralLegacyNodesService: SlormancerAncestralLegacyNodesService
         ) { }
 
     private getSkills(heroClass: HeroClass, equipped: Array<number> = [], ranks: Array<number> = []): Array<CharacterSkillAndUpgrades> {
@@ -412,7 +414,7 @@ export class SlormancerCharacterBuilderService {
                         reaper: Reaper | null = null,
                         runes: RunesCombination = { activation: null, effect: null, enhancement: null },
                         ultimatum: Ultimatum | null = null,
-                        activeAncestralNodes: Array<number> = [],
+                        activeNodes: Array<number> = [],
                         activeFirstNode: number | null = null,
                         ancestralRanks: Array<number> = [],
                         skillEquipped: Array<number> = [],
@@ -453,6 +455,8 @@ export class SlormancerCharacterBuilderService {
             reaper = this.slormancerReaperService.getDefaultReaper(heroClass);
         }
 
+
+
         const character: Character = {
             heroClass,
             version,
@@ -471,8 +475,8 @@ export class SlormancerCharacterBuilderService {
             ancestralLegacies: {
                 activeFirstNode,
                 ancestralLegacies: this.getAncestralLegacies(ancestralRanks),
-                activeNodes: activeAncestralNodes,
-                activeAncestralLegacies: this.slormancerDataService.getAncestralSkillIdFromNodes(activeAncestralNodes, activeFirstNode)
+                activeNodes,
+                activeAncestralLegacies: this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds({ ancestralLegacies: { activeNodes, activeFirstNode } } as Character)
             },
             skills,
         

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { ANCESTRAL_LEGACY_REALMS, INITIAL_NODES } from '../../constants/content/data/data-ancestral-legacy-realms';
 import { AncestralLegacy } from '../../model/content/ancestral-legacy';
 import { AncestralLegacyType } from '../../model/content/ancestral-legacy-type';
 import { Buff } from '../../model/content/buff';
@@ -249,22 +248,5 @@ export class SlormancerAncestralLegacyService {
         
         const descriptionPrefix = this.isActivable(ancestralLegacy.types) ? this.slormancerTranslateService.translate(this.ACTIVE_PREFIX) + '<br/>' : '';
         ancestralLegacy.description = descriptionPrefix + this.slormancerTemplateService.formatAncestralLegacyDescription(ancestralLegacy.template, ancestralLegacy.values);
-    }
-
-    public getValidNodes(nodes: Array<number>): Array<number> {
-        let connectedNodes = nodes.filter(node => INITIAL_NODES.indexOf(node) !== -1);
-        let valid = true;
-
-        while (connectedNodes.length < nodes.length && valid) {
-            const newConnectedNodes = connectedNodes.map(node => ANCESTRAL_LEGACY_REALMS.filter(realm => realm.nodes.indexOf(node) !== -1))
-                .flat()
-                .map(realm => realm.nodes.filter(node => nodes.indexOf(node) !== -1))
-                .flat().filter(isFirst);
-
-            valid = connectedNodes.length < newConnectedNodes.length;
-            connectedNodes = newConnectedNodes;
-        }
-
-        return connectedNodes;
     }
 }

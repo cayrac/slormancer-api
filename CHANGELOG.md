@@ -54,6 +54,7 @@ Initial release
 - Personal Development Magazine damage multiplier is no longer applied twice
 - Reaper primordial data are no longer lost when parsed from a save file
 - Attributes now allow invalid values on save parsing to avoid issues with corrupted saves
+- Ancestral legacy nodes should no longer allow impossible configurations
 
 ## TODO
 - mise à jour packages

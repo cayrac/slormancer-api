@@ -19,7 +19,6 @@ import { SlormancerActivableService } from './content/slormancer-activable.servi
 import { SlormancerAncestralLegacyService } from './content/slormancer-ancestral-legacy.service';
 import { SlormancerAttributeService } from './content/slormancer-attribute.service';
 import { SlormancerClassMechanicService } from './content/slormancer-class-mechanic.service';
-import { SlormancerDataService } from './content/slormancer-data.service';
 import { SlormancerItemService } from './content/slormancer-item.service';
 import { SlormancerMechanicService } from './content/slormancer-mechanic.service';
 import { SlormancerReaperService } from './content/slormancer-reaper.service';
@@ -31,14 +30,14 @@ import { SlormancerSynergyResolverService } from './content/slormancer-synergy-r
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
 import { SkillType } from '../model';
+import { SlormancerAncestralLegacyNodesService } from './content';
 
 @Injectable()
 export class SlormancerCharacterUpdaterService {
 
     private readonly LEVEL_LABEL = this.slormancerTranslateService.translate('level').toLowerCase();
 
-    constructor(private slormancerDataService: SlormancerDataService,
-                private slormancerAttributeService: SlormancerAttributeService,
+    constructor(private slormancerAttributeService: SlormancerAttributeService,
                 private slormancerAncestralLegacyService: SlormancerAncestralLegacyService,
                 private slormancerTranslateService: SlormancerTranslateService,
                 private slormancerStatsService: SlormancerStatsService,
@@ -50,15 +49,9 @@ export class SlormancerCharacterUpdaterService {
                 private slormancerClassMechanicService: SlormancerClassMechanicService,
                 private slormancerRuneService: SlormancerRuneService,
                 private slormancerValueUpdater: SlormancerValueUpdaterService,
-                private slormancerSynergyResolverService: SlormancerSynergyResolverService
+                private slormancerSynergyResolverService: SlormancerSynergyResolverService,
+                private slormancerAncestralLegacyNodesService: SlormancerAncestralLegacyNodesService
         ) { }
-
-    /*private resetAttributes(character: Character) {
-        for (const attribute of ALL_ATTRIBUTES) {
-            character.attributes.allocated[attribute].baseRank = 0;
-            this.slormancerAttributeService.updateAttributeTraits(character.attributes.allocated[attribute]);
-        }
-    }*/
 
     private applyReaperAffinities(character: Character, reaper: Reaper, config: CharacterConfig) {
         const items = ALL_GEAR_SLOT_VALUES.map(slot => character.gear[slot]).filter(isNotNullOrUndefined);
@@ -481,6 +474,11 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
+    private updateAncestralLegacySkills(character: Character) {
+        character.ancestralLegacies.activeAncestralLegacies = this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds(character);
+
+    }
+
     private updateActiveSkillUpgrades(character: Character) {
         const addOtherNonEquippedSpecPassives = character.reaper.templates.benediction
             .map(be => be.values).flat()
@@ -520,10 +518,6 @@ export class SlormancerCharacterUpdaterService {
     public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
         character.issues = [];
 
-        character.ancestralLegacies.activeAncestralLegacies = this.slormancerDataService.getAncestralSkillIdFromNodes(character.ancestralLegacies.activeNodes, character.ancestralLegacies.activeFirstNode);
-
-        this.removeUnavailableActivables(character);
-
         character.name = this.slormancerTranslateService.translate('hero_' + character.heroClass);
         const specialization = character.supportSkill !== null ? character.supportSkill.specializationName : null;
         let fullName = [character.name, specialization].filter(isNotNullOrUndefined).join(', ');
@@ -532,12 +526,13 @@ export class SlormancerCharacterUpdaterService {
         character.attributes.maxPoints = character.level;
         let allocatedPoints = ALL_ATTRIBUTES.map(attribute => character.attributes.allocated[attribute].baseRank).reduce((p, c) => p + c, 0);
 
-        /*if (allocatedPoints > character.attributes.maxPoints) {
-            this.resetAttributes(character);
-            allocatedPoints = 0;
-        }*/
-
         character.attributes.remainingPoints = character.attributes.maxPoints - allocatedPoints;
+
+        this.slormancerAncestralLegacyNodesService.stabilize(character);
+
+        this.updateAncestralLegacySkills(character);
+
+        this.removeUnavailableActivables(character);
 
         this.updateActiveSkillUpgrades(character);
 
