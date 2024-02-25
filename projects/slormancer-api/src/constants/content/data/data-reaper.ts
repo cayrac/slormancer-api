@@ -807,6 +807,21 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             synergyMultiply100(ba, 1);
         }
     },
+    68: {
+        override: (ba, be, ma) => {
+            if (ba && ba.template) {
+                ba.template = ba.template.replace('<br/><br/><br/><br/>', '');
+            }
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
+    69: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     71: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'totem_increased_effect_percent');
