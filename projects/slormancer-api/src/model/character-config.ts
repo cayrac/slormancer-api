@@ -136,6 +136,7 @@ export interface CharacterConfig {
     fighter_bane_stacks: number;
     moonlight_stacks: number;
     sunlight_stacks: number;
+    ancestral_wrath_stacks: number;
     moonlight_side: boolean;
     life_orbs_count: number;
     has_elemental_temper_buff: boolean;

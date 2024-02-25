@@ -39,7 +39,7 @@ import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefaul
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
-import { Activable } from '../../model';
+import { Activable, AncestralLegacyType } from '../../model';
 
 export declare type ExtractedStatMap = { [key: string]: Array<EntityValue<number>> }
 
@@ -279,6 +279,11 @@ export class SlormancerStatsExtractorService {
 
             this.addMechanicValues(ancestralLegacy.relatedMechanics, stats);
         }
+
+        const equipedImbues = character.ancestralLegacies.ancestralLegacies
+            .filter(ancestralLegacy => character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id) && ancestralLegacy.types.includes(AncestralLegacyType.Imbue))
+            .length;
+        this.addStat(stats.stats, 'equipped_imbues', equipedImbues, { reaper: character.reaper });
     }
 
     private addAttributesValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
@@ -611,18 +616,28 @@ export class SlormancerStatsExtractorService {
         stats.synergies.push(synergyResolveData(effectValueSynergy(percentMissingHealth, 0, EffectValueUpgradeType.None, false, 'max_health', 'missing_health', EffectValueValueType.Stat, undefined, 3), -1, { synergy: 'Missing health' }, [ { stat: 'missing_health' } ]));
         stats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'max_health', 'max_health_shield', EffectValueValueType.Stat, undefined, 3), -1, { synergy: 'Max health and shield' }, [ { stat: 'max_health_shield' } ]));
         
-        
-        const bloodthirstMaxStacksStat = stats.stats['bloodthirst_max_stacks'];
         const increasedMaxStacks = stats.stats['increased_max_stacks'];
+        let increasedMax = 0;
+        if (increasedMaxStacks) {
+            increasedMax = increasedMaxStacks.map(entity => entity.value).reduce((value, total) => value + total, 0);
+        }
+
+        const bloodthirstMaxStacksStat = stats.stats['bloodthirst_max_stacks'];
         let bloodthirstStacks = 0;
         if (bloodthirstMaxStacksStat) {
-            let increasedMax = 0;
-            if (increasedMaxStacks) {
-                increasedMax = increasedMaxStacks.map(entity => entity.value).reduce((value, total) => value + total, 0);
-            }
             const bloodthirstMaxstacks = Math.ceil((bloodthirstMaxStacksStat[0] as EntityValue<number>).value) + increasedMax;
             bloodthirstStacks = Math.max(0, Math.min(bloodthirstMaxstacks, config.bloodthirst_stacks));
             this.addStat(stats.stats, 'bloodthirst_stacks', bloodthirstStacks, { synergy: 'Bloodthirst stacks' });
+        }        
+        
+        const ancestralWrathMaxStacks = stats.stats['ancestral_wrath_max_stacks'];
+        if (ancestralWrathMaxStacks) {
+            let max = 0;
+            const ancestralWrathMaxStacksStat = ancestralWrathMaxStacks[0];
+            if (ancestralWrathMaxStacksStat) {
+                max = Math.ceil(ancestralWrathMaxStacksStat.value) + increasedMax;
+            }
+            this.addStat(stats.stats, 'ancestral_wrath_stacks', Math.max(0, Math.min(max, config.ancestral_wrath_stacks)), { synergy: 'Ancestral wrath stacks' });
         }
 
         // Adding blood frenzy attack speed manually due to the computing issue

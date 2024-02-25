@@ -864,6 +864,24 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
 
         }
     },
+    77: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'imbued_skills_and_ancestral_beam_increased_damage_per_imbue');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'ancestral_wrath_max_stacks');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'physical_damage');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'elemental_damage');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 5);
+            
+            if (be) {
+                be.values = [];
+            }
+
+            moveValue(ba, 6, ma);
+            synergyMultiply100(ma, 0);
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'skill_decreased_damage_mult');
+        }
+    },
     78: {
         override: (ba, be, ma, reaperId) => {
             if (reaperId === 78 || reaperId === 79) {

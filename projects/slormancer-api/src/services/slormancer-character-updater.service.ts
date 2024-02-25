@@ -29,7 +29,7 @@ import { CharacterStatsBuildResult, SlormancerStatsService } from './content/slo
 import { SlormancerSynergyResolverService } from './content/slormancer-synergy-resolver.service';
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
-import { SkillType } from '../model';
+import { AncestralLegacyType, SkillType } from '../model';
 import { SlormancerAncestralLegacyNodesService } from './content';
 
 @Injectable()
@@ -477,6 +477,33 @@ export class SlormancerCharacterUpdaterService {
     private updateAncestralLegacySkills(character: Character) {
         character.ancestralLegacies.activeAncestralLegacies = this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds(character);
 
+        if (character.reaper.id === 77) {
+            const activeImbues = character.ancestralLegacies.ancestralLegacies
+                .filter(ancestralLegacy => character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id) && ancestralLegacy.types.includes(AncestralLegacyType.Imbue));
+            const elements = activeImbues.map(ancestralLegacy => ancestralLegacy.element).filter(isFirst);
+
+            for(const element of elements) {
+                const elementImbues = activeImbues.filter(ancestralLegacy => ancestralLegacy.element === element);
+
+                if (elementImbues.length === 2) {
+                    const elementImbues = character.ancestralLegacies.ancestralLegacies
+                        .filter(ancestralLegacy => ancestralLegacy.element === element && ancestralLegacy.types.includes(AncestralLegacyType.Imbue));
+                    if (elementImbues.length > 0) {
+                        const highestImbueId = Math.max(...elementImbues.map(ancestralLegacy => ancestralLegacy.id));
+                        const highestImbue = elementImbues.find(ancestralLegacy => ancestralLegacy.id === highestImbueId) as AncestralLegacy;
+
+                        if (!character.ancestralLegacies.activeAncestralLegacies.includes(highestImbueId)) {
+                            character.ancestralLegacies.activeAncestralLegacies.push(highestImbueId);
+                            if (highestImbue.baseRank !== highestImbue.maxRank) {
+                                this.slormancerAncestralLegacyService.updateAncestralLegacyModel(highestImbue, highestImbue.maxRank, highestImbue.bonusRank);
+                                this.slormancerAncestralLegacyService.updateAncestralLegacyView(highestImbue);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
 
     private updateActiveSkillUpgrades(character: Character) {

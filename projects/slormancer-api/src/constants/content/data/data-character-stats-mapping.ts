@@ -2067,6 +2067,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     multiplier: (config, stats) => Math.max(0, Math.min(config.elemental_fury_stacks, getMaxStacks(stats, 'elemental_fury_max_stacks')))
                 },
                 { stat: 'primary_skill_increased_damage', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary')},
+                { stat: 'imbued_skills_and_ancestral_beam_increased_damage_per_imbue', condition: (_, stats) => hasStat(stats, 'skill_elements'), multiplier: (_, stats) => getFirstStat(stats, 'equipped_imbues', 0)},
             ],
             maxMultiplier: [
                 { stat: 'skill_increased_max_damage_mult' },

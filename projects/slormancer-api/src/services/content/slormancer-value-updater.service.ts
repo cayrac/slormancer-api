@@ -412,6 +412,19 @@ export class SlormancerValueUpdaterService {
                         effectValue.displaySynergy = round(effectValue.synergy, 0);
                     }
                 }
+                if (reaper.id === 77) {
+                    const imbueIncreasedDamage = statsResult.extractedStats['imbued_skills_and_ancestral_beam_increased_damage_per_imbue'];
+                    const equippedImbues = statsResult.extractedStats['equipped_imbues'];
+                    if (imbueIncreasedDamage && equippedImbues) {
+                        const imbueIncreasedDamageStat = imbueIncreasedDamage[0];
+                        const equippedImbuesStat = equippedImbues[0];
+                        if (imbueIncreasedDamageStat && equippedImbuesStat) {
+                            const multiplier = imbueIncreasedDamageStat.value * equippedImbuesStat.value;
+                            effectValue.synergy = mult(effectValue.synergy, multiplier);
+                            effectValue.displaySynergy = round(effectValue.synergy, 0);
+                        }
+                    }
+                }
             }
         }
     }
