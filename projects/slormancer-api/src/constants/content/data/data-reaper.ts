@@ -1002,6 +1002,18 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, -100, true, EffectValueValueType.Stat, 'inner_fire_max_number_global_mult');
         }
     },
+    86: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'brut_chance_percent_extra');
+            synergyMultiply100(ba, 3);
+            setSynergyPrecision(ba, 3, 0);
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'brut_damage_percent_per_ancestral_preparation_stack');
+
+            addConstant(ba, -100, true, EffectValueValueType.Stat, 'brut_chance_global_mult');
+        }
+    },
     88: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Unknown, 'garbage_stat');

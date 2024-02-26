@@ -57,6 +57,14 @@ export class SlormancerAncestralLegacyNodesService {
 
         return realms.filter(isFirst);
     }
+
+    public getAdjacentRealms(character: Character): DataAncestralLegacyRealm[] {
+        const activeRealms = this.getActiveRealms(character)
+        const activeRealmNodes = activeRealms.map(realm => realm.nodes).flat();
+
+        return ANCESTRAL_LEGACY_REALMS
+            .filter(realm => realm.nodes.some(node => activeRealmNodes.includes(node)) && !activeRealms.includes(realm));
+    }
     
     public getAncestralLegacyIds(character: Character): Array<number> {
         const realms = this.getActiveRealms(character);

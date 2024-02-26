@@ -474,10 +474,20 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
+    private addAdditionalAncestralLegacySkillAtMaxRank(character: Character, ancestralLegacy: AncestralLegacy) {
+        if (!character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id)) {
+            character.ancestralLegacies.activeAncestralLegacies.push(ancestralLegacy.id);
+            if (ancestralLegacy.baseRank !== ancestralLegacy.maxRank) {
+                this.slormancerAncestralLegacyService.updateAncestralLegacyModel(ancestralLegacy, ancestralLegacy.maxRank, ancestralLegacy.bonusRank);
+                this.slormancerAncestralLegacyService.updateAncestralLegacyView(ancestralLegacy);
+            }
+        }
+    } 
+
     private updateAncestralLegacySkills(character: Character) {
         character.ancestralLegacies.activeAncestralLegacies = this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds(character);
 
-        if (character.reaper.id === 77) {
+        if (character.reaper.id === 77 && character.reaper.primordial) {
             const activeImbues = character.ancestralLegacies.ancestralLegacies
                 .filter(ancestralLegacy => character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id) && ancestralLegacy.types.includes(AncestralLegacyType.Imbue));
             const elements = activeImbues.map(ancestralLegacy => ancestralLegacy.element).filter(isFirst);
@@ -492,17 +502,23 @@ export class SlormancerCharacterUpdaterService {
                         const highestImbueId = Math.max(...elementImbues.map(ancestralLegacy => ancestralLegacy.id));
                         const highestImbue = elementImbues.find(ancestralLegacy => ancestralLegacy.id === highestImbueId) as AncestralLegacy;
 
-                        if (!character.ancestralLegacies.activeAncestralLegacies.includes(highestImbueId)) {
-                            character.ancestralLegacies.activeAncestralLegacies.push(highestImbueId);
-                            if (highestImbue.baseRank !== highestImbue.maxRank) {
-                                this.slormancerAncestralLegacyService.updateAncestralLegacyModel(highestImbue, highestImbue.maxRank, highestImbue.bonusRank);
-                                this.slormancerAncestralLegacyService.updateAncestralLegacyView(highestImbue);
-                            }
-                        }
+                        this.addAdditionalAncestralLegacySkillAtMaxRank(character, highestImbue);
                     }
                 }
             }
 
+        }
+
+        if (character.reaper.id === 86) {
+            const adjacentRealmIds = this.slormancerAncestralLegacyNodesService.getAdjacentRealms(character)
+                .map(realm => realm.realm);
+
+            const adjacentAncestralStrikes = character.ancestralLegacies.ancestralLegacies
+                .filter(ancestralLegacy => adjacentRealmIds.includes(ancestralLegacy.realm) && ancestralLegacy.types.includes(AncestralLegacyType.Ancestral))
+        
+            for (const ancestralStrike of adjacentAncestralStrikes) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, ancestralStrike);
+            }
         }
     }
 

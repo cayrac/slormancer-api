@@ -867,6 +867,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'brut_chance_percent' },
+                { stat: 'brut_chance_percent_extra', extra: true },
                 { stat: 'ancestral_legacy_stack_brut_chance_percent',
                     condition: config => config.ancestral_legacy_stacks > 0,
                     multiplier: (config, stats) => config.ancestral_legacy_stacks
@@ -879,6 +880,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     stat: 'ancestral_stab_slash_buff_brut_chance_percent',
                     condition: config => config.has_ancestral_stab_slash_buff, 
                 },
+                { stat: 'brut_chance_percent_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => config.temporal_emblems },
                 { stat: 'brut_chance_percent_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => config.temporal_emblems },
             ],
             max: [],
@@ -907,6 +909,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     multiplier: (config, stats) => 1 + 0.25 * config.ancestral_instability_buff_duration
                 },
                 { stat: 'brut_damage_percent_extra', extra: true },
+                { stat: 'brut_damage_percent_per_ancestral_preparation_stack', condition: config => config.ancestral_preparation_stacks > 0, multiplier: config => config.ancestral_preparation_stacks },
             ],
             max: [],
             percent: [],
