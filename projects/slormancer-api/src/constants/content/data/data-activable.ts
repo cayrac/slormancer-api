@@ -381,6 +381,13 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    50: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+            overrideValueStat(values, 1, 'garbage_stat');
+            overrideValueStat(values, 2, 'garbage_stat');
+        }
+    },
     54: {
         override: values => {
             overrideValueStat(values, 0, 'the_max_mana_add');

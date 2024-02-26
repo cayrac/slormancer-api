@@ -18,6 +18,7 @@ export const MAXIMUM_ANCESTRAL_LEGACY_POINTS = 7;
 
 export const DELIGHTED_VALUE = 12;
 
+export const BASE_MOVEMENT_SPEED = 2.4;
 export const POISON_DAMAGE_PERCENT = 200;
 export const RAVENOUS_DAGGER_DAMAGE_PERCENT = 100;
 export const TRAP_DAMAGE_PERCENT = 200;

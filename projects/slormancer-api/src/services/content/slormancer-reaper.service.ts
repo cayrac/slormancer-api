@@ -450,7 +450,7 @@ export class SlormancerReaperService {
             upgradeValue = reaper.baseInfo.level;
         }
 
-        this.slormancerEffectValueService.updateEffectValue(value, upgradeValue * affinityMultiplier);
+        this.slormancerEffectValueService.updateEffectValue(value, upgradeValue * affinityMultiplier, 5);
     }
 
     public updateReaperModel(reaper: Reaper) {

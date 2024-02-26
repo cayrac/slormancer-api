@@ -4,6 +4,7 @@ import { EffectValueValueType } from '../../../model/content/enum/effect-value-v
 import { ReaperEffect } from '../../../model/content/reaper-effect';
 import { effectValueConstant, effectValueSynergy, effectValueVariable } from '../../../util/effect-value.util';
 import { isEffectValueConstant, isEffectValueSynergy, isEffectValueVariable, valueOrNull } from '../../../util/utils';
+import { BASE_MOVEMENT_SPEED } from '../../common';
 
 function overrideValueTypeAndStat(effect: ReaperEffect | null, index: number, valueType: EffectValueValueType, stat: string | null = null) {
 
@@ -876,6 +877,22 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(be, 1, EffectValueValueType.Duration, 'nimble_champion_disable_duration');
             addConstant(be, 100, false, EffectValueValueType.Stat, 'nimble_champion_max_stacks');
             overrideValueTypeAndStat(ma, 0, EffectValueValueType.Duration, 'nimble_champion_lock_duration');
+
+        }
+    },
+    76: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'cooldown_reduction_global_mult_while_curving_time_or_time_shifting');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'the_speed_percent_while_curving_time_or_time_shifting');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'increased_damage_while_curving_time_or_time_shifting');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'crit_damage_percent_while_curving_time_or_time_shifting');
+
+            addConstant(ma, -100, false, EffectValueValueType.Stat, 'the_speed_global_mult_while_not_curving_time_or_time_shifting' );
+            addConstant(ma, BASE_MOVEMENT_SPEED, false, EffectValueValueType.Stat, 'the_speed_add_extra_while_not_curving_time_or_time_shifting' );
+            // TODO : has no effect for now
+            // addConstant(ma, -100, false, EffectValueValueType.Stat, 'cooldown_reduction_global_mult_while_not_curving_time_or_time_shifting');
 
         }
     },

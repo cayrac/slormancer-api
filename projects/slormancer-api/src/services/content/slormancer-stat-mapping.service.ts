@@ -9,6 +9,7 @@ import { MinMax } from '../../model/minmax';
 import { round } from '../../util/math.util';
 import { valueOrDefault } from '../../util/utils';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
+import { BASE_MOVEMENT_SPEED } from '../../constants';
 
 @Injectable()
 export class SlormancerStatMappingService {
@@ -94,8 +95,8 @@ export class SlormancerStatMappingService {
             // Ultima momentum bug on movement speed
             stat.values.flat = [];
             if (stat.stat === 'movement_speed') {
-                stat.values.flat.push({ value: round(ultimatum.value.value - 2.4, 2), extra: false, source: { ultimatum }});
-                stat.values.flat.push({ value: 2.4, extra: true, source: { ultimatum }});
+                stat.values.flat.push({ value: round(ultimatum.value.value - BASE_MOVEMENT_SPEED, 2), extra: false, source: { ultimatum }});
+                stat.values.flat.push({ value: BASE_MOVEMENT_SPEED, extra: true, source: { ultimatum }});
                 stat.precision = 2;
             } else {
                 stat.values.flat.push({ value: ultimatum.value.value, extra: false, source: { ultimatum }});

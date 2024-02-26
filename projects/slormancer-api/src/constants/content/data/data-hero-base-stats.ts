@@ -1,10 +1,10 @@
 import { HeroBaseStats } from '../../../model/content/data/data-hero-base-stats';
 import { GameHeroesData } from '../../../model/parser/game/game-save';
 import { round } from '../../../util/math.util';
-import { ARCANE_BOND_DURATION, MAX_EMBLEMS, TIME_LOCK_DURATION, TRAP_ARM_DURATION } from '../../common';
+import { ARCANE_BOND_DURATION, BASE_MOVEMENT_SPEED, MAX_EMBLEMS, TIME_LOCK_DURATION, TRAP_ARM_DURATION } from '../../common';
 
 const ALL_HEROES_BASE_STATS = [
-    { stat: 'the_speed_add', base: 2.4, perLevel: 0 },
+    { stat: 'the_speed_add', base: BASE_MOVEMENT_SPEED, perLevel: 0 },
     { stat: 'mana_regen_add', base: 12.2, perLevel: 1.2 },
     { stat: 'brut_chance_percent', base: 1, perLevel: 0 },
     { stat: 'brut_damage_percent', base: 300, perLevel: 0 },

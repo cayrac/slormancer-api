@@ -658,7 +658,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         allowMinMax: false,
         suffix: '',
         source: {
-            flat: [{ stat: 'the_speed_add' }],
+            flat: [
+                { stat: 'the_speed_add' },
+                { stat: 'the_speed_add_extra_while_not_curving_time_or_time_shifting', extra: true, condition: config => !config.is_curving_time_or_time_shifting },
+            ],
             max: [],
             percent: [
                 { stat: 'the_speed_percent' },
@@ -670,11 +673,14 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },
                 { stat: 'cleansing_surge_stack_movement_speed_percent', condition: config => config.cleansing_surge_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'cleansing_surge_max_stacks'), config.cleansing_surge_stacks) },
                 { stat: 'the_speed_percent_on_combo', condition: config => config.victims_combo > 0 },
+                { stat: 'the_speed_percent_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
             ],
             maxPercent: [],
             multiplier: [
+                { stat: 'the_speed_global_mult' },
                 { stat: 'the_speed_percent_in_combat', condition: config => config.in_combat },
                 { stat: 'life_orb_the_speed_global_mult', condition: config => config.life_orbs_count > 0, multiplier: (config, stats) => Math.min(config.life_orbs_count, getMaxStat(stats, 'max_life_orb')) },
+                { stat: 'the_speed_global_mult_while_not_curving_time_or_time_shifting', condition: config => !config.is_curving_time_or_time_shifting },
             ],
             maxMultiplier: [],
         } 
@@ -733,6 +739,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
                 { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
                 { stat: 'cooldown_reduction_global_mult_on_combo', condition: config => config.victims_combo > 0 },
+                { stat: 'cooldown_reduction_global_mult_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
+                { stat: 'cooldown_reduction_global_mult_while_not_curving_time_or_time_shifting', condition: config => !config.is_curving_time_or_time_shifting },
                 /*{ // Disabled due to the bloodthirst attack speed bug
                     stat: 'cooldown_reduction_global_mult_per_bloodthirst_stack',
                     condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
@@ -842,6 +850,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'mighty_swing_cadence_whirlwind_crit_damage_percent', condition: (_, stats) => [3, 6, 9].includes(getFirstStat(stats, 'skill_id')) },
                 { stat: 'crit_damage_percent_per_arcanic_emblem', condition: config => config.arcanic_emblems > 0, multiplier: config => config.arcanic_emblems },
                 { stat: 'crit_damage_percent_per_obliteration_emblem', condition: config => config.obliteration_emblems > 0, multiplier: config => config.obliteration_emblems },
+                { stat: 'crit_damage_percent_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
             ],
             max: [],
             percent: [],
@@ -1999,6 +2008,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     multiplier: (config, stats) => 1 + (getFirstStat(stats, 'support_streak_increased_effect_per_stack', 0) * Math.max(0, Math.min(config.support_streak_stacks, getMaxStacks(stats, 'support_streak_max_stacks'))) / 100)
                 },
                 { stat: 'non_projectile_increased_damage_mult', condition: (_, stats) => !hasStat(stats, 'skill_is_projectile'), multiplier: () => -1 },
+                { stat: 'increased_damage_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
             ],
             maxMultiplier: [
             ],

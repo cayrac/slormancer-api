@@ -19,6 +19,7 @@ export class SlormancerEffectValueService {
         if (isEffectValueSynergy(effectValue) || isEffectValueVariable(effectValue)) {
             let value = effectValue.baseValue;
             if (globalMultiplier !== null && globalMultiplierPrecision !== null) {
+                // TODO bankerRound à remplacer par round ?
                 value = bankerRound(value * globalMultiplier, globalMultiplierPrecision);
                 effectValue.upgrade = bankerRound(effectValue.baseUpgrade * globalMultiplier, globalMultiplierPrecision);
             }
