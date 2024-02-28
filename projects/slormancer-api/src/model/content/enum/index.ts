@@ -7,7 +7,7 @@ export { GearSlot, ALL_GEAR_SLOT_VALUES, gearSlotToBase } from './gear-slot';
 export { HeroClass } from './hero-class';
 export { MechanicType } from './mechanic-type';
 export { Rarity, ALL_RARITIES } from './rarity';
-export { ReaperSmith, ALL_REAPER_SMITH } from './reaper-smith';
+export { ReaperSmith, ALL_REAPER_SMITH, ALL_UPGRADABLE_REAPER_SMITH } from './reaper-smith';
 export { SkillCostType, ALL_SKILL_COST_TYPES } from './skill-cost-type';
 export { SkillGenre } from './skill-genre';
 export { TraitLevel } from './trait-level';

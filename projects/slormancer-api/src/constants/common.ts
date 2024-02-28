@@ -1,3 +1,5 @@
+import { ALL_UPGRADABLE_REAPER_SMITH } from "../model";
+
 export const MAX_HERO_LEVEL = 80;
 export const MAX_ITEM_LEVEL = MAX_HERO_LEVEL;
 export const MAX_ATTRIBUTE_RANK = 75;
@@ -34,6 +36,7 @@ export const MAX_EMBLEMS = 3;
 export const REMNANT_DAMAGE_REDUCTION = 50;
 export const MAX_REAPER_AFFINITY_BONUS = 50;
 export const MAX_REAPER_AFFINITY_BASE = 100;
+export const MAX_EFFECT_AFFINITY_BASE = MAX_REAPER_AFFINITY_BASE * ALL_UPGRADABLE_REAPER_SMITH.length;
 
 export const SHIELD_DURATION = 3;
 export const POISON_DURATION = 7;

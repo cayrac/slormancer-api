@@ -139,6 +139,7 @@ export interface CharacterConfig {
     sunlight_stacks: number;
     ancestral_wrath_stacks: number;
     ancestral_preparation_stacks: number;
+    wreak_havoc_stacks: number;
     moonlight_side: boolean;
     life_orbs_count: number;
     has_elemental_temper_buff: boolean;

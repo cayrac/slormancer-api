@@ -233,7 +233,7 @@ export class SlormancerStatsExtractorService {
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {
-            rune_affinity = character.reaper.affinity;
+            rune_affinity = character.reaper.reaperAffinity;
         }
         this.addStat(stats.stats, 'rune_affinity', rune_affinity, { synergy: 'Effect rune affinity' });
     }
@@ -321,7 +321,7 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'min_weapon_damage_add', character.reaper.damages.min, source);
         this.addStat(stats.stats, 'max_weapon_damage_add', character.reaper.damages.max - character.reaper.damages.min, source);        
         this.addStat(stats.stats, 'victims_current_reaper', character.reaper.kills, { synergy: 'Current reaper victims' });
-        this.addStat(stats.stats, 'reaper_affinity', character.reaper.affinity, { synergy: 'Current reaper affinity' });
+        this.addStat(stats.stats, 'reaper_affinity', character.reaper.reaperAffinity, { synergy: 'Current reaper affinity' });
 
         if (character.reaper.id === 30 || character.reaper.id === 31) {
             this.addStat(stats.stats, 'remain_damage', 800, { synergy: 'Remain damage' });

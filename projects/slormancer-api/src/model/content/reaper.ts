@@ -26,9 +26,11 @@ export interface Reaper {
     level: number;
     baseLevel: number;
     bonusLevel: number;
-    baseAffinity: number;
+    baseReaperAffinity: number;
+    baseEffectAffinity: number;
     bonusAffinity: number;
-    affinity: number;
+    reaperAffinity: number;
+    effectAffinity: number;
     kills: number;
     name: string;
     description: string;

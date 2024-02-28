@@ -10,6 +10,16 @@ export enum ReaperSmith {
     ReapersmithBrotherhood = 8,
 }
 
+export const ALL_UPGRADABLE_REAPER_SMITH = [
+    ReaperSmith.Astorias,
+    ReaperSmith.Adrianne,
+    ReaperSmith.Beigarth,
+    ReaperSmith.CoryIronbender,
+    ReaperSmith.Smaloron,
+    ReaperSmith.Fulgurorn,
+    ReaperSmith.Hagan,
+]
+
 export const ALL_REAPER_SMITH = [
     ReaperSmith.Astorias,
     ReaperSmith.Adrianne,

@@ -746,6 +746,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
                     multiplier: (config, stats) => Math.max(0, Math.min(config.bloodthirst_stacks, getMaxStacks(stats, 'bloodthirst_max_stacks')))
                 },*/
+                {
+                    stat: 'wreak_havoc_cooldown_reduction_global_mult',
+                    multiplier: (config, stats) => - getFirstStat(stats, 'wreak_havoc_max_stacks') + Math.max(0, Math.min(config.wreak_havoc_stacks, getFirstStat(stats, 'wreak_havoc_max_stacks')))
+                }
             ],
             maxMultiplier: [],
         } 

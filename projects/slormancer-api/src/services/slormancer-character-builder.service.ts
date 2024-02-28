@@ -80,7 +80,7 @@ export class SlormancerCharacterBuilderService {
 
     private getEquippedReaper(save: GameSave, heroClass: HeroClass): Reaper {
         const reaperCount = this.slormancerDataService.getGameDataReaperCount();
-        let result: Reaper | null = null;
+        let reaper: Reaper | null = null;
 
         const weaponEquip = save.weapon_equip[heroClass];
         const primordial = weaponEquip >= reaperCount;
@@ -88,16 +88,15 @@ export class SlormancerCharacterBuilderService {
         const reaperData = valueOrNull(save.weapon_data[heroClass][reaperId]);
 
         if (reaperData !== null) {
-            result = this.slormancerReaperService.getReaperFromGameWeapon(reaperData, heroClass, primordial);
-
+            reaper = this.slormancerReaperService.getReaperFromGameWeapon(reaperData, heroClass, primordial);
         }
 
-        if (result === null) {
+        if (reaper === null) {
             throw new Error('failed to parse reaper');
         }
 
-        if (result.smith.id === ReaperSmith.ReapersmithBrotherhood) {
-            result.baseAffinity = Math.max(
+        if (reaper.smith.id === ReaperSmith.ReapersmithBrotherhood || reaper.id === 90) {
+            reaper.baseReaperAffinity = Math.max(
                 save.reaper_affinity[ReaperSmith.Adrianne],
                 save.reaper_affinity[ReaperSmith.Astorias],
                 save.reaper_affinity[ReaperSmith.Beigarth],
@@ -107,13 +106,25 @@ export class SlormancerCharacterBuilderService {
                 save.reaper_affinity[ReaperSmith.Smaloron]
             );
         } else {
-            result.baseAffinity = save.reaper_affinity[result.smith.id];
+            reaper.baseReaperAffinity = save.reaper_affinity[reaper.smith.id];
         }
 
-        this.slormancerReaperService.updateReaperModel(result);
-        this.slormancerReaperService.updateReaperView(result);
+        if (reaper.id === 90 && reaper.primordial) {
+            reaper.baseEffectAffinity = save.reaper_affinity[ReaperSmith.Adrianne]
+                + save.reaper_affinity[ReaperSmith.Astorias]
+                + save.reaper_affinity[ReaperSmith.Beigarth]
+                + save.reaper_affinity[ReaperSmith.CoryIronbender]
+                + save.reaper_affinity[ReaperSmith.Fulgurorn]
+                + save.reaper_affinity[ReaperSmith.Hagan]
+                + save.reaper_affinity[ReaperSmith.Smaloron];
+        } else {
+            reaper.baseEffectAffinity = reaper.baseReaperAffinity;
+        }
 
-        return result;
+        this.slormancerReaperService.updateReaperModel(reaper);
+        this.slormancerReaperService.updateReaperView(reaper);
+
+        return reaper;
     }
 
     private getRunesCombination(save: GameSave, heroClass: HeroClass, reaperId: number): RunesCombination {

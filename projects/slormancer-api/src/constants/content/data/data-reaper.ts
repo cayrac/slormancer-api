@@ -1028,6 +1028,22 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Unknown, 'garbage_stat');
         }
     },
+    90: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'wreak_havoc_max_stacks');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+
+            moveValue(be, 0, ma);
+            moveValue(be, 0, ma);
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'wreak_havoc_cooldown_reduction_global_mult');
+
+        }
+    },
     91: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'enfeeble_stack_increased_damage');
