@@ -71,11 +71,12 @@ const CHANCE_TO_PIERCE: MergedStatMapping = {
             { stat: 'chance_to_pierce_percent_if_fully_charged', condition: (config) => config.void_arrow_fully_charged },
             { stat: 'chance_to_pierce_percent_if_fortunate_of_perfect', condition: (config) => config.next_cast_is_fortunate || config.next_cast_is_perfect },
             { stat: 'chance_to_pierce_percent_if_projectile_passed_through_wall_of_omen', condition: (config, stats) => config.projectile_passed_through_wall_of_omen && hasStat(stats, 'skill_is_projectile') },
+            { stat: 'academician_chance_to_pierce_extra', extra: true }
         ],
         max: [],
         percent: [],
         maxPercent: [],
-        multiplier: [{ stat: 'chance_to_pierce_global_mult' }],
+        multiplier: [{ stat: 'chance_to_pierce_global_mult' }, { stat: 'academician_chance_to_pierce_mult' }],
         maxMultiplier: [],
     } 
 }
@@ -240,6 +241,7 @@ export const AOE_INCREASED_SIZE_MAPPING: MergedStatMapping = {
         maxPercent: [],
         multiplier: [
             { stat: 'aoe_increased_size_percent_mult' },
+            { stat: 'academician_aoe_increased_size_mult' }
         ],
         maxMultiplier: [],
     } 
@@ -377,11 +379,12 @@ export const RECAST_CHANCE_MAPPING: MergedStatMapping =
             { stat: 'recast_chance_percent_if_perfect', condition: config => config.next_cast_is_perfect },
             { stat: 'recast_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
             { stat: 'recast_chance_percent_per_non_obliteration_emblem', condition: config => (config.arcanic_emblems + config.temporal_emblems) > 0, multiplier: config => config.arcanic_emblems + config.temporal_emblems },
+            { stat: 'academician_recast_chance_extra', extra: true }
         ],
         max: [],
         percent: [],
         maxPercent: [],
-        multiplier: [],
+        multiplier: [{ stat: 'academician_recast_chance_mult' }],
         maxMultiplier: [],
     } 
 };
@@ -436,7 +439,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_essence_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -450,7 +453,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'xp_find_global_mult' }],
+            multiplier: [{ stat: 'xp_find_global_mult' }, { stat: 'academician_xp_find_percent_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -464,7 +467,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_influence_gain_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -478,7 +481,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_mf_find_percent_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -492,7 +495,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_mf_qual_percent_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -533,7 +536,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'health_recovery_mult' }],
+            multiplier: [{ stat: 'health_recovery_mult' }, { stat: 'academician_health_leech_percent_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -612,7 +615,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'mana_leech_global_mult' }],
+            multiplier: [{ stat: 'mana_leech_global_mult' }, { stat: 'academician_mana_leech_percent_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -820,6 +823,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'crit_chance_percent_if_remnant_and_target_in_breach', condition: config => config.is_remnant && config.target_is_in_breach_range },
                 { stat: 'crit_chance_percent_per_arcanic_emblem', condition: config => config.arcanic_emblems > 0, multiplier: config => config.arcanic_emblems },
                 { stat: 'crit_chance_percent_against_burning', condition: config => config.target_is_burning && config.use_enemy_state },
+                { stat: 'academician_critical_chance_extra', extra: true },
             ],
             max: [],
             percent: [],
@@ -829,6 +833,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'crit_chance_global_mult_after_hit_taken', condition: config => config.took_physical_damage_recently || config.took_elemental_damage_recently },
                 { stat: 'enemy_full_life_crit_chance_global_mult', condition: (config, stats) => config.use_enemy_state && (100 - config.enemy_percent_missing_health) >= getFirstStat(stats, 'enemy_full_life_crit_chance_global_mult_treshold', 0) },
                 { stat: 'crit_chance_global_mult_per_yard', condition: config => config.use_enemy_state && config.distance_with_target > 0, multiplier: config => config.distance_with_target },
+                { stat: 'academician_critical_chance_mult' },
             ],
             maxMultiplier: [],
         } 
@@ -855,11 +860,12 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'crit_damage_percent_per_arcanic_emblem', condition: config => config.arcanic_emblems > 0, multiplier: config => config.arcanic_emblems },
                 { stat: 'crit_damage_percent_per_obliteration_emblem', condition: config => config.obliteration_emblems > 0, multiplier: config => config.obliteration_emblems },
                 { stat: 'crit_damage_percent_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
+                { stat: 'isoperimetry_crit_damage_percent_extra', extra: true, condition: (_, stats) => hasStat(stats, 'critical_chance_equal_ancestral_chance') },
             ],
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'crit_damage_percent_mult' }],
+            multiplier: [{ stat: 'crit_damage_percent_mult' }, { stat: 'academician_critical_damage_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -886,12 +892,14 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 },
                 { stat: 'brut_chance_percent_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => config.temporal_emblems },
                 { stat: 'brut_chance_percent_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => config.temporal_emblems },
+                { stat: 'academician_ancestral_chance_extra', extra: true },
             ],
             max: [],
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'brut_chance_global_mult' }
+                { stat: 'brut_chance_global_mult' },
+                { stat: 'academician_ancestral_chance_mult' }
             ],
             maxMultiplier: [],
         } 
@@ -919,7 +927,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'brut_damage_global_mult' }
+                { stat: 'brut_damage_global_mult' },
+                { stat: 'academician_ancestral_damage_mult' }
             ],
             maxMultiplier: [],
         } 
@@ -938,7 +947,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'armor_penetration_global_mult' }],
+            multiplier: [{ stat: 'armor_penetration_global_mult' }, { stat: 'academician_armor_penetration_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -955,7 +964,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_elemental_penetration_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -969,7 +978,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'dot_increased_damage_global_mult' }],
+            multiplier: [{ stat: 'dot_increased_damage_global_mult' }, { stat: 'academician_dot_increased_damage_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -992,7 +1001,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_increased_on_elite_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1062,7 +1071,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_fire_resistance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1079,7 +1088,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_ice_resistance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1093,7 +1102,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_lightning_resistance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1107,7 +1116,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_light_resistance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1121,7 +1130,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_shadow_resistance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1196,7 +1205,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'retaliate_global_mult' }
+                { stat: 'retaliate_global_mult' },
+                { stat: 'academician_retaliate_mult' }
             ],
             maxMultiplier: [],
         } 
@@ -1228,7 +1238,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_tenacity_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1250,7 +1260,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reduced_on_all_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1264,7 +1274,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reduced_by_elite_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1283,7 +1293,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reduced_on_melee_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1301,7 +1311,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reduced_on_projectile_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1319,7 +1329,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reduced_on_area_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1333,7 +1343,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'gold_find_global_mult' }],
+            multiplier: [{ stat: 'gold_find_global_mult' }, { stat: 'academician_gold_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1347,7 +1357,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_scrap_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1361,7 +1371,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_slormite_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1375,7 +1385,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_slormeline_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1389,7 +1399,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_reaper_find_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1417,7 +1427,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_skill_mastery_gain_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1430,11 +1440,12 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'inner_fire_chance_percent' },
                 { stat: 'inner_fire_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
+                { stat: 'academician_inner_fire_chance_extra', extra: true }
             ],
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_inner_fire_chance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1524,11 +1535,12 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'overdrive_chance_percent' },
                 { stat: 'overdrive_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
                 { stat: 'overdrive_chance_percent_if_next_cast_is_new_emblem', condition: (config, stats) => config.next_cast_is_new_emblem && hasStat(stats, 'skill_is_melee') },
+                { stat: 'academician_overdrive_chance_extra', extra: true },
             ],
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_overdrive_chance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1601,7 +1613,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_knockback_melee_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1641,11 +1653,12 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'fork_chance_percent' },
                 { stat: 'fork_chance_percent_on_low_life', condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'pierce_fork_rebound_proj_speed_on_low_life_treshold', 0)) },
                 { stat: 'arrow_shot_fork_chance_percent', condition: (_, stats) => getFirstStat(stats, 'skill_id') === 3 },
+                { stat: 'academician_fork_chance_extra', extra: true }
             ],
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'fork_chance_global_mult' }],
+            multiplier: [{ stat: 'fork_chance_global_mult' }, { stat: 'academician_fork_chance_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1660,12 +1673,14 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'rebound_chance_percent_on_low_life', condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'pierce_fork_rebound_proj_speed_on_low_life_treshold', 0)) },
                 { stat: 'arrow_shot_rebound_chance_percent', condition: (_, stats) => getFirstStat(stats, 'skill_id') === 3 },
                 { stat: 'rebound_chance_percent_if_fully_charged', condition: config => config.void_arrow_fully_charged },
+                { stat: 'academician_chance_to_rebound_extra', extra: true },
             ],
             max: [],
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'rebound_chance_global_mult' }
+                { stat: 'rebound_chance_global_mult' },
+                { stat: 'academician_chance_to_rebound_mult' }
             ],
             maxMultiplier: [],
         } 
@@ -1685,7 +1700,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_projectile_speed_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1702,7 +1717,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_knockback_projectile_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1721,7 +1736,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'aoe_increased_effect_global_mult' }
+                { stat: 'aoe_increased_effect_global_mult' },
+                { stat: 'academician_aoe_increased_effect_mult' }
             ],
             maxMultiplier: [],
         } 
@@ -1739,7 +1755,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_totem_increased_effect_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1769,7 +1785,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [],
+            multiplier: [{ stat: 'academician_aura_increased_effect_mult' }],
             maxMultiplier: [],
         } 
     },
@@ -1787,7 +1803,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [],
             maxPercent: [],
             multiplier: [
-                { stat: 'minion_increased_damage_global_mult' }
+                { stat: 'minion_increased_damage_global_mult' },
+                { stat: 'academician_minion_increased_damage_mult' }
             ],
             maxMultiplier: [],
         } 

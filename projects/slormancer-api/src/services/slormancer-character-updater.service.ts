@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { MAX_HERO_LEVEL, MAX_REAPER_AFFINITY_BONUS } from '../constants/common';
+import { MAX_HERO_LEVEL, MAX_REAPER_AFFINITY_BONUS, PERCENT_STATS } from '../constants/common';
 import { DATA_HERO_BASE_STATS } from '../constants/content/data/data-hero-base-stats';
 import { Character } from '../model/character';
 import { CharacterConfig } from '../model/character-config';
@@ -29,8 +29,9 @@ import { CharacterStatsBuildResult, SlormancerStatsService } from './content/slo
 import { SlormancerSynergyResolverService } from './content/slormancer-synergy-resolver.service';
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
-import { AncestralLegacyType, SkillType } from '../model';
+import { AncestralLegacyType, MergedStat, SkillType } from '../model';
 import { SlormancerAncestralLegacyNodesService } from './content';
+import { round } from '../util';
 
 @Injectable()
 export class SlormancerCharacterUpdaterService {
@@ -247,7 +248,7 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
-    private getCharacterStatsResult(character: Character, config: CharacterConfig, additionalItem: EquipableItem | null, additionalRunes: Array<Rune> = []): CharacterStatsBuildResult {
+    private getCharacterStatsResult(character: Character, config: CharacterConfig, additionalItem: EquipableItem | null, additionalRunes: Array<Rune> = [], additionalStats: ExtractedStatMap = {}): CharacterStatsBuildResult {
         const stats = DATA_HERO_BASE_STATS[character.heroClass];
         
         character.baseStats = stats.baseStats.map(baseStat => ({
@@ -259,7 +260,7 @@ export class SlormancerCharacterUpdaterService {
             character.baseStats.push({ stat: levelStat.stat, values: [levelStat.value]});
         }
 
-        return this.slormancerStatsService.updateCharacterStats(character, config, additionalItem, additionalRunes);
+        return this.slormancerStatsService.updateCharacterStats(character, config, additionalItem, additionalRunes, additionalStats);
     }
 
     private updateCharacterActivables(character: Character, statsResult: CharacterStatsBuildResult, config: CharacterConfig, additionalItem: EquipableItem | null, additionalRunes: Array<Rune> = [], preComputing: boolean): { items: Array<EquipableItem>, ancestralLegacies: Array<AncestralLegacy>, reapers: Array<Reaper>, runes: Array<Rune> } {
@@ -352,6 +353,84 @@ export class SlormancerCharacterUpdaterService {
         return changed;
     }
 
+    private extractAcademicianStats(character: Character, stats: CharacterStatsBuildResult): ExtractedStatMap {
+        const result: ExtractedStatMap = {}; 
+        const misscalculatedStats: string[] = [];
+        const miscalculationTresholdStat = stats.extractedStats['miscalculation_treshold'];
+        if (miscalculationTresholdStat) {
+            const miscalculationTresholdEntityValue = miscalculationTresholdStat[0];
+            if (miscalculationTresholdEntityValue) {
+                const miscalculationTreshod = miscalculationTresholdEntityValue.value;
+
+                const percentStats = stats.stats.filter(mergedStat => PERCENT_STATS.includes(mergedStat.stat)) as MergedStat<number>[];
+                for(const percentStat of percentStats) {
+                    if (percentStat.total < miscalculationTreshod) {
+                        result['academician_' + percentStat.stat + '_mult'] = [ { value: -100, source: { reaper: character.reaper } } ];
+                        misscalculatedStats.push(percentStat.stat);
+                    }
+                }
+            }
+        }
+
+        const probabilityChangedStats: string[] = [];
+        let probabilityFinalValue = 0;
+        const probabilityTresholdStat = stats.extractedStats['probability_treshold']
+        const probabilityDefaultValueStat = stats.extractedStats['probability_default_value']
+        const probabilityDefaultValueIncreasedPercentStat = stats.extractedStats['probability_default_value_increased_percent'];
+        if (probabilityTresholdStat && probabilityDefaultValueStat && probabilityDefaultValueIncreasedPercentStat) {
+            const probabilityTresholdEntityValue = probabilityTresholdStat[0];
+            const probabilityDefaultValueEntityValue = probabilityDefaultValueStat[0];
+            const probabilityDefaultValueIncreasedPercentEntityValue = probabilityDefaultValueIncreasedPercentStat[0];
+            if (probabilityTresholdEntityValue && probabilityDefaultValueEntityValue && probabilityDefaultValueIncreasedPercentEntityValue) {
+                const PROBABILITY_STATS = [
+                    'inner_fire_chance',
+                    'overdrive_chance',
+                    // 'recast_chance', // currently ignored by academician reaper
+                    'chance_to_pierce',
+                    'fork_chance',
+                    'chance_to_rebound',
+                    'critical_chance',
+                    'ancestral_chance',
+                ];
+                const probabilityDefaultValue = probabilityDefaultValueEntityValue.value;
+                const probabilityDefaultValueIncreasedPercent = probabilityDefaultValueIncreasedPercentEntityValue.value;
+                probabilityFinalValue = round(probabilityDefaultValue * (100 + probabilityDefaultValueIncreasedPercent) / 100, 3);
+
+                const probabilityStats = stats.stats.filter(mergedStat => PROBABILITY_STATS.includes(mergedStat.stat)) as MergedStat<number>[];
+                for(const probabilityStat of probabilityStats) {
+                    if (probabilityStat.total === 0 || misscalculatedStats.includes(probabilityStat.stat)) {
+                        result['academician_' + probabilityStat.stat + '_extra'] = [ { value: probabilityFinalValue, source: { reaper: character.reaper } } ];
+                        probabilityChangedStats.push(probabilityStat.stat);
+                    }
+                }
+            }
+        }
+
+        const criticalChanceStat = stats.stats.find(mergedStat => mergedStat.stat === 'critical_chance');
+        const ancestralChanceStat = stats.stats.find(mergedStat => mergedStat.stat === 'ancestral_chance');
+
+        if (criticalChanceStat && ancestralChanceStat) {
+            let totalCritical = criticalChanceStat.total as number;
+            let totalAncestral = ancestralChanceStat.total as number;
+
+            if (probabilityChangedStats.includes('critical_chance')){
+                totalCritical = probabilityFinalValue;
+            }
+            if (probabilityChangedStats.includes('ancestral_chance')){
+                totalAncestral = probabilityFinalValue;
+            }
+
+            if (totalCritical === totalAncestral) {
+                result['critical_chance_equal_ancestral_chance'] = [ { value: 0, source: { reaper: character.reaper } } ];
+                if (!result['academician_critical_damage_mult']) {
+                    result['academician_critical_damage_mult'] = [ { value: -100, source: { reaper: character.reaper } } ];
+                }
+            }
+        }
+
+        return result;
+    }
+
     private updateCharacterStats(character: Character, updateViews: boolean, config: CharacterConfig, additionalItem: EquipableItem | null, additionalRunes: Array<Rune> = []) {
 
         const reaperChanged = this.applyReaperBonusLevel(character, config);
@@ -366,7 +445,9 @@ export class SlormancerCharacterUpdaterService {
             character.ultimatum.locked = statResultPreComputing.extractedStats['disable_ultimatum'] !== undefined;
         }
 
-        const statsResult = this.getCharacterStatsResult(character, config, additionalItem, additionalRunes);
+        const additionalStats = this.extractAcademicianStats(character, statResultPreComputing);
+
+        const statsResult = this.getCharacterStatsResult(character, config, additionalItem, additionalRunes, additionalStats);
         character.stats = statsResult.stats;
 
         if (reaperChanged) {

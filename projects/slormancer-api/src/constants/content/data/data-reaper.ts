@@ -1063,6 +1063,33 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'apex_predator_max_stacks');
         }
     },
+    93: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'probability_treshold');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'probability_default_value');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'probability_default_value_increased_percent');
+
+            moveValue(be, 0, ma);
+            moveValue(be, 0, ma);
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'miscalculation_treshold');
+            overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'miscalculation_default_value');
+        }
+    },
+    94: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+
+            if (ba) {
+                ba.values.push(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'ancestral_damage', 'isoperimetry_crit_damage_percent_extra', EffectValueValueType.Stat, undefined, 3))
+            }
+        }
+    },
+    95: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     96: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');

@@ -692,11 +692,11 @@ export class SlormancerStatsExtractorService {
         }
     }
 
-    public extractCharacterStats(character: Character, config: CharacterConfig, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = [], mergedStatMapping: Array<MergedStatMapping>): ExtractedStats {
+    public extractCharacterStats(character: Character, config: CharacterConfig, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = [], mergedStatMapping: Array<MergedStatMapping>, additionalStats: ExtractedStatMap = {}): ExtractedStats {
         const result: ExtractedStats = {
             synergies:  [],
             isolatedSynergies:  [],
-            stats: { },
+            stats: { ...additionalStats },
         }
 
         this.addCharacterValues(character, result);
