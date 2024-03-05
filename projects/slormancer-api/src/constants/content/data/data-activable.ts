@@ -343,6 +343,11 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             overrideValueStat(values, 2, 'garbage_stat');
         }
     },
+    40: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+        }
+    },
     41: {
         override: values => {
             overrideValueStat(values, 0, 'physical_damage');

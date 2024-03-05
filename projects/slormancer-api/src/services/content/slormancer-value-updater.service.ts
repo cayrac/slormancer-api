@@ -42,6 +42,7 @@ import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-upd
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
 import { CharacterStatsBuildResult, SkillStatsBuildResult } from './slormancer-stats.service';
+import { UNITY_REAPERS } from '../../constants';
 
 interface SkillStats {
     mana: MergedStat<number>;
@@ -424,6 +425,14 @@ export class SlormancerValueUpdaterService {
                             effectValue.displaySynergy = round(effectValue.synergy, 0);
                         }
                     }
+                }
+                if (UNITY_REAPERS.includes(reaper.id)) {
+                    const vigilantBladeAdditionalDamage = <EffectValueSynergy>effectValues.find(effect => effect.stat === 'vigilant_blade_additional_damage');
+                    if (vigilantBladeAdditionalDamage) {
+                        effectValue.synergy = add(effectValue.synergy, vigilantBladeAdditionalDamage.displaySynergy);
+                        effectValue.displaySynergy = round(effectValue.synergy, 0);
+                    }
+                    
                 }
             }
         }

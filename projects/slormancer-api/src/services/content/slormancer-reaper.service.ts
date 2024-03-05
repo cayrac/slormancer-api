@@ -30,7 +30,7 @@ import { SlormancerEffectValueService } from '.././content/slormancer-effect-val
 import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
-import { MAX_EFFECT_AFFINITY_BASE, MAX_REAPER_AFFINITY_BASE } from '../../constants';
+import { MAX_EFFECT_AFFINITY_BASE, MAX_REAPER_AFFINITY_BASE, UNITY_REAPERS } from '../../constants';
 
 @Injectable()
 export class SlormancerReaperService {
@@ -55,7 +55,7 @@ export class SlormancerReaperService {
         return 1 + affinity / 200;
     }
 
-    private getDamages(level: number, base: MinMax, perLevel: MinMax, multiplier: number, affinity: number): MinMax {
+    public getDamages(level: number, base: MinMax, perLevel: MinMax, multiplier: number, affinity: number): MinMax {
         const weapon_mult = multiplier;
         const bminr = base.min;
         const lminr = perLevel.min;
@@ -119,7 +119,7 @@ export class SlormancerReaperService {
         return this.slormancerTemplateService.replaceAnchor(nameTemplate, weaponName, this.slormancerTemplateService.TYPE_ANCHOR);
     }
 
-    private getReaperLevel(xp: number): number {
+    public getReaperLevel(xp: number): number {
         let level = 1;
 
         for (let data of DATA_REAPER_LEVEL) {
@@ -137,11 +137,17 @@ export class SlormancerReaperService {
         return level;
     }
 
-    private getReaperMinimumLevel(reaperId: number): number {
-        const parentsMinLevel = this.slormancerDataService.getParentsGameDataReaper(reaperId)
-            .map(parent => parent.MAX_LVL)
-            .filter(isNotNullOrUndefined);
-        return Math.max(...parentsMinLevel, 1);
+    public getReaperMinimumLevel(reaperId: number): number {
+        let result = 1;
+
+        if (!UNITY_REAPERS.includes(reaperId)) {
+            const parentsMinLevel = this.slormancerDataService.getParentsGameDataReaper(reaperId)
+                .map(parent => parent.MAX_LVL)
+                .filter(isNotNullOrUndefined);
+            result = Math.max(...parentsMinLevel, 1);
+        }
+
+        return result;
     }
 
     private getReaperParents(gameData: GameDataReaper): Array<GameDataReaper> {

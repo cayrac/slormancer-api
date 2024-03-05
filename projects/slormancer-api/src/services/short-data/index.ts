@@ -5,3 +5,4 @@ export { SlormancerBinaryRuneService } from "./slormancer-binary-rune.service";
 export { SlormancerBinaryUltimatumService } from "./slormancer-binary-ultimatum.service";
 export { SlormancerCompressorService } from "./slormancer-compressor.service";
 export { SlormancerShortDataService } from "./slormancer-short-data.service";
+export { SlormancerBinaryConfigurationService } from "./slormancer-binary-configuration.service";

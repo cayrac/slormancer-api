@@ -9,6 +9,7 @@ import {
     RAVENOUS_DAGGER_DAMAGE_PERCENT,
     REMNANT_DAMAGE_REDUCTION,
     TRAP_DAMAGE_PERCENT,
+    UNITY_REAPERS,
 } from '../../constants/common';
 import { MAX_MANA_MAPPING, MergedStatMapping } from '../../constants/content/data/data-character-stats-mapping';
 import { Character, CharacterSkillAndUpgrades } from '../../model/character';
@@ -39,7 +40,10 @@ import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefaul
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
-import { Activable, AncestralLegacyType } from '../../model';
+import { Activable, AncestralLegacyType, MinMax } from '../../model';
+import { SlormancerDataService } from './slormancer-data.service';
+import { SlormancerReaperService } from './slormancer-reaper.service';
+import { add, round } from '../../util';
 
 export declare type ExtractedStatMap = { [key: string]: Array<EntityValue<number>> }
 
@@ -60,7 +64,9 @@ export class SlormancerStatsExtractorService {
     ];
 
     constructor(private slormancerStatMappingService: SlormancerStatMappingService,
-        private slormancerMergedStatUpdaterService: SlormancerMergedStatUpdaterService,
+                private slormancerMergedStatUpdaterService: SlormancerMergedStatUpdaterService,
+                private slormancerDataService: SlormancerDataService,
+                private slormancerReaperService: SlormancerReaperService
         ) { }
 
     private getSynergyStatsItWillUpdate(stat: string, mergedStatMapping: Array<MergedStatMapping>): Array<{ stat: string, mapping?: MergedStatMapping }> {
@@ -316,7 +322,7 @@ export class SlormancerStatsExtractorService {
         }
     }
 
-    private addReaperValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
+    private addReaperValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>, config: CharacterConfig) {
         const source = { reaper: character.reaper };
         this.addStat(stats.stats, 'min_weapon_damage_add', character.reaper.damages.min, source);
         this.addStat(stats.stats, 'max_weapon_damage_add', character.reaper.damages.max - character.reaper.damages.min, source);        
@@ -343,6 +349,65 @@ export class SlormancerStatsExtractorService {
             } else {
                 this.addStat(stats.stats, effectValue.stat, effectValue.value, source);
             }
+        }
+
+        if (UNITY_REAPERS.includes(character.reaper.id)) {
+            let totalDamage: MinMax = { min: 0, max: 0 };
+            let totalLevel = 0;
+            for(const reaperId of UNITY_REAPERS) {
+                const reaperData = this.slormancerDataService.getGameDataReaper(reaperId);
+
+                if (reaperData !== null) {
+                    const minLevel = this.slormancerReaperService.getReaperMinimumLevel(reaperId);
+                    const maxLevel = reaperData.MAX_LVL ?? 100;
+
+                    const levelsMapping = {
+                        base: {
+                            [HeroClass.Warrior]: (config as any)['unity_level_0_' + reaperId],
+                            [HeroClass.Huntress]: (config as any)['unity_level_1_' + reaperId],
+                            [HeroClass.Mage]: (config as any)['unity_level_2_' + reaperId],
+                        },
+                        primordial: {
+                            [HeroClass.Warrior]: (config as any)['unity_level_0_' + reaperId + '_p'],
+                            [HeroClass.Huntress]: (config as any)['unity_level_1_' + reaperId + '_p'],
+                            [HeroClass.Mage]: (config as any)['unity_level_2_' + reaperId + '_p'],
+                        }
+                    }
+
+                    if (character.reaper.id === reaperId) {
+                        if (character.reaper.primordial) {
+                            levelsMapping.primordial[character.heroClass] = character.reaper.level;
+                        } else {
+                            levelsMapping.base[character.heroClass] = character.reaper.level;
+                        }
+                    }
+                    
+                    const levels = [
+                        levelsMapping.base[HeroClass.Warrior],
+                        levelsMapping.base[HeroClass.Huntress],
+                        levelsMapping.base[HeroClass.Mage],
+                        levelsMapping.primordial[HeroClass.Warrior],
+                        levelsMapping.primordial[HeroClass.Huntress],
+                        levelsMapping.primordial[HeroClass.Mage],
+                    ].map(level => level === 0 ? 0 : Math.min(maxLevel, Math.max(minLevel, level)));
+
+                    for(const level of levels) {
+                        if (level > 0) {
+                            totalLevel += level;
+                            const reaper = this.slormancerReaperService.getReaperById(reaperId, character.heroClass, false, level, 0, level, 0, 0, character.reaper.reaperAffinity, character.reaper.effectAffinity, character.reaper.bonusAffinity);
+                            if (reaper !== null) {
+                                totalDamage = add(totalDamage, reaper.damages) as MinMax;
+                            }
+                        }
+                    }
+                    
+                    this.addStat(stats.stats, 'legion_' + (reaperId - 46), levels.filter(level => level > 0).length, { synergy: 'Number of legion ' + (reaperId - 46) + ' reapers' });
+                }
+
+            }
+
+            this.addStat(stats.stats, 'legion_level_all', totalLevel, { synergy: 'Total level of legion reapers' });
+            this.addStat(stats.stats, 'legion_reaper_dmg', round((totalDamage.min + totalDamage.max) / 2, 0), { synergy: 'Total damage of legion reapers' });
         }
     }
 
@@ -702,7 +767,7 @@ export class SlormancerStatsExtractorService {
         this.addCharacterValues(character, result);
         this.addConfigValues(character, config, result);
         this.addSkillPassiveValues(character, result, mergedStatMapping);
-        this.addReaperValues(character, result, mergedStatMapping);
+        this.addReaperValues(character, result, mergedStatMapping, config);
         this.addRunesValues(character, result, mergedStatMapping, config);
         this.addBaseValues(character, result);
         this.addAncestralLegacyValues(character, result, mergedStatMapping);

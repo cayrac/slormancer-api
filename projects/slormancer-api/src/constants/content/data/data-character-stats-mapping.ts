@@ -278,6 +278,7 @@ export const MIN_BASIC_DAMAGE: MergedStatMapping = {
     source: {
         flat: [
             { stat: 'min_basic_damage_add' },
+            { stat: 'min_basic_damage_add_extra', extra: true },
             { stat: 'merchant_stack_min_basic_damage_add', condition: config => config.merchant_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'merchant_stack_max_stack', 0), config.merchant_stacks) }
         ],
         max: [],

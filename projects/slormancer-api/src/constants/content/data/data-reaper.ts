@@ -622,6 +622,50 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'mana_consumed_percent_on_skill_cast');
         }
     },
+    47: {
+        override: (ba, be, ma) => {
+            moveValue(be, 0, ma);
+
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'physical_damage');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'vigilant_blade_additional_damage');
+            synergyMultiply100(ba, 3);
+            
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'min_weapon_damage_add');
+            synergyMultiply100(be, 0);
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'min_basic_damage_add_extra');
+            addConstant(ma, -100, true, EffectValueValueType.Stat, 'basic_damage_global_mult');
+        }
+    },
+    48: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 1);
+        }
+    },
+    49: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 1);
+        }
+    },
+    50: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 1);
+        }
+    },
+    51: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 1);
+        }
+    },
     53: {
         override: (ba, be, ma) => {
             if (ba !== null && ba.template !== null) {

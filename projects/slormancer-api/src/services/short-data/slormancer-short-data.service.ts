@@ -6,12 +6,15 @@ import { Bits } from '../../model/export/bits';
 import { binaryToNumber, numberToBinary, takeBitsChunk } from '../../util/bits.util';
 import { SlormancerBinaryCharacterService } from './slormancer-binary-character.service';
 import { SlormancerCompressorService } from './slormancer-compressor.service';
+import { SlormancerBinaryConfigurationService } from './slormancer-binary-configuration.service';
+import { CharacterConfig } from '../../model';
 
 @Injectable()
 export class SlormancerShortDataService {
 
-    constructor(private slormancerBinaryService: SlormancerBinaryCharacterService,
-                private slormancerCompressorService: SlormancerCompressorService) { }
+    constructor(private slormancerBinaryCharacterService: SlormancerBinaryCharacterService,
+                private slormancerCompressorService: SlormancerCompressorService,
+                private slormancerBinaryConfigurationService: SlormancerBinaryConfigurationService) { }
 
     private versionToBinary(version: string): Bits {
         const [ major, minor, fix ] = version.split('.');
@@ -31,22 +34,32 @@ export class SlormancerShortDataService {
         ].join('.')
     }
 
-    public characterToShortData(character: Character): string {
-        const bits = [ ...this.versionToBinary(API_VERSION), ...this.slormancerBinaryService.characterToBinary(character) ];
+    public characterToShortData(character: Character, config: CharacterConfig): string {
+        const bits = [
+            ...this.versionToBinary(API_VERSION),
+            ...this.slormancerBinaryCharacterService.characterToBinary(character),
+            ...this.slormancerBinaryConfigurationService.configurationToBinary(config, character),
+        ];
         return this.slormancerCompressorService.compressBinary(bits);
     }
     
-    public shortDataToCharacter(data: string): Character | null {
-        let character: Character | null = null;
+    public shortDataToCharacter(data: string): { character: Character | null, configuration: Partial<CharacterConfig> | null } {
+        let result: { character: Character | null, configuration: Partial<CharacterConfig> | null } = {
+            character: null,
+            configuration: null
+        };
 
         try {
             const bits = this.slormancerCompressorService.decompressBinary(data);
             const version = this.binaryToVersion(bits);
-            character = this.slormancerBinaryService.binaryToCharacter(bits, version);
+            result.character = this.slormancerBinaryCharacterService.binaryToCharacter(bits, version);
+            if (result.character !== null) {
+                result.configuration = this.slormancerBinaryConfigurationService.binaryToConfiguration(bits, result.character);
+            }
         } catch (e) {
             console.error(e)
         }
 
-        return character;
+        return result;
     }
 }

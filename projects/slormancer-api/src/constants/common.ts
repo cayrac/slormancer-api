@@ -120,3 +120,5 @@ export const PERCENT_STATS: string[] = [
     'aura_increased_effect',
     'minion_increased_damage',
 ];
+
+export const UNITY_REAPERS = [47, 48, 49, 50, 51, 52];

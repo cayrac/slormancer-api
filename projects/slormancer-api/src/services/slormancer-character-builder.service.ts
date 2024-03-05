@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { HeroClass } from '..//model/content/enum/hero-class';
-import { GAME_VERSION, INVENTORY_SIZE, MAX_HERO_LEVEL, STASH_SIZE } from '../constants/common';
+import { GAME_VERSION, INVENTORY_SIZE, MAX_HERO_LEVEL, STASH_SIZE, UNITY_REAPERS } from '../constants/common';
 import { Character, CharacterSkillAndUpgrades } from '../model/character';
 import { Activable } from '../model/content/activable';
 import { AncestralLegacy } from '../model/content/ancestral-legacy';
@@ -27,6 +27,7 @@ import { SlormancerRuneService } from './content/slormancer-rune.service';
 import { SlormancerSkillService } from './content/slormancer-skill.service';
 import { SlormancerUltimatumService } from './content/slormancer-ultimatum.service';
 import { SlormancerAncestralLegacyNodesService } from './content';
+import { CharacterConfig } from '../model';
 
 @Injectable()
 export class SlormancerCharacterBuilderService {
@@ -415,6 +416,42 @@ export class SlormancerCharacterBuilderService {
         const time = new Date().getTime() - start;
         console.log('Character built from save in ' + time + ' milliseconds');
         return character;
+    }
+
+    private getReaperLevelFromSave(save: GameSave, heroClass: HeroClass, reaperId: number, primordial: boolean): number {
+        const reaperData = valueOrNull(save.weapon_data[heroClass][reaperId]);
+        let level = 0;
+
+        if (reaperData !== null) {
+            const experience = primordial ? reaperData.primordial.experience : reaperData.basic.experience;
+            level = this.slormancerReaperService.getReaperLevel(experience);
+        }
+        
+        return level;
+    }
+
+    private isReaperObtained(save: GameSave, heroClass: HeroClass, reaperId: number, primordial: boolean): boolean {
+        const reaperData = valueOrNull(save.weapon_data[heroClass][reaperId]);
+        let obtained = false;
+
+        if (reaperData !== null) {
+            obtained = primordial ? reaperData.primordial.obtained : reaperData.basic.obtained;
+        }
+        
+        return obtained;
+    }
+
+    public getConfigFromSave(save: GameSave): Partial<CharacterConfig> {
+        const config: Partial<CharacterConfig> = {};
+
+        for (const heroClass of [HeroClass.Warrior, HeroClass.Huntress, HeroClass.Mage]) {
+            for (const reaperId of UNITY_REAPERS) {
+                (config as any)['unity_level_' + heroClass + '_' + reaperId] = this.isReaperObtained(save, heroClass, reaperId, false) ? this.getReaperLevelFromSave(save, heroClass, reaperId, false) : 0;
+                (config as any)['unity_level_' + heroClass + '_' + reaperId + '_p'] = this.isReaperObtained(save, heroClass, reaperId, true) ? this.getReaperLevelFromSave(save, heroClass, reaperId, true) : 0;
+            }
+        }
+
+        return config;
     }
 
     public getCharacter(heroClass: HeroClass,
