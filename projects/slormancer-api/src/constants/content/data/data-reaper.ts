@@ -1268,6 +1268,18 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, -100, true, EffectValueValueType.Stat, 'shield_increased_value_mult');  
         }
     },
+    109: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(ba, 3);
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
+            synergyMultiply100(be, 2);
+        }
+    },
     110: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Unknown, 'garbage_stat');

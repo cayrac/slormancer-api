@@ -611,6 +611,13 @@ export class SlormancerCharacterUpdaterService {
                 this.addAdditionalAncestralLegacySkillAtMaxRank(character, judgeOfLight);
             }
         }
+
+        if (character.reaper.id === 109) {
+            const blackPact = character.ancestralLegacies.ancestralLegacies.find(ancestralLegacy => ancestralLegacy.id === 68);
+            if (blackPact) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, blackPact);
+            }
+        }
     }
 
     private updateActiveSkillUpgrades(character: Character) {
