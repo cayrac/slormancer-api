@@ -171,6 +171,7 @@ export interface CharacterConfig {
     has_ancestral_instability_buff: boolean;
     has_avatar_of_shadow_buff: boolean;
     has_blood_frenzy_buff: boolean;
+    has_life_bargain_buff: boolean;
     concentration_buff: boolean;
     ultima_momentum_buff: boolean;
     exposed_armor_buff: boolean;

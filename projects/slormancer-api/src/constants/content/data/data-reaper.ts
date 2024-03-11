@@ -1237,6 +1237,23 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, 1, true, EffectValueValueType.Stat, 'disable_greater_traits')
         }
     },
+    106: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'cooldown_time_reduction_if_life_cost');
+
+            addConstant(ma, 100, true, EffectValueValueType.Stat, 'life_cost_multiplier');            
+        }
+    },
+    107: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     110: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Unknown, 'garbage_stat');

@@ -158,6 +158,7 @@ export class SlormancerAncestralLegacyService {
                 currentRankCost: null,
                 baseCost: gameData.COST,
                 costPerRank: gameData.COST_LEVEL,
+                baseCostType: <SkillCostType>gameData.COST_TYPE,
                 costType: <SkillCostType>gameData.COST_TYPE,
                 rank: 0,
                 baseRank: baseRank,
@@ -201,23 +202,35 @@ export class SlormancerAncestralLegacyService {
         ancestralLegacy.rank = ancestralLegacy.baseRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
         ancestralLegacy.maxRank = ancestralLegacy.baseMaxRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
 
-        ancestralLegacy.cost = null;
-        if (ancestralLegacy.baseCost !== null) {
-            ancestralLegacy.currentRankCost = ancestralLegacy.baseCost + (ancestralLegacy.costPerRank === null ? 0 : ancestralLegacy.costPerRank * Math.max(1, ancestralLegacy.rank));
-            ancestralLegacy.cost = ancestralLegacy.currentRankCost;
-        }
-
         for (const effectValue of ancestralLegacy.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, Math.max(1, ancestralLegacy.rank));
         }
 
         ancestralLegacy.cooldown = ancestralLegacy.baseCooldown;
 
-        ancestralLegacy.hasLifeCost = ancestralLegacy.costType === SkillCostType.LifeLock || ancestralLegacy.costType === SkillCostType.LifeSecond || ancestralLegacy.costType === SkillCostType.LifeLockFlat || ancestralLegacy.costType === SkillCostType.Life || ancestralLegacy.costType === SkillCostType.LifePercent;
-        ancestralLegacy.hasManaCost = ancestralLegacy.costType === SkillCostType.ManaLock || ancestralLegacy.costType === SkillCostType.ManaSecond || ancestralLegacy.costType === SkillCostType.ManaLockFlat || ancestralLegacy.costType === SkillCostType.Mana || ancestralLegacy.costType === SkillCostType.ManaPercent;
-        ancestralLegacy.hasNoCost = ancestralLegacy.costType === SkillCostType.None || ancestralLegacy.cost === 0;
+        this.updateAncestralLegacyCost(ancestralLegacy);
 
         ancestralLegacy.isActivable = ancestralLegacy.baseCooldown !== null || ancestralLegacy.genres.includes(SkillGenre.Aura);
+    }
+
+    public updateAncestralLegacyCost(ancestralLegacy: AncestralLegacy) {
+        ancestralLegacy.costType = ancestralLegacy.baseCostType;
+        ancestralLegacy.cost = null;
+        if (ancestralLegacy.baseCost !== null) {
+            ancestralLegacy.currentRankCost = ancestralLegacy.baseCost + (ancestralLegacy.costPerRank === null ? 0 : ancestralLegacy.costPerRank * Math.max(1, ancestralLegacy.rank));
+            ancestralLegacy.cost = ancestralLegacy.currentRankCost;
+        }
+
+        if (ancestralLegacy.id === 24) {
+            console.log('cost : ' + ancestralLegacy.cost + ' ' + ancestralLegacy.costType);
+        }
+        this.updateAncestralLegacyCostType(ancestralLegacy);
+    }
+
+    public updateAncestralLegacyCostType(ancestralLegacy: AncestralLegacy) {
+        ancestralLegacy.hasLifeCost = ancestralLegacy.costType === SkillCostType.LifeSecond || ancestralLegacy.costType === SkillCostType.LifeLockFlat || ancestralLegacy.costType === SkillCostType.LifeLock || ancestralLegacy.costType === SkillCostType.Life || ancestralLegacy.costType === SkillCostType.LifePercent;
+        ancestralLegacy.hasManaCost = ancestralLegacy.costType === SkillCostType.ManaSecond || ancestralLegacy.costType === SkillCostType.ManaLockFlat || ancestralLegacy.costType === SkillCostType.ManaLock || ancestralLegacy.costType === SkillCostType.Mana || ancestralLegacy.costType === SkillCostType.ManaPercent;
+        ancestralLegacy.hasNoCost = ancestralLegacy.costType === SkillCostType.None;
     }
 
     public updateAncestralLegacyView(ancestralLegacy: AncestralLegacy) {

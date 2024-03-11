@@ -11,6 +11,7 @@ export interface Activable {
     cooldown: number;
     baseCost: number;
     cost: number;
+    baseCostType: SkillCostType;
     costType: SkillCostType;
     hasLifeCost: boolean;
     hasManaCost: boolean;

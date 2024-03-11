@@ -32,8 +32,10 @@ function statHasValue(stats: ExtractedStatMap, stat: string, value: number): boo
 }
 
 function hasCostType(stats: ExtractedStatMap, ...costTypes: Array<SkillCostType>): boolean {
-    const expectedCostType = getFirstStat(stats, 'cost_type', -1);
-    return costTypes.some(costType => ALL_SKILL_COST_TYPES.indexOf(costType) === expectedCostType)
+    const costType = stats['cost_type'];
+
+    const expectedCostTypes = costType ? valueOrDefault(costType.map(v => v.value), [ -1 ]) : [ -1 ];
+    return costTypes.some(costType => expectedCostTypes.includes(ALL_SKILL_COST_TYPES.indexOf(costType)))
 }
 
 export interface MergedStatMappingSource {
@@ -111,7 +113,7 @@ export const SKILL_LIFE_COST_MAPPING: MergedStatMapping = {
     suffix: '',
     source: {
         flat: [
-            { stat: 'life_cost_add_skill_imbue', condition: (_, stats) => !hasStat(stats, 'skill_is_support'), extra: true },
+            { stat: 'life_cost_add_skill_imbue', condition: (_, stats) => !hasStat(stats, 'skill_is_support') && hasStat(stats, 'skill_id'), extra: true },
         ],
         max: [],
         percent: [],
@@ -185,6 +187,7 @@ export const LIFE_COST_MAPPING: MergedStatMapping = {
             { stat: 'cost_reduction_mult_skill_per_arcanic_emblem', condition: config => config.arcanic_emblems > 0, multiplier: config => - config.arcanic_emblems },
             { stat: 'cost_reduction_mult_skill_per_arcanic_emblem_if_not_arcanic', condition: (config, stats) => config.arcanic_emblems > 0 && !hasStat(stats, 'skill_is_arcanic'), multiplier: config => - config.arcanic_emblems },
             { stat: 'cost_mult_skill_per_enemy_under_control', multiplier: config => -1 + config.enemy_under_command + config.elite_under_command * 10 },
+            { stat: 'life_cost_multiplier' }
         ],
         maxMultiplier: [],
     } 
@@ -219,6 +222,8 @@ export const COOLDOWN_MAPPING: MergedStatMapping = {
             { stat: 'cooldown_time_reduction_multiplier_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => - config.temporal_emblems },
             { stat: 'cooldown_time_muliplier_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
             { stat: 'spectral_shape_cooldown_time_override' },
+            // currently life bargain is not affected by the cooldown reduction
+            { stat: 'cooldown_time_reduction_if_life_cost', condition: (config, stats) => hasCostType(stats, SkillCostType.Life, SkillCostType.LifePercent) && (!hasStat(stats, 'activable_id') || getFirstStat(stats, 'activable_id') !== 57), multiplier: () => -1 },
         ],
         maxMultiplier: [],
     } 

@@ -200,19 +200,27 @@ export class SlormancerSkillService {
     public updateSkillModel(skill: Skill) {
         skill.level = Math.min(skill.maxLevel, skill.baseLevel) + skill.bonusLevel;
         skill.cooldown = skill.baseCooldown;
-        skill.baseManaCost = skill.initialManaCost + skill.perLevelManaCost * skill.level;
-
-        skill.manaCostType = skill.baseCostType;
-        skill.lifeCostType = SkillCostType.None;
-        
-        skill.hasLifeCost = false;
-        skill.hasManaCost = skill.manaCostType === SkillCostType.ManaSecond || skill.manaCostType === SkillCostType.ManaLockFlat || skill.manaCostType === SkillCostType.Mana;
-        skill.hasNoCost = skill.manaCostType === SkillCostType.None;
         skill.genres = skill.baseGenres.slice(0);
+
+        this.updateSkillCost(skill);
 
         for (const effectValue of skill.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, skill.level);
         }
+    }
+
+    public updateSkillCost(skill: Skill) {
+        skill.baseManaCost = skill.initialManaCost + skill.perLevelManaCost * skill.level;
+
+        skill.manaCostType = skill.baseCostType;
+        skill.lifeCostType = SkillCostType.None;
+        this.updateSkillCostType(skill);
+    }
+
+    public updateSkillCostType(skill: Skill) {
+        skill.hasLifeCost = skill.lifeCostType === SkillCostType.LifeSecond || skill.lifeCostType === SkillCostType.LifeLockFlat || skill.lifeCostType === SkillCostType.Life;
+        skill.hasManaCost = skill.manaCostType === SkillCostType.ManaSecond || skill.manaCostType === SkillCostType.ManaLockFlat || skill.manaCostType === SkillCostType.Mana;
+        skill.hasNoCost = !skill.hasLifeCost && !skill.hasManaCost;
     }
 
     public updateSkillView(skill: Skill) {

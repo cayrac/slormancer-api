@@ -411,5 +411,11 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
             overrideValueStat(values, 0, 'garbage_stat');
             overrideValueStat(values, 1, 'garbage_stat');
         }
+    },
+    57: {
+        override: values => {
+            overrideValueStat(values, 0, 'garbage_stat');
+            addConstant(values, 0, false, EffectValueValueType.Stat, 'mana_cost_to_life_cost');
+        }
     }
 }

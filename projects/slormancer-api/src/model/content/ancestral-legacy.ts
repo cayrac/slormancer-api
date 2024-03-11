@@ -23,6 +23,7 @@ export interface AncestralLegacy {
     baseCost: number | null;
     costPerRank: number | null;
     currentRankCost: number | null;
+    baseCostType: SkillCostType;
     costType: SkillCostType;
     hasLifeCost: boolean;
     hasManaCost: boolean;

@@ -885,6 +885,7 @@ export class SlormancerStatsExtractorService {
 
         this.addStat(extractedStats.stats, 'skill_id', skillAndUpgrades.skill.id, { skill: skillAndUpgrades.skill });
         this.addStat(extractedStats.stats, 'mana_cost_add_skill', skillAndUpgrades.skill.initialManaCost, { skill: skillAndUpgrades.skill });
+        // todo rajouter life cost type
         this.addStat(extractedStats.stats, 'cost_type', ALL_SKILL_COST_TYPES.indexOf(skillAndUpgrades.skill.manaCostType), { skill: skillAndUpgrades.skill });
         this.addStat(extractedStats.stats, 'cooldown_time_add', skillAndUpgrades.skill.baseCooldown, { skill: skillAndUpgrades.skill });
         if (character.supportSkill) {

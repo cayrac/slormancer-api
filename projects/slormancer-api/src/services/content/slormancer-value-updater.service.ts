@@ -43,11 +43,14 @@ import { SlormancerStatMappingService } from './slormancer-stat-mapping.service'
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
 import { CharacterStatsBuildResult, SkillStatsBuildResult } from './slormancer-stats.service';
 import { UNITY_REAPERS } from '../../constants';
+import { SlormancerActivableService } from './slormancer-activable.service';
+import { SlormancerAncestralLegacyService } from './slormancer-ancestral-legacy.service';
+import { SlormancerSkillService } from './slormancer-skill.service';
+import { Skill } from '../../model';
 
 interface SkillStats {
     mana: MergedStat<number>;
     life: MergedStat<number>;
-    cooldown: MergedStat<number>;
     attackSpeed: MergedStat<number>;
     increasedDamage: MergedStat<number>;
     skillIncreasedDamage: MergedStat<number>;
@@ -70,6 +73,9 @@ export class SlormancerValueUpdaterService {
     constructor(private slormancerEffectValueService: SlormancerEffectValueService,
                 private slormancerStatMappingService: SlormancerStatMappingService,
                 private slormancerMergedStatUpdaterService: SlormancerMergedStatUpdaterService,
+                private slormancerAncestrayLegacyService: SlormancerAncestralLegacyService,
+                private slormancerActivableService: SlormancerActivableService,
+                private slormancerSkillService: SlormancerSkillService,
         ) { }
 
     private getStatValueOrDefault(stats: Array<MergedStat>, stat: string): MergedStat {
@@ -210,7 +216,6 @@ export class SlormancerValueUpdaterService {
         return {
             mana: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_mana_cost'),
             life: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_life_cost'),
-            cooldown: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'cooldown_time'),
             attackSpeed: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'attack_speed'),
             skillIncreasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_increased_damages'),
             skillIncreasedAoe: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_aoe_increased_size'),
@@ -445,12 +450,12 @@ export class SlormancerValueUpdaterService {
         return <T>mergedStat.total;
     }
 
-    private getActivableCost(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy): number {
-        const manaCostAdd: Array<EntityValue<number>> = [];
+    private updateActivableCost(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy) {
+        const costAdd: Array<EntityValue<number>> = [];
         const entity: Entity = 'level' in source ? { activable: source } : { ancestralLegacy: source }
         
         if (stats['mana_cost_add']) {
-            manaCostAdd.push(...stats['mana_cost_add']);
+            costAdd.push(...stats['mana_cost_add']);
         }
 
         let baseCost = source.baseCost;
@@ -463,14 +468,30 @@ export class SlormancerValueUpdaterService {
                     }
                 }
                 
-                manaCostAdd.push({ value: baseCost, source: entity });
+                costAdd.push({ value: baseCost, source: entity });
             } else if (entity.ancestralLegacy.currentRankCost !== null) {
-                manaCostAdd.push({ value: entity.ancestralLegacy.currentRankCost, source: entity });
+                costAdd.push({ value: entity.ancestralLegacy.currentRankCost, source: entity });
+            }
+        }
+
+        if (stats['mana_cost_to_life_cost'] && config.has_life_bargain_buff && source.hasManaCost && ('level' in source || source.isActivable)) {
+            if (source.costType === SkillCostType.ManaPercent) {
+                source.costType = SkillCostType.LifePercent;
+            }
+            if (source.costType === SkillCostType.Mana) {
+                source.costType = SkillCostType.Life;
+            }
+            
+            if ('activable' in entity) {
+                this.slormancerActivableService.updateActivableCostType(entity.activable);
+            } else {
+                this.slormancerAncestrayLegacyService.updateAncestralLegacyCostType(entity.ancestralLegacy);
             }
         }
 
         const skillCostStats: ExtractedStatMap = {
-            mana_cost_add: manaCostAdd,
+            mana_cost_add: costAdd,
+            life_cost_add: costAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(source.costType), source: entity }],
         };
 
@@ -478,28 +499,41 @@ export class SlormancerValueUpdaterService {
             skillCostStats['activable_id'] = [{ value: entity.activable.id, source: entity }];
         } else {
             skillCostStats['ancestral_legacy_id'] = [{ value: entity.ancestralLegacy.id, source: entity }];
+            if (entity.ancestralLegacy.id === 24) {
+                console.log('ancestral legacy mapping stats : ', stats, source.hasLifeCost ? 'for life cost' : 'for mana cost');
+            }
         }
+
+        const mapping = source.hasLifeCost ? LIFE_COST_MAPPING : MANA_COST_MAPPING;
         
-        return Math.max(0, this.getSpecificStat(stats, MANA_COST_MAPPING, config, skillCostStats));
+        source.cost = Math.max(0, this.getSpecificStat(stats, mapping, config, skillCostStats));
     }
 
     private getActivableCooldown(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy, attackSpeed: number): number {
         let result = 0;
 
         if (source.baseCooldown !== null) {
-            const cooldownAdd: Array<EntityValue<number>> = [];
+            const extraStats: ExtractedStatMap = {};
+            const cooldownstats: Array<EntityValue<number>> = [];
             const entity: Entity = 'level' in source ? { activable: source } : { ancestralLegacy: source }
             
             if (stats['cooldown_time_add']) {
-                cooldownAdd.push(...stats['cooldown_time_add']);
+                cooldownstats.push(...stats['cooldown_time_add']);
             }
             if (source.baseCooldown !== null) {
                 if ('activable' in entity) {
-                    cooldownAdd.push({ value: source.baseCooldown, source: entity });
+                    cooldownstats.push({ value: source.baseCooldown, source: entity });
                 } else if (entity.ancestralLegacy.baseCooldown !== null) {
-                    cooldownAdd.push({ value: entity.ancestralLegacy.baseCooldown, source: entity });
+                    cooldownstats.push({ value: entity.ancestralLegacy.baseCooldown, source: entity });
                 }
             }
+
+            if (source.costType !== SkillCostType.None) {
+                extraStats['cost_type'] = [ { value: ALL_SKILL_COST_TYPES.indexOf(source.costType), source: entity } ];
+            }
+
+            extraStats['cooldown_time_add'] = cooldownstats;
+            extraStats['activable_id'] = [ { value: source.id, source: entity } ];
 
             let minCooldown = 0;
             const minCooldownStat = stats['min_cooldown_time'];
@@ -507,7 +541,41 @@ export class SlormancerValueUpdaterService {
                 minCooldown = Math.min(...minCooldownStat.map(v => v.value));
             }
 
-            const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, { cooldown_time_add: cooldownAdd }));
+            const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, extraStats));
+            
+            result = Math.max(0, round(cooldown * (100 - attackSpeed) / 100, 2));
+        }
+
+        return result;
+    }
+
+    private getSkillCooldown(stats: ExtractedStatMap, config: CharacterConfig, skill: Skill, attackSpeed: number): number {
+        let result = 0;
+
+        if (skill.baseCooldown !== null) {
+            const extraStats: ExtractedStatMap = {};
+            const cooldownstats: Array<EntityValue<number>> = [];
+            
+            if (stats['cooldown_time_add']) {
+                cooldownstats.push(...stats['cooldown_time_add']);
+            }
+
+            extraStats['cost_type'] = [
+                { value: ALL_SKILL_COST_TYPES.indexOf(skill.manaCostType), source: { skill } },
+                { value: ALL_SKILL_COST_TYPES.indexOf(skill.lifeCostType), source: { skill } }
+            ];
+    
+
+            extraStats['cooldown_time_add'] = cooldownstats;
+            extraStats['skill_id'] = [ { value: skill.id, source: { skill } } ];
+
+            let minCooldown = 0;
+            const minCooldownStat = stats['min_cooldown_time'];
+            if (minCooldownStat !== undefined && minCooldownStat.length > 0) {
+                minCooldown = Math.min(...minCooldownStat.map(v => v.value));
+            }
+
+            const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, extraStats));
             
             result = Math.max(0, round(cooldown * (100 - attackSpeed) / 100, 2));
         }
@@ -528,7 +596,7 @@ export class SlormancerValueUpdaterService {
             }
         }
 
-        activable.cost = this.getActivableCost(statsResult.extractedStats, config, activable);
+        this.updateActivableCost(statsResult.extractedStats, config, activable);
         activable.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, activable, skillStats.attackSpeed.total);
         
         for (const value of activable.values) {
@@ -634,7 +702,7 @@ export class SlormancerValueUpdaterService {
         const skillStats = this.getSkillStats(statsResult, character);
 
         if (ancestralLegacy.currentRankCost !== null) {
-            ancestralLegacy.cost = this.getActivableCost(statsResult.extractedStats, config, ancestralLegacy);
+            this.updateActivableCost(statsResult.extractedStats, config, ancestralLegacy);
         }
         if (ancestralLegacy.baseCooldown !== null) {
             ancestralLegacy.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, ancestralLegacy, skillStats.attackSpeed.total);
@@ -958,8 +1026,22 @@ export class SlormancerValueUpdaterService {
         const manaCostAdd: Array<EntityValue<number>> = [];
         const lifeCostAdd: Array<EntityValue<number>> = [];
         const entity: Entity = { skill: skillAndUpgrades.skill };
+        const convertManaToLifeCost = statsResult.extractedStats['mana_cost_to_life_cost'] && config.has_life_bargain_buff;
+        this.slormancerSkillService.updateSkillCost(skillAndUpgrades.skill);
         
-        manaCostAdd.push({ value: Math.max(0, skillStats.mana.total), source: entity });
+        if (convertManaToLifeCost) {
+            lifeCostAdd.push({ value: Math.max(0, skillStats.mana.total), source: entity });
+            if (skillAndUpgrades.skill.manaCostType === SkillCostType.ManaPercent) {
+                skillAndUpgrades.skill.lifeCostType = SkillCostType.LifePercent;
+                skillAndUpgrades.skill.manaCostType = SkillCostType.None;
+            }
+            if (skillAndUpgrades.skill.manaCostType === SkillCostType.Mana) {
+                skillAndUpgrades.skill.lifeCostType = SkillCostType.Life;
+                skillAndUpgrades.skill.manaCostType = SkillCostType.None;
+            }
+        } else {
+            manaCostAdd.push({ value: Math.max(0, skillStats.mana.total), source: entity });
+        }
 
         const manaExtraStats: ExtractedStatMap = {
             mana_cost_add: manaCostAdd,
@@ -969,7 +1051,7 @@ export class SlormancerValueUpdaterService {
         
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });
 
-        const expectdLifeCostType = skillAndUpgrades.skill.manaCostType === SkillCostType.Mana ? SkillCostType.Life : SkillCostType.LifeSecond;
+        const expectdLifeCostType = skillAndUpgrades.skill.manaCostType === SkillCostType.Mana ? SkillCostType.Life : skillAndUpgrades.skill.lifeCostType;
         const lifeExtraStats: ExtractedStatMap = {
             life_cost_add: lifeCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(expectdLifeCostType), source: entity }],
@@ -980,19 +1062,13 @@ export class SlormancerValueUpdaterService {
             skillAndUpgrades.skill.hasLifeCost = skillAndUpgrades.skill.lifeCost > 0;
             skillAndUpgrades.skill.lifeCostType = expectdLifeCostType;
         }
+        this.slormancerSkillService.updateSkillCostType(skillAndUpgrades.skill);
     }
 
     private updateSkillValues(skillAndUpgrades: CharacterSkillAndUpgrades, skillStats: SkillStats, statsResult: SkillStatsBuildResult, config: CharacterConfig) {
 
         this.updateSkillCost(skillAndUpgrades, skillStats, statsResult, config);
-
-        let minCooldown = 0;
-        const minCooldownStat = statsResult.extractedStats['min_cooldown_time'];
-        if (minCooldownStat !== undefined && minCooldownStat.length > 0) {
-            minCooldown = Math.min(...minCooldownStat.map(v => v.value));
-        }
-
-        skillAndUpgrades.skill.cooldown = Math.max(0, round(Math.max(minCooldown, skillStats.cooldown.total) * (100 - skillStats.attackSpeed.total) / 100, 2));
+        skillAndUpgrades.skill.cooldown = this.getSkillCooldown(statsResult.extractedStats, config, skillAndUpgrades.skill, skillStats.attackSpeed.total);
 
         const damageValues = skillAndUpgrades.skill.values.filter(isEffectValueSynergy).filter(value => isDamageType(value.stat));
 

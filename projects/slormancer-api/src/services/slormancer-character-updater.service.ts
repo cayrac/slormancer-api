@@ -98,7 +98,7 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
-    private updateBonuses(character: Character, config: CharacterConfig) {
+    private updateEquipmentBonuses(character: Character, config: CharacterConfig) {
         const items = ALL_GEAR_SLOT_VALUES.map(slot => character.gear[slot]).filter(isNotNullOrUndefined);
         const attributeBonuses = {
             [Attribute.Toughness]: 0,
@@ -275,6 +275,7 @@ export class SlormancerCharacterUpdaterService {
 
         for (const ancestralLegacy of ancestralLegacies) {
             if (ancestralLegacy.genres.includes(SkillGenre.Aura) || !preComputing) {
+                this.slormancerAncestralLegacyService.updateAncestralLegacyCost(ancestralLegacy)
                 this.slormancerValueUpdater.updateAncestralLegacyActivable(character, config, ancestralLegacy, statsResult);
                 result.ancestralLegacies.push(ancestralLegacy);
             }
@@ -282,6 +283,7 @@ export class SlormancerCharacterUpdaterService {
         for (const item of items) {
             const activable = <Activable>item.legendaryEffect?.activable;
             if (activable.genres.includes(SkillGenre.Aura) || !preComputing) {
+                this.slormancerActivableService.updateActivableCost(activable);
                 this.slormancerValueUpdater.updateActivable(character, activable, statsResult, config);
                 result.items.push(item);
             }
@@ -660,7 +662,7 @@ export class SlormancerCharacterUpdaterService {
 
         this.updateActiveSkillUpgrades(character);
 
-        this.updateBonuses(character, config);
+        this.updateEquipmentBonuses(character, config);
 
         this.updateCharacterStats(character, updateViews, config, additionalItem, additionalRunes);
 

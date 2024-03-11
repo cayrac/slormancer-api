@@ -74,6 +74,7 @@ export class SlormancerActivableService {
             cooldown: 0,
             baseCost: data.COST,
             cost: 0,
+            baseCostType: <SkillCostType>data.COST_TYPE,
             costType: <SkillCostType>data.COST_TYPE,
             hasLifeCost: false,
             hasManaCost: false,
@@ -131,15 +132,23 @@ export class SlormancerActivableService {
 
     public updateActivableModel(activable: Activable) {
         activable.cooldown = activable.baseCooldown === null ? 0 : round(activable.baseCooldown, 2);
-        activable.cost = activable.baseCost;
-
-        activable.hasLifeCost = activable.costType === SkillCostType.LifeSecond || activable.costType === SkillCostType.LifeLockFlat || activable.costType === SkillCostType.LifeLock || activable.costType === SkillCostType.Life || activable.costType === SkillCostType.LifePercent;
-        activable.hasManaCost = activable.costType === SkillCostType.ManaSecond || activable.costType === SkillCostType.ManaLockFlat || activable.costType === SkillCostType.ManaLock || activable.costType === SkillCostType.Mana || activable.costType === SkillCostType.ManaPercent;
-        activable.hasNoCost = activable.costType === SkillCostType.None;
+        this.updateActivableCost(activable);
 
         for (const effectValue of activable.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, activable.level);
         }
+    }
+
+    public updateActivableCost(activable: Activable) {
+        activable.cost = activable.baseCost;
+        activable.costType = activable.baseCostType;
+        this.updateActivableCostType(activable);
+    }
+
+    public updateActivableCostType(activable: Activable) {
+        activable.hasLifeCost = activable.costType === SkillCostType.LifeSecond || activable.costType === SkillCostType.LifeLockFlat || activable.costType === SkillCostType.LifeLock || activable.costType === SkillCostType.Life || activable.costType === SkillCostType.LifePercent;
+        activable.hasManaCost = activable.costType === SkillCostType.ManaSecond || activable.costType === SkillCostType.ManaLockFlat || activable.costType === SkillCostType.ManaLock || activable.costType === SkillCostType.Mana || activable.costType === SkillCostType.ManaPercent;
+        activable.hasNoCost = activable.costType === SkillCostType.None;
     }
 
     public updateActivableView(activable: Activable) {
