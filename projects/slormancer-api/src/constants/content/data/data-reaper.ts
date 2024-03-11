@@ -1254,6 +1254,20 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
+    108: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'physical_damage');
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'light_blorm_increased_damage');
+            synergyMultiply100(ba, 5);
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'shield_globe_value_add_extra');
+            addConstant(ma, -100, true, EffectValueValueType.Stat, 'shield_increased_value_mult');  
+        }
+    },
     110: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Unknown, 'garbage_stat');

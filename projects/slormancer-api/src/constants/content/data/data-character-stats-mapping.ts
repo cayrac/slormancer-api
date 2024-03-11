@@ -1520,6 +1520,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'shield_globe_value_add' },
+                { stat: 'shield_globe_value_add_extra', extra: true },
             ],
             max: [],
             percent: [
@@ -1791,7 +1792,10 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'academician_aura_increased_effect_mult' }],
+            multiplier: [
+                { stat: 'academician_aura_increased_effect_mult' },
+                { stat: 'aura_increased_effect_global_mult' }
+            ],
             maxMultiplier: [],
         } 
     },

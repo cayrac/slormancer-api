@@ -560,10 +560,11 @@ export class SlormancerCharacterUpdaterService {
     private addAdditionalAncestralLegacySkillAtMaxRank(character: Character, ancestralLegacy: AncestralLegacy) {
         if (!character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id)) {
             character.ancestralLegacies.activeAncestralLegacies.push(ancestralLegacy.id);
-            if (ancestralLegacy.baseRank !== ancestralLegacy.maxRank) {
-                this.slormancerAncestralLegacyService.updateAncestralLegacyModel(ancestralLegacy, ancestralLegacy.maxRank, ancestralLegacy.bonusRank);
-                this.slormancerAncestralLegacyService.updateAncestralLegacyView(ancestralLegacy);
-            }
+        }
+        
+        if (ancestralLegacy.baseRank !== ancestralLegacy.maxRank) {
+            this.slormancerAncestralLegacyService.updateAncestralLegacyModel(ancestralLegacy, ancestralLegacy.maxRank, ancestralLegacy.bonusRank);
+            this.slormancerAncestralLegacyService.updateAncestralLegacyView(ancestralLegacy);
         }
     } 
 
@@ -601,6 +602,13 @@ export class SlormancerCharacterUpdaterService {
         
             for (const ancestralStrike of adjacentAncestralStrikes) {
                 this.addAdditionalAncestralLegacySkillAtMaxRank(character, ancestralStrike);
+            }
+        }
+
+        if (character.reaper.id === 108) {
+            const judgeOfLight = character.ancestralLegacies.ancestralLegacies.find(ancestralLegacy => ancestralLegacy.id === 54);
+            if (judgeOfLight) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, judgeOfLight);
             }
         }
     }

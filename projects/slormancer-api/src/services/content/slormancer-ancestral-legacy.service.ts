@@ -221,9 +221,6 @@ export class SlormancerAncestralLegacyService {
             ancestralLegacy.cost = ancestralLegacy.currentRankCost;
         }
 
-        if (ancestralLegacy.id === 24) {
-            console.log('cost : ' + ancestralLegacy.cost + ' ' + ancestralLegacy.costType);
-        }
         this.updateAncestralLegacyCostType(ancestralLegacy);
     }
 

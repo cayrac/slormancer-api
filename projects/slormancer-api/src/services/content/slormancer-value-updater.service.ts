@@ -499,9 +499,6 @@ export class SlormancerValueUpdaterService {
             skillCostStats['activable_id'] = [{ value: entity.activable.id, source: entity }];
         } else {
             skillCostStats['ancestral_legacy_id'] = [{ value: entity.ancestralLegacy.id, source: entity }];
-            if (entity.ancestralLegacy.id === 24) {
-                console.log('ancestral legacy mapping stats : ', stats, source.hasLifeCost ? 'for life cost' : 'for mana cost');
-            }
         }
 
         const mapping = source.hasLifeCost ? LIFE_COST_MAPPING : MANA_COST_MAPPING;
