@@ -145,6 +145,9 @@ export class SlormancerMergedStatUpdaterService {
 
         if (typeof stat.total === 'number') {
             stat.total = stat.total;
+            if (typeof stat.maximum === 'number') {
+                stat.total = Math.min(stat.maximum, stat.total);
+            }
         } else {
             stat.total.min = stat.total.min;
             stat.total.max = stat.total.max;

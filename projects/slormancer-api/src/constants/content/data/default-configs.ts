@@ -240,6 +240,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     unity_level_2_50_p: 0,
     unity_level_2_51_p: 0,
     unity_level_2_52_p: 0,
+    absorbed_damage_wrath: 0,
 }
 
 export const COMBAT_CONFIG: CharacterConfig = {
@@ -480,4 +481,5 @@ export const COMBAT_CONFIG: CharacterConfig = {
     unity_level_2_50_p: 0,
     unity_level_2_51_p: 0,
     unity_level_2_52_p: 0,
+    absorbed_damage_wrath: 0,
 }

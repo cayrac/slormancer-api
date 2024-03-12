@@ -51,6 +51,7 @@ export interface MergedStatMapping {
     allowMinMax: boolean;
     displayPrecision?: number;
     suffix: '%' | 's' | '';
+    maximum?: number;
     source: {
         flat: Array<MergedStatMappingSource>;
         max: Array<MergedStatMappingSource>;
@@ -1234,6 +1235,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
     {
         stat: 'tenacity',
         precision: 1,
+        maximum: 100,
         allowMinMax: false,
         suffix: '%',
         source: {

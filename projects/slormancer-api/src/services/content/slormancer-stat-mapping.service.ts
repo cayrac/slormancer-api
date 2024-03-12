@@ -38,6 +38,7 @@ export class SlormancerStatMappingService {
             displayPrecision: mapping.displayPrecision,
             allowMinMax: mapping.allowMinMax,
             suffix: mapping.suffix,
+            maximum: mapping.maximum,
             values: {
                 flat: this.getMappingValues(mapping.source.flat, stats, config),
                 max: this.getMappingValues(mapping.source.max, stats, config),

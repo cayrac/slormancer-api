@@ -812,6 +812,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 5,
         override: values => {
             setStat(values, 0, 'skill_and_enemy_under_control_increased_damage_mult');
+            synergyMultiply100(values, 0);
             setAsUpgrade(values, 0);
         },
         additionalClassMechanics: []

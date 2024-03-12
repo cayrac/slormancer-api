@@ -233,7 +233,7 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'victims_combo', Math.max(0, config.victims_combo), { synergy: 'Combo counter' });
         this.addStat(stats.stats, 'victims_combo_100', Math.max(0, config.victims_combo - 100), { synergy: 'Combo counter minus 100' });
         this.addStat(stats.stats, 'current_dps', 0, { synergy: 'Current dps (not supported)' });
-        this.addStat(stats.stats, 'absorbed_damage_wrath', 0, { synergy: 'Absorbed damage wrath' });
+        this.addStat(stats.stats, 'absorbed_damage_wrath', config.absorbed_damage_wrath, { synergy: 'Absorbed damage wrath' });
         this.addStat(stats.stats, 'moonlight_stacks', config.moonlight_stacks, { synergy: 'Moonlight stacks' });
         this.addStat(stats.stats, 'sunlight_stacks', config.sunlight_stacks, { synergy: 'Sunlight stacks' });
 

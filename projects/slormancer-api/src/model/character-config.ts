@@ -238,5 +238,6 @@ export interface CharacterConfig {
     unity_level_2_50_p: number;
     unity_level_2_51_p: number;
     unity_level_2_52_p: number;
+    absorbed_damage_wrath: number;
 }
 

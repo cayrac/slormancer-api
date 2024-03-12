@@ -50,12 +50,16 @@ Initial release
 - Fixed an issue when adding the first stone while not all ancestral nodes are present
 
 ## Release 0.6.0 (TBD)
+### Added
+- Added all the new visible reapers
 ## Fixes
 - Personal Development Magazine damage multiplier is no longer applied twice
 - Reaper primordial data are no longer lost when parsed from a save file
 - Attributes now allow invalid values on save parsing to avoid issues with corrupted saves
 - Ancestral legacy nodes should no longer allow impossible configurations
 - Blorm damages is now correctly based on skill damage
+- Determination synergy is now based on 100% tenacity instead of 1%
+- Tenacity is now correctly capped at 100%
 
 ## TODO
 - mise à jour packages
