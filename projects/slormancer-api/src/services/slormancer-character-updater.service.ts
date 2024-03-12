@@ -625,6 +625,13 @@ export class SlormancerCharacterUpdaterService {
                 this.addAdditionalAncestralLegacySkillAtMaxRank(character, windsOfWinter);
             }
         }
+
+        if (character.reaper.id === 119) {
+            const blormUp = character.ancestralLegacies.ancestralLegacies.find(ancestralLegacy => ancestralLegacy.id === 63);
+            if (blormUp) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, blormUp);
+            }
+        }
     }
 
     private updateActiveSkillUpgrades(character: Character) {

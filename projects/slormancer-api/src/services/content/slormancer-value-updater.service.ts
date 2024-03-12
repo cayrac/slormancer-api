@@ -323,8 +323,12 @@ export class SlormancerValueUpdaterService {
 
                 if (mechanic.type === MechanicType.Blorm) {
 
-                    const blormIncreasedDamage = statsResult.extractedStats['enduring_blorms_blorm_increased_damage'];
+                    const enduringBlormIncreasedDamage = statsResult.extractedStats['enduring_blorms_blorm_increased_damage'];
+                    if (enduringBlormIncreasedDamage) {
+                        additionalDamageMultipliers.push((<EntityValue<number>>enduringBlormIncreasedDamage[0]).value);
+                    }
 
+                    const blormIncreasedDamage = statsResult.extractedStats['blorm_increased_damage'];
                     if (blormIncreasedDamage) {
                         additionalDamageMultipliers.push((<EntityValue<number>>blormIncreasedDamage[0]).value);
                     }

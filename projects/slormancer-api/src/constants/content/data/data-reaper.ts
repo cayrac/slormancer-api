@@ -1343,4 +1343,19 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'the_max_health_set');
         }
     },
+    119: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'shadow_imbued_skill_increased_damage');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'blorm_increased_damage');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'garbage_stat');
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
+        },
+    }
 }
