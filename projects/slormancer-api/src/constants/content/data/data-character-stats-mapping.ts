@@ -2096,6 +2096,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'lightning_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Lightning) },
                 { stat: 'light_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Light) },
                 { stat: 'shadow_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Shadow) },
+                { stat: 'ice_imbued_skill_increased_damage', condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Ice) },
                 {
                     stat: 'imbued_skill_increased_damage',
                     condition: (_, stats) => statHasValue(stats, 'skill_elements', SkillElement.Shadow)
@@ -2112,6 +2113,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 },
                 { stat: 'primary_skill_increased_damage', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary')},
                 { stat: 'imbued_skills_and_ancestral_beam_increased_damage_per_imbue', condition: (_, stats) => hasStat(stats, 'skill_elements'), multiplier: (_, stats) => getFirstStat(stats, 'equipped_imbues', 0)},
+                { stat: 'chill_frozen_increased_damage', condition: (config, stats) => config.use_enemy_state && config.enemy_is_chill_or_frozen},
             ],
             maxMultiplier: [
                 { stat: 'skill_increased_max_damage_mult' },

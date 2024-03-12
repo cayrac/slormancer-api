@@ -25,6 +25,7 @@ export interface CharacterConfig {
     use_enemy_state: boolean;
     enemy_percent_missing_health: number;
     enemy_is_poisoned: boolean;
+    enemy_is_chill_or_frozen: boolean;
     enemy_has_military_oppression: boolean;
     overall_reputation: number;
     totems_under_control: number;
