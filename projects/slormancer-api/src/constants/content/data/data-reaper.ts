@@ -566,9 +566,8 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
     },
     42: {
         override: (ba, be, ma) => { 
-
             if (ba !== null && ba.template !== null && ba.template.startsWith('"')) {
-                ba.template = ba.template.slice(1);
+                ba.template = ba.template.slice(1, ba.template.length - 10);
             }
 
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'summon_skeleton_squire_cost_lock_reduction');
