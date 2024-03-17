@@ -60,6 +60,8 @@ Initial release
 - Blorm damages is now correctly based on skill damage
 - Determination synergy is now based on 100% tenacity instead of 1%
 - Tenacity is now correctly capped at 100%
+- Waste Not is no longer affected by Area Increased Size
+- Inner fire and overdrive multipliers are now applied after additional damages
 
 ## TODO
 - mise à jour packages

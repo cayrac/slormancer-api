@@ -98,23 +98,24 @@ export class SlormancerMergedStatUpdaterService {
 
     public getTotalWithoutExtra(mergedStat: MergedStat): number | MinMax {
         let total = this.getTotalFlatAndPercent(mergedStat);
-
+        const nonExtraMultiplier = mergedStat.values.multiplier.filter(m => !m.extra);
+        const nonExtraMaxMultiplier = mergedStat.values.maxMultiplier.filter(m => !m.extra);
         if (typeof total === 'number') {    
             if (this.hasDiminishingResult(mergedStat.stat)) {
-                total = 100 - mergedStat.values.multiplier.map(mult => Math.max(0, 100 - mult.value) / 100).reduce((total, value) => total * value, 1 - (<number>total / 100)) * 100;
+                total = 100 - nonExtraMultiplier.map(mult => Math.max(0, 100 - mult.value) / 100).reduce((total, value) => total * value, 1 - (<number>total / 100)) * 100;
             } else {
-                for (const multiplier of mergedStat.values.multiplier) {
+                for (const multiplier of nonExtraMultiplier) {
                     total = total * (100 + multiplier.value) / 100;
                 }
             }
         } else {
-            for (const multiplier of mergedStat.values.multiplier) {
+            for (const multiplier of nonExtraMultiplier) {
                 const mult = (100 + multiplier.value);
                 total.min = total.min * mult / 100;
                 total.max = total.max * mult / 100;
             }
 
-            for (const multiplier of mergedStat.values.maxMultiplier) {
+            for (const multiplier of nonExtraMaxMultiplier) {
                 total.max = total.max * (100 + multiplier.value) / 100;
             }
         }
@@ -122,8 +123,7 @@ export class SlormancerMergedStatUpdaterService {
         return total; 
     }
 
-    public getTotal(stat: MergedStat): number | MinMax {
-        let total = this.getTotalWithoutExtra(stat);
+    public applyExtraToTotal(total: number |MinMax, stat: MergedStat): number | MinMax {
         let extra = this.getTotalFlatExtra(stat);
 
         if (typeof total === 'number' && stat.allowMinMax && typeof extra !== 'number') {
@@ -131,12 +131,47 @@ export class SlormancerMergedStatUpdaterService {
         }
 
         if (typeof total === 'number') {
-            total = round(bankerRound(total, stat.precision) + <number>extra, 3);
+            total = bankerRound(total, stat.precision) + <number>extra;
         } else {
-            total.min = round(bankerRound(total.min, stat.precision) + round(typeof extra === 'number' ? extra : extra.min), 3);
-            total.max = round(bankerRound(total.max, stat.precision) + (typeof extra === 'number' ? extra : extra.max), 3);
+            total.min = bankerRound(total.min, stat.precision) + (typeof extra === 'number' ? extra : extra.min);
+            total.max = bankerRound(total.max, stat.precision) + (typeof extra === 'number' ? extra : extra.max);
         }
 
+        const extraMultiplier = stat.values.multiplier.filter(m => m.extra);
+        const extraMaxMultiplier = stat.values.maxMultiplier.filter(m => m.extra);
+        if (typeof total === 'number') {    
+            if (this.hasDiminishingResult(stat.stat)) {
+                total = 100 - extraMultiplier.map(mult => Math.max(0, 100 - mult.value) / 100).reduce((total, value) => total * value, 1 - (<number>total / 100)) * 100;
+            } else {
+                for (const multiplier of extraMultiplier) {
+                    total = total * (100 + multiplier.value) / 100;
+                }
+            }
+        } else {
+            for (const multiplier of extraMultiplier) {
+                const mult = (100 + multiplier.value);
+                total.min = total.min * mult / 100;
+                total.max = total.max * mult / 100;
+            }
+
+            for (const multiplier of extraMaxMultiplier) {
+                total.max = total.max * (100 + multiplier.value) / 100;
+            }
+        }
+
+        return total;
+    }
+
+    public getTotal(stat: MergedStat): number | MinMax {
+        let total = this.getTotalWithoutExtra(stat);
+        total = this.applyExtraToTotal(total, stat);
+
+        if (typeof total === 'number') {
+            total = round(total, 3);
+        } else {
+            total.min = round(total.min, 3);
+            total.max = round(total.max, 3);
+        }
         return total;  
     }
 

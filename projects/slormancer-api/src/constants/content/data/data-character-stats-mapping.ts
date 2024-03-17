@@ -1508,8 +1508,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             ],
             maxPercent: [],
             multiplier: [
-                { stat: 'inner_fire_damage_mult_if_channeling_whirlwind', condition: (config, stats) => config.is_channeling_whirlwind && !hasStat(stats, 'no_longer_cost_per_second') },
-                { stat: 'inner_weakness_increased_damage', condition: config => config.use_enemy_state && config.enemy_inner_weakness_stacks > 0 , multiplier: (config, stats) => Math.min(config.enemy_inner_weakness_stacks, getMaxStacks(stats, 'inner_weakness_max_stacks')) }
+                { stat: 'inner_fire_damage_mult_if_channeling_whirlwind', extra: true, condition: (config, stats) => config.is_channeling_whirlwind && !hasStat(stats, 'no_longer_cost_per_second') },
+                { stat: 'inner_weakness_increased_damage', extra: true, condition: config => config.use_enemy_state && config.enemy_inner_weakness_stacks > 0 , multiplier: (config, stats) => Math.min(config.enemy_inner_weakness_stacks, getMaxStacks(stats, 'inner_weakness_max_stacks')) }
             ],
             maxMultiplier: [],
         } 
@@ -1584,9 +1584,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             percent: [{ stat: 'overdrive_damage_percent' }],
             maxPercent: [],
             multiplier: [
-                { stat: 'overdrive_damage_global_mult' },
-                { stat: 'overdrive_damage_global_mult_per_bounce_left', condition: config => config.overdrive_bounces_left > 0, multiplier: config => config.overdrive_bounces_left },
-                { stat: 'overdrive_damage_global_mult_last_bounce', condition: config => config.overdrive_last_bounce }
+                { stat: 'overdrive_damage_global_mult', extra: true },
+                { stat: 'overdrive_damage_global_mult_per_bounce_left', extra: true, condition: config => config.overdrive_bounces_left > 0, multiplier: config => config.overdrive_bounces_left },
+                { stat: 'overdrive_damage_global_mult_last_bounce', extra: true, condition: config => config.overdrive_last_bounce }
             ],
             maxMultiplier: [],
         } 

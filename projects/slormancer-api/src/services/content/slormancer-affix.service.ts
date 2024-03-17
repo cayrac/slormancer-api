@@ -80,7 +80,8 @@ export class SlormancerAffixService {
 
             valueLabel: '',
             statLabel: '',
-        }
+        };
+
     }
 
     public getAffixFromStat(statName: string, itemLevel: number, reinforcment: number, rarity: Rarity, value: number = Number.MAX_VALUE, pure: number = 100): Affix | null {
@@ -123,7 +124,7 @@ export class SlormancerAffixService {
 
         itemAffix.craftedEffect.possibleCraftedValues = this.slormancerItemValueService
             .getAffixValues(itemAffix.itemLevel, itemAffix.reinforcment, itemAffix.craftedEffect.score, itemAffix.craftedEffect.effect.percent, itemAffix.rarity, itemAffix.pure);
-       
+        
         const minValue = itemAffix.craftedEffect.possibleCraftedValues[0];
         const maxValue = itemAffix.craftedEffect.possibleCraftedValues[Math.max(0, itemAffix.craftedEffect.possibleCraftedValues.length - 1)];
         itemAffix.craftedEffect.minPossibleCraftedValue = minValue ? minValue.craft : itemAffix.craftedEffect.craftedValue;

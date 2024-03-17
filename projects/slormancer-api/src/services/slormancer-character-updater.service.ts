@@ -635,37 +635,34 @@ export class SlormancerCharacterUpdaterService {
     }
 
     private updateActiveSkillUpgrades(character: Character) {
-        const addOtherNonEquippedSpecPassives = character.reaper.templates.benediction
+        const addOtherNonEquippedSpecPassives = character.reaper.primordial && character.reaper.templates.benediction
             .map(be => be.values).flat()
             .find(value => value.stat === 'add_other_non_equipped_spec_passives') !== undefined;
-        const removeEquippedSpecPassives = character.reaper.templates.malediction
+        const removeEquippedSpecPassives = character.reaper.primordial && character.reaper.templates.malediction
             .map(ma => ma.values).flat()
             .find(value => value.stat === 'remove_equipped_spec_passives') !== undefined;
+
         for(const skill of character.skills) {
             const equipped = character.supportSkill === skill.skill
                 || character.primarySkill === skill.skill
                 || character.secondarySkill === skill.skill;
-            let defaultAction = true;
 
-            skill.activeUpgrades = [];
+            skill.activeUpgrades = equipped ? [ ...skill.selectedUpgrades ] : [];
 
             if (skill.skill.type === SkillType.Support) {
-                if (equipped && removeEquippedSpecPassives) {
-                    defaultAction = false;
-                    skill.activeUpgrades = skill.upgrades
-                        .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type !== SkillType.Passive)
-                        .map(upgrade => upgrade.id);
-                }
-                if (!equipped && addOtherNonEquippedSpecPassives) {
-                    defaultAction = false;
+                if (equipped) {
+                    if (removeEquippedSpecPassives) {  
+                        skill.activeUpgrades = skill.activeUpgrades
+                            .map(id => skill.upgrades.find(upgrade => upgrade.id === id))
+                            .filter(isNotNullOrUndefined)
+                            .filter(upgrade => upgrade.type !== SkillType.Passive)
+                            .map(upgrade => upgrade.id);
+                    }
+                } else if(addOtherNonEquippedSpecPassives) {
                     skill.activeUpgrades = skill.upgrades
                         .filter(upgrade => skill.selectedUpgrades.includes(upgrade.id) && upgrade.type === SkillType.Passive)
                         .map(upgrade => upgrade.id);
                 }
-            }
-
-            if (defaultAction && equipped) {
-                skill.activeUpgrades = [ ...skill.selectedUpgrades ];
             }
         }
     }

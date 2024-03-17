@@ -334,7 +334,7 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     },
     86: {
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+            addConstant(values, 1, false, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
     88: {
