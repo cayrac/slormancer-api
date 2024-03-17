@@ -62,6 +62,7 @@ Initial release
 - Tenacity is now correctly capped at 100%
 - Waste Not is no longer affected by Area Increased Size
 - Inner fire and overdrive multipliers are now applied after additional damages
+- Oak-Bark Armor stacks are now correctly applied to stats
 
 ## TODO
 - mise à jour packages

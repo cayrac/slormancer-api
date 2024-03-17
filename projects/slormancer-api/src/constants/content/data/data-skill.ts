@@ -375,7 +375,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 2,
         override: values => {
             setStat(values, 0, 'oak_bark_armor_stack_res_phy_percent');
-            setAsUpgrade(values, 0);
             addConstant(values, 6, false, EffectValueValueType.Stat, 'oak_bark_armor_stack_duration');
             addConstant(values, 10, false, EffectValueValueType.Stat, 'oak_bark_armor_max_stack');
             addConstant(values, 3, false, EffectValueValueType.Stat, 'oak_bark_armor_stack_on_hit_if_fortunate_or_perfect');
