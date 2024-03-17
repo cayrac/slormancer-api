@@ -63,7 +63,7 @@ export class SlormancerDataService {
     }
 
     public getGameDataAvailableReaper(): Array<GameDataReaper> {
-        return GAME_DATA.REAPER.filter(stat => stat.EN_NAME !== '');
+        return GAME_DATA.REAPER.filter(stat => stat.EN_NAME !== '' && ![99, 114].includes(stat.REF));
     }
 
     public getGameDataReaper(id: number): GameDataReaper | null {
