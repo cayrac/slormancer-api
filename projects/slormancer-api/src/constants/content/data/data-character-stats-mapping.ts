@@ -12,10 +12,24 @@ function getFirstStat(stats: ExtractedStatMap, stat: string, defaultValue: numbe
 
     return found ? valueOrDefault(found[0]?.value, defaultValue) : defaultValue;
 }
+function getSumStats(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
+    const found = stats[stat];
+    let result = defaultValue;
+
+    if (found) {
+        result = found.reduce((previous, current) => previous + current.value, 0);
+    }
+
+    return result;
+}
 
 
 function getMaxStacks(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
     return getFirstStat(stats, stat, defaultValue) + Math.ceil(getFirstStat(stats, 'increased_max_stacks', 0));
+}
+
+function getMinionsUnderYourControl(stats: ExtractedStatMap, config: CharacterConfig): number {
+    return config.controlled_minions + getSumStats(stats, 'additional_controlled_minions', 0);
 }
 
 function getMaxStat(stats: ExtractedStatMap, stat: string): number {
@@ -1809,7 +1823,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'minion_increased_damage_percent' },
-                { stat: 'minion_increased_damage_percent_per_controlled_minion', condition: config => config.controlled_minions > 0, multiplier: config => config.controlled_minions },
+                { stat: 'minion_increased_damage_percent_per_controlled_minion', condition: (config, stats) => getMinionsUnderYourControl(stats, config) > 0, multiplier: (config, stats) => getMinionsUnderYourControl(stats, config) },
             ],
             max: [],
             percent: [],

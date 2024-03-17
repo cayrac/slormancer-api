@@ -191,6 +191,7 @@ export interface CharacterConfig {
     projectile_passed_through_wall_of_omen: boolean;
     summoned_skeleton_squires: number;
     always_summon_maximum_skeleton_squires: boolean;
+    add_skeletons_to_controlled_minions: boolean;
     minimum_unreserved_mana: number;
     add_totem_tag_to_prime_totem_skills: boolean;
     highest_slorm_temple_floor: number;

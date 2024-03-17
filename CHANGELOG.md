@@ -64,6 +64,7 @@ Initial release
 - Inner fire and overdrive multipliers are now applied after additional damages
 - Oak-Bark Armor stacks are now correctly applied to stats
 - Personal development magazine damage bonus is no longer applied to upgrades
+- Summon skeleton squire now has a config to add summon skeletons to minions under your control
 
 ## TODO
 - mise à jour packages

@@ -647,6 +647,10 @@ export class SlormancerStatsExtractorService {
             
                 if (summonsCount > 0) {
                     lockedManaPercent = lockedManaPercent + (summonsCount * skeletonSquireSkill.cost * 100 / maxMana.total);
+
+                    if (config.add_skeletons_to_controlled_minions) {
+                        this.addStat(stats.stats, 'additional_controlled_minions', summonsCount, { synergy: 'Skeletons under your control' });
+                    }
                 }
             }
         }
