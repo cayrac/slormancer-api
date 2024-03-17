@@ -517,13 +517,13 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'drum_cast_2_chance_to_pierce_percent');
             overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'drum_cast_3_fork_chance_percent');
 
-            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'garbage_stat');
-            overrideValueTypeAndStat(ma, 1, EffectValueValueType.Stat, 'drum_cast_4_6_additional_projectile_add');
-            overrideValueTypeAndStat(ma, 2, EffectValueValueType.Stat, 'garbage_stat');
-            overrideValueTypeAndStat(ma, 3, EffectValueValueType.Stat, 'garbage_stat');
-            overrideValueTypeAndStat(ma, 4, EffectValueValueType.Stat, 'projectile_skill_crit_damage_percent');
-            overrideValueTypeAndStat(ma, 5, EffectValueValueType.Stat, 'projectile_skill_brut_damage_percent');
-            overrideValueTypeAndStat(ma, 6, EffectValueValueType.Stat, 'drum_war_max_stacks');
+            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'drum_cast_4_6_additional_projectile_add');
+            overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(be, 4, EffectValueValueType.Stat, 'projectile_skill_crit_damage_percent');
+            overrideValueTypeAndStat(be, 5, EffectValueValueType.Stat, 'projectile_skill_brut_damage_percent');
+            overrideValueTypeAndStat(be, 6, EffectValueValueType.Stat, 'drum_war_max_stacks');
         }
     },
     38: {
