@@ -63,6 +63,7 @@ Initial release
 - Waste Not is no longer affected by Area Increased Size
 - Inner fire and overdrive multipliers are now applied after additional damages
 - Oak-Bark Armor stacks are now correctly applied to stats
+- Personal development magazine damage bonus is no longer applied to upgrades
 
 ## TODO
 - mise à jour packages

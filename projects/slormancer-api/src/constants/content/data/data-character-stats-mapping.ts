@@ -2023,7 +2023,6 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'remnant_damage_reduction_mult', condition: config => config.is_remnant },
                 { stat: 'remnant_increased_damage_mult', condition: config => config.is_remnant },
                 { stat: 'remnant_vulnerability_remnant_increased_damage_mult', condition: config => config.is_remnant && config.target_has_remnant_vulnerability },
-                { stat: 'increased_damage_mult_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
                 /*{ // blood frenzy damage bonus is currently not visible in stats
                     stat: 'increased_damage_mult_per_bloodthirst_stack',
                     condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
@@ -2116,6 +2115,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'primary_skill_increased_damage', condition: (_, stats) => hasStat(stats, 'skill_is_equipped_primary')},
                 { stat: 'imbued_skills_and_ancestral_beam_increased_damage_per_imbue', condition: (_, stats) => hasStat(stats, 'skill_elements'), multiplier: (_, stats) => getFirstStat(stats, 'equipped_imbues', 0)},
                 { stat: 'chill_frozen_increased_damage', condition: (config, stats) => config.use_enemy_state && config.enemy_is_chill_or_frozen},
+                { stat: 'increased_damage_mult_per_inner_fire', condition: config => config.active_inner_fire > 0, multiplier: config => config.active_inner_fire },
             ],
             maxMultiplier: [
                 { stat: 'skill_increased_max_damage_mult' },
