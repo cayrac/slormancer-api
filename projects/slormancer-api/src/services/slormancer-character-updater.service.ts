@@ -632,6 +632,23 @@ export class SlormancerCharacterUpdaterService {
                 this.addAdditionalAncestralLegacySkillAtMaxRank(character, blormUp);
             }
         }
+
+        if (character.reaper.id === 115 && character.reaper.primordial) {
+            const fieryWeapon = character.ancestralLegacies.ancestralLegacies.find(ancestralLegacy => ancestralLegacy.id === 8);
+            if (fieryWeapon) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, fieryWeapon);
+            }
+            const moreFire = character.ancestralLegacies.ancestralLegacies.find(ancestralLegacy => ancestralLegacy.id === 9);
+            if (moreFire) {
+                this.addAdditionalAncestralLegacySkillAtMaxRank(character, moreFire);
+            }
+
+            const normalOrFireAncestralLegacies = character.ancestralLegacies.ancestralLegacies
+                .filter(ancestralLegacy => ancestralLegacy.element === SkillElement.Neutral || ancestralLegacy.element === SkillElement.Fire)
+                .map(ancestralLegacy => ancestralLegacy.id);
+            character.ancestralLegacies.activeAncestralLegacies = character.ancestralLegacies.activeAncestralLegacies
+                .filter(ancestralLegacyId => normalOrFireAncestralLegacies.includes(ancestralLegacyId));
+        }
     }
 
     private updateActiveSkillUpgrades(character: Character) {

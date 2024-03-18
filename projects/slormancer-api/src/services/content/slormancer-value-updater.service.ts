@@ -312,12 +312,18 @@ export class SlormancerValueUpdaterService {
                 
                 const additionalDamageMultipliers: number[] = [];
 
-                if (mechanic.type === MechanicType.Burn && config.has_living_inferno_buff) {
+                if (mechanic.type === MechanicType.Burn) {
 
-                    const burnIncreasedDamageStat = statsResult.extractedStats['living_inferno_burn_increased_damage'];
+                    if (config.has_living_inferno_buff) {
+                        const burnIncreasedDamageStat = statsResult.extractedStats['living_inferno_burn_increased_damage'];
+                        if (burnIncreasedDamageStat) {
+                            additionalDamageMultipliers.push((<EntityValue<number>>burnIncreasedDamageStat[0]).value);
+                        }
+                    }
 
-                    if (burnIncreasedDamageStat) {
-                        additionalDamageMultipliers.push((<EntityValue<number>>burnIncreasedDamageStat[0]).value);
+                    const increasedBurnDamage = statsResult.extractedStats['increased_burn_damage'];
+                    if (increasedBurnDamage) {
+                        additionalDamageMultipliers.push((<EntityValue<number>>increasedBurnDamage[0]).value);
                     }
                 }
 

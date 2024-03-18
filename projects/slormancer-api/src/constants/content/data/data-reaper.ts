@@ -1308,6 +1308,13 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(ma, 1, false, EffectValueValueType.Stat, 'overdrive_bounce_number_set');
         }
     },
+    115: {
+        override: (ba, be, ma, reaperId) => {
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'fire_imbued_skill_increased_damage');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'increased_burn_damage');
+            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+        }
+    },
     116: {
         override: (ba, be, ma, reaperId) => {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'ice_imbued_skill_increased_damage');
