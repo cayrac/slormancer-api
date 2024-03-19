@@ -333,6 +333,18 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             addConstant(be, 7, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
+    18: {
+        override: (ba, be, ma) => {
+            overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'garbage_stat');
+            overrideValueTypeAndStat(ba, 7, EffectValueValueType.Stat, 'garbage_stat');
+            overrideSynergySource(ba, 8, 'critical_chance');
+
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'overflowing_the_max_mana_add_extra');
+            addConstant(ma, -100, false, EffectValueValueType.Stat, 'overflowing_the_max_mana_global_mult');
+            addConstant(be, 0, false, EffectValueValueType.Stat, 'mana_to_life_modifiers');
+        }
+    },
     19: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'spectral_shape_cooldown_time');

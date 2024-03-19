@@ -24,7 +24,7 @@ export const DATA_HERO_BASE_STATS: GameHeroesData<HeroBaseStats> = {
     0: {
         baseStats: [
             { stat: 'the_max_health_add', base: 294, perLevel: 68  },
-            { stat: 'the_max_mana_add', base: 176, perLevel: 44 },
+            { stat: 'character_the_max_mana_add', base: 176, perLevel: 44 },
             { stat: 'res_phy_add', base: 11, perLevel: 4 },
             { stat: 'health_regen_add', base: 2, perLevel: 0 },
             { stat: 'skewer_max_stack_add', base: 5, perLevel: 0 },
@@ -118,7 +118,7 @@ export const DATA_HERO_BASE_STATS: GameHeroesData<HeroBaseStats> = {
     1: {
         baseStats: [
             { stat: 'the_max_health_add', base: 192, perLevel: 44 },
-            { stat: 'the_max_mana_add', base: 176, perLevel: 44 },
+            { stat: 'character_the_max_mana_add', base: 176, perLevel: 44 },
             { stat: 'dodge_add', base: 11, perLevel: 4 },
             { stat: 'health_on_hit_add', base: 1, perLevel: 0 },
             { stat: 'trap_arm_time_add', base: TRAP_ARM_DURATION, perLevel: 0 },
@@ -210,7 +210,7 @@ export const DATA_HERO_BASE_STATS: GameHeroesData<HeroBaseStats> = {
     2: {
         baseStats: [
             { stat: 'the_max_health_add', base: 202, perLevel: 52 },
-            { stat: 'the_max_mana_add', base: 340, perLevel: 66 },
+            { stat: 'character_the_max_mana_add', base: 340, perLevel: 66 },
             { stat: 'res_phy_add', base: 4, perLevel: 2 },
             { stat: 'res_mag_add', base: 7, perLevel: 3 },
             { stat: 'health_on_kill_add', base: 3, perLevel: 0 },

@@ -324,15 +324,30 @@ export const MAX_MANA_MAPPING: MergedStatMapping = {
     allowMinMax: false,
     suffix: '',
     source: {
-        flat: [{ stat: 'the_max_mana_add' }],
+        flat: [
+            { stat: 'the_max_mana_add', condition: (_, stats) => !hasStat(stats, 'mana_to_life_modifiers') },
+            { stat: 'character_the_max_mana_add' },
+            { stat: 'overflowing_the_max_mana_add_extra', extra: true }
+        ],
         max: [],
         percent: [
-            { stat: 'the_max_mana_percent' },
-            { stat: 'chrono_manamorphosis_stack_the_max_mana_percent', condition: config => config.chrono_manamorphosis_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_manamorphosis_stacks, getMaxStacks(stats, 'chrono_manamorphosis_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
-            { stat: 'the_max_mana_percent_per_enemy_in_breach_range', condition: config => config.enemies_in_breach_range > 0, multiplier: config => config.enemies_in_breach_range },
+            { stat: 'the_max_mana_percent', condition: (_, stats) => !hasStat(stats, 'mana_to_life_modifiers') },
+            {
+                stat: 'chrono_manamorphosis_stack_the_max_mana_percent',
+                condition: (config, stats) => config.chrono_manamorphosis_stacks > 0 && !hasStat(stats, 'mana_to_life_modifiers'),
+                multiplier: (config, stats) => Math.min(config.chrono_manamorphosis_stacks, getMaxStacks(stats, 'chrono_manamorphosis_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks'))
+            },
+            {
+                stat: 'the_max_mana_percent_per_enemy_in_breach_range',
+                condition: (config, stats) => config.enemies_in_breach_range > 0 && !hasStat(stats, 'mana_to_life_modifiers'),
+                multiplier: config => config.enemies_in_breach_range
+            },
         ],
         maxPercent: [],
-        multiplier: [{ stat: 'the_max_mana_global_mult' }],
+        multiplier: [
+            { stat: 'the_max_mana_global_mult', condition: (_, stats) => !hasStat(stats, 'mana_to_life_modifiers') },
+            { stat: 'overflowing_the_max_mana_global_mult' }
+        ],
         maxMultiplier: [],
     } 
 }
@@ -345,6 +360,7 @@ export const MAX_LIFE_MAPPING: MergedStatMapping = {
     source: {
         flat: [
             { stat: 'the_max_health_set' },
+            { stat: 'the_max_mana_add', condition: (_, stats) => hasStat(stats, 'mana_to_life_modifiers') },
             { stat: 'the_max_health_add', condition: (_, stats) => stats['the_max_health_set'] === undefined }
         ],
         max: [],
@@ -355,9 +371,24 @@ export const MAX_LIFE_MAPPING: MergedStatMapping = {
                 multiplier: config => config.totems_under_control
             },
             { stat: 'vitality_stack_the_max_health_percent', condition: (config, stats) => stats['the_max_health_set'] === undefined && config.vitality_stacks > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'vitality_max_stack'), config.vitality_stacks) },
+            
+            { stat: 'the_max_mana_percent', condition: (_, stats) => hasStat(stats, 'mana_to_life_modifiers') },
+            {
+                stat: 'chrono_manamorphosis_stack_the_max_mana_percent',
+                condition: (config, stats) => config.chrono_manamorphosis_stacks > 0 && hasStat(stats, 'mana_to_life_modifiers'),
+                multiplier: (config, stats) => Math.min(config.chrono_manamorphosis_stacks, getMaxStacks(stats, 'chrono_manamorphosis_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks'))
+            },
+            {
+                stat: 'the_max_mana_percent_per_enemy_in_breach_range',
+                condition: (config, stats) => config.enemies_in_breach_range > 0 && hasStat(stats, 'mana_to_life_modifiers'),
+                multiplier: config => config.enemies_in_breach_range
+            },
         ],
         maxPercent: [],
-        multiplier: [{ stat: 'the_max_health_global_mult', condition: (_, stats) => stats['the_max_health_set'] === undefined }],
+        multiplier: [
+            { stat: 'the_max_health_global_mult', condition: (_, stats) => stats['the_max_health_set'] === undefined },
+            { stat: 'the_max_mana_global_mult', condition: (_, stats) => hasStat(stats, 'mana_to_life_modifiers') },
+        ],
         maxMultiplier: [],
     } 
 }
