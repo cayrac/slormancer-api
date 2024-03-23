@@ -67,7 +67,7 @@ Initial release
 - Personal development magazine damage bonus is no longer applied to upgrades
 - Fixed a save parsing error with profile values
 
-## Release 0.6.1 (2024-03-23)
+## Release 0.6.2 (2024-03-23)
 ### Added
 - Updated game files
 
