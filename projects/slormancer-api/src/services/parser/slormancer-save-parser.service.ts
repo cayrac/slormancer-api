@@ -305,7 +305,7 @@ export class SlormancerSaveParserService {
     }
 
     private parseProfile(data: string): GameProfile {
-        return toHeroes(mapHeroesArray(splitHeroesData(data), toNumberArray));
+        return toHeroes(mapHeroesArray(splitHeroesData(data), toFloatArray));
     }
 
     private parseEnemyLevel(data: string): GameHeroesData<number> {        

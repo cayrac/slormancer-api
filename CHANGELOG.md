@@ -65,6 +65,7 @@ Initial release
 - Oak-Bark Armor stacks are now correctly applied to stats
 - Personal development magazine damage bonus is no longer applied to upgrades
 - Summon skeleton squire now has a config to add summon skeletons to minions under your control
+- Fixed a save parsing error with profile values
 
 ## TODO
 - mise à jour packages
