@@ -1,7 +1,7 @@
 ## Release 0.2.3 (2022-10-15)
 Initial release
 
-## Release 0.2.5 (2022-15-19)
+## Release 0.2.5 (2022-11-19)
 ### Changed
 - Updated game files
 - Added an order to some synergy loops
@@ -17,7 +17,7 @@ Initial release
 ## Fixes
 - Fixed Spark Machine and Elemental Wizard realms not being correctly mapped
 
-## Release 0.4.0  (2023-19-07)
+## Release 0.4.0  (2023-07-19)
 ### Added
 - Raised max level to 80
 - Added new legendaries data
@@ -28,13 +28,13 @@ Initial release
 - Fixed an issue causing ancestral legacy active effects to be applied twice
 - Fixed an issue causing exported build above level 64 to have an incorrect level
 
-## Release 0.4.1 (2023-25-07)
+## Release 0.4.1 (2023-07-25)
 ## Fixes
 - Fixed an issue causing exported build with item level above 64 to have an incorrect level
 - Fixed an issue causing exported build with an attribute rank above 64 to have an incorrect rank
 - it is no longer possible to allocate more than 75 points into an attribute
 
-## Release 0.5.0 (2023-24-09)
+## Release 0.5.0 (2023-09-24)
 ### Added
 - Increased ancestral stone max and added the first stone
 - Added a "triggered by book smash" config option for Embittered author
@@ -45,11 +45,11 @@ Initial release
 - Elemental reward max rank is now correctly affected by Ancestral champion's present
 - Lightning minimum damage are now correctly set to 1 without Consistency is key
 
-## Release 0.5.1 (2023-24-09)
+## Release 0.5.1 (2023-09-24)
 ## Fixes
 - Fixed an issue when adding the first stone while not all ancestral nodes are present
 
-## Release 0.6.0 (TBD)
+## Release 0.6.0 (2024-03-23)
 ### Added
 - Added all new available reapers
 - Summon skeleton squire now has a config to add the number of summoned skeletons to minions under your control
