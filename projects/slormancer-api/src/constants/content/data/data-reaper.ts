@@ -408,6 +408,7 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 5, EffectValueValueType.Stat, 'res_phy_mag_global_mult_on_low_life');
 
             overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'garbage_stat');
+            overrideSynergySource(ba, 6, 'missing_health');
             overrideValueTypeAndStat(ba, 6, EffectValueValueType.Stat, 'berzerker_additional_damage');
             overrideValueTypeAndStat(ba, 4, EffectValueValueType.Stat, 'berzerker_additional_damage_mult');
 
