@@ -51,7 +51,8 @@ Initial release
 
 ## Release 0.6.0 (TBD)
 ### Added
-- Added all the new visible reapers
+- Added all new available reapers
+- Summon skeleton squire now has a config to add the number of summoned skeletons to minions under your control
 ## Fixes
 - Personal Development Magazine damage multiplier is no longer applied twice
 - Reaper primordial data are no longer lost when parsed from a save file
@@ -64,7 +65,6 @@ Initial release
 - Inner fire and overdrive multipliers are now applied after additional damages
 - Oak-Bark Armor stacks are now correctly applied to stats
 - Personal development magazine damage bonus is no longer applied to upgrades
-- Summon skeleton squire now has a config to add summon skeletons to minions under your control
 - Fixed a save parsing error with profile values
 
 ## TODO
