@@ -88,6 +88,10 @@ export class SlormancerSynergyResolverService {
             && remainingSynergy.effect.source === 'armor' );
         const elementalSorcerer = remainingSynergies.findIndex(remainingSynergy => "ancestralLegacy" in remainingSynergy.objectSource
             && remainingSynergy.objectSource.ancestralLegacy.id === 112);
+        const lifeIsOverrated = remainingSynergies.findIndex(remainingSynergy => "activable" in remainingSynergy.objectSource
+            && remainingSynergy.objectSource.activable.id === 54);
+        const lifeLockFlat = remainingSynergies.findIndex(remainingSynergy => remainingSynergy.type === ResolveDataType.Synergy
+            && remainingSynergy.effect.stat === 'life_lock_flat' && remainingSynergy.effect.source === 'max_health');
 
         if (indomitableMountain !== -1 && armorOfIllusion !== -1) {
             result = armorOfIllusion;
@@ -95,6 +99,12 @@ export class SlormancerSynergyResolverService {
             result = evaseMagic;
         } else if (toughness15 !== -1 && elementalSorcerer !== -1 && untouchableOne !== -1 && indomitableMountain !== -1) {
             result = toughness15;
+        } else if (lifeIsOverrated !== -1) {
+            if (lifeLockFlat !== -1) {
+                result = lifeLockFlat;
+            } else {
+                result = lifeIsOverrated;
+            }
         }
         
         return result;

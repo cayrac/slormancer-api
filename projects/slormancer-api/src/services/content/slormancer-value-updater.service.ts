@@ -450,6 +450,14 @@ export class SlormancerValueUpdaterService {
                     
                 }
             }
+            
+            if (effectValue.stat === 'berzerker_additional_damage' && isEffectValueSynergy(effectValue)) {
+                const berzerkerAdditionalDamageMultiplier = <EffectValueVariable>effectValues.find(effect => effect.stat === 'berzerker_additional_damage_mult');
+                if (berzerkerAdditionalDamageMultiplier) {
+                    effectValue.synergy = mult(effectValue.synergy, berzerkerAdditionalDamageMultiplier.value);
+                    effectValue.displaySynergy = round(effectValue.synergy, 0);
+                }
+            }
         }
     }
 
@@ -1148,7 +1156,7 @@ export class SlormancerValueUpdaterService {
             if (aoeValues.length > 0) {
                 for (const value of aoeValues) {
                     value.value = value.baseValue * (100 + skillStats.aoeIncreasedSize.total) / 100;
-                    value.value = value.baseValue * (100 + skillStats.skillIncreasedAoe.total) / 100;
+                    value.value = value.value * (100 + skillStats.skillIncreasedAoe.total) / 100;
                     value.displayValue = round(value.value, 2);
                 }
             }

@@ -409,6 +409,7 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
         override: values => {
             setUpgradeValue(values, 0, 0);
             overrideValueStat(values, 0, 'garbage_stat');
+            setValueType(values, 0, EffectValueValueType.Static);
             overrideValueStat(values, 1, 'garbage_stat');
         }
     },

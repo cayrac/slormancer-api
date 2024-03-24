@@ -297,7 +297,8 @@ export class SlormancerStatsService {
             this.slormancerStatUpdaterService.updateStatTotal(stats);
         }
 
-        const synergyResult = this.slormancerSynergyResolverService.resolveSynergies(extractedStats.synergies, result.stats, extractedStats.stats, config);
+        const synergies = extractedStats.synergies.filter(synergy => synergy.effect.stat !== 'berzerker_additional_damage');
+        const synergyResult = this.slormancerSynergyResolverService.resolveSynergies(synergies, result.stats, extractedStats.stats, config);
         result.unresolvedSynergies = synergyResult.unresolved;
 
         this.slormancerSynergyResolverService.resolveIsolatedSynergies(extractedStats.isolatedSynergies, result.stats, extractedStats.stats);

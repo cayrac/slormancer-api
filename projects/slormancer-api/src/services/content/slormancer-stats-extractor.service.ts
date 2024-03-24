@@ -40,7 +40,7 @@ import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefaul
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
-import { Activable, AncestralLegacyType, MinMax } from '../../model';
+import { Activable, AncestralLegacy, AncestralLegacyType, MinMax } from '../../model';
 import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerReaperService } from './slormancer-reaper.service';
 import { add, round } from '../../util';
@@ -187,6 +187,7 @@ export class SlormancerStatsExtractorService {
     }
 
     private addCharacterValues(character: Character, stats: ExtractedStats) {
+        const activables = this.getAllActiveActivables(character);
         this.addStat(stats.stats, 'half_level', character.level / 2, { character });
         this.addStat(stats.stats, 'remnant_damage_reduction_mult', -REMNANT_DAMAGE_REDUCTION, { synergy: 'Remnant base damage reduction' });
         this.addStat(stats.stats, 'arcane_clone_cooldown_reduction_global_mult', ARCANE_CLONE_ATTACK_SPEED_REDUCTION, { synergy: 'Arcane clone base attack speed reduction' });
@@ -194,9 +195,7 @@ export class SlormancerStatsExtractorService {
         const supportSkills = [ character.skills[0], character.skills[1], character.skills[2] ].filter(isNotNullOrUndefined);
         this.addStat(stats.stats, 'total_mastery_support', supportSkills.reduce((total, skill) => total + skill.skill.level, 0), { character })
         this.addStat(stats.stats, 'mastery_secondary', character.secondarySkill === null ? 0 : character.secondarySkill.level, character.secondarySkill === null ? { character } : { skill: character.secondarySkill })
-        const auraSkills = [ character.activable1, character.activable2, character.activable3, character.activable4 ]
-            .filter(isNotNullOrUndefined)
-            .filter(skill => skill.genres.includes(SkillGenre.Aura));
+        const auraSkills = activables.filter(skill => skill.genres.includes(SkillGenre.Aura));
         this.addStat(stats.stats, 'active_aura_count', auraSkills.length, { character });
         // *100 to handle the /100 synergy
         this.addStat(stats.stats, 'aura_equipped_per_aura_active', Math.pow(auraSkills.length, 2) * 100, { character })
@@ -206,10 +205,7 @@ export class SlormancerStatsExtractorService {
             this.addStat(stats.stats, 'maxed_upgrades', maxedUpgrades, { synergy: 'Number of maxed upgrades' });
         }
         
-        const skills = [ ...character.skills ];
-        skills.pop(); // BUG : all masteries currently refer to all skills mastery except the last one
-        const allCharacterMasteries = skills.reduce((total, skill) => total + skill.skill.level, 0);
-
+        const allCharacterMasteries = character.skills.reduce((total, skill) => total + skill.skill.level, 0);
         this.addStat(stats.stats, 'all_character_masteries', allCharacterMasteries, { synergy: 'Character skill masteries' });
     }
     
@@ -572,12 +568,11 @@ export class SlormancerStatsExtractorService {
     }
 
     public addActivableValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
-        const equipedActivables = [character.activable1, character.activable2, character.activable3, character.activable4]
-            .filter(isNotNullOrUndefined);
+        const activables = this.getAllActiveActivables(character);
 
         for (const ancestralLegacy of character.ancestralLegacies.ancestralLegacies) {
             if (ancestralLegacy.isActivable) {
-                const equiped = equipedActivables.includes(ancestralLegacy);
+                const equiped = activables.includes(ancestralLegacy);
                 const source = { ancestralLegacy };
                 for (const effectValue of ancestralLegacy.values) {
                     if (isEffectValueSynergy(effectValue)) {
@@ -597,7 +592,7 @@ export class SlormancerStatsExtractorService {
 
         for (const item of items) {
             if (item.legendaryEffect !== null && item.legendaryEffect.activable !== null) {
-                const equiped = equipedActivables.includes(item.legendaryEffect.activable);
+                const equiped = activables.includes(item.legendaryEffect.activable);
                 const source = { item };
                 for (const effectValue of item.legendaryEffect.activable.values) {
                     if (isEffectValueSynergy(effectValue)) {
@@ -612,7 +607,7 @@ export class SlormancerStatsExtractorService {
         }
 
         for (const activable of character.reaper.activables) {
-            const equiped = equipedActivables.includes(activable);
+            const equiped = activables.includes(activable);
             const source = { activable };
             for (const effectValue of activable.values) {
                 if (isEffectValueSynergy(effectValue)) {
@@ -628,9 +623,26 @@ export class SlormancerStatsExtractorService {
         }
     }
 
-    private getLockedManaPercent(character: Character, config: CharacterConfig, stats: ExtractedStats): number {        
-        const activables = [character.activable1, character.activable2, character.activable3, character.activable4 ].filter(isNotNullOrUndefined);
+    private getAllActiveActivables(character: Character): (Activable | AncestralLegacy)[] {
+        const ancestralLegacyActivables = character.ancestralLegacies.ancestralLegacies
+            .filter(ancestralLegacy => character.ancestralLegacies.activeAncestralLegacies.includes(ancestralLegacy.id) && ancestralLegacy.isActivable);
+        const itemActivables = ALL_GEAR_SLOT_VALUES
+            .map(slot => character.gear[slot]?.legendaryEffect?.activable)
+            .filter(isNotNullOrUndefined);
+        const reaperActivables = character.reaper.activables
 
+        return [
+            ...ancestralLegacyActivables,
+            ...itemActivables,
+            ...reaperActivables
+        ].filter(activable => activable === character.activable1
+                           || activable === character.activable2
+                           || activable === character.activable3
+                           || activable === character.activable4
+                           || activable.genres.includes(SkillGenre.Aura));
+    }
+
+    private getLockedManaPercent(activables: (Activable | AncestralLegacy)[], config: CharacterConfig, stats: ExtractedStats): number {        
         let lockedManaPercent = activables.filter(act => act.costType === SkillCostType.ManaLock)
             .reduce((t, s) => t + valueOrDefault(s.cost, 0), 0);
 
@@ -659,17 +671,16 @@ export class SlormancerStatsExtractorService {
         return lockedManaPercent;
     }
 
-    private getLockedHealthPercent(character: Character, config: CharacterConfig, stats: ExtractedStats): number {        
-        const activables = [character.activable1, character.activable2, character.activable3, character.activable4 ].filter(isNotNullOrUndefined);
-        
+    private getLockedHealthPercent(activables: (Activable | AncestralLegacy)[], config: CharacterConfig, stats: ExtractedStats): number {
         return activables.filter(act => act.costType === SkillCostType.LifeLock)
             .reduce((t, s) => t + valueOrDefault(s.cost, 0), 0);
     }
 
     private addDynamicValues(character: Character, config: CharacterConfig, stats: ExtractedStats) {
+        const activables = this.getAllActiveActivables(character);
 
-        const lockedManaPercent = this.getLockedManaPercent(character, config, stats);
-        const lockedHealthPercent = this.getLockedHealthPercent(character, config, stats);
+        const lockedManaPercent = this.getLockedManaPercent(activables, config, stats);
+        const lockedHealthPercent = this.getLockedHealthPercent(activables, config, stats);
 
         const percentMissingMana = lockedManaPercent > config.percent_missing_mana ? lockedManaPercent : config.percent_missing_mana;
         const percentMissingHealth = lockedHealthPercent > config.percent_missing_health ? lockedHealthPercent : config.percent_missing_health;

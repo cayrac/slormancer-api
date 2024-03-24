@@ -68,8 +68,6 @@ function setPercent(rune: Rune, index: number, percent: boolean) {
     }
 }
 
-/*
-
 function setSource(rune: Rune, index: number, source: string) {
     const value = rune.values[index]
 
@@ -79,6 +77,8 @@ function setSource(rune: Rune, index: number, source: string) {
         throw new Error('failed to update stat for rune value at index ' + index);
     }
 }
+
+/*
 
 function valueMultiply100(effect: LegendaryEffect, index: number) {
     const value = effect.effects[index]
@@ -223,6 +223,7 @@ export const DATA_RUNE: { [key: number]: DataRune } = {
     18: {
         override: rune => {
             setValue(rune, 0, 200);
+            setSource(rune, 0, 'weapon_damage');
             setUpgrade(rune, 0, 0);
             addVariable(rune, 5, 1, 'mana_harvest_duration', EffectValueValueType.Duration, false);
             addConstant(rune, 1.5, 'garbage_stat', EffectValueValueType.AreaOfEffect);
