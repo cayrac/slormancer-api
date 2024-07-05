@@ -10,4 +10,7 @@ export interface GameDataTranslation {
     IT: string;
     RU: string;
     PT: string;
+    PO: string;
+    KR: string;
+    TUR: string;
 }

@@ -90,7 +90,7 @@ export class SlormancerDataService {
         return GAME_DATA.REAPER.filter(stat => stat.EN_NAME !== '' && stat.EVOLVE_IN === id)
     }  
     
-    public getGameDataSkill(heroClass: HeroClass, id: number): GameDataSkill | null {
+    public getGameDataSkill(heroClass: HeroClass, id: number | null): GameDataSkill | null {
         return valueOrNull(GAME_DATA.SKILL[heroClass].find(skill => skill.REF === id));
     }
     

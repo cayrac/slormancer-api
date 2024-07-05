@@ -1,4 +1,6 @@
-export const GAME_DATA_TRANSLATION = [
+import { GameDataTranslation } from "projects/slormancer-api/src/model";
+
+export const GAME_DATA_TRANSLATION: GameDataTranslation[] = [
     {
         "REF": "INTERFACE/BUTTONS/SETTINGS",
         "EN": "",
@@ -10,7 +12,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "yes",
@@ -23,7 +28,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "no",
@@ -36,7 +44,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ok",
@@ -49,7 +60,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dial_next",
@@ -62,7 +76,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "save",
@@ -75,7 +92,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "apply",
@@ -88,7 +108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cancel",
@@ -101,7 +124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "undo_talents",
@@ -114,7 +140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "equip",
@@ -127,7 +156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "unequip",
@@ -140,7 +172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading",
@@ -153,7 +188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "level",
@@ -166,7 +204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "lvl",
@@ -179,7 +220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max",
@@ -192,7 +236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_options",
@@ -205,7 +252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_settings",
@@ -218,7 +268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_keybind",
@@ -231,7 +284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_codex",
@@ -244,7 +300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_bug",
@@ -257,7 +316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_roadmap",
@@ -270,7 +332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_back",
@@ -283,7 +348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_game",
@@ -296,7 +364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btn_exit",
@@ -309,7 +380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "keybinds_keyboard",
@@ -322,7 +396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "keybinds_controller",
@@ -335,7 +412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "menu_deny",
@@ -348,7 +428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "menu_leave_deny",
@@ -361,7 +444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "talk_deny",
@@ -374,7 +460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_confirm_text",
@@ -387,7 +476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_always",
@@ -400,7 +492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_incomplete",
@@ -413,7 +508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_streak",
@@ -426,7 +524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_crit",
@@ -439,7 +540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_0",
@@ -452,7 +556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_1",
@@ -465,7 +572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_2",
@@ -478,7 +588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_3",
@@ -491,7 +604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_4",
@@ -504,7 +620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_5",
@@ -517,7 +636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_ft_6",
@@ -530,7 +652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_choose_never",
@@ -543,7 +668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_map_pos_0",
@@ -556,7 +684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_map_pos_1",
@@ -569,7 +700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_map_pos_2",
@@ -582,7 +716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cat_gameplay",
@@ -595,7 +732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_controls_help",
@@ -608,7 +748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_controls_buttons",
@@ -621,7 +764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_controls_undo",
@@ -634,7 +780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_controls_stats",
@@ -647,7 +796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_controls_reaper",
@@ -660,7 +812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_skills_controls_buttons_triggers",
@@ -673,7 +828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_skills_controls_buttons",
@@ -686,7 +844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_launcher_controls_buttons_triggers_0",
@@ -699,7 +860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_launcher_controls_buttons_triggers_1",
@@ -712,7 +876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_launcher_controls_buttons_0",
@@ -725,7 +892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_launcher_controls_buttons_1",
@@ -738,7 +908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_launcher_controls_buttons_1_1",
@@ -751,7 +924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "early_access_lock",
@@ -764,7 +940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "early_access_influence",
@@ -777,7 +956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "early_access_unknown",
@@ -786,11 +968,14 @@ export const GAME_DATA_TRANSLATION = [
         "CH": "？？？",
         "TW": "???",
         "JP": "???",
-        "DE": "???",
+        "DE": "",
         "ES": "???",
         "IT": "???",
         "RU": "???",
-        "PT": "???"
+        "PT": "???",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "demo_lock",
@@ -803,7 +988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "demo_title",
@@ -816,7 +1004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "demo_desc",
@@ -829,7 +1020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ea_title",
@@ -842,7 +1036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ea_desc",
@@ -855,7 +1052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ea_desc_exp",
@@ -868,7 +1068,58 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "ea_desc_balance_1",
+        "EN": "The Slormancer has received a large Balance and Content Update (0.9) and you may need to adjust a few things on your Characters and Builds.##For this reason, we encourage you to read the full list of changes in the Patch Notes by clicking on the link below:",
+        "FR": "The Slormancer a reçu une importante Mise à Jour d'Équilibrage et il se peut que vous ayez besoin d'ajuster quelques éléments pour que vos Personnages et vos Compétences fonctionnent correctement.##Pour cette raison, nous vous encourageons à lire l'intégralité des modifications apportées dans les Notes de Mise à Jour en cliquant sur le lien ci-dessous :",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "ea_desc_balance_2",
+        "EN": "Please leave you feedback on Discord or Steam and let us know what you like and dislike about the game so that we can improve the experience offered by The Slormancer.##Thank you for playing The Slormancer!#We hope you'll have as much fun playing it as we have building it.",
+        "FR": "N'hésitez pas à laisser vos commentaires sur Discord ou Steam et faites-nous part de ce que vous aimez et n'aimez pas dans le jeu afin que nous puissions améliorer l'expérience proposée par The Slormancer.##Merci d'avoir joué à The Slormancer !#Nous espérons que vous vous amuserez autant à y jouer que nous avons eu de plaisir à le développer.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "patch_notes",
+        "EN": "Patch Notes",
+        "FR": "Mise à Jour",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shader_error",
@@ -881,7 +1132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "settings_restart",
@@ -894,7 +1148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "settings_fx_help",
@@ -907,7 +1164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "settings_aim_help",
@@ -920,7 +1180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_cloud_title",
@@ -933,7 +1196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_cloud_text",
@@ -946,7 +1212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_cloud_confirm_cloud",
@@ -959,7 +1228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_cloud_confirm_local",
@@ -972,7 +1244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cloud_save",
@@ -985,7 +1260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "local_save",
@@ -998,7 +1276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_last_time",
@@ -1011,7 +1292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "conflict_day_counter",
@@ -1024,7 +1308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SETTINGS",
@@ -1037,7 +1324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dhlb",
@@ -1050,7 +1340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_delb",
@@ -1063,7 +1356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dhlt",
@@ -1076,7 +1372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_delt",
@@ -1089,7 +1388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_debi",
@@ -1102,7 +1404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_hfdn",
@@ -1115,7 +1420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_efdn",
@@ -1128,7 +1436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dgn",
@@ -1141,7 +1452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dxn",
@@ -1154,7 +1468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lgn",
@@ -1167,7 +1484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lmn",
@@ -1180,7 +1500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dst",
@@ -1193,7 +1516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dln",
@@ -1206,7 +1532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_arc",
@@ -1219,7 +1548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_alm",
@@ -1232,7 +1564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cat_graphics",
@@ -1245,7 +1580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_res",
@@ -1258,7 +1596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fs",
@@ -1271,7 +1612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fs_0",
@@ -1284,7 +1628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fs_1",
@@ -1297,7 +1644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fs_2",
@@ -1310,7 +1660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btc",
@@ -1323,7 +1676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btc_0",
@@ -1336,7 +1692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btc_1",
@@ -1349,7 +1708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_btc_2",
@@ -1362,7 +1724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_target_finder",
@@ -1375,7 +1740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_target_finder_0",
@@ -1388,7 +1756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_target_finder_1",
@@ -1401,7 +1772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_target_finder_2",
@@ -1414,7 +1788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fpst",
@@ -1427,7 +1804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fpst_0",
@@ -1440,7 +1820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fpst_1",
@@ -1453,7 +1836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fpst_2",
@@ -1466,7 +1852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fpst_3",
@@ -1479,7 +1868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cs",
@@ -1492,7 +1884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cst",
@@ -1505,7 +1900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_ctm",
@@ -1518,7 +1916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cvs",
@@ -1531,7 +1932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dcm",
@@ -1544,7 +1948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_vs",
@@ -1557,7 +1964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_fx",
@@ -1570,7 +1980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_pix",
@@ -1583,7 +1996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_ft_sz",
@@ -1596,7 +2012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_ft_szf",
@@ -1609,7 +2028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lck_c",
@@ -1622,7 +2044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cat_sound",
@@ -1635,7 +2060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_mav",
@@ -1648,7 +2076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_mv",
@@ -1661,7 +2092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_mvm",
@@ -1674,7 +2108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_ev",
@@ -1687,7 +2124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_dat_col",
@@ -1700,7 +2140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_sl_gat",
@@ -1713,7 +2156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_mnmp",
@@ -1726,7 +2172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_mnmt",
@@ -1739,7 +2188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_zm",
@@ -1752,7 +2204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_cat_language",
@@ -1765,7 +2220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg",
@@ -1778,7 +2236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_EN",
@@ -1791,7 +2252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_FR",
@@ -1804,7 +2268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_CH",
@@ -1817,7 +2284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_TW",
@@ -1830,7 +2300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_JP",
@@ -1843,7 +2316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_DE",
@@ -1856,7 +2332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_ES",
@@ -1869,7 +2348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_IT",
@@ -1882,7 +2364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_RU",
@@ -1895,7 +2380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_lg_PT",
@@ -1908,7 +2396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_up",
@@ -1921,7 +2412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_left",
@@ -1934,7 +2428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_down",
@@ -1947,7 +2444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_right",
@@ -1960,7 +2460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_primary",
@@ -1973,7 +2476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_secondary",
@@ -1986,7 +2492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_support",
@@ -1999,7 +2508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_use",
@@ -2012,7 +2524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_cancel",
@@ -2025,7 +2540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_pick",
@@ -2038,7 +2556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_leave",
@@ -2051,7 +2572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_history",
@@ -2064,7 +2588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_menu_open",
@@ -2077,7 +2604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_aura_1",
@@ -2090,7 +2620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_aura_2",
@@ -2103,7 +2636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_aura_3",
@@ -2116,7 +2652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_aura_4",
@@ -2129,7 +2668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_aura_5",
@@ -2142,7 +2684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_reorder",
@@ -2155,7 +2700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_unt",
@@ -2168,7 +2716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_th",
@@ -2181,7 +2732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_to",
@@ -2194,7 +2748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_minimap",
@@ -2207,7 +2764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_inventory",
@@ -2220,7 +2780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_reapers",
@@ -2233,7 +2796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_elementary",
@@ -2246,7 +2812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_skills",
@@ -2259,7 +2828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_profile",
@@ -2272,7 +2844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_achievements",
@@ -2285,7 +2860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_citizen",
@@ -2298,7 +2876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_traits",
@@ -2311,7 +2892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_settings",
@@ -2324,7 +2908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_inc_mv",
@@ -2337,7 +2924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_dec_mv",
@@ -2350,7 +2940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_mvm",
@@ -2363,7 +2956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_ctm",
@@ -2376,7 +2972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_fc_ctm",
@@ -2389,7 +2988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "set_kb_ho_ctm",
@@ -2402,7 +3004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "MENUS",
@@ -2415,7 +3020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat",
@@ -2428,7 +3036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_step",
@@ -2441,7 +3052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_progress",
@@ -2454,7 +3068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_single_cat",
@@ -2467,7 +3084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_0",
@@ -2480,7 +3100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_1",
@@ -2493,7 +3116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_2",
@@ -2506,7 +3132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_3",
@@ -2519,7 +3148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_4",
@@ -2532,7 +3164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_5",
@@ -2545,7 +3180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_6",
@@ -2558,7 +3196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_cat_7",
@@ -2571,7 +3212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_select",
@@ -2584,7 +3228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_select_warning",
@@ -2597,7 +3244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_hero_valid",
@@ -2610,7 +3260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_hero_pick",
@@ -2623,7 +3276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_continue",
@@ -2636,7 +3292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_new",
@@ -2649,7 +3308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_load",
@@ -2662,7 +3324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_credits",
@@ -2675,7 +3340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_save",
@@ -2688,7 +3356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_new_save",
@@ -2701,7 +3372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_overwrite_save",
@@ -2714,7 +3388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_delete_save",
@@ -2727,7 +3404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_load_save",
@@ -2740,7 +3420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_alert_overwrite",
@@ -2753,7 +3436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_alert_delete",
@@ -2766,7 +3452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_empty_slot",
@@ -2779,7 +3468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "main_menu_save_auto",
@@ -2792,7 +3484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "credits_slormite_studios",
@@ -2805,7 +3500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "credits_music",
@@ -2818,7 +3516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "credits_patreons",
@@ -2831,7 +3532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "credits_title",
@@ -2844,7 +3548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "credits_thanks",
@@ -2857,7 +3564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorial_open",
@@ -2870,7 +3580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_0",
@@ -2883,7 +3596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_1",
@@ -2896,7 +3612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_2",
@@ -2909,7 +3628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_3",
@@ -2922,7 +3644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_4",
@@ -2935,7 +3660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_5",
@@ -2948,7 +3676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_6",
@@ -2961,7 +3692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_7",
@@ -2974,7 +3708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_category_8",
@@ -2987,7 +3724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_controls_yes",
@@ -3000,7 +3740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tutorials_controls_no",
@@ -3013,7 +3756,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_from",
+        "EN": "From",
+        "FR": "Depuis",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NOTIFICATIONS",
@@ -3026,7 +3788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notification_history",
@@ -3039,7 +3804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_action",
@@ -3052,7 +3820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_spec",
@@ -3065,7 +3836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_upgrades",
@@ -3078,7 +3852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_reaper",
@@ -3091,7 +3868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_primordial",
@@ -3104,7 +3884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_new_mastery",
@@ -3117,7 +3900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_click_tab",
@@ -3130,7 +3916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_element_tab",
@@ -3143,7 +3932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_tab",
@@ -3156,7 +3948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reputation_tab",
@@ -3169,7 +3964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_achievement_tab",
@@ -3182,7 +3980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_click_tab_control",
@@ -3195,7 +3996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_element_tab_control",
@@ -3208,7 +4012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_tab_control",
@@ -3221,7 +4028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reputation_tab_control",
@@ -3234,7 +4044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_achievement_tab_control",
@@ -3247,7 +4060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_pre_evolution",
@@ -3260,7 +4076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_primordial",
@@ -3273,7 +4092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_evolution",
@@ -3286,7 +4108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_primordial",
@@ -3299,7 +4124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_achievement",
@@ -3312,7 +4140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_citizen",
@@ -3325,7 +4156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_citizen_dialogue",
@@ -3338,7 +4172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_citizen_sub",
@@ -3351,7 +4188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_citizen_sub_2",
@@ -3364,7 +4204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_citizen_talk",
@@ -3377,7 +4220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_ready",
@@ -3390,7 +4236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_evolution_screen",
@@ -3403,7 +4252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_evolution_screen_2",
@@ -3416,7 +4268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_press_key",
@@ -3429,7 +4284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "random_pack_press_key",
@@ -3442,7 +4300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_ancestral_stone",
@@ -3455,7 +4316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_primal_ancestral_stone",
@@ -3468,7 +4332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_ancestral_gem_text",
@@ -3481,7 +4348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_ancestral_gem_key",
@@ -3494,7 +4364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_up",
@@ -3507,7 +4380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "notif_reaper_elixir",
@@ -3520,7 +4396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "CHARACTERS",
@@ -3533,7 +4412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hero_0",
@@ -3546,7 +4428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hero_1",
@@ -3559,7 +4444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hero_2",
@@ -3572,7 +4460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hero_3",
@@ -3585,7 +4476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hero_4",
@@ -3598,7 +4492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "bryan",
@@ -3611,7 +4508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "arah",
@@ -3624,7 +4524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ohmji_red",
@@ -3637,7 +4540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ohmji",
@@ -3650,7 +4556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ohmji_hidden",
@@ -3663,7 +4572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "palstrang_hidden",
@@ -3676,7 +4588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "table_shaker",
@@ -3689,7 +4604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "sanctuary_statue",
@@ -3702,7 +4620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "WEAPONS",
@@ -3715,7 +4636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reaper",
@@ -3728,7 +4652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_primordial",
@@ -3741,7 +4668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_0",
@@ -3754,7 +4684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_1",
@@ -3767,7 +4700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_2",
@@ -3780,7 +4716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_3",
@@ -3793,7 +4732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_4",
@@ -3806,7 +4748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_0s",
@@ -3819,7 +4764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_1s",
@@ -3832,7 +4780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_2s",
@@ -3845,7 +4796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_3s",
@@ -3858,7 +4812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_4s",
@@ -3871,7 +4828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_genre_0",
@@ -3884,7 +4844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_genre_1",
@@ -3897,7 +4860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_genre_2",
@@ -3910,7 +4876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_genre_3",
@@ -3923,7 +4892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_genre_4",
@@ -3936,7 +4908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STATS",
@@ -3949,7 +4924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_movement",
@@ -3962,7 +4940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_attack",
@@ -3975,7 +4956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_health",
@@ -3988,7 +4972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_mana",
@@ -4001,7 +4988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_defense",
@@ -4014,7 +5004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_adventure",
@@ -4027,7 +5020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_melee",
@@ -4040,7 +5036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_projectile",
@@ -4053,7 +5052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_minion",
@@ -4066,7 +5068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_totems",
@@ -4079,7 +5084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_auras",
@@ -4092,7 +5100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_aoe",
@@ -4105,7 +5116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_extras",
@@ -4118,7 +5132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cat_secondary_resources",
@@ -4131,7 +5148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_projectile",
@@ -4144,7 +5164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_melee",
@@ -4157,7 +5180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_aoe",
@@ -4170,7 +5196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_aura",
@@ -4183,7 +5212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_minion",
@@ -4196,7 +5228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_totem",
@@ -4209,7 +5244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_special",
@@ -4222,7 +5260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "atk_movement",
@@ -4235,7 +5276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "avg_phy_damage",
@@ -4248,7 +5292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "avg_elem_damage",
@@ -4261,7 +5308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SKILLS MENU",
@@ -4274,7 +5324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_skill",
@@ -4287,7 +5340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_skill",
@@ -4300,7 +5356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_skill",
@@ -4313,7 +5372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_l_click",
@@ -4326,7 +5388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_click",
@@ -4339,7 +5404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_primary_mod",
@@ -4352,7 +5420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_secondary_mod",
@@ -4365,7 +5436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_support_mod",
@@ -4378,7 +5452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura",
@@ -4391,7 +5468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura_slot",
@@ -4404,7 +5484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "active_reaper",
@@ -4417,7 +5500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "active_legendary",
@@ -4430,7 +5516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura_ancestral",
@@ -4443,7 +5532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "active_ancestral",
@@ -4456,7 +5548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_aura_1",
@@ -4469,7 +5564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_aura_2",
@@ -4482,7 +5580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_aura_3",
@@ -4495,7 +5596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_aura_4",
@@ -4508,7 +5612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "nothing_aura_5",
@@ -4521,7 +5628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_equip_controller",
@@ -4534,7 +5644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_unequip_controller",
@@ -4547,7 +5660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_invest_controller",
@@ -4560,7 +5676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_equipped",
@@ -4573,7 +5692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_equip_on",
@@ -4586,7 +5708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_equipped_on",
@@ -4599,7 +5724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "specialization",
@@ -4612,7 +5740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "specializations",
@@ -4625,7 +5756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "use_specialization",
@@ -4638,7 +5772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "use_specialization_control",
@@ -4651,7 +5788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "unlock_specializations",
@@ -4664,7 +5804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_mechanic",
@@ -4677,7 +5820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "class_mechanic_add",
@@ -4690,7 +5836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "associated_support",
@@ -4703,7 +5852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "specialization_current",
@@ -4716,7 +5868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "specialization_strengths",
@@ -4729,7 +5884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "specialization_mechanics",
@@ -4742,7 +5900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tldr",
@@ -4755,7 +5916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ANCESTRAL",
@@ -4768,7 +5932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_locked_ancestral_stone",
@@ -4781,7 +5948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_locked_ancestral_unlock",
@@ -4794,7 +5964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_locked_ancestral_item",
@@ -4807,7 +5980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_locked_ancestral_level",
@@ -4820,7 +5996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_stone",
@@ -4833,7 +6012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_special_ancestral_stone",
@@ -4846,7 +6028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_stone_help",
@@ -4859,7 +6044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_special_ancestral_stone_help",
@@ -4872,7 +6060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_stone_left",
@@ -4885,7 +6076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_stone_right",
@@ -4898,7 +6092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_stone_right_controller",
@@ -4911,7 +6108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_0",
@@ -4924,7 +6124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_1",
@@ -4937,7 +6140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_2",
@@ -4950,7 +6156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_3",
@@ -4963,7 +6172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_4",
@@ -4976,7 +6188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_5",
@@ -4989,7 +6204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_6",
@@ -5002,7 +6220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_7",
@@ -5015,7 +6236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gem_pick_8",
@@ -5028,7 +6252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "unlock_correct_realm",
@@ -5041,7 +6268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_stat",
@@ -5054,7 +6284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral_skill",
@@ -5067,7 +6300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancestral",
@@ -5080,7 +6316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_element_effect",
@@ -5093,7 +6332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_elemental",
@@ -5106,7 +6348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_active",
@@ -5119,20 +6364,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "active_skill_add",
-        "EN": "Active Skill:",
-        "FR": "Compétence Active :",
-        "CH": "主动技能：",
-        "TW": "主動技能：",
+        "EN": "Active Skill",
+        "FR": "Compétence Active",
+        "CH": "主动技能",
+        "TW": "主動技能",
         "JP": "",
         "DE": "",
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_imbue",
@@ -5145,7 +6396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_seal",
@@ -5158,7 +6412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fire_seal",
@@ -5171,7 +6428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ice_seal",
@@ -5184,7 +6444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thunder_seal",
@@ -5197,7 +6460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "sacred_seal",
@@ -5210,7 +6476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "darkness_seal",
@@ -5223,7 +6492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shield_globes",
@@ -5236,7 +6508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "flashing_darts",
@@ -5249,7 +6524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_fireball",
@@ -5262,11 +6540,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_fireball_effect",
-        "EN": "Fireball deals µ Elemental Damage (@% Elemental Damage), Pierces enemies and applies Burn to enemies hit.",
+        "EN": "Fireballs deal µ Elemental Damage (@% Elemental Damage), pierce enemies and apply Burn to enemies hit.",
         "FR": "Une Boule de Feu inflige µ de Dégâts Élémentaires (@% de Dégâts Élémentaires), Transperce et applique Brûlure aux ennemis touchés.",
         "CH": "造成µ元素伤害（@%元素伤害），穿透敌人，对击中的敌人施加燃烧效果。",
         "TW": "造成µ元素傷害（@%元素傷害），穿透敵人，對擊中的敵人施加燃燒效果。",
@@ -5275,7 +6556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_frostbolt",
@@ -5288,12 +6572,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_frostbolt_effect",
-        "EN": "Frostbolt targets the closest enemy and deals µ Elemental Damage (@% Elemental Damage).#Frostbolt does not break \"Frozen\".",
-        "FR": "Un Trait de Givre cible l'ennemi le plus proche et inflige µ de Dégâts Élémentaires (@% de Dégâts Élémentaires).#Trait de Givre n'annule pas Congelé.",
+        "EN": "Frostbolts target the closest enemy and deal µ Elemental Damage (@% Elemental Damage).#Frostbolts deals 100% Increased Damage to enemies affected by Chill or Frozen.#Frostbolts do not break Frozen.",
+        "FR": "Un Trait de Givre cible l'ennemi le plus proche et inflige µ de Dégâts Élémentaires (@% de Dégâts Élémentaires).#Trait de Givre inflige 100% de Dégâts Supplémentaires aux ennemis affectés par Glacé ou Congelé.#Trait de Givre n'annule pas Congelé.",
         "CH": "射向最近的敌人，造成µ元素伤害（@%元素伤害）。#冰箭不会打破“冰冻”状态。",
         "TW": "射向最近的敵人，造成µ元素傷害（@%元素傷害）。 #冰箭不會打破“冰凍”狀態。",
         "JP": "",
@@ -5301,7 +6588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_rod",
@@ -5314,11 +6604,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_rod_effect",
-        "EN": "Lightning Rod creates and maintains an Electric Bind with you for $ seconds, continuously dealing between 1 and µ Elemental Damage (@% Elemental Damage) to enemies hit by the Bind.",
+        "EN": "Lightning Rods create and maintain an Electric Bind with you for $ seconds, continuously dealing between 1 and µ Elemental Damage (@% Elemental Damage) to enemies hit by the Bind.",
         "FR": "Un Conduit de Foudre crée et maintient un Lien Électrique avec vous pendant $ secondes et inflige entre 1 et µ de Dégâts Élémentaires (@% de Dégâts Élémentaires) aux ennemis touchés par le Lien.",
         "CH": "制造并维持一道电流，持续$秒，对击中的敌人造成1 - µ元素伤害（@%元素伤害）。",
         "TW": "製造並維持一道電流，持續$秒，對擊中的敵人造成1 - µ元素傷害（@%元素傷害）。",
@@ -5327,7 +6620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_shield_globe",
@@ -5340,11 +6636,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_shield_globe_effect",
-        "EN": "A Shield Globe lasts $ seconds. Picking it up shields you and prevents the next @ Damages (based on the level of your Character). Shield from Shield Globes decreases continually.",
+        "EN": "Shield Globes last $ seconds. Picking it up shields you and prevents the next @ Damage (based on the level of your Character). Shield from Shield Globes decreases continually.",
         "FR": "Un Globe de Bouclier dure $ secondes. Le Ramasser vous donnera un Bouclier qui préviendra les prochains @ Dégâts reçus (en fonction du Niveau de votre personnage). La puissance du Bouclier diminue continuellement.",
         "CH": "一个持续$秒的球状护盾。护盾会抵挡你接下来的@伤害(基于你的角色等级)。来自盾球的护盾会逐渐减少。",
         "TW": "一個持續$秒的球狀護盾。護盾會抵擋你接下來的@傷害(基於你的角色等級)。來自盾球的護盾會逐漸減少。",
@@ -5353,7 +6652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_dart",
@@ -5366,11 +6668,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_dart_effect",
-        "EN": "Flashing Dart deals µ Elemental Damage (@% Elemental Damage) and pierces enemies.",
+        "EN": "Flashing Darts deal µ Elemental Damage (@% Elemental Damage) and pierce enemies.",
         "FR": "Un Éclat de Lumière inflige µ de Dégâts Élémentaires (@% de Dégâts Élémentaires) et Transperce les ennemis.",
         "CH": "造成µ元素伤害（@%元素伤害），穿透敌人。",
         "TW": "造成µ元素傷害（@%元素傷害），穿透敵人。",
@@ -5379,7 +6684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_blorm",
@@ -5392,11 +6700,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mechanic_blorm_effect",
-        "EN": "A Blorm lasts $ seconds and relentlessly attacks nearby enemies, dealing µ Skill Damage (@% Skill Damage) per attack.",
+        "EN": "Blorms last $ seconds and relentlessly attacks nearby enemies, dealing µ Skill Damage (@% Skill Damage) per attack.",
         "FR": "Un Blorm dure $ secondes et attaque sans relâche les ennemis à proximité, infligeant  µ de Dégâts Physiques (@% de Dégâts Physiques) par attaque.",
         "CH": "持续$秒，不断攻击附近的敌人，每次攻击造成µ技能伤害（@%技能伤害）。",
         "TW": "持續$秒，不斷攻擊附近的敵人，每次攻擊造成µ技能傷害（@%技能傷害）。",
@@ -5405,7 +6716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_walking_bomb",
@@ -5418,11 +6732,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_walking_bomb_effect",
-        "EN": "Walking Bombs trigger after $ seconds or after being killed, dealing µ Elemental Damage (@% Elemental Damage) to enemies within a $ yard radius. Walking Bomb spreads to enemies hit by the explosion, once.",
+        "EN": "A Walking Bomb triggers after $ seconds or after being killed, dealing µ Elemental Damage (@% Elemental Damage) to enemies within a $ yard radius. Walking Bomb spreads to enemies hit by the explosion, once.",
         "FR": "Bombe Ambulante se déclenche au bout de $ secondes ou après avoir été tuée, infligeant µ de Dégâts Élémentaires (@% de Dégâts Élémentaires) aux ennemis dans un rayon de $ mètres. Bombe Ambulante se propage aux ennemis touchés par l'explosion, une fois.",
         "CH": "在$秒后或死亡时被触发，对$码半径内的敌人造成µ元素伤害（@%元素伤害）。仅限一次，移动炸弹扩散到被爆炸击中的敌人。",
         "TW": "在$秒後或死亡時被觸發，對$碼半徑內的敵人造成µ元素傷害（@%元素傷害）。僅限一次，移動炸彈擴散到被爆炸擊中的敵人。",
@@ -5431,7 +6748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_chill",
@@ -5444,7 +6764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_chill_effect",
@@ -5457,7 +6780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_burn",
@@ -5470,7 +6796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_burn_effect",
@@ -5483,7 +6812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_soul_bound",
@@ -5496,7 +6828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_soul_bound_effect",
@@ -5509,7 +6844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_0",
@@ -5522,7 +6860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_1",
@@ -5535,7 +6876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_2",
@@ -5548,7 +6892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_3",
@@ -5561,7 +6908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_4",
@@ -5574,7 +6924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_5",
@@ -5587,7 +6940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_fire",
@@ -5600,7 +6956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_ice",
@@ -5613,7 +6972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_thunder",
@@ -5626,7 +6988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_sacred",
@@ -5639,7 +7004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_darkness",
@@ -5652,7 +7020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "champion_0",
@@ -5665,7 +7036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "champion_1",
@@ -5678,7 +7052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "champion_2",
@@ -5691,7 +7068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "champion_3",
@@ -5704,7 +7084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "champion_4",
@@ -5717,7 +7100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "TOOLTIPS",
@@ -5730,7 +7116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_aura",
@@ -5743,7 +7132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_action",
@@ -5756,7 +7148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_support",
@@ -5769,7 +7164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_passive",
@@ -5782,7 +7180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_upgrade",
@@ -5795,7 +7196,42 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_auto_attack",
+        "EN": "Fast Skills",
+        "FR": "Attaque Rapide",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_auto_attack_help",
+        "EN": "Fast Skills have a short Cooldown Time but share their Cooldown with other equipped Fast Skills.",
+        "FR": "Les Attaques Rapides ont un court Temps de Recharge, mais partagent leur Temps de Recharge avec les autres Attaques Rapides équipées.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_total_cost",
@@ -5808,7 +7244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_cost",
@@ -5821,7 +7260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rank",
@@ -5834,7 +7276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_cooldown",
@@ -5847,7 +7292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_second",
@@ -5860,7 +7308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_seconds",
@@ -5873,7 +7324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_life",
@@ -5886,7 +7340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mana",
@@ -5899,7 +7356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mana_second",
@@ -5912,7 +7372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mana_percent",
@@ -5925,7 +7388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_life_second",
@@ -5938,7 +7404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_life_percent",
@@ -5951,7 +7420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mana_lock",
@@ -5964,7 +7436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_life_lock",
@@ -5977,7 +7452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_lock_flat",
@@ -5990,7 +7468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_next_rank",
@@ -6003,7 +7484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_max_rank",
@@ -6016,7 +7500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_next_mastery",
@@ -6029,7 +7516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_max_mastery",
@@ -6042,7 +7532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mastery_level",
@@ -6055,7 +7548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_mastery",
@@ -6068,7 +7564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_level_to_reach",
@@ -6081,7 +7580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "unlock_correct_tier",
@@ -6094,7 +7596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tier",
@@ -6107,7 +7612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_cant_equip",
@@ -6120,7 +7628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_left_to_drag",
@@ -6133,7 +7644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_left_to_drag_controller",
@@ -6146,7 +7660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_left_to_select",
@@ -6159,7 +7676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_equip",
@@ -6172,7 +7692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_unequip",
@@ -6185,7 +7708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_use",
@@ -6198,7 +7724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_split",
@@ -6211,7 +7740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_store",
@@ -6224,7 +7756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_pick",
@@ -6237,7 +7772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_buy",
@@ -6250,7 +7788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_sell",
@@ -6263,7 +7804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_reforge",
@@ -6276,7 +7820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_reinforce",
@@ -6289,7 +7836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_right_to_salvage",
@@ -6302,7 +7852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_invest",
@@ -6315,7 +7868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slorm_cost",
@@ -6328,7 +7884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_gold_value",
@@ -6341,7 +7900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_merge_value",
@@ -6354,7 +7916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_add_point",
@@ -6367,7 +7932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_rank",
@@ -6380,7 +7948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_mastery",
@@ -6393,7 +7964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_level",
@@ -6406,7 +7980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_every_base",
@@ -6419,7 +7996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_per_every_level",
@@ -6432,7 +8012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SPECIFIC TOOLTIPS",
@@ -6445,7 +8028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance",
@@ -6458,7 +8044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "duration",
@@ -6471,7 +8060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "seconds",
@@ -6484,7 +8076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rays",
@@ -6497,7 +8092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "block",
@@ -6510,7 +8108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "skewer",
@@ -6523,7 +8124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "bleed_damage",
@@ -6536,7 +8140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_cost",
@@ -6549,7 +8156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "decreased_cost",
@@ -6562,7 +8172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_damage",
@@ -6575,7 +8188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "decreased_damage",
@@ -6588,7 +8204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_damage",
@@ -6601,7 +8220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "stacks",
@@ -6614,7 +8236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage",
@@ -6627,7 +8252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_hook",
@@ -6640,7 +8268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "enemies",
@@ -6653,7 +8284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "range",
@@ -6666,7 +8300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "swings",
@@ -6679,7 +8316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slow",
@@ -6692,7 +8332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "daze",
@@ -6705,7 +8348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "distance",
@@ -6718,7 +8364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "yards",
@@ -6731,7 +8380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "yard",
@@ -6744,7 +8396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rotation_speed",
@@ -6757,7 +8412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "speed",
@@ -6770,7 +8428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "growth",
@@ -6783,7 +8444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cast",
@@ -6796,7 +8460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "luck",
@@ -6809,7 +8476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "times",
@@ -6822,7 +8492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "meteorite",
@@ -6835,7 +8508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "upper_damage_range",
@@ -6848,7 +8524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cost_per_second",
@@ -6861,7 +8540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fireballs",
@@ -6874,7 +8556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "absorbed_damage",
@@ -6887,7 +8572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "frostbolts",
@@ -6900,7 +8588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "seals",
@@ -6913,7 +8604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "orbs",
@@ -6926,7 +8620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "targets",
@@ -6939,7 +8636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shield",
@@ -6952,7 +8652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cooldown",
@@ -6965,7 +8668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "hits",
@@ -6978,7 +8684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback",
@@ -6991,7 +8700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reach",
@@ -7004,7 +8716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_restored",
@@ -7017,7 +8732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievements",
@@ -7030,7 +8748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "upgrades",
@@ -7043,7 +8764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "projectiles",
@@ -7056,7 +8780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "school_0",
@@ -7069,7 +8796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "school_1",
@@ -7082,7 +8812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "school_2",
@@ -7095,7 +8828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "school",
@@ -7108,7 +8844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "casts",
@@ -7121,7 +8860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overall_reputation",
@@ -7134,12 +8876,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "total_mastery_support",
-        "EN": "Combined Mastery Level of the Specializations of your class",
-        "FR": "Niveau de Maîtrise cumulé des Spécialisations de votre classe",
+        "EN": "Total Support Skills Mastery Level",
+        "FR": "Niveau de Maîtrise Total des Compétences de Soutien",
         "CH": "所选职业的专长精通等级总和",
         "TW": "所選職業的專長精通等級總和",
         "JP": "",
@@ -7147,7 +8892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fork_number",
@@ -7160,7 +8908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "travel_time",
@@ -7173,7 +8924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_decreased_size",
@@ -7186,7 +8940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "volleys",
@@ -7199,7 +8956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_cost",
@@ -7212,7 +8972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blades",
@@ -7225,7 +8988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "charges",
@@ -7238,10 +9004,13 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
-        "REF": "faster",
+        "REF": "less_time",
         "EN": "Less Time",
         "FR": "de Temps en Moins",
         "CH": "更快",
@@ -7251,7 +9020,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "faster",
+        "EN": "Faster",
+        "FR": "Plus Rapidement",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "daggers",
@@ -7264,7 +9052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "instructions",
@@ -7277,7 +9068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fire_rate",
@@ -7290,7 +9084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "remaining_damage",
@@ -7303,7 +9100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shield_globe_value",
@@ -7316,7 +9116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "amount",
@@ -7329,7 +9132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "lock",
@@ -7342,7 +9148,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "ticks",
+        "EN": "Ticks",
+        "FR": "Ticks",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "HUD",
@@ -7355,7 +9180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_slorms",
@@ -7368,7 +9196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_health",
@@ -7381,7 +9212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_mana",
@@ -7394,7 +9228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_gold",
@@ -7407,7 +9244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_ancestral_stone",
@@ -7420,7 +9260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "not_enough_weapon",
@@ -7433,7 +9276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "to_enabled",
@@ -7446,7 +9292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "to_disabled",
@@ -7459,7 +9308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "th_enabled",
@@ -7472,7 +9324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "th_disabled",
@@ -7485,7 +9340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mvm_enabled",
@@ -7498,7 +9356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mvm_disabled",
@@ -7511,7 +9372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_full",
@@ -7524,7 +9388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_aura",
@@ -7537,7 +9404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_exp",
@@ -7550,7 +9420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_exp_weapon",
@@ -7563,7 +9436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_minimap",
@@ -7576,7 +9452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_inventory",
@@ -7589,7 +9468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_reapers",
@@ -7602,7 +9484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_elements",
@@ -7615,7 +9500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_skills",
@@ -7628,7 +9516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_achievements",
@@ -7641,7 +9532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_profile",
@@ -7654,7 +9548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_citizens",
@@ -7667,7 +9564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_traits",
@@ -7680,7 +9580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_settings",
@@ -7693,7 +9596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_leave_invasion",
@@ -7706,7 +9612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "essence_name",
@@ -7719,7 +9628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "submenu_profile",
@@ -7732,7 +9644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "submenu_achievements",
@@ -7745,7 +9660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "combo_kills",
@@ -7758,7 +9676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "combo_record",
@@ -7771,7 +9692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "combo_dps",
@@ -7784,7 +9708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "combo_sec",
@@ -7797,7 +9724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "combo_bonus",
@@ -7810,7 +9740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "congratulations",
@@ -7823,7 +9756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "level",
@@ -7836,7 +9772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dead",
@@ -7849,7 +9788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dodged",
@@ -7862,7 +9804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "parry",
@@ -7875,7 +9820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "missed",
@@ -7888,7 +9836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invulnerable",
@@ -7901,7 +9852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slorm",
@@ -7914,7 +9868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "float_goldus",
@@ -7927,7 +9884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "float_xp",
@@ -7940,7 +9900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_stunned",
@@ -7953,7 +9916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_invunerable",
@@ -7966,7 +9932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_taunted",
@@ -7979,7 +9948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_slowed",
@@ -7992,7 +9964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_dazed",
@@ -8005,7 +9980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_splintered",
@@ -8018,7 +9996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_rooted",
@@ -8031,7 +10012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_bleeding",
@@ -8044,7 +10028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_elem_broken",
@@ -8057,7 +10044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_weakened",
@@ -8070,7 +10060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_armor_broken",
@@ -8083,7 +10076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_blinded",
@@ -8096,7 +10092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_silenced",
@@ -8109,7 +10108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_marked",
@@ -8122,7 +10124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_switched",
@@ -8135,7 +10140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_burning",
@@ -8148,7 +10156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_walking",
@@ -8161,7 +10172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_chilled",
@@ -8174,7 +10188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_frozen",
@@ -8187,7 +10204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_shocked",
@@ -8200,7 +10220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_confused",
@@ -8213,7 +10236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_tracked",
@@ -8226,7 +10252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_poisoned",
@@ -8239,7 +10268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_bond",
@@ -8252,7 +10284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_locked",
@@ -8265,7 +10300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_skewered",
@@ -8278,7 +10316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_asleep",
@@ -8291,7 +10332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buff_trauma",
@@ -8304,7 +10348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blocked",
@@ -8317,7 +10364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ouch",
@@ -8330,7 +10380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "splash",
@@ -8343,7 +10396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "DYNAMIC TITLE GENERATOR (Special Instructions, Check the Instructions Sheet)\n",
@@ -8356,7 +10412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_FORMULA",
@@ -8369,7 +10428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_NAME_5",
@@ -8382,7 +10444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_NAME_4",
@@ -8395,7 +10460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_NAME_3",
@@ -8408,7 +10476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_NAME_2",
@@ -8421,7 +10492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_NAME_1",
@@ -8434,7 +10508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_NAME_5",
@@ -8447,7 +10524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_NAME_4",
@@ -8460,7 +10540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_NAME_3",
@@ -8473,7 +10556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_NAME_2",
@@ -8486,7 +10572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_NAME_1",
@@ -8499,7 +10588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_NAME_5",
@@ -8512,7 +10604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_NAME_4",
@@ -8525,7 +10620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_NAME_3",
@@ -8538,7 +10636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_NAME_2",
@@ -8551,7 +10652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_NAME_1",
@@ -8564,7 +10668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_NAME_5",
@@ -8577,7 +10684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_NAME_4",
@@ -8590,7 +10700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_NAME_3",
@@ -8603,7 +10716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_NAME_2",
@@ -8616,7 +10732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_NAME_1",
@@ -8629,7 +10748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_NAME_5",
@@ -8642,7 +10764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_NAME_4",
@@ -8655,7 +10780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_NAME_3",
@@ -8668,7 +10796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_NAME_2",
@@ -8681,7 +10812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_NAME_1",
@@ -8694,7 +10828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_NAME_5",
@@ -8707,7 +10844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_NAME_4",
@@ -8720,7 +10860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_NAME_3",
@@ -8733,7 +10876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_NAME_2",
@@ -8746,7 +10892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_NAME_1",
@@ -8759,7 +10908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_PREFIX",
@@ -8772,7 +10924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_PREFIX",
@@ -8785,7 +10940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_PREFIX",
@@ -8798,7 +10956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_PREFIX",
@@ -8811,7 +10972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_PREFIX",
@@ -8824,7 +10988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_PREFIX",
@@ -8837,7 +11004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_SUFFIX",
@@ -8850,7 +11020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "1_SUFFIX",
@@ -8863,7 +11036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "2_SUFFIX",
@@ -8876,7 +11052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "3_SUFFIX",
@@ -8889,7 +11068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "4_SUFFIX",
@@ -8902,7 +11084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "5_SUFFIX",
@@ -8915,7 +11100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "0_UPGRADE",
@@ -8928,7 +11116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "element_nobody_title",
@@ -8941,7 +11132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SLORMITES",
@@ -8954,7 +11148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t0_0",
@@ -8967,7 +11164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t0_1",
@@ -8980,7 +11180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t0_2",
@@ -8993,7 +11196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t0_3",
@@ -9006,7 +11212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t0_4",
@@ -9019,7 +11228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_0",
@@ -9032,7 +11244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_1",
@@ -9045,7 +11260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_2",
@@ -9058,7 +11276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_3",
@@ -9071,7 +11292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_4",
@@ -9084,7 +11308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_5",
@@ -9097,7 +11324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_6",
@@ -9110,7 +11340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_7",
@@ -9123,7 +11356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_8",
@@ -9136,7 +11372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_9",
@@ -9149,7 +11388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t0_10",
@@ -9162,7 +11404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_1",
@@ -9175,7 +11420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_2",
@@ -9188,7 +11436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_3",
@@ -9201,7 +11452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_4",
@@ -9214,7 +11468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_5",
@@ -9227,7 +11484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_6",
@@ -9240,7 +11500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_7",
@@ -9253,7 +11516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_8",
@@ -9266,7 +11532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_9",
@@ -9279,7 +11548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_10",
@@ -9292,7 +11564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_11",
@@ -9305,7 +11580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_12",
@@ -9318,7 +11596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_13",
@@ -9331,7 +11612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_14",
@@ -9344,7 +11628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_t1_15",
@@ -9357,7 +11644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_upgrade",
@@ -9370,7 +11660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_alterer",
@@ -9383,7 +11676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment",
@@ -9396,7 +11692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_reinforcement",
@@ -9409,7 +11708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_reinforce_ready",
@@ -9422,7 +11724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_potential",
@@ -9435,7 +11740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_quality",
@@ -9448,7 +11756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite",
@@ -9461,7 +11772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_fragments_title",
@@ -9474,7 +11788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_fragments",
@@ -9487,7 +11804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_fragments_same_reaper",
@@ -9500,7 +11820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_effect",
@@ -9513,7 +11836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_0_help",
@@ -9526,7 +11852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_0_help_power",
@@ -9539,7 +11868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_1_help",
@@ -9552,7 +11884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_2_help",
@@ -9565,7 +11900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_rune_1_prevent_reaper",
@@ -9578,7 +11916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_fragment",
@@ -9591,7 +11932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_00",
@@ -9604,7 +11948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_01",
@@ -9617,7 +11964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_02",
@@ -9630,7 +11980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_03",
@@ -9643,7 +11996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_04",
@@ -9656,7 +12012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_05",
@@ -9669,7 +12028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_06",
@@ -9682,7 +12044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_07",
@@ -9695,7 +12060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_08",
@@ -9708,7 +12076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_09",
@@ -9721,7 +12092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_010",
@@ -9734,7 +12108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_upgrade",
@@ -9747,7 +12124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_no_upgrade",
@@ -9760,7 +12140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_alter",
@@ -9773,7 +12156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_slormite_no_alter",
@@ -9786,7 +12172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_p_roll",
@@ -9799,7 +12188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_s_roll",
@@ -9812,7 +12204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_x_roll",
@@ -9825,7 +12220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_l_roll",
@@ -9838,7 +12236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_RP_roll_item",
@@ -9851,7 +12252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_MA_roll_item",
@@ -9864,7 +12268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_AT_roll_item",
@@ -9877,7 +12284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "incomplete_legendary_string",
@@ -9890,7 +12300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_spirit",
@@ -9903,7 +12316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_0",
@@ -9916,7 +12332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_1",
@@ -9929,7 +12348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_2",
@@ -9942,7 +12364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_3",
@@ -9955,7 +12380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_4",
@@ -9968,7 +12396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_5",
@@ -9981,7 +12412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_fragment_t1_6",
@@ -9994,7 +12428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_runes",
@@ -10007,7 +12444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_rune",
@@ -10020,7 +12460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rune_0",
@@ -10033,7 +12476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rune_1",
@@ -10046,7 +12492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rune_2",
@@ -10059,7 +12508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "runes_0",
@@ -10072,7 +12524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "runes_1",
@@ -10085,7 +12540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "runes_2",
@@ -10098,7 +12556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "left_to_find",
@@ -10111,7 +12572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "left_to_find_0",
@@ -10124,7 +12588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rune_power",
@@ -10137,7 +12604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "OVERALL STAT LIST",
@@ -10150,7 +12620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "stat_determinant",
@@ -10163,11 +12636,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "damages",
-        "EN": "Damages",
+        "EN": "Damage",
         "FR": "Dégâts",
         "CH": "伤害",
         "TW": "傷害",
@@ -10176,7 +12652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_damage",
@@ -10189,7 +12668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "flat_physical_damage",
@@ -10202,7 +12684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_physical_damage",
@@ -10215,7 +12700,74 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "bonus_raw_damage",
+        "EN": "Granted Raw Damage",
+        "FR": "Dégâts Bruts Additionnels",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_bonus_raw_damage",
+        "EN": "Investing Slorm in any Upgrade or Passive, whether it is equipped or not, grants Raw Damage at a rate of @ Raw damage for every @ Slorm invested.",
+        "FR": "Investir du Slorm dans n'importe quelle Amélioration ou Effet Passif, qu'il soit équipé ou non, confère des Dégâts Bruts à un taux de @ Dégâts Bruts pour chaque tranche de @ Slorm investi.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "bonus_elemental_damage",
+        "EN": "Granted Elemental Damage",
+        "FR": "Dégâts Élémentaires Additionnels",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_bonus_elemental_damage",
+        "EN": "Investing Slorm in any Ancestral Legacy Effect, whether it is equipped or not, grants Elemental Damage at a rate of @ Elemental damage for every @ Slorm invested.",
+        "FR": "Investir du Slorm dans n'importe quelle Compétence d'Héritage Ancestral, qu'elle soit équipée ou non, confère des Dégâts Élémentaires à un taux de @ Dégâts Élémentaires pour chaque tranche de @ Slorm investi.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "flat_elemental_damage",
@@ -10228,7 +12780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_elemental_damage",
@@ -10241,7 +12796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "min_basic_damage",
@@ -10254,7 +12812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "basic_damage",
@@ -10267,7 +12828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "physical_damage",
@@ -10280,11 +12844,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "physical_damages",
-        "EN": "Skill Damages",
+        "EN": "Skill Damage",
         "FR": "Dégâts Physiques",
         "CH": "技能伤害",
         "TW": "技能傷害",
@@ -10293,7 +12860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_damage",
@@ -10306,11 +12876,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_damages",
-        "EN": "Elemental Damages",
+        "EN": "Elemental Damage",
         "FR": "Dégâts Élémentaires",
         "CH": "元素伤害",
         "TW": "元素傷害",
@@ -10319,7 +12892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "skill_elem_damage",
@@ -10332,7 +12908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "armor_penetration",
@@ -10345,7 +12924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_penetration",
@@ -10358,7 +12940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "life",
@@ -10371,7 +12956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_health",
@@ -10384,7 +12972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana",
@@ -10397,7 +12988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_mana",
@@ -10410,7 +13004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_regeneration",
@@ -10423,7 +13020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_regeneration",
@@ -10436,7 +13036,42 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "cooldown_reduction",
+        "EN": "Cooldown Reduction",
+        "FR": "Réduction de Temps de Recharge",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "cooldown_reduction_multiplier",
+        "EN": "Cooldown Reduction Multiplier",
+        "FR": "Multiplicateur de Réduction de Temps de Recharge",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "attack_speed",
@@ -10449,7 +13084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "attack_speed_multiplier",
@@ -10462,7 +13100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "movement_speed",
@@ -10475,7 +13116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crit_chance",
@@ -10488,7 +13132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "critical_chance",
@@ -10501,7 +13148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "critical_damage",
@@ -10514,7 +13164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ancestral_chance",
@@ -10527,7 +13180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ancestral_damage",
@@ -10540,7 +13196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "armor",
@@ -10553,7 +13212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_resist",
@@ -10566,7 +13228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dodge",
@@ -10579,7 +13244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "precision",
@@ -10592,7 +13260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thorns",
@@ -10605,7 +13276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thorns_damage",
@@ -10618,7 +13292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "retaliation_damage",
@@ -10631,7 +13308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "retaliate",
@@ -10644,7 +13324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "phys_weakness",
@@ -10657,7 +13340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elem_weakness",
@@ -10670,7 +13356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_by_elite",
@@ -10683,7 +13372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_on_melee",
@@ -10696,7 +13388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_on_projectile",
@@ -10709,7 +13404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_on_area",
@@ -10722,7 +13420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_on_all",
@@ -10735,7 +13436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "gold_find",
@@ -10748,7 +13452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "essence_find",
@@ -10761,7 +13468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "xp_find",
@@ -10774,7 +13484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_find",
@@ -10787,7 +13500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_qual",
@@ -10800,7 +13516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_find",
@@ -10813,7 +13532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormeline_find",
@@ -10826,7 +13548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_find",
@@ -10839,7 +13564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scroll_find",
@@ -10852,7 +13580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scrap_find",
@@ -10865,7 +13596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "skill_mastery_gain",
@@ -10878,7 +13612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_xp_find",
@@ -10891,7 +13628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_effect_gain",
@@ -10904,7 +13644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_primordial_cap",
@@ -10917,7 +13660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_gain",
@@ -10930,7 +13676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "life_leech",
@@ -10943,7 +13692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "life_on_hit",
@@ -10956,7 +13708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "life_on_kill",
@@ -10969,7 +13724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_leech",
@@ -10982,7 +13740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_hit",
@@ -10995,7 +13756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_kill",
@@ -11008,7 +13772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_on_elite",
@@ -11021,7 +13788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "damage",
@@ -11034,7 +13804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "current_health",
@@ -11047,7 +13820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "current_mana",
@@ -11060,7 +13836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "missing_health",
@@ -11073,7 +13852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "missing_mana",
@@ -11086,7 +13868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "percent_missing_health",
@@ -11099,7 +13884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "percent_missing_mana",
@@ -11112,7 +13900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_chance",
@@ -11125,7 +13916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_max_number",
@@ -11138,7 +13932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_damage",
@@ -11151,7 +13948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_duration",
@@ -11164,7 +13964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_chance",
@@ -11177,7 +13980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_bounce_number",
@@ -11190,7 +13996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_damage",
@@ -11203,7 +14012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "recast_chance",
@@ -11216,7 +14028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_melee",
@@ -11229,7 +14044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_projectile",
@@ -11242,7 +14060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance_to_pierce",
@@ -11255,7 +14076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance_to_fork",
@@ -11268,7 +14092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fork_chance",
@@ -11281,7 +14108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance_to_rebound",
@@ -11294,7 +14124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "projectile_speed",
@@ -11307,7 +14140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_projectile",
@@ -11320,7 +14156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "totem_increased_effect",
@@ -11333,7 +14172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "minion_increased_damage",
@@ -11346,7 +14188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura_increased_effect",
@@ -11359,7 +14204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_size",
@@ -11372,7 +14220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_effect",
@@ -11385,7 +14236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dot_increased_damage",
@@ -11398,7 +14252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tenacity",
@@ -11411,7 +14268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fire_resistance",
@@ -11424,7 +14284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ice_resistance",
@@ -11437,7 +14300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "lightning_resistance",
@@ -11450,7 +14316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "light_resistance",
@@ -11463,7 +14332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shadow_resistance",
@@ -11476,7 +14348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "min_basic_damage_add",
@@ -11489,7 +14364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_basic_damage_add",
@@ -11502,7 +14380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "basic_damage_percent",
@@ -11515,7 +14396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_basic_damage_percent",
@@ -11528,7 +14412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "basic_damage_global_mult",
@@ -11541,7 +14428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "min_elemental_damage_add",
@@ -11554,7 +14444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_elemental_damage_add",
@@ -11567,7 +14460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_damage_percent",
@@ -11580,7 +14476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_damage_global_mult",
@@ -11593,7 +14492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_damage",
@@ -11606,7 +14508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "min_weapon_damage_add",
@@ -11619,7 +14524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_weapon_damage_add",
@@ -11632,7 +14540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_damage_percent",
@@ -11645,7 +14556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_damage_mult",
@@ -11658,7 +14572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "min_weapon_damage_global_mult",
@@ -11671,7 +14588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "max_weapon_damage_global_mult",
@@ -11684,12 +14604,79 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "attack_speed",
+        "EN": "Attack Speed",
+        "FR": "Vitesse d'Attaque",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "attack_speed_percent",
+        "EN": "Attack Speed",
+        "FR": "Vitesse d'Attaque",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "attack_speed_global_mult",
+        "EN": "Attack Speed",
+        "FR": "Vitesse d'Attaque",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "enemy_cooldown_reduction_global_mult",
+        "EN": "Attack Speed",
+        "FR": "Vitesse d'Attaque",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cooldown_reduction",
-        "EN": "Attack Speed",
-        "FR": "Vitesse d'Attaque",
+        "EN": "Cooldown Reduction",
+        "FR": "Réduction de Temps de Recharge",
         "CH": "攻击速度",
         "TW": "攻擊速度",
         "JP": "",
@@ -11697,12 +14684,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cooldown_reduction_percent",
-        "EN": "Attack Speed",
-        "FR": "Vitesse d'Attaque",
+        "EN": "Cooldown Reduction",
+        "FR": "Réduction de Temps de Recharge",
         "CH": "攻击速度",
         "TW": "攻擊速度",
         "JP": "",
@@ -11710,12 +14700,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cooldown_reduction_global_mult",
-        "EN": "Attack Speed",
-        "FR": "Vitesse d'Attaque",
+        "EN": "Cooldown Reduction",
+        "FR": "Réduction de Temps de Recharge",
         "CH": "攻击速度",
         "TW": "攻擊速度",
         "JP": "",
@@ -11723,7 +14716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crit_chance_percent",
@@ -11736,7 +14732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crit_chance_global_mult",
@@ -11749,7 +14748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crit_damage_percent",
@@ -11762,7 +14764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crit_damage_global_mult",
@@ -11775,7 +14780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "brut_chance_percent",
@@ -11788,7 +14796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "brut_chance_global_mult",
@@ -11801,7 +14812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "brut_damage_percent",
@@ -11814,7 +14828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "brut_damage_global_mult",
@@ -11827,7 +14844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "armor_penetration_percent",
@@ -11840,7 +14860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "armor_penetration_global_mult",
@@ -11853,7 +14876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_penetration_percent",
@@ -11866,7 +14892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_penetration_global_mult",
@@ -11879,7 +14908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_damage_on_elite_percent",
@@ -11892,7 +14924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_damage_on_elite_global_mult",
@@ -11905,7 +14940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_phy_add",
@@ -11918,7 +14956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_phy_percent",
@@ -11931,7 +14972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_phy_global_mult",
@@ -11944,7 +14988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_mag_add",
@@ -11957,7 +15004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_mag_percent",
@@ -11970,7 +15020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "res_mag_global_mult",
@@ -11983,7 +15036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dodge_add",
@@ -11996,7 +15052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dodge_percent",
@@ -12009,7 +15068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dodge_global_mult",
@@ -12022,7 +15084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "precision_add",
@@ -12035,7 +15100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "precision_percent",
@@ -12048,7 +15116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "precision_global_mult",
@@ -12061,7 +15132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thorns_add",
@@ -12074,7 +15148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thorns_percent",
@@ -12087,7 +15164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "thorns_global_mult",
@@ -12100,7 +15180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "retaliate_percent",
@@ -12113,7 +15196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "retaliate_global_mult",
@@ -12126,7 +15212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "physical_weakness_percent",
@@ -12139,7 +15228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "physical_weakness_global_mult",
@@ -12152,7 +15244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_weakness_percent",
@@ -12165,7 +15260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elemental_weakness_global_mult",
@@ -12178,7 +15276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_on_elite_percent",
@@ -12191,7 +15292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_on_elite_global_mult",
@@ -12204,7 +15308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_melee_percent",
@@ -12217,7 +15324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_melee_global_mult",
@@ -12230,7 +15340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_projectile_percent",
@@ -12243,7 +15356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_projectile_global_mult",
@@ -12256,7 +15372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_area_percent",
@@ -12269,7 +15388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_area_global_mult",
@@ -12282,7 +15404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_all_percent",
@@ -12295,7 +15420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_damage_from_all_global_mult",
@@ -12308,7 +15436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_speed",
@@ -12321,7 +15452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_speed_percent",
@@ -12334,7 +15468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_speed_global_mult",
@@ -12347,7 +15484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_health_add",
@@ -12360,7 +15500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_health_percent",
@@ -12373,7 +15516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_health_global_mult",
@@ -12386,7 +15532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_regen_add",
@@ -12399,7 +15548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_regen_percent",
@@ -12412,7 +15564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_regen_global_mult",
@@ -12425,7 +15580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_leech_percent",
@@ -12438,7 +15596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_leech_global_mult",
@@ -12451,7 +15612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_hit_add",
@@ -12464,7 +15628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_hit_percent",
@@ -12477,7 +15644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_hit_global_mult",
@@ -12490,7 +15660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_kill_add",
@@ -12503,7 +15676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_kill_percent",
@@ -12516,7 +15692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "health_on_kill_global_mult",
@@ -12529,7 +15708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_mana_add",
@@ -12542,7 +15724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_mana_percent",
@@ -12555,7 +15740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "the_max_mana_global_mult",
@@ -12568,7 +15756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_regen_add",
@@ -12581,7 +15772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_regen_percent",
@@ -12594,7 +15788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_regen_global_mult",
@@ -12607,7 +15804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_leech_percent",
@@ -12620,7 +15820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_leech_global_mult",
@@ -12633,7 +15836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_hit_add",
@@ -12646,7 +15852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_hit_percent",
@@ -12659,7 +15868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_hit_global_mult",
@@ -12672,7 +15884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_kill_add",
@@ -12685,7 +15900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_kill_percent",
@@ -12698,7 +15916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mana_on_kill_global_mult",
@@ -12711,7 +15932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "gold_find_percent",
@@ -12724,7 +15948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "gold_find_global_mult",
@@ -12737,7 +15964,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "xp_find_percent_and_mastery",
+        "EN": "Experience and Mastery Gain",
+        "FR": "Gain d'Expérience et de Maîtrise",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "xp_find_percent",
@@ -12750,7 +15996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "xp_find_global_mult",
@@ -12763,7 +16012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "essence_find_percent",
@@ -12776,7 +16028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "essence_find_global_mult",
@@ -12789,7 +16044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_find_percent",
@@ -12802,7 +16060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_find_global_mult",
@@ -12815,7 +16076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_qual_percent",
@@ -12828,7 +16092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mf_qual_global_mult",
@@ -12841,7 +16108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "skill_mastery_gain_percent",
@@ -12854,7 +16124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "skill_mastery_gain_global_mult",
@@ -12867,7 +16140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_xp_find_percent",
@@ -12880,7 +16156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_xp_find_global_mult",
@@ -12893,7 +16172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_gain_percent",
@@ -12906,7 +16188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_gain_global_mult",
@@ -12919,7 +16204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_chance_percent",
@@ -12932,7 +16220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_chance_global_mult",
@@ -12945,7 +16236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_max_number_add",
@@ -12958,7 +16252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_max_number_percent",
@@ -12971,7 +16268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_max_number_global_mult",
@@ -12984,7 +16284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_damage_add",
@@ -12997,7 +16300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_damage_percent",
@@ -13010,7 +16316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_damage_global_mult",
@@ -13023,7 +16332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_duration_add",
@@ -13036,7 +16348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_duration_percent",
@@ -13049,7 +16364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inner_fire_duration_global_mult",
@@ -13062,7 +16380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_chance_percent",
@@ -13075,7 +16396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_chance_global_mult",
@@ -13088,7 +16412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_bounce_number_add",
@@ -13101,7 +16428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_bounce_number_percent",
@@ -13114,7 +16444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_bounce_number_global_mult",
@@ -13127,7 +16460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_damage_add",
@@ -13140,7 +16476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_damage_percent",
@@ -13153,7 +16492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "overdrive_damage_global_mult",
@@ -13166,7 +16508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "recast_chance_percent",
@@ -13179,7 +16524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "recast_chance_global_mult",
@@ -13192,7 +16540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_melee_add",
@@ -13205,7 +16556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_melee_percent",
@@ -13218,7 +16572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_melee_global_mult",
@@ -13231,7 +16588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_projectile_add",
@@ -13244,7 +16604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_projectile_percent",
@@ -13257,7 +16620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "additional_projectile_global_mult",
@@ -13270,7 +16636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance_to_pierce_percent",
@@ -13283,7 +16652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chance_to_pierce_global_mult",
@@ -13296,7 +16668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fork_chance_percent",
@@ -13309,7 +16684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fork_chance_global_mult",
@@ -13322,7 +16700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rebound_chance_percent",
@@ -13335,7 +16716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rebound_chance_global_mult",
@@ -13348,7 +16732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_proj_speed_percent",
@@ -13361,7 +16748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_proj_speed_global_mult",
@@ -13374,7 +16764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_projectile_add",
@@ -13387,7 +16780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_projectile_percent",
@@ -13400,7 +16796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "knockback_projectile_global_mult",
@@ -13413,7 +16812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "minion_increased_damage_percent",
@@ -13426,7 +16828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "minion_increased_damage_global_mult",
@@ -13439,7 +16844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "totem_increased_effect_percent",
@@ -13452,7 +16860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "totem_increased_effect_global_mult",
@@ -13465,7 +16876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura_increased_effect_percent",
@@ -13478,7 +16892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aura_increased_effect_global_mult",
@@ -13491,7 +16908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_size_percent",
@@ -13504,7 +16924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_size_global_mult",
@@ -13517,7 +16940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_effect_percent",
@@ -13530,7 +16956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "aoe_increased_effect_global_mult",
@@ -13543,7 +16972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dot_increased_damage_percent",
@@ -13556,7 +16988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "dot_increased_damage_global_mult",
@@ -13569,7 +17004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_find_percent",
@@ -13582,7 +17020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormite_find_global_mult",
@@ -13595,7 +17036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormeline_find_percent",
@@ -13608,7 +17052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slormeline_find_global_mult",
@@ -13621,7 +17068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_find_percent",
@@ -13634,7 +17084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reaper_find_global_mult",
@@ -13647,7 +17100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scroll_find_percent",
@@ -13660,7 +17116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scroll_find_global_mult",
@@ -13673,7 +17132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scrap_find_percent",
@@ -13686,7 +17148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "scrap_find_global_mult",
@@ -13699,7 +17164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tenacity_percent",
@@ -13712,7 +17180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tenacity_global_mult",
@@ -13725,7 +17196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fire_resistance_percent",
@@ -13738,7 +17212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "fire_resistance_global_mult",
@@ -13751,7 +17228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ice_resistance_percent",
@@ -13764,7 +17244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ice_resistance_global_mult",
@@ -13777,7 +17260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "lightning_resistance_percent",
@@ -13790,7 +17276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "lightning_resistance_global_mult",
@@ -13803,7 +17292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "light_resistance_percent",
@@ -13816,7 +17308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "light_resistance_global_mult",
@@ -13829,7 +17324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shadow_resistance_percent",
@@ -13842,7 +17340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "shadow_resistance_global_mult",
@@ -13855,7 +17356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "melee_percent",
@@ -13868,7 +17372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "projectile_percent",
@@ -13881,7 +17388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "increased_mana",
@@ -13894,7 +17404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "decreased_mana",
@@ -13907,7 +17420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reduced_cooldown",
@@ -13920,7 +17436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_flat",
@@ -13933,7 +17452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_percent",
@@ -13946,7 +17468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_multiplier",
@@ -13959,7 +17484,42 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_help_conversion",
+        "EN": "Gained from Conversion",
+        "FR": "Issu d'une Conversion",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "legion_reaper_dmg",
+        "EN": "Legion",
+        "FR": "Légion",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_set",
@@ -13972,7 +17532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_avg_phy",
@@ -13985,7 +17548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_avg_elem",
@@ -13998,7 +17564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_movement_speed",
@@ -14011,12 +17580,31 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_attack_speed",
-        "EN": "Reduces the Cooldown Duration of your Skills.#Attack Speed Percent values do not add up like other Percent values making it harder to reach high Attack Speed.",
-        "FR": "Réduit le Temps de Recharge de vos Compétences.#La Vitesse d'Attaque s'ajoute de manière dégressive, rendant plus difficile à atteindre une Vitesse d'Attaque élevée.",
+        "EN": "Reduces the animation time of all your Skills.#Attack Speed Percent values do not add up like other Percent values making it harder to reach high Attack Speed.",
+        "FR": "Réduit le temps d'animation de vos Compétences.#La Vitesse d'Attaque s'ajoute de manière dégressive, rendant plus difficile à atteindre une Vitesse d'Attaque élevée.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "tt_help_cooldown_reduction",
+        "EN": "Reduces the Cooldown Duration of all your Skills.#Cooldown Reduction values do not add up like other Percent values making it harder to reach high Cooldown Reduction.",
+        "FR": "Réduit le Temps de Recharge de vos Compétences.#La Réduction de Temps de Recharge s'ajoute de manière dégressive, rendant plus difficile à atteindre une Réduction de Temps de Recharge élevée.",
         "CH": "减少你技能的冷却时间。##攻速百分比值不会像其他百分比值一样叠加，因此很难达到较高的攻击速度。",
         "TW": "減少你技能的冷卻時間。 ##攻速百分比值不會像其他百分比值一樣疊加，因此很難達到較高的攻擊速度。",
         "JP": "",
@@ -14024,7 +17612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_basic_damage",
@@ -14037,7 +17628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_weapon_damage",
@@ -14050,7 +17644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_physical_damage",
@@ -14063,7 +17660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_elemental_damage",
@@ -14076,7 +17676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_critical_chance",
@@ -14089,7 +17692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_critical_damage",
@@ -14102,7 +17708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_ancestral_chance",
@@ -14115,7 +17724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_ancestral_damage",
@@ -14128,7 +17740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_armor_penetration",
@@ -14141,7 +17756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_elemental_penetration",
@@ -14154,7 +17772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_increased_on_elite",
@@ -14167,7 +17788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_armor",
@@ -14180,7 +17804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_wrath_X",
@@ -14193,7 +17820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_armor_current",
@@ -14206,7 +17836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_elemental_current",
@@ -14219,7 +17852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_dodge_current",
@@ -14232,7 +17868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_elemental_resist",
@@ -14245,11 +17884,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_dodge",
-        "EN": "Through even more complex arithmetics, gives you a chance to dodge incoming Melee and Projectiles attacks.##Dodge does not work on Area of Effect attacks.#Stepping out of the Area does work.",
+        "EN": "Through even more complex arithmetics, gives you a chance to dodge incoming Melee and Projectiles attacks.##Evasion does not work on Area of Effects.#Stepping out of the Area does work.",
         "FR": "Attribue une Chance d'Esquiver les attaques de Mêlée et les Projectiles en utilisant une formule d'algèbre de haute volée.##Cette statistique ne permet pas d'Esquiver les attaques à Zone d'Effet.#Se déplacer reste la meilleure solution.",
         "CH": "通过更复杂的算法，让你有几率闪避即将到来的攻击。",
         "TW": "通過更複雜的算法，讓你有機率閃避即將到來的攻擊。",
@@ -14258,7 +17900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_thorns",
@@ -14271,7 +17916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_retaliate",
@@ -14284,7 +17932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_phys_weakness",
@@ -14297,7 +17948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_elem_weakness",
@@ -14310,7 +17964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reduced_by_elite",
@@ -14323,7 +17980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reduced_on_melee",
@@ -14336,7 +17996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reduced_on_projectile",
@@ -14349,7 +18012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reduced_on_area",
@@ -14362,7 +18028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reduced_on_all",
@@ -14375,7 +18044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_max_health",
@@ -14388,7 +18060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_health_regeneration",
@@ -14401,7 +18076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_life_leech",
@@ -14414,7 +18092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_life_on_hit",
@@ -14427,7 +18108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_life_on_kill",
@@ -14440,7 +18124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_max_mana",
@@ -14453,7 +18140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mana_regeneration",
@@ -14466,7 +18156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mana_leech",
@@ -14479,7 +18172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mana_on_hit",
@@ -14492,7 +18188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mana_on_kill",
@@ -14505,7 +18204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_gold_find",
@@ -14518,7 +18220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_essence_find",
@@ -14531,7 +18236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_xp_find",
@@ -14544,7 +18252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mf_find",
@@ -14557,7 +18268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mf_qual",
@@ -14570,7 +18284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_skill_mastery_gain",
@@ -14583,7 +18300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reaper_xp_find",
@@ -14596,7 +18316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_influence_gain",
@@ -14609,7 +18332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_inner_fire_name",
@@ -14622,7 +18348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_inner_fire_chance",
@@ -14635,12 +18364,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_inner_fire_effect",
-        "EN": "Your resolution is so strong that it takes a physical form, rotating around you for @ seconds, dealing @ £ to enemies hit.#You can have a maximum of @ Inner Fires at any given point.",
-        "FR": "Votre Résolution est si grande qu'elle prend une forme physique qui gravite autour de vous durant @ secondes, infligeant @ de £ aux ennemis touchés.# Vous pouvez avoir un maximum de @ Feux Intérieurs.",
+        "EN": "Your resolution is so strong that it takes a physical form, rotating around you for the next @ seconds, dealing @ £ to enemies hit.#You can have a maximum of @ Inner Fires.",
+        "FR": "Votre Résolution est si grande qu'elle prend une forme physique qui gravite autour de vous durant les @ prochaines secondes, infligeant @ de £ aux ennemis touchés.# Vous pouvez avoir un maximum de @ Feux Intérieurs.",
         "CH": "你爆涨的决心幻化出实体形态，在你周围环绕@秒，对击中的敌人造成@£。#在任何情况下，你最多只能拥有@个心灵之火。",
         "TW": "",
         "JP": "",
@@ -14648,7 +18380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_inner_fire_max_number",
@@ -14661,7 +18396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_inner_fire_damage",
@@ -14674,7 +18412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_inner_fire_duration",
@@ -14687,7 +18428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_overdrive_name",
@@ -14700,7 +18444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_lucky_name",
@@ -14713,7 +18460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_lucky_effect",
@@ -14726,7 +18476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_overdrive_chance",
@@ -14739,7 +18492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_overdrive_effect",
@@ -14752,7 +18508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_overdrive_bounce_number",
@@ -14765,7 +18524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_overdrive_damage",
@@ -14778,7 +18540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_recast_chance",
@@ -14791,7 +18556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_knockback_melee",
@@ -14804,12 +18572,15 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_additional_projectile",
-        "EN": "Number of Additional Projectiles to be fired whenever you cast a Projectile Skill.#0.5 is 50% chance to fire another Projectile.##Projectile Damage is reduced by 10% for each Additional Projectile down to a maximum of 90%.",
-        "FR": "Nombre de Projectiles Additionnels lancés lorsque vous utilisez une Compétence de Projectile.#0.5 donne 50% de Chance de lancer un autre Projectile.##Les Dégâts de Projectile sont réduits de 10% par Projectile Additionnel jusqu'à un maximum de 90%.",
+        "EN": "Number of Additional Projectiles to be fired whenever you cast a Projectile Skill.#0.5 is 50% chance to fire another Projectile.",
+        "FR": "Nombre de Projectiles Additionnels lancés lorsque vous utilisez une Compétence de Projectile.#0.5 donne 50% de Chance de lancer un autre Projectile.",
         "CH": "当你使用远程技能时，额外发射的投射物数量。#0.5%到50%的几率发射 #一次远程攻击。##每次额外远程攻击伤害降低10%，最高降低90%。",
         "TW": "當你使用遠程技能時，額外發射的投射物數量。 #0.5%到50%的機率發射 #一次遠程攻擊。 ##每次額外遠程攻擊傷害降低10%，最高降低90%。",
         "JP": "",
@@ -14817,7 +18588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_chance_to_pierce",
@@ -14830,7 +18604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_chance_to_fork",
@@ -14843,7 +18620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_chance_to_rebound",
@@ -14856,7 +18636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_projectile_speed",
@@ -14869,7 +18652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_knockback_projectile",
@@ -14882,7 +18668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_minion_increased_damage",
@@ -14895,7 +18684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_totem_increased_effect",
@@ -14908,7 +18700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_aura_increased_effect",
@@ -14921,7 +18716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_aoe_increased_size",
@@ -14934,7 +18732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_aoe_increased_effect",
@@ -14947,7 +18748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_dot_increased_damage",
@@ -14960,7 +18764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_tenacity",
@@ -14973,7 +18780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_fire_resistance",
@@ -14986,7 +18796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_ice_resistance",
@@ -14999,7 +18812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_lightning_resistance",
@@ -15012,7 +18828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_light_resistance",
@@ -15025,7 +18844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_shadow_resistance",
@@ -15038,7 +18860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_fire_negative_effects",
@@ -15051,7 +18876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ice_negative_effects",
@@ -15064,7 +18892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_lightning_negative_effects",
@@ -15077,7 +18908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_light_negative_effects",
@@ -15090,7 +18924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_shadow_negative_effects",
@@ -15103,7 +18940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_slormite_find",
@@ -15116,7 +18956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_slormeline_find",
@@ -15129,7 +18972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_reaper_find",
@@ -15142,7 +18988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_scroll_find",
@@ -15155,7 +19004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_scrap_find",
@@ -15168,33 +19020,90 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mastery",
-        "EN": "You gain Mastery every time you cast this Skill in combat, or every second spent Channeling this Skill in combat if applicable.##You also gain a small amount of Mastery whenever you gain Mastery with another Skill while this Skill is equipped.##Improve your Mastery to unlock new Upgrades.##Mastering a Skill also increases its Damage and Effects.",
-        "FR": "Vous gagnez de la Maîtrise à chaque fois que vous utilisez cette Compétence en combat ou pour chaque seconde passée à Canaliser un sort si applicable.##Vous gagnez également un peu de Maîtrise avec cette Compétence si elle équipée chaque fois que vous gagnez de la Maîtrise avec une autre compétence.##Augmentez votre Maîtrise pour débloquer de nouvelles Améliorations.##Améliorer la Maîtrise augmente également les Dégâts et les Effets de la Compétence.",
-        "CH": "你在战斗中每次使用某技能或引导某技能(如适用)，都会获得该技能的精通值。##提升精通值来解锁升级。##精通某项技能也会增加技能的伤害和效果。",
-        "TW": "你在戰鬥中每次使用某技能或引導某技能(如適用)，都會獲得該技能的精通值。 ##提升精通值來解鎖升級。 ##精通某項技能也會增加技能的傷害和效果。",
+        "EN": "Your Class Skills gain Mastery every time you kill an enemy while they are equipped.##Improve your Mastery to unlock new Upgrades.##Mastering a Skill also increases its Damage and Effects.",
+        "FR": "Vos Compétences de Classe gagnent de la Maîtrise à chaque fois que vous tuez un ennemi alors qu'elles sont équippées.##Augmentez votre Maîtrise pour débloquer de nouvelles Améliorations.##Améliorer la Maîtrise augmente également les Dégâts et les Effets de la Compétence.",
+        "CH": "",
+        "TW": "",
         "JP": "",
         "DE": "",
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_mastery_support",
-        "EN": "You gain Mastery every time you cast this Skill in combat.##You also gain a small amount of Mastery whenever you gain Mastery with another Skill while this Skill is equipped.##Improve your Mastery to unlock new Upgrades and Passives Tiers.##Mastering a Skill also increases its Damage and Effects.",
-        "FR": "Vous gagnez de la Maîtrise à chaque fois que vous utilisez cette Compétence en combat.##Vous gagnez également un peu de Maîtrise avec cette Compétence si elle équipée chaque fois que vous gagnez de la Maîtrise avec une autre compétence.##Augmentez votre Maîtrise pour débloquer de nouvelles Améliorations et de nouveaux Passifs.##Améliorer la Maîtrise augmente également les Dégâts et les Effets de la Compétence.",
-        "CH": "你在战斗中每次使用某技能，都会获得该技能的精通值。##提升精通值来解锁升级和被动层数。##精通某项技能也会增加技能的伤害和效果。",
-        "TW": "你在戰鬥中每次使用某技能，都會獲得該技能的精通值。 ##提升精通值來解鎖升級和被動層數。 ##精通某項技能也會增加技能的傷害和效果。",
+        "EN": "Your Support Skill gains Mastery every time you kill an enemy while it is equipped.##Improve your Mastery to unlock new Upgrades and Passives Tiers.##Mastering a Skill also increases its Damage and Effects.",
+        "FR": "Votre Compétence de Soutien gagne de la Maîtrise chaque fois que vous tuez un ennemi alors qu'elle est équipée.##Augmentez votre Maîtrise pour débloquer de nouvelles Améliorations et de nouveaux Passifs.##Améliorer la Maîtrise augmente également les Dégâts et les Effets de la Compétence.",
+        "CH": "",
+        "TW": "",
         "JP": "",
         "DE": "",
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "reaper_mastery_tt_from",
+        "EN": "Granted by Reaper Mastery @",
+        "FR": "Dûs à la Maîtrise de Reaper @.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "reaper_mastery",
+        "EN": "Slorm Reaper Mastery",
+        "FR": "Maîtrise de Slorm Reaper",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "reaper_mastery_tt",
+        "EN": "Slorm Reaper Mastery increases your effectiveness with all Slorm Reapers, and gives the Slorm Reaper you're using damage at least equivalent to your Mastery level.##You gain Slorm Reaper Mastery everytime you gain Experience with a Slorm Reaper.",
+        "FR": "La Maîtrise de Slorm Reaper améliore votre efficacité avec tous les Slorm Reapers et vous confère au Slorm Reaper que vous utilisez des Dégâts au moins équivalents à votre niveau de Maîtrise.##Vous gagnez de la Maîtrise de Slorm Reaper à chaque fois que vous gagnez de l'Expérience avec un Slorm Reaper.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_track_stat",
@@ -15207,7 +19116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_track_stat_tracked",
@@ -15220,7 +19132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_base",
@@ -15233,7 +19148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_name",
@@ -15246,7 +19164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_help_current",
@@ -15259,7 +19180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_legendary_help",
@@ -15272,7 +19196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_legendary_for",
@@ -15285,7 +19212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_legendary_1",
@@ -15298,7 +19228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_legendary_2",
@@ -15311,7 +19244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_legendary_restrict",
@@ -15324,7 +19260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "random_piece",
@@ -15337,7 +19276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ITEM NAME GENERATOR (Special Instructions, Check the Instructions Sheet)\n\n\n\n\n",
@@ -15350,7 +19292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ITEM_FORMULA",
@@ -15363,7 +19308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ITEM_GROUND_FORMULA",
@@ -15376,7 +19324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_life",
@@ -15389,7 +19340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_life_ON_DEF",
@@ -15402,7 +19356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_mana",
@@ -15415,7 +19372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_mana_ON_DEF",
@@ -15428,7 +19388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_ret",
@@ -15441,7 +19404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_ret_ON_DEF",
@@ -15454,7 +19420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_crit",
@@ -15467,7 +19436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_crit_ON_DEF",
@@ -15480,7 +19452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_cdr",
@@ -15493,7 +19468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_cdr_ON_DEF",
@@ -15506,7 +19484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_spd",
@@ -15519,7 +19500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_dot",
@@ -15532,7 +19516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_minion",
@@ -15545,7 +19532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_totem",
@@ -15558,7 +19548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_aura",
@@ -15571,7 +19564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_def_alt",
@@ -15584,7 +19580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_adventure",
@@ -15597,7 +19596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_atk_phy",
@@ -15610,7 +19612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_atk_mag",
@@ -15623,7 +19628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_def_phy",
@@ -15636,7 +19644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_def_mag",
@@ -15649,7 +19660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NAME_loot_adj_def_dodge",
@@ -15662,7 +19676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_life",
@@ -15675,7 +19692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_mana",
@@ -15688,7 +19708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_ret",
@@ -15701,7 +19724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_minion",
@@ -15714,7 +19740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_atk_mag",
@@ -15727,7 +19756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_def_phy",
@@ -15740,7 +19772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_def_mag",
@@ -15753,7 +19788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_HELM_def_dodge",
@@ -15766,7 +19804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_life",
@@ -15779,7 +19820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_mana",
@@ -15792,7 +19836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_ret",
@@ -15805,7 +19852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_atk_phy",
@@ -15818,7 +19868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_atk_mag",
@@ -15831,7 +19884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_def_phy",
@@ -15844,7 +19900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_def_mag",
@@ -15857,7 +19916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BODY_def_dodge",
@@ -15870,7 +19932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_ret",
@@ -15883,7 +19948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_cdr",
@@ -15896,7 +19964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_atk_phy",
@@ -15909,7 +19980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_atk_mag",
@@ -15922,7 +19996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_def_phy",
@@ -15935,7 +20012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_def_mag",
@@ -15948,7 +20028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_SHOULDER_def_dodge",
@@ -15961,7 +20044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_cdr",
@@ -15974,7 +20060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_crit",
@@ -15987,7 +20076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_atk_phy",
@@ -16000,7 +20092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_atk_mag",
@@ -16013,7 +20108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_def_phy",
@@ -16026,7 +20124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_def_mag",
@@ -16039,7 +20140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BRACER_def_dodge",
@@ -16052,7 +20156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_cdr",
@@ -16065,7 +20172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_crit",
@@ -16078,7 +20188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_atk_phy",
@@ -16091,7 +20204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_atk_mag",
@@ -16104,7 +20220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_def_phy",
@@ -16117,7 +20236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_def_mag",
@@ -16130,7 +20252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_GLOVE_def_dodge",
@@ -16143,7 +20268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_life",
@@ -16156,7 +20284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_mana",
@@ -16169,7 +20300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_spd",
@@ -16182,7 +20316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_atk_phy",
@@ -16195,7 +20332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_def_phy",
@@ -16208,7 +20348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_def_mag",
@@ -16221,7 +20364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BOOT_def_dodge",
@@ -16234,7 +20380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_life",
@@ -16247,7 +20396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_mana",
@@ -16260,7 +20412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_ret",
@@ -16273,7 +20428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_dot",
@@ -16286,7 +20444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_adventure",
@@ -16299,7 +20460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_atk_phy",
@@ -16312,7 +20476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_atk_mag",
@@ -16325,7 +20492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_def_phy",
@@ -16338,7 +20508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_def_mag",
@@ -16351,7 +20524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_RING_def_dodge",
@@ -16364,7 +20540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_life",
@@ -16377,7 +20556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_mana",
@@ -16390,7 +20572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_ret",
@@ -16403,7 +20588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_minion",
@@ -16416,7 +20604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_adventure",
@@ -16429,7 +20620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_atk_phy",
@@ -16442,7 +20636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_atk_mag",
@@ -16455,7 +20652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_def_phy",
@@ -16468,7 +20668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_def_mag",
@@ -16481,7 +20684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_AMULET_def_dodge",
@@ -16494,7 +20700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_ret",
@@ -16507,7 +20716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_crit",
@@ -16520,7 +20732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_spd",
@@ -16533,7 +20748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_aura",
@@ -16546,7 +20764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_def_alt",
@@ -16559,7 +20780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_atk_phy",
@@ -16572,7 +20796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_atk_mag",
@@ -16585,7 +20812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_def_phy",
@@ -16598,7 +20828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_def_mag",
@@ -16611,7 +20844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_BELT_def_dodge",
@@ -16624,7 +20860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_life",
@@ -16637,7 +20876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_mana",
@@ -16650,7 +20892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_cdr",
@@ -16663,7 +20908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_spd",
@@ -16676,7 +20924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_dot",
@@ -16689,7 +20940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_minion",
@@ -16702,7 +20956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_aura",
@@ -16715,7 +20972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_def_alt",
@@ -16728,7 +20988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_adventure",
@@ -16741,7 +21004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_def_phy",
@@ -16754,7 +21020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_def_mag",
@@ -16767,7 +21036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_loot_CAPE_def_dodge",
@@ -16780,7 +21052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_legendary",
@@ -16793,7 +21068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_epic",
@@ -16806,7 +21084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_rare",
@@ -16819,7 +21100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_magic",
@@ -16832,7 +21116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_normal",
@@ -16845,7 +21132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "RAR_loot_artifact",
@@ -16858,7 +21148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_L",
@@ -16871,7 +21164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_E",
@@ -16884,7 +21180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_R",
@@ -16897,7 +21196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_M",
@@ -16910,7 +21212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_N",
@@ -16923,7 +21228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "STAT_EX",
@@ -16936,7 +21244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_ring",
@@ -16949,7 +21260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_amulet",
@@ -16962,7 +21276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_helm",
@@ -16975,7 +21292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_body",
@@ -16988,7 +21308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_shoulder",
@@ -17001,7 +21324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_bracer",
@@ -17014,7 +21340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_glove",
@@ -17027,7 +21356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_boot",
@@ -17040,7 +21372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_cape",
@@ -17053,7 +21388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PIECE_belt",
@@ -17066,7 +21404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_brut_chance_percent",
@@ -17079,7 +21420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_brut_damage_percent",
@@ -17092,7 +21436,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "PRE_loot_pre_attack_speed_global_mult",
+        "EN": "Prompt",
+        "FR": "Rapide/Rapide/Rapides/Rapides",
+        "CH": "迅速",
+        "TW": "迅速",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_cooldown_reduction_global_mult",
@@ -17105,7 +21468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_crit_chance_percent",
@@ -17118,7 +21484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_crit_damage_percent",
@@ -17131,7 +21500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_dodge_add",
@@ -17144,7 +21516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_dodge_percent",
@@ -17157,7 +21532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_min_basic_damage_add",
@@ -17170,7 +21548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_basic_damage_percent",
@@ -17183,7 +21564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_min_elemental_damage_add",
@@ -17196,7 +21580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_elemental_damage_percent",
@@ -17209,7 +21596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_res_mag_add",
@@ -17222,7 +21612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_res_mag_percent",
@@ -17235,7 +21628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_res_phy_add",
@@ -17248,7 +21644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_res_phy_percent",
@@ -17261,7 +21660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_the_max_health_add",
@@ -17274,7 +21676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_the_max_health_percent",
@@ -17287,7 +21692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_the_max_mana_add",
@@ -17300,7 +21708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_the_max_mana_percent",
@@ -17313,7 +21724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_the_speed_percent",
@@ -17326,7 +21740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_armor_penetration_percent",
@@ -17339,7 +21756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_elemental_penetration_percent",
@@ -17352,7 +21772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_increased_damage_on_elite_percent",
@@ -17365,7 +21788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_thorns_add",
@@ -17378,7 +21804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_thorns_percent",
@@ -17391,7 +21820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_retaliate_percent",
@@ -17404,7 +21836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_reduced_damage_on_elite_percent",
@@ -17417,7 +21852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_reduced_damage_from_melee_percent",
@@ -17430,7 +21868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_reduced_damage_from_projectile_percent",
@@ -17443,7 +21884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_reduced_damage_from_area_percent",
@@ -17456,7 +21900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_regen_add",
@@ -17469,7 +21916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_regen_percent",
@@ -17482,7 +21932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_leech_percent",
@@ -17495,7 +21948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_on_hit_add",
@@ -17508,7 +21964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_on_hit_percent",
@@ -17521,7 +21980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_on_kill_add",
@@ -17534,7 +21996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_health_on_kill_percent",
@@ -17547,7 +22012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_regen_add",
@@ -17560,7 +22028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_regen_percent",
@@ -17573,7 +22044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_leech_percent",
@@ -17586,7 +22060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_on_hit_add",
@@ -17599,7 +22076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_on_hit_percent",
@@ -17612,7 +22092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_on_kill_add",
@@ -17625,7 +22108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mana_on_kill_percent",
@@ -17638,7 +22124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_tenacity_percent",
@@ -17651,7 +22140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_dot_increased_damage_percent",
@@ -17664,7 +22156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_gold_find_percent",
@@ -17677,7 +22172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_xp_find_percent",
@@ -17690,7 +22188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_essence_find_percent",
@@ -17703,7 +22204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mf_find_percent",
@@ -17716,7 +22220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_mf_qual_percent",
@@ -17729,7 +22236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_scrap_find_percent",
@@ -17742,7 +22252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_slormite_find_percent",
@@ -17755,7 +22268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_slormeline_find_percent",
@@ -17768,7 +22284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_increased_proj_speed_percent",
@@ -17781,7 +22300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_minion_increased_damage_percent",
@@ -17794,7 +22316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_inner_fire_chance_percent",
@@ -17807,7 +22332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_inner_fire_damage_percent",
@@ -17820,7 +22348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_inner_fire_duration_percent",
@@ -17833,7 +22364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_overdrive_damage_percent",
@@ -17846,7 +22380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_overdrive_chance_percent",
@@ -17859,7 +22396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_recast_chance_percent",
@@ -17872,7 +22412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_chance_to_pierce_percent",
@@ -17885,7 +22428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_fork_chance_percent",
@@ -17898,7 +22444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_rebound_chance_percent",
@@ -17911,7 +22460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_aura_increased_effect_percent",
@@ -17924,7 +22476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_totem_increased_effect_percent",
@@ -17937,7 +22492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_aoe_increased_size_percent",
@@ -17950,7 +22508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_aoe_increased_effect_percent",
@@ -17963,7 +22524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PRE_loot_pre_reduced_damage_from_all_percent",
@@ -17976,7 +22540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_brut_chance_percent",
@@ -17989,7 +22556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_brut_damage_percent",
@@ -18002,7 +22572,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "SUF_loot_suf_attack_speed_global_mult",
+        "EN": "of Alacrity",
+        "FR": "d'Empressement",
+        "CH": "活力之",
+        "TW": "活力之",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_cooldown_reduction_global_mult",
@@ -18015,7 +22604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_crit_chance_percent",
@@ -18028,7 +22620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_crit_damage_percent",
@@ -18041,7 +22636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_dodge_add",
@@ -18054,7 +22652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_dodge_percent",
@@ -18067,7 +22668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_min_basic_damage_add",
@@ -18080,7 +22684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_basic_damage_percent",
@@ -18093,7 +22700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_min_elemental_damage_add",
@@ -18106,7 +22716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_elemental_damage_percent",
@@ -18119,7 +22732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_res_mag_add",
@@ -18132,7 +22748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_res_mag_percent",
@@ -18145,7 +22764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_res_phy_add",
@@ -18158,7 +22780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_res_phy_percent",
@@ -18171,7 +22796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_the_max_health_add",
@@ -18184,7 +22812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_the_max_health_percent",
@@ -18197,7 +22828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_the_max_mana_add",
@@ -18210,7 +22844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_the_max_mana_percent",
@@ -18223,7 +22860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_the_speed_percent",
@@ -18236,7 +22876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_armor_penetration_percent",
@@ -18249,7 +22892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_elemental_penetration_percent",
@@ -18262,7 +22908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_increased_damage_on_elite_percent",
@@ -18275,7 +22924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_thorns_add",
@@ -18288,7 +22940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_thorns_percent",
@@ -18301,7 +22956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_retaliate_percent",
@@ -18314,7 +22972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_reduced_damage_on_elite_percent",
@@ -18327,7 +22988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_reduced_damage_from_melee_percent",
@@ -18340,7 +23004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_reduced_damage_from_projectile_percent",
@@ -18353,7 +23020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_reduced_damage_from_area_percent",
@@ -18366,7 +23036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_regen_add",
@@ -18379,7 +23052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_regen_percent",
@@ -18392,7 +23068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_leech_percent",
@@ -18405,7 +23084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_on_hit_add",
@@ -18418,7 +23100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_on_hit_percent",
@@ -18431,7 +23116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_on_kill_add",
@@ -18444,7 +23132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_health_on_kill_percent",
@@ -18457,7 +23148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_regen_add",
@@ -18470,7 +23164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_regen_percent",
@@ -18483,7 +23180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_leech_percent",
@@ -18496,7 +23196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_on_hit_add",
@@ -18509,7 +23212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_on_hit_percent",
@@ -18522,7 +23228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_on_kill_add",
@@ -18535,7 +23244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mana_on_kill_percent",
@@ -18548,7 +23260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_tenacity_percent",
@@ -18561,7 +23276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_gold_find_percent",
@@ -18574,7 +23292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_xp_find_percent",
@@ -18587,7 +23308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_essence_find_percent",
@@ -18600,7 +23324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mf_find_percent",
@@ -18613,7 +23340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_mf_qual_percent",
@@ -18626,7 +23356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_scrap_find_percent",
@@ -18639,7 +23372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_slormite_find_percent",
@@ -18652,7 +23388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_slormeline_find_percent",
@@ -18665,7 +23404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_increased_proj_speed_percent",
@@ -18678,7 +23420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_minion_increased_damage_percent",
@@ -18691,7 +23436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_dot_increased_damage_percent",
@@ -18704,7 +23452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_inner_fire_chance_percent",
@@ -18717,7 +23468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_inner_fire_damage_percent",
@@ -18730,7 +23484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_inner_fire_duration_percent",
@@ -18743,7 +23500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_overdrive_damage_percent",
@@ -18756,7 +23516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_overdrive_chance_percent",
@@ -18769,7 +23532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_recast_chance_percent",
@@ -18782,7 +23548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_chance_to_pierce_percent",
@@ -18795,7 +23564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_fork_chance_percent",
@@ -18808,7 +23580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_rebound_chance_percent",
@@ -18821,7 +23596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_aura_increased_effect_percent",
@@ -18834,7 +23612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_totem_increased_effect_percent",
@@ -18847,7 +23628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_aoe_increased_size_percent",
@@ -18860,7 +23644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_aoe_increased_effect_percent",
@@ -18873,7 +23660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "SUF_loot_suf_reduced_damage_from_all_percent",
@@ -18886,7 +23676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "REAPERS",
@@ -18899,7 +23692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slorm_reapers",
@@ -18912,7 +23708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slorm_prim",
@@ -18925,7 +23724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slorm_reaper_collection",
@@ -18938,7 +23740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "slorm_reaper_collection_primordial",
@@ -18951,7 +23756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_statistics",
@@ -18964,7 +23772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primordial_weapon_statistics",
@@ -18977,7 +23788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_total",
@@ -18990,7 +23804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_total_level",
@@ -19003,7 +23820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_total_reapers",
@@ -19016,7 +23836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weaponodex",
@@ -19029,7 +23852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weaponodex_reaper",
@@ -19042,7 +23868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafting_tab",
@@ -19055,7 +23884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_tab",
@@ -19068,7 +23900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_sort",
@@ -19081,7 +23916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_transfer",
@@ -19094,7 +23932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_victims",
@@ -19107,7 +23948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_dmg_level_100",
@@ -19120,7 +23964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_reaper_corrupted",
@@ -19133,7 +23980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_reaper_level",
@@ -19146,7 +23996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_reaper_normal_level",
@@ -19159,7 +24012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancient_bonus",
@@ -19172,7 +24028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_ancient_malus",
@@ -19185,7 +24044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_new_active",
@@ -19198,7 +24060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_unlocked_actives",
@@ -19211,7 +24076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_light",
@@ -19224,7 +24092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith",
@@ -19237,7 +24108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_all",
@@ -19250,7 +24124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_0",
@@ -19263,7 +24140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_1",
@@ -19276,7 +24156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_2",
@@ -19289,7 +24172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_3",
@@ -19302,7 +24188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_4",
@@ -19315,7 +24204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_5",
@@ -19328,7 +24220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_6",
@@ -19341,7 +24236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_7",
@@ -19354,7 +24252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_0_extra",
@@ -19367,7 +24268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_1_extra",
@@ -19380,7 +24284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_2_extra",
@@ -19393,7 +24300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_3_extra",
@@ -19406,7 +24316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_4_extra",
@@ -19419,7 +24332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_5_extra",
@@ -19432,7 +24348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_6_extra",
@@ -19445,7 +24364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_reapersmith_7_extra",
@@ -19458,7 +24380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_positive",
@@ -19471,7 +24396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tt_negative",
@@ -19484,7 +24412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_cost",
@@ -19497,7 +24428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_cost",
@@ -19510,7 +24444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_cost",
@@ -19523,7 +24460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_damage",
@@ -19536,7 +24476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_damage",
@@ -19549,7 +24492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_damage",
@@ -19562,7 +24508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_cooldown",
@@ -19575,7 +24524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_cooldown",
@@ -19588,7 +24540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_cooldown",
@@ -19601,7 +24556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_deactivated",
@@ -19614,7 +24572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_deactivated",
@@ -19627,7 +24588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_deactivated",
@@ -19640,7 +24604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_mana_leech",
@@ -19653,7 +24620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_critical_chance",
@@ -19666,7 +24636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_critical_chance",
@@ -19679,7 +24652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_ancestral_chance",
@@ -19692,7 +24668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_ancestral_chance",
@@ -19705,7 +24684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_mastery_level",
@@ -19718,7 +24700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "secondary_mastery_level",
@@ -19731,7 +24716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "support_mastery_level",
@@ -19744,7 +24732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "primary_mastery_to",
@@ -19757,7 +24748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "weapon_to_elemental",
@@ -19770,7 +24764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "projectile_skill_damage",
@@ -19783,7 +24780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "projectile_skill_cooldown",
@@ -19796,7 +24796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "melee_skill_damage",
@@ -19809,7 +24812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "melee_skill_cooldown",
@@ -19822,7 +24828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "random_accuracy",
@@ -19835,7 +24844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "NPCs ACTIONS",
@@ -19848,7 +24860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_use",
@@ -19861,7 +24876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_check",
@@ -19874,7 +24892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_respect",
@@ -19887,7 +24908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_enter",
@@ -19900,7 +24924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_exit",
@@ -19913,7 +24940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_reactivate",
@@ -19926,7 +24956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_bryan_door",
@@ -19939,7 +24972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_bryan_door_mission",
@@ -19952,7 +24988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_bryan_door_alt",
@@ -19965,7 +25004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_bryan_door_2",
@@ -19978,7 +25020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_talk",
@@ -19991,7 +25036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_pick",
@@ -20004,7 +25052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_read",
@@ -20017,7 +25068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_open",
@@ -20030,7 +25084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "npc_action_chest",
@@ -20043,7 +25100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "citizens",
@@ -20056,7 +25116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reputation",
@@ -20069,7 +25132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "next",
@@ -20082,33 +25148,74 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "refund_slorm_skill",
         "EN": "I will extract all the Slorm invested in your Skills at once, not a part of it. I'm also going to keep @% of the Slorm extracted because... reasons.#Are you sure you want to proceed?",
         "FR": "Je vais extraire TOUT le Slorm que tu as investi dans tes Compétences, pas seulement une partie. Je vais aussi garder @% du Slorm extrait pour... raisons personnelles.#Tu veux vraiment le faire ?",
-        "CH": "我会提取你用于技能上的所有魂灵，而不是一部分。因为…某些原因，我要自己留下@%提取的魂灵。#确定要继续吗？",
-        "TW": "我會提取你用於技能上的所有魂靈，而不是一部分。因為…某些原因，我要自己留下@%提取的魂靈。 #確定要繼續嗎？",
+        "CH": "",
+        "TW": "",
         "JP": "",
         "DE": "",
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "refund_slorm_elements",
         "EN": "I will extract all the Slorm invested in your Ancestral Legacy at once, not a part of it. I'm also going to keep @% of the Slorm extracted for... things and such.#Are you sure you want to proceed?",
         "FR": "Je vais extraire TOUT le Slorm que tu as investi dans ton Héritage Ancestral, pas seulement une partie. Je vais aussi garder @% du Slorm extrait pour... raisons personnelles.#Tu veux vraiment le faire ?",
-        "CH": "我会提取你用于先祖技能上的所有魂灵，而不是一部分。因为…某些原因，我要自己留下@%提取的魂灵。#确定要继续吗？",
-        "TW": "我會提取你用於先祖技能上的所有魂靈，而不是一部分。因為…某些原因，我要自己留下@%提取的魂靈。 #確定要繼續嗎？",
+        "CH": "",
+        "TW": "",
         "JP": "",
         "DE": "",
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "refund_slorm_skill_free",
+        "EN": "I will extract all the Slorm invested in your Skills at once and give it back to you.#Are you sure you want to proceed?",
+        "FR": "Je vais extraire TOUT le Slorm que tu as investi dans tes Compétences et te le rendre immédiatement.#Tu veux vraiment le faire ?",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "refund_slorm_elements_free",
+        "EN": "I will extract all the Slorm invested in your Ancestral Legacy at once and give it back to you.#Are you sure you want to proceed?",
+        "FR": "Je vais extraire TOUT le Slorm que tu as investi dans ton Héritage Ancestral et te le rendre immédiatement.#Tu veux vraiment le faire ?",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "refund_amount",
@@ -20121,7 +25228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "refund_yes",
@@ -20134,7 +25244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "refund_no",
@@ -20147,7 +25260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "storage_store",
@@ -20160,7 +25276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_store",
@@ -20173,7 +25292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_store",
@@ -20186,7 +25308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_store",
@@ -20199,7 +25324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_store",
@@ -20212,7 +25340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_store",
@@ -20225,7 +25356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "storage_base",
@@ -20238,7 +25372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "storage_leg",
@@ -20251,7 +25388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_0",
@@ -20264,7 +25404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_1",
@@ -20277,7 +25420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_0",
@@ -20290,7 +25436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_1",
@@ -20303,7 +25452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_2",
@@ -20316,7 +25468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_3",
@@ -20329,7 +25484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_4",
@@ -20342,7 +25500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_0",
@@ -20355,7 +25516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_1",
@@ -20368,7 +25532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_2",
@@ -20381,7 +25548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_3",
@@ -20394,7 +25564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_0",
@@ -20407,7 +25580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_1",
@@ -20420,7 +25596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_2",
@@ -20433,7 +25612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_3",
@@ -20446,7 +25628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_4",
@@ -20459,7 +25644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_0",
@@ -20472,7 +25660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_1",
@@ -20485,7 +25676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_2",
@@ -20498,7 +25692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_3",
@@ -20511,7 +25708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_store",
@@ -20524,7 +25724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_config",
@@ -20537,7 +25740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_save",
@@ -20550,7 +25756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_load",
@@ -20563,7 +25772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_delete",
@@ -20576,7 +25788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_delete_alert",
@@ -20589,7 +25804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loadout_load_alert",
@@ -20602,7 +25820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "merchant_stash_locked_reputation",
@@ -20615,7 +25836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "merchant_stash_locked_money",
@@ -20628,7 +25852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "merchant_feature_locked_reputation",
@@ -20641,7 +25868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "merchant_feature_locked_money",
@@ -20654,7 +25884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "merchant_feature_locked_temple",
@@ -20667,7 +25900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_merge",
@@ -20680,7 +25916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_purchase",
@@ -20693,7 +25932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_transform",
@@ -20706,7 +25948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_forge",
@@ -20719,7 +25964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_reforge",
@@ -20732,7 +25980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_upgrade",
@@ -20745,7 +25996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_choose",
@@ -20758,7 +26012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tip",
@@ -20771,7 +26028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tip_dropzone",
@@ -20784,7 +26044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_reforge_tip",
@@ -20797,7 +26060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tip",
@@ -20810,7 +26076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tip_dropzone",
@@ -20823,7 +26092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_recap",
@@ -20836,7 +26108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_pure_slorm",
@@ -20849,7 +26124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_recap",
@@ -20862,7 +26140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tt_normal",
@@ -20875,7 +26156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tt_magic",
@@ -20888,7 +26172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tt_rare",
@@ -20901,7 +26188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sell_tt_epic",
@@ -20914,7 +26204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_sales_tip",
@@ -20927,7 +26220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_lock_title",
@@ -20940,7 +26236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_lock",
@@ -20953,7 +26252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_lock_yes",
@@ -20966,7 +26268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_lock_no",
@@ -20979,7 +26284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_locked_item",
@@ -20992,7 +26300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_random_pack_tip",
@@ -21005,7 +26316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_random_epic_tip_title",
@@ -21018,7 +26332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "digger_random_epic_tip",
@@ -21031,7 +26348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tt_normal",
@@ -21044,7 +26364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tt_magic",
@@ -21057,7 +26380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tt_rare",
@@ -21070,7 +26396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_tt_epic",
@@ -21083,7 +26412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_recap_normal",
@@ -21096,7 +26428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_recap_magic",
@@ -21109,7 +26444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_recap_rare",
@@ -21122,7 +26460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_recap_epic",
@@ -21135,7 +26476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_salvage_total",
@@ -21148,7 +26492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_reroll_all",
@@ -21161,7 +26508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_l",
@@ -21174,7 +26524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_e",
@@ -21187,7 +26540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_r",
@@ -21200,7 +26556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_m",
@@ -21213,7 +26572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_n",
@@ -21226,7 +26588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_rp",
@@ -21239,7 +26604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_ma",
@@ -21252,7 +26620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_stats_at",
@@ -21265,7 +26636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_l",
@@ -21278,7 +26652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_e",
@@ -21291,7 +26668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_r",
@@ -21304,7 +26684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_m",
@@ -21317,7 +26700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_n",
@@ -21330,7 +26716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_rp",
@@ -21343,7 +26732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_ma",
@@ -21356,7 +26748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "rarity_recipe_scores_at",
@@ -21369,7 +26764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_pure_warning",
@@ -21382,7 +26780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_add",
@@ -21395,7 +26796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_reforge",
@@ -21408,7 +26812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_lock",
@@ -21421,7 +26828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_unlock",
@@ -21434,7 +26844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_extract",
@@ -21447,7 +26860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_update",
@@ -21460,7 +26876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_outcomes",
@@ -21473,7 +26892,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "blacksmith_woops",
+        "EN": "Whoops!",
+        "FR": "Oops !",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "craft_btn_1",
@@ -21486,7 +26924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "craft_max",
@@ -21499,7 +26940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buy_btn_1",
@@ -21512,7 +26956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "buy_all",
@@ -21525,7 +26972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_confirm",
@@ -21538,7 +26988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter",
@@ -21551,7 +27004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_help",
@@ -21564,7 +27020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_normal",
@@ -21577,7 +27036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_magic",
@@ -21590,7 +27052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_rare",
@@ -21603,7 +27068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_epic",
@@ -21616,7 +27084,26 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "blacksmith_filter_legendary",
+        "EN": "Hide {Legendary} Items",
+        "FR": "Cacher les objets {Légendaires}",
+        "CH": "隐藏{Legendary}物品",
+        "TW": "隱藏{Legendary}物品",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_unless",
@@ -21629,7 +27116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_pure",
@@ -21642,7 +27132,42 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "blacksmith_filter_pure_2",
+        "EN": "... that is also a {Highlighted Stat}",
+        "FR": "... qui est également une {Stat en Surbrillance}",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "blacksmith_filter_pure_3",
+        "EN": "... and has a {Perfect Score !!!}",
+        "FR": "... et avec un {Score Parfait !!!}",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_highlight",
@@ -21655,7 +27180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_filter_reinforce",
@@ -21668,7 +27196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert",
@@ -21681,7 +27212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert_choice_0",
@@ -21694,7 +27228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert_choice_1",
@@ -21707,7 +27244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert_choice_2",
@@ -21720,7 +27260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert_tooltip_title",
@@ -21733,7 +27276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "blacksmith_convert_tooltip",
@@ -21746,7 +27292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_filter_0",
@@ -21759,7 +27308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_filter_1",
@@ -21772,7 +27324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_filter_2",
@@ -21785,7 +27340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_filter_3",
@@ -21798,7 +27356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "inventory_filter_toggle",
@@ -21811,7 +27372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_empty_tip",
@@ -21824,7 +27388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_empty",
@@ -21837,7 +27404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_0",
@@ -21850,7 +27420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_1",
@@ -21863,7 +27436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_2",
@@ -21876,7 +27452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_3",
@@ -21889,7 +27468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_4",
@@ -21902,7 +27484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_5",
@@ -21915,7 +27500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_6",
@@ -21928,7 +27516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_7",
@@ -21941,7 +27532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_8",
@@ -21954,7 +27548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_9",
@@ -21967,7 +27564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_10",
@@ -21980,7 +27580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_11",
@@ -21993,7 +27596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_12",
@@ -22006,7 +27612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_13",
@@ -22019,7 +27628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "store_quote_14",
@@ -22032,7 +27644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_item",
@@ -22045,7 +27660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_slormite",
@@ -22058,7 +27676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_potential",
@@ -22071,7 +27692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_modifier",
@@ -22084,7 +27708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_critical_chance",
@@ -22097,7 +27724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_double_reinforce_chance",
@@ -22110,7 +27740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_failure_chance",
@@ -22123,7 +27756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_tt_total",
@@ -22136,7 +27772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_potential",
@@ -22149,7 +27788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_critical",
@@ -22162,7 +27804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_double_reinforce",
@@ -22175,7 +27820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_failure",
@@ -22188,7 +27836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_button",
@@ -22201,7 +27852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_result_reinforce",
@@ -22214,7 +27868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_result_failure",
@@ -22227,7 +27884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_result_critical",
@@ -22240,7 +27900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "crafter_result_double",
@@ -22253,7 +27916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_0",
@@ -22266,7 +27932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_1",
@@ -22279,7 +27948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_2",
@@ -22292,7 +27964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_3",
@@ -22305,7 +27980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_4",
@@ -22318,7 +27996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_5",
@@ -22331,7 +28012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_6",
@@ -22344,7 +28028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_7",
@@ -22357,7 +28044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_8",
@@ -22370,7 +28060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_0_tt",
@@ -22383,7 +28076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_1_tt",
@@ -22396,7 +28092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_4_tt",
@@ -22409,7 +28108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_5_tt",
@@ -22422,7 +28124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_6_tt",
@@ -22435,7 +28140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_7_tt",
@@ -22448,7 +28156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_upgrade_8_tt",
@@ -22461,7 +28172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_0",
@@ -22474,7 +28188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_1",
@@ -22487,7 +28204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_2",
@@ -22500,7 +28220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_desc_0",
@@ -22513,7 +28236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_desc_1",
@@ -22526,7 +28252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_desc_2",
@@ -22539,7 +28268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_purchase",
@@ -22552,7 +28284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_0_upgrade_1",
@@ -22565,7 +28300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_0_upgrade_2",
@@ -22578,7 +28316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_1_upgrade_1",
@@ -22591,7 +28332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_1_upgrade_2",
@@ -22604,7 +28348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_2_upgrade_1",
@@ -22617,7 +28364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_blessing_2_upgrade_2",
@@ -22630,7 +28380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_transfer_0",
@@ -22643,7 +28396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_transfer_1",
@@ -22656,7 +28412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_away_letter",
@@ -22669,7 +28428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_reaper_tip",
@@ -22682,7 +28444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_reaper_tip_done",
@@ -22695,7 +28460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mage_reaper_dialogue",
@@ -22708,7 +28476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reaper_dialogue",
@@ -22721,7 +28492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reaper_tip_top",
@@ -22734,7 +28508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reaper_tip",
@@ -22747,7 +28524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reaper_tip_primordial",
@@ -22760,7 +28540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_affinity_stats",
@@ -22773,7 +28556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_affinity_single",
@@ -22786,7 +28572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_affinity",
@@ -22799,7 +28588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_affinity_cory",
@@ -22812,7 +28604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "EXPEDITIONS/ENVIRONMENTS",
@@ -22825,7 +28620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_0",
@@ -22838,7 +28636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1",
@@ -22851,7 +28652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_2",
@@ -22864,7 +28668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3",
@@ -22877,7 +28684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_0",
@@ -22890,7 +28700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_1",
@@ -22903,7 +28716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_0_desc",
@@ -22916,7 +28732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_1_desc",
@@ -22929,7 +28748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher",
@@ -22942,7 +28764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_expedition_mode",
@@ -22955,7 +28780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_slormancer_wrath",
@@ -22968,7 +28796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_start",
@@ -22981,7 +28812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_hub",
@@ -22994,7 +28828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_0",
@@ -23007,7 +28844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_1",
@@ -23020,7 +28860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_2",
@@ -23033,7 +28876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_3",
@@ -23046,7 +28892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_4",
@@ -23059,7 +28908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_5",
@@ -23072,7 +28924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_6",
@@ -23085,7 +28940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_7",
@@ -23098,7 +28956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_8",
@@ -23111,7 +28972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_9",
@@ -23124,7 +28988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "demo_scourge",
@@ -23137,7 +29004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_menu",
@@ -23150,7 +29020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_perks",
@@ -23163,7 +29036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "expedition_total",
@@ -23176,7 +29052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "expedition_with",
@@ -23189,7 +29068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_enemy_unlock",
@@ -23202,7 +29084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "environment_enemy_everywhere",
@@ -23215,7 +29100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "calc_base",
@@ -23228,7 +29116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "calc_diff",
@@ -23241,7 +29132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_level",
@@ -23254,7 +29148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_match_level",
@@ -23267,7 +29164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_match_level_default",
@@ -23280,7 +29180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_or",
@@ -23293,7 +29196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_custom_level",
@@ -23306,7 +29212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_custom_level_advanced",
@@ -23319,7 +29228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_wrath_selected",
@@ -23332,7 +29244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_modifiers",
@@ -23345,7 +29260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_wrath",
@@ -23358,7 +29276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_at_wrath",
@@ -23371,7 +29292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_wrath_bonus",
@@ -23384,7 +29308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_wrath_malus",
@@ -23397,7 +29324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launcher_completed_at",
@@ -23410,7 +29340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "achievement_bonus",
@@ -23423,7 +29356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_rank",
@@ -23436,7 +29372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_rank_large",
@@ -23449,7 +29388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_rank_gain",
@@ -23462,7 +29404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_rank_new_perk",
@@ -23475,7 +29420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "influence_rank_tooltip",
@@ -23488,7 +29436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_win",
@@ -23501,7 +29452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_clear_floor",
@@ -23514,7 +29468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_battlefield_bonus",
@@ -23527,7 +29484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_lose",
@@ -23540,7 +29500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_leave",
@@ -23553,7 +29516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_reputation_win_tt",
@@ -23566,7 +29532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_reputation_lose_tt",
@@ -23579,7 +29548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_reputation_leave_tt",
@@ -23592,7 +29564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_0_tt",
@@ -23605,7 +29580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_0_tt_win",
@@ -23618,7 +29596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_tt",
@@ -23631,7 +29612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_tt_win",
@@ -23644,7 +29628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_perk_0",
@@ -23657,7 +29644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_perk_1",
@@ -23670,7 +29660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_perk_2",
@@ -23683,7 +29676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_perk_3",
@@ -23696,7 +29692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_1_perk_4",
@@ -23709,7 +29708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_2_tt",
@@ -23722,7 +29724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_2_tt_win",
@@ -23735,7 +29740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt",
@@ -23748,7 +29756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_floor",
@@ -23761,7 +29772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_floor_scourge_2",
@@ -23774,7 +29788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_floor_scourge_3",
@@ -23787,7 +29804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_ingame_floor",
@@ -23800,7 +29820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_ingame_floor_enemies",
@@ -23813,7 +29836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_ingame_floor_scourge_2",
@@ -23826,7 +29852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_ingame_floor_scourge_3",
@@ -23839,7 +29868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_mode_3_tt_win",
@@ -23852,7 +29884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_leave_victorious",
@@ -23865,7 +29900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "invasion_leave_sentence",
@@ -23878,7 +29916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_leave_sentence",
@@ -23891,7 +29932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_win",
@@ -23904,7 +29948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_dead",
@@ -23917,7 +29964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_leave",
@@ -23930,7 +29980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_expedition",
@@ -23943,7 +29996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "go_button",
@@ -23956,7 +30012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "wrath",
@@ -23969,7 +30028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "wrath_description_1",
@@ -23982,7 +30044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "wrath_description",
@@ -23995,7 +30060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "wrath_help_unlock",
@@ -24008,7 +30076,42 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "wrath_plus",
+        "EN": "Wrath 10 Plus",
+        "FR": "Colère 10 Plus",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
+    },
+    {
+        "REF": "wrath_plus_help",
+        "EN": "Wrath 10 can become even more challenging with Wrath Plus. You can increase the difficulty to take on an even greater challenge. However, the rewards will remain the same as Wrath Level 10.",
+        "FR": "Le Niveau de Colère 10 peut devenir encore plus difficile avec le Niveau de Colère 10 Plus. Vous pouvez augmenter la difficulté afin de vous mesurer à un challenge encore plus grand. Toutefois, les récompenses gagnées restent identiques au Niveau de Colère 10.",
+        "CH": "",
+        "TW": "",
+        "JP": "",
+        "DE": "",
+        "ES": "",
+        "IT": "",
+        "RU": "",
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "first_invasion",
@@ -24021,7 +30124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cataclysms",
@@ -24034,7 +30140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "breach_count",
@@ -24047,7 +30156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "breach_count_tt",
@@ -24060,7 +30172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "floor_modifier",
@@ -24073,7 +30188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "floor_at",
@@ -24086,7 +30204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "floor",
@@ -24099,7 +30220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "floors",
@@ -24112,7 +30236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "reputation",
@@ -24125,7 +30252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_slorm_reaped",
@@ -24138,7 +30268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_experience",
@@ -24151,7 +30284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_goldus",
@@ -24164,7 +30300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_reputation",
@@ -24177,7 +30316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_reputation_lost",
@@ -24190,7 +30332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_enemy_level",
@@ -24203,7 +30348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_invasion_reward",
@@ -24216,7 +30364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_invasion_reward_spirit",
@@ -24229,7 +30380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_invasion_reward_other",
@@ -24242,7 +30396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_time",
@@ -24255,7 +30412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_floor",
@@ -24268,7 +30428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_floors",
@@ -24281,7 +30444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_breach",
@@ -24294,7 +30460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_cataclysms",
@@ -24307,7 +30476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_total_enemies",
@@ -24320,7 +30492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_elite",
@@ -24333,7 +30508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_boss",
@@ -24346,7 +30524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_total_taken",
@@ -24359,7 +30540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_highest_taken",
@@ -24372,7 +30556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_total_dealt",
@@ -24385,7 +30572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_average_dps",
@@ -24398,7 +30588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_max_combo",
@@ -24411,7 +30604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_highest_damage",
@@ -24424,7 +30620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_critical",
@@ -24437,7 +30636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_ancestral",
@@ -24450,7 +30652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_highest_critical",
@@ -24463,7 +30668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_highest_ancestral",
@@ -24476,7 +30684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_primary_casts",
@@ -24489,7 +30700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_secondary_casts",
@@ -24502,7 +30716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_support_casts",
@@ -24515,7 +30732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_items_found",
@@ -24528,7 +30748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_slormites_found",
@@ -24541,7 +30764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_accuracy",
@@ -24554,7 +30780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_button_leave",
@@ -24567,7 +30796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_graves_destroyed",
@@ -24580,7 +30812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_buckets_spilled",
@@ -24593,7 +30828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_books_destroyed",
@@ -24606,7 +30844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_flasks_destroyed",
@@ -24619,7 +30860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_flowers_cut",
@@ -24632,7 +30876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_furnitures",
@@ -24645,7 +30892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "end_run_breaches",
@@ -24658,7 +30908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launch_mode_0",
@@ -24671,7 +30924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_0_short",
@@ -24684,7 +30940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_0_long",
@@ -24697,7 +30956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_0_objective",
@@ -24710,7 +30972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_no_penalty",
@@ -24723,7 +30988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_no_reward_defeat",
@@ -24736,7 +31004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_floors_infinite",
@@ -24749,7 +31020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_leave_when",
@@ -24762,7 +31036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_wrath_custom",
@@ -24775,7 +31052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_cataclysms_available",
@@ -24788,7 +31068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards",
@@ -24801,7 +31084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_breach",
@@ -24814,7 +31100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_cataclysms",
@@ -24827,7 +31116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_wrath_choice_title",
@@ -24840,7 +31132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_wrath_choice_desc",
@@ -24853,7 +31148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_wrath_lock_title",
@@ -24866,7 +31164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_wrath_lock_desc",
@@ -24879,7 +31180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_adventure_choice_title",
@@ -24892,7 +31196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_cataclysm_choice_title",
@@ -24905,7 +31212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_cataclysm_choice_desc",
@@ -24918,7 +31228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launch_mode_1",
@@ -24931,7 +31244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launch_mode_1_p",
@@ -24944,7 +31260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_normal",
@@ -24957,7 +31276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_primordial",
@@ -24970,7 +31292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_short",
@@ -24983,7 +31308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_long",
@@ -24996,7 +31324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_objective",
@@ -25009,7 +31340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_goal",
@@ -25022,7 +31356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_goal_2",
@@ -25035,7 +31372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_wrath_not_custom",
@@ -25048,7 +31388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_cataclysms_not_custom",
@@ -25061,7 +31404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_floor_first",
@@ -25074,7 +31420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_floor_next",
@@ -25087,7 +31436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_this",
@@ -25100,7 +31452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_floor_choice_title",
@@ -25113,7 +31468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_floor_choice_desc",
@@ -25126,7 +31484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_objective_slorm",
@@ -25139,7 +31500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_objective_slorm_short",
@@ -25152,7 +31516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_choice_title",
@@ -25165,7 +31532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_choice_desc",
@@ -25178,7 +31548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_penalty",
@@ -25191,7 +31564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_modal",
@@ -25204,7 +31580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_modal_p",
@@ -25217,7 +31596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_button",
@@ -25230,7 +31612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_floor_complete",
@@ -25243,7 +31628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_floor_incomplete",
@@ -25256,7 +31644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_floor_corrupted_cost",
@@ -25269,7 +31660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_highest",
@@ -25282,7 +31676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_count",
@@ -25295,7 +31692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_ultimatum_unknown",
@@ -25308,7 +31708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_ultimatum_unknown_tt",
@@ -25321,7 +31724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_keeper_unknown",
@@ -25334,7 +31740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_1_keeper_unknown_tt",
@@ -25347,7 +31756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_count_tt",
@@ -25360,7 +31772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launch_mode_2",
@@ -25373,7 +31788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_2_short",
@@ -25386,7 +31804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_2_long",
@@ -25399,7 +31820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_2_objective",
@@ -25412,7 +31836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_waves_infinite",
@@ -25425,7 +31852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_waves_last",
@@ -25438,7 +31868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_no_loot",
@@ -25451,7 +31884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_not_loot_tt",
@@ -25464,7 +31900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_fill_warchest",
@@ -25477,7 +31916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_rewards_challenges",
@@ -25490,7 +31932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_choice_title_forge",
@@ -25503,7 +31948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_mode_collect_choice_desc_forge",
@@ -25516,7 +31964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_objective",
@@ -25529,7 +31980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_objective_tt",
@@ -25542,7 +31996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "wave",
@@ -25555,7 +32012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "waves",
@@ -25568,7 +32028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_wave_button",
@@ -25581,7 +32044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_wave_rest",
@@ -25594,7 +32060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_wave_rest_chest",
@@ -25607,7 +32076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_choice",
@@ -25620,7 +32092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_choice_curse",
@@ -25633,7 +32108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_0",
@@ -25646,7 +32124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_1",
@@ -25659,7 +32140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_2",
@@ -25672,7 +32156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_3",
@@ -25685,7 +32172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_4",
@@ -25698,7 +32188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chall_rarity_5",
@@ -25711,7 +32204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_duration_base",
@@ -25724,7 +32220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_duration_0",
@@ -25737,7 +32236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_duration_1",
@@ -25750,7 +32252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest",
@@ -25763,7 +32268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_open",
@@ -25776,7 +32284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_open_tt",
@@ -25789,7 +32300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_open_when",
@@ -25802,7 +32316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_open_fight",
@@ -25815,7 +32332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_quality",
@@ -25828,7 +32348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_quantity",
@@ -25841,7 +32364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_quantity_tt",
@@ -25854,7 +32380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_quantity_tt_hide",
@@ -25867,7 +32396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_chest_quality_tt",
@@ -25880,7 +32412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_1",
@@ -25893,7 +32428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_2",
@@ -25906,7 +32444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_3",
@@ -25919,7 +32460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_4",
@@ -25932,7 +32476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_1_reward",
@@ -25945,7 +32492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_2_reward",
@@ -25958,7 +32508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_3_reward",
@@ -25971,7 +32524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_4_reward",
@@ -25984,7 +32540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_5_reward",
@@ -25997,7 +32556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_6_reward",
@@ -26010,7 +32572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_1_tt",
@@ -26023,7 +32588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_2_tt",
@@ -26036,7 +32604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_3_tt",
@@ -26049,7 +32620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_4_tt",
@@ -26062,7 +32636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_5_tt",
@@ -26075,7 +32652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_random_6_tt",
@@ -26088,7 +32668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_tooltip_war_chest",
@@ -26101,7 +32684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_tooltip_duration",
@@ -26114,7 +32700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_tooltip",
@@ -26127,7 +32716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_special_reward",
@@ -26140,7 +32732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_special_reward_tooltip",
@@ -26153,7 +32748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_obelisk_reward",
@@ -26166,7 +32764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_check_condition_valid",
@@ -26179,7 +32780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_check_condition_invalid",
@@ -26192,7 +32796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_reward_check_value",
@@ -26205,7 +32812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_boss_challenge",
@@ -26218,7 +32828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "forge_boss_challenge_help",
@@ -26231,7 +32844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tooltip_forge_final_wave",
@@ -26244,7 +32860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "run_launch_mode_3",
@@ -26257,7 +32876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_title",
@@ -26270,7 +32892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_part",
@@ -26283,7 +32908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_title_1",
@@ -26296,7 +32924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_title_2",
@@ -26309,7 +32940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_title_3",
@@ -26322,7 +32956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_reward",
@@ -26335,7 +32972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_0",
@@ -26348,7 +32988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_1",
@@ -26361,7 +33004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_2",
@@ -26374,7 +33020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_3",
@@ -26387,7 +33036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_4",
@@ -26400,7 +33052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_5",
@@ -26413,7 +33068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_6",
@@ -26426,7 +33084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_7",
@@ -26439,7 +33100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_7a",
@@ -26452,7 +33116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_8",
@@ -26465,7 +33132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_8a",
@@ -26478,7 +33148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_9",
@@ -26491,7 +33164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_9a",
@@ -26504,7 +33180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_10",
@@ -26517,7 +33196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_objective_11",
@@ -26530,7 +33212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_locked",
@@ -26543,7 +33228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_locked_part",
@@ -26556,7 +33244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trials_warlords_soon",
@@ -26569,7 +33260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "corrupted_slorm",
@@ -26582,7 +33276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "corrupted_slorm_gain",
@@ -26595,7 +33292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "corrupted_slorm_tt",
@@ -26608,7 +33308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "corrupted_slorm_not_enough",
@@ -26621,7 +33324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "pure_slorm",
@@ -26634,7 +33340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "pure_slorm_tt",
@@ -26647,7 +33356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "pure_slorm_menu",
@@ -26660,7 +33372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "pure_slorm_manipulate_temple",
@@ -26673,7 +33388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ray_0",
@@ -26686,7 +33404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ray_1",
@@ -26699,7 +33420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ray_2",
@@ -26712,7 +33436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ray_3",
@@ -26725,7 +33452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ground_0",
@@ -26738,7 +33468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ground_1",
@@ -26751,7 +33484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_ground_2",
@@ -26764,7 +33500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_cube_0",
@@ -26777,7 +33516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_cube_1",
@@ -26790,7 +33532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation_cube_2",
@@ -26803,7 +33548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trap_activation",
@@ -26816,7 +33564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_activation_title",
@@ -26829,7 +33580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_activation_subtitle",
@@ -26842,7 +33596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_guardian_title",
@@ -26855,7 +33612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_guardian_subtitle",
@@ -26868,7 +33628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_intensity_title",
@@ -26881,7 +33644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "temple_intensity_subtitle",
@@ -26894,7 +33660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "chaos_wave",
@@ -26907,7 +33676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cataclysm_title",
@@ -26920,7 +33692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cataclysm_breach_title",
@@ -26933,7 +33708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cataclysmic_breach_inactive_title",
@@ -26946,7 +33724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "cataclysm_breach_left",
@@ -26959,7 +33740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "breach_exaltation_time",
@@ -26972,7 +33756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "PROFILE",
@@ -26985,7 +33772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_heroes",
@@ -26998,7 +33788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_reputation",
@@ -27011,7 +33804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_achievements",
@@ -27024,7 +33820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_apocalypses",
@@ -27037,7 +33836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_reapers",
@@ -27050,7 +33852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_progress",
@@ -27063,7 +33868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_play_time",
@@ -27076,7 +33884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_invasion_victories",
@@ -27089,7 +33900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_cataclysms_found",
@@ -27102,7 +33916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_apocalypse_victories",
@@ -27115,7 +33932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_legendaries",
@@ -27128,7 +33948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_seal_state",
@@ -27141,7 +33964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_reputation_state",
@@ -27154,11 +33980,14 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_1",
-        "EN": "A dead weight",
+        "EN": "A Dead Weight",
         "FR": "Un Poids Mort",
         "CH": "一个累赘",
         "TW": "一個累贅",
@@ -27167,7 +33996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_2",
@@ -27180,7 +34012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_3",
@@ -27193,7 +34028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_4",
@@ -27206,7 +34044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_5",
@@ -27219,7 +34060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_6",
@@ -27232,7 +34076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_7",
@@ -27245,7 +34092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_8",
@@ -27258,7 +34108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_9",
@@ -27271,7 +34124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_10",
@@ -27284,7 +34140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_11",
@@ -27297,7 +34156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_12",
@@ -27310,7 +34172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_13",
@@ -27323,7 +34188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_14",
@@ -27336,7 +34204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_15",
@@ -27349,7 +34220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_16",
@@ -27362,7 +34236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_17",
@@ -27375,7 +34252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_18",
@@ -27388,7 +34268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_19",
@@ -27401,7 +34284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_20",
@@ -27414,7 +34300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_21",
@@ -27427,7 +34316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_22",
@@ -27440,7 +34332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_23",
@@ -27453,7 +34348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_24",
@@ -27466,7 +34364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "title_rep_25",
@@ -27479,7 +34380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "seal_name",
@@ -27492,7 +34396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "seal_brake_string",
@@ -27505,7 +34412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "seal_brake_state_default",
@@ -27518,7 +34428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_title_0",
@@ -27531,7 +34444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_sub_0",
@@ -27544,7 +34460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_title_1",
@@ -27557,7 +34476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_sub_1",
@@ -27570,7 +34492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_sub_2",
@@ -27583,7 +34508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_0_0",
@@ -27596,7 +34524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_0_1",
@@ -27609,7 +34540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_0_2",
@@ -27622,7 +34556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_1_0",
@@ -27635,7 +34572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_1_1",
@@ -27648,7 +34588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_goal_1_2",
@@ -27661,7 +34604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_title_3",
@@ -27674,7 +34620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "profile_sub_3",
@@ -27687,7 +34636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "LOADING",
@@ -27700,7 +34652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_fonts",
@@ -27713,7 +34668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_0_0",
@@ -27726,7 +34684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_0_1",
@@ -27739,7 +34700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_0_2",
@@ -27752,7 +34716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_1_0",
@@ -27765,7 +34732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_1_1",
@@ -27778,7 +34748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_1_2",
@@ -27791,7 +34764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_2_0",
@@ -27804,7 +34780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_2_1",
@@ -27817,7 +34796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_2_2",
@@ -27830,7 +34812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_3_0",
@@ -27843,7 +34828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_3_1",
@@ -27856,7 +34844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_3_2",
@@ -27869,7 +34860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_4_0",
@@ -27882,7 +34876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_4_1",
@@ -27895,7 +34892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_4_2",
@@ -27908,7 +34908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_8_0",
@@ -27921,7 +34924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_8_1",
@@ -27934,7 +34940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_8_2",
@@ -27947,7 +34956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_9_0",
@@ -27960,7 +34972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_9_1",
@@ -27973,7 +34988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "loading_environment_9_2",
@@ -27986,7 +35004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_tip",
@@ -27999,7 +35020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_0",
@@ -28012,7 +35036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_1",
@@ -28025,7 +35052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_2",
@@ -28038,7 +35068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_3",
@@ -28051,7 +35084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_4",
@@ -28064,7 +35100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_5",
@@ -28077,7 +35116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_6",
@@ -28090,7 +35132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_7",
@@ -28103,7 +35148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_8",
@@ -28116,7 +35164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_9",
@@ -28129,7 +35180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_10",
@@ -28142,7 +35196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_11",
@@ -28155,7 +35212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_12",
@@ -28168,7 +35228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "tip_13",
@@ -28181,7 +35244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "CHARACTER TRAITS",
@@ -28194,7 +35260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_menu",
@@ -28207,7 +35276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_left",
@@ -28220,7 +35292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_default",
@@ -28233,7 +35308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_minor",
@@ -28246,7 +35324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_major",
@@ -28259,7 +35340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_greater",
@@ -28272,7 +35356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_recap",
@@ -28285,7 +35372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_recurring",
@@ -28298,7 +35388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_recurring_definition",
@@ -28311,7 +35404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_recap_max",
@@ -28324,7 +35420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_add_point",
@@ -28337,7 +35436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_remove_point",
@@ -28350,7 +35452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_shift_add",
@@ -28363,7 +35468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_shift_remove",
@@ -28376,7 +35484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_remove_controller",
@@ -28389,7 +35500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_add_controller",
@@ -28402,7 +35516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_remove_controller_extra",
@@ -28415,7 +35532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_level",
@@ -28428,7 +35548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_locked",
@@ -28441,7 +35564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "trait_recap_all",
@@ -28454,7 +35580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_0",
@@ -28467,7 +35596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_1",
@@ -28480,7 +35612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_2",
@@ -28493,7 +35628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_3",
@@ -28506,7 +35644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_4",
@@ -28519,7 +35660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_5",
@@ -28532,7 +35676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_6",
@@ -28545,7 +35692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "character_trait_7",
@@ -28558,7 +35708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "MISSIONS",
@@ -28571,7 +35724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_progress",
@@ -28584,7 +35740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective",
@@ -28597,7 +35756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_completed",
@@ -28610,7 +35772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_rule",
@@ -28623,7 +35788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_level",
@@ -28636,7 +35804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_bonus",
@@ -28649,7 +35820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_scale_to_level_tt",
@@ -28662,7 +35836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_single_class",
@@ -28675,7 +35852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_breach",
@@ -28688,7 +35868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_breaches",
@@ -28701,7 +35884,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_enemies",
@@ -28714,7 +35900,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_leave",
@@ -28727,7 +35916,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_exit",
@@ -28740,7 +35932,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_find",
@@ -28753,7 +35948,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_waves",
@@ -28766,7 +35964,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_boss",
@@ -28779,7 +35980,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_bonus_breakables",
@@ -28792,7 +35996,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_escort",
@@ -28805,7 +36012,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_lever",
@@ -28818,7 +36028,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_named",
@@ -28831,7 +36044,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_objective_emblem",
@@ -28844,7 +36060,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_boss_forge",
@@ -28857,7 +36076,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_forge_superwave",
@@ -28870,7 +36092,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_wave_message",
@@ -28883,7 +36108,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "mission_wave_submessage",
@@ -28896,7 +36124,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_6",
@@ -28909,7 +36140,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_19",
@@ -28922,7 +36156,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_2",
@@ -28935,7 +36172,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_14",
@@ -28948,7 +36188,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_15",
@@ -28961,7 +36204,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_27",
@@ -28974,7 +36220,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_34",
@@ -28987,7 +36236,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_40",
@@ -29000,7 +36252,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_40_p2",
@@ -29013,7 +36268,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_41",
@@ -29026,7 +36284,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "boss_name_29",
@@ -29039,7 +36300,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_7_5",
@@ -29052,7 +36316,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_11_14",
@@ -29065,7 +36332,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_15_3",
@@ -29078,7 +36348,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_19_6",
@@ -29091,7 +36364,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_20_1",
@@ -29104,7 +36380,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_21_18",
@@ -29117,7 +36396,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_22_3",
@@ -29130,7 +36412,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_22_4",
@@ -29143,7 +36428,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_22_4_1",
@@ -29156,7 +36444,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_23_18",
@@ -29169,7 +36460,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_23_5",
@@ -29182,7 +36476,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_23_5_1",
@@ -29195,7 +36492,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_26_16",
@@ -29208,7 +36508,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_17",
@@ -29221,7 +36524,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_15",
@@ -29234,7 +36540,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_10",
@@ -29247,7 +36556,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_7",
@@ -29260,7 +36572,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_4",
@@ -29273,7 +36588,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_1",
@@ -29286,7 +36604,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_27_3",
@@ -29299,7 +36620,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_28_2",
@@ -29312,7 +36636,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_28_2_1",
@@ -29325,7 +36652,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_28_2_2",
@@ -29338,7 +36668,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_28_2_3",
@@ -29351,7 +36684,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_30_23",
@@ -29364,7 +36700,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_30_24",
@@ -29377,7 +36716,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_31_10",
@@ -29390,7 +36732,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_33_25",
@@ -29403,7 +36748,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_34_9",
@@ -29416,7 +36764,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_36_6",
@@ -29429,7 +36780,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_36_6_1",
@@ -29442,7 +36796,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_36_6_2",
@@ -29455,7 +36812,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_38_33",
@@ -29468,7 +36828,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_39_32",
@@ -29481,7 +36844,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_40_8_1",
@@ -29494,7 +36860,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_40_8_2",
@@ -29507,7 +36876,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_44_31",
@@ -29520,7 +36892,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_45_11",
@@ -29533,7 +36908,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_50_37",
@@ -29546,7 +36924,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_50_38",
@@ -29559,7 +36940,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_50_39",
@@ -29572,7 +36956,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_50_36",
@@ -29585,7 +36972,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_name_50_11",
@@ -29598,7 +36988,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_school_name_0",
@@ -29611,7 +37004,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_school_name_1",
@@ -29624,7 +37020,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_school_name_2",
@@ -29637,7 +37036,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "story_school_name_3",
@@ -29650,7 +37052,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ULTIMATUMS",
@@ -29663,7 +37068,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "upgrade_verb",
@@ -29676,7 +37084,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_bonus",
@@ -29689,7 +37100,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_malus",
@@ -29702,7 +37116,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_0",
@@ -29715,7 +37132,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_1",
@@ -29728,7 +37148,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_2",
@@ -29741,7 +37164,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_3",
@@ -29754,7 +37180,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_4",
@@ -29767,7 +37196,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_5",
@@ -29780,7 +37212,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_6",
@@ -29793,7 +37228,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_7",
@@ -29806,7 +37244,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_8",
@@ -29819,7 +37260,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_9",
@@ -29832,7 +37276,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_10",
@@ -29845,7 +37292,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_11",
@@ -29858,7 +37308,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_12",
@@ -29871,7 +37324,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_13",
@@ -29884,7 +37340,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_14",
@@ -29897,7 +37356,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_tt",
@@ -29910,7 +37372,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_tt_help",
@@ -29923,7 +37388,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "ultimatum_tt_help_ext",
@@ -29936,7 +37404,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_0",
@@ -29949,7 +37420,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_1",
@@ -29962,7 +37436,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_2",
@@ -29975,7 +37452,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_3",
@@ -29988,7 +37468,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_4",
@@ -30001,7 +37484,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_5",
@@ -30014,7 +37500,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_6",
@@ -30027,7 +37516,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_7",
@@ -30040,7 +37532,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_8",
@@ -30053,7 +37548,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_9",
@@ -30066,7 +37564,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_10",
@@ -30079,7 +37580,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_11",
@@ -30092,7 +37596,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_12",
@@ -30105,7 +37612,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_13",
@@ -30118,7 +37628,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_14",
@@ -30131,7 +37644,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_15",
@@ -30144,7 +37660,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_16",
@@ -30157,7 +37676,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_17",
@@ -30170,7 +37692,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_18",
@@ -30183,7 +37708,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_19",
@@ -30196,7 +37724,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_20",
@@ -30209,7 +37740,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_21",
@@ -30222,7 +37756,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_22",
@@ -30235,7 +37772,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_23",
@@ -30248,7 +37788,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_24",
@@ -30261,7 +37804,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_25",
@@ -30274,7 +37820,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_26",
@@ -30287,7 +37836,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_27",
@@ -30300,7 +37852,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_28",
@@ -30313,7 +37868,10 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     },
     {
         "REF": "elite_affix_29",
@@ -30326,6 +37884,9 @@ export const GAME_DATA_TRANSLATION = [
         "ES": "",
         "IT": "",
         "RU": "",
-        "PT": ""
+        "PT": "",
+        "PO": "",
+        "KR": "",
+        "TUR": ""
     }
 ]

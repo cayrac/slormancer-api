@@ -1,4 +1,7 @@
-export const GAME_DATA_STAT = [{
+import { GameDataStat } from '../../../../model/content/game/data/game-data-stat';
+
+export const GAME_DATA_STAT: GameDataStat[] = [
+    {
         "REF_NB": 0,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "atk_phy",
@@ -15,7 +18,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "175",
+        "LVL 80 Avg": "350",
+        "LVL 80 Max": "976,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 1,
@@ -34,15 +43,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 2,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "atk_mag",
         "REF": "min_elemental_damage_add",
-        "SCORE": 14,
-        "MIN_LEVEL": 10,
+        "SCORE": 7,
+        "MIN_LEVEL": 5,
         "PERCENT": "",
         "HELM": "P",
         "ARMOR": "P",
@@ -53,7 +68,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "175",
+        "LVL 80 Avg": "350",
+        "LVL 80 Max": "976,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 3,
@@ -61,7 +82,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "atk_mag",
         "REF": "elemental_damage_percent",
         "SCORE": 5,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -72,26 +93,63 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
-        "REF_NB": 4,
+        "REF_NB": 91,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "cdr",
-        "REF": "cooldown_reduction_global_mult",
-        "SCORE": 15,
-        "MIN_LEVEL": 1,
+        "REF": "attack_speed_global_mult",
+        "SCORE": 12,
+        "MIN_LEVEL": 5,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
         "BELT": "E",
         "BRACER": "P",
         "GLOVE": "P",
+        "SHOULDER": "S",
+        "BOOT": "S",
+        "RING": "",
+        "AMULET": "",
+        "CAPE": "P",
+        "LVL 80": "12%",
+        "LVL 80 Avg": "24%",
+        "LVL 80 Max": "54%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
+    },
+    {
+        "REF_NB": 4,
+        "CATEGORY": "attack",
+        "PRIMARY_NAME_TYPE": "cdr",
+        "REF": "cooldown_reduction_global_mult",
+        "SCORE": 7,
+        "MIN_LEVEL": 1,
+        "PERCENT": "%",
+        "HELM": "",
+        "ARMOR": "",
+        "BELT": "E",
+        "BRACER": "S",
+        "GLOVE": "P",
         "SHOULDER": "P",
         "BOOT": "",
-        "RING": "S",
+        "RING": "E",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "7%",
+        "LVL 80 Avg": "14%",
+        "LVL 80 Max": "32%",
+        "NERF TEST": 7,
+        "NLVL 80": "7%",
+        "NLVL 80 Max": "32%"
     },
     {
         "REF_NB": 5,
@@ -110,14 +168,20 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "S",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 6,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "crit",
         "REF": "crit_damage_percent",
-        "SCORE": 30,
+        "SCORE": 15,
         "MIN_LEVEL": 1,
         "PERCENT": "%",
         "HELM": "",
@@ -129,7 +193,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "S",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": 15,
+        "NLVL 80": "15%",
+        "NLVL 80 Max": "68%"
     },
     {
         "REF_NB": 7,
@@ -137,7 +207,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "crit",
         "REF": "brut_chance_percent",
         "SCORE": 5,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "",
@@ -148,15 +218,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "S",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 8,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "crit",
         "REF": "brut_damage_percent",
-        "SCORE": 50,
-        "MIN_LEVEL": 25,
+        "SCORE": 45,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "",
@@ -167,7 +243,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "S",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "45%",
+        "LVL 80 Avg": "90%",
+        "LVL 80 Max": "203%",
+        "NERF TEST": 45,
+        "NLVL 80": "45%",
+        "NLVL 80 Max": "203%"
     },
     {
         "REF_NB": 9,
@@ -175,7 +257,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "armor_penetration_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "S",
@@ -186,7 +268,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "S",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 10,
@@ -194,7 +282,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "elemental_penetration_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -205,7 +293,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "S",
         "AMULET": "E",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 11,
@@ -213,7 +307,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "increased_damage_on_elite_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "",
@@ -224,7 +318,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 12,
@@ -232,7 +332,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "dot",
         "REF": "dot_increased_damage_percent",
         "SCORE": 20,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -243,7 +343,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "P",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 13,
@@ -262,7 +368,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "500",
+        "LVL 80 Avg": "1000",
+        "LVL 80 Max": "2250",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 14,
@@ -270,7 +382,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "def_phy",
         "REF": "res_phy_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "P",
@@ -281,7 +393,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 15,
@@ -300,7 +418,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "375",
+        "LVL 80 Avg": "750",
+        "LVL 80 Max": "1687,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 16,
@@ -308,7 +432,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "def_mag",
         "REF": "res_mag_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "P",
@@ -319,7 +443,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 17,
@@ -338,7 +468,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "525",
+        "LVL 80 Avg": "1050",
+        "LVL 80 Max": "2362,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 18,
@@ -346,7 +482,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "def_dodge",
         "REF": "dodge_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "P",
@@ -357,14 +493,20 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 19,
         "CATEGORY": "defense",
         "PRIMARY_NAME_TYPE": "ret",
         "REF": "thorns_add",
-        "SCORE": 7,
+        "SCORE": 9,
         "MIN_LEVEL": 1,
         "PERCENT": "",
         "HELM": "P",
@@ -376,7 +518,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "S",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "225",
+        "LVL 80 Avg": "450",
+        "LVL 80 Max": "1012,5",
+        "NERF TEST": 9,
+        "NLVL 80": "225",
+        "NLVL 80 Max": "1012,5"
     },
     {
         "REF_NB": 20,
@@ -384,7 +532,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "ret",
         "REF": "thorns_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -395,7 +543,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "S",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 21,
@@ -403,7 +557,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "ret",
         "REF": "retaliate_percent",
         "SCORE": 60,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "S",
@@ -414,7 +568,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "60%",
+        "LVL 80 Avg": "120%",
+        "LVL 80 Max": "270%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 22,
@@ -422,7 +582,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "reduced_damage_on_elite_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 20,
+        "MIN_LEVEL": 10,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -433,7 +593,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "S",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 23,
@@ -441,7 +607,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "reduced_damage_from_melee_percent",
         "SCORE": 7.5,
-        "MIN_LEVEL": 20,
+        "MIN_LEVEL": 10,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -452,7 +618,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "45419%",
+        "LVL 80 Avg": "90838%",
+        "LVL 80 Max": "204386%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 24,
@@ -460,7 +632,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "reduced_damage_from_projectile_percent",
         "SCORE": 7.5,
-        "MIN_LEVEL": 20,
+        "MIN_LEVEL": 10,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -471,7 +643,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "S",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "45419%",
+        "LVL 80 Avg": "90838%",
+        "LVL 80 Max": "204386%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 25,
@@ -479,7 +657,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "reduced_damage_from_area_percent",
         "SCORE": 7.5,
-        "MIN_LEVEL": 20,
+        "MIN_LEVEL": 10,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "S",
@@ -490,7 +668,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "S",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "45419%",
+        "LVL 80 Avg": "90838%",
+        "LVL 80 Max": "204386%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 26,
@@ -498,7 +682,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "tenacity_percent",
         "SCORE": 20,
-        "MIN_LEVEL": 18,
+        "MIN_LEVEL": 9,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -509,7 +693,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 27,
@@ -517,7 +707,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "fire_resistance_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -528,7 +718,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 28,
@@ -536,7 +732,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "ice_resistance_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -547,7 +743,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 29,
@@ -555,7 +757,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "lightning_resistance_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -566,7 +768,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 88,
@@ -574,7 +782,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "light_resistance_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -585,7 +793,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 89,
@@ -593,7 +807,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "shadow_resistance_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -604,7 +818,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 30,
@@ -623,7 +843,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 31,
@@ -642,7 +868,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "850",
+        "LVL 80 Avg": "1700",
+        "LVL 80 Max": "3825",
+        "NERF TEST": 25,
+        "NLVL 80": "625",
+        "NLVL 80 Max": "2812,5"
     },
     {
         "REF_NB": 32,
@@ -650,7 +882,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "life",
         "REF": "the_max_health_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -661,7 +893,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 33,
@@ -680,7 +918,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "150",
+        "LVL 80 Avg": "300",
+        "LVL 80 Max": "675",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 34,
@@ -688,7 +932,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "health_regen_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "S",
@@ -699,7 +943,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 35,
@@ -718,7 +968,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "E",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "1%",
+        "LVL 80 Avg": "2%",
+        "LVL 80 Max": "5%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 36,
@@ -726,7 +982,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "health_on_hit_add",
         "SCORE": 3,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "",
         "HELM": "S",
         "ARMOR": "S",
@@ -737,7 +993,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "75",
+        "LVL 80 Avg": "150",
+        "LVL 80 Max": "337,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 37,
@@ -745,7 +1007,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "health_on_hit_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -756,7 +1018,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 38,
@@ -764,7 +1032,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "health_on_kill_add",
         "SCORE": 8,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "",
         "HELM": "",
         "ARMOR": "S",
@@ -775,7 +1043,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "200",
+        "LVL 80 Avg": "400",
+        "LVL 80 Max": "900",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 39,
@@ -783,7 +1057,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "health_on_kill_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -794,7 +1068,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 40,
@@ -813,7 +1093,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "P",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "1150",
+        "LVL 80 Avg": "2300",
+        "LVL 80 Max": "5175",
+        "NERF TEST": 32,
+        "NLVL 80": "800",
+        "NLVL 80 Max": "3600"
     },
     {
         "REF_NB": 41,
@@ -821,7 +1107,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "mana",
         "REF": "the_max_mana_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -832,7 +1118,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 42,
@@ -851,7 +1143,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "P",
         "AMULET": "P",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "150",
+        "LVL 80 Avg": "300",
+        "LVL 80 Max": "675",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 43,
@@ -859,7 +1157,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "mana_regen_percent",
         "SCORE": 20,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -870,7 +1168,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 44,
@@ -889,7 +1193,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "E",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "1%",
+        "LVL 80 Avg": "2%",
+        "LVL 80 Max": "5%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 45,
@@ -897,7 +1207,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "mana_on_hit_add",
         "SCORE": 3,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "",
         "HELM": "S",
         "ARMOR": "S",
@@ -908,7 +1218,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "75",
+        "LVL 80 Avg": "150",
+        "LVL 80 Max": "337,5",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 46,
@@ -916,7 +1232,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "mana_on_hit_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -927,7 +1243,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 47,
@@ -935,7 +1257,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "mana_on_kill_add",
         "SCORE": 8,
-        "MIN_LEVEL": 10,
+        "MIN_LEVEL": 5,
         "PERCENT": "",
         "HELM": "S",
         "ARMOR": "",
@@ -946,7 +1268,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "200",
+        "LVL 80 Avg": "400",
+        "LVL 80 Max": "900",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 48,
@@ -954,7 +1282,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "mana_on_kill_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 24,
+        "MIN_LEVEL": 12,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -965,7 +1293,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 49,
@@ -984,7 +1318,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "P",
         "AMULET": "",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 50,
@@ -1003,7 +1343,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "P",
         "AMULET": "",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 51,
@@ -1022,7 +1368,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 52,
@@ -1030,7 +1382,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "adventure",
         "REF": "mf_find_percent",
         "SCORE": 5,
-        "MIN_LEVEL": 40,
+        "MIN_LEVEL": 20,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1041,7 +1393,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "P",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 53,
@@ -1049,7 +1407,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "adventure",
         "REF": "mf_qual_percent",
         "SCORE": 5,
-        "MIN_LEVEL": 40,
+        "MIN_LEVEL": 20,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1060,7 +1418,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "P",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 54,
@@ -1068,7 +1432,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "adventure",
         "REF": "scrap_find_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 40,
+        "MIN_LEVEL": 20,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1079,7 +1443,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 55,
@@ -1087,7 +1457,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "slormite_find_percent",
         "SCORE": 0,
-        "MIN_LEVEL": 40,
+        "MIN_LEVEL": 20,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1098,7 +1468,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 56,
@@ -1106,7 +1482,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "slormeline_find_percent",
         "SCORE": 0,
-        "MIN_LEVEL": 40,
+        "MIN_LEVEL": 20,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1117,7 +1493,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 57,
@@ -1136,7 +1518,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 58,
@@ -1155,7 +1543,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 59,
@@ -1174,7 +1568,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 60,
@@ -1193,7 +1593,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 61,
@@ -1212,15 +1618,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 62,
         "CATEGORY": "melee",
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_chance_percent",
-        "SCORE": 40,
-        "MIN_LEVEL": 25,
+        "SCORE": 5,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -1231,7 +1643,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "5%",
+        "LVL 80 Avg": "10%",
+        "LVL 80 Max": "23%",
+        "NERF TEST": 5,
+        "NLVL 80": "5%",
+        "NLVL 80 Max": "23%"
     },
     {
         "REF_NB": 63,
@@ -1239,7 +1657,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_max_number_add",
         "SCORE": 3,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1250,7 +1668,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 64,
@@ -1258,7 +1682,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_max_number_percent",
         "SCORE": 20,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1269,7 +1693,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 65,
@@ -1277,7 +1707,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_damage_percent",
         "SCORE": 60,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "",
@@ -1288,7 +1718,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "60%",
+        "LVL 80 Avg": "120%",
+        "LVL 80 Max": "270%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 66,
@@ -1296,7 +1732,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_duration_add",
         "SCORE": 3,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1307,15 +1743,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 67,
         "CATEGORY": "melee",
         "PRIMARY_NAME_TYPE": "",
         "REF": "inner_fire_duration_percent",
-        "SCORE": 40,
-        "MIN_LEVEL": 25,
+        "SCORE": 30,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "",
@@ -1326,7 +1768,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": 30,
+        "NLVL 80": "30%",
+        "NLVL 80 Max": "135%"
     },
     {
         "REF_NB": 68,
@@ -1334,7 +1782,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "overdrive_chance_percent",
         "SCORE": 20,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "E",
@@ -1345,7 +1793,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "",
         "AMULET": "",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 69,
@@ -1353,7 +1807,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "overdrive_bounce_number_add",
         "SCORE": 1,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1364,7 +1818,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 70,
@@ -1372,7 +1832,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "overdrive_bounce_number_percent",
         "SCORE": 80,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1383,7 +1843,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "",
         "AMULET": "E",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "80%",
+        "LVL 80 Avg": "160%",
+        "LVL 80 Max": "360%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 71,
@@ -1391,7 +1857,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "overdrive_damage_percent",
         "SCORE": 45,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "E",
@@ -1402,7 +1868,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "E",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "45%",
+        "LVL 80 Avg": "90%",
+        "LVL 80 Max": "203%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 72,
@@ -1410,7 +1882,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "recast_chance_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "S",
@@ -1421,7 +1893,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "E",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 73,
@@ -1429,7 +1907,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "knockback_melee_add",
         "SCORE": 12,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1440,7 +1918,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 74,
@@ -1448,26 +1932,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "knockback_melee_percent",
         "SCORE": 120,
-        "MIN_LEVEL": 25,
-        "PERCENT": "%",
-        "HELM": "",
-        "ARMOR": "",
-        "BELT": "E",
-        "BRACER": "E",
-        "GLOVE": "E",
-        "SHOULDER": "",
-        "BOOT": "",
-        "RING": "",
-        "AMULET": "",
-        "CAPE": "E"
-    },
-    {
-        "REF_NB": 75,
-        "CATEGORY": "projectile",
-        "PRIMARY_NAME_TYPE": "",
-        "REF": "additional_projectile_add",
-        "SCORE": 1,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1478,7 +1943,38 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": 0,
+        "NLVL 80": "SEC",
+        "NLVL 80 Max": "EPIC"
+    },
+    {
+        "REF_NB": 75,
+        "CATEGORY": "projectile",
+        "PRIMARY_NAME_TYPE": "",
+        "REF": "additional_projectile_add",
+        "SCORE": 0,
+        "MIN_LEVEL": 15,
+        "PERCENT": "X",
+        "HELM": "",
+        "ARMOR": "",
+        "BELT": "",
+        "BRACER": "",
+        "GLOVE": "",
+        "SHOULDER": "",
+        "BOOT": "",
+        "RING": "",
+        "AMULET": "",
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "0",
+        "NLVL 80 Max": "0"
     },
     {
         "REF_NB": 76,
@@ -1486,26 +1982,32 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "additional_projectile_percent",
         "SCORE": 10,
-        "MIN_LEVEL": 25,
-        "PERCENT": "%",
+        "MIN_LEVEL": 15,
+        "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
-        "BELT": "E",
-        "BRACER": "E",
+        "BELT": "",
+        "BRACER": "",
         "GLOVE": "",
-        "SHOULDER": "E",
-        "BOOT": "E",
+        "SHOULDER": "",
+        "BOOT": "",
         "RING": "",
-        "AMULET": "E",
-        "CAPE": "E"
+        "AMULET": "",
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": 0,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 77,
         "CATEGORY": "projectile",
         "PRIMARY_NAME_TYPE": "",
         "REF": "chance_to_pierce_percent",
-        "SCORE": 10,
-        "MIN_LEVEL": 25,
+        "SCORE": 15,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "E",
@@ -1516,15 +2018,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "E",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": 15,
+        "NLVL 80": "15%",
+        "NLVL 80 Max": "68%"
     },
     {
         "REF_NB": 78,
         "CATEGORY": "projectile",
         "PRIMARY_NAME_TYPE": "",
         "REF": "fork_chance_percent",
-        "SCORE": 10,
-        "MIN_LEVEL": 25,
+        "SCORE": 15,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "",
@@ -1535,15 +2043,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "",
         "AMULET": "E",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": 15,
+        "NLVL 80": "15%",
+        "NLVL 80 Max": "68%"
     },
     {
         "REF_NB": 79,
         "CATEGORY": "projectile",
         "PRIMARY_NAME_TYPE": "",
         "REF": "rebound_chance_percent",
-        "SCORE": 15,
-        "MIN_LEVEL": 25,
+        "SCORE": 20,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "",
@@ -1554,7 +2068,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "S",
         "AMULET": "",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "20%",
+        "LVL 80 Avg": "40%",
+        "LVL 80 Max": "90%",
+        "NERF TEST": 20,
+        "NLVL 80": "20%",
+        "NLVL 80 Max": "90%"
     },
     {
         "REF_NB": 80,
@@ -1562,7 +2082,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "increased_proj_speed_percent",
         "SCORE": 25,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "",
         "ARMOR": "",
@@ -1573,7 +2093,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "E",
+        "LVL 80": "25%",
+        "LVL 80 Avg": "50%",
+        "LVL 80 Max": "113%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 81,
@@ -1581,7 +2107,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "knockback_projectile_add",
         "SCORE": 6,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "X",
         "HELM": "",
         "ARMOR": "",
@@ -1592,7 +2118,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": ""
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": null,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 82,
@@ -1600,18 +2132,24 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "",
         "REF": "knockback_projectile_percent",
         "SCORE": 120,
-        "MIN_LEVEL": 25,
-        "PERCENT": "%",
+        "MIN_LEVEL": 15,
+        "PERCENT": "X",
         "HELM": "",
-        "ARMOR": "E",
-        "BELT": "E",
-        "BRACER": "E",
+        "ARMOR": "",
+        "BELT": "",
+        "BRACER": "",
         "GLOVE": "",
         "SHOULDER": "",
         "BOOT": "",
         "RING": "",
         "AMULET": "",
-        "CAPE": "E"
+        "CAPE": "",
+        "LVL 80": "",
+        "LVL 80 Avg": "",
+        "LVL 80 Max": "",
+        "NERF TEST": 0,
+        "NLVL 80": "",
+        "NLVL 80 Max": ""
     },
     {
         "REF_NB": 83,
@@ -1619,7 +2157,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "minion",
         "REF": "minion_increased_damage_percent",
         "SCORE": 15,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "P",
         "ARMOR": "",
@@ -1630,7 +2168,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "P",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "15%",
+        "LVL 80 Avg": "30%",
+        "LVL 80 Max": "68%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 84,
@@ -1638,7 +2182,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "totem",
         "REF": "totem_increased_effect_percent",
         "SCORE": 30,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -1649,15 +2193,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     },
     {
         "REF_NB": 85,
         "CATEGORY": "aura",
         "PRIMARY_NAME_TYPE": "aura",
         "REF": "aura_increased_effect_percent",
-        "SCORE": 20,
-        "MIN_LEVEL": 25,
+        "SCORE": 10,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "E",
         "ARMOR": "E",
@@ -1668,15 +2218,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "S",
         "AMULET": "S",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": 10,
+        "NLVL 80": "10%",
+        "NLVL 80 Max": "45%"
     },
     {
         "REF_NB": 86,
         "CATEGORY": "aoe",
         "PRIMARY_NAME_TYPE": "",
         "REF": "aoe_increased_size_percent",
-        "SCORE": 15,
-        "MIN_LEVEL": 25,
+        "SCORE": 10,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -1687,15 +2243,21 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": 10,
+        "NLVL 80": "10%",
+        "NLVL 80 Max": "45%"
     },
     {
         "REF_NB": 87,
         "CATEGORY": "aoe",
         "PRIMARY_NAME_TYPE": "",
         "REF": "aoe_increased_effect_percent",
-        "SCORE": 15,
-        "MIN_LEVEL": 25,
+        "SCORE": 10,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "E",
@@ -1706,7 +2268,13 @@ export const GAME_DATA_STAT = [{
         "BOOT": "E",
         "RING": "E",
         "AMULET": "S",
-        "CAPE": "S"
+        "CAPE": "S",
+        "LVL 80": "10%",
+        "LVL 80 Avg": "20%",
+        "LVL 80 Max": "45%",
+        "NERF TEST": 10,
+        "NLVL 80": "10%",
+        "NLVL 80 Max": "45%"
     },
     {
         "REF_NB": 90,
@@ -1714,7 +2282,7 @@ export const GAME_DATA_STAT = [{
         "PRIMARY_NAME_TYPE": "def_alt",
         "REF": "reduced_damage_from_all_percent",
         "SCORE": 2.5,
-        "MIN_LEVEL": 25,
+        "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
         "ARMOR": "S",
@@ -1725,6 +2293,12 @@ export const GAME_DATA_STAT = [{
         "BOOT": "S",
         "RING": "E",
         "AMULET": "E",
-        "CAPE": "P"
+        "CAPE": "P",
+        "LVL 80": "45414%",
+        "LVL 80 Avg": "90828%",
+        "LVL 80 Max": "204363%",
+        "NERF TEST": null,
+        "NLVL 80": "0%",
+        "NLVL 80 Max": "0%"
     }
 ]

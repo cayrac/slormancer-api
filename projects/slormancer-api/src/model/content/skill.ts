@@ -21,20 +21,20 @@ export interface Skill {
     levelIcon: string;
     iconLarge: string;
     description: string;
-    baseCooldown: number;
-    precastTime: number;
-    castTime: number;
-    cooldown: number;
+    baseCooldown: number | null;
+    precastTime: number | null;
+    castTime: number | null;
+    cooldown: number | null;
     baseGenres: Array<SkillGenre>;
     genres: Array<SkillGenre>;
     damageTypes: Array<string>;
     locked: boolean;
     elements: Array<SkillElement>;
 
-    initialManaCost: number;
-    perLevelManaCost: number;
-    baseManaCost: number;
-    manaCost: number;
+    initialManaCost: number | null;
+    perLevelManaCost: number | null;
+    baseManaCost: number | null;
+    manaCost: number | null;
     baseLifeCost: number;
     lifeCost: number;
     baseCostType: SkillCostType;

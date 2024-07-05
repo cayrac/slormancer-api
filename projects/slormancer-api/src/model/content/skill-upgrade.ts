@@ -9,7 +9,7 @@ import { SkillType } from './skill-type';
 export interface SkillUpgrade {
     id: number;
     order: number;
-    skillId: number;
+    skillId: number | null;
     masteryRequired: number;
     line: number;
     type: SkillType.Passive | SkillType.Upgrade;
@@ -20,10 +20,10 @@ export interface SkillUpgrade {
     name: string;
     icon: string;
     description: string;
-    initialCost: number;
-    perLevelCost: number;
-    baseCost: number;
-    cost: number;
+    initialCost: number | null;
+    perLevelCost: number | null;
+    baseCost: number | null;
+    cost: number | null;
     costType: SkillCostType;
     hasLifeCost: boolean;
     hasManaCost: boolean;

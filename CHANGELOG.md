@@ -82,6 +82,9 @@ Initial release
 - Total mastery count no longer ignore the last skill mastery
 - Unkillable berzerker reaper additional damage multiplier is now correctly applied
 
+## bugs : 
+Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
+
 ## TODO
 - mise à jour packages
 - parsing loadouts
