@@ -34,6 +34,7 @@ import { SlormancerEffectValueService } from './slormancer-effect-value.service'
 import { SlormancerMechanicService } from './slormancer-mechanic.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
+import { DATA_SLORM_COST } from '../../constants/content/data/data-slorm-cost';
 
 @Injectable()
 export class SlormancerSkillService {
@@ -56,6 +57,30 @@ export class SlormancerSkillService {
     public getSkillLevelFromXp(heroClass: HeroClass, skill: number, experience: number): number {
         // TODO
         return 15;
+    }
+
+    public getSlormUpgradeCosts(slormTier: string, line: number, maxRank: number): number[] {
+        const tier = slormTier.length > 0 ? parseInt(slormTier) : null;
+        let result: number[] = [];
+
+        if (tier !== null) {
+            const tierCosts = DATA_SLORM_COST.passive[tier];
+            if (tierCosts) {
+                const lineCosts = tierCosts[line];
+                if (lineCosts) {
+                    const maxRankCosts = lineCosts[maxRank];
+                    if (maxRankCosts !== undefined) {
+                        result = maxRankCosts;
+                    }
+                }
+            }
+        }
+
+        if (result.length === 0) {
+            console.log('No upgrade costs found for ', slormTier, line, maxRank);
+        }
+        
+        return result;
     }
 
     private isDamageStat(stat: string): boolean {
@@ -102,7 +127,7 @@ export class SlormancerSkillService {
     }
 
     private applyOverride(skill: Skill | SkillUpgrade | ClassMechanic, overrideData: DataSkill | null) {
-    
+        console.log('Applying override for ', skill, overrideData);
         if (overrideData !== null) {
             overrideData.override(skill.values);
 
@@ -121,6 +146,10 @@ export class SlormancerSkillService {
 
             if (overrideData.order !== undefined && 'order' in skill) {
                 skill.order = overrideData.order;
+            }
+
+            if (overrideData.line !== undefined && 'line' in skill) {
+                skill.line = overrideData.line;
             }
         }
     } 
@@ -351,6 +380,9 @@ export class SlormancerSkillService {
                 hasNoCost: false,
                 genres: <Array<SkillGenre>>splitData(gameDataSkill.GENRE, ','),
                 damageTypes: splitData(gameDataSkill.DMG_TYPE, ','),
+                slormTier: gameDataSkill.SLORM_TIER,
+                upgradeSlormCost: null,
+                investedSlorm: 0,
 
                 masteryLabel: null,
                 rankLabel: null,
@@ -426,6 +458,12 @@ export class SlormancerSkillService {
         upgrade.hasLifeCost = upgrade.costType === SkillCostType.LifeSecond || upgrade.costType === SkillCostType.LifeLockFlat || upgrade.costType === SkillCostType.Life;
         upgrade.hasManaCost = upgrade.costType === SkillCostType.ManaSecond || upgrade.costType === SkillCostType.ManaLockFlat || upgrade.costType === SkillCostType.Mana;
         upgrade.hasNoCost = upgrade.costType === SkillCostType.None || upgrade.baseCost === 0;
+
+        const upgradeCosts = this.getSlormUpgradeCosts(upgrade.slormTier, upgrade.line, upgrade.maxRank);
+        upgrade.investedSlorm = upgradeCosts.reduce((total, current, index) => index < upgrade.rank ? current + total : total , 0);
+        upgrade.upgradeSlormCost = upgradeCosts[upgrade.rank] ?? null;
+        console.log('invested slorm : ', upgrade.investedSlorm);
+        console.log('upgrade slorm cost : ', upgrade.upgradeSlormCost);
 
         for (const effectValue of upgrade.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, upgrade.rank);

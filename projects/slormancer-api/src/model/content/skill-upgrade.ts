@@ -30,6 +30,9 @@ export interface SkillUpgrade {
     hasNoCost: boolean;
     genres: Array<SkillGenre>;
     damageTypes: Array<string>;
+    slormTier: string;
+    upgradeSlormCost: number | null;
+    investedSlorm: number;
 
     relatedClassMechanics: Array<ClassMechanic>;
     relatedMechanics: Array<Mechanic>;

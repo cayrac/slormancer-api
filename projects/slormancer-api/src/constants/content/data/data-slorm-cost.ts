@@ -1,6 +1,6 @@
 import { DataSlormCost } from "projects/slormancer-api/src/model/content/data/data-slorm-cost";
 
-export const SLORM_COST: DataSlormCost = {
+export const DATA_SLORM_COST: DataSlormCost = {
     passive: {
         // slorm tier
         1: {

@@ -1162,13 +1162,6 @@ export class SlormancerValueUpdaterService {
             }
         }
 
-        const maxChargeValue = skillAndUpgrades.skill.values.find(value => value.stat === 'displayed_max_charge');
-        if (maxChargeValue) {
-            const maxCharge = Math.max(0, ...valueOrDefault(statsResult.extractedStats['max_charge'], []).map(v => v.value));
-            maxChargeValue.value = maxCharge;
-            maxChargeValue.displayValue = round(maxChargeValue.value, 3);
-        }
-
         const climaxValue = skillAndUpgrades.skill.values.find(value => value.stat === 'climax_increased_damage');
         if (climaxValue) {
             const climaxAdd = valueOrDefault(statsResult.extractedStats['climax_increased_damage_add'], [])
