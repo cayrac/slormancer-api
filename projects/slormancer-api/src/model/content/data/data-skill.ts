@@ -5,9 +5,10 @@ import { SkillGenre } from '../enum/skill-genre';
 
 export interface DataSkill {
     masteryRequired: number | null;
+    disableOverride?: boolean;
     line?: number;
-    override: (values: Array<AbstractEffectValue>) => void;
-    additionalClassMechanics: Array<number>;
+    override?: (values: Array<AbstractEffectValue>) => void;
+    additionalClassMechanics?: Array<number>;
     additionalMechanics?: Array<MechanicType>;
     additionalGenres?: Array<SkillGenre>;
     costTypeOverride?: SkillCostType;

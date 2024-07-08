@@ -129,7 +129,9 @@ export class SlormancerSkillService {
     private applyOverride(skill: Skill | SkillUpgrade | ClassMechanic, overrideData: DataSkill | null) {
         console.log('Applying override for ', skill, overrideData);
         if (overrideData !== null) {
-            overrideData.override(skill.values);
+            if (overrideData.override && overrideData.disableOverride !== undefined && !overrideData.disableOverride) {
+                overrideData.override(skill.values);
+            }
 
             if (overrideData.costTypeOverride) {
                 if ('costType' in skill) {
@@ -380,7 +382,7 @@ export class SlormancerSkillService {
                 hasNoCost: false,
                 genres: <Array<SkillGenre>>splitData(gameDataSkill.GENRE, ','),
                 damageTypes: splitData(gameDataSkill.DMG_TYPE, ','),
-                slormTier: gameDataSkill.SLORM_TIER,
+                slormTier: parentSkill === null ? "" : parentSkill.SLORM_TIER,
                 upgradeSlormCost: null,
                 investedSlorm: 0,
 
@@ -389,7 +391,7 @@ export class SlormancerSkillService {
                 genresLabel: null,
                 costLabel: null,
 
-                relatedClassMechanics: this.extractSkillMechanics(gameDataSkill.EN_DESCRIPTION, heroClass, dataSkill === null ? [] : dataSkill.additionalClassMechanics),
+                relatedClassMechanics: dataSkill === null || dataSkill.additionalClassMechanics === undefined ? [] : this.extractSkillMechanics(gameDataSkill.EN_DESCRIPTION, heroClass, dataSkill.additionalClassMechanics),
                 relatedMechanics: [],
                 relatedBuffs: this.extractBuffs(gameDataSkill.EN_DESCRIPTION),
             
@@ -459,6 +461,9 @@ export class SlormancerSkillService {
         upgrade.hasManaCost = upgrade.costType === SkillCostType.ManaSecond || upgrade.costType === SkillCostType.ManaLockFlat || upgrade.costType === SkillCostType.Mana;
         upgrade.hasNoCost = upgrade.costType === SkillCostType.None || upgrade.baseCost === 0;
 
+        if (upgrade.slormTier === '') {
+            console.log('upgrading with bad slorm tier : ', upgrade);
+        }
         const upgradeCosts = this.getSlormUpgradeCosts(upgrade.slormTier, upgrade.line, upgrade.maxRank);
         upgrade.investedSlorm = upgradeCosts.reduce((total, current, index) => index < upgrade.rank ? current + total : total , 0);
         upgrade.upgradeSlormCost = upgradeCosts[upgrade.rank] ?? null;
