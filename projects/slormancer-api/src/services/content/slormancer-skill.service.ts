@@ -129,7 +129,7 @@ export class SlormancerSkillService {
     private applyOverride(skill: Skill | SkillUpgrade | ClassMechanic, overrideData: DataSkill | null) {
         console.log('Applying override for ', skill, overrideData);
         if (overrideData !== null) {
-            if (overrideData.override && overrideData.disableOverride !== undefined && !overrideData.disableOverride) {
+            if (overrideData.override && (overrideData.disableOverride !== true)) {
                 overrideData.override(skill.values);
             }
 

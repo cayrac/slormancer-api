@@ -83,7 +83,8 @@ Initial release
 - Unkillable berzerker reaper additional damage multiplier is now correctly applied
 
 ## bugs : 
-Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
+- Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
+- vérifier arcane bond damage
 
 ## TODO
 - mise à jour packages

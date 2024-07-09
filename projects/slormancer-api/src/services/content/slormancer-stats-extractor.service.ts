@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import {
-    ARCANE_BOND_DAMAGE_FROM_MANA_SPENT as ARCANE_BOND_DAMAGE_FROM_MANA_LOST,
+    ARCANE_BOND_DAMAGE_FROM_MANA_SPENT,
+    ARCANE_BOND_DAMAGE_FROM_MAX_MANA,
     ARCANE_CLONE_ATTACK_SPEED_REDUCTION,
     ASTRAL_METEOR_DAMAGE_PERCENT,
     ASTRAL_RETRIBUTION_DAMAGE_PERCENT,
@@ -131,9 +132,10 @@ export class SlormancerStatsExtractorService {
 
         if (character.heroClass === HeroClass.Mage) {
             mapping = mergedStatMapping.find(m => m.stat === 'arcane_bond_damage');
-            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(ARCANE_BOND_DAMAGE_FROM_MANA_LOST, 0, EffectValueUpgradeType.None, false, 'mana_lost_last_second', 'arcane_bond_damage_add'), 0, { synergy: 'Mana lost last second' }, [ { stat: 'arcane_bond_damage', mapping } ]));
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(ARCANE_BOND_DAMAGE_FROM_MANA_SPENT, 0, EffectValueUpgradeType.None, false, 'mana_lost_last_second', 'arcane_bond_damage_add'), 0, { synergy: 'Mana lost last second' }, [ { stat: 'arcane_bond_damage', mapping } ]));
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(ARCANE_BOND_DAMAGE_FROM_MAX_MANA, 0, EffectValueUpgradeType.None, false, 'max_mana', 'arcane_bond_damage_add'), 0, { synergy: 'Mana lost last second' }, [ { stat: 'arcane_bond_damage', mapping } ]));
             // reduced by percent_restored_mana_as_arcane_bond_damage
-            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(100, 0, EffectValueUpgradeType.None, false, 'mana_gained_last_second', 'arcane_bond_damage_add_from_restored_mana'), 0, { synergy: 'Mana gained last second' }, [ { stat: 'arcane_bond_damage', mapping } ]));
+            extractedStats.synergies.push(synergyResolveData(effectValueSynergy(ARCANE_BOND_DAMAGE_FROM_MANA_SPENT, 0, EffectValueUpgradeType.None, false, 'mana_gained_last_second', 'arcane_bond_damage_add_from_restored_mana'), 0, { synergy: 'Mana gained last second' }, [ { stat: 'arcane_bond_damage', mapping } ]));
         }
         
         if (character.heroClass === HeroClass.Huntress) {

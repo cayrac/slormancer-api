@@ -3507,7 +3507,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
 export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     0: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'duration');
             setAsUpgrade(values, 0)
@@ -4786,7 +4785,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     141: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'slow_percent');
             setAsUpgrade(values, 0);
@@ -4794,15 +4792,12 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     142: {
         masteryRequired: 1,
-        disableOverride: true
     },
     143: {
         masteryRequired: 1,
-        disableOverride: true
     },
     144: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'speed_gate_buff_the_speed_percent');
             addConstant(values, 5, false, EffectValueValueType.Stat, 'speed_gate_buff_duration');
@@ -4810,7 +4805,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     145: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'arcane_bond_increased_damage_mult_if_close');
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'proximity_alert_range');
@@ -4819,11 +4813,9 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     146: {
         masteryRequired: 2,
-        disableOverride: true
     },
     147: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'chance_to_pierce_percent_if_projectile_passed_through_wall_of_omen');
             setStat(values, 1, 'increased_proj_speed_percent_if_projectile_passed_through_wall_of_omen');
@@ -4832,36 +4824,30 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     148: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult_if_target_is_time_locked');
         }
     },
     149: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setSynergyPrecision(values, 0, 0);
         }
     },
     150: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_chance_percent_if_target_is_time_locked');
         }
     },
     151: {
         masteryRequired: 4,
-        disableOverride: true
     },
     152: {
         masteryRequired: 4,
-        disableOverride: true
     },
     153: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setAsUpgrade(values, 0);
@@ -4869,7 +4855,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     154: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'invigorate_stack_elemental_damage_percent');
             setStat(values, 1, 'invigorate_max_stacks');
@@ -4878,28 +4863,24 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     155: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 2, false, EffectValueValueType.Stat, 'arcane_bond_on_hit_if_last_emblems_different');
         }
     },
     156: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'destroy_enemy_projectiles');
         }
     },
     157: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 20, false, EffectValueValueType.Stat, 'remnant_rift_nova_cast_if_low_life_treshold');
         }
     },
     158: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'additional_projectile_add_if_next_cast_is_new_emblem');
             setStat(values, 1, 'overdrive_chance_percent_if_next_cast_is_new_emblem');
@@ -4907,22 +4888,18 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     159: {
         masteryRequired: 7,
-        disableOverride: true
     },
     160: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'time_lock_duration_add');
         }
     },
     161: {
         masteryRequired: 7,
-        disableOverride: true
     },
     162: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'split_projectiles');
         },
@@ -4930,7 +4907,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     163: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 5, false, EffectValueValueType.Stat, 'max_emblems');
             addConstant(values, 2, false, EffectValueValueType.Stat, 'max_emblems_add');
@@ -4939,7 +4915,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     164: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cost_reduction_mult_skill_per_arcanic_emblem_if_not_arcanic');
             setStat(values, 1, 'cooldown_time_reduction_multiplier_per_temporal_emblem_if_not_temporal');
