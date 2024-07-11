@@ -13,7 +13,6 @@ import { AttributeTraits } from '../../model/content/attribute-traits';
 import { MergedStat, SynergyResolveData } from '../../model/content/character-stats';
 import { ClassMechanic } from '../../model/content/class-mechanic';
 import { HeroClass } from '../../model/content/enum/hero-class';
-import { SkillCostType } from '../../model/content/enum/skill-cost-type';
 import { SkillGenre } from '../../model/content/enum/skill-genre';
 import { EquipableItem } from '../../model/content/equipable-item';
 import { Mechanic } from '../../model/content/mechanic';
@@ -210,30 +209,6 @@ export class SlormancerStatsService {
             }
         }  
 
-        let skillHasNoCost = false;
-        
-        if (extractedStats.stats['last_cast_tormented_remove_cost'] !== undefined && config.last_cast_tormented) {
-            skillHasNoCost = true;
-        }
-        if (extractedStats.stats['no_cost_if_tormented'] !== undefined && config.serenity === 0) {
-            skillHasNoCost = true;
-        }
-        if (extractedStats.stats['skill_has_no_cost_if_low_mana'] !== undefined && config.serenity === 0) {
-            const treshold = extractedStats.stats['skill_has_no_cost_if_low_mana_treshold'];
-            if (treshold !== undefined && treshold.length > 0) {
-                const firstTreshold = treshold.map(v => v.value)[0];
-                if (firstTreshold !== undefined && (100 - config.percent_missing_mana) < firstTreshold) {
-                    skillHasNoCost = true;
-                }
-            }
-        }
-
-        if (skillHasNoCost) {
-            skillAndUpgrades.skill.hasNoCost = true;
-        } else {
-            skillAndUpgrades.skill.hasNoCost = !skillAndUpgrades.skill.hasManaCost && !skillAndUpgrades.skill.hasLifeCost;
-        }
-
         if (character.heroClass === HeroClass.Mage) {
             if (extractedStats.stats['cast_by_clone'] !== undefined) {
                 skillAndUpgrades.skill.genres.push(SkillGenre.Totem);
@@ -258,15 +233,6 @@ export class SlormancerStatsService {
 
         if (skillAndUpgrades.skill.id === 3 && config.add_totem_tag_to_prime_totem_skills && [71, 72].includes(character.reaper.id) && !skillAndUpgrades.skill.genres.includes(SkillGenre.Totem)) {
             skillAndUpgrades.skill.genres.push(SkillGenre.Totem);
-        }
-
-        if (extractedStats.stats['no_longer_cost_per_second'] !== undefined) {
-            if (skillAndUpgrades.skill.manaCostType === SkillCostType.ManaSecond) {
-                skillAndUpgrades.skill.manaCostType = SkillCostType.Mana;
-            }
-            if (skillAndUpgrades.skill.lifeCostType === SkillCostType.LifeSecond) {
-                skillAndUpgrades.skill.lifeCostType = SkillCostType.Life;
-            }
         }
     }
 

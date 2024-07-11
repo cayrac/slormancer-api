@@ -9,9 +9,9 @@ import { DELIGHTED_VALUE } from '../../common';
 
 function getFirstStat(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
     const found = stats[stat];
-
     return found ? valueOrDefault(found[0]?.value, defaultValue) : defaultValue;
 }
+
 function getSumStats(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
     const found = stats[stat];
     let result = defaultValue;
@@ -116,6 +116,8 @@ export const SKILL_MANA_COST_MAPPING: MergedStatMapping = {
             { stat: 'mana_cost_mult_skill', condition: (_, stats) => hasCostType(stats, SkillCostType.Mana, SkillCostType.ManaSecond) },
             { stat: 'mana_cost_reduction_skill_mult', multiplier: () => -1 }, // void arrow discount void  
             { stat: 'efficiency_skill_reduction_skill_mult', condition: config => config.efficiency_buff , multiplier: () => -1 },
+            { stat: 'skill_has_no_cost_if_low_mana', condition: (_, stats) => (100 - getFirstStat(stats, 'percent_missing_mana', 0)) < getFirstStat(stats, 'skill_has_no_cost_if_low_mana_treshold', 0) },
+            // skill_has_no_cost_if_low_mana_treshold
         ],
         maxMultiplier: [],
     } 
@@ -778,6 +780,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'adam_blessing_buff_cooldown_reduction_global_mult', condition: config => config.has_adam_blessing_buff },
                 { stat: 'cooldown_reduction_global_mult' },
+                { stat: 'attack_speed_global_mult' },
                 { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
                 { stat: 'self_control_cooldown_reduction_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
                 { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, multiplier: (config, stats) => Math.min(config.delightful_rain_stacks, getMaxStacks(stats, 'delightful_rain_max_stacks')) },
@@ -1589,6 +1592,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'overdrive_chance_percent' },
                 { stat: 'overdrive_chance_percent_if_fortunate_or_perfect', condition: config => config.next_cast_is_perfect || config.next_cast_is_fortunate },
                 { stat: 'overdrive_chance_percent_if_next_cast_is_new_emblem', condition: (config, stats) => config.next_cast_is_new_emblem && hasStat(stats, 'skill_is_melee') },
+                { stat: 'overdrive_chance_percent_while_channeling_ray_of_obliteration', condition: (config) => config.is_channeling_ray_of_obliteration },
                 { stat: 'academician_overdrive_chance_extra', extra: true },
             ],
             max: [],
@@ -1784,7 +1788,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'aoe_increased_effect_percent' },
-                { stat: 'aoe_increased_effect_percent_on_low_mana', condition: (config, stats) => config.percent_missing_mana > (100 - getFirstStat(stats, 'aoe_increased_effect_percent_on_low_mana_treshold', 0))  }
+                { stat: 'aoe_increased_effect_percent_on_low_mana', condition: (config, stats) => getFirstStat(stats, 'percent_missing_mana', 0) > (100 - getFirstStat(stats, 'aoe_increased_effect_percent_on_low_mana_treshold', 0))  }
             ],
             max: [],
             percent: [],
@@ -1875,8 +1879,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'min_elemental_damage_add' },
                 { stat: 'weapon_to_elemental_damage', extra: true },
-                { stat: 'elemental_emergency_min_elemental_damage_add_on_low_life', condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'elemental_emergency_min_elemental_damage_add_on_low_life_treshold', 0)) },
-                { stat: 'elemental_resources_min_elemental_damage_add_on_low_mana', condition: (config, stats) => config.percent_missing_mana > (100 - getFirstStat(stats, 'elemental_resources_min_elemental_damage_add_on_low_mana_treshold', 0)) },
+                { stat: 'elemental_emergency_min_elemental_damage_add_on_low_life', condition: (config, stats) => getFirstStat(stats, 'percent_missing_health', 0) > (100 - getFirstStat(stats, 'elemental_emergency_min_elemental_damage_add_on_low_life_treshold', 0)) },
+                { stat: 'elemental_resources_min_elemental_damage_add_on_low_mana', condition: (config, stats) => getFirstStat(stats, 'percent_missing_mana', 0) > (100 - getFirstStat(stats, 'elemental_resources_min_elemental_damage_add_on_low_mana_treshold', 0)) },
                 { stat: 'enligntment_stack_min_elemental_damage_add', condition: config => config.enlightenment_stacks > 0, multiplier: config => Math.min(config.enlightenment_stacks, 999) }
             ],
             max: [{ stat: 'max_elemental_damage_add' }],
@@ -2089,6 +2093,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 },
                 { stat: 'non_projectile_increased_damage_mult', condition: (_, stats) => !hasStat(stats, 'skill_is_projectile'), multiplier: () => -1 },
                 { stat: 'increased_damage_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
+                { stat: 'skill_increased_damage_if_mana_full', condition: (_, stats) => getFirstStat(stats, 'percent_missing_mana', 0) === 0  },
             ],
             maxMultiplier: [
             ],
@@ -2103,7 +2108,9 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
             ],
             max: [],
-            percent: [],
+            percent: [
+                { stat: 'increased_damage_per_power', condition: (_, stats) => getFirstStat(stats, 'max_power', 0) > 0, multiplier: (config, stats) => Math.min(config.ray_of_obliteration_power, getFirstStat(stats, 'max_power', 0)) },
+            ],
             maxPercent: [],
             multiplier: [
                 { stat: 'skill_decreased_damage_mult', multiplier: () => -1 },
@@ -2121,7 +2128,6 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'skill_melee_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_melee') },
                 { stat: 'skill_projectile_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_projectile') },
                 { stat: 'skill_aoe_increased_damage_mult', condition: (_, stats) => hasStat(stats, 'skill_is_aoe') },
-                { stat: 'skill_increased_damage_mult_per_grow', condition: config => config.ray_of_obliteration_grow_stacks > 0, multiplier: (config, stats) => Math.min(config.ray_of_obliteration_grow_stacks, getMaxStacks(stats, 'max_grow')) },
                 { stat: 'skill_increased_damage_mult_if_short', condition: config => config.ray_of_obliteration_is_short },
                 { stat: 'high_spirit_stacks_skill_increased_damage_mult', condition: config => config.high_spirit_stacks > 0, multiplier: config => config.high_spirit_stacks },
                 { stat: 'skill_increased_damage_mult_per_non_temporal_emblem', condition: config => (config.arcanic_emblems + config.obliteration_emblems) > 0, multiplier: config => config.arcanic_emblems + config.obliteration_emblems },

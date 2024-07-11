@@ -104,7 +104,7 @@ export interface CharacterConfig {
     cosmic_stacks: number;
     invigorate_stacks: number;
     arcane_stacks: number;
-    ray_of_obliteration_grow_stacks: number;
+    ray_of_obliteration_power: number;
     high_spirit_stacks: number;
     chrono_manamorphosis_stacks: number,
     chrono_armor_stacks: number,

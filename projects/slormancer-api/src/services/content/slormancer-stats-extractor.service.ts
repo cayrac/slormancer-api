@@ -535,8 +535,6 @@ export class SlormancerStatsExtractorService {
         for (const sau of character.skills) {
             const skillEquiped = character.supportSkill === sau.skill || character.primarySkill === sau.skill || character.secondarySkill === sau.skill;
             
-            sau.activeUpgrades
-
             for (const skillValue of sau.skill.values) {
                 if (skillValue.valueType !== EffectValueValueType.Upgrade) {
                     if (isEffectValueSynergy(skillValue)) {

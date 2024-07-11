@@ -118,9 +118,12 @@ export class SlormancerValueUpdaterService {
             .map(v => v.value));
 
         if (isSkill) {
+            const percentMultiplier = skillStats.skillIncreasedDamage.values.percent
+                .reduce((total, percent) => total = total + percent.value, 0);
+            multipliers.push(percentMultiplier);
             multipliers.push(...skillStats.skillIncreasedDamage.values.multiplier
                 .filter(v => !isBleeding || this.isValidBleedingMultipluer(v.source))
-                .map(v => v.value))
+                .map(v => v.value));
         }
         
         if (genres.includes(SkillGenre.AreaOfEffect)) {
@@ -1042,7 +1045,24 @@ export class SlormancerValueUpdaterService {
         const lifeCostAdd: Array<EntityValue<number>> = [];
         const entity: Entity = { skill: skillAndUpgrades.skill };
         const convertManaToLifeCost = statsResult.extractedStats['mana_cost_to_life_cost'] && config.has_life_bargain_buff;
+        const noLongerCostPersecond = statsResult.extractedStats['no_longer_cost_per_second'] !== undefined;
+        let skillHasNoCost = (statsResult.extractedStats['last_cast_tormented_remove_cost'] !== undefined && config.last_cast_tormented)
+            || (statsResult.extractedStats['no_cost_if_tormented'] !== undefined && config.serenity === 0);
+        
         this.slormancerSkillService.updateSkillCost(skillAndUpgrades.skill);
+        
+        if (skillHasNoCost) {
+            skillAndUpgrades.skill.hasNoCost = true;
+        }
+
+        if (noLongerCostPersecond) {
+            if (skillAndUpgrades.skill.manaCostType === SkillCostType.ManaSecond) {
+                skillAndUpgrades.skill.manaCostType = SkillCostType.Mana;
+            }
+            if (skillAndUpgrades.skill.lifeCostType === SkillCostType.LifeSecond) {
+                skillAndUpgrades.skill.lifeCostType = SkillCostType.Life;
+            }
+        }
         
         if (convertManaToLifeCost) {
             lifeCostAdd.push({ value: Math.max(0, skillStats.mana.total), source: entity });

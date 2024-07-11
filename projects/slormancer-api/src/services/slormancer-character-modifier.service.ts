@@ -60,13 +60,13 @@ export class SlormancerCharacterModifierService {
         const skill = character.skills.find(skill => skill.skill.id === selectedUpgrade.skillId);
 
         if (skill) {
-            const sameLineId = skill.selectedUpgrades
+            const sameLineIds = skill.selectedUpgrades
                 .map(id => skill.upgrades.find(upgrade => upgrade.id === id))
                 .filter(isNotNullOrUndefined)
                 .filter(upgrade => upgrade.line === selectedUpgrade.line)
-                .map(upgrade => upgrade.id)[0];
+                .map(upgrade => upgrade.id);
     
-            if (sameLineId !== undefined && sameLineId !== selectedUpgrade.id) {
+            for (const sameLineId of sameLineIds) {
                 const sameLineIndex = skill.selectedUpgrades.indexOf(sameLineId);
                 skill.selectedUpgrades.splice(sameLineIndex, 1);    
             }
