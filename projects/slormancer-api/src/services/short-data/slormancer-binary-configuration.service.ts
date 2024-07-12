@@ -3,15 +3,45 @@ import { Injectable } from '@angular/core';
 import { Character } from '../../model/character';
 import { Bits } from '../../model/export/bits';
 import { binaryToNumber, numberToBinary, takeBitsChunk } from '../../util/bits.util';
-import { CharacterConfig } from '../../model';
+import { CharacterConfig, HeroClass } from '../../model';
 import { UNITY_REAPERS } from '../../constants';
+import { compareVersions } from '../../util';
+import { SlormancerSkillService } from '../content';
 
 @Injectable()
 export class SlormancerBinaryConfigurationService {
     
-    constructor() { }
+    constructor(private slormancerSkillService: SlormancerSkillService) { }
 
-    public configurationToBinary(config: CharacterConfig, character: Character): Bits {
+    private requireNumberOfMaxedUpgrades(character: Character, version: string): boolean {
+        let result = false;
+        
+        if (character.heroClass === HeroClass.Mage && compareVersions(version, '0.7.0') >= 0) {
+            const bookSmashSkill = character.skills.find(skill => skill.skill.id === 5);
+
+            result = bookSmashSkill !== undefined 
+                && (character.primarySkill === bookSmashSkill.skill || character.secondarySkill === bookSmashSkill.skill)
+                && (bookSmashSkill.selectedUpgrades.includes(44) || bookSmashSkill.activeUpgrades.includes(44));
+        }
+
+        return result;
+    }
+
+    private requireNumberOfAchievements(character: Character, version: string): boolean {
+        let result = false;
+        
+        if (character.heroClass === HeroClass.Mage && compareVersions(version, '0.7.0') >= 0) {
+            const bookSmashSkill = character.skills.find(skill => skill.skill.id === 5);
+
+            result = bookSmashSkill !== undefined 
+                && (character.primarySkill === bookSmashSkill.skill || character.secondarySkill === bookSmashSkill.skill)
+                && (bookSmashSkill.selectedUpgrades.includes(43) || bookSmashSkill.activeUpgrades.includes(43));
+        }
+
+        return result;
+    }
+
+    public configurationToBinary(config: CharacterConfig, character: Character, version: string): Bits {
         let result: Bits = [];
 
         if (UNITY_REAPERS.includes(character.reaper.id)) {
@@ -53,10 +83,22 @@ export class SlormancerBinaryConfigurationService {
             result.push(...numberToBinary(config.unity_level_2_52_p, 7));
         }
 
+        if (this.requireNumberOfMaxedUpgrades(character, version)) {
+            const maxed_upgrades = this.slormancerSkillService.getNumberOfMaxedUpgrades(character);
+            result.push(...numberToBinary(maxed_upgrades, 8));
+            console.log('Require number of maxed upgrades : ', maxed_upgrades);
+        } else {
+            console.log('Require NOT number of maxed upgrades');
+        }
+
+        if (this.requireNumberOfAchievements(character, version)) {
+            result.push(...numberToBinary(config.completed_achievements, 7));
+        }
+
         return result;
     }
 
-    public binaryToConfiguration(bits: Bits, character: Character): Partial<CharacterConfig> {
+    public binaryToConfiguration(bits: Bits, character: Character, version: string): Partial<CharacterConfig> {
         const config: Partial<CharacterConfig> = { }
 
         if (UNITY_REAPERS.includes(character.reaper.id)) {
@@ -96,6 +138,16 @@ export class SlormancerBinaryConfigurationService {
             config.unity_level_2_50_p = binaryToNumber(takeBitsChunk(bits, 7));
             config.unity_level_2_51_p = binaryToNumber(takeBitsChunk(bits, 7));
             config.unity_level_2_52_p = binaryToNumber(takeBitsChunk(bits, 7));
+        }
+
+        console.log('requireNumberOfMaxedUpgrades : ', character, version);
+        if (this.requireNumberOfMaxedUpgrades(character, version)) {
+            config.maxed_upgrades = binaryToNumber(takeBitsChunk(bits, 8));
+            console.log('Extracted number of maxed upgrades : ', config.maxed_upgrades);
+        }
+
+        if (this.requireNumberOfAchievements(character, version)) {
+            config.completed_achievements = binaryToNumber(takeBitsChunk(bits, 7));
         }
 
         return config;

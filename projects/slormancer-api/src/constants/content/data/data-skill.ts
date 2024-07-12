@@ -3543,7 +3543,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 4);
             setStat(values, 1, 'elemental_damage');
-            setUpgrade(values, 1, 4);
+            setUpgrade(values, 1, 1);
             addConstant(values, 35, false, EffectValueValueType.Upgrade, 'increased_damage_per_power');
             addConstant(values, 4, false, EffectValueValueType.Upgrade, 'max_power');
             addConstant(values, 4, false, EffectValueValueType.Upgrade, 'skill_2_4_tick_per_second');
@@ -3552,10 +3552,9 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     5: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 15);
+            setUpgrade(values, 0, 6);
         },
         additionalGenres: [SkillGenre.Obliteration]
     },
@@ -3858,7 +3857,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 8,
         order: 57,
         line: 5,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'completed_achievements');
             setStat(values, 0, 'skill_increased_damage_mult');
@@ -3870,7 +3868,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 9,
         order: 58,
         line: 5,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'maxed_upgrades');
             setStat(values, 0, 'brut_damage_percent');
@@ -3881,14 +3878,10 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     45: {
         masteryRequired: 1,
         order: 40,
-        disableOverride: true,
-        override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'arcane_bond');
-        }
+        additionalClassMechanics: [ 216 ]
     },
     46: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setAsUpgrade(values, 0);
@@ -3898,18 +3891,15 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     47: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'overdrive_inner_fire_additional_damage_when_triggered_by_book_smash');
         }
     },
     48: {
         masteryRequired: 3,
-        disableOverride: true
     },
     49: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'silence_duration');
         }
@@ -3917,7 +3907,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     50: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'attunment_pulse_remnant_cast_chance_per_arcanic_emblem');
             setAsUpgrade(values, 0);
@@ -3928,7 +3917,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     51: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_per_non_obliteration_emblem');
         }
@@ -3936,7 +3924,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     52: {
         masteryRequired: 5,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             synergyMultiply100(values, 0);
@@ -3946,7 +3933,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     53: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elemental_damage');
             setAsUpgrade(values, 0);
@@ -3955,7 +3941,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     54: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult_per_inner_fire');
             setAsUpgrade(values, 0);
@@ -3964,7 +3949,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     55: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'has_betime_effect');
         }
@@ -3972,7 +3956,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     56: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier_per_temporal_emblem');
             setAsUpgrade(values, 0);
@@ -3983,7 +3966,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     57: {
         masteryRequired: 1,
         order: 41,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'recast_chance_percent_per_non_obliteration_emblem');
             setAsUpgrade(values, 0);

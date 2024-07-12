@@ -38,7 +38,7 @@ export class SlormancerShortDataService {
         const bits = [
             ...this.versionToBinary(API_VERSION),
             ...this.slormancerBinaryCharacterService.characterToBinary(character),
-            ...this.slormancerBinaryConfigurationService.configurationToBinary(config, character),
+            ...this.slormancerBinaryConfigurationService.configurationToBinary(config, character, API_VERSION),
         ];
         return this.slormancerCompressorService.compressBinary(bits);
     }
@@ -54,7 +54,7 @@ export class SlormancerShortDataService {
             const version = this.binaryToVersion(bits);
             result.character = this.slormancerBinaryCharacterService.binaryToCharacter(bits, version);
             if (result.character !== null) {
-                result.configuration = this.slormancerBinaryConfigurationService.binaryToConfiguration(bits, result.character);
+                result.configuration = this.slormancerBinaryConfigurationService.binaryToConfiguration(bits, result.character, version);
             }
         } catch (e) {
             console.error(e)

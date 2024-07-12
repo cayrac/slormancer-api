@@ -85,6 +85,7 @@ Initial release
 ## bugs : 
 - Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
 - vérifier arcane bond damage
+- book smash passive synergy attack speed / cooldown
 
 ## TODO
 - mise à jour packages

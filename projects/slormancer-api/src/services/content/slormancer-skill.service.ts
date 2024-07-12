@@ -35,6 +35,7 @@ import { SlormancerMechanicService } from './slormancer-mechanic.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
 import { DATA_SLORM_COST } from '../../constants/content/data/data-slorm-cost';
+import { Character } from '../../model';
 
 @Injectable()
 export class SlormancerSkillService {
@@ -127,7 +128,7 @@ export class SlormancerSkillService {
     }
 
     private applyOverride(skill: Skill | SkillUpgrade | ClassMechanic, overrideData: DataSkill | null) {
-        console.log('Applying override for ', skill, overrideData);
+        // console.log('Applying override for ', skill, overrideData);
         if (overrideData !== null) {
             if (overrideData.override && (overrideData.disableOverride !== true)) {
                 overrideData.override(skill.values);
@@ -467,8 +468,8 @@ export class SlormancerSkillService {
         const upgradeCosts = this.getSlormUpgradeCosts(upgrade.slormTier, upgrade.line, upgrade.maxRank);
         upgrade.investedSlorm = upgradeCosts.reduce((total, current, index) => index < upgrade.rank ? current + total : total , 0);
         upgrade.upgradeSlormCost = upgradeCosts[upgrade.rank] ?? null;
-        console.log('invested slorm : ', upgrade.investedSlorm);
-        console.log('upgrade slorm cost : ', upgrade.upgradeSlormCost);
+        // console.log('invested slorm : ', upgrade.investedSlorm);
+        // console.log('upgrade slorm cost : ', upgrade.upgradeSlormCost);
 
         for (const effectValue of upgrade.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, upgrade.rank);
@@ -494,5 +495,9 @@ export class SlormancerSkillService {
         }
         
         upgrade.description = this.slormancerTemplateService.formatUpgradeDescription(upgrade.template, upgrade.values);
+    }
+
+    public getNumberOfMaxedUpgrades(character: Character): number {
+        return character.skills.map(skill => skill.upgrades).flat().filter(upgrade => upgrade.rank === upgrade.maxRank).length
     }
 }

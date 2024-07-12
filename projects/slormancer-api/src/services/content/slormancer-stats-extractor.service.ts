@@ -45,6 +45,7 @@ import { Activable, AncestralLegacy, AncestralLegacyType, MinMax } from '../../m
 import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerReaperService } from './slormancer-reaper.service';
 import { add, round } from '../../util';
+import { SlormancerSkillService } from './slormancer-skill.service';
 
 export declare type ExtractedStatMap = { [key: string]: Array<EntityValue<number>> }
 
@@ -67,7 +68,8 @@ export class SlormancerStatsExtractorService {
     constructor(private slormancerStatMappingService: SlormancerStatMappingService,
                 private slormancerMergedStatUpdaterService: SlormancerMergedStatUpdaterService,
                 private slormancerDataService: SlormancerDataService,
-                private slormancerReaperService: SlormancerReaperService
+                private slormancerReaperService: SlormancerReaperService,
+                private slormancerSkillService: SlormancerSkillService
         ) { }
 
     private getSynergyStatsItWillUpdate(stat: string, mergedStatMapping: Array<MergedStatMapping>): Array<{ stat: string, mapping?: MergedStatMapping }> {
@@ -188,7 +190,7 @@ export class SlormancerStatsExtractorService {
         return true;
     }
 
-    private addCharacterValues(character: Character, stats: ExtractedStats) {
+    private addCharacterValues(character: Character, config: CharacterConfig, stats: ExtractedStats) {
         const activables = this.getAllActiveActivables(character);
         this.addStat(stats.stats, 'half_level', character.level / 2, { character });
         this.addStat(stats.stats, 'remnant_damage_reduction_mult', -REMNANT_DAMAGE_REDUCTION, { synergy: 'Remnant base damage reduction' });
@@ -203,7 +205,9 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'aura_equipped_per_aura_active', Math.pow(auraSkills.length, 2) * 100, { character })
 
         if (character.heroClass === HeroClass.Mage) {
-            const maxedUpgrades = character.skills.map(skill => skill.upgrades).flat().filter(upgrade => upgrade.rank === upgrade.maxRank).length;
+            const maxedUpgrades = typeof config.maxed_upgrades === 'number'
+                ? config.maxed_upgrades
+                : this.slormancerSkillService.getNumberOfMaxedUpgrades(character);
             this.addStat(stats.stats, 'maxed_upgrades', maxedUpgrades, { synergy: 'Number of maxed upgrades' });
         }
         
@@ -781,7 +785,7 @@ export class SlormancerStatsExtractorService {
             stats: { ...additionalStats },
         }
 
-        this.addCharacterValues(character, result);
+        this.addCharacterValues(character, config, result);
         this.addConfigValues(character, config, result);
         this.addSkillPassiveValues(character, result, mergedStatMapping);
         this.addReaperValues(character, result, mergedStatMapping, config);
