@@ -3560,12 +3560,11 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     6: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 3);
+            setUpgrade(values, 0, 15);
             setStat(values, 1, 'elemental_damage');
-            setUpgrade(values, 1, 8);
+            setUpgrade(values, 1, 2);
             addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'aoe');
         },
         additionalGenres: [SkillGenre.Temporal]
@@ -3973,14 +3972,12 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     58: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'emblems_on_cast');
         }
     },
     59: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_damage_percent_per_arcanic_emblem');
             setAsUpgrade(values, 0);
@@ -3988,24 +3985,23 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     60: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'remnant_vulnerability_remnant_increased_damage_mult');
             setAsUpgrade(values, 0);
-        }
+        },
+        additionalClassMechanics: [ 217 ]
     },
     61: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
+            setStat(values, 0, 'skill_decreased_damage_mult');
             setAsUpgrade(values, 0);
         }
     },
     62: {
         masteryRequired: 3,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'max_charged_aoe_increased_size_percent');
             setAsUpgrade(values, 0);
@@ -4015,7 +4011,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     63: {
         masteryRequired: 3,
         line: 2,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'aoe_increased_size_percent');
             setAsUpgrade(values, 0);
@@ -4024,7 +4019,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     64: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'high_spirit_stacks_skill_increased_damage_mult');
             setAsUpgrade(values, 0);
@@ -4034,7 +4028,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     65: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 10, false, EffectValueValueType.Upgrade, 'increased_knockback');
         }
@@ -4042,7 +4035,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     66: {
         masteryRequired: 5,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult');
             setSynergyPrecision(values, 0, 0);
@@ -4053,7 +4045,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     67: {
         masteryRequired: 5,
         line: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'crit_chance_percent');
             setAsUpgrade(values, 0);
@@ -4062,7 +4053,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     68: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 10, false, EffectValueValueType.Upgrade, 'cast_on_cursor');
         }
@@ -4070,17 +4060,16 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     69: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'remnant_recast_chance');
             setAsUpgrade(values, 0);
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_on_cast');
-        }
+        },
+        additionalClassMechanics: [ 217 ]
     },
     70: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'cast_by_clone');
         }
@@ -4088,7 +4077,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     71: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'delay');
         }
@@ -4096,7 +4084,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     72: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult_per_non_temporal_emblem');
             setAsUpgrade(values, 0);
@@ -4105,7 +4092,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     73: {
         masteryRequired: 9,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'projectiles_stop_duration');
         }
