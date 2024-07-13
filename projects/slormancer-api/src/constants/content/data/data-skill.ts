@@ -3582,13 +3582,12 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     8: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 4);
             setAsUpgrade(values, 0);
             setStat(values, 1, 'elemental_damage');
-            setUpgrade(values, 1, 2);
+            setUpgrade(values, 1, 1);
             setAsUpgrade(values, 1);
         },
         additionalGenres: [SkillGenre.Arcanic]
@@ -4235,7 +4234,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     91: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'arcane_bond_on_hit_if_arcane');
             setAsUpgrade(values, 0);
@@ -4243,7 +4241,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     92: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'time_lock_on_hit_if_temporal');
             setAsUpgrade(values, 0);
@@ -4251,7 +4248,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     93: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'brut_chance_percent');
             setStat(values, 0, 'crit_chance_percent_if_obliteration');
@@ -4262,7 +4258,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     94: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'mana_on_hit_add_if_target_has_arcanic_discordance');
             setAsUpgrade(values, 0);
@@ -4275,7 +4270,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     95: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult_on_way_back');
             setAsUpgrade(values, 0);
@@ -4284,7 +4278,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     96: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'destroy_enemy_projectiles');
         }
@@ -4292,7 +4285,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     97: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'knockback_increased_percent_if_target_has_obliteration_discordance');
             setAsUpgrade(values, 0);
@@ -4301,7 +4293,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     98: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'increased_duration_on_clone_hit');
         }
@@ -4309,7 +4300,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     99: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_chance_percent_per_same_emblems');
             setAsUpgrade(values, 0);
@@ -4319,7 +4309,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 4,
         order: 101,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_duration_on_same_school_hit');
             setAsUpgrade(values, 0);
@@ -4329,7 +4318,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 3,
         order: 100,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_cast_if_same_emblem');
         }
@@ -4337,24 +4325,21 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     102: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_cast_if_last_3_emblems_different');
+            addConstant(values, 3, false, EffectValueValueType.Upgrade, 'remnant_cast_if_last_3_emblems_different');
         }
     },
     103: {
         masteryRequired: 6,
         order: 105,
         line: 4,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Stat, 'remnant_cast_if_target_has_all_discordance');
+            addConstant(values, 3, false, EffectValueValueType.Stat, 'remnant_cast_if_target_has_all_discordance');
         }
     },
     104: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'attunment_pulse_school_rotation_on_other_skill_cast');
         }
@@ -4363,7 +4348,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 7,
         order: 101,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'cast_by_clone');
         }
@@ -4371,16 +4355,14 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     106: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'charge_duration');
+            addConstant(values, 0.5, false, EffectValueValueType.Upgrade, 'charge_duration');
             addConstant(values, 3, false, EffectValueValueType.Upgrade, 'fully_charged_multicast_count');
         }
     },
     107: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 70, false, EffectValueValueType.Upgrade, 'size_reduction');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'skill_is_projectile');

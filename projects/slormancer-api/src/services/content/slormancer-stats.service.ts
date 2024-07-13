@@ -196,6 +196,10 @@ export class SlormancerStatsService {
         skillAndUpgrades.skill.manaCostType = skillAndUpgrades.skill.baseCostType;
         skillAndUpgrades.skill.genres = skillAndUpgrades.skill.baseGenres.slice(0);
         
+        if (extractedStats.stats['skill_is_projectile'] !== undefined && !skillAndUpgrades.skill.genres.includes(SkillGenre.Projectile)) {
+            skillAndUpgrades.skill.genres.push(SkillGenre.Projectile)
+        }
+
         if (character.heroClass === HeroClass.Huntress && skillAndUpgrades.skill.id === 4) {
             const physicalDamage = extractedStats.stats['damage_type_to_elemental'] === undefined;
             
