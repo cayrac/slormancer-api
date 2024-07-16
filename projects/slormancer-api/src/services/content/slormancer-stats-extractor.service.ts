@@ -568,6 +568,8 @@ export class SlormancerStatsExtractorService {
                 this.addMechanicValues(upgrade.relatedMechanics, stats);
                 this.addClassMechanicValues(upgrade.relatedClassMechanics, stats);
             }
+            
+            this.addStat(stats.stats, 'based_on_mastery_' + sau.skill.id + '_add', sau.skill.level, { skill: sau.skill });
         }
     }
 
@@ -806,15 +808,15 @@ export class SlormancerStatsExtractorService {
 
     private addSkillValues(skillAndUpgrades: CharacterSkillAndUpgrades, extractedStats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
         for (const skillValue of skillAndUpgrades.skill.values) {
-                if (isEffectValueSynergy(skillValue)) {
-                    if (!isDamageType(skillValue.stat) && skillValue.valueType !== EffectValueValueType.Upgrade) {
-                        extractedStats.synergies.push(synergyResolveData(skillValue, skillValue.displaySynergy, { skill: skillAndUpgrades.skill }, this.getSynergyStatsItWillUpdate(skillValue.stat, mergedStatMapping)));
-                    } else {
-                        extractedStats.isolatedSynergies.push(synergyResolveData(skillValue, skillValue.displaySynergy, { skill: skillAndUpgrades.skill }));
-                    }
-                } else if (skillValue.valueType === EffectValueValueType.Upgrade) {
-                    this.addStat(extractedStats.stats, skillValue.stat, skillValue.value, { skill: skillAndUpgrades.skill });
+            if (isEffectValueSynergy(skillValue)) {
+                if (!isDamageType(skillValue.stat) && skillValue.valueType !== EffectValueValueType.Upgrade) {
+                    extractedStats.synergies.push(synergyResolveData(skillValue, skillValue.displaySynergy, { skill: skillAndUpgrades.skill }, this.getSynergyStatsItWillUpdate(skillValue.stat, mergedStatMapping)));
+                } else {
+                    extractedStats.isolatedSynergies.push(synergyResolveData(skillValue, skillValue.displaySynergy, { skill: skillAndUpgrades.skill }));
                 }
+            } else if (skillValue.valueType === EffectValueValueType.Upgrade) {
+                this.addStat(extractedStats.stats, skillValue.stat, skillValue.value, { skill: skillAndUpgrades.skill });
+            }
         }
     }
 

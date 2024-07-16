@@ -20,6 +20,7 @@ export class SlormancerTranslateService {
         atk_arcanic: 'school_0',
         atk_temporal: 'school_1',
         atk_obliteration: 'school_2',
+        chance_to_rebound_orb: 'chance_to_rebound',
     };
 
     constructor(private slormancerDataService: SlormancerDataService) { }

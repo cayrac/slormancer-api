@@ -3609,12 +3609,11 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     10: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 5);
+            setUpgrade(values, 0, 9);
             setStat(values, 1, 'elemental_damage');
-            setUpgrade(values, 1, 5);
+            setUpgrade(values, 1, 2);
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'chance_to_pierce_percent');
         },
         additionalGenres: [SkillGenre.Arcanic]
@@ -4514,7 +4513,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     125: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult');
             synergyMultiply100(values, 0);
@@ -4524,17 +4522,18 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     126: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'bounce_to_remnant_chance');
+            setAsUpgrade(values, 0);
+            setSource(values, 0, 'chance_to_rebound');
             synergyMultiply100(values, 0);
             setSynergyPrecision(values, 0, 0);
             addConstant(values, 3, false, EffectValueValueType.Upgrade, 'bounce_to_remnant_count');
+            addConstant(values, 5, false, EffectValueValueType.Upgrade, 'rebound_chance_percent');
         }
     },
     127: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
@@ -4544,7 +4543,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     128: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_chance_percent_per_arcanic_emblem');
             setAsUpgrade(values, 0);
@@ -4557,7 +4555,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     129: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'cast_by_clone');
         }
@@ -4565,7 +4562,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     130: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
@@ -4574,27 +4570,22 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     131: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'orb_cast_in_random_direction');
         }
     },
     132: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'skill_increased_damage_mult');
+            setStat(values, 0, 'skill_elemental_damage_mult');
             setAsUpgrade(values, 0);
-            addConstant(values, -100, false, EffectValueValueType.Upgrade, 'skill_physical_damage_mult');
         }
     },
     133: {
         masteryRequired: 4,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
@@ -4602,16 +4593,11 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     134: {
         masteryRequired: 4,
-        line: 4,
-        disableOverride: true,
-        override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_rift_nova_when_it_should_fork');
-        }
+        line: 4
     },
     135: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elemental_damage');
             setAsUpgrade(values, 0);
@@ -4621,7 +4607,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     136: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'additional_projectile_add');
             setAsUpgrade(values, 0);
@@ -4631,7 +4616,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     137: {
         masteryRequired: 6,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
@@ -4640,7 +4624,6 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     138: {
         masteryRequired: 6,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_decreased_damage_mult_if_only_obliteration');
             setAsUpgrade(values, 0);
@@ -4649,17 +4632,15 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     139: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'remnant_orb_arcane_master_cast_count');
             setAsUpgrade(values, 0);
-            addConstant(values, 0.5, false, EffectValueValueType.Upgrade, 'remnant_orb_arcane_master_cast_tick');
+            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_orb_arcane_master_cast_tick');
         }
     },
     140: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult');
             setAsUpgrade(values, 0);

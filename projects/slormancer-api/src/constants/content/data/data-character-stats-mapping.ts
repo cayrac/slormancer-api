@@ -98,6 +98,23 @@ const CHANCE_TO_PIERCE: MergedStatMapping = {
     } 
 }
 
+const SKILL_MASTERY_LEVEL_MAPPING: MergedStatMapping[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(id => ({
+    stat: 'based_on_mastery_' + id,
+    precision: 0,
+    allowMinMax: false,
+    suffix: '',
+    source: {
+        flat: [
+            { stat: 'based_on_mastery_' + id + '_add' },
+        ],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [],
+        maxMultiplier: [],
+    } 
+}));
+
 export const SKILL_MANA_COST_MAPPING: MergedStatMapping = {
     stat: 'skill_mana_cost',
     precision: 0,
@@ -780,6 +797,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'adam_blessing_buff_cooldown_reduction_global_mult', condition: config => config.has_adam_blessing_buff },
                 { stat: 'cooldown_reduction_global_mult' },
+                { stat: 'cooldown_time_reduction_multiplier' },
                 { stat: 'attack_speed_global_mult' },
                 { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
                 { stat: 'self_control_cooldown_reduction_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
@@ -2259,6 +2277,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             maxMultiplier: [],
         } 
     },
+    ...SKILL_MASTERY_LEVEL_MAPPING
 ];
 
 export const HERO_MERGED_STATS_MAPPING: GameHeroesData<Array<MergedStatMapping>> = {

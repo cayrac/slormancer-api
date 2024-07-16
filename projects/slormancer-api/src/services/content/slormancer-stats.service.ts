@@ -65,29 +65,6 @@ export class SlormancerStatsService {
                 private slormancerStatUpdaterService: SlormancerMergedStatUpdaterService,
                 private slormancerStatMappingService: SlormancerStatMappingService) { }
 
-    private addSkillStats(stats: Array<MergedStat>, skills: Array<CharacterSkillAndUpgrades>) {
-        for (const sau of skills) {
-            stats.push({
-                allowMinMax: false,
-                readonly: false,
-                precision: 0,
-                displayPrecision: undefined,
-                stat: 'based_on_mastery_' + sau.skill.id,
-                total: sau.skill.level,
-                totalDisplayed: sau.skill.level,
-                suffix: '',
-                values: {
-                    flat: [ { value: sau.skill.level, extra: false, source: { skill: sau.skill }  }],
-                    max: [],
-                    percent: [],
-                    maxPercent: [],
-                    multiplier: [],
-                    maxMultiplier: [],
-                }
-            });
-        }
-    }
-
     private hasSynergyValueChanged(synergy: SynergyResolveData): boolean {
         let result = true;
 
@@ -257,7 +234,6 @@ export class SlormancerStatsService {
 
         result.extractedStats = extractedStats.stats;
         result.stats = this.slormancerStatMappingService.buildMergedStats(extractedStats.stats, mapping, config);
-        this.addSkillStats(result.stats, character.skills);
         
         if (character.ultimatum !== null && !character.ultimatum.locked) {
             this.slormancerStatMappingService.applyUltimatum(result.stats, mapping, character.ultimatum, config, result.extractedStats);
