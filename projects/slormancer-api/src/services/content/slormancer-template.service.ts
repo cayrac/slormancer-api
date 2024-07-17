@@ -242,7 +242,9 @@ export class SlormancerTemplateService {
                 const synergy = this.asSpan(this.formatValue(effectValue.displaySynergy, effectValue.percent), 'value');
                 const value = this.asSpan(this.formatValue(effectValue.displayValue, true), 'value');
                 template = this.replaceAnchor(template, synergy + details, this.VALUE_ANCHOR);
-                template = this.replaceAnchor(template, value, this.SYNERGY_ANCHOR);
+                if (effectValue.showValue) {
+                    template = this.replaceAnchor(template, value, this.SYNERGY_ANCHOR);
+                }
                 template = this.replaceAnchor(template, this.slormancerTranslateService.translate(effectValue.stat), '{damageType}');
             }
         }

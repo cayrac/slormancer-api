@@ -312,7 +312,6 @@ export class SlormancerSkillService {
                 + "\n" + 'Cast time : ' + castSeconds + 's (' + skill.castTime + '/60)' 
                 + "\n" + 'Estimated time between casts : ' + estimatedRealCooldown + 's'
         }
-        
         skill.description = this.slormancerTemplateService.formatSkillDescription(skill.template, skill.values);
         skill.levelIcon = 'level/' + Math.max(1, skill.baseLevel);
     }

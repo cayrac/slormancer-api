@@ -117,22 +117,33 @@ function variableToSynergy(values: Array<AbstractEffectValue>, index: number, so
     }
 }
 
+function setSynergyShowValue(values: Array<AbstractEffectValue>, index: number, showValue: boolean) {
+    const value = values[index]
+
+    if (value && isEffectValueSynergy(value)) {
+        value.showValue = showValue;
+    } else {
+        throw new Error('failed to change synergy showValue at index ' + index);
+    }
+}
 
 export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     0: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             addConstant(values, 8, false, EffectValueValueType.Duration, 'skill_duration');
             addConstant(values, 2.5, false, EffectValueValueType.AreaOfEffect, 'skill_aoe');
-            setStat(values, 0, 'banner_provocation_banner_max_health');
+            setStat(values, 0, 'physical_damage');
+            setSynergyShowValue(values, 0, false);
             setAsUpgrade(values, 0);
-            setStat(values, 1, 'banner_regeneration_buff_health_on_hit_add');
+            setStat(values, 1, 'banner_provocation_banner_max_health');
             setAsUpgrade(values, 1);
-            setStat(values, 2, 'banner_haste_buff_cooldown_reduction_global_mult');
+            setStat(values, 2, 'banner_regeneration_buff_health_on_hit_add');
             setAsUpgrade(values, 2);
-            setStat(values, 3, 'banner_sluggishness_slow');
+            setStat(values, 3, 'banner_haste_buff_cooldown_reduction_global_mult');
             setAsUpgrade(values, 3);
+            setStat(values, 4, 'banner_sluggishness_slow');
+            setAsUpgrade(values, 4);
         },
         specialization: 219
     },
@@ -1341,46 +1352,39 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     138: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'res_phy_percent_per_banner');
         }
     },
     139: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'skewer_on_hit_if_fortunate');
         }
     },
     140: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_if_target_is_skewered');
         }
     },
     141: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'refresh_banner_cooldown_on_kill');
         }
     },
     142: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             synergyMultiply100(values, 0);
         }
     },
     143: {
         masteryRequired: 2,
-        disableOverride: true
     },
     144: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_time_reduction_multiplier');
             setAsUpgrade(values, 0);
@@ -1389,25 +1393,21 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     145: {
         masteryRequired: 3,
-        disableOverride: true
     },
     146: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'block_stack_on_critical');
         }
     },
     147: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skewer_max_stack_add');
         }
     },
     148: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'banner_provocation_banner_def_phy');
             setAsUpgrade(values, 0);
@@ -1415,15 +1415,14 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     149: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'banner_regeneration_buff_mana_on_hit_add');
+            setSource(values, 0, 'health_regeneration');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'banner_knockback_on_land');
         }
     },
     150: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'banner_sluggishness_daze');
             setAsUpgrade(values, 0);
@@ -1432,7 +1431,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     151: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 3, false, EffectValueValueType.Stat, 'banner_haste_block_stack_per_second');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'banner_knockback_on_land');
@@ -1440,28 +1438,24 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     152: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'cooldown_reset_on_block');
         }
     },
     153: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'banner_fixed_order');
         }
     },
     154: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skewer_damage_percent_add');
         }
     },
     155: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'wood_stick_training_lance_stun_chance');
             addConstant(values, 2, false, EffectValueValueType.Duration, 'wood_stick_training_lance_stun_duration');
@@ -1469,25 +1463,21 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     156: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'mighty_swing_cadence_whirlwind_crit_damage_percent');
         }
     },
     157: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'grappling_hook_crest_shield_cooldown_time_reduction_multiplier');
         }
     },
     158: {
         masteryRequired: 7,
-        disableOverride: true
     },
     159: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {            
             addConstant(values, 0, false, EffectValueValueType.Stat, 'garbage_stat');
             addConstant(values, 100, false, EffectValueValueType.Stat, 'reduced_damage_from_melee_percent_if_source_is_full_life');
@@ -1495,14 +1485,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     160: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 0, false, EffectValueValueType.Stat, 'skewer_as_critical');
         }
     },
     161: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_if_not_fortunate_or_perfect');
         },
@@ -1510,7 +1498,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     162: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skewer_damage_per_second_percent');
         }

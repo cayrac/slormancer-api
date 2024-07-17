@@ -21,6 +21,7 @@ export class SlormancerTranslateService {
         atk_temporal: 'school_1',
         atk_obliteration: 'school_2',
         chance_to_rebound_orb: 'chance_to_rebound',
+        health_regen: 'health_regeneration',
     };
 
     constructor(private slormancerDataService: SlormancerDataService) { }
