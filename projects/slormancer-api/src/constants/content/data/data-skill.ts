@@ -149,7 +149,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     1: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 4);
@@ -1504,18 +1503,15 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     163: {
         masteryRequired: 1,
-        disableOverride: true
     },
     164: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'astral_retribution_increased_damage_mult');
         }
     },
     165: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_reduction_per_ennemy_hit');
             setAsUpgrade(values, 0);
@@ -1523,14 +1519,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     166: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'block_chance_is_lucky');
         }
     },
     167: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'astral_retribution_on_fortunate');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'astral_meteor_on_perfect');
@@ -1539,7 +1533,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     168: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'stun_chance_add');
             setAsUpgrade(values, 0);
@@ -1549,7 +1542,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     169: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'pull_distance');
             setAsUpgrade(values, 0);
@@ -1557,7 +1549,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     170: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'inner_fire_is_lucky');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'overdrive_is_lucky');
@@ -1565,42 +1556,36 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     171: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'astral_retribution_chance_on_astral_kill');
         }
     },
     172: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 4, false, EffectValueValueType.Upgrade, 'crest_shield_cast_on_perfect_cast');
         }
     },
     173: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Stat, 'luck_gained_on_cast');
         }
     },
     174: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'whirlwind_cast_on_block');
         }
     },
     175: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ancestral_strike_chance_is_lucky');
         }
     },
     176: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'inner_fire_crit_chance_percent');
         },
@@ -1608,7 +1593,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     177: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'overdrive_crit_chance_percent');
         },
@@ -1616,28 +1600,24 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     178: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'always_max_damage_if_fortunate_or_perfect');
         }
     },
     179: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'astral_meteor_increased_damage_mult');
         }
     },
     180: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'purge_on_cast');
         }
     },
     181: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'second_chance_health_restored_percent');
             addConstant(values,3, false, EffectValueValueType.Duration, 'second_chance_cooldown');
@@ -1645,14 +1625,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     182: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'astral_meteor_recast_chance');
         }
     },
     183: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 75, false, EffectValueValueType.Flat, 'chivalry_low_life_reduced_damage');
             addConstant(values, 25, false, EffectValueValueType.Duration, 'chivalry_low_life_treshold');
@@ -1662,7 +1640,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     184: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 3, false, EffectValueValueType.Upgrade, 'astral_retribution_on_cast');
         },
@@ -1670,7 +1647,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     185: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 4, false, EffectValueValueType.Flat, 'perfect_additional_projectile_add');
             addConstant(values, 100, false, EffectValueValueType.Flat, 'recast_chance_percent_if_perfect');
@@ -1678,7 +1654,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     186: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'keep_luck_chance');
         }
