@@ -158,7 +158,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     2: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 2);
@@ -1660,33 +1659,27 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     187: {
         masteryRequired: 1,
-        disableOverride: true
     },
     188: {
         masteryRequired: 1,
-        disableOverride: true
     },
     189: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'block_stack_on_nullify');
         }
     },
     190: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Flat, 'block_stack_per_second');
         }
     },
     191: {
         masteryRequired: 2,
-        disableOverride: true
     },
     192: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_duration_add');
             setAsUpgrade(values, 0)
@@ -1694,29 +1687,24 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     193: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 0, false, EffectValueValueType.Stat, 'min_block_stacks');
         }
     },
     194: {
         masteryRequired: 3,
-        disableOverride: true
     },
     195: {
         masteryRequired: 3,
-        disableOverride: true
     },
     196: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 0, false, EffectValueValueType.Upgrade, 'cooldown_time_reduction_per_hit_taken');
         }
     },
     197: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'retaliate_percent_on_blocked_hit');
             setStat(values, 1, 'thorns_percent_on_blocked_hit');
@@ -1724,21 +1712,18 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     198: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 0, false, EffectValueValueType.Stat, 'astral_retribution_on_block');
         }
     },
     199: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'astral_retribution_per_nullified_attack_on_buff_end');
         }
     },
     200: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'critical_chance');
             setStat(values, 0, 'retaliate_crit_chance_percent');
@@ -1747,7 +1732,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     201: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'critical_chance');
             setStat(values, 0, 'thorn_crit_chance_percent');
@@ -1755,21 +1739,18 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     202: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'skewer_on_hit_taken');
         }
     },
     203: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 7, false, EffectValueValueType.Stat, 'retaliate_dot_duration');
         }
     },
     204: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'stun_on_block_chance');
             addConstant(values, 3, false, EffectValueValueType.Duration, 'stun_on_block_duration');
@@ -1777,28 +1758,24 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     205: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, -35, false, EffectValueValueType.Stat, 'the_speed_percent_in_combat');
         }
     },
     206: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 100, false, EffectValueValueType.Stat, 'enduring_protector_buff_reduced_damage_from_area_percent');
         }
     },
     207: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 100, false, EffectValueValueType.Stat, 'retaliate_add_damages_after_mitigation');
         }
     },
     208: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 100, false, EffectValueValueType.Flat, 'garbage_stat');
             addConstant(values, 10, false, EffectValueValueType.Stat, 'block_damage_reduction_add');
@@ -1806,25 +1783,21 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     209: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult')
         }
     },
     210: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'add_chest_stats_twice');
         }
     },
     211: {
         masteryRequired: 8,
-        disableOverride: true
     },
     212: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'block_stack_gain_add');
         }
@@ -1832,8 +1805,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     222: {
         masteryRequired: 10,
         disableOverride: true,
-        override: values => {
-        }
     },
 }
 
