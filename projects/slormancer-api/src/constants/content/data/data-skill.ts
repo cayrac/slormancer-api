@@ -194,13 +194,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     6: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 5);
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 1, 7);
-            addConstant(values, 8, false, EffectValueValueType.Upgrade, 'cadence_cast_count');
+            addConstant(values, 5, false, EffectValueValueType.Upgrade, 'cadence_cast_count');
         }
     },
     7: {
@@ -598,17 +597,15 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     58: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'silence_chance');
             setAsUpgrade(values, 0);
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'silence_duration');
+            addConstant(values, 2, false, EffectValueValueType.Upgrade, 'silence_duration');
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'silence_chance_if_fortunate_or_perfect');
         }
     },
     59: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_if_fortunate_or_perfect');
             setAsUpgrade(values, 0);
@@ -616,7 +613,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     60: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'military_oppression_enemy_increased_damage'),
             setAsUpgrade(values, 0);
@@ -624,7 +620,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     61: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_increased_damage_mult'),
             synergyMultiply100(values, 0);
@@ -634,14 +629,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     62: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             values.push(effectValueSynergy(0, 100, EffectValueUpgradeType.UpgradeRank, true, 'enemy_percent_missing_health', 'non_magnified_increased_damage_mult', EffectValueValueType.Upgrade))
         }
     },
     63: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'block_stacks');
             setStat(values, 0, 'crit_chance_percent');
@@ -651,7 +644,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     64: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cadence_cast_count_new_value');
             setAsUpgrade(values, 0);
@@ -660,7 +652,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     65: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'magnified_if_fortunate_or_perfect');
         }
@@ -668,7 +659,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     66: {
         masteryRequired: 5,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cadence_critically_critical_crit_chance_percent');
             setAsUpgrade(values, 0);
@@ -679,7 +669,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     67: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'magnified_count_add_on_other_skill_cast');
         }
@@ -687,7 +676,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     68: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'chance_to_cast_whirlwind');
 
@@ -698,7 +686,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     69: {
         masteryRequired: 7,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'blademaster_crit_chance_percent');
             setAsUpgrade(values, 0);
@@ -707,7 +694,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     70: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 5, false, EffectValueValueType.Upgrade, 'recast_multiplier_if_perfect');
         }
@@ -715,14 +701,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     71: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'recast_are_magnified');
         }
     },
     72: {
         masteryRequired: 9,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 5, false, EffectValueValueType.Upgrade, 'astral_beat_max_stacks');
             addConstant(values, 3, false, EffectValueValueType.Upgrade, 'astral_beat_astral_retribution_count');
