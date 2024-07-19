@@ -340,7 +340,9 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     24: {
         masteryRequired: 9,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'recast_additional_hit');
+            setValue(values, 0, 100);
+            setSource(values, 0, 'recast_chance');
+            setAsUpgrade(values, 0);
         }
     },
     25: {
