@@ -1705,7 +1705,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
 export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     0: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setUpgrade(values, 0, 6);
             setStat(values, 0, 'physical_damage');
@@ -2835,31 +2834,25 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         }
     },
     133: {
-        masteryRequired: 1,
-        disableOverride: true
+        masteryRequired: 1
     },
     134: {
-        masteryRequired: 1,
-        disableOverride: true
+        masteryRequired: 1
     },
     135: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
         }
     },
     136: {
-        masteryRequired: 2,
-        disableOverride: true
+        masteryRequired: 2
     },
     137: {
-        masteryRequired: 2,
-        disableOverride: true
+        masteryRequired: 2
     },
     138: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'light_arrow_increased_damage')
@@ -2867,7 +2860,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     139: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Flat, 'skill_deafult_serenity_drop');
             addConstant(values, 3, false, EffectValueValueType.Flat, 'skill_serenity_drop');
@@ -2875,78 +2867,66 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     140: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_apply_poison');
         }
     },
     141: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'the_max_health_percent_per_totem');
         }
     },
     142: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_pull_enemies')
         }
     },
     143: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'turret_syndrome_spawn_chance_on_kill');
         }
     },
     144: {
-        masteryRequired: 4,
-        disableOverride: true
+        masteryRequired: 4
     },
     145: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'trap_arm_time_reduction_mult');
         }
     },
     146: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'arrow_show_rain_of_arrow_void_arrow_immortal_arrow_apply_poison');
         }
     },
     147: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'trap_increased_damage_percent');
         }
     },
     148: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'light_arrow_chance_to_pierce_percent');
         }
     },
     149: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'trap_additional_rearm');
         }
     },
     150: {
-        masteryRequired: 6,
-        disableOverride: true
+        masteryRequired: 6
     },
     151: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'light_arrow_shared_projectile_modifiers_aoe');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'light_arrow_shared_projectile_modifiers');
@@ -2954,26 +2934,22 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     152: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'turret_syndrome_reduced_cooldown_per_serenity');
             
         }
     },
     153: {
-        masteryRequired: 7,
-        disableOverride: true
+        masteryRequired: 7
     },
     154: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'turret_syndrome_on_cooldown_dodge_percent')
         }
     },
     155: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'life_on_hit_if_tormented')
             
@@ -2985,7 +2961,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     157: {
         masteryRequired: 8,
-        disableOverride: true
     },
     158: {
         masteryRequired: 1,
@@ -3308,7 +3283,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     217: {
         masteryRequired: 8,
-        disableOverride: true
+        override: values => {
+            setStat(values, 0, 'cooldown_time_reduction_multiplier');
+        }
     },
     218: {
         masteryRequired: 1,
