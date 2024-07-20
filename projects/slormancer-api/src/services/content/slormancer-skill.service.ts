@@ -60,7 +60,7 @@ export class SlormancerSkillService {
         return 15;
     }
 
-    public getSlormUpgradeCosts(slormTier: string, line: number, maxRank: number): number[] {
+    public getSlormUpgradeCosts(upgrade: SkillUpgrade, slormTier: string, line: number, maxRank: number): number[] {
         const tier = slormTier.length > 0 ? parseInt(slormTier) : null;
         let result: number[] = [];
 
@@ -78,7 +78,7 @@ export class SlormancerSkillService {
         }
 
         if (result.length === 0) {
-            console.log('No upgrade costs found for ', slormTier, line, maxRank);
+            console.log('No upgrade costs found for ', upgrade.name, slormTier, line, maxRank);
         }
         
         return result;
@@ -464,7 +464,7 @@ export class SlormancerSkillService {
         if (upgrade.slormTier === '') {
             console.log('upgrading with bad slorm tier : ', upgrade);
         }
-        const upgradeCosts = this.getSlormUpgradeCosts(upgrade.slormTier, upgrade.line, upgrade.maxRank);
+        const upgradeCosts = this.getSlormUpgradeCosts(upgrade, upgrade.slormTier, upgrade.line, upgrade.maxRank);
         upgrade.investedSlorm = upgradeCosts.reduce((total, current, index) => index < upgrade.rank ? current + total : total , 0);
         upgrade.upgradeSlormCost = upgradeCosts[upgrade.rank] ?? null;
         // console.log('invested slorm : ', upgrade.investedSlorm);

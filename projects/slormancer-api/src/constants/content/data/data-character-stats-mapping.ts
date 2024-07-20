@@ -755,6 +755,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'the_speed_percent_in_combat', condition: config => config.in_combat },
                 { stat: 'life_orb_the_speed_global_mult', condition: config => config.life_orbs_count > 0, multiplier: (config, stats) => Math.min(config.life_orbs_count, getMaxStat(stats, 'max_life_orb')) },
                 { stat: 'the_speed_global_mult_while_not_curving_time_or_time_shifting', condition: config => !config.is_curving_time_or_time_shifting },
+                { stat: 'movement_speed_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
             ],
             maxMultiplier: [],
         } 
@@ -1101,6 +1102,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'res_phy_global_mult' },
                 { stat: 'res_phy_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_global_mult_on_low_life_treshold', 0)) },
                 { stat: 'res_phy_mag_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_mag_global_mult_on_low_life_treshold', 0)) },
+                { stat: 'res_mag_armor_global_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
             ],
             maxMultiplier: [],
         } 
@@ -1126,7 +1128,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'res_mag_global_mult' },
                 { stat: 'res_mag_global_mult_after_elemental_damage_taken', condition: config => config.took_elemental_damage_recently },
-                { stat: 'res_mag_global_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
+                { stat: 'res_mag_armor_global_mult_while_channeling_whirlwind', condition: config => config.is_channeling_whirlwind },
                 { stat: 'res_phy_mag_global_mult_on_low_life',condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'res_phy_mag_global_mult_on_low_life_treshold', 0)) },            ],
             maxMultiplier: [],
         } 
