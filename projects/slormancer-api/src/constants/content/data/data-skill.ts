@@ -176,7 +176,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: null,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 5);
+            setUpgrade(values, 0, 6);
         }
     },
     5: {
@@ -213,7 +213,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: null,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 6);
+            setUpgrade(values, 0, 4);
         }
     },
     9: {
@@ -226,10 +226,9 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     10: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 1, 7);
+            setUpgrade(values, 1, 17);
             setStat(values, 1, 'physical_damage');
         }
     },
@@ -1108,14 +1107,12 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     120: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'root_duration');
         }
     },
     121: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'training_lance_astral_retribution_chance_on_hit');
             setAsUpgrade(values, 0);
@@ -1124,7 +1121,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     122: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'elder_lance_brut_chance_percent');
             setAsUpgrade(values, 0);
@@ -1132,7 +1128,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     123: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'training_lance_additional_damage_add');
             setAsUpgrade(values, 0);
@@ -1141,7 +1136,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     124: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1, false, EffectValueValueType.Stat, 'cosmic_stack_astral_retribution_increased_damage');
         }
@@ -1149,7 +1143,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     125: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elder_lance_increased_damage_on_elite_percent');
             setAsUpgrade(values, 0);
@@ -1158,7 +1151,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     126: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'training_lance_rebound_chance_percent');
             setAsUpgrade(values, 0);
@@ -1167,7 +1159,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     127: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'elder_lance_additional_damage_per_cosmic_stack');
         }
@@ -1175,7 +1166,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     128: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'elder_lance_ancestral_damage_per_cosmic_stack');
         }
@@ -1183,7 +1173,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     129: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 75, false, EffectValueValueType.Upgrade, 'skill_decreased_damage_mult');
         }
@@ -1191,7 +1180,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     130: {
         masteryRequired: 4,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'apply_max_skewer_on_hit');
         }
@@ -1199,7 +1187,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     131: {
         masteryRequired: 4,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elder_lance_skill_increased_damage_per_enemy_hit');
             setAsUpgrade(values, 0);
@@ -1208,7 +1195,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     132: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Flat, 'additional_elder_lance');
         }
@@ -1216,7 +1202,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     133: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'physical_damage');
             setAsUpgrade(values, 0);
@@ -1227,7 +1212,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     134: {
         masteryRequired: 6,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'additional_elder_lance_if_perfect');
             setAsUpgrade(values, 0);
@@ -1236,7 +1220,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     135: {
         masteryRequired: 6,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'additional_elder_lance_tour');
         }
@@ -1244,7 +1227,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     136: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'training_lance_chance_to_pierce_percent_if_low_life');
             setAsUpgrade(values, 0);
@@ -1257,7 +1239,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     137: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'add_twice_elder_lance_to_training_lance');
         }
