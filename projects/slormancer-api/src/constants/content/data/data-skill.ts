@@ -1714,7 +1714,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     1: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             addConstant(values, 50, false, EffectValueValueType.Stat, 'assassin_haste_buff_dodge_global_mult');
         },
@@ -2956,15 +2955,13 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         }
     },
     156: {
-        masteryRequired: 8,
-        disableOverride: true
+        masteryRequired: 8
     },
     157: {
         masteryRequired: 8,
     },
     158: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'isolated_target_increased_damage');
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'isolated_target_distance');
@@ -2972,40 +2969,34 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     159: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'assassin_haste_buff_movement_speed');
         }
     },
     160: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'negative_effect_target_increased_damage');
         }
     },
     161: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'close_target_increased_damage');
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'close_target_radius');
         }
     },
     162: {
-        masteryRequired: 2,
-        disableOverride: true
+        masteryRequired: 2
     },
     163: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'tumble_cooldown_reset_chance_on_cast');
         }
     },
     164: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'self_control_cooldown_reduction_global_mult');
             addConstant(values, 8, false, EffectValueValueType.Duration, 'self_control_disabled_duration');
@@ -3013,7 +3004,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     165: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'poisoned_enemy_increased_damage');
             
@@ -3021,95 +3011,79 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     166: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'last_cast_tormented_remove_cost');
         }
     },
     167: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'last_cast_tormented_crit_chance_percent');
         }
     },
     168: {
         masteryRequired: 4,
-        disableOverride: true
     },
     169: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_spawn_on_tumble_cast');
         }
     },
     170: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'trap_spawn_on_tumble_cast');
         }
     },
     171: {
-        masteryRequired: 5,
-        disableOverride: true
+        masteryRequired: 5
     },
     172: {
-        masteryRequired: 5,
-        disableOverride: true
+        masteryRequired: 5
     },
     173: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'arrow_shot_on_tumble_cast');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'arrow_shot_on_tumble_land');
         }
     },
     174: {
-        masteryRequired: 6,
-        disableOverride: true
+        masteryRequired: 6
     },
     175: {
-        masteryRequired: 6,
-        disableOverride: true
+        masteryRequired: 6
     },
     176: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_pull_on_tumble_land');
         }
     },
     177: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'arrow_shot_void_arrow_immortal_arrow_repeal_non_elemental_projectile');
         }
     },
     178: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'tormented_movement_speed');
         }
     },
     179: {
-        masteryRequired: 7,
-        disableOverride: true
+        masteryRequired: 7
     },
     180: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'critical_strike_chance_is_lucky');
         }
     },
     181: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 1, 'tormented_additional_projectile_add');
             setStat(values, 2, 'arrow_shot_void_arrow_heavy_explosive_increased_mana_cost');
