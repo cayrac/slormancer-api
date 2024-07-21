@@ -1721,7 +1721,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     2: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'smoke_screen_buff_increased_damage')
             addConstant(values, 3, false, EffectValueValueType.Duration, 'skill_duration');
@@ -3091,22 +3090,18 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     182: {
         masteryRequired: 1,
-        disableOverride: true
     },
     183: {
         masteryRequired: 1,
-        disableOverride: true
     },
     184: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'smoke_screen_buff_crit_chance_percent');
         }
     },
     185: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Flat, 'skill_serenity_increase_default');
             addConstant(values, 2, false, EffectValueValueType.Flat, 'skill_serenity_increase_total');
@@ -3114,18 +3109,15 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     186: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 50, false, EffectValueValueType.Flat, 'idle_armor_penetration_percent');
         }
     },
     187: {
-        masteryRequired: 2,
-        disableOverride: true
+        masteryRequired: 2
     },
     188: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'skill_duration_add');
@@ -3133,14 +3125,12 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     189: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'trigger_all_ravenous_dagger_at_once');
         }
     },
     190: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'ravenous_dagger_explosions_on_trigger');
@@ -3148,32 +3138,27 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     191: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'smoke_screen_buff_ignore_incoming_attacks');
         }
     },
     192: {
-        masteryRequired: 4,
-        disableOverride: true
+        masteryRequired: 4
     },
     193: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'gold_drop_on_critical_strike');
         }
     },
     194: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'smoke_screen_buff_mana_regen_global_mult');
         }
     },
     195: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'trap_spawn_on_cast');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'trap_spawn_on_buff_end');
@@ -3181,7 +3166,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     196: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_spawn_on_tormented');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_spawn_on_delighted');
@@ -3189,7 +3173,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     197: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'poison_increased_damage_per_poisoned_enemy');
             addConstant(values, 5, false, EffectValueValueType.AreaOfEffect, 'poison_increased_damage_per_poisoned_enemy_range');
@@ -3197,25 +3180,21 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     198: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'movement_speed_after_trap_triggered');
         }
     },
     199: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_spawn_on_evade');
         }
     },
     200: {
-        masteryRequired: 6,
-        disableOverride: true
+        masteryRequired: 6
     },
     201: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 1.5, false, EffectValueValueType.Upgrade, 'smoke_screen_stun_aoe_on_cast_range');
             setAsUpgrade(values, 0);
@@ -3224,33 +3203,28 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     202: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'inner_fire_apply_poison');
         },
         additionalMechanics: [MechanicType.InnerFire]
     },
     203: {
-        masteryRequired: 7,
-        disableOverride: true
+        masteryRequired: 7
     },
     204: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'poison_increased_damage');
         }
     },
     205: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'poison_remaining_damage_on_reapply');
         }
     },
     206: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_pull_on_smoke_screen_end');
         }
