@@ -17,6 +17,7 @@ export interface CharacterConfig {
     elite_under_command: number;
     last_cast_tormented: boolean;
     last_cast_delighted: boolean;
+    recent_delighted_arrow_shot: boolean;
     next_cast_is_fortunate: boolean;
     next_cast_is_perfect: boolean;
     next_cast_is_new_emblem: boolean;

@@ -1729,9 +1729,8 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     3: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
-            setUpgrade(values, 0, 4);
+            setUpgrade(values, 0, 6);
             setStat(values, 0, 'physical_damage');
         }
     },
@@ -1809,7 +1808,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     11: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setUpgrade(values, 0, 100);
@@ -1818,7 +1816,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     12: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => { 
             setAsUpgrade(values, 0);
             setStat(values, 0, 'arrow_shot_rebound_chance_percent');
@@ -1826,7 +1823,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     13: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'arrow_shot_fork_chance_percent');
@@ -1834,14 +1830,12 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     14: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'trap_increased_damage_if_tracked');
         }
     },
     15: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'chance_to_pierce_percent');
@@ -1849,7 +1843,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     16: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'fork_count');
@@ -1857,7 +1850,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     17: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'increased_proj_speed_percent_if_tormented');
@@ -1865,14 +1857,13 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     18: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'dodge_global_mult_if_delighted');
+            setStat(values, 0, 'dodge_global_mult_if_recent_delighted_arrow_shot');
+            addConstant(values, 4, false, EffectValueValueType.Flat, 'garbage_stat');
         }
     },
     19: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_per_rebound');
             addConstant(values, 100, false, EffectValueValueType.Flat, 'first_hit_after_rebound_increased_damage');
@@ -1882,7 +1873,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     20: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_chance_percent');
             setAsUpgrade(values, 0);
@@ -1892,7 +1882,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     21: {
         masteryRequired: 7,
         order: 10,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'additional_projectile_add');
             setAsUpgrade(values, 0);
@@ -1901,7 +1890,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     22: {
         masteryRequired: 2,
         order: 11,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
             setStat(values, 0, 'arrow_shot_mana_on_kill_add');
@@ -1909,7 +1897,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     23: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_per_pierce');
             setAsUpgrade(values, 0);
@@ -1917,7 +1904,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     24: {
         masteryRequired: 9,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'fork_reset_chance');
             setAsUpgrade(values, 0);
@@ -1925,7 +1911,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     25: {
         masteryRequired: 10,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'reset_poison_on_hit');
         }

@@ -1225,7 +1225,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             multiplier: [
                 { stat: 'dodge_global_mult' },
                 { stat: 'assassin_haste_buff_dodge_global_mult', condition: config => config.has_assassin_haste_buff },
-                { stat: 'dodge_global_mult_if_delighted', condition: config => config.serenity === DELIGHTED_VALUE }
+                { stat: 'dodge_global_mult_if_recent_delighted_arrow_shot', condition: config => config.recent_delighted_arrow_shot }
             ],
             maxMultiplier: [],
         } 
