@@ -1736,9 +1736,8 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     4: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
-            setUpgrade(values, 0, 3);
+            setUpgrade(values, 0, 6);
             setStat(values, 0, 'physical_damage');
             addConstant(values, 1.2, false, EffectValueValueType.AreaOfEffect, 'skill_aoe');
         }
@@ -1917,7 +1916,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     26: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult_per_potential_projectile');
             setAsUpgrade(values, 0);
@@ -1925,7 +1923,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     27: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_spawn_on_cast_if_tormented');
             setAsUpgrade(values, 0);
@@ -1934,7 +1931,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     28: {
         masteryRequired: 2,
         order: 34,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'travel_time_reduction');
             setAsUpgrade(values, 0);
@@ -1942,7 +1938,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     29: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => { 
             setStat(values, 0, 'aoe_increased_size_percent');
             setAsUpgrade(values, 0);
@@ -1952,7 +1947,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     30: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'armor_broken_on_hit_chance');
             setAsUpgrade(values, 0);
@@ -1960,7 +1954,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     31: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'pull_range_on_cast');
             setAsUpgrade(values, 0);
@@ -1968,7 +1961,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     32: {
         masteryRequired: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult');
             setAsUpgrade(values, 0);
@@ -1978,7 +1970,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     33: {
         masteryRequired: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'trap_spawn_on_cast_chance');
             setAsUpgrade(values, 0);
@@ -1986,7 +1977,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     34: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'additional_volleys');
             setAsUpgrade(values, 0);
@@ -1994,7 +1984,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     35: {
         masteryRequired: 6,
-        disableOverride: true,
         override: values => { 
             addConstant(values, -25, false, EffectValueValueType.Flat, 'aoe_increased_size_percent_mult');
             setStat(values, 0, 'additional_volleys');
@@ -2004,14 +1993,12 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     36: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'pull_ravenous_dagger_on_hit');
         }
     },
     37: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'slow_on_hit_percent');
             setAsUpgrade(values, 0);
@@ -2021,7 +2008,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     38: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_chance_percent_per_enemy_in_aoe');
             setAsUpgrade(values, 0);
@@ -2029,7 +2015,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     39: {
         masteryRequired: 8,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'health_on_kill_add');
             setAsUpgrade(values, 0);
@@ -2037,7 +2022,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     40: {
         masteryRequired: 9,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_per_volley_before');
             setAsUpgrade(values, 0);
@@ -2045,7 +2029,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     41: {
         masteryRequired: 10,
-        disableOverride: true,
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Flat, 'delightful_rain_stack_cooldown_reduction_global_mult');
             addConstant(values, 25, false, EffectValueValueType.Flat, 'delightful_rain_max_stacks');
