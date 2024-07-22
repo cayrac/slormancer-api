@@ -1760,10 +1760,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     7: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 7);
+            setUpgrade(values, 0, 4);
             setStat(values, 1, 'elemental_damage');
             setUpgrade(values, 1, 20);
             addConstant(values, 3, false, EffectValueValueType.Duration, 'skill_duration');
@@ -2275,14 +2274,12 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     74: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 5, true, EffectValueValueType.Upgrade, 'skill_duration_reduction_if_tormented')
         }
     },
     75: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_duration_reduction');
             setAsUpgrade(values, 0);
@@ -2290,7 +2287,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     76: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_range_add');
             setAsUpgrade(values, 0);
@@ -2299,7 +2295,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     77: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, true, EffectValueValueType.Upgrade, 'blind_on_hit');
         }
@@ -2307,7 +2302,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     78: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'mana_regen_add_if_delighted_and_enemy_has_latent_storm');
             setAsUpgrade(values, 0);
@@ -2316,7 +2310,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     79: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'the_speed_percent_per_latent_storm');
             setStat(values, 0, 'the_speed_percent_per_latent_storm_max');
@@ -2326,7 +2319,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     80: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elemental_damage');
             addConstant(values, 0.5, false, EffectValueValueType.AreaOfEffect, 'shearing_winds_aoe');
@@ -2335,7 +2327,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     81: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'skill_spread_if_delighted');
             setAsUpgrade(values, 0);
@@ -2344,7 +2335,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     82: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult');
             addConstant(values, 2, false, EffectValueValueType.Upgrade, 'skill_duration_add');
@@ -2353,7 +2343,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     83: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elemental_damage');
             addConstant(values, 1, false, EffectValueValueType.AreaOfEffect, 'skill_explosion_aoe');
@@ -2362,7 +2351,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     84: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             setAsUpgrade(values, 0);
         }
@@ -2370,7 +2358,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     85: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'transfer_if_target_die');
         }
@@ -2378,7 +2365,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     86: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
         }
@@ -2386,7 +2372,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     87: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 30, false, EffectValueValueType.Upgrade, 'latent_storm_stack_increased_damage');
             setStat(values, 0, 'latent_storm_max_stacks');
@@ -2396,7 +2381,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     88: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'additional_target');
         }
@@ -3183,12 +3167,13 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     218: {
         masteryRequired: 1,
-        disableOverride: true
+        override: values => {
+            addConstant(values, 0.5, false, EffectValueValueType.Upgrade, 'garbage_stat');
+        }
     },
     219: {
         masteryRequired: 8,
-        line: 5,
-        disableOverride: true
+        line: 5
     },
     220: {
         masteryRequired: 7,
