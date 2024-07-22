@@ -536,6 +536,7 @@ export class SlormancerStatsExtractorService {
     }
 
     private addSkillPassiveValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
+        let poisonUpgrades = 0;
         for (const sau of character.skills) {
             const skillEquiped = character.supportSkill === sau.skill || character.primarySkill === sau.skill || character.secondarySkill === sau.skill;
             
@@ -567,10 +568,16 @@ export class SlormancerStatsExtractorService {
 
                 this.addMechanicValues(upgrade.relatedMechanics, stats);
                 this.addClassMechanicValues(upgrade.relatedClassMechanics, stats);
+
+                if (upgradeActive && upgrade.relatedClassMechanics.some(classMechanic => classMechanic.id === 211)) {
+                    poisonUpgrades++;
+                }
             }
             
             this.addStat(stats.stats, 'based_on_mastery_' + sau.skill.id + '_add', sau.skill.level, { skill: sau.skill });
         }
+        console.log('poison_upgrades : ', poisonUpgrades);
+        this.addStat(stats.stats, 'poison_upgrades', poisonUpgrades, { character });
     }
 
     public addActivableValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {

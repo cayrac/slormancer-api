@@ -464,10 +464,13 @@ export class SlormancerValueUpdaterService {
         }
     }
 
-    private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}): T {
+    private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}, debug = false): T {
         // TODO factoriser avec la version faite sur stat mapping service
         const mergedStat = this.slormancerStatMappingService.buildMergedStat({ ...stats, ...specificstats }, mapping, config);
         this.slormancerMergedStatUpdaterService.updateStatTotal(mergedStat);
+        if (debug) {
+            console.log('stab mergedStat :', mergedStat);
+        }
         return <T>mergedStat.total;
     }
 
@@ -1082,7 +1085,10 @@ export class SlormancerValueUpdaterService {
             mana_cost_add: manaCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(skillAndUpgrades.skill.manaCostType), source: entity }],
         };
-        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats));
+        if (skillAndUpgrades.skill.id === 5) {
+            console.log('stab mana cost mapping :', statsResult.extractedStats);
+        }
+        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats, skillAndUpgrades.skill.id === 5));
         
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });
 

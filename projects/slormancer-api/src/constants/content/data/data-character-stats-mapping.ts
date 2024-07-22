@@ -130,7 +130,6 @@ export const SKILL_MANA_COST_MAPPING: MergedStatMapping = {
         maxPercent: [],
         multiplier: [
             { stat: 'arrow_shot_void_arrow_heavy_explosive_increased_mana_cost', condition: (_, stats) => [3, 6, 8].includes(getFirstStat(stats, 'skill_id', 0)) },
-            { stat: 'mana_cost_mult_skill', condition: (_, stats) => hasCostType(stats, SkillCostType.Mana, SkillCostType.ManaSecond) },
             { stat: 'mana_cost_reduction_skill_mult', multiplier: () => -1 }, // void arrow discount void  
             { stat: 'efficiency_skill_reduction_skill_mult', condition: config => config.efficiency_buff , multiplier: () => -1 },
             { stat: 'skill_has_no_cost_if_low_mana', condition: (_, stats) => (100 - getFirstStat(stats, 'percent_missing_mana', 0)) < getFirstStat(stats, 'skill_has_no_cost_if_low_mana_treshold', 0) },
@@ -189,6 +188,7 @@ export const MANA_COST_MAPPING: MergedStatMapping = {
             { stat: 'cost_mult_skill_per_enemy_under_control', multiplier: config => -1 + config.enemy_under_command + config.elite_under_command * 10 },
             { stat: 'efficiency_skill_reduction_skill_mult', condition: config => config.efficiency_buff, multiplier: () => -1 },
             { stat: 'spectral_shape_mana_cost_override' },
+            { stat: 'mana_cost_mult', condition: (_, stats) => hasCostType(stats, SkillCostType.Mana, SkillCostType.ManaSecond) },
         ],
         maxMultiplier: [],
     } 
@@ -961,7 +961,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                     multiplier: (config, stats) => 1 + (valueOrDefault(getFirstStat(stats, 'nimble_champion_percent'), 100) / 100) * Math.min(config.nimble_champion_stacks, valueOrDefault(getMaxStacks(stats, 'nimble_champion_max_stacks'), 0))
                 },
                 {
-                    stat: 'ancestral_stab_slash_buff_brut_chance_percent',
+                    stat: 'brut_chance_percent_while_ancestral_stab_slash_buff',
                     condition: config => config.has_ancestral_stab_slash_buff, 
                 },
                 { stat: 'brut_chance_percent_per_temporal_emblem', condition: config => config.temporal_emblems > 0, multiplier: config => config.temporal_emblems },
@@ -2114,6 +2114,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'non_projectile_increased_damage_mult', condition: (_, stats) => !hasStat(stats, 'skill_is_projectile'), multiplier: () => -1 },
                 { stat: 'increased_damage_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
                 { stat: 'skill_increased_damage_if_mana_full', condition: (_, stats) => getFirstStat(stats, 'percent_missing_mana', 0) === 0  },
+                { stat: 'increased_damage_per_poison_upgrade', condition: (_, stats) => getFirstStat(stats, 'poison_upgrades', 0) > 0, multiplier: (_, stats) => getFirstStat(stats, 'poison_upgrades', 0)  },
             ],
             maxMultiplier: [
             ],

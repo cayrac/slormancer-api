@@ -1744,7 +1744,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     5: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setUpgrade(values, 0, 4);
@@ -1911,8 +1910,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     25: {
         masteryRequired: 10,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'reset_poison_on_hit');
-        }
+            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     26: {
         masteryRequired: 5,
@@ -2038,28 +2038,25 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     42: {
         masteryRequired: 1,
-        
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'next_skill_apply_poison_if_tormented');
-        }
+            addConstant(values, 3, false, EffectValueValueType.Upgrade, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     43: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'ancestral_stab_slash_buff_required_hits');
-            addConstant(values, 50, false, EffectValueValueType.Upgrade, 'ancestral_stab_slash_buff_brut_chance_percent');
-            addConstant(values, 2, false, EffectValueValueType.Upgrade, 'ancestral_stab_slash_buff_duration');
+            setStat(values, 0, 'garbage_stat');
             setAsUpgrade(values, 0);
+            addConstant(values, 2, false, EffectValueValueType.Upgrade, 'garbage_stat');
+            addConstant(values, 30, false, EffectValueValueType.Upgrade, 'brut_chance_percent_while_ancestral_stab_slash_buff');
         }
     },
     44: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult');
-            setStat(values, 1, 'mana_cost_mult_skill');
+            setStat(values, 1, 'mana_cost_mult');
             setAsUpgrade(values, 0);
             setAsUpgrade(values, 1);
         }
@@ -2067,15 +2064,13 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     45: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'recast_chance_percent');
+            setStat(values, 0, 'recast_chance_percent_ignored'); // not used for any skill stat
             setAsUpgrade(values, 0);
         }
     },
     46: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'daze_on_hit_percent');
             addConstant(values, 4, false, EffectValueValueType.Flat, 'daze_on_hit_duration');
@@ -2085,23 +2080,22 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     47: {
         masteryRequired: 3,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'poison_on_first_hit');
-        }
+            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     48: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
+            setStat(values, 0, 'increased_damage_per_poison_upgrade');
             setAsUpgrade(values, 0);
         }
     },
     49: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
             setAsUpgrade(values, 0);
@@ -2109,7 +2103,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     50: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'elemental_resistance_broken_on_hit');
             setAsUpgrade(values, 0);
@@ -2117,7 +2110,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     51: {
         masteryRequired: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_damage_percent');
             setAsUpgrade(values, 0);
@@ -2126,32 +2118,28 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     52: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'crit_damage_percent');
-            synergyMultiply100(values, 0);
             setAsUpgrade(values, 0);
         }
     },
     53: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'overdrive_on_kill');
         }
     },
     54: {
         masteryRequired: 7,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'poison_on_hit_propagation');
+            setStat(values, 0, 'garbage_stat');
             setAsUpgrade(values, 0);
-        }
+        },
+        additionalClassMechanics: [ 211 ]
     },
     55: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'double_damage_if_double_kill');
         }
@@ -2159,15 +2147,14 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     56: {
         masteryRequired: 8,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'poison_health_leech_percent_if_delighted');
             setAsUpgrade(values, 0);
-        }
+        },
+        additionalClassMechanics: [ 211 ]
     },
     57: {
         masteryRequired: 9,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'recast_of_recast_chance');
             setAsUpgrade(values, 0);
@@ -2241,7 +2228,8 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         disableOverride: true,
         override: values => {
             addConstant(values, 5, false, EffectValueValueType.Upgrade, 'poison_on_hit');
-        }
+        },
+        additionalClassMechanics: [ 211 ]
     },
     67: {
         masteryRequired: 5,
@@ -2637,8 +2625,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         line: 4,
         disableOverride: true,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'poison_on_climax_and_delighted');
-        }
+            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     114: {
         masteryRequired: 5,
@@ -2834,8 +2823,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     140: {
         masteryRequired: 3,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Stat, 'ravenous_dagger_apply_poison');
-        }
+            addConstant(values, 1, false, EffectValueValueType.Stat, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     141: {
         masteryRequired: 3,
@@ -2867,8 +2857,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     146: {
         masteryRequired: 5,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Stat, 'arrow_show_rain_of_arrow_void_arrow_immortal_arrow_apply_poison');
-        }
+            addConstant(values, 1, false, EffectValueValueType.Stat, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     147: {
         masteryRequired: 5,
@@ -2973,8 +2964,8 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         masteryRequired: 3,
         override: values => { 
             setStat(values, 0, 'poisoned_enemy_increased_damage');
-            
-        }
+        },
+        additionalClassMechanics: [ 211 ]
     },
     166: {
         masteryRequired: 3,
@@ -3143,8 +3134,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         masteryRequired: 5,
         override: values => { 
             setStat(values, 0, 'poison_increased_damage_per_poisoned_enemy');
-            addConstant(values, 5, false, EffectValueValueType.AreaOfEffect, 'poison_increased_damage_per_poisoned_enemy_range');
-        }
+            addConstant(values, 5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     198: {
         masteryRequired: 5,
@@ -3172,9 +3164,10 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     202: {
         masteryRequired: 7,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Stat, 'inner_fire_apply_poison');
+            addConstant(values, 1, false, EffectValueValueType.Stat, 'garbage_stat');
         },
-        additionalMechanics: [MechanicType.InnerFire]
+        additionalMechanics: [MechanicType.InnerFire],
+        additionalClassMechanics: [ 211 ]
     },
     203: {
         masteryRequired: 7
@@ -3183,13 +3176,15 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         masteryRequired: 7,
         override: values => {
             setStat(values, 0, 'poison_increased_damage');
-        }
+        },
+        additionalClassMechanics: [ 211 ]
     },
     205: {
         masteryRequired: 8,
         override: values => {
-            setStat(values, 0, 'poison_remaining_damage_on_reapply');
-        }
+            setStat(values, 0, 'garbage_stat');
+        },
+        additionalClassMechanics: [ 211 ]
     },
     206: {
         masteryRequired: 8,
