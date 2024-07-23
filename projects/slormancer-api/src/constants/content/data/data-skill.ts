@@ -1782,10 +1782,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     9: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            setUpgrade(values, 0, 8);
+            setUpgrade(values, 0, 11);
             addConstant(values, 50, false, EffectValueValueType.Upgrade, 'climax_increased_damage');
         }
     },
@@ -2482,7 +2481,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     103: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setSource(values, 0, 'movement_speed_percent');
             setStat(values, 0, 'increased_damage_mult');
@@ -2492,21 +2490,18 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     104: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, true, EffectValueValueType.Upgrade, 'increased_damage_mult_per_target_left_health_percent');
         }
     },
     105: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, true, EffectValueValueType.Upgrade, 'increased_damage_mult_per_target_missing_health_percent');
         }
     },
     106: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, true, EffectValueValueType.Upgrade, 'increased_range');
         }
@@ -2514,7 +2509,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     107: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 0, false, EffectValueValueType.Upgrade, 'cost_and_cooldown');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'no_cost_if_tormented');
@@ -2524,7 +2518,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     108: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'cooldown_reset_on_climax');
         }
@@ -2532,7 +2525,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     109: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'cooldown_reduction_percent_on_critical_strike');
             setAsUpgrade(values, 0);
@@ -2541,7 +2533,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     110: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'move_to_climax');
         }
@@ -2549,7 +2540,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     111: {
         masteryRequired: 2,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'climax_crit_chance_percent');
             setAsUpgrade(values, 0);
@@ -2559,7 +2549,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     112: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'blind_duration');
             setAsUpgrade(values, 0);
@@ -2569,7 +2558,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     113: {
         masteryRequired: 4,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'garbage_stat');
         },
@@ -2578,7 +2566,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     114: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'spawn_trap_on_climax_and_tormented');
         }
@@ -2586,7 +2573,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     115: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'overdrive_chance_percent');
             setAsUpgrade(values, 0);
@@ -2595,13 +2581,11 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     116: {
         masteryRequired: 6,
-        line: 5,
-        disableOverride: true
+        line: 5
     },
     117: {
         masteryRequired: 7,
         line: 5,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'opposite_finesse_increased_damages');
             setAsUpgrade(values, 0);
