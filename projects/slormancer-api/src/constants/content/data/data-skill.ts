@@ -3127,12 +3127,7 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     220: {
         masteryRequired: 7,
         line: 5
-    },
-    222: {
-        masteryRequired: 7,
-        line: 5,
-        disableOverride: true
-    },
+    }
 }
 
 export const DATA_SKILL_2: { [key: number]: DataSkill } = {
@@ -3274,11 +3269,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     },
     14: {
         masteryRequired: 2,
-        line: 1,
-        disableOverride: true,
-        override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'remnant_cast_on_cast_count');
-        }
+        line: 1
     },
     15: {
         masteryRequired: 6,
