@@ -1194,6 +1194,16 @@ export class SlormancerValueUpdaterService {
             climaxValue.value = climaxAdd.reduce((t, v) => t + v.value, climaxValue.baseValue);
             climaxValue.displayValue = round(climaxValue.value, 3);
         }
+        
+        const voidArrowCountValue = skillAndUpgrades.skill.values.find(value => value.stat === 'void_arrow_count_if_fully_charged');
+        if (voidArrowCountValue) {
+            const voidArrowCountOverride = valueOrDefault(statsResult.extractedStats['void_arrow_count_if_fully_charged_override'], [])[0];
+            if (voidArrowCountOverride) {
+                voidArrowCountValue.displayValue = voidArrowCountOverride.value;
+            } else {
+                voidArrowCountValue.displayValue = voidArrowCountValue.value;
+            }
+        }
 
         const instructionsValue = skillAndUpgrades.skill.values.find(value => value.stat === 'instructions');
         if (instructionsValue && isEffectValueVariable(instructionsValue)) {
@@ -1239,7 +1249,6 @@ export class SlormancerValueUpdaterService {
         }
 
         if (upgrade.genres.includes(SkillGenre.AreaOfEffect)) {
-
             const aoeValues = upgrade.values.filter(value => value.valueType === EffectValueValueType.AreaOfEffect);
             for (const value of aoeValues) {
                 let base;

@@ -142,9 +142,12 @@ export class SlormancerSkillService {
                 }
             }
 
-            if (overrideData.additionalGenres && 'genres' in skill && 'baseGenres' in skill) {
-                skill.baseGenres.push(...overrideData.additionalGenres)
+            if (overrideData.additionalGenres && 'genres' in skill) {
                 skill.genres.push(...overrideData.additionalGenres)
+            }
+
+            if (overrideData.additionalGenres && 'baseGenres' in skill) {
+                skill.baseGenres.push(...overrideData.additionalGenres)
             }
 
             if (overrideData.order !== undefined && 'order' in skill) {

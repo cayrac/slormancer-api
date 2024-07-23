@@ -1772,10 +1772,9 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     8: {
         masteryRequired: null,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
-            // setUpgrade(values, 0, 3);
+            setUpgrade(values, 0, 5);
             addConstant(values, 300, false, EffectValueValueType.Upgrade, 'max_charge');
             addConstant(values, 3, false, EffectValueValueType.Upgrade, 'void_arrow_count_if_fully_charged');
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'chance_to_pierce_percent_if_fully_charged');
@@ -2387,23 +2386,20 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     89: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'rebound_chance_percent_if_fully_charged');
         }
     },
     90: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'chance_to_pierce_percent');
+            setStat(values, 0, 'increased_damage_mult');
             synergyMultiply100(values, 0);
             setAsUpgrade(values, 0);
         }
     },
     91: {
         masteryRequired: 1,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'increased_damage_mult');
             synergyMultiply100(values, 0);
@@ -2413,7 +2409,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     92: {
         masteryRequired: 1,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'mana_cost_reduction_skill_mult');
             setAsUpgrade(values, 0);
@@ -2422,25 +2417,22 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     93: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 5, true, EffectValueValueType.Upgrade, 'void_arrow_count_if_fully_charged_override');
+            addConstant(values, 5, false, EffectValueValueType.Upgrade, 'void_arrow_count_if_fully_charged_override');
+            addConstant(values, 3, false, EffectValueValueType.Upgrade, 'garbage_stat');
         }
     },
     94: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
-            setStat(values, 0, 'increased_damage_mult');
+            setStat(values, 0, 'elemental_damage');
             setAsUpgrade(values, 0);
-            addConstant(values, -100, true, EffectValueValueType.Upgrade, 'skill_elemental_damage_mult');
         }
     },
     95: {
         masteryRequired: 3,
         line: 3,
-        disableOverride: true,
         override: values => {
             addConstant(values, 1, true, EffectValueValueType.Upgrade, 'wormhole_on_hit');
         }
@@ -2448,17 +2440,14 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     96: {
         masteryRequired: 2,
         line: 2,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'overdrive_chance_percent');
             setAsUpgrade(values, 0);
-            addConstant(values, 1, true, EffectValueValueType.Upgrade, 'can_trigger_overdrive');
         }
     },
     97: {
         masteryRequired: 5,
         line: 4,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'physical_damage');
         }
@@ -2466,20 +2455,18 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     98: {
         masteryRequired: 6,
         line: 4,
-        disableOverride: true,
         override: values => {
-            addConstant(values, 1.5, true, EffectValueValueType.AreaOfEffect, 'garbage_stat');
-        }
+            addConstant(values, 1.5, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
+        },
+        additionalGenres: [ SkillGenre.AreaOfEffect ]
     },
     99: {
         masteryRequired: 6,
-        line: 4,
-        disableOverride: true
+        line: 4
     },
     100: {
         masteryRequired: 4,
         line: 3,
-        disableOverride: true,
         override: values => {
             setStat(values, 0, 'charge_speed_mult');
             setAsUpgrade(values, 0);
@@ -2487,19 +2474,11 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     },
     101: {
         masteryRequired: 7,
-        line: 5,
-        disableOverride: true,
-        override: values => {
-            addConstant(values, 1, true, EffectValueValueType.Upgrade, 'delighted_on_cast');
-        }
+        line: 5
     },
     102: {
         masteryRequired: 8,
-        line: 5,
-        disableOverride: true,
-        override: values => {
-            addConstant(values, 100, true, EffectValueValueType.Upgrade, 'charge_speed_mult_if_tormented');
-        }
+        line: 5
     },
     103: {
         masteryRequired: 1,
