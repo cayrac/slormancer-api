@@ -18,4 +18,7 @@ export interface GameDataAttribute {
     IT_TEXT: string;
     RU_TEXT: string;
     PT_TEXT: string;
+    PO_TEXT: string;
+    KR_TEXT: string;
+    TUR_TEXT: string;
 }

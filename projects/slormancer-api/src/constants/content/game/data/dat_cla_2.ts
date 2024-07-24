@@ -875,8 +875,8 @@ export const GAME_DATA_MAGE_SKILL: GameDataSkill[] = [
     {
         "REF": 14,
         "EN_NAME": "Remnant Copycat",
-        "EN_DESCRIPTION": "Whenever you cast or an Arcane Clone Arcane Missile, you also cast a <Remnant> of Arcane Missile a few moments later.",
-        "EN": "Remnant Copycat//Whenever you cast or an Arcane Clone Arcane Missile, you also cast a <Remnant> of Arcane Missile a few moments later.",
+        "EN_DESCRIPTION": "Whenever you or an Arcane Clone casts Arcane Missile, you also cast a <Remnant> of Arcane Missile a few moments later.",
+        "EN": "Remnant Copycat//Whenever you or an Arcane Clone casts Arcane Missile, you also cast a <Remnant> of Arcane Missile a few moments later.",
         "FR": "Vestige Copieur//Lorsque vous ou un Clone Arcanique lancez Missile Arcanique, vous lancez un Vestige de Missile Arcanique quelques instants plus tard.",
         "FR_NAME": "Vestige Copieur",
         "FR_DESCRIPTION": "Lorsque vous ou un Clone Arcanique lancez Missile Arcanique, vous lancez un Vestige de Missile Arcanique quelques instants plus tard.",

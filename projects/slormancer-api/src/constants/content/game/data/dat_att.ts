@@ -18,7 +18,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 1,
@@ -37,7 +40,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 2,
@@ -56,7 +62,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 3,
@@ -75,7 +84,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 4,
@@ -94,7 +106,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 5,
@@ -113,7 +128,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 6,
@@ -132,7 +150,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 7,
@@ -151,7 +172,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 8,
@@ -170,7 +194,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 9,
@@ -189,7 +216,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 10,
@@ -208,7 +238,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 11,
@@ -227,7 +260,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 12,
@@ -246,7 +282,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 13,
@@ -265,7 +304,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 14,
@@ -284,7 +326,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 15,
@@ -303,7 +348,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 16,
@@ -322,7 +370,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 23,
@@ -341,7 +392,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 24,
@@ -360,7 +414,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 19,
@@ -379,7 +436,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 20,
@@ -398,7 +458,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 21,
@@ -417,7 +480,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 22,
@@ -436,7 +502,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 17,
@@ -455,7 +524,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 18,
@@ -474,7 +546,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 25,
@@ -493,7 +568,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 26,
@@ -512,7 +590,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 27,
@@ -531,7 +612,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 28,
@@ -550,7 +634,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 29,
@@ -569,7 +656,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 30,
@@ -588,7 +678,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 31,
@@ -607,7 +700,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 32,
@@ -626,7 +722,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 33,
@@ -645,7 +744,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 34,
@@ -664,7 +766,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 35,
@@ -683,7 +788,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 36,
@@ -702,7 +810,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 37,
@@ -721,7 +832,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 38,
@@ -740,7 +854,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 39,
@@ -759,7 +876,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 40,
@@ -778,7 +898,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 41,
@@ -797,7 +920,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 42,
@@ -816,7 +942,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 43,
@@ -835,7 +964,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 44,
@@ -854,7 +986,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 45,
@@ -873,7 +1008,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 46,
@@ -892,7 +1030,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 47,
@@ -911,7 +1052,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 48,
@@ -930,7 +1074,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 49,
@@ -949,7 +1096,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 50,
@@ -968,7 +1118,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 51,
@@ -987,7 +1140,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 52,
@@ -1006,7 +1162,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 53,
@@ -1025,7 +1184,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 54,
@@ -1044,7 +1206,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 55,
@@ -1063,7 +1228,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 56,
@@ -1082,7 +1250,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 57,
@@ -1101,7 +1272,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 58,
@@ -1120,7 +1294,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 59,
@@ -1139,7 +1316,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 60,
@@ -1158,7 +1338,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 61,
@@ -1177,7 +1360,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 62,
@@ -1196,7 +1382,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 63,
@@ -1215,7 +1404,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 64,
@@ -1234,7 +1426,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 65,
@@ -1253,7 +1448,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 66,
@@ -1272,7 +1470,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 67,
@@ -1291,7 +1492,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 68,
@@ -1310,7 +1514,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 69,
@@ -1329,7 +1536,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 70,
@@ -1348,7 +1558,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 71,
@@ -1367,7 +1580,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 72,
@@ -1386,7 +1602,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 73,
@@ -1405,7 +1624,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 74,
@@ -1424,7 +1646,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 75,
@@ -1443,7 +1668,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 76,
@@ -1462,7 +1690,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 77,
@@ -1481,7 +1712,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 78,
@@ -1500,7 +1734,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 79,
@@ -1519,7 +1756,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 80,
@@ -1538,7 +1778,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 81,
@@ -1557,7 +1800,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 82,
@@ -1576,7 +1822,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 83,
@@ -1595,7 +1844,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 84,
@@ -1614,7 +1866,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 85,
@@ -1633,7 +1888,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 92,
@@ -1652,7 +1910,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 87,
@@ -1671,7 +1932,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 88,
@@ -1690,7 +1954,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 89,
@@ -1709,7 +1976,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 90,
@@ -1728,7 +1998,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 91,
@@ -1747,7 +2020,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 86,
@@ -1766,7 +2042,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 93,
@@ -1785,7 +2064,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 94,
@@ -1804,7 +2086,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 95,
@@ -1823,7 +2108,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 96,
@@ -1832,7 +2120,7 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "LEVEL": 1,
         "VALUE": "0.5",
         "TYPE": "%",
-        "STAT": "attack_speed_percent",
+        "STAT": "attack_speed_global_mult",
         "EN_TEXT": "",
         "FR_TEXT": "",
         "CH_TEXT": "",
@@ -1842,7 +2130,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 97,
@@ -1861,7 +2152,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 98,
@@ -1880,7 +2174,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 99,
@@ -1899,7 +2196,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 100,
@@ -1918,7 +2218,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 101,
@@ -1937,7 +2240,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 102,
@@ -1956,7 +2262,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 103,
@@ -1975,7 +2284,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 104,
@@ -1994,7 +2306,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 105,
@@ -2013,7 +2328,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 106,
@@ -2032,7 +2350,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 107,
@@ -2051,7 +2372,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 108,
@@ -2070,7 +2394,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 109,
@@ -2089,7 +2416,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 110,
@@ -2108,7 +2438,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 111,
@@ -2127,7 +2460,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 112,
@@ -2146,7 +2482,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 113,
@@ -2165,7 +2504,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 114,
@@ -2184,7 +2526,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 118,
@@ -2203,7 +2548,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 116,
@@ -2222,7 +2570,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 117,
@@ -2241,7 +2592,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 121,
@@ -2260,7 +2614,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 119,
@@ -2279,7 +2636,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 120,
@@ -2298,7 +2658,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 124,
@@ -2317,7 +2680,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 122,
@@ -2336,7 +2702,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 123,
@@ -2355,7 +2724,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 127,
@@ -2374,7 +2746,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 125,
@@ -2393,7 +2768,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 126,
@@ -2412,7 +2790,10 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     },
     {
         "REF": 115,
@@ -2431,6 +2812,9 @@ export const GAME_DATA_ATTRIBUTES: GameDataAttribute[] = [
         "ES_TEXT": "",
         "IT_TEXT": "",
         "RU_TEXT": "",
-        "PT_TEXT": ""
+        "PT_TEXT": "",
+        "PO_TEXT": "",
+        "KR_TEXT": "",
+        "TUR_TEXT": ""
     }
 ]

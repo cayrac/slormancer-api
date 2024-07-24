@@ -7312,7 +7312,7 @@ export const GAME_DATA_DIALOGUES = [
         "TYPE": "dialogue",
         "OVERHEAD_PERCENT": null,
         "EN_DIAL": "[bryan]It reads: #\"I am a room, yet I have no doors nor windows.#What am I?\"/",
-        "FR_DIAL": "[bryan]Il est écrit :#\"Je suis une pièce, pourtant je n'ai ni portes ni fenêtres. Que suis-je ?\"/",
+        "FR_DIAL": "[bryan]Il est écrit :#\"J'ai un chapeau mais pas de tête. J'ai un pied mais pas de chaussure. Qui suis-je?\"/",
         "CH_DIAL": "",
         "TW_DIAL": "",
         "JP_DIAL": "",
