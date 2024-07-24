@@ -6,6 +6,9 @@ import {
     ARCANE_CLONE_ATTACK_SPEED_REDUCTION,
     ASTRAL_METEOR_DAMAGE_PERCENT,
     ASTRAL_RETRIBUTION_DAMAGE_PERCENT,
+    ATTACK_SPEED_PER_DELIGHTED_STACK,
+    COOLDOWN_REDUCTION_PER_DELIGHTED_STACK,
+    DELIGHTED_VALUE,
     POISON_DAMAGE_PERCENT,
     RAVENOUS_DAGGER_DAMAGE_PERCENT,
     REMNANT_DAMAGE_REDUCTION,
@@ -37,7 +40,7 @@ import { Entity } from '../../model/entity';
 import { EntityValue } from '../../model/entity-value';
 import { effectValueSynergy } from '../../util/effect-value.util';
 import { synergyResolveData } from '../../util/synergy-resolver.util';
-import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefault } from '../../util/utils';
+import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, minAndMax, valueOrDefault } from '../../util/utils';
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
@@ -209,6 +212,12 @@ export class SlormancerStatsExtractorService {
                 ? config.maxed_upgrades
                 : this.slormancerSkillService.getNumberOfMaxedUpgrades(character);
             this.addStat(stats.stats, 'maxed_upgrades', maxedUpgrades, { synergy: 'Number of maxed upgrades' });
+        }
+
+        if (character.heroClass === HeroClass.Huntress) {
+            const serenity = minAndMax(0, config.serenity, DELIGHTED_VALUE);
+            this.addStat(stats.stats, 'attack_speed_percent', serenity * ATTACK_SPEED_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
+            this.addStat(stats.stats, 'cooldown_reduction_global_mult', (DELIGHTED_VALUE - serenity) * COOLDOWN_REDUCTION_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
         }
         
         const allCharacterMasteries = character.skills.reduce((total, skill) => total + skill.skill.level, 0);
@@ -576,7 +585,6 @@ export class SlormancerStatsExtractorService {
             
             this.addStat(stats.stats, 'based_on_mastery_' + sau.skill.id + '_add', sau.skill.level, { skill: sau.skill });
         }
-        console.log('poison_upgrades : ', poisonUpgrades);
         this.addStat(stats.stats, 'poison_upgrades', poisonUpgrades, { character });
     }
 

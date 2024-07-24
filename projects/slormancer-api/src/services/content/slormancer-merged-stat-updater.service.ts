@@ -93,7 +93,7 @@ export class SlormancerMergedStatUpdaterService {
     }
 
     public hasDiminishingResult(stat: string): boolean {
-        return stat === 'attack_speed' || stat === 'enemy_attack_speed';
+        return stat === 'attack_speed' || stat === 'enemy_attack_speed' || stat === 'cooldown_reduction';
     }
 
     public getTotalWithoutExtra(mergedStat: MergedStat): number | MinMax {

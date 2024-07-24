@@ -2618,7 +2618,7 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         masteryRequired: 1,
         line: 2,
         override: values => {
-            setStat(values, 0, 'mana_regen_add_per_hit');
+            setSource(values, 0, 'skill_mana_cost');
             setAsUpgrade(values, 0);
         }
     },

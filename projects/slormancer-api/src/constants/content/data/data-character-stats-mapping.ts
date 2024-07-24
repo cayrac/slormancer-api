@@ -4,7 +4,7 @@ import { ALL_SKILL_COST_TYPES, SkillCostType } from '../../../model/content/enum
 import { SkillElement } from '../../../model/content/skill-element';
 import { GameHeroesData } from '../../../model/parser/game/game-save';
 import { ExtractedStatMap } from '../../../services/content/slormancer-stats-extractor.service';
-import { valueOrDefault } from '../../../util/utils';
+import { minAndMax, valueOrDefault } from '../../../util/utils';
 import { DELIGHTED_VALUE } from '../../common';
 
 function getFirstStat(stats: ExtractedStatMap, stat: string, defaultValue: number = 0): number {
@@ -227,6 +227,76 @@ export const LIFE_COST_MAPPING: MergedStatMapping = {
     } 
 };
 
+export const COOLDOWN_REDUCTION_MAPPING: MergedStatMapping = 
+{
+    stat: 'cooldown_reduction',
+    precision: 3,
+    allowMinMax: false,
+    suffix: '%',
+    source: {
+        flat: [
+            { stat: 'cooldown_reduction_percent' }
+        ],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [
+            { stat: 'cooldown_reduction_global_mult' },
+        ],
+        maxMultiplier: [],
+    } 
+};
+
+export const ATTACK_SPEED_MAPPING: MergedStatMapping = 
+{
+    stat: 'attack_speed',
+    precision: 3,
+    allowMinMax: false,
+    suffix: '%',
+    source: {
+        flat: [],
+        max: [],
+        percent: [],
+        maxPercent: [],
+        multiplier: [
+            { stat: 'attack_speed_percent' },
+            // retrouver chaque stat et la replacer là ou il faut
+            // il faudrait mettre à jour les fichiers js
+            { stat: 'adam_blessing_buff_cooldown_reduction_global_mult', condition: config => config.has_adam_blessing_buff },
+            { stat: 'cooldown_time_reduction_multiplier' },
+            { stat: 'attack_speed_global_mult' },
+            { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
+            { stat: 'self_control_cooldown_reduction_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
+            { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, multiplier: (config, stats) => Math.min(config.delightful_rain_stacks, getMaxStacks(stats, 'delightful_rain_max_stacks')) },
+            { stat: 'exhilerating_senses_stack_cooldown_reduction_global_mult', condition: config => config.exhilerating_senses_stacks > 0, multiplier: config => config.exhilerating_senses_stacks },
+            { stat: 'banner_haste_buff_cooldown_reduction_global_mult', condition: config => config.has_banner_haste_buff },
+            { stat: 'frenzy_stack_cooldown_reduction_global_mult', condition: config => config.frenzy_stacks > 0, multiplier: (config, stats) => Math.min(config.frenzy_stacks, getMaxStacks(stats, 'frenzy_max_stacks')) },
+            { stat: 'arcane_clone_cooldown_reduction_global_mult', condition: (_, stats) => hasStat(stats, 'cast_by_clone' )},
+            { stat: 'arcane_clone_cooldown_reduction_global_mult_if_in_breach', condition: (config, stats) => hasStat(stats, 'cast_by_clone') && config.clone_is_in_breach_range },
+            { stat: 'chrono_speed_stack_cooldown_reduction_global_mult', condition: config => config.chrono_speed_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_speed_stacks, getMaxStacks(stats, 'chrono_speed_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
+            { stat: 'arcane_flux_stack_cooldown_reduction_global_mult', condition: config => config.arcane_flux_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_flux_stacks, getMaxStacks(stats, 'arcane_flux_max_stacks')) },
+            { stat: 'cooldown_reduction_global_mult_per_enfeeble_in_radius', condition: config => config.enfeeble_stacks_in_radius > 0, multiplier: config => config.enfeeble_stacks_in_radius },
+            { stat: 'booster_max_cooldown_reduction_global_mult', condition: config => config.has_booster_max_buff },
+            { stat: 'shadow_bargain_cooldown_reduction_global_mult', condition: config => config.has_shadow_bargain_buff },
+            { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
+            { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
+            { stat: 'cooldown_reduction_global_mult_on_combo', condition: config => config.victims_combo > 0 },
+            { stat: 'cooldown_reduction_global_mult_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
+            { stat: 'cooldown_reduction_global_mult_while_not_curving_time_or_time_shifting', condition: config => !config.is_curving_time_or_time_shifting },
+            /*{ // Disabled due to the bloodthirst attack speed bug
+                stat: 'cooldown_reduction_global_mult_per_bloodthirst_stack',
+                condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
+                multiplier: (config, stats) => Math.max(0, Math.min(config.bloodthirst_stacks, getMaxStacks(stats, 'bloodthirst_max_stacks')))
+            },*/
+            {
+                stat: 'wreak_havoc_cooldown_reduction_global_mult',
+                multiplier: (config, stats) => - getFirstStat(stats, 'wreak_havoc_max_stacks') + Math.max(0, Math.min(config.wreak_havoc_stacks, getFirstStat(stats, 'wreak_havoc_max_stacks')))
+            }
+        ],
+        maxMultiplier: [],
+    } 
+};
+
 export const COOLDOWN_MAPPING: MergedStatMapping = {
     stat: 'cooldown_time',
     precision: 4,
@@ -242,10 +312,10 @@ export const COOLDOWN_MAPPING: MergedStatMapping = {
         percent: [],
         maxPercent: [],
         multiplier: [
-            { stat: 'turret_syndrome_reduced_cooldown_per_serenity', condition: (config, stats) => config.serenity > 0 && getFirstStat(stats, 'skill_id') === 0, multiplier: config => - config.serenity },
+            { stat: 'turret_syndrome_reduced_cooldown_per_serenity', condition: (config, stats) => config.serenity > 0 && getFirstStat(stats, 'skill_id') === 0, multiplier: config => - minAndMax(0, config.serenity, DELIGHTED_VALUE) },
             { stat: 'cooldown_time_multiplier'},
             { stat: 'cooldown_time_reduction_multiplier', multiplier: () => -1 },
-            { stat: 'cooldown_time_multiplier_if_tormented', condition: config => config.serenity === 0 },
+            { stat: 'cooldown_time_multiplier_if_tormented', condition: config => config.serenity <= 0 },
             { stat: 'grappling_hook_crest_shield_cooldown_time_reduction_multiplier', condition: (_, stats) => [7, 8].includes(getFirstStat(stats, 'skill_id')), multiplier: () => -1 },
             {
                 stat: 'quick_silver_cooldown_time_reduction_multiplier',
@@ -421,7 +491,7 @@ export const SKILL_ADDITIONAL_DURATION: MergedStatMapping = {
         flat: [
             { stat: 'skill_duration_add' },
             { stat: 'skill_duration_reduction', multiplier: () => -1 },
-            { stat: 'skill_duration_reduction_if_tormented', condition: config => config.serenity === 0, multiplier: () => -1 },
+            { stat: 'skill_duration_reduction_if_tormented', condition: config => config.serenity <= 0, multiplier: () => -1 },
             { stat: 'temporal_breach_collision_stack_duration_add', condition: config => config.temporal_breach_collision_stacks > 0, multiplier: (config, stats) => Math.min(config.temporal_breach_collision_stacks, getMaxStacks(stats, 'breach_collision_max_stacks')) },
         ],
         max: [],
@@ -660,7 +730,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'mana_regen_add' },
-                { stat: 'mana_regen_add_if_delighted_and_enemy_has_latent_storm', condition: config => config.serenity === DELIGHTED_VALUE && config.enemies_affected_by_latent_storm > 0 },
+                { stat: 'mana_regen_add_if_delighted_and_enemy_has_latent_storm', condition: config => config.serenity >= DELIGHTED_VALUE && config.enemies_affected_by_latent_storm > 0 },
                 { stat: 'mana_regen_add_per_enemy_in_breach_range', condition: config => config.enemies_in_breach_range > 0, multiplier: config => config.enemies_in_breach_range },
             ],
             max: [],
@@ -741,7 +811,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'the_speed_percent' },
                 { stat: 'the_speed_percent_after_dodge', condition: config => config.dodge_recently },
                 { stat: 'assassin_haste_buff_movement_speed', condition: config => config.has_assassin_haste_buff },
-                { stat: 'tormented_movement_speed', condition: config => config.serenity === 0 },
+                { stat: 'tormented_movement_speed', condition: config => config.serenity <= 0 },
                 { stat: 'movement_speed_after_trap_triggered', condition: config => config.trap_triggered_recently },
                 { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getMaxStacks(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },
@@ -770,7 +840,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
                 { stat: 'the_speed_percent' },
                 { stat: 'the_speed_percent_after_dodge', condition: config => config.dodge_recently },
                 { stat: 'assassin_haste_buff_movement_speed', condition: config => config.has_assassin_haste_buff },
-                { stat: 'tormented_movement_speed', condition: config => config.serenity === 0 },
+                { stat: 'tormented_movement_speed', condition: config => config.serenity <= 0 },
                 { stat: 'movement_speed_after_trap_triggered', condition: config => config.trap_triggered_recently },
                 { stat: 'the_speed_percent_per_latent_storm', condition: config => config.enemies_affected_by_latent_storm > 0, multiplier: (config, stats) => Math.min(getFirstStat(stats, 'the_speed_percent_per_latent_storm_max'), config.enemies_affected_by_latent_storm) },
                 { stat: 'speed_gate_buff_the_speed_percent', condition: config => config.has_speed_gate_buff },],
@@ -783,54 +853,8 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         } 
     },
     // Attack
-    {
-        stat: 'attack_speed',
-        precision: 3,
-        allowMinMax: false,
-        suffix: '%',
-        source: {
-            flat: [
-                { stat: 'cooldown_reduction_percent' }
-            ],
-            max: [],
-            percent: [],
-            maxPercent: [],
-            multiplier: [
-                { stat: 'adam_blessing_buff_cooldown_reduction_global_mult', condition: config => config.has_adam_blessing_buff },
-                { stat: 'cooldown_reduction_global_mult' },
-                { stat: 'cooldown_time_reduction_multiplier' },
-                { stat: 'attack_speed_global_mult' },
-                { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
-                { stat: 'self_control_cooldown_reduction_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
-                { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, multiplier: (config, stats) => Math.min(config.delightful_rain_stacks, getMaxStacks(stats, 'delightful_rain_max_stacks')) },
-                { stat: 'exhilerating_senses_stack_cooldown_reduction_global_mult', condition: config => config.exhilerating_senses_stacks > 0, multiplier: config => config.exhilerating_senses_stacks },
-                { stat: 'banner_haste_buff_cooldown_reduction_global_mult', condition: config => config.has_banner_haste_buff },
-                { stat: 'frenzy_stack_cooldown_reduction_global_mult', condition: config => config.frenzy_stacks > 0, multiplier: (config, stats) => Math.min(config.frenzy_stacks, getMaxStacks(stats, 'frenzy_max_stacks')) },
-                { stat: 'arcane_clone_cooldown_reduction_global_mult', condition: (_, stats) => hasStat(stats, 'cast_by_clone' )},
-                { stat: 'arcane_clone_cooldown_reduction_global_mult_if_in_breach', condition: (config, stats) => hasStat(stats, 'cast_by_clone') && config.clone_is_in_breach_range },
-                { stat: 'chrono_speed_stack_cooldown_reduction_global_mult', condition: config => config.chrono_speed_stacks > 0, multiplier: (config, stats) => Math.min(config.chrono_speed_stacks, getMaxStacks(stats, 'chrono_speed_max_stacks') + getFirstStat(stats, 'increased_max_chrono_stacks')) },
-                { stat: 'arcane_flux_stack_cooldown_reduction_global_mult', condition: config => config.arcane_flux_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_flux_stacks, getMaxStacks(stats, 'arcane_flux_max_stacks')) },
-                { stat: 'cooldown_reduction_global_mult_per_enfeeble_in_radius', condition: config => config.enfeeble_stacks_in_radius > 0, multiplier: config => config.enfeeble_stacks_in_radius },
-                { stat: 'booster_max_cooldown_reduction_global_mult', condition: config => config.has_booster_max_buff },
-                { stat: 'shadow_bargain_cooldown_reduction_global_mult', condition: config => config.has_shadow_bargain_buff },
-                { stat: 'aurelon_bargain_stack_increased_attack_speed', condition: config => config.aurelon_bargain_stacks > 0,  multiplier: (config, stats) => Math.min(config.aurelon_bargain_stacks, getMaxStacks(stats, 'aurelon_bargain_max_stacks')) },
-                { stat: 'overcharged_stack_cooldown_reduction_global_mult', condition: config => config.overcharged_stacks > 0,  multiplier: config => config.overcharged_stacks },
-                { stat: 'cooldown_reduction_global_mult_on_combo', condition: config => config.victims_combo > 0 },
-                { stat: 'cooldown_reduction_global_mult_while_curving_time_or_time_shifting', condition: config => config.is_curving_time_or_time_shifting },
-                { stat: 'cooldown_reduction_global_mult_while_not_curving_time_or_time_shifting', condition: config => !config.is_curving_time_or_time_shifting },
-                /*{ // Disabled due to the bloodthirst attack speed bug
-                    stat: 'cooldown_reduction_global_mult_per_bloodthirst_stack',
-                    condition: config => config.bloodthirst_stacks > 0 && config.has_blood_frenzy_buff,
-                    multiplier: (config, stats) => Math.max(0, Math.min(config.bloodthirst_stacks, getMaxStacks(stats, 'bloodthirst_max_stacks')))
-                },*/
-                {
-                    stat: 'wreak_havoc_cooldown_reduction_global_mult',
-                    multiplier: (config, stats) => - getFirstStat(stats, 'wreak_havoc_max_stacks') + Math.max(0, Math.min(config.wreak_havoc_stacks, getFirstStat(stats, 'wreak_havoc_max_stacks')))
-                }
-            ],
-            maxMultiplier: [],
-        } 
-    },
+    COOLDOWN_REDUCTION_MAPPING,
+    ATTACK_SPEED_MAPPING,
     {
         stat: 'enemy_attack_speed',
         precision: 3,
@@ -1704,7 +1728,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'additional_projectile_add' },
                 { stat: 'idle_additional_projectile_add', condition: config => config.idle },
-                { stat: 'tormented_additional_projectile_add', condition: config => config.serenity === 0 },
+                { stat: 'tormented_additional_projectile_add', condition: config => config.serenity <= 0 },
                 { stat: 'perfect_additional_projectile_add', condition: config => config.next_cast_is_perfect },
                 { stat: 'additional_projectile_add_if_next_cast_is_new_emblem', condition: (config, stats) => config.next_cast_is_new_emblem && hasStat(stats, 'skill_is_projectile') },
                 { stat: 'arcane_stack_additional_projectile_add', condition: config => config.arcane_stacks > 0, multiplier: (config, stats) => Math.min(config.arcane_stacks, getMaxStacks(stats, 'arcane_max_stacks')) },
@@ -1772,7 +1796,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
             flat: [
                 { stat: 'increased_proj_speed_percent' },
                 { stat: 'increased_proj_speed_percent_on_low_life', condition: (config, stats) => config.percent_missing_health > (100 - getFirstStat(stats, 'pierce_fork_rebound_proj_speed_on_low_life_treshold', 0)) },
-                { stat: 'increased_proj_speed_percent_if_tormented', condition: (config) => config.serenity === 0},
+                { stat: 'increased_proj_speed_percent_if_tormented', condition: (config) => config.serenity <= 0},
                 { stat: 'increased_proj_speed_percent_if_projectile_passed_through_wall_of_omen', condition: (config, stats) => config.projectile_passed_through_wall_of_omen && hasStat(stats, 'skill_is_projectile')},
             ],
             max: [],

@@ -468,9 +468,6 @@ export class SlormancerValueUpdaterService {
         // TODO factoriser avec la version faite sur stat mapping service
         const mergedStat = this.slormancerStatMappingService.buildMergedStat({ ...stats, ...specificstats }, mapping, config);
         this.slormancerMergedStatUpdaterService.updateStatTotal(mergedStat);
-        if (debug) {
-            console.log('stab mergedStat :', mergedStat);
-        }
         return <T>mergedStat.total;
     }
 
@@ -1050,7 +1047,7 @@ export class SlormancerValueUpdaterService {
         const convertManaToLifeCost = statsResult.extractedStats['mana_cost_to_life_cost'] && config.has_life_bargain_buff;
         const noLongerCostPersecond = statsResult.extractedStats['no_longer_cost_per_second'] !== undefined;
         let skillHasNoCost = (statsResult.extractedStats['last_cast_tormented_remove_cost'] !== undefined && config.last_cast_tormented)
-            || (statsResult.extractedStats['no_cost_if_tormented'] !== undefined && config.serenity === 0);
+            || (statsResult.extractedStats['no_cost_if_tormented'] !== undefined && config.serenity <= 0);
         
         this.slormancerSkillService.updateSkillCost(skillAndUpgrades.skill);
         
@@ -1085,9 +1082,6 @@ export class SlormancerValueUpdaterService {
             mana_cost_add: manaCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(skillAndUpgrades.skill.manaCostType), source: entity }],
         };
-        if (skillAndUpgrades.skill.id === 5) {
-            console.log('stab mana cost mapping :', statsResult.extractedStats);
-        }
         skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats, skillAndUpgrades.skill.id === 5));
         
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });

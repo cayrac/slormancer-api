@@ -191,3 +191,7 @@ export function compareVersions(a: string, b: string): number {
     }
     return segmentsA.length - segmentsB.length;
 }
+
+export function minAndMax(min: number, value: number, max: number): number {
+    return Math.max(Math.min(max, value), min);
+}
