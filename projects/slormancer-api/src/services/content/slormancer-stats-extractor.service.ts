@@ -197,7 +197,7 @@ export class SlormancerStatsExtractorService {
         const activables = this.getAllActiveActivables(character);
         this.addStat(stats.stats, 'half_level', character.level / 2, { character });
         this.addStat(stats.stats, 'remnant_damage_reduction_mult', -REMNANT_DAMAGE_REDUCTION, { synergy: 'Remnant base damage reduction' });
-        this.addStat(stats.stats, 'arcane_clone_cooldown_reduction_global_mult', ARCANE_CLONE_ATTACK_SPEED_REDUCTION, { synergy: 'Arcane clone base attack speed reduction' });
+        this.addStat(stats.stats, 'arcane_clone_attack_speed_global_mult', ARCANE_CLONE_ATTACK_SPEED_REDUCTION, { synergy: 'Arcane clone base attack speed reduction' });
 
         const supportSkills = [ character.skills[0], character.skills[1], character.skills[2] ].filter(isNotNullOrUndefined);
         this.addStat(stats.stats, 'total_mastery_support', supportSkills.reduce((total, skill) => total + skill.skill.level, 0), { character })
@@ -216,8 +216,12 @@ export class SlormancerStatsExtractorService {
 
         if (character.heroClass === HeroClass.Huntress) {
             const serenity = minAndMax(0, config.serenity, DELIGHTED_VALUE);
-            this.addStat(stats.stats, 'attack_speed_percent', serenity * ATTACK_SPEED_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
-            this.addStat(stats.stats, 'cooldown_reduction_global_mult', (DELIGHTED_VALUE - serenity) * COOLDOWN_REDUCTION_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
+            if (serenity > 0) {
+                this.addStat(stats.stats, 'attack_speed_percent', serenity * ATTACK_SPEED_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
+            }
+            if (DELIGHTED_VALUE - serenity > 0) {
+                this.addStat(stats.stats, 'cooldown_reduction_global_mult', (DELIGHTED_VALUE - serenity) * COOLDOWN_REDUCTION_PER_DELIGHTED_STACK, { synergy: 'Serenity' } );
+            }
         }
         
         const allCharacterMasteries = character.skills.reduce((total, skill) => total + skill.skill.level, 0);
@@ -544,7 +548,7 @@ export class SlormancerStatsExtractorService {
         }
     }
 
-    private addSkillPassiveValues(character: Character, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
+    private addSkillPassiveValues(character: Character, config: CharacterConfig, stats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
         let poisonUpgrades = 0;
         for (const sau of character.skills) {
             const skillEquiped = character.supportSkill === sau.skill || character.primarySkill === sau.skill || character.secondarySkill === sau.skill;
@@ -804,7 +808,7 @@ export class SlormancerStatsExtractorService {
 
         this.addCharacterValues(character, config, result);
         this.addConfigValues(character, config, result);
-        this.addSkillPassiveValues(character, result, mergedStatMapping);
+        this.addSkillPassiveValues(character, config, result, mergedStatMapping);
         this.addReaperValues(character, result, mergedStatMapping, config);
         this.addRunesValues(character, result, mergedStatMapping, config);
         this.addBaseValues(character, result);

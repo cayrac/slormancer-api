@@ -24,7 +24,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "976,5",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": "4,074285714"
     },
     {
         "REF_NB": 1,
@@ -49,7 +50,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 2,
@@ -74,7 +76,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "976,5",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 3,
@@ -99,7 +102,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 91,
@@ -124,7 +128,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "54%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 4,
@@ -149,7 +154,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "32%",
         "NERF TEST": 7,
         "NLVL 80": "7%",
-        "NLVL 80 Max": "32%"
+        "NLVL 80 Max": "32%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 5,
@@ -174,7 +180,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 6,
@@ -199,7 +206,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": 15,
         "NLVL 80": "15%",
-        "NLVL 80 Max": "68%"
+        "NLVL 80 Max": "68%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 7,
@@ -224,14 +232,15 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 8,
         "CATEGORY": "attack",
         "PRIMARY_NAME_TYPE": "crit",
         "REF": "brut_damage_percent",
-        "SCORE": 45,
+        "SCORE": 30,
         "MIN_LEVEL": 15,
         "PERCENT": "%",
         "HELM": "S",
@@ -244,12 +253,13 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "RING": "S",
         "AMULET": "",
         "CAPE": "",
-        "LVL 80": "45%",
-        "LVL 80 Avg": "90%",
-        "LVL 80 Max": "203%",
+        "LVL 80": "30%",
+        "LVL 80 Avg": "60%",
+        "LVL 80 Max": "135%",
         "NERF TEST": 45,
         "NLVL 80": "45%",
-        "NLVL 80 Max": "203%"
+        "NLVL 80 Max": "203%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 9,
@@ -274,7 +284,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 10,
@@ -299,7 +310,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 11,
@@ -324,7 +336,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 12,
@@ -349,14 +362,15 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 13,
         "CATEGORY": "defense",
         "PRIMARY_NAME_TYPE": "def_phy",
         "REF": "res_phy_add",
-        "SCORE": 20,
+        "SCORE": 12,
         "MIN_LEVEL": 1,
         "PERCENT": "",
         "HELM": "P",
@@ -369,12 +383,13 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "RING": "S",
         "AMULET": "S",
         "CAPE": "P",
-        "LVL 80": "500",
-        "LVL 80 Avg": "1000",
-        "LVL 80 Max": "2250",
+        "LVL 80": "300",
+        "LVL 80 Avg": "600",
+        "LVL 80 Max": "1350",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": "2400"
     },
     {
         "REF_NB": 14,
@@ -399,14 +414,15 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 15,
         "CATEGORY": "defense",
         "PRIMARY_NAME_TYPE": "def_mag",
         "REF": "res_mag_add",
-        "SCORE": 15,
+        "SCORE": 12,
         "MIN_LEVEL": 1,
         "PERCENT": "",
         "HELM": "P",
@@ -419,12 +435,13 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "RING": "S",
         "AMULET": "S",
         "CAPE": "P",
-        "LVL 80": "375",
-        "LVL 80 Avg": "750",
-        "LVL 80 Max": "1687,5",
+        "LVL 80": "300",
+        "LVL 80 Avg": "600",
+        "LVL 80 Max": "1350",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 16,
@@ -449,14 +466,15 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 17,
         "CATEGORY": "defense",
         "PRIMARY_NAME_TYPE": "def_dodge",
         "REF": "dodge_add",
-        "SCORE": 21,
+        "SCORE": 15,
         "MIN_LEVEL": 1,
         "PERCENT": "",
         "HELM": "P",
@@ -469,12 +487,13 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "RING": "S",
         "AMULET": "S",
         "CAPE": "P",
-        "LVL 80": "525",
-        "LVL 80 Avg": "1050",
-        "LVL 80 Max": "2362,5",
+        "LVL 80": "375",
+        "LVL 80 Avg": "750",
+        "LVL 80 Max": "1687,5",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 18,
@@ -499,7 +518,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 19,
@@ -524,7 +544,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "1012,5",
         "NERF TEST": 9,
         "NLVL 80": "225",
-        "NLVL 80 Max": "1012,5"
+        "NLVL 80 Max": "1012,5",
+        "FIELD24": ""
     },
     {
         "REF_NB": 20,
@@ -549,7 +570,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 21,
@@ -574,7 +596,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "270%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 22,
@@ -599,7 +622,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 23,
@@ -624,7 +648,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "204386%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 24,
@@ -649,7 +674,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "204386%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 25,
@@ -674,7 +700,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "204386%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 26,
@@ -699,7 +726,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 27,
@@ -724,7 +752,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 28,
@@ -749,7 +778,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 29,
@@ -774,7 +804,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 88,
@@ -799,7 +830,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 89,
@@ -824,7 +856,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 30,
@@ -849,7 +882,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 31,
@@ -874,7 +908,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "3825",
         "NERF TEST": 25,
         "NLVL 80": "625",
-        "NLVL 80 Max": "2812,5"
+        "NLVL 80 Max": "2812,5",
+        "FIELD24": ""
     },
     {
         "REF_NB": 32,
@@ -899,7 +934,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 33,
@@ -924,7 +960,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "675",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 34,
@@ -949,7 +986,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 35,
@@ -974,7 +1012,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "5%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 36,
@@ -999,7 +1038,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "337,5",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 37,
@@ -1024,7 +1064,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 38,
@@ -1049,7 +1090,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "900",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 39,
@@ -1074,7 +1116,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 40,
@@ -1099,7 +1142,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "5175",
         "NERF TEST": 32,
         "NLVL 80": "800",
-        "NLVL 80 Max": "3600"
+        "NLVL 80 Max": "3600",
+        "FIELD24": ""
     },
     {
         "REF_NB": 41,
@@ -1124,7 +1168,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 42,
@@ -1149,7 +1194,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "675",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 43,
@@ -1174,7 +1220,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 44,
@@ -1199,7 +1246,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "5%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 45,
@@ -1224,7 +1272,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "337,5",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 46,
@@ -1249,7 +1298,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 47,
@@ -1274,7 +1324,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "900",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 48,
@@ -1299,7 +1350,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 49,
@@ -1324,7 +1376,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 50,
@@ -1349,7 +1402,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 51,
@@ -1374,7 +1428,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 52,
@@ -1399,7 +1454,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 53,
@@ -1424,7 +1480,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 54,
@@ -1449,7 +1506,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 55,
@@ -1474,7 +1532,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 56,
@@ -1499,7 +1558,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 57,
@@ -1524,7 +1584,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 58,
@@ -1549,7 +1610,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 59,
@@ -1574,7 +1636,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 60,
@@ -1599,7 +1662,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 61,
@@ -1624,7 +1688,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 62,
@@ -1649,7 +1714,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "23%",
         "NERF TEST": 5,
         "NLVL 80": "5%",
-        "NLVL 80 Max": "23%"
+        "NLVL 80 Max": "23%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 63,
@@ -1674,7 +1740,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 64,
@@ -1699,7 +1766,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 65,
@@ -1724,7 +1792,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "270%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 66,
@@ -1749,7 +1818,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 67,
@@ -1774,7 +1844,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": 30,
         "NLVL 80": "30%",
-        "NLVL 80 Max": "135%"
+        "NLVL 80 Max": "135%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 68,
@@ -1799,7 +1870,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 69,
@@ -1824,7 +1896,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 70,
@@ -1849,7 +1922,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "360%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 71,
@@ -1874,7 +1948,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "203%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 72,
@@ -1899,7 +1974,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 73,
@@ -1924,7 +2000,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 74,
@@ -1949,7 +2026,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": 0,
         "NLVL 80": "SEC",
-        "NLVL 80 Max": "EPIC"
+        "NLVL 80 Max": "EPIC",
+        "FIELD24": ""
     },
     {
         "REF_NB": 75,
@@ -1974,7 +2052,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "0",
-        "NLVL 80 Max": "0"
+        "NLVL 80 Max": "0",
+        "FIELD24": ""
     },
     {
         "REF_NB": 76,
@@ -1999,7 +2078,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": 0,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 77,
@@ -2024,7 +2104,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": 15,
         "NLVL 80": "15%",
-        "NLVL 80 Max": "68%"
+        "NLVL 80 Max": "68%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 78,
@@ -2049,7 +2130,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": 15,
         "NLVL 80": "15%",
-        "NLVL 80 Max": "68%"
+        "NLVL 80 Max": "68%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 79,
@@ -2074,7 +2156,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "90%",
         "NERF TEST": 20,
         "NLVL 80": "20%",
-        "NLVL 80 Max": "90%"
+        "NLVL 80 Max": "90%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 80,
@@ -2099,7 +2182,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "113%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 81,
@@ -2124,7 +2208,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": null,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 82,
@@ -2149,7 +2234,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "",
         "NERF TEST": 0,
         "NLVL 80": "",
-        "NLVL 80 Max": ""
+        "NLVL 80 Max": "",
+        "FIELD24": ""
     },
     {
         "REF_NB": 83,
@@ -2174,7 +2260,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "68%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 84,
@@ -2199,7 +2286,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "135%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 85,
@@ -2224,7 +2312,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": 10,
         "NLVL 80": "10%",
-        "NLVL 80 Max": "45%"
+        "NLVL 80 Max": "45%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 86,
@@ -2249,7 +2338,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": 10,
         "NLVL 80": "10%",
-        "NLVL 80 Max": "45%"
+        "NLVL 80 Max": "45%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 87,
@@ -2274,7 +2364,8 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "45%",
         "NERF TEST": 10,
         "NLVL 80": "10%",
-        "NLVL 80 Max": "45%"
+        "NLVL 80 Max": "45%",
+        "FIELD24": ""
     },
     {
         "REF_NB": 90,
@@ -2299,6 +2390,7 @@ export const GAME_DATA_STAT: GameDataStat[] = [
         "LVL 80 Max": "204363%",
         "NERF TEST": null,
         "NLVL 80": "0%",
-        "NLVL 80 Max": "0%"
+        "NLVL 80 Max": "0%",
+        "FIELD24": ""
     }
 ]

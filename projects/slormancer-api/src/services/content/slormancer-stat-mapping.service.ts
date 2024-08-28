@@ -10,6 +10,7 @@ import { round } from '../../util/math.util';
 import { valueOrDefault } from '../../util/utils';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
 import { BASE_MOVEMENT_SPEED } from '../../constants';
+import { EntityValue } from '../../model';
 
 @Injectable()
 export class SlormancerStatMappingService {
@@ -24,6 +25,10 @@ export class SlormancerStatMappingService {
                 if (result && source.multiplier) {
                     const mult = source.multiplier(config, stats);
                     result = result.map(entry => ({ source: entry.source, value: entry.value * mult }));
+                }
+                if (result && source.duplicate) {
+                    const length = source.duplicate(config, stats);
+                    result = result.flatMap(entry => Array.from<EntityValue<number>>({ length }).fill({ source: entry.source, value: entry.value }));
                 }
                 return result ? result.map(data => ({ ...data, extra: source.extra === true })) : [];
             })

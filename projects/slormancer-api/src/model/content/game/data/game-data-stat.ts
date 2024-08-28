@@ -16,6 +16,7 @@ export interface GameDataStat {
     RING: '' | 'P' | 'S' | 'E',
     AMULET: '' | 'P' | 'S' | 'E',
     CAPE: '' | 'P' | 'S' | 'E',
+    FIELD24: string,
     'LVL 80': string,
     'LVL 80 Avg': string,
     'LVL 80 Max': string,

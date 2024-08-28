@@ -187,7 +187,7 @@ function setSynergyPrecision(effect: ReaperEffect | null, index: number, precisi
 export const DATA_REAPER: { [key: number]: DataReaper } = {
     1: {
         override: (ba, be, ma) => {
-            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'adam_blessing_buff_cooldown_reduction_global_mult');
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'adam_blessing_buff_attack_speed_global_mult');
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Duration, 'adam_blessing_buff_duration');
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Duration, 'adam_blessing_buff_duration_per_monster');
         }
@@ -216,10 +216,10 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
     },
     5: {
         override: (ba, be, ma) => {
-            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'increased_indirect_damage');
-            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'indirect_crit_chance_percent');
-            overrideValueTypeAndStat(ba, 3, EffectValueValueType.Damage, 'indirect_crit_additional_damage');
-            setSynergyAllowMinMax(ba, 3, false);
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'increased_indirect_damage');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'indirect_crit_chance_percent');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Damage, 'indirect_crit_additional_damage');
+            setSynergyAllowMinMax(ba, 2, false);
 
             overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'indirect_defense_max_stacks');
             overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'garbage_stat');
@@ -228,7 +228,7 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(be, 4, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(be, 5, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'primary_secondary_skill_decreased_damage_mult');
-            synergyMultiply100(be, 6);
+            synergyMultiply100(be, 5);
         }
     },
     6: {
@@ -801,8 +801,9 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
     62: {
         override: (ba, be, ma) => {
             overrideValueTypeAndStat(ba, 0, EffectValueValueType.Unknown, 'garbage_stat');
-            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'thorns_percent');
-            synergyMultiply100(ba, 1);
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'thorns_percent');
+            changeValue(ba, 2, 1);
+            synergyMultiply100(ba, 2);
         }
     },
     63: {

@@ -142,6 +142,7 @@ export interface CharacterConfig {
     ancestral_wrath_stacks: number;
     ancestral_preparation_stacks: number;
     wreak_havoc_stacks: number;
+    unrelenting_stacks: number;
     moonlight_side: boolean;
     life_orbs_count: number;
     has_elemental_temper_buff: boolean;
@@ -241,7 +242,6 @@ export interface CharacterConfig {
     unity_level_2_51_p: number;
     unity_level_2_52_p: number;
     absorbed_damage_wrath: number;
-
     maxed_upgrades: number | null;
 }
 

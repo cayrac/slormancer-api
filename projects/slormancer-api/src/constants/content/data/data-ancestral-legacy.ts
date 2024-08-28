@@ -43,6 +43,16 @@ function synergyMultiply100(values: Array<AbstractEffectValue>, index: number) {
     }
 }
 
+function setSource(values: Array<AbstractEffectValue>, index: number, source: string) {
+    const value = <AbstractEffectValue>values[index];
+
+    if (isEffectValueSynergy(value)) {
+        value.source = source;
+    } else {
+        throw new Error('failed to update source at index ' + index);
+    }
+}
+
 export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
     0: {
         override: values => {
@@ -207,6 +217,12 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
             setStat(values, 0, 'shield_increased_value_mult');
         }
     },
+    53: {
+        override: values => {
+            setSource(values, 0, 'percent_missing_mana');
+            addConstant(values, -100, false, EffectValueValueType.Stat, 'mana_regen_global_mult');
+        }
+    },
     54: {
         override: values => {
             setStat(values, 0, 'increased_damage_per_negative_effect');
@@ -223,6 +239,11 @@ export const DATA_ANCESTRAL_LEGACY: { [key: number]: DataAncestralLegacy } = {
         override: values => {
             addConstant(values, 6, false, EffectValueValueType.Duration, 'garbage_stat');
             addConstant(values, 2, false, EffectValueValueType.Duration, 'garbage_stat');
+        }
+    },
+    59: {
+        override: values => {
+            addConstant(values, 100, false, EffectValueValueType.Stat, 'garbage_stat');
         }
     },
     61: {

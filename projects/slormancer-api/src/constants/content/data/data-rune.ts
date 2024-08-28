@@ -168,6 +168,7 @@ export const DATA_RUNE: { [key: number]: DataRune } = {
         override: rune => {
             setStat(rune, 0, 'garbage_stat');
             setStat(rune, 1, 'unrelenting_stacks_max');
+            setStat(rune, 2, 'unrelenting_stack_retaliate_percent');
         }
     },
     12: {

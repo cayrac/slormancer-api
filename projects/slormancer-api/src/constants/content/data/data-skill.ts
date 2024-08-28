@@ -139,9 +139,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
             setStat(values, 1, 'banner_provocation_banner_max_health');
             setAsUpgrade(values, 1);
             setStat(values, 2, 'banner_regeneration_buff_health_on_hit_add');
-            setAsUpgrade(values, 2);
-            setStat(values, 3, 'banner_haste_buff_cooldown_reduction_global_mult');
-            setAsUpgrade(values, 3);
+            setStat(values, 3, 'banner_haste_buff_attack_speed_global_mult');
             setStat(values, 4, 'banner_sluggishness_slow');
             setAsUpgrade(values, 4);
         },
@@ -327,7 +325,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 8,
         override: values => { 
             setStat(values, 0, 'frenzy_max_stacks');
-            addConstant(values, 3, false, EffectValueValueType.Stat, 'frenzy_stack_cooldown_reduction_global_mult');
+            addConstant(values, 3, false, EffectValueValueType.Stat, 'frenzy_stack_attack_speed_global_mult');
             addConstant(values, 5, false, EffectValueValueType.Stat, 'frenzy_stack_duration');
             addConstant(values, 3, false, EffectValueValueType.Stat, 'frenzy_stack_per_hit_if_fortunate_of_perfect');
             addConstant(values, 1, false, EffectValueValueType.Stat, 'frenzy_stack_per_hit');
@@ -1310,7 +1308,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 4,
         override: values => {
             setStat(values, 0, 'banner_regeneration_buff_mana_on_hit_add');
-            setSource(values, 0, 'health_regeneration');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'banner_knockback_on_land');
         }
     },
@@ -2029,8 +2026,6 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         override: values => { 
             addConstant(values, 2, false, EffectValueValueType.Flat, 'delightful_rain_stack_cooldown_reduction_global_mult');
             addConstant(values, 25, false, EffectValueValueType.Flat, 'delightful_rain_max_stacks');
-            setAsUpgrade(values, 0);
-            setAsUpgrade(values, 1);
         }
     },
     42: {
@@ -2685,7 +2680,7 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
         masteryRequired: 5,
         line: 4,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Stat, 'exhilerating_senses_stack_cooldown_reduction_global_mult');
+            addConstant(values, 1, false, EffectValueValueType.Stat, 'exhilerating_senses_stack_attack_speed_global_mult');
         }
     },
     131: {
@@ -2872,7 +2867,7 @@ export const DATA_SKILL_1: { [key: number]: DataSkill } = {
     164: {
         masteryRequired: 3,
         override: values => { 
-            setStat(values, 0, 'self_control_cooldown_reduction_global_mult');
+            setStat(values, 0, 'self_control_attack_speed_global_mult');
             addConstant(values, 8, false, EffectValueValueType.Duration, 'self_control_disabled_duration');
         }
     },
@@ -3424,6 +3419,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 5,
         override: values => {
             setStat(values, 0, 'ray_of_obliteration_overdrive_chance_percent');
+            setSource(values, 0, 'overdrive_chance');
             setAsUpgrade(values, 0);
             setStat(values, 1, 'overdrive_chance_percent_while_channeling_ray_of_obliteration');
         }
@@ -3987,7 +3983,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 8,
         line: 5,
         override: values => {
-            addConstant(values, 70, false, EffectValueValueType.Upgrade, 'size_reduction');
+            addConstant(values, 40, false, EffectValueValueType.Upgrade, 'size_reduction');
             addConstant(values, 1, false, EffectValueValueType.Upgrade, 'skill_is_projectile');
         }
     },
@@ -4105,7 +4101,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
         masteryRequired: 5,
         line: 4,
         override: values => {
-            setStat(values, 0, 'arcane_clone_cooldown_reduction_global_mult_if_in_breach');
+            setStat(values, 0, 'arcane_clone_attack_speed_global_mult_if_in_breach');
             
         }
     },
@@ -4597,7 +4593,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     199: {
         masteryRequired: 4,
         override: values => {
-            setStat(values, 0, 'arcane_clone_cooldown_reduction_global_mult')
+            setStat(values, 0, 'arcane_clone_attack_speed_global_mult')
         }
     },
     200: {
@@ -4624,7 +4620,7 @@ export const DATA_SKILL_2: { [key: number]: DataSkill } = {
     204: {
         masteryRequired: 6,
         override: values => {
-            addConstant(values, 1, false, EffectValueValueType.Upgrade, 'cast_by_clone');
+            addConstant(values, 3, false, EffectValueValueType.Upgrade, 'cast_by_clone');
         },
         additionalClassMechanics: [218]
     },
