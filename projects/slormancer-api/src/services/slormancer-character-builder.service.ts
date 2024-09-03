@@ -55,6 +55,7 @@ export class SlormancerCharacterBuilderService {
                 selectedUpgrades: upgrades.map(passive => passive.id).filter(id => equipped[id] === 1),
                 activeUpgrades: [],
                 stats: [],
+                investedSlorm: 0,
             } as CharacterSkillAndUpgrades
         }).filter(isNotNullOrUndefined);
     }
@@ -301,7 +302,8 @@ export class SlormancerCharacterBuilderService {
                 ancestralLegacies: character.ancestralLegacies.ancestralLegacies.map(ancestralLegacy => this.slormancerAncestralLegacyService.getAncestralLegacyClone(ancestralLegacy)),
                 activeNodes: [...character.ancestralLegacies.activeNodes],
                 activeFirstNode: character.ancestralLegacies.activeFirstNode,
-                activeAncestralLegacies: [...character.ancestralLegacies.activeAncestralLegacies]
+                activeAncestralLegacies: [...character.ancestralLegacies.activeAncestralLegacies],
+                investedSlorm: character.ancestralLegacies.investedSlorm,
             },
             skills: character.skills.map(skill => this.getSkillsClone(skill)),
         
@@ -524,9 +526,11 @@ export class SlormancerCharacterBuilderService {
                 activeFirstNode,
                 ancestralLegacies: this.getAncestralLegacies(ancestralRanks),
                 activeNodes,
-                activeAncestralLegacies: this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds({ ancestralLegacies: { activeNodes, activeFirstNode } } as Character)
+                activeAncestralLegacies: this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds({ ancestralLegacies: { activeNodes, activeFirstNode } } as Character),
+                investedSlorm: 0,
             },
             skills,
+            skillInvestedSlorm: 0,
         
             gear: {
                 helm,

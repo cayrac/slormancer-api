@@ -90,6 +90,7 @@ export class SlormancerValueUpdaterService {
                 displayPrecision: undefined,
                 stat,
                 total: 0,
+                totalWithoutSynergy: 0,
                 totalDisplayed: 0,
                 values: { flat: [], maxPercent: [], max: [], multiplier: [], percent: [], maxMultiplier: [] }
             };

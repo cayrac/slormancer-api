@@ -14,6 +14,7 @@ export interface SynergyResolveData {
     originalValue: number | MinMax;
     objectSource: Entity;
     statsItWillUpdate: Array<{ stat: string, mapping?: MergedStatMapping }>;
+    cascadeSynergy: boolean;
 }
 export interface ExternalSynergyResolveData {
     type: ResolveDataType.ExternalSynergy;
@@ -24,11 +25,20 @@ export interface ExternalSynergyResolveData {
     precision: number | null;
     method: ((...values: Array<number | MinMax>) => number | MinMax);
     statsItWillUpdate: Array<{ stat: string, mapping?: MergedStatMapping }>;
+    cascadeSynergy: boolean;
+}
+
+export interface MergedStatValue<T = number | MinMax> {
+    value: T;
+    extra: boolean;
+    source: Entity;
+    synergy: boolean;
 }
 
 export interface MergedStat<T = number | MinMax> {
     stat: string;
     total: T;
+    totalWithoutSynergy: T;
     totalDisplayed: T;
     allowMinMax: boolean;
     readonly: boolean;
@@ -37,11 +47,11 @@ export interface MergedStat<T = number | MinMax> {
     suffix: 's' | '%' | '';
     maximum?: number;
     values: {
-        flat: Array<{ value: number | MinMax, extra: boolean, source: Entity }>;
-        max: Array<{ value: number, extra: boolean, source: Entity }>;
-        percent: Array<{ value: number, extra: boolean, source: Entity }>;
-        maxPercent: Array<{ value: number, extra: boolean, source: Entity }>;
-        multiplier: Array<{ value: number, extra: boolean, source: Entity }>;
-        maxMultiplier: Array<{ value: number, extra: boolean, source: Entity }>;
+        flat: Array<MergedStatValue<T>>;
+        max: Array<MergedStatValue<number>>;
+        percent: Array<MergedStatValue<number>>;
+        maxPercent: Array<MergedStatValue<number>>;
+        multiplier: Array<MergedStatValue<number>>;
+        maxMultiplier: Array<MergedStatValue<number>>;
     }
 };

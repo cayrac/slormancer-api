@@ -64,55 +64,15 @@ export class SlormancerSynergyResolverService {
             objectSource: { synergy: 'Difference raw and elemental damage'},
             sources: ['basic_damage', 'elemental_damage'],
             stat: 'raw_elem_diff',
-            statsItWillUpdate: [ { stat: 'raw_elem_diff' } ]
+            statsItWillUpdate: [ { stat: 'raw_elem_diff' } ],
+            cascadeSynergy: true,
         });
     }
 
-    private takeSynergyFromLoop(remainingSynergies: Array<SynergyResolveData | ExternalSynergyResolveData>): number {
-        let result: number = -1;
-
-        const indomitableMountain = remainingSynergies.findIndex(remainingSynergy => "item" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.item.legendaryEffect !== null
-            && remainingSynergy.objectSource.item.legendaryEffect.id === 23);
-        const armorOfIllusion = remainingSynergies.findIndex(remainingSynergy => "upgrade" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.upgrade.id === 203);
-        const evaseMagic = remainingSynergies.findIndex(remainingSynergy => "upgrade" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.upgrade.id === 134);
-        const elementalLock = remainingSynergies.findIndex(remainingSynergy => "ancestralLegacy" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.ancestralLegacy.id === 104);
-        const untouchableOne = remainingSynergies.findIndex(remainingSynergy => "reaper" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.reaper.id === 24);
-        const toughness15 = remainingSynergies.findIndex(remainingSynergy => "attribute" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.attribute.attribute === Attribute.Toughness
-            && remainingSynergy.type === ResolveDataType.Synergy
-            && remainingSynergy.effect.source === 'armor' );
-        const elementalSorcerer = remainingSynergies.findIndex(remainingSynergy => "ancestralLegacy" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.ancestralLegacy.id === 112);
-        const lifeIsOverrated = remainingSynergies.findIndex(remainingSynergy => "activable" in remainingSynergy.objectSource
-            && remainingSynergy.objectSource.activable.id === 54);
-        const lifeLockFlat = remainingSynergies.findIndex(remainingSynergy => remainingSynergy.type === ResolveDataType.Synergy
-            && remainingSynergy.effect.stat === 'life_lock_flat' && remainingSynergy.effect.source === 'max_health');
-
-        if (indomitableMountain !== -1 && armorOfIllusion !== -1) {
-            result = armorOfIllusion;
-        } else if (evaseMagic !== -1 && elementalLock !== -1 && untouchableOne !== -1) {
-            result = evaseMagic;
-        } else if (toughness15 !== -1 && elementalSorcerer !== -1 && untouchableOne !== -1 && indomitableMountain !== -1) {
-            result = toughness15;
-        } else if (lifeIsOverrated !== -1) {
-            if (lifeLockFlat !== -1) {
-                result = lifeLockFlat;
-            } else {
-                result = lifeIsOverrated;
-            }
-        }
-        
-        return result;
-    }
-
     private takeNextSynergy(resolveDatas: Array<SynergyResolveData | ExternalSynergyResolveData>): SynergyResolveData | ExternalSynergyResolveData | null {
+        // Take the first cascading synergy with no stat used by another synergy
         let indexFound = resolveDatas.findIndex(resolveData => resolveDatas
-            .find(s => s.statsItWillUpdate.find(statItWillUpdate => {
+            .find(s => s.cascadeSynergy && s.statsItWillUpdate.find(statItWillUpdate => {
                 let found = false; 
                 if (resolveData.type === ResolveDataType.Synergy) {
                     found = statItWillUpdate.stat === resolveData.effect.source;
@@ -122,8 +82,9 @@ export class SlormancerSynergyResolverService {
                 return found;
             }) !== undefined) === undefined);
 
-        if (indexFound === -1 && resolveDatas.length > 0) {
-            indexFound = this.takeSynergyFromLoop(resolveDatas);
+        // if all cascading synergies are resolved, take the first non cascading synergy
+        if (indexFound === -1 && !resolveDatas.some(s => s.cascadeSynergy)) {
+            indexFound = 0;
         }
 
         let result: SynergyResolveData | ExternalSynergyResolveData | null = null;
@@ -155,7 +116,7 @@ export class SlormancerSynergyResolverService {
             let sourceValue: number | MinMax = 0;
 
             if (source) {
-                sourceValue = source.total;
+                sourceValue = source.totalWithoutSynergy;
             } else {
                 const stat = extractedStats[resolveData.effect.source];
                 if (stat) {
@@ -186,6 +147,7 @@ export class SlormancerSynergyResolverService {
                 return  stat ? stat.total : 0;
             });
             resolveData.value = resolveData.method(...sources);
+            console.log('Resolve special synergy : ', sources, resolveData.value)
         }
     }
 
@@ -211,6 +173,7 @@ export class SlormancerSynergyResolverService {
                     displayPrecision,
                     stat: statToUpdate.stat,
                     total: 0,
+                    totalWithoutSynergy: 0,
                     totalDisplayed: 0,
                     allowMinMax: true,
                     readonly: false,
@@ -238,9 +201,9 @@ export class SlormancerSynergyResolverService {
             }
 
             if (statToUpdate.mapping === undefined) {
-                foundStat.values.flat.push({ value: synergy, extra: false, source: synergyResolveData.objectSource });
+                foundStat.values.flat.push({ value: synergy, extra: false, source: synergyResolveData.objectSource, synergy: true });
             } else {
-                this.slormancerStatMappingService.addUniqueValueToStat(stat, synergy, foundStat, statToUpdate.mapping, config, extractedStats, synergyResolveData.objectSource);
+                this.slormancerStatMappingService.addUniqueValueToStat(stat, synergy, foundStat, statToUpdate.mapping, config, extractedStats, synergyResolveData.objectSource, true);
             }
 
             this.slormancerStatUpdaterService.updateStatTotal(foundStat);

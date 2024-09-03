@@ -20,7 +20,6 @@ export interface CharacterSkillAndUpgrades {
     upgrades: Array<SkillUpgrade>;
     selectedUpgrades: Array<number>;
     activeUpgrades: Array<number>;
-
     stats: Array<MergedStat>;
 }
 
@@ -29,6 +28,7 @@ export interface CharacterAncestralLegacies {
     activeNodes: Array<number>;
     activeFirstNode: number | null;
     activeAncestralLegacies: Array<number>;
+    investedSlorm: number;
 }
 
 export interface CharacterGear {
@@ -83,6 +83,7 @@ export interface Character {
 
     ancestralLegacies: CharacterAncestralLegacies;
     skills: Array<CharacterSkillAndUpgrades>;
+    skillInvestedSlorm: number;
 
     gear: CharacterGear;
     inventory: Array<EquipableItem | null>;

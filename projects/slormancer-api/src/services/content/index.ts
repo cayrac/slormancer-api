@@ -24,3 +24,4 @@ export { SlormancerTranslateService } from "./slormancer-translate.service";
 export { SlormancerUltimatumService } from "./slormancer-ultimatum.service";
 export { SlormancerValueUpdaterService } from "./slormancer-value-updater.service";
 export { SlormancerAncestralLegacyNodesService } from "./slormancer-ancestral-legacy-nodes.service";
+export { SlormancerMightService } from "./slormancer-might.service";

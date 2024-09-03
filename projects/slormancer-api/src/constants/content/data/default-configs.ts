@@ -246,6 +246,8 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     absorbed_damage_wrath: 0,
 
     maxed_upgrades: null,
+    skill_might: 0,
+    ancestral_might: 0
 }
 
 export const COMBAT_CONFIG: CharacterConfig = {
@@ -492,4 +494,6 @@ export const COMBAT_CONFIG: CharacterConfig = {
     absorbed_damage_wrath: 0,
 
     maxed_upgrades: null,
+    skill_might: 0,
+    ancestral_might: 0
 }

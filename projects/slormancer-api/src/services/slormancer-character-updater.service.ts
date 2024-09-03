@@ -684,6 +684,15 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
+    private updateInvestedSlorm(character: Character) {
+        character.skillInvestedSlorm = 0;
+        for(const skill of character.skills) {
+            for (const upgrade of skill.upgrades) {
+                character.skillInvestedSlorm += upgrade.investedSlorm;
+            }
+        }
+    }
+
     public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
         character.issues = [];
 
@@ -698,6 +707,8 @@ export class SlormancerCharacterUpdaterService {
         character.attributes.remainingPoints = character.attributes.maxPoints - allocatedPoints;
 
         this.slormancerAncestralLegacyNodesService.stabilize(character);
+
+        this.updateInvestedSlorm(character);
 
         this.updateAncestralLegacySkills(character);
 

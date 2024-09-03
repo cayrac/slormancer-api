@@ -1,11 +1,18 @@
 import { MinMax } from '../model/minmax';
 import { valueOrDefault } from './utils';
 
-export function bankerRound(value: number, decimals: number = 0): number {
-    const decal = valueOrDefault(POW_10[decimals], 1);
-    const valueToRound = round(value * decal, 6);
-    var r = Math.round(valueToRound);
-    return ( ( ( ( (valueToRound > 0) ? valueToRound : -valueToRound ) %1 ) === 0.5 ) ? ( ( (0 === (r%2) ) ) ? r : (r-1) ) : r) / decal;
+export function bankerRound<T extends number | MinMax>(value: T, decimals: number = 0): T {
+    let result: T = value;
+    if (typeof result === 'number') {
+        const decal = valueOrDefault(POW_10[decimals], 1);
+        const valueToRound = round(result * decal, 6);
+        var r = Math.round(valueToRound);
+        result = ( ( ( ( ( (valueToRound > 0) ? valueToRound : -valueToRound ) %1 ) === 0.5 ) ? ( ( (0 === (r%2) ) ) ? r : (r-1) ) : r) / decal ) as T;
+    } else {
+        result = { min: bankerRound<number>(result.min, decimals), max: bankerRound<number>(result.max, decimals) } as T;
+    }
+
+    return result;
 }
 
 const POW_10: { [key: number]: number} = {

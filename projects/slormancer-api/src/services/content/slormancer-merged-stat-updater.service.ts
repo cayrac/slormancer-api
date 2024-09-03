@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { MergedStat } from '../../model/content/character-stats';
 import { MinMax } from '../../model/minmax';
-import { bankerRound, round } from '../../util/math.util';
+import { add, bankerRound, round } from '../../util/math.util';
 
 @Injectable()
 export class SlormancerMergedStatUpdaterService {
@@ -40,7 +40,7 @@ export class SlormancerMergedStatUpdaterService {
 
     public getTotalFlat(stat: MergedStat): number | MinMax {
         const minMax = stat.values.max.length > 0 || stat.values.maxPercent.length > 0 || stat.values.maxMultiplier.length > 0;
-        const flat = this.addValues(stat.values.flat.filter(v => !v.extra).map(v => v.value), minMax);
+        const flat = this.addValues(stat.values.flat.filter(v => v.extra === false && v.synergy === false).map(v => v.value), minMax);
 
         if (minMax) {
             (<MinMax>flat).max += this.addNumberValues(stat.values.max.filter(v => !v.extra).map(v => v.value));
@@ -73,6 +73,11 @@ export class SlormancerMergedStatUpdaterService {
         return total;
     }
 
+    public getTotalFlatSynergy(mergedStat: MergedStat): MinMax | number {
+        const minMax = mergedStat.values.max.length > 0 || mergedStat.values.maxPercent.length > 0 || mergedStat.values.maxMultiplier.length > 0;
+        return this.addValues(mergedStat.values.flat.filter(v => v.synergy === true).map(v => v.value), minMax);
+    }
+
     public getTotalFlatAndPercent(mergedStat: MergedStat): number | MinMax {
         const percent = this.getTotalPercent(mergedStat);
         let total = this.getTotalFlat(mergedStat);
@@ -96,7 +101,7 @@ export class SlormancerMergedStatUpdaterService {
         return stat === 'attack_speed' || stat === 'enemy_attack_speed' || stat === 'cooldown_reduction';
     }
 
-    public getTotalWithoutExtra(mergedStat: MergedStat): number | MinMax {
+    public getTotalWithoutExtraAndSynergy(mergedStat: MergedStat): number | MinMax {
         let total = this.getTotalFlatAndPercent(mergedStat);
         const nonExtraMultiplier = mergedStat.values.multiplier.filter(m => !m.extra);
         const nonExtraMaxMultiplier = mergedStat.values.maxMultiplier.filter(m => !m.extra);
@@ -123,7 +128,7 @@ export class SlormancerMergedStatUpdaterService {
         return total; 
     }
 
-    public applyExtraToTotal(total: number |MinMax, stat: MergedStat): number | MinMax {
+    public applyExtraToTotal(total: number | MinMax, stat: MergedStat): number | MinMax {
         let extra = this.getTotalFlatExtra(stat);
 
         if (typeof total === 'number' && stat.allowMinMax && typeof extra !== 'number') {
@@ -131,10 +136,10 @@ export class SlormancerMergedStatUpdaterService {
         }
 
         if (typeof total === 'number') {
-            total = bankerRound(total, stat.precision) + <number>extra;
+            total = total + <number>extra;
         } else {
-            total.min = bankerRound(total.min, stat.precision) + (typeof extra === 'number' ? extra : extra.min);
-            total.max = bankerRound(total.max, stat.precision) + (typeof extra === 'number' ? extra : extra.max);
+            total.min = total.min + (typeof extra === 'number' ? extra : extra.min);
+            total.max = total.max + (typeof extra === 'number' ? extra : extra.max);
         }
 
         const extraMultiplier = stat.values.multiplier.filter(m => m.extra);
@@ -162,43 +167,38 @@ export class SlormancerMergedStatUpdaterService {
         return total;
     }
 
-    public getTotal(stat: MergedStat): number | MinMax {
-        let total = this.getTotalWithoutExtra(stat);
-        total = this.applyExtraToTotal(total, stat);
-
-        if (typeof total === 'number') {
-            total = round(total, 3);
-        } else {
-            total.min = round(total.min, 3);
-            total.max = round(total.max, 3);
-        }
-        return total;  
+    public applySynergyToTotal(total: number | MinMax, stat: MergedStat): number | MinMax {
+        let synergy = this.getTotalFlatSynergy(stat);
+        return add(total, synergy, stat.allowMinMax);
     }
 
-    public updateStatTotal(stat: MergedStat, round: boolean = true) {
-        stat.total = this.getTotal(stat);
+    public getTotal(stat: MergedStat, synergy: boolean): number | MinMax {
+        let total = this.getTotalWithoutExtraAndSynergy(stat);
+        total = this.applyExtraToTotal(total, stat);
 
-        if (typeof stat.total === 'number') {
-            stat.total = stat.total;
-            if (typeof stat.maximum === 'number') {
-                stat.total = Math.min(stat.maximum, stat.total);
-            }
-        } else {
-            stat.total.min = stat.total.min;
-            stat.total.max = stat.total.max;
+        if (synergy) {
+            total = this.applySynergyToTotal(total, stat);
         }
 
-        if (stat.displayPrecision !== undefined) {
+        return bankerRound(total, stat.precision);  
+    }
+
+    public updateStatTotal(stat: MergedStat, roundTotal: boolean = true) {
+        stat.total = this.getTotal(stat, true);
+        stat.totalWithoutSynergy = this.hasSynergy(stat) ? this.getTotal(stat, false) : stat.total;       
+
+        if (typeof stat.maximum === 'number') {
             if (typeof stat.total === 'number') {
-                stat.totalDisplayed = round ? bankerRound(stat.total, stat.displayPrecision) : stat.total;
-            } else {
-                stat.totalDisplayed =  {
-                    min: round ? bankerRound(stat.total.min, stat.displayPrecision) : stat.total.min,
-                    max: round ? bankerRound(stat.total.max, stat.displayPrecision) : stat.total.max,
-                }
+                stat.total = Math.min(stat.maximum, stat.total);
             }
-        } else {
-            stat.totalDisplayed = stat.total;
+            if (typeof stat.totalWithoutSynergy === 'number') {
+                stat.totalWithoutSynergy = Math.min(stat.maximum, stat.totalWithoutSynergy);
+            }
+        }
+
+        stat.totalDisplayed = stat.total;
+        if (stat.displayPrecision !== undefined && roundTotal) {
+            stat.totalDisplayed = bankerRound(stat.totalDisplayed, stat.displayPrecision);
         }
     }
 
@@ -209,7 +209,7 @@ export class SlormancerMergedStatUpdaterService {
                 ...stat.values,
                 flat: [
                     ...stat.values.flat,
-                    { value, extra: false, source: { synergy: 'custom' } }
+                    { value, extra: false, source: { synergy: 'custom' }, synergy: false }
                 ]
             }
         }
@@ -217,5 +217,9 @@ export class SlormancerMergedStatUpdaterService {
         this.updateStatTotal(newStat, false);
 
         return newStat.total;
+    }
+
+    public hasSynergy(stat: MergedStat): boolean {
+        return stat.values.flat.some(value => value.synergy === true);
     }
 }

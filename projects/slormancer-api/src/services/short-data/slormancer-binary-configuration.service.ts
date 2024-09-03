@@ -86,9 +86,6 @@ export class SlormancerBinaryConfigurationService {
         if (this.requireNumberOfMaxedUpgrades(character, version)) {
             const maxed_upgrades = this.slormancerSkillService.getNumberOfMaxedUpgrades(character);
             result.push(...numberToBinary(maxed_upgrades, 8));
-            console.log('Require number of maxed upgrades : ', maxed_upgrades);
-        } else {
-            console.log('Require NOT number of maxed upgrades');
         }
 
         if (this.requireNumberOfAchievements(character, version)) {
@@ -140,10 +137,8 @@ export class SlormancerBinaryConfigurationService {
             config.unity_level_2_52_p = binaryToNumber(takeBitsChunk(bits, 7));
         }
 
-        console.log('requireNumberOfMaxedUpgrades : ', character, version);
         if (this.requireNumberOfMaxedUpgrades(character, version)) {
             config.maxed_upgrades = binaryToNumber(takeBitsChunk(bits, 8));
-            console.log('Extracted number of maxed upgrades : ', config.maxed_upgrades);
         }
 
         if (this.requireNumberOfAchievements(character, version)) {

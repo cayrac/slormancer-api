@@ -201,7 +201,7 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
         override: (ba, be, ma) => {
             synergyMultiply100(ba, 1);
             synergyMultiply100(ba, 2);
-            synergyMultiply100(be, 2);
+            synergyMultiply100(be, 1);
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'trainee_reaper_effect_chance');
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'trainee_reaper_effect_additional_damage');
             overrideSynergySource(ba, 2, 'xp_find');

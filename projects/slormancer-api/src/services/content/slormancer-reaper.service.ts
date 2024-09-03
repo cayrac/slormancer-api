@@ -345,6 +345,9 @@ export class SlormancerReaperService {
 
     public getReaperFromGameWeapon(data: GameWeapon, weaponClass: HeroClass, primordial: boolean): Reaper | null {
         const level = this.getReaperLevel(data.basic.experience);
+        if (weaponClass === HeroClass.Mage && data.id === 3) {
+            console.log('game weapon xp level ', data.basic.experience, level);
+        }
         const levelPrimordial = this.getReaperLevel(data.primordial.experience);
         return this.getReaperById(data.id, weaponClass, primordial, level, 0, levelPrimordial, data.basic.kills, data.primordial.kills, 0, 0, 0);
     }

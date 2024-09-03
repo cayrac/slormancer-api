@@ -9,5 +9,5 @@ export function isSynergyResolveData(resolveData: SynergyResolveData | ExternalS
 }
 
 export function synergyResolveData(effect: EffectValueSynergy, originalValue: number | MinMax, objectSource: Entity, statsItWillUpdate: Array<{ stat: string, mapping?: MergedStatMapping }> = []): SynergyResolveData {
-    return { type: ResolveDataType.Synergy, effect, originalValue, objectSource, statsItWillUpdate };
+    return { type: ResolveDataType.Synergy, effect, originalValue, objectSource, statsItWillUpdate, cascadeSynergy: effect.cascadeSynergy };
 }

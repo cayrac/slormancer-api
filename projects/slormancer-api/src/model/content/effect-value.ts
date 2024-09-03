@@ -40,4 +40,5 @@ export interface EffectValueSynergy extends AbstractEffectValue {
     anchor: string | undefined;
     showValue: boolean;
     detailOnSynergy: boolean;
+    cascadeSynergy: boolean;
 }

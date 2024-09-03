@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { MergedStatMapping, MergedStatMappingSource } from '../../constants/content/data/data-character-stats-mapping';
 import { CharacterConfig } from '../../model/character-config';
-import { MergedStat } from '../../model/content/character-stats';
+import { MergedStat, MergedStatValue } from '../../model/content/character-stats';
 import { Ultimatum } from '../../model/content/ultimatum';
 import { Entity } from '../../model/entity';
 import { MinMax } from '../../model/minmax';
@@ -17,7 +17,7 @@ export class SlormancerStatMappingService {
 
     constructor() { }
     
-    private getMappingValues(sources: Array<MergedStatMappingSource>, stats: ExtractedStatMap, config: CharacterConfig): Array<{ value: number | MinMax, source: Entity, extra: boolean }>  {
+    private getMappingValues(sources: Array<MergedStatMappingSource>, stats: ExtractedStatMap, config: CharacterConfig): Array<{ value: number | MinMax, source: Entity, extra: boolean, synergy: boolean }>  {
         return sources
             .filter(source => source.condition === undefined || source.condition(config, stats))
             .map(source => {
@@ -30,7 +30,7 @@ export class SlormancerStatMappingService {
                     const length = source.duplicate(config, stats);
                     result = result.flatMap(entry => Array.from<EntityValue<number>>({ length }).fill({ source: entry.source, value: entry.value }));
                 }
-                return result ? result.map(data => ({ ...data, extra: source.extra === true })) : [];
+                return result ? result.map(data => ({ ...data, extra: source.extra === true, synergy: false })) : [];
             })
             .flat();
     }
@@ -68,6 +68,7 @@ export class SlormancerStatMappingService {
                 stat = {
                     stat: mapping.stat,
                     total: 0,
+                    totalWithoutSynergy: 0,
                     totalDisplayed: 0,
                     precision: mapping.precision,
                     displayPrecision: mapping.displayPrecision,
@@ -90,22 +91,22 @@ export class SlormancerStatMappingService {
         if (stat) {
             stat.readonly = true;
             
-            const multipliers: Array<{ extra: boolean, value: number, source: Entity }> = [];
+            const multipliers: Array<{ extra: boolean, value: number, source: Entity, synergy: boolean }> = [];
 
-            multipliers.push(...valueOrDefault(extractedStats['ultimatum_increased_effect'], []).map(mult => ({ ...mult, extra: true })));
+            multipliers.push(...valueOrDefault(extractedStats['ultimatum_increased_effect'], []).map(mult => ({ ...mult, extra: true, synergy: false })));
 
             if (config.ultima_momentum_buff) {
-                multipliers.push(...valueOrDefault(extractedStats['ultimatum_increased_effect_momentum_buff'], []).map(mult => ({ ...mult, extra: true })));
+                multipliers.push(...valueOrDefault(extractedStats['ultimatum_increased_effect_momentum_buff'], []).map(mult => ({ ...mult, extra: true, synergy: false })));
             }
 
             // Ultima momentum bug on movement speed
             stat.values.flat = [];
             if (stat.stat === 'movement_speed') {
-                stat.values.flat.push({ value: round(ultimatum.value.value - BASE_MOVEMENT_SPEED, 2), extra: false, source: { ultimatum }});
-                stat.values.flat.push({ value: BASE_MOVEMENT_SPEED, extra: true, source: { ultimatum }});
+                stat.values.flat.push({ value: round(ultimatum.value.value - BASE_MOVEMENT_SPEED, 2), extra: false, source: { ultimatum }, synergy: false});
+                stat.values.flat.push({ value: BASE_MOVEMENT_SPEED, extra: true, source: { ultimatum }, synergy: false});
                 stat.precision = 2;
             } else {
-                stat.values.flat.push({ value: ultimatum.value.value, extra: false, source: { ultimatum }});
+                stat.values.flat.push({ value: ultimatum.value.value, extra: false, source: { ultimatum }, synergy: false});
             }
             stat.values.max = [];
             stat.values.percent = multipliers;
@@ -115,9 +116,9 @@ export class SlormancerStatMappingService {
         }
     }
 
-    public addUniqueValueToStat(stat: string, value: number | MinMax, mergedStat: MergedStat, mapping: MergedStatMapping, config: CharacterConfig, extractedStats: ExtractedStatMap, source: Entity) {
+    public addUniqueValueToStat(stat: string, value: number | MinMax, mergedStat: MergedStat, mapping: MergedStatMapping, config: CharacterConfig, extractedStats: ExtractedStatMap, source: Entity, synergy: boolean) {
         let mappingSource: MergedStatMappingSource | undefined;
-        let array: Array<{ value: number | MinMax, extra: boolean, source: Entity }> | null = null;
+        let array: Array<MergedStatValue> | null = null;
 
         if (!mergedStat.readonly) {
             if (mappingSource = mapping.source.flat.find(v => v.stat === stat)) {
@@ -139,7 +140,7 @@ export class SlormancerStatMappingService {
                     const mult = mappingSource.multiplier(config, extractedStats);
                     value = typeof value === 'number'  ? value * mult : { min: value.min * mult, max: value.max * mult };
                 }
-                array.push({ value, extra: mappingSource.extra === true, source });
+                array.push({ value, extra: mappingSource.extra === true, source, synergy });
             }
         }
     }

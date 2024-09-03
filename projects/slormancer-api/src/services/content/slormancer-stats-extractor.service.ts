@@ -251,6 +251,8 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'absorbed_damage_wrath', config.absorbed_damage_wrath, { synergy: 'Absorbed damage wrath' });
         this.addStat(stats.stats, 'moonlight_stacks', config.moonlight_stacks, { synergy: 'Moonlight stacks' });
         this.addStat(stats.stats, 'sunlight_stacks', config.sunlight_stacks, { synergy: 'Sunlight stacks' });
+        this.addStat(stats.stats, 'min_basic_damage_add', config.skill_might, { synergy: 'Skill might' });
+        this.addStat(stats.stats, 'min_elemental_damage_add', config.ancestral_might, { synergy: 'Ancestral might' });
 
         let rune_affinity = config.effect_rune_affinity;
         if (character.runes.effect !== null && character.runes.effect.reapersmith === character.reaper.smith.id) {

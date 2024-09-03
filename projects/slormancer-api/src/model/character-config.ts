@@ -243,5 +243,7 @@ export interface CharacterConfig {
     unity_level_2_52_p: number;
     absorbed_damage_wrath: number;
     maxed_upgrades: number | null;
+    skill_might: number;
+    ancestral_might: number;
 }
 

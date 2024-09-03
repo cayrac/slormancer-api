@@ -244,7 +244,6 @@ export const COOLDOWN_REDUCTION_MAPPING: MergedStatMapping =
         multiplier: [
             { stat: 'cooldown_reduction_global_mult' },
             // this is a bug, it should increase attack speed instead
-            { stat: 'adam_blessing_buff_attack_speed_global_mult', condition: config => config.has_adam_blessing_buff }, // minAndMax(0, config.delightful_rain_stacks - 1, upgradeValue.value - 1)
             { stat: 'delightful_rain_stack_cooldown_reduction_global_mult', condition: config => config.delightful_rain_stacks > 0, duplicate: (config, stats) => minAndMax(0, config.delightful_rain_stacks, getMaxStacks(stats, 'delightful_rain_max_stacks'))  },
             // this is a bug, it should increase attack speed instead
             { stat: 'exhilerating_senses_stack_attack_speed_global_mult', condition: config => config.exhilerating_senses_stacks > 0, multiplier: config => config.exhilerating_senses_stacks },
@@ -268,6 +267,9 @@ export const ATTACK_SPEED_MAPPING: MergedStatMapping =
         multiplier: [
             { stat: 'attack_speed_percent' },
             { stat: 'attack_speed_global_mult' },
+
+            { stat: 'adam_blessing_buff_attack_speed_global_mult', condition: config => config.has_adam_blessing_buff },
+
             { stat: 'cooldown_reduction_global_mult_after_crit', condition: config => config.crit_recently },
             { stat: 'self_control_attack_speed_global_mult', condition: config => config.serenity > 0 && config.serenity < DELIGHTED_VALUE },
             { stat: 'banner_haste_buff_attack_speed_global_mult', condition: config => config.has_banner_haste_buff },
