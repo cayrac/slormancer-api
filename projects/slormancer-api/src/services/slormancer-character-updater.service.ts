@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { MAX_HERO_LEVEL, MAX_REAPER_AFFINITY_BONUS, PERCENT_STATS } from '../constants/common';
 import { DATA_HERO_BASE_STATS } from '../constants/content/data/data-hero-base-stats';
-import { Character } from '../model/character';
+import { Character, CharacterMight } from '../model/character';
 import { CharacterConfig } from '../model/character-config';
 import { Activable } from '../model/content/activable';
 import { AncestralLegacy } from '../model/content/ancestral-legacy';
@@ -30,7 +30,7 @@ import { SlormancerSynergyResolverService } from './content/slormancer-synergy-r
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
 import { AncestralLegacyType, MergedStat, SkillType } from '../model';
-import { SlormancerAncestralLegacyNodesService } from './content';
+import { SlormancerAncestralLegacyNodesService, SlormancerMightService } from './content';
 import { round } from '../util';
 
 @Injectable()
@@ -51,7 +51,8 @@ export class SlormancerCharacterUpdaterService {
                 private slormancerRuneService: SlormancerRuneService,
                 private slormancerValueUpdater: SlormancerValueUpdaterService,
                 private slormancerSynergyResolverService: SlormancerSynergyResolverService,
-                private slormancerAncestralLegacyNodesService: SlormancerAncestralLegacyNodesService
+                private slormancerAncestralLegacyNodesService: SlormancerAncestralLegacyNodesService,
+                private slormancerMightService: SlormancerMightService,
         ) { }
 
     private applyReaperAffinities(character: Character, reaper: Reaper, config: CharacterConfig) {
@@ -562,11 +563,11 @@ export class SlormancerCharacterUpdaterService {
             character.ancestralLegacies.activeAncestralLegacies.push(ancestralLegacy.id);
         }
         
-        if (ancestralLegacy.baseRank !== ancestralLegacy.maxRank) {
-            this.slormancerAncestralLegacyService.updateAncestralLegacyModel(ancestralLegacy, ancestralLegacy.maxRank, ancestralLegacy.bonusRank);
+        if (ancestralLegacy.rank < ancestralLegacy.maxRank) {
+            this.slormancerAncestralLegacyService.updateAncestralLegacyModel(ancestralLegacy, ancestralLegacy.baseRank, ancestralLegacy.bonusRank, ancestralLegacy.maxRank);
             this.slormancerAncestralLegacyService.updateAncestralLegacyView(ancestralLegacy);
         }
-    } 
+    }
 
     private updateAncestralLegacySkills(character: Character) {
         character.ancestralLegacies.activeAncestralLegacies = this.slormancerAncestralLegacyNodesService.getAncestralLegacyIds(character);
@@ -693,7 +694,7 @@ export class SlormancerCharacterUpdaterService {
         }
     }
 
-    public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = []) {
+    public updateCharacter(character: Character, config: CharacterConfig, updateViews: boolean = true, additionalItem: EquipableItem | null = null, additionalRunes: Array<Rune> = [], forcedMight: CharacterMight | null = null) {
         character.issues = [];
 
         character.name = this.slormancerTranslateService.translate('hero_' + character.heroClass);
@@ -707,6 +708,12 @@ export class SlormancerCharacterUpdaterService {
         character.attributes.remainingPoints = character.attributes.maxPoints - allocatedPoints;
 
         this.slormancerAncestralLegacyNodesService.stabilize(character);
+
+        if (forcedMight === null) {
+            this.slormancerMightService.updateMight(character);
+        } else {
+            this.slormancerMightService.forceMight(character, forcedMight);
+        }
 
         this.updateInvestedSlorm(character);
 

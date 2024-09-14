@@ -47,6 +47,17 @@ function addConstant(effect: LegendaryEffect, value: number, stat: string, value
     });
 }
 
+/*
+function allowSynergyToCascade(effect: LegendaryEffect, index: number) {
+    const value = effect.effects[index];
+
+    if (value && isEffectValueSynergy(value.effect)) {
+        value.effect.cascadeSynergy = true;
+    } else {
+        throw new Error('failed to update synergy cascading at index ' + index);
+    }
+}*/
+
 export const DATA_LEGENDARY: { [key: number]: DataLegendary } = {
     13: {
         override: (effect) => {

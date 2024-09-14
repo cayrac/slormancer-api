@@ -4,10 +4,6 @@ import { HeroClass } from './enum/hero-class';
 import { ReaperBuilder } from './reaper-builder';
 import { ReaperEffect } from './reaper-effect';
 
-export interface ReaperInfo {
-    kills: number;
-    level: number;
-}
 export interface ReaperTemplates {
     name: string;
     base: Array<ReaperEffect>;
@@ -32,6 +28,8 @@ export interface Reaper {
     reaperAffinity: number;
     effectAffinity: number;
     kills: number;
+    baseKills: number;
+    primordialKills: number;
     name: string;
     description: string;
     benediction: string | null;
@@ -45,8 +43,6 @@ export interface Reaper {
     minLevel: number;
     maxLevel: number;
     templates: ReaperTemplates;
-    baseInfo: ReaperInfo;
-    primordialInfo: ReaperInfo;
     smith: ReaperBuilder;
     damageType: string;
     damagesBase: MinMax;

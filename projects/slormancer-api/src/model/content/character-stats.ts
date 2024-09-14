@@ -15,6 +15,7 @@ export interface SynergyResolveData {
     objectSource: Entity;
     statsItWillUpdate: Array<{ stat: string, mapping?: MergedStatMapping }>;
     cascadeSynergy: boolean;
+    addAsFlat: boolean;
 }
 export interface ExternalSynergyResolveData {
     type: ResolveDataType.ExternalSynergy;

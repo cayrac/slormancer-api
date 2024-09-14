@@ -17,8 +17,6 @@ import { strictParseFloat } from '../../util/parse.util';
 import {
     compare,
     emptyStringToNull,
-    isEffectValueSynergy,
-    isEffectValueVariable,
     isNotNullOrUndefined,
     notEmptyOrNull,
     removeEmptyValues,
@@ -345,11 +343,7 @@ export class SlormancerReaperService {
 
     public getReaperFromGameWeapon(data: GameWeapon, weaponClass: HeroClass, primordial: boolean): Reaper | null {
         const level = this.getReaperLevel(data.basic.experience);
-        if (weaponClass === HeroClass.Mage && data.id === 3) {
-            console.log('game weapon xp level ', data.basic.experience, level);
-        }
-        const levelPrimordial = this.getReaperLevel(data.primordial.experience);
-        return this.getReaperById(data.id, weaponClass, primordial, level, 0, levelPrimordial, data.basic.kills, data.primordial.kills, 0, 0, 0);
+        return this.getReaperById(data.id, weaponClass, primordial, level, 0, 'TOREMOVE', data.basic.kills, data.primordial.kills, 0, 0, 0);
     }
 
     private getReaperEffectClone(reaperEffect: ReaperEffect): ReaperEffect {
@@ -363,8 +357,6 @@ export class SlormancerReaperService {
         const result: Reaper = {
             ...reaper,
             smith: { ...reaper.smith },
-            baseInfo: { ...reaper.baseInfo },
-            primordialInfo: { ...reaper.primordialInfo },
             templates: {
                 ...reaper.templates,
                 base: reaper.templates.base.map(effect => this.getReaperEffectClone(effect)),
@@ -380,10 +372,10 @@ export class SlormancerReaperService {
 
     public getDefaultReaper(weaponClass: HeroClass) {
         const defaultGameData = <GameDataReaper>this.slormancerDataService.getGameDataAvailableReaper()[0];
-        return this.getReaper(defaultGameData, weaponClass, false, 1, 0, 1, 0, 0, 0);
+        return this.getReaper(defaultGameData, weaponClass, false, 1, 0, 'TOREMOVE', 0, 0, 0);
     }
 
-    public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, baseLevelPrimordial: number, kills: number, killsPrimordial: number, baseReaperAffinity: number = 0, baseEffectAffinity: number = 0, bonusAffinity: number = 0): Reaper {
+    public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, baseKills: number, primordialKills: number, baseReaperAffinity: number = 0, baseEffectAffinity: number = 0, bonusAffinity: number = 0): Reaper {
         
         const maxLevel = gameData.MAX_LVL ?? 100
 
@@ -394,14 +386,16 @@ export class SlormancerReaperService {
             icon: '',
             primordial,
             level: 0,
-            baseLevel: 0,
+            baseLevel,
             bonusLevel,
             baseReaperAffinity,
             baseEffectAffinity,
             bonusAffinity,
             reaperAffinity: 0,
             effectAffinity: 0,
-            kills,
+            kills: 0,
+            baseKills,
+            primordialKills,
             name: '',
             description: '',
             benediction: null,
@@ -417,14 +411,6 @@ export class SlormancerReaperService {
             damagesLabel: '',
             maxDamages: { min: 0, max: 0 },
             maxDamagesLabel: '',
-            baseInfo: {
-                kills: kills,
-                level: Math.min(baseLevel, maxLevel)
-            },
-            primordialInfo: {
-                kills: killsPrimordial,
-                level: Math.min(baseLevelPrimordial, maxLevel)
-            },
             damagesBase: { min: gameData.BASE_DMG_MIN ?? 0, max: gameData.BASE_DMG_MAX ?? 0 },
             damagesLevel: { min: gameData.MIN_DMG_LVL ?? 0, max: gameData.MAX_DMG_LVL ?? 0 },
             damagesMultiplier: gameData.DMG_MULTIPLIER ?? 1,
@@ -445,12 +431,12 @@ export class SlormancerReaperService {
         return result;
     }
 
-    public getReaperById(id: number, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, baseLevelPrimordial: number, kills: number, killsPrimordial: number, reaperAffinity: number = 0, effectAffinity: number = 0, bonusAffinity: number = 0): Reaper | null {
+    public getReaperById(id: number, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, kills: number, killsPrimordial: number, reaperAffinity: number = 0, effectAffinity: number = 0, bonusAffinity: number = 0): Reaper | null {
         const gameData = this.slormancerDataService.getGameDataReaper(id);
         let result: Reaper | null = null;
 
         if (gameData !== null) {
-            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel, baseLevelPrimordial, kills, killsPrimordial, reaperAffinity, effectAffinity, bonusAffinity);
+            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel, TOREMOVE, kills, killsPrimordial, reaperAffinity, effectAffinity, bonusAffinity);
         }
 
         return result;
@@ -458,9 +444,12 @@ export class SlormancerReaperService {
 
     private updateEffectValue(value: AbstractEffectValue, reaper: Reaper, affinityMultiplier: number) {
         let upgradeValue = reaper.level;
+        /*
+        // It's probably a good idea to keep it here in case of
         if ((isEffectValueVariable(value) || isEffectValueSynergy(value)) && value.upgradeType === EffectValueUpgradeType.NonPrimordialReaperLevel) {
             upgradeValue = reaper.baseInfo.level;
         }
+        */
 
         this.slormancerEffectValueService.updateEffectValue(value, upgradeValue * affinityMultiplier, 5);
     }
@@ -470,12 +459,8 @@ export class SlormancerReaperService {
     }
 
     public updateReaperModel(reaper: Reaper) {
-        reaper.primordialInfo.level = Math.min(reaper.maxLevel, Math.max(reaper.primordialInfo.level, reaper.minLevel));
-        reaper.baseInfo.level = Math.min(reaper.maxLevel, Math.max(reaper.baseInfo.level, reaper.minLevel));
-
-        const info = reaper.primordial ? reaper.primordialInfo : reaper.baseInfo;
-        reaper.kills = info.kills;
-        reaper.baseLevel = info.level;
+        reaper.baseLevel = Math.min(reaper.maxLevel, Math.max(reaper.baseLevel, reaper.minLevel));
+        reaper.kills = reaper.primordial ? reaper.primordialKills : reaper.baseKills;
         reaper.level = reaper.baseLevel + reaper.bonusLevel;
         reaper.baseReaperAffinity = Math.min(MAX_REAPER_AFFINITY_BASE, Math.max(0, reaper.baseReaperAffinity));
         reaper.baseEffectAffinity = Math.min(MAX_EFFECT_AFFINITY_BASE, Math.max(0, reaper.baseEffectAffinity));

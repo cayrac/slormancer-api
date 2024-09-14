@@ -36,10 +36,12 @@ export function compareRarities(a: Rarity, b: Rarity): number {
     if (a === Rarity.Epic) numA = 4;
     if (a === Rarity.Rare) numA = 3;
     if (a === Rarity.Magic) numA = 2;
+    if (a === Rarity.Defensive) numA = 6;
     if (b === Rarity.Legendary) numB = 5;
     if (b === Rarity.Epic) numB = 4;
     if (b === Rarity.Rare) numB = 3;
     if (b === Rarity.Magic) numB = 2;
+    if (b === Rarity.Defensive) numB = 6;
 
     return compare(numA, numB);
 }

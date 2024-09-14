@@ -60,25 +60,21 @@ export class SlormancerSkillService {
         return 15;
     }
 
-    public getSlormUpgradeCosts(upgrade: SkillUpgrade, slormTier: string, line: number, maxRank: number): number[] {
-        const tier = slormTier.length > 0 ? parseInt(slormTier) : null;
+    private getSlormUpgradeCosts(upgrade: SkillUpgrade): number[] {
+        const tier = upgrade.slormTier.length > 0 ? parseInt(upgrade.slormTier) : null;
         let result: number[] = [];
 
         if (tier !== null) {
             const tierCosts = DATA_SLORM_COST.passive[tier];
             if (tierCosts) {
-                const lineCosts = tierCosts[line];
+                const lineCosts = tierCosts[upgrade.line];
                 if (lineCosts) {
-                    const maxRankCosts = lineCosts[maxRank];
+                    const maxRankCosts = lineCosts[upgrade.maxRank];
                     if (maxRankCosts !== undefined) {
                         result = maxRankCosts;
                     }
                 }
             }
-        }
-
-        if (result.length === 0) {
-            console.log('No upgrade costs found for ', upgrade.name, slormTier, line, maxRank);
         }
         
         return result;
@@ -386,6 +382,7 @@ export class SlormancerSkillService {
                 damageTypes: splitData(gameDataSkill.DMG_TYPE, ','),
                 slormTier: parentSkill === null ? "" : parentSkill.SLORM_TIER,
                 upgradeSlormCost: null,
+                totalSlormCost: 0,
                 investedSlorm: 0,
 
                 masteryLabel: null,
@@ -463,14 +460,10 @@ export class SlormancerSkillService {
         upgrade.hasManaCost = upgrade.costType === SkillCostType.ManaSecond || upgrade.costType === SkillCostType.ManaLockFlat || upgrade.costType === SkillCostType.Mana;
         upgrade.hasNoCost = upgrade.costType === SkillCostType.None || upgrade.baseCost === 0;
 
-        if (upgrade.slormTier === '') {
-            console.log('upgrading with bad slorm tier : ', upgrade);
-        }
-        const upgradeCosts = this.getSlormUpgradeCosts(upgrade, upgrade.slormTier, upgrade.line, upgrade.maxRank);
+        const upgradeCosts = this.getSlormUpgradeCosts(upgrade);
         upgrade.investedSlorm = upgradeCosts.reduce((total, current, index) => index < upgrade.rank ? current + total : total , 0);
+        upgrade.totalSlormCost = upgradeCosts.reduce((total, current) => current + total , 0);
         upgrade.upgradeSlormCost = upgradeCosts[upgrade.rank] ?? null;
-        // console.log('invested slorm : ', upgrade.investedSlorm);
-        // console.log('upgrade slorm cost : ', upgrade.upgradeSlormCost);
 
         for (const effectValue of upgrade.values) {
             this.slormancerEffectValueService.updateEffectValue(effectValue, upgrade.rank);

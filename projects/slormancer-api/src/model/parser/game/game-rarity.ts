@@ -1,1 +1,1 @@
-export declare type GameRarity = 'N' | 'M' | 'R' | 'E' | 'L';
+export declare type GameRarity = 'N' | 'D' | 'M' | 'R' | 'E' | 'L';

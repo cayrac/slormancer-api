@@ -1672,7 +1672,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
     },
     {
         stat: 'overdrive_damage',
-        precision: 3,
+        precision: 0,
         allowMinMax: true,
         suffix: '',
         source: {
@@ -1929,7 +1929,7 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'min_elemental_damage_add' },
-                { stat: 'weapon_to_elemental_damage', extra: true },
+                { stat: 'weapon_to_elemental_damage' },
                 { stat: 'elemental_emergency_min_elemental_damage_add_on_low_life', condition: (config, stats) => getFirstStat(stats, 'percent_missing_health', 0) > (100 - getFirstStat(stats, 'elemental_emergency_min_elemental_damage_add_on_low_life_treshold', 0)) },
                 { stat: 'elemental_resources_min_elemental_damage_add_on_low_mana', condition: (config, stats) => getFirstStat(stats, 'percent_missing_mana', 0) > (100 - getFirstStat(stats, 'elemental_resources_min_elemental_damage_add_on_low_mana_treshold', 0)) },
                 { stat: 'enligntment_stack_min_elemental_damage_add', condition: config => config.enlightenment_stacks > 0, multiplier: config => Math.min(config.enlightenment_stacks, 999) }
@@ -2003,12 +2003,12 @@ export const GLOBAL_MERGED_STATS_MAPPING: Array<MergedStatMapping> = [
         source: {
             flat: [
                 { stat: 'basic_to_physical_damage' }, 
-                { stat: 'weapon_to_physical_damage', extra: true }
+                { stat: 'weapon_to_physical_damage' }
             ],
             max: [],
             percent: [],
             maxPercent: [],
-            multiplier: [{ stat: 'physical_damage_mult' }],
+            multiplier: [],
             maxMultiplier: [],
         } 
     },

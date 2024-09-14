@@ -127,12 +127,16 @@ export class SlormancerStatMappingService {
                 array = mergedStat.values.max;
             } else if (mappingSource = mapping.source.percent.find(v => v.stat === stat)) {
                 array = mergedStat.values.percent;
+                synergy = false;
             } else if (mappingSource = mapping.source.maxPercent.find(v => v.stat === stat)) {
                 array = mergedStat.values.maxPercent;
+                synergy = false;
             } else if (mappingSource = mapping.source.multiplier.find(v => v.stat === stat)) {
                 array = mergedStat.values.multiplier;
+                synergy = false;
             } else if (mappingSource = mapping.source.maxMultiplier.find(v => v.stat === stat)) {
                 array = mergedStat.values.maxMultiplier;
+                synergy = false;
             }
     
             if (mappingSource && array !== null && (mappingSource.condition === undefined || mappingSource.condition(config, extractedStats))) {

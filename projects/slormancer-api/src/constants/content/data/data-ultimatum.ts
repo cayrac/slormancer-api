@@ -14,7 +14,7 @@ export const DATA_ULTIMATUM = {
         extendedMalus: false
     },
     [UltimatumType.AdamantAbundance]: <DataUltimatum>{
-        value: () => effectValueVariable(100, 15, EffectValueUpgradeType.UpgradeRank, false, 'mana_regeneration', EffectValueValueType.Stat),
+        value: () => effectValueVariable(125, 25, EffectValueUpgradeType.UpgradeRank, false, 'mana_regeneration', EffectValueValueType.Stat),
         extendedMalus: false
     },
     [UltimatumType.EndlessWealth]: <DataUltimatum>{
@@ -26,7 +26,7 @@ export const DATA_ULTIMATUM = {
         extendedMalus: true
     },
     [UltimatumType.ProfoundDepth]: <DataUltimatum>{
-        value: () => effectValueVariable(20, 2.5, EffectValueUpgradeType.UpgradeRank, true, 'reduced_on_area', EffectValueValueType.Stat),
+        value: () => effectValueVariable(5, 2, EffectValueUpgradeType.UpgradeRank, true, 'reduced_on_area', EffectValueValueType.Stat),
         extendedMalus: false
     },
     [UltimatumType.PerfectSegmentation]: <DataUltimatum>{
@@ -34,7 +34,7 @@ export const DATA_ULTIMATUM = {
         extendedMalus: true
     },
     [UltimatumType.ImpeccableTechnique]: <DataUltimatum>{
-        value: () => effectValueVariable(15, 1.5, EffectValueUpgradeType.UpgradeRank, true, 'inner_fire_chance', EffectValueValueType.Stat),
+        value: () => effectValueVariable(25, 15, EffectValueUpgradeType.UpgradeRank, true, 'inner_fire_chance', EffectValueValueType.Stat),
         extendedMalus: true
     },
     [UltimatumType.FlawlessPower]: <DataUltimatum>{

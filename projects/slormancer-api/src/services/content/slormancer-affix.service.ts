@@ -33,6 +33,8 @@ export class SlormancerAffixService {
             result = Rarity.Rare;
         } else if (rarity === 'E') {
             result = Rarity.Epic;
+        } else if (rarity === 'D') {
+            result = Rarity.Defensive;
         } else {
             result = Rarity.Legendary;
         }
@@ -123,7 +125,7 @@ export class SlormancerAffixService {
         }
 
         itemAffix.craftedEffect.possibleCraftedValues = this.slormancerItemValueService
-            .getAffixValues(itemAffix.itemLevel, itemAffix.reinforcment, itemAffix.craftedEffect.score, itemAffix.craftedEffect.effect.percent, itemAffix.rarity, itemAffix.pure);
+            .getAffixValues(itemAffix.itemLevel, itemAffix.craftedEffect.effect.stat, itemAffix.reinforcment, itemAffix.craftedEffect.score, itemAffix.craftedEffect.effect.percent, itemAffix.rarity, itemAffix.pure);
         
         const minValue = itemAffix.craftedEffect.possibleCraftedValues[0];
         const maxValue = itemAffix.craftedEffect.possibleCraftedValues[Math.max(0, itemAffix.craftedEffect.possibleCraftedValues.length - 1)];

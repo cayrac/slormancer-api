@@ -11,6 +11,17 @@ import { valueOrDefault } from '../../util/utils';
 @Injectable()
 export class SlormancerItemValueService {
 
+    private readonly DAMAGE_STATS: string[] = [
+        'min_basic_damage_add',
+        'min_elemental_damage_add',
+    ]
+
+    private readonly DEFENSE_STATS: string[] = [
+        'res_phy_add',
+        'res_mag_add',
+        'dodge_add',
+    ]
+
     private readonly REINFORCMENT_CACHE: { [key: number]: number } = {}; 
 
     private readonly AFFIX_MIN_MAX: { [key: string]: { [key: string]: { [key: number]: MinMax }}} = {
@@ -114,10 +125,17 @@ export class SlormancerItemValueService {
         return result;
     }
 
-    private getComputedBaseValue(level: number, score: number, percent: boolean): number {
+    private getComputedBaseValue(level: number, stat: string, score: number, percent: boolean): number {
+        let damageStatMultiplier = 0;
+        if (this.DAMAGE_STATS.includes(stat)) {
+            damageStatMultiplier = level * level * 1.2;
+        } else if (this.DEFENSE_STATS.includes(stat)) {
+            damageStatMultiplier = level * level * 0.9;
+        }
+
         return percent
             ? this.getLevelPercentScore(level) * score * 20
-            : score * (100 + (level * 30)) / 100;
+            : score * (100 + (level * 30 + damageStatMultiplier)) / 100;
     }
 
     private roundValue(value: number, precisionValue: boolean, percent: boolean): number {
@@ -158,8 +176,8 @@ export class SlormancerItemValueService {
         return ratio;
     }
 
-    private computeAffixValue(level: number, reinforcment: number, score: number, value: number, percent: boolean, pure: number | null): number {
-        const baseValue = this.getComputedBaseValue(level, score, percent);
+    private computeAffixValue(level: number, stat: string, reinforcment: number, score: number, value: number, percent: boolean, pure: number | null): number {
+        const baseValue = this.getComputedBaseValue(level, stat, score, percent);
         const reinforcmentRatio = this.getReinforcmentratio(reinforcment);
         const valueRatio = this.getValueRatio(level, value, percent);
         const pureRatio = pure === null || pure === 0 ? 100 : pure;
@@ -182,28 +200,28 @@ export class SlormancerItemValueService {
         return minMax;
     }
 
-    public getAffixValues(level: number, reinforcment: number, score: number, percent: boolean, rarity: Rarity, pure: number | null): Array<{ craft: number, value: number }> {
+    public getAffixValues(level: number, stat: string, reinforcment: number, score: number, percent: boolean, rarity: Rarity, pure: number | null): Array<{ craft: number, value: number }> {
         let values: Array<{ craft: number, value: number }> = [];
         const levelScore = this.getLevelPercentScore(level);
 
         const range = this.getAffixMinMax(rarity, percent, levelScore);
 
         if (range !== null) {
-            values = list(range.min, range.max).map(v => ({ craft: v, value: this.computeAffixValue(level, reinforcment, score, v, percent, pure) }));
+            values = list(range.min, range.max).map(v => ({ craft: v, value: this.computeAffixValue(level, stat, reinforcment, score, v, percent, pure) }));
         }
 
         return values;
     }
 
-    public getAffixValuesMinMax(level: number, reinforcment: number, score: number, percent: boolean, rarity: Rarity, pure: number | null): MinMax {
+    public getAffixValuesMinMax(level: number, stat: string, reinforcment: number, score: number, percent: boolean, rarity: Rarity, pure: number | null): MinMax {
         let value: MinMax = { min: 0, max: 0 };
         const levelScore = this.getLevelPercentScore(level);
         const range = this.getAffixMinMax(rarity, percent, levelScore);
 
         if (range !== null) {
             value = {
-                min: this.computeAffixValue(level, reinforcment, score, range.min, percent, pure),
-                max: this.computeAffixValue(level, reinforcment, score, range.max, percent, pure)
+                min: this.computeAffixValue(level, stat, reinforcment, score, range.min, percent, pure),
+                max: this.computeAffixValue(level, stat, reinforcment, score, range.max, percent, pure)
             }
             
         }
@@ -239,8 +257,6 @@ export class SlormancerItemValueService {
 
         result.value = result.range ? valueOrDefault(result.range[itemValue], 0) : round(effect.value + effect.upgrade * upgradeMultiplier, 2);
         result.baseFormulaUpgrade = result.range ? valueOrDefault(result.range[itemValue], 0) : round(effect.value + effect.upgrade, 2);
-
-
 
         return result;
     }

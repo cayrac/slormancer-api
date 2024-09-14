@@ -31,6 +31,7 @@ import { SlormancerEffectValueService } from './slormancer-effect-value.service'
 import { SlormancerMechanicService } from './slormancer-mechanic.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
+import { DATA_SLORM_COST } from '../../constants/content/data/data-slorm-cost';
 
 @Injectable()
 export class SlormancerAncestralLegacyService {
@@ -40,6 +41,18 @@ export class SlormancerAncestralLegacyService {
     private readonly COOLDOWN_LABEL = this.slormancerTranslateService.translate('tt_cooldown');
     private readonly SECONDS_LABEL = this.slormancerTranslateService.translate('tt_seconds');
     private readonly RANK_LABEL = this.slormancerTranslateService.translate('tt_rank');
+    private readonly TIER_ID: { [key: number]: number[] } = {
+        1: [15, 24, 32, 53, 80, 96, 101, 126, 127, 148],
+        2: [0, 16, 57, 81, 94, 102, 125, 128, 129, 143],
+        3: [19, 35, 55, 72, 85, 93, 97, 98, 100, 119, 121, 149],
+        4: [6, 41, 82, 89, 90, 106, 122, 132, 140, 142],
+        5: [34, 139, 17, 104, 138, 112, 2, 7, 5, 146, 71, 114, 120, 64, 47, 46, 48, 52, 36, 33],
+        6: [99, 77, 29, 25, 76, 12, 103, 65, 108, 69, 73, 79, 144, 107, 56, 78, 42],
+        7: [30, 87, 18, 130, 137, 134, 4, 124, 67, 83, 110, 92, 131, 136, 37],
+        8: [117, 38, 39, 49, 50, 61, 62, 8, 115, 9, 21, 116, 22, 123, 20, 147, 44, 109, 58, 118, 74, 66, 145, 14, 133, 11],
+        9: [43, 45, 111, 27, 28, 26, 141, 13, 1, 3, 75, 70, 105, 68, 135, 54, 59, 60, 91, 31],
+        10: [40, 113, 23, 86, 10, 95, 63, 84, 51, 88],
+    }
 
     constructor(private slormancerDataService: SlormancerDataService,
                 private slormancerBuffService: SlormancerBuffService,
@@ -54,6 +67,38 @@ export class SlormancerAncestralLegacyService {
                 
     private isDamageStat(stat: string): boolean {
         return stat === 'physical_damage' || stat === 'elemental_damage' || stat === 'bleed_damage';
+    }
+
+    private getSlormTier(id: number): number | null {
+        let tier: number | null = null;
+        for (let i = 1 ; i <= 10 ; i++ ) {
+            const tierIds = this.TIER_ID[i] ?? [];
+            if (tierIds.includes(id)) {
+                tier = i;
+                break;
+            }
+        }
+        return tier;
+    }
+        
+    private getAncestralLegacySlormCosts(ancestralLegacy: AncestralLegacy): number[] {
+        let result: number[] = [];
+
+        if (ancestralLegacy.slormTier !== null) {
+            const tierCosts = DATA_SLORM_COST.ancestral[ancestralLegacy.slormTier];
+            if (tierCosts) {
+                const maxRankCosts = tierCosts[ancestralLegacy.maxRank];
+                if (maxRankCosts !== undefined) {
+                    result = maxRankCosts;
+                }
+            }
+        }
+
+        if (result.length === 0) {
+            console.log('getAncestralLegacySlormCosts - Aucun résultat pour : ', ancestralLegacy.name);
+        }
+        
+        return result;
     }
             
     private parseEffectValues(data: GameDataAncestralLegacy): Array<AbstractEffectValue> {
@@ -161,6 +206,7 @@ export class SlormancerAncestralLegacyService {
                 baseCostType: <SkillCostType>gameData.COST_TYPE,
                 costType: <SkillCostType>gameData.COST_TYPE,
                 rank: 0,
+                forcedRank: null,
                 baseRank: baseRank,
                 bonusRank: bonusRank,
                 baseMaxRank: gameData.UPGRADE_NUMBER,
@@ -170,6 +216,10 @@ export class SlormancerAncestralLegacyService {
                 hasNoCost: false,
                 realm: gameData.REALM,
                 isActivable: false,
+                slormTier: this.getSlormTier(gameData.REF),
+                upgradeSlormCost: null,
+                investedSlorm: 0,
+                totalSlormCost: 0,
 
                 relatedBuffs: this.extractBuffs(gameData.EN_DESCRIPTION),
                 relatedMechanics: this.extractMechanics(gameData.EN_DESCRIPTION, values, data !== null && data.additionalMechanics ? data.additionalMechanics : []),
@@ -195,11 +245,12 @@ export class SlormancerAncestralLegacyService {
         return ancestralLegacy;
     }
 
-    public updateAncestralLegacyModel(ancestralLegacy: AncestralLegacy, baseRank: number, bonusRank: number = ancestralLegacy.bonusRank) {
+    public updateAncestralLegacyModel(ancestralLegacy: AncestralLegacy, baseRank: number, bonusRank: number = ancestralLegacy.bonusRank, forcedRank: number | null = null) {
         const applyBonus = ancestralLegacy.types.includes(AncestralLegacyType.Stat);
+        ancestralLegacy.forcedRank = forcedRank;
         ancestralLegacy.baseRank = Math.min(ancestralLegacy.baseMaxRank, Math.max(0, baseRank));
         ancestralLegacy.bonusRank = Math.max(0, bonusRank);
-        ancestralLegacy.rank = ancestralLegacy.baseRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
+        ancestralLegacy.rank = ancestralLegacy.forcedRank !== null ? ancestralLegacy.forcedRank : ancestralLegacy.baseRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
         ancestralLegacy.maxRank = ancestralLegacy.baseMaxRank + (applyBonus ? ancestralLegacy.bonusRank : 0);
 
         for (const effectValue of ancestralLegacy.values) {
@@ -211,6 +262,11 @@ export class SlormancerAncestralLegacyService {
         this.updateAncestralLegacyCost(ancestralLegacy);
 
         ancestralLegacy.isActivable = ancestralLegacy.baseCooldown !== null || ancestralLegacy.genres.includes(SkillGenre.Aura);
+
+        const upgradeCosts = this.getAncestralLegacySlormCosts(ancestralLegacy);
+        ancestralLegacy.investedSlorm = upgradeCosts.reduce((total, current, index) => index < ancestralLegacy.baseRank ? current + total : total , 0);
+        ancestralLegacy.totalSlormCost = upgradeCosts.reduce((total, current) => current + total , 0);
+        ancestralLegacy.upgradeSlormCost = upgradeCosts[ancestralLegacy.rank] ?? null;
     }
 
     public updateAncestralLegacyCost(ancestralLegacy: AncestralLegacy) {

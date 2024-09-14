@@ -15,7 +15,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     elite_under_command: 0,
     totems_under_control: 0,
     traps_nearby: 0,
-    serenity: 0,
+    serenity: 6,
     arcanic_emblems: 0,
     temporal_emblems: 0,
     obliteration_emblems: 0,
@@ -245,9 +245,7 @@ export const DEFAULT_CONFIG: CharacterConfig = {
     unity_level_2_52_p: 0,
     absorbed_damage_wrath: 0,
 
-    maxed_upgrades: null,
-    skill_might: 0,
-    ancestral_might: 0
+    maxed_upgrades: null
 }
 
 export const COMBAT_CONFIG: CharacterConfig = {
@@ -493,7 +491,5 @@ export const COMBAT_CONFIG: CharacterConfig = {
     unity_level_2_52_p: 0,
     absorbed_damage_wrath: 0,
 
-    maxed_upgrades: null,
-    skill_might: 0,
-    ancestral_might: 0
+    maxed_upgrades: null
 }

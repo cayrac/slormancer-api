@@ -29,12 +29,17 @@ export interface AncestralLegacy {
     hasManaCost: boolean;
     hasNoCost: boolean;
     rank: number;
+    forcedRank: number | null;
     baseRank: number;
     bonusRank: number;
     baseMaxRank: number;
     maxRank: number;
     realm: number;
     isActivable: boolean;
+    slormTier: number | null;
+    upgradeSlormCost: number | null;
+    investedSlorm: number;
+    totalSlormCost: number;
 
     relatedBuffs: Array<Buff>;
     relatedMechanics: Array<Mechanic>;

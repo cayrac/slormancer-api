@@ -39,7 +39,7 @@ import { SlormancerCharacterComparatorService } from './services/slormancer-char
 import { SlormancerCharacterModifierService } from './services/slormancer-character-modifier.service';
 import { SlormancerCharacterUpdaterService } from './services/slormancer-character-updater.service';
 import { SlormancerDpsService } from './services/slormancer-dps.service';
-import { SlormancerAncestralLegacyNodesService, SlormancerBinaryConfigurationService } from './services';
+import { SlormancerAncestralLegacyNodesService, SlormancerBinaryConfigurationService, SlormancerMightService } from './services';
 
 @NgModule({
   declarations: [],
@@ -87,6 +87,7 @@ import { SlormancerAncestralLegacyNodesService, SlormancerBinaryConfigurationSer
     SlormancerBinaryRuneService,
     SlormancerAncestralLegacyNodesService,
     SlormancerBinaryConfigurationService,
+    SlormancerMightService,
   ],
   bootstrap: []
 })

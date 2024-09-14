@@ -15,7 +15,7 @@ import { splitData } from '../../util/utils';
 @Injectable()
 export class SlormancerItemParserService {
 
-    private AFFIXE_RARITIES = ['N', 'M', 'R', 'E', 'L'];
+    private AFFIXE_RARITIES = ['N', 'D', 'M', 'R', 'E', 'L'];
     private ENCHANTMENT_TARGETS = ['MA', 'AT', 'RP'];
 
     private isRessource(value: string): boolean {

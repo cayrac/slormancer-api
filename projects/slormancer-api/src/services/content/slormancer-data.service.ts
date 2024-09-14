@@ -248,6 +248,8 @@ export class SlormancerDataService {
 
         if (rarity === Rarity.Normal) {
             stats = GAME_DATA.STAT.filter(stat => stat[key] === 'P').map(stat => stat.REF);
+        } else if (rarity === Rarity.Defensive) {
+            stats = GAME_DATA.STAT.filter(stat => stat.CATEGORY === 'defensive').map(stat => stat.REF);
         } else if (rarity === Rarity.Magic || rarity === Rarity.Rare) {
             stats = GAME_DATA.STAT.filter(stat => stat[key] === 'S').map(stat => stat.REF);
         } else if (rarity === Rarity.Epic) {

@@ -33,6 +33,7 @@ export interface SkillUpgrade {
     slormTier: string;
     upgradeSlormCost: number | null;
     investedSlorm: number;
+    totalSlormCost: number;
 
     relatedClassMechanics: Array<ClassMechanic>;
     relatedMechanics: Array<Mechanic>;

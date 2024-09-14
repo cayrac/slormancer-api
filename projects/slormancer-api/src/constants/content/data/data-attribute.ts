@@ -21,6 +21,26 @@ function setSynergyPrecision(trait: Trait, index: number, precision: number) {
     }
 }
 
+function allowSynergyToCascade(trait: Trait, index: number) {
+    const value = trait.values[index];
+
+    if (value && isEffectValueSynergy(value)) {
+        value.cascadeSynergy = true;
+    } else {
+        throw new Error('failed to update synergy cascading at index ' + index);
+    }
+}
+
+function synergySetAllowMinMax(trait: Trait, index: number, allowMinMaw: boolean) {
+    const value = trait.values[index];
+
+    if (value && isEffectValueSynergy(value)) {
+        value.allowMinMax = allowMinMaw;
+    } else {
+        throw new Error('failed to update allow min max at index ' + index);
+    }
+}
+
 export const DATA_ATTRIBUTE: { [key: number]: DataAttribute } = {
     6: {
         override: trait => {
@@ -60,11 +80,13 @@ export const DATA_ATTRIBUTE: { [key: number]: DataAttribute } = {
     25: {
         override: trait => {
             setSynergyPrecision(trait, 0, 3);
+            synergySetAllowMinMax(trait, 0, false);
         }
     },
     28: {
         override: trait => {
             setSynergyPrecision(trait, 0, 3);
+            allowSynergyToCascade(trait, 0);
         }
     },
     31: {

@@ -531,6 +531,11 @@ export class SlormancerCharacterBuilderService {
             },
             skills,
             skillInvestedSlorm: 0,
+
+            might: {
+                ancestral: 0,
+                skill: 0,
+            },
         
             gear: {
                 helm,

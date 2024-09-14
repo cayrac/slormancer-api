@@ -86,6 +86,16 @@ Initial release
 - Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
 - vérifier arcane bond damage
 - book smash passive synergy attack speed / cooldown
+## changes
+- convertion crit damage en brut damage
+- Ajouter affichage / edition defensive stat
+- export / import defensive stat
+
+TODO
+afficher mights
+
+EXPORT : 
+===>>>>> important : il faut checker le reaper dans l'export + mise à jour depuis ancienne version
 
 ## TODO
 - mise à jour packages

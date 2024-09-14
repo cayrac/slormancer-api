@@ -65,6 +65,11 @@ export interface CharacterUltimatum {
     activeUltimatum: UltimatumType;
 }
 
+export interface CharacterMight {
+    skill: number;
+    ancestral: number;
+}
+
 export interface Character {
     heroClass: HeroClass;
     level: number;
@@ -84,6 +89,8 @@ export interface Character {
     ancestralLegacies: CharacterAncestralLegacies;
     skills: Array<CharacterSkillAndUpgrades>;
     skillInvestedSlorm: number;
+
+    might: CharacterMight;
 
     gear: CharacterGear;
     inventory: Array<EquipableItem | null>;

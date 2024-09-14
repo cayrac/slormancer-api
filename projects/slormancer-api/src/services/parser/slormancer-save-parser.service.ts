@@ -395,6 +395,8 @@ export class SlormancerSaveParserService {
 
         this.normalizeSave(parsedData);
 
+        console.log('parsed data : ', parsedData);
+
         return {
             stats_fetched: this.parseStatsFetched(this.getOrFail(parsedData, 'stats_fetched')),
             original_version: this.parseVersion(this.getOrFail(parsedData, 'version')),

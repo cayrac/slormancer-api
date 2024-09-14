@@ -13,6 +13,7 @@ import { Ultimatum } from './content/ultimatum';
 
 export declare type Entity =
     { synergy: string } |
+    { might: string } |
     { character: Character } |
     { skill: Skill } |
     { upgrade: SkillUpgrade } |

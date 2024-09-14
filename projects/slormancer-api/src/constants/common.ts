@@ -4,10 +4,7 @@ export const MAX_HERO_LEVEL = 80;
 export const MAX_ITEM_LEVEL = MAX_HERO_LEVEL;
 export const MAX_ATTRIBUTE_RANK = 75;
 
-export const BASE_SKILL_MIGHT = 713;
-export const MAX_SKILL_MIGHT = 6000;
-export const MAX_ANCESTRAL_MIGHT = 6000;
-
+export const MAX_DEFENSIVE_STATS = 1;
 export const MAX_MAGIC_STATS = 1;
 export const MAX_RARE_STATS = 1;
 export const MAX_EPIC_STATS = 3;

@@ -3,7 +3,8 @@ export enum Rarity {
     Magic ='magic',
     Rare ='rare',
     Epic ='epic',
-    Legendary ='legendary'
+    Legendary ='legendary',
+    Defensive ='defensive'
 }
 
 export const ALL_RARITIES = [
@@ -11,5 +12,6 @@ export const ALL_RARITIES = [
     Rarity.Magic,
     Rarity.Rare,
     Rarity.Epic,
-    Rarity.Legendary
+    Rarity.Legendary,
+    Rarity.Defensive
 ]
