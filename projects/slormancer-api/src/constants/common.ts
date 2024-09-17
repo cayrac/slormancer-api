@@ -3,6 +3,7 @@ import { ALL_UPGRADABLE_REAPER_SMITH } from "../model";
 export const MAX_HERO_LEVEL = 80;
 export const MAX_ITEM_LEVEL = MAX_HERO_LEVEL;
 export const MAX_ATTRIBUTE_RANK = 75;
+export const MAX_REAPER_LEVEL = 100;
 
 export const MAX_DEFENSIVE_STATS = 1;
 export const MAX_MAGIC_STATS = 1;

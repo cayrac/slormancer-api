@@ -90,6 +90,7 @@ export class SlormancerSkillService {
         const valueTypes = emptyStringToNull(splitData(data.DESC_VALUE_TYPE));
         const valueReals = emptyStringToNull(splitData(data.DESC_VALUE_REAL));
         const stats = emptyStringToNull(splitData(data.DESC_VALUE));
+        const cascadeSynergy = [SkillType.Support, SkillType.Active, SkillType.Upgrade].includes(data.TYPE as SkillType);
 
         const max = Math.max(valueBases.length, valuePerLevels.length, valueTypes.length);
 
@@ -102,7 +103,7 @@ export class SlormancerSkillService {
             const stat = valueOrDefault(stats[i], null);
 
             if (stat !== null && this.isDamageStat(stat)) {
-                result.push(effectValueSynergy(value, upgrade, upgradeType, false, stat, EffectValueValueType.Damage));
+                result.push(effectValueSynergy(value, upgrade, upgradeType, false, stat, EffectValueValueType.Damage, undefined, undefined, undefined, undefined, undefined, undefined, cascadeSynergy));
             } else if (type === null) {
                 result.push(effectValueVariable(value, upgrade, upgradeType, percent, stat, EffectValueValueType.Stat));
             } else if (type === 'negative') {
@@ -113,9 +114,9 @@ export class SlormancerSkillService {
                 const typeValues = splitData(type, ':');
                 const source = <string>typeValues[1];
                 if (typeValues[0] === 'based_on_mastery') {
-                    result.push(effectValueSynergy(value * 100, 0, upgradeType, percent, 'based_on_mastery_' + source, stat));
+                    result.push(effectValueSynergy(value * 100, 0, upgradeType, percent, 'based_on_mastery_' + source, stat, undefined, undefined, undefined, undefined, undefined, undefined, cascadeSynergy));
                 } else {
-                    result.push(effectValueSynergy(value, upgrade, upgradeType, percent, source, stat));
+                    result.push(effectValueSynergy(value, upgrade, upgradeType, percent, source, stat, undefined, undefined, undefined, undefined, undefined, undefined, cascadeSynergy));
                 }
             }
         }
@@ -155,7 +156,7 @@ export class SlormancerSkillService {
         }
     } 
 
-    public getHeroSkill(skillId: number, heroClass: HeroClass, experience: number, bonusLevel: number = 0): Skill | null {
+    public getHeroSkill(skillId: number, heroClass: HeroClass, baseLevel = 15, bonusLevel: number = 0): Skill | null {
         const gameDataSkill = this.slormancerDataService.getGameDataSkill(heroClass, skillId);
         const dataSkill = this.slormancerDataService.getDataSkill(heroClass, skillId);
         let skill: Skill | null = null;
@@ -169,7 +170,7 @@ export class SlormancerSkillService {
                 level: 0,
                 unlockLevel: gameDataSkill.UNLOCK_LEVEL,
                 maxLevel,
-                baseLevel: Math.min(maxLevel, this.getSkillLevelFromXp(heroClass, skillId, experience)),
+                baseLevel,
                 bonusLevel,
                 name: gameDataSkill.EN_NAME,
                 specialization: null,

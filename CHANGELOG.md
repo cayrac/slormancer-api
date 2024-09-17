@@ -82,6 +82,12 @@ Initial release
 - Total mastery count no longer ignore the last skill mastery
 - Unkillable berzerker reaper additional damage multiplier is now correctly applied
 
+
+## Release 0.7.0 (TBD)
+### Fixes
+- Skill upgrades are no longer ignored when not in the skill bar
+- Skill levels are no longer lost when reloading the page
+
 ## bugs : 
 - Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.
 - vérifier arcane bond damage
@@ -93,6 +99,7 @@ Initial release
 
 TODO
 afficher mights
+afficher nodes disponible + l'extra node
 
 EXPORT : 
 ===>>>>> important : il faut checker le reaper dans l'export + mise à jour depuis ancienne version

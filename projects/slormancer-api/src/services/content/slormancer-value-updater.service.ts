@@ -791,6 +791,10 @@ export class SlormancerValueUpdaterService {
     }
 
     public updateSkillAndUpgradeValues(character: Character, skillAndUpgrades: CharacterSkillAndUpgrades, stats: SkillStatsBuildResult, config: CharacterConfig): Array<SkillUpgrade> {
+        if (skillAndUpgrades.skill.id === 3) {
+            console.log('stats : ', stats.extractedStats['additional_damage_add']);
+        }
+        
         const skillStats = this.getSkillStats(stats, character);
 
         this.updateSkillValues(skillAndUpgrades, skillStats, stats, config);
@@ -1107,6 +1111,10 @@ export class SlormancerValueUpdaterService {
         skillAndUpgrades.skill.cooldown = this.getSkillCooldown(statsResult.extractedStats, config, skillAndUpgrades.skill, skillStats.attackSpeed.total);
 
         const damageValues = skillAndUpgrades.skill.values.filter(isEffectValueSynergy).filter(value => isDamageType(value.stat));
+
+        if (skillAndUpgrades.skill.id === 3) {
+            console.log('skill ' + skillAndUpgrades.skill.name + ' additional damage : ', JSON.parse(JSON.stringify(skillStats.additionalDamages)));
+        }
 
         if (damageValues.length > 0) {
             this.spreadAdditionalDamages(damageValues.filter(damage => damage.stat !== 'bleed_damage'), skillStats.additionalDamages.total);

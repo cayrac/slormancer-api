@@ -19,7 +19,7 @@ export const DATA_LEGENDARY_BASE: { [key: number]: string } = {
     15: 'crit-def_mag',
     16: 'atk_phy-life',
     17: 'atk_mag',
-    18: 'atk_phy-def_dodge',
+    18: 'atk_phy-def_mag',
     19: 'life-mana',
     20: 'atk_phy-cdr',
     21: 'ret',

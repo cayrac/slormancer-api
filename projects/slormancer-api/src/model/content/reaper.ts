@@ -20,6 +20,7 @@ export interface Reaper {
     primordial: boolean;
     icon: string;
     level: number;
+    masteryLevel: number;
     baseLevel: number;
     bonusLevel: number;
     baseReaperAffinity: number;
@@ -54,6 +55,7 @@ export interface Reaper {
     levelLabel: string;
     bonusLevelLabel: string | null;
     damageTypeLabel: string;
+    masteryLabel: string | null;
     affinityLabel: string | null;
     benedictionTitleLabel: string;
     maledictionTitleLabel: string;

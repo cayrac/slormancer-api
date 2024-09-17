@@ -40,6 +40,7 @@ export class SlormancerReaperService {
     private readonly LEVEL_LABEL = this.slormancerTranslateService.translate('level');
     private readonly REAPERSMITH_LABEL = this.slormancerTranslateService.translate('weapon_reapersmith_light');
     private readonly PRIMORDIAL_REAPER_LABEL = this.slormancerTranslateService.translate('tt_reaper_corrupted');
+    private readonly GRANTED_BY_MASTERY_LABEL = this.slormancerTranslateService.translate('reaper_mastery_tt_from');
 
     private readonly DESCRIPTION_SKILL_REGEXP = /act:[0-9]+/g;
 
@@ -375,7 +376,7 @@ export class SlormancerReaperService {
         return this.getReaper(defaultGameData, weaponClass, false, 1, 0, 'TOREMOVE', 0, 0, 0);
     }
 
-    public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, baseKills: number, primordialKills: number, baseReaperAffinity: number = 0, baseEffectAffinity: number = 0, bonusAffinity: number = 0): Reaper {
+    public getReaper(gameData: GameDataReaper, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, baseKills: number, primordialKills: number, baseReaperAffinity: number = 0, baseEffectAffinity: number = 0, bonusAffinity: number = 0, masteryLevel = 0): Reaper {
         
         const maxLevel = gameData.MAX_LVL ?? 100
 
@@ -386,6 +387,7 @@ export class SlormancerReaperService {
             icon: '',
             primordial,
             level: 0,
+            masteryLevel,
             baseLevel,
             bonusLevel,
             baseReaperAffinity,
@@ -423,6 +425,7 @@ export class SlormancerReaperService {
             levelLabel: '',
             bonusLevelLabel: '',
             damageTypeLabel: '',
+            masteryLabel: null,
         };
 
         this.updateReaperModel(result);
@@ -431,12 +434,12 @@ export class SlormancerReaperService {
         return result;
     }
 
-    public getReaperById(id: number, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, kills: number, killsPrimordial: number, reaperAffinity: number = 0, effectAffinity: number = 0, bonusAffinity: number = 0): Reaper | null {
+    public getReaperById(id: number, weaponClass: HeroClass, primordial: boolean, baseLevel: number, bonusLevel: number, TOREMOVE: string, kills: number, killsPrimordial: number, reaperAffinity: number = 0, effectAffinity: number = 0, bonusAffinity: number = 0, masteryLevel = 0): Reaper | null {
         const gameData = this.slormancerDataService.getGameDataReaper(id);
         let result: Reaper | null = null;
 
         if (gameData !== null) {
-            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel, TOREMOVE, kills, killsPrimordial, reaperAffinity, effectAffinity, bonusAffinity);
+            result = this.getReaper(gameData, weaponClass, primordial, baseLevel, bonusLevel, TOREMOVE, kills, killsPrimordial, reaperAffinity, effectAffinity, bonusAffinity, masteryLevel);
         }
 
         return result;
@@ -467,10 +470,18 @@ export class SlormancerReaperService {
         reaper.bonusAffinity = Math.max(0, reaper.bonusAffinity);
         reaper.reaperAffinity = reaper.baseReaperAffinity + reaper.bonusAffinity;
         reaper.effectAffinity = reaper.baseEffectAffinity + reaper.bonusAffinity;
-        reaper.maxDamages = this.getDamages(reaper.maxLevel, reaper.damagesBase, reaper.damagesLevel, reaper.damagesMultiplier, reaper.reaperAffinity);
+        reaper.maxDamages = this.getDamages(100, reaper.damagesBase, reaper.damagesLevel, reaper.damagesMultiplier, reaper.reaperAffinity);
         reaper.activables = reaper.templates.activables;
 
-        reaper.damages = this.getDamages(reaper.level, reaper.damagesBase, reaper.damagesLevel, reaper.damagesMultiplier, reaper.reaperAffinity);
+        let damageLevel = reaper.level;
+        if (reaper.masteryLevel > damageLevel) {
+            damageLevel = reaper.masteryLevel;
+            reaper.masteryLabel = this.GRANTED_BY_MASTERY_LABEL.replace('@', damageLevel.toString());
+        } else {
+            reaper.masteryLabel = null;
+        }
+        console.log('reaper level : ', reaper.level, reaper.masteryLevel);
+        reaper.damages = this.getDamages(damageLevel, reaper.damagesBase, reaper.damagesLevel, reaper.damagesMultiplier, reaper.reaperAffinity);
 
         const effectAffinityMultiplier =  this.getAffinityMultiplier(reaper.effectAffinity);
 

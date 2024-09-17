@@ -15,7 +15,6 @@ import { isSynergyResolveData, synergyResolveData } from '../../util/synergy-res
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
-import { Attribute } from '../../model';
 
 @Injectable()
 export class SlormancerSynergyResolverService {
@@ -148,12 +147,18 @@ export class SlormancerSynergyResolverService {
                 ? bankerRound(newValue, precision)
                 : { min: bankerRound(newValue.min, precision),
                     max: bankerRound(newValue.max, precision) };
+            if (resolveData.effect.stat === 'additional_damage_add') {
+                console.log('synergy value (if) : ', resolveData);
+            }
         } else {
             const sources = resolveData.sources.map(source => {
                 const stat = characterStats.find(stat => stat.stat === source);
                 return  stat ? stat.total : 0;
             });
             resolveData.value = resolveData.method(...sources);
+            if (resolveData.stat === 'additional_damage_add') {
+                console.log('synergy value (else) : ', resolveData);
+            }
         }
     }
 
@@ -161,7 +166,6 @@ export class SlormancerSynergyResolverService {
         for (const statToUpdate of synergyResolveData.statsItWillUpdate) {
             let foundStat: MergedStat | undefined = stats.find(stat => stat.stat === statToUpdate.stat);
             let addAsSynergy = true;
-            let savagery = 'attribute' in synergyResolveData.objectSource && synergyResolveData.objectSource.attribute.attribute === Attribute.Savagery;
             if (foundStat === undefined) {
 
                 let precision = 0;
@@ -211,14 +215,8 @@ export class SlormancerSynergyResolverService {
             }
 
             if (statToUpdate.mapping === undefined) {
-                if (savagery) {
-                    console.log('add to found stat : ', synergy, foundStat.stat, addAsSynergy);
-                }
                 foundStat.values.flat.push({ value: synergy, extra: false, source: synergyResolveData.objectSource, synergy: addAsSynergy });
             } else {
-                if (savagery) {
-                    console.log('addUniqueValueToStat : ', stat, synergy, foundStat.stat, addAsSynergy);
-                }
                 this.slormancerStatMappingService.addUniqueValueToStat(stat, synergy, foundStat, statToUpdate.mapping, config, extractedStats, synergyResolveData.objectSource, addAsSynergy);
             }
 

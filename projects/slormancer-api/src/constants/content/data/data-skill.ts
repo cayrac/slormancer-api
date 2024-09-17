@@ -127,6 +127,19 @@ function setSynergyShowValue(values: Array<AbstractEffectValue>, index: number, 
     }
 }
 
+function allowSynergyToCascade(values: Array<AbstractEffectValue>, index: number) {
+    const value = values[index]
+
+    if (value && isEffectValueSynergy(value)) {
+        value.cascadeSynergy = true;
+    } else {
+        throw new Error('failed to change synergy cascade at index ' + index);
+    }
+}
+
+// TODO rajouter cascade synergy pour tous les damages
+allowSynergyToCascade
+
 export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     0: {
         masteryRequired: null,
@@ -257,6 +270,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     14: {
         masteryRequired: 7,
         override: values => {
+            setStat(values, 0, 'additional_damage_add')
             setAsUpgrade(values, 0);
         }
     },
@@ -345,6 +359,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
             setStat(values, 0, 'increased_damage_mult');
             setAsUpgrade(values, 0);
             setSource(values, 1, 'weapon_damage');
+            setSynergyAllowMinMax(values, 1, false);
             setAsUpgrade(values, 1);
         }
     },
@@ -1696,6 +1711,9 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     },
     222: {
         masteryRequired: 10,
+        override: values => {
+            setSynergyAllowMinMax(values, 0, false);
+        }
     },
 }
 

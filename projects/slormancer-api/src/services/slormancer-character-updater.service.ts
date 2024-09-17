@@ -665,7 +665,7 @@ export class SlormancerCharacterUpdaterService {
                 || character.primarySkill === skill.skill
                 || character.secondarySkill === skill.skill;
 
-            skill.activeUpgrades = equipped ? [ ...skill.selectedUpgrades ] : [];
+            skill.activeUpgrades = [ ...skill.selectedUpgrades ];
 
             if (skill.skill.type === SkillType.Support) {
                 if (equipped) {

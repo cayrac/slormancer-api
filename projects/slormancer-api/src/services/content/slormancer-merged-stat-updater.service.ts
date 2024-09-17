@@ -75,7 +75,9 @@ export class SlormancerMergedStatUpdaterService {
 
     public getTotalFlatSynergy(mergedStat: MergedStat): MinMax | number {
         const minMax = mergedStat.values.max.length > 0 || mergedStat.values.maxPercent.length > 0 || mergedStat.values.maxMultiplier.length > 0;
-        return this.addValues(mergedStat.values.flat.filter(v => v.synergy === true).map(v => v.value), minMax);
+        const totalSynergyFlatValues = mergedStat.values.flat.filter(v => v.synergy === true).map(v => v.value);
+        const totalSynergyMaxValues = mergedStat.values.max.filter(v => v.synergy === true).map(v => ({ min: 0, max: v.value }));
+        return this.addValues([...totalSynergyFlatValues, ...totalSynergyMaxValues], minMax);
     }
 
     public getTotalFlatAndPercent(mergedStat: MergedStat): number | MinMax {
