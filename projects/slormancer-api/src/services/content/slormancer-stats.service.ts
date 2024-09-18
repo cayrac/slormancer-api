@@ -176,6 +176,9 @@ export class SlormancerStatsService {
         if (extractedStats.stats['skill_is_projectile'] !== undefined && !skillAndUpgrades.skill.genres.includes(SkillGenre.Projectile)) {
             skillAndUpgrades.skill.genres.push(SkillGenre.Projectile)
         }
+        if (extractedStats.stats['skill_is_fast'] !== undefined && !skillAndUpgrades.skill.genres.includes(SkillGenre.Fast)) {
+            skillAndUpgrades.skill.genres.push(SkillGenre.Fast)
+        }
 
         if (character.heroClass === HeroClass.Huntress && skillAndUpgrades.skill.id === 4) {
             const physicalDamage = extractedStats.stats['damage_type_to_elemental'] === undefined;

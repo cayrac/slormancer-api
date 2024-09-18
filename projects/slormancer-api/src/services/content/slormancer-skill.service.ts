@@ -163,6 +163,12 @@ export class SlormancerSkillService {
 
         if (gameDataSkill !== null && (gameDataSkill.TYPE == SkillType.Support || gameDataSkill.TYPE === SkillType.Active)) {
             const maxLevel = gameDataSkill.UPGRADE_NUMBER ?? 0;
+            const genres = <Array<SkillGenre>>splitData(gameDataSkill.GENRE, ',');
+
+            if (gameDataSkill.AUTO_CD === 1) {
+                genres.push(SkillGenre.Fast);
+            }
+
             skill = {
                 id: gameDataSkill.REF,
                 type: gameDataSkill.TYPE,
@@ -195,14 +201,15 @@ export class SlormancerSkillService {
                 hasLifeCost: false,
                 hasManaCost: false,
                 hasNoCost: false,
-                baseGenres: <Array<SkillGenre>>splitData(gameDataSkill.GENRE, ','),
-                genres: <Array<SkillGenre>>splitData(gameDataSkill.GENRE, ','),
+                baseGenres: genres.splice(0),
+                genres: genres.splice(0),
                 damageTypes: splitData(gameDataSkill.DMG_TYPE, ','),
                 locked: false,
                 elements: [],
 
                 nameLabel: '',
                 genresLabel: null,
+                fastLabel: null,
                 costLabel: null,
                 cooldownLabel: null,
                 cooldownDetailsLabel: null,
@@ -271,11 +278,17 @@ export class SlormancerSkillService {
         }
         skill.nameLabel = [skill.specializationName, skill.name].filter(isNotNullOrUndefined).join('<br/>');
 
-        skill.genresLabel =  null;
+        skill.genresLabel = null;
         if (skill.genres.length > 0) {
             skill.genresLabel = skill.genres
+                .filter(genre => genre !== SkillGenre.Fast)
                 .map(genre => this.slormancerTranslateService.translate('atk_' + genre))
                 .join(' ');
+        }
+
+        skill.fastLabel = null;
+        if (skill.genres.includes(SkillGenre.Fast)) {
+            skill.fastLabel = this.slormancerTranslateService.translate('tt_auto_attack')
         }
         
         skill.costLabel = null;

@@ -86,7 +86,9 @@ Initial release
 ## Release 0.7.0 (TBD)
 ### Fixes
 - Skill upgrades are no longer ignored when not in the skill bar
-- Skill levels are no longer lost when reloading the page
+- Skill levels are no longer lost when reloading the
+## TODO
+- calcul du cooldown sans passer par attack speed
 
 ## bugs : 
 - Maybe that's an oversight from @Cayrac idk. But it indeed displays the values from a base 100 affinity without displaying the affinity on the top right corner of the Reapers.

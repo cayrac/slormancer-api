@@ -42,7 +42,7 @@ import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-upd
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
 import { CharacterStatsBuildResult, SkillStatsBuildResult } from './slormancer-stats.service';
-import { UNITY_REAPERS } from '../../constants';
+import { FAST_SKILL_BASE_COOLDOWN, UNITY_REAPERS } from '../../constants';
 import { SlormancerActivableService } from './slormancer-activable.service';
 import { SlormancerAncestralLegacyService } from './slormancer-ancestral-legacy.service';
 import { SlormancerSkillService } from './slormancer-skill.service';
@@ -51,7 +51,7 @@ import { Skill } from '../../model';
 interface SkillStats {
     mana: MergedStat<number>;
     life: MergedStat<number>;
-    attackSpeed: MergedStat<number>;
+    cooldownReduction: MergedStat<number>;
     increasedDamage: MergedStat<number>;
     skillIncreasedDamage: MergedStat<number>;
     skillIncreasedAoe: MergedStat<number>;
@@ -220,7 +220,7 @@ export class SlormancerValueUpdaterService {
         return {
             mana: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_mana_cost'),
             life: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_life_cost'),
-            attackSpeed: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'attack_speed'),
+            cooldownReduction: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'cooldown_reduction'),
             skillIncreasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_increased_damages'),
             skillIncreasedAoe: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'skill_aoe_increased_size'),
             dotIncreasedDamage: <MergedStat<number>>this.getStatValueOrDefault(stats.stats, 'dot_increased_damage'),
@@ -465,10 +465,17 @@ export class SlormancerValueUpdaterService {
         }
     }
 
-    private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}, debug = false): T {
+    private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}): T {
         // TODO factoriser avec la version faite sur stat mapping service
+        const hasManaMult = stats['mana_cost_reduction_skill_mult'] !== undefined;
+        if (hasManaMult) {
+            console.log('getSpecificStat : ', stats['mana_cost_reduction_skill_mult']);
+        }
         const mergedStat = this.slormancerStatMappingService.buildMergedStat({ ...stats, ...specificstats }, mapping, config);
         this.slormancerMergedStatUpdaterService.updateStatTotal(mergedStat);
+        if (hasManaMult) {
+            console.log('mergedStat : ', mergedStat);
+        }
         return <T>mergedStat.total;
     }
 
@@ -528,7 +535,7 @@ export class SlormancerValueUpdaterService {
         source.cost = Math.max(0, this.getSpecificStat(stats, mapping, config, skillCostStats));
     }
 
-    private getActivableCooldown(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy, attackSpeed: number): number {
+    private getActivableCooldown(stats: ExtractedStatMap, config: CharacterConfig, source: Activable | AncestralLegacy, cooldownReduction: number): number {
         let result = 0;
 
         if (source.baseCooldown !== null) {
@@ -562,30 +569,31 @@ export class SlormancerValueUpdaterService {
 
             const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, extraStats));
             
-            result = Math.max(0, round(cooldown * (100 - attackSpeed) / 100, 2));
+            result = Math.max(0, round(cooldown * (100 - cooldownReduction) / 100, 2));
         }
 
         return result;
     }
 
-    private getSkillCooldown(stats: ExtractedStatMap, config: CharacterConfig, skill: Skill, attackSpeed: number): number {
+    private getSkillCooldown(stats: ExtractedStatMap, config: CharacterConfig, skill: Skill, cooldownReduction: number): number {
         let result = 0;
 
         if (skill.baseCooldown !== null) {
-            const extraStats: ExtractedStatMap = {};
-            const cooldownstats: Array<EntityValue<number>> = [];
             
-            if (stats['cooldown_time_add']) {
-                cooldownstats.push(...stats['cooldown_time_add']);
-            }
+            const extraStats: ExtractedStatMap = {};
+            
 
             extraStats['cost_type'] = [
                 { value: ALL_SKILL_COST_TYPES.indexOf(skill.manaCostType), source: { skill } },
                 { value: ALL_SKILL_COST_TYPES.indexOf(skill.lifeCostType), source: { skill } }
             ];
     
-
-            extraStats['cooldown_time_add'] = cooldownstats;
+            if (skill.genres.includes(SkillGenre.Fast)) {
+                extraStats['cooldown_time_add'] = [ { source: { skill }, value: FAST_SKILL_BASE_COOLDOWN } ];
+            } else if (stats['cooldown_time_add']) {
+                extraStats['cooldown_time_add'] = [ ...stats['cooldown_time_add'] ];
+            }
+             
             extraStats['skill_id'] = [ { value: skill.id, source: { skill } } ];
 
             let minCooldown = 0;
@@ -596,7 +604,7 @@ export class SlormancerValueUpdaterService {
 
             const cooldown = Math.max(minCooldown, this.getSpecificStat<number>(stats, COOLDOWN_MAPPING, config, extraStats));
             
-            result = Math.max(0, round(cooldown * (100 - attackSpeed) / 100, 2));
+            result = Math.max(0, round(cooldown * (100 - cooldownReduction) / 100, 2));
         }
 
         return result;
@@ -616,7 +624,7 @@ export class SlormancerValueUpdaterService {
         }
 
         this.updateActivableCost(statsResult.extractedStats, config, activable);
-        activable.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, activable, skillStats.attackSpeed.total);
+        activable.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, activable, skillStats.cooldownReduction.total);
         
         for (const value of activable.values) {
             const isSynergy = isEffectValueSynergy(value);
@@ -724,7 +732,7 @@ export class SlormancerValueUpdaterService {
             this.updateActivableCost(statsResult.extractedStats, config, ancestralLegacy);
         }
         if (ancestralLegacy.baseCooldown !== null) {
-            ancestralLegacy.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, ancestralLegacy, skillStats.attackSpeed.total);
+            ancestralLegacy.cooldown = this.getActivableCooldown(statsResult.extractedStats, config, ancestralLegacy, skillStats.cooldownReduction.total);
         }
 
         const isIcyVeins = ancestralLegacy.id === 29;
@@ -791,9 +799,6 @@ export class SlormancerValueUpdaterService {
     }
 
     public updateSkillAndUpgradeValues(character: Character, skillAndUpgrades: CharacterSkillAndUpgrades, stats: SkillStatsBuildResult, config: CharacterConfig): Array<SkillUpgrade> {
-        if (skillAndUpgrades.skill.id === 3) {
-            console.log('stats : ', stats.extractedStats['additional_damage_add']);
-        }
         
         const skillStats = this.getSkillStats(stats, character);
 
@@ -1087,8 +1092,13 @@ export class SlormancerValueUpdaterService {
             mana_cost_add: manaCostAdd,
             cost_type: [{ value: ALL_SKILL_COST_TYPES.indexOf(skillAndUpgrades.skill.manaCostType), source: entity }],
         };
-        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats, skillAndUpgrades.skill.id === 5));
+
+        skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats));
         
+        if (skillAndUpgrades.skill.id === 4) {
+            console.log('Skill ' + skillAndUpgrades.skill.name + ' : ', statsResult.extractedStats['mana_cost_reduction_skill_mult']);
+        }
+
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });
 
         const expectdLifeCostType = skillAndUpgrades.skill.manaCostType === SkillCostType.Mana ? SkillCostType.Life : skillAndUpgrades.skill.lifeCostType;
@@ -1108,13 +1118,10 @@ export class SlormancerValueUpdaterService {
     private updateSkillValues(skillAndUpgrades: CharacterSkillAndUpgrades, skillStats: SkillStats, statsResult: SkillStatsBuildResult, config: CharacterConfig) {
 
         this.updateSkillCost(skillAndUpgrades, skillStats, statsResult, config);
-        skillAndUpgrades.skill.cooldown = this.getSkillCooldown(statsResult.extractedStats, config, skillAndUpgrades.skill, skillStats.attackSpeed.total);
+        skillAndUpgrades.skill.cooldown = this.getSkillCooldown(statsResult.extractedStats, config, skillAndUpgrades.skill, skillStats.cooldownReduction.total);
 
         const damageValues = skillAndUpgrades.skill.values.filter(isEffectValueSynergy).filter(value => isDamageType(value.stat));
 
-        if (skillAndUpgrades.skill.id === 3) {
-            console.log('skill ' + skillAndUpgrades.skill.name + ' additional damage : ', JSON.parse(JSON.stringify(skillStats.additionalDamages)));
-        }
 
         if (damageValues.length > 0) {
             this.spreadAdditionalDamages(damageValues.filter(damage => damage.stat !== 'bleed_damage'), skillStats.additionalDamages.total);

@@ -79,7 +79,6 @@ export class SlormancerMightService {
     public updateMight(character: Character) {
         character.might.skill = this.getSkillMight(character);
         character.might.ancestral = this.getAncestralMight(character);
-        console.log('might updated : ', character.might);
     }
   
     private getSkillMight(character: Character): number {

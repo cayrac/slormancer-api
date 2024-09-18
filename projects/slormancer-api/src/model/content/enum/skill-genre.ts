@@ -11,4 +11,5 @@ export enum SkillGenre {
     Temporal = "temporal",
     Arcanic = "arcanic",
     Obliteration = "obliteration",
+    Fast = "fast",
 }

@@ -12,7 +12,7 @@ import { ReaperEffect } from '../../model/content/reaper-effect';
 import { MinMax } from '../../model/minmax';
 import { GameWeapon } from '../../model/parser/game/game-save';
 import { effectValueSynergy, effectValueVariable } from '../../util/effect-value.util';
-import { list } from '../../util/math.util';
+import { bankerRound, list } from '../../util/math.util';
 import { strictParseFloat } from '../../util/parse.util';
 import {
     compare,
@@ -101,7 +101,7 @@ export class SlormancerReaperService {
 
         const affinityMultiplier =  this.getAffinityMultiplier(affinity);
 
-        return { min: Math.round(cminr * affinityMultiplier), max: Math.round(cmaxr * affinityMultiplier) };
+        return { min: bankerRound(cminr * affinityMultiplier), max: bankerRound(cmaxr * affinityMultiplier) };
     }
     
     public getReaperName(template: string, primordial: boolean, heroClass: HeroClass): string {
@@ -480,7 +480,7 @@ export class SlormancerReaperService {
         } else {
             reaper.masteryLabel = null;
         }
-        console.log('reaper level : ', reaper.level, reaper.masteryLevel);
+
         reaper.damages = this.getDamages(damageLevel, reaper.damagesBase, reaper.damagesLevel, reaper.damagesMultiplier, reaper.reaperAffinity);
 
         const effectAffinityMultiplier =  this.getAffinityMultiplier(reaper.effectAffinity);

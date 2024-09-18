@@ -848,21 +848,14 @@ export class SlormancerStatsExtractorService {
     }
 
     private addUpgradeValues(skillAndUpgrades: CharacterSkillAndUpgrades, extractedStats: ExtractedStats, mergedStatMapping: Array<MergedStatMapping>) {
-        const isMightySwing = skillAndUpgrades.skill.id === 3;
         for (const upgrade of skillAndUpgrades.upgrades) {
             const equipped = skillAndUpgrades.activeUpgrades.includes(upgrade.id);
             for (const upgradeValue of upgrade.values) {
                 if (upgradeValue.valueType === EffectValueValueType.Upgrade) {
                     if (isEffectValueSynergy(upgradeValue)) {
                         if (equipped && !isDamageType(upgradeValue.stat)) {
-                            if (isMightySwing) {
-                                console.log('add additional damage upgrade values : ', synergyResolveData(upgradeValue, upgradeValue.displaySynergy, { upgrade }, this.getSynergyStatsItWillUpdate(upgradeValue.stat, mergedStatMapping)));
-                            }
                             extractedStats.synergies.push(synergyResolveData(upgradeValue, upgradeValue.displaySynergy, { upgrade }, this.getSynergyStatsItWillUpdate(upgradeValue.stat, mergedStatMapping)));
                         } else {
-                            if (isMightySwing) {
-                                console.log('add isolated synergy upgrade values : ', equipped, isDamageType(upgradeValue.stat), upgradeValue);
-                            }
                             extractedStats.isolatedSynergies.push(synergyResolveData(upgradeValue, upgradeValue.displaySynergy, { upgrade }));
                         }
                     } else if (equipped) {

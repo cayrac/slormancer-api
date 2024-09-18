@@ -101,14 +101,3 @@ export const DATA_REAPER_LEVEL: Array<{ level: number, next: null | number }> = 
     { level: 99,   next: 12626411 }, // 256772729
     { level: 100,  next: null     }, // 256772729
 ];
-/*
-let result = '';
-let total = 0;
-for (const line of xp) {
-    if (line.next !== null) {
-        total += line.next;
-    }
-    result += '    { level: ' + (line.level + ',').padEnd(5, ' ') + ' next: ' + (line.next ? line.next.toString() : 'null').padEnd(8, ' ') + ' }, // ' + total + "\n"
-}
-
-console.log(result);*/

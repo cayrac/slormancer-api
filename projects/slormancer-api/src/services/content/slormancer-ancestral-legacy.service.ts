@@ -93,10 +93,6 @@ export class SlormancerAncestralLegacyService {
                 }
             }
         }
-
-        if (result.length === 0) {
-            console.log('getAncestralLegacySlormCosts - Aucun résultat pour : ', ancestralLegacy.name);
-        }
         
         return result;
     }

@@ -46,6 +46,7 @@ export interface Skill {
 
     nameLabel: string;
     genresLabel: string | null;
+    fastLabel: string | null;
     costLabel: string | null;
     cooldownLabel: string | null;
     cooldownDetailsLabel: string | null;

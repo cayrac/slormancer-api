@@ -147,18 +147,12 @@ export class SlormancerSynergyResolverService {
                 ? bankerRound(newValue, precision)
                 : { min: bankerRound(newValue.min, precision),
                     max: bankerRound(newValue.max, precision) };
-            if (resolveData.effect.stat === 'additional_damage_add') {
-                console.log('synergy value (if) : ', resolveData);
-            }
         } else {
             const sources = resolveData.sources.map(source => {
                 const stat = characterStats.find(stat => stat.stat === source);
                 return  stat ? stat.total : 0;
             });
             resolveData.value = resolveData.method(...sources);
-            if (resolveData.stat === 'additional_damage_add') {
-                console.log('synergy value (else) : ', resolveData);
-            }
         }
     }
 

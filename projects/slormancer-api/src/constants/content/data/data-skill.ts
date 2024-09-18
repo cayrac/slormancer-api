@@ -270,7 +270,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
     14: {
         masteryRequired: 7,
         override: values => {
-            setStat(values, 0, 'additional_damage_add')
+            setStat(values, 0, 'additional_damage_add');
             setAsUpgrade(values, 0);
         }
     },
@@ -420,7 +420,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 7,
         override: values => { 
             addConstant(values, 0, false, EffectValueValueType.Stat, 'garbage_stat');
-            addConstant(values, -100, false, EffectValueValueType.Upgrade, 'mana_cost_mult_skill');
+            addConstant(values, -100, false, EffectValueValueType.Upgrade, 'mana_cost_mult');
         }
     },
     34: {
@@ -771,7 +771,6 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         masteryRequired: 2,
         line: 2,
         override: values =>  { 
-            setSource(values, 0, 'weapon_damage');
             setStat(values, 0, 'enemy_under_control_additional_damage');
             setSynergyAllowMinMax(values, 0, false);
             setAsUpgrade(values, 0);
@@ -1070,6 +1069,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         override: values => { 
             setAsUpgrade(values, 0);
             variableToSynergy(values, 1, 'weapon_damage', 'physical_damage', 0, true);
+            allowSynergyToCascade(values, 1);
             setAsUpgrade(values, 1);
             addConstant(values, 100, false, EffectValueValueType.Upgrade, 'skill_perfect_dancing_blade_chance');
         }
@@ -1188,6 +1188,7 @@ export const DATA_SKILL_0: { [key: number]: DataSkill } = {
         line: 3,
         override: values => {
             addConstant(values, 75, false, EffectValueValueType.Upgrade, 'skill_decreased_damage_mult');
+            addConstant(values, 0, false, EffectValueValueType.Upgrade, 'skill_is_fast');
         }
     },
     130: {

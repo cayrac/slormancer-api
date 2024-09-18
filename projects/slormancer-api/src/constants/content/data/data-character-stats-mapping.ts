@@ -131,7 +131,7 @@ export const SKILL_MANA_COST_MAPPING: MergedStatMapping = {
         maxPercent: [],
         multiplier: [
             { stat: 'arrow_shot_void_arrow_heavy_explosive_increased_mana_cost', condition: (_, stats) => [3, 6, 8].includes(getFirstStat(stats, 'skill_id', 0)) },
-            { stat: 'mana_cost_reduction_skill_mult', multiplier: () => -1 }, // void arrow discount void  
+            { stat: 'mana_cost_reduction_skill_mult', multiplier: () => -1 }, // void arrow discount void 
             { stat: 'efficiency_skill_reduction_skill_mult', condition: config => config.efficiency_buff , multiplier: () => -1 },
             { stat: 'skill_has_no_cost_if_low_mana', condition: (_, stats) => (100 - getFirstStat(stats, 'percent_missing_mana', 0)) < getFirstStat(stats, 'skill_has_no_cost_if_low_mana_treshold', 0) },
             // skill_has_no_cost_if_low_mana_treshold
