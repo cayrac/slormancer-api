@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
+import { FAST_SKILL_BASE_COOLDOWN, UNITY_REAPERS } from '../../constants';
 import {
     COOLDOWN_MAPPING,
     LIFE_COST_MAPPING,
     MANA_COST_MAPPING,
     MergedStatMapping,
 } from '../../constants/content/data/data-character-stats-mapping';
+import { Skill } from '../../model';
 import { Character, CharacterSkillAndUpgrades } from '../../model/character';
 import { CharacterConfig } from '../../model/character-config';
 import { Activable } from '../../model/content/activable';
@@ -37,16 +39,14 @@ import {
     valueOrDefault,
     valueOrNull,
 } from '../../util/utils';
+import { SlormancerActivableService } from './slormancer-activable.service';
+import { SlormancerAncestralLegacyService } from './slormancer-ancestral-legacy.service';
 import { SlormancerEffectValueService } from './slormancer-effect-value.service';
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
+import { SlormancerSkillService } from './slormancer-skill.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { ExtractedStatMap } from './slormancer-stats-extractor.service';
 import { CharacterStatsBuildResult, SkillStatsBuildResult } from './slormancer-stats.service';
-import { FAST_SKILL_BASE_COOLDOWN, UNITY_REAPERS } from '../../constants';
-import { SlormancerActivableService } from './slormancer-activable.service';
-import { SlormancerAncestralLegacyService } from './slormancer-ancestral-legacy.service';
-import { SlormancerSkillService } from './slormancer-skill.service';
-import { Skill } from '../../model';
 
 interface SkillStats {
     mana: MergedStat<number>;
@@ -382,6 +382,17 @@ export class SlormancerValueUpdaterService {
                 if (typeof aoeSizeStat.total === 'number') {
                     aoeSizeMultipliers.push(aoeSizeStat.total);
                 }
+                if (reaper.id === 29) {
+                    aoeSizeMultipliers = [];
+                    const auraIncreasedEffect = <MergedStat<number>>this.getStatValueOrDefault(statsResult.stats, 'aura_increased_effect');
+                    if (auraIncreasedEffect) {
+                        aoeSizeMultipliers.push(auraIncreasedEffect.total);
+                    }
+                    const auraIncreasedSize = <MergedStat<number>>this.getStatValueOrDefault(statsResult.stats, 'aura_increased_size');
+                    if (auraIncreasedSize) {
+                        aoeSizeMultipliers.push(auraIncreasedSize.total);
+                    }
+                }
 
                 effectValue.value = aoeSizeMultipliers.reduce((total, mult) => total * (100 + mult) / 100, effectValue.baseValue);
                 effectValue.displayValue = round(effectValue.value, 2);
@@ -467,15 +478,8 @@ export class SlormancerValueUpdaterService {
 
     private getSpecificStat<T extends number | MinMax>(stats: ExtractedStatMap, mapping: MergedStatMapping, config: CharacterConfig, specificstats: ExtractedStatMap = {}): T {
         // TODO factoriser avec la version faite sur stat mapping service
-        const hasManaMult = stats['mana_cost_reduction_skill_mult'] !== undefined;
-        if (hasManaMult) {
-            console.log('getSpecificStat : ', stats['mana_cost_reduction_skill_mult']);
-        }
         const mergedStat = this.slormancerStatMappingService.buildMergedStat({ ...stats, ...specificstats }, mapping, config);
         this.slormancerMergedStatUpdaterService.updateStatTotal(mergedStat);
-        if (hasManaMult) {
-            console.log('mergedStat : ', mergedStat);
-        }
         return <T>mergedStat.total;
     }
 
@@ -1094,10 +1098,6 @@ export class SlormancerValueUpdaterService {
         };
 
         skillAndUpgrades.skill.manaCost = Math.max(0, this.getSpecificStat(statsResult.extractedStats, MANA_COST_MAPPING, config, manaExtraStats));
-        
-        if (skillAndUpgrades.skill.id === 4) {
-            console.log('Skill ' + skillAndUpgrades.skill.name + ' : ', statsResult.extractedStats['mana_cost_reduction_skill_mult']);
-        }
 
         lifeCostAdd.push({ value: Math.max(0, skillStats.life.total), source: entity });
 

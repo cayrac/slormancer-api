@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+import { MAX_EFFECT_AFFINITY_BASE, MAX_REAPER_AFFINITY_BASE, UNITY_REAPERS } from '../../constants';
 import { DATA_REAPER_LEVEL } from '../../constants/content/data/data-reaper-level';
 import { Activable } from '../../model/content/activable';
 import { AbstractEffectValue } from '../../model/content/effect-value';
@@ -28,7 +29,6 @@ import { SlormancerEffectValueService } from '.././content/slormancer-effect-val
 import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerTemplateService } from './slormancer-template.service';
 import { SlormancerTranslateService } from './slormancer-translate.service';
-import { MAX_EFFECT_AFFINITY_BASE, MAX_REAPER_AFFINITY_BASE, UNITY_REAPERS } from '../../constants';
 
 @Injectable()
 export class SlormancerReaperService {
@@ -146,6 +146,17 @@ export class SlormancerReaperService {
             result = Math.max(...parentsMinLevel, 1);
         }
 
+        return result;
+    }
+
+    public getReaperParentIds(id: number): number[] {
+        const gameData = this.slormancerDataService.getGameDataReaper(id);
+        let result: number[] = [ id ];
+
+        if (gameData !== null) {
+            result = this.getReaperParents(gameData).map(r => r.REF);
+        }
+        
         return result;
     }
 

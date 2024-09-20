@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import {
     GLOBAL_MERGED_STATS_MAPPING,
     HERO_MERGED_STATS_MAPPING,
+    MergedStatMapping,
+    REAPER_STATS_MAPPING,
     SKILL_MERGED_STATS_MAPPING,
 } from '../../constants/content/data/data-character-stats-mapping';
 import { Character, CharacterSkillAndUpgrades } from '../../model/character';
@@ -21,11 +23,12 @@ import { Rune } from '../../model/content/rune';
 import { Skill } from '../../model/content/skill';
 import { SkillUpgrade } from '../../model/content/skill-upgrade';
 import { MinMax } from '../../model/minmax';
-import { isDamageType, isEffectValueSynergy, valueOrDefault } from '../../util/utils';
+import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, valueOrDefault } from '../../util/utils';
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { ExtractedStatMap, ExtractedStats, SlormancerStatsExtractorService } from './slormancer-stats-extractor.service';
 import { SlormancerSynergyResolverService } from './slormancer-synergy-resolver.service';
+import { SlormancerReaperService } from './slormancer-reaper.service';
 
 export interface CharacterStatsBuildResult {
     unlockedAncestralLegacies: Array<number>;
@@ -63,7 +66,8 @@ export class SlormancerStatsService {
     constructor(private slormancerStatsExtractorService: SlormancerStatsExtractorService,
                 private slormancerSynergyResolverService: SlormancerSynergyResolverService,
                 private slormancerStatUpdaterService: SlormancerMergedStatUpdaterService,
-                private slormancerStatMappingService: SlormancerStatMappingService) { }
+                private slormancerStatMappingService: SlormancerStatMappingService,
+                private slormancerReaperService: SlormancerReaperService) { }
 
     private hasSynergyValueChanged(synergy: SynergyResolveData): boolean {
         let result = true;
@@ -117,7 +121,7 @@ export class SlormancerStatsService {
                 runes: [],
             }
         }
-        const mapping = [...GLOBAL_MERGED_STATS_MAPPING, ...HERO_MERGED_STATS_MAPPING[character.heroClass]];
+        const mapping = this.getStatsMapping(character);
         const extractedStats = this.slormancerStatsExtractorService.extractCharacterStats(character, config, additionalItem, additionalRunes, mapping, additionalStats);
         
         this.applyReaperSpecialChanges(character, config);
@@ -220,6 +224,32 @@ export class SlormancerStatsService {
         }
     }
 
+    private getStatsMapping(character: Character, skillAndUpgrades: CharacterSkillAndUpgrades | null = null): MergedStatMapping[] {
+        let result = [
+            ...GLOBAL_MERGED_STATS_MAPPING,
+            ...HERO_MERGED_STATS_MAPPING[character.heroClass]
+        ]
+        
+        if (skillAndUpgrades) {
+            const skillMapping = SKILL_MERGED_STATS_MAPPING[character.heroClass][skillAndUpgrades.skill.id];
+            if (skillMapping) {
+                result.push(...skillMapping);
+            }
+        }
+
+        const reaperParents = this.slormancerReaperService.getReaperParentIds(character.reaper.id);
+        const reaperMapping = reaperParents
+            .map(reaperId => REAPER_STATS_MAPPING[reaperId])
+            .filter(isNotNullOrUndefined)
+            .flat();
+        if (reaperMapping.length > 0) {
+            result.push(...reaperMapping);
+        }
+
+        return result;
+
+    }
+
     public updateSkillStats(character: Character, skillAndUpgrades: CharacterSkillAndUpgrades, config: CharacterConfig, characterStats: CharacterStatsBuildResult): SkillStatsBuildResult {
         const result: SkillStatsBuildResult = {
             unresolvedSynergies: [],
@@ -229,8 +259,8 @@ export class SlormancerStatsService {
                 skills: [],
                 upgrades: []
             }
-        }
-        const mapping = [...GLOBAL_MERGED_STATS_MAPPING, ...HERO_MERGED_STATS_MAPPING[character.heroClass], ...valueOrDefault(SKILL_MERGED_STATS_MAPPING[character.heroClass][skillAndUpgrades.skill.id], []) ];
+        };
+        const mapping = this.getStatsMapping(character, skillAndUpgrades);
         const extractedStats = this.slormancerStatsExtractorService.extractSkillStats(skillAndUpgrades, characterStats, mapping);
         this.applySkillSpecialChanges(character, skillAndUpgrades, config, extractedStats, result);
         this.slormancerStatsExtractorService.extractSkillInfoStats(character, skillAndUpgrades, extractedStats);

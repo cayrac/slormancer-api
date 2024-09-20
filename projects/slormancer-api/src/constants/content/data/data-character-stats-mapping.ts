@@ -2801,3 +2801,31 @@ export const SKILL_MERGED_STATS_MAPPING: GameHeroesData<{ [key: number]: Array<M
         
     },
 }
+
+export const REAPER_STATS_MAPPING: { [key: number]: Array<MergedStatMapping>} = {
+    28: [
+        {
+            stat: 'aura_equipped_per_aura_active',
+            precision: 0,
+            allowMinMax: false,
+            suffix: '',
+            source: {
+                flat: [{ 
+                    stat: 'aura_equipped_per_aura_active_add',
+                    condition: (_, stats) => getFirstStat(stats, 'active_aura_count', 0) > 0,
+                    multiplier: (_, stats) => getFirstStat(stats, 'active_aura_count', 0)
+                }],
+                max: [],
+                percent: [],
+                maxPercent: [],
+                multiplier: [{
+                    stat: 'aura_equipped_per_aura_equipped_multiplier',
+                    condition: (_, stats) => getFirstStat(stats, 'equipped_active_aura_count', 0) > 0,
+                    multiplier: (_, stats) => getFirstStat(stats, 'equipped_active_aura_count', 0)
+                    
+                }],
+                maxMultiplier: [],
+            } 
+        },
+    ]
+}

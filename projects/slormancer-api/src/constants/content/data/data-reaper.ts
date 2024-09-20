@@ -54,6 +54,17 @@ function negateValueBaseAndUpgrade(effect: ReaperEffect | null, index: number) {
     }
 }
 
+function nullifySynergyUpgrade(effect: ReaperEffect | null, index: number) {
+
+    const value = effect !== null ? valueOrNull(effect.values[index]) : null;
+
+    if (value !== null && isEffectValueSynergy(value)) {
+        value.upgrade = 0;
+    } else {
+        throw new Error('failed to negate effect value at index ' + index);
+    }
+}
+
 function changeValue(effect: ReaperEffect | null, index: number, newValue: number) {
 
     const value = effect !== null ? valueOrNull(effect.values[index]) : null;
@@ -184,6 +195,20 @@ function setSynergyPrecision(effect: ReaperEffect | null, index: number, precisi
     }
 }
 
+function allowSynergyToCascade(effect: ReaperEffect | null, index: number) {
+    if (effect !== null) {
+        const value = effect.values[index];
+    
+        if (value && isEffectValueSynergy(value)) {
+            value.cascadeSynergy = true;
+        } else {
+            throw new Error('failed to change synergy cascade at index ' + index);
+        }
+    } else {
+        throw new Error('failed to change synergy cascade at index ' + index);
+    }
+}
+
 export const DATA_REAPER: { [key: number]: DataReaper } = {
     1: {
         override: (ba, be, ma) => {
@@ -226,8 +251,9 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(be, 2, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(be, 3, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(be, 4, EffectValueValueType.Stat, 'garbage_stat');
+            overrideSynergySource(be, 5, 'max_health');
             overrideValueTypeAndStat(be, 5, EffectValueValueType.Stat, 'garbage_stat');
-            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'primary_secondary_skill_decreased_damage_mult');
+            overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'skill_decreased_damage_mult');
             synergyMultiply100(be, 5);
         }
     },
@@ -445,15 +471,18 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
     },
     28: {
         override: (ba, be, ma) => {
-            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'garbage_stat');
-            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'aura_increased_effect_percent');
-            setSynergyDetailOnSynergy(ba, 1, false);
-            setSynergyPrecision(ba, 1, 0);
+            // TODO fix ça
+            overrideValueTypeAndStat(ba, 0, EffectValueValueType.Stat, 'aura_equipped_per_aura_active_add');
+            overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'aura_equipped_per_aura_equipped_multiplier');
+            overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'aura_increased_effect_percent');
+            overrideSynergySource(ba, 2, 'aura_equipped_per_aura_active');
+            changeValue(ba, 2, 100);
+            nullifySynergyUpgrade(ba, 2);
 
-            setSynergyPrecision(be, 0, 0);
-            synergyMultiply100(be, 0);
+            overrideValueTypeAndStat(be, 1, EffectValueValueType.Stat, 'aura_aoe_increased_size_percent');
+            allowSynergyToCascade(be, 1);
+            synergyMultiply100(be, 1);
 
-            overrideValueTypeAndStat(be, 0, EffectValueValueType.Stat, 'aura_aoe_increased_size_percent');
             overrideValueTypeAndStat(ma, 0, EffectValueValueType.Stat, 'aoe_increased_size_percent_mult');
         }
     },
@@ -462,8 +491,11 @@ export const DATA_REAPER: { [key: number]: DataReaper } = {
             overrideValueTypeAndStat(ba, 1, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(ba, 2, EffectValueValueType.Stat, 'garbage_stat');
             overrideValueTypeAndStat(ba, 3, EffectValueValueType.Stat, 'elemental_damage');
+            allowSynergyToCascade(ba, 3);
+            
             addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
             addConstant(ba, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat'); 
+
         }
     },
     30: {

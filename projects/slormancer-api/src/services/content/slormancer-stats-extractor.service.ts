@@ -16,6 +16,7 @@ import {
     UNITY_REAPERS,
 } from '../../constants/common';
 import { MAX_MANA_MAPPING, MergedStatMapping } from '../../constants/content/data/data-character-stats-mapping';
+import { Activable, AncestralLegacy, AncestralLegacyType, MinMax } from '../../model';
 import { Character, CharacterSkillAndUpgrades } from '../../model/character';
 import { CharacterConfig } from '../../model/character-config';
 import { SynergyResolveData } from '../../model/content/character-stats';
@@ -38,17 +39,16 @@ import { RuneType } from '../../model/content/rune-type';
 import { SkillType } from '../../model/content/skill-type';
 import { Entity } from '../../model/entity';
 import { EntityValue } from '../../model/entity-value';
+import { add, round } from '../../util';
 import { effectValueSynergy } from '../../util/effect-value.util';
 import { synergyResolveData } from '../../util/synergy-resolver.util';
 import { isDamageType, isEffectValueSynergy, isNotNullOrUndefined, minAndMax, valueOrDefault } from '../../util/utils';
+import { SlormancerDataService } from './slormancer-data.service';
 import { SlormancerMergedStatUpdaterService } from './slormancer-merged-stat-updater.service';
+import { SlormancerReaperService } from './slormancer-reaper.service';
+import { SlormancerSkillService } from './slormancer-skill.service';
 import { SlormancerStatMappingService } from './slormancer-stat-mapping.service';
 import { CharacterStatsBuildResult } from './slormancer-stats.service';
-import { Activable, AncestralLegacy, AncestralLegacyType, MinMax } from '../../model';
-import { SlormancerDataService } from './slormancer-data.service';
-import { SlormancerReaperService } from './slormancer-reaper.service';
-import { add, round } from '../../util';
-import { SlormancerSkillService } from './slormancer-skill.service';
 
 export declare type ExtractedStatMap = { [key: string]: Array<EntityValue<number>> }
 
@@ -211,8 +211,14 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'mastery_secondary', character.secondarySkill === null ? 0 : character.secondarySkill.level, character.secondarySkill === null ? { character } : { skill: character.secondarySkill })
         const auraSkills = activables.filter(skill => skill.genres.includes(SkillGenre.Aura));
         this.addStat(stats.stats, 'active_aura_count', auraSkills.length, { character });
-        // *100 to handle the /100 synergy
-        this.addStat(stats.stats, 'aura_equipped_per_aura_active', Math.pow(auraSkills.length, 2) * 100, { character })
+        const equippedActivables = [
+            character.activable1,
+            character.activable2,
+            character.activable3,
+            character.activable4,
+        ].filter(isNotNullOrUndefined);
+        const equippedAuraSkills = auraSkills.filter(skill => equippedActivables.some(equipped => equipped.name === skill.name));
+        this.addStat(stats.stats, 'equipped_active_aura_count', equippedAuraSkills.length, { character });
 
         if (character.heroClass === HeroClass.Mage) {
             const maxedUpgrades = typeof config.maxed_upgrades === 'number'
