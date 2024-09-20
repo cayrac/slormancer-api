@@ -320,14 +320,14 @@ export const DATA_ACTIVABLE: { [key: string]: DataActivable } = {
     },
     35: {
         override: values => {
-            setBaseValue(values, 0, 100);
+            setBaseValue(values, 0, 200);
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },
     36: {
         override: values => {
             setBaseValue(values, 0, 150);
-            setUpgradeValue(values, 2, 1.75);
+            setUpgradeValue(values, 2, 1.5);
             addConstant(values, 2, false, EffectValueValueType.AreaOfEffect, 'garbage_stat');
         }
     },

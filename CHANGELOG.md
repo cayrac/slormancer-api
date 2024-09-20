@@ -103,6 +103,7 @@ TODO
 afficher mights
 afficher nodes disponible + l'extra node
 sword of the masterful => le calcul du niveau n'est pas bon
+ => théorie : xp ajouté depuis une préforme ?
 
 EXPORT : 
 ===>>>>> important : il faut checker le reaper dans l'export + mise à jour depuis ancienne version

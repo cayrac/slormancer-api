@@ -359,7 +359,7 @@ export class SlormancerStatsExtractorService {
         this.addStat(stats.stats, 'reaper_affinity', character.reaper.reaperAffinity, { synergy: 'Current reaper affinity' });
 
         if (character.reaper.id === 30 || character.reaper.id === 31) {
-            this.addStat(stats.stats, 'remain_damage', 800, { synergy: 'Remain damage' });
+            this.addStat(stats.stats, 'remain_damage', 1000, { synergy: 'Remain damage' });
         }
 
         const effectValues: Array<AbstractEffectValue> = character.reaper.templates.base.map(effect => effect.values).flat();
