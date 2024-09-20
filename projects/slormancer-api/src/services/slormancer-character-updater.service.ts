@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { MAX_HERO_LEVEL, MAX_REAPER_AFFINITY_BONUS, PERCENT_STATS } from '../constants/common';
 import { DATA_HERO_BASE_STATS } from '../constants/content/data/data-hero-base-stats';
+import { AncestralLegacyType, MergedStat, SkillType } from '../model';
 import { Character, CharacterMight } from '../model/character';
 import { CharacterConfig } from '../model/character-config';
 import { Activable } from '../model/content/activable';
@@ -14,7 +15,9 @@ import { EquipableItem } from '../model/content/equipable-item';
 import { Reaper } from '../model/content/reaper';
 import { Rune } from '../model/content/rune';
 import { SkillElement } from '../model/content/skill-element';
+import { round } from '../util';
 import { isEffectValueSynergy, isFirst, isNotNullOrUndefined, valueOrDefault } from '../util/utils';
+import { SlormancerAncestralLegacyNodesService, SlormancerMightService } from './content';
 import { SlormancerActivableService } from './content/slormancer-activable.service';
 import { SlormancerAncestralLegacyService } from './content/slormancer-ancestral-legacy.service';
 import { SlormancerAttributeService } from './content/slormancer-attribute.service';
@@ -29,9 +32,6 @@ import { CharacterStatsBuildResult, SlormancerStatsService } from './content/slo
 import { SlormancerSynergyResolverService } from './content/slormancer-synergy-resolver.service';
 import { SlormancerTranslateService } from './content/slormancer-translate.service';
 import { SlormancerValueUpdaterService } from './content/slormancer-value-updater.service';
-import { AncestralLegacyType, MergedStat, SkillType } from '../model';
-import { SlormancerAncestralLegacyNodesService, SlormancerMightService } from './content';
-import { round } from '../util';
 
 @Injectable()
 export class SlormancerCharacterUpdaterService {
@@ -473,6 +473,7 @@ export class SlormancerCharacterUpdaterService {
         statsResult.changed.runes.push(...preComputingChanged.runes);
 
         this.slormancerValueUpdater.updateReaper(character.reaper, statsResult);
+        statsResult.changed.reapers.push(character.reaper);
 
         for (const ancestralLegacy of character.ancestralLegacies.ancestralLegacies) {
 

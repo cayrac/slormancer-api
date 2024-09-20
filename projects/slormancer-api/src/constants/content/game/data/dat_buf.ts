@@ -7194,7 +7194,7 @@ export const GAME_DATA_BUFF = [
         "SPRITE": "spr_elements",
         "INDEX": 0,
         "BUFF_OR_DEBUFF": "debuff",
-        "VISUAL": "none",
+        "VISUAL": "fire_burning_trail",
         "FLOAT_TEXT": "",
         "IS_TICKING": true,
         "KEEP_ON_HUB": null

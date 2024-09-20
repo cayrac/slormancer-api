@@ -473,6 +473,26 @@ export class SlormancerValueUpdaterService {
                     effectValue.displaySynergy = round(effectValue.synergy, 0);
                 }
             }
+
+            if (effectValue.stat === 'drum_cast_2_chance_to_pierce_percent' && isEffectValueVariable(effectValue)) {
+                const pierceMult = effectValues.find(value => value.stat === 'chance_to_pierce_global_mult');
+                if (pierceMult) {
+                    effectValue.upgradedValue = effectValue.upgradedValue * (100 + pierceMult.value) / 100;
+                    effectValue.value = effectValue.value * (100 + pierceMult.value) / 100;
+                    effectValue.displayValue = round(effectValue.value, 3);
+                    console.log('updating drum 2 cast', effectValue.displayValue);
+                }
+            }
+
+            if (effectValue.stat === 'drum_cast_3_fork_chance_percent' && isEffectValueVariable(effectValue)) {
+                const forkMult = effectValues.find(value => value.stat === 'fork_chance_global_mult');
+                if (forkMult) {
+                    effectValue.upgradedValue = effectValue.upgradedValue * (100 + forkMult.value) / 100;
+                    effectValue.value = effectValue.value * (100 + forkMult.value) / 100;
+                    effectValue.displayValue = round(effectValue.value, 3);
+                    console.log('updating drum 3 cast', effectValue.displayValue);
+                }
+            }
         }
     }
 
